@@ -1,0 +1,4311 @@
+[
+  {
+    "courseIds": [
+      "uiuc:CS:101",
+      "uiuc:CS:105",
+      "uiuc:CS:440"
+    ],
+    "department": null,
+    "displayName": "E. Adeyemi-Park",
+    "firstName": "E",
+    "id": "uiuc:g:adeyemipark-e",
+    "isFictional": true,
+    "kind": "grades-only",
+    "lastName": "Adeyemi-Park",
+    "nameKey": {
+      "first": "e",
+      "firstCompact": "e",
+      "firstInitial": "e",
+      "firstToken": "e",
+      "firstTokens": [
+        "e"
+      ],
+      "last": "adeyemi park",
+      "lastCompact": "adeyemipark",
+      "lastTokens": [
+        "adeyemi",
+        "park"
+      ],
+      "middleInitials": [],
+      "raw": "Adeyemi-Park, E"
+    },
+    "nameVariants": [
+      "Adeyemi-Park, E"
+    ],
+    "reviewSourceId": null,
+    "schoolId": "uiuc",
+    "slug": "adeyemipark-e",
+    "subjects": [
+      "CS"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:CS:100",
+      "uiuc:CS:173"
+    ],
+    "department": null,
+    "displayName": "Esperanza Adichie",
+    "firstName": "Esperanza",
+    "id": "uiuc:g:adichie-esperanza",
+    "isFictional": true,
+    "kind": "grades-only",
+    "lastName": "Adichie",
+    "nameKey": {
+      "first": "esperanza",
+      "firstCompact": "esperanza",
+      "firstInitial": "e",
+      "firstToken": "esperanza",
+      "firstTokens": [
+        "esperanza"
+      ],
+      "last": "adichie",
+      "lastCompact": "adichie",
+      "lastTokens": [
+        "adichie"
+      ],
+      "middleInitials": [],
+      "raw": "Adichie, Esperanza"
+    },
+    "nameVariants": [
+      "Adichie, E",
+      "Adichie, Esperanza"
+    ],
+    "reviewSourceId": null,
+    "schoolId": "uiuc",
+    "slug": "adichie-esperanza",
+    "subjects": [
+      "CS"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:ECE:206",
+      "uiuc:ECE:385",
+      "uiuc:ECE:445"
+    ],
+    "department": null,
+    "displayName": "K. Balogun",
+    "firstName": "K",
+    "id": "uiuc:g:balogun-k",
+    "isFictional": true,
+    "kind": "grades-only",
+    "lastName": "Balogun",
+    "nameKey": {
+      "first": "k",
+      "firstCompact": "k",
+      "firstInitial": "k",
+      "firstToken": "k",
+      "firstTokens": [
+        "k"
+      ],
+      "last": "balogun",
+      "lastCompact": "balogun",
+      "lastTokens": [
+        "balogun"
+      ],
+      "middleInitials": [],
+      "raw": "Balogun, K"
+    },
+    "nameVariants": [
+      "Balogun, K"
+    ],
+    "reviewSourceId": null,
+    "schoolId": "uiuc",
+    "slug": "balogun-k",
+    "subjects": [
+      "ECE"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:STAT:385",
+      "uiuc:STAT:409"
+    ],
+    "department": null,
+    "displayName": "Oluwaseun Bhattacharya",
+    "firstName": "Oluwaseun",
+    "id": "uiuc:g:bhattacharya-oluwaseun",
+    "isFictional": true,
+    "kind": "grades-only",
+    "lastName": "Bhattacharya",
+    "nameKey": {
+      "first": "oluwaseun",
+      "firstCompact": "oluwaseun",
+      "firstInitial": "o",
+      "firstToken": "oluwaseun",
+      "firstTokens": [
+        "oluwaseun"
+      ],
+      "last": "bhattacharya",
+      "lastCompact": "bhattacharya",
+      "lastTokens": [
+        "bhattacharya"
+      ],
+      "middleInitials": [],
+      "raw": "Bhattacharya, Oluwaseun"
+    },
+    "nameVariants": [
+      "Bhattacharya, Oluwaseun"
+    ],
+    "reviewSourceId": null,
+    "schoolId": "uiuc",
+    "slug": "bhattacharya-oluwaseun",
+    "subjects": [
+      "STAT"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:CHEM:203",
+      "uiuc:CHEM:420"
+    ],
+    "department": null,
+    "displayName": "D. Ćosić",
+    "firstName": "D",
+    "id": "uiuc:g:cosic-d",
+    "isFictional": true,
+    "kind": "grades-only",
+    "lastName": "Ćosić",
+    "nameKey": {
+      "first": "d",
+      "firstCompact": "d",
+      "firstInitial": "d",
+      "firstToken": "d",
+      "firstTokens": [
+        "d"
+      ],
+      "last": "cosic",
+      "lastCompact": "cosic",
+      "lastTokens": [
+        "cosic"
+      ],
+      "middleInitials": [],
+      "raw": "Ćosić, D"
+    },
+    "nameVariants": [
+      "Ćosić, D"
+    ],
+    "reviewSourceId": null,
+    "schoolId": "uiuc",
+    "slug": "cosic-d",
+    "subjects": [
+      "CHEM"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:PHYS:102",
+      "uiuc:PHYS:225"
+    ],
+    "department": null,
+    "displayName": "Thomas Hollingsworth",
+    "firstName": "Thomas",
+    "id": "uiuc:g:hollingsworth-thomas",
+    "isFictional": true,
+    "kind": "grades-only",
+    "lastName": "Hollingsworth",
+    "nameKey": {
+      "first": "thomas",
+      "firstCompact": "thomas",
+      "firstInitial": "t",
+      "firstToken": "thomas",
+      "firstTokens": [
+        "thomas"
+      ],
+      "last": "hollingsworth",
+      "lastCompact": "hollingsworth",
+      "lastTokens": [
+        "hollingsworth"
+      ],
+      "middleInitials": [],
+      "raw": "Hollingsworth, Thomas"
+    },
+    "nameVariants": [
+      "Hollingsworth, T",
+      "Hollingsworth, Thomas"
+    ],
+    "reviewSourceId": null,
+    "schoolId": "uiuc",
+    "slug": "hollingsworth-thomas",
+    "subjects": [
+      "PHYS"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:CHEM:203"
+    ],
+    "department": null,
+    "displayName": "N. Kaminski",
+    "firstName": "N",
+    "id": "uiuc:g:kaminski-n",
+    "isFictional": true,
+    "kind": "grades-only",
+    "lastName": "Kaminski",
+    "nameKey": {
+      "first": "n",
+      "firstCompact": "n",
+      "firstInitial": "n",
+      "firstToken": "n",
+      "firstTokens": [
+        "n"
+      ],
+      "last": "kaminski",
+      "lastCompact": "kaminski",
+      "lastTokens": [
+        "kaminski"
+      ],
+      "middleInitials": [],
+      "raw": "Kaminski, N"
+    },
+    "nameVariants": [
+      "Kaminski, N"
+    ],
+    "reviewSourceId": null,
+    "schoolId": "uiuc",
+    "slug": "kaminski-n",
+    "subjects": [
+      "CHEM"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:MATH:115",
+      "uiuc:MATH:225",
+      "uiuc:MATH:416"
+    ],
+    "department": null,
+    "displayName": "A. Larkspur",
+    "firstName": "A",
+    "id": "uiuc:g:larkspur-a",
+    "isFictional": true,
+    "kind": "grades-only",
+    "lastName": "Larkspur",
+    "nameKey": {
+      "first": "a",
+      "firstCompact": "a",
+      "firstInitial": "a",
+      "firstToken": "a",
+      "firstTokens": [
+        "a"
+      ],
+      "last": "larkspur",
+      "lastCompact": "larkspur",
+      "lastTokens": [
+        "larkspur"
+      ],
+      "middleInitials": [],
+      "raw": "Larkspur, A"
+    },
+    "nameVariants": [
+      "Larkspur, A"
+    ],
+    "reviewSourceId": null,
+    "schoolId": "uiuc",
+    "slug": "larkspur-a",
+    "subjects": [
+      "MATH"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:MATH:286",
+      "uiuc:MATH:416"
+    ],
+    "department": null,
+    "displayName": "Paloma Marchetti",
+    "firstName": "Paloma",
+    "id": "uiuc:g:marchetti-paloma",
+    "isFictional": true,
+    "kind": "grades-only",
+    "lastName": "Marchetti",
+    "nameKey": {
+      "first": "paloma",
+      "firstCompact": "paloma",
+      "firstInitial": "p",
+      "firstToken": "paloma",
+      "firstTokens": [
+        "paloma"
+      ],
+      "last": "marchetti",
+      "lastCompact": "marchetti",
+      "lastTokens": [
+        "marchetti"
+      ],
+      "middleInitials": [],
+      "raw": "Marchetti, Paloma"
+    },
+    "nameVariants": [
+      "Marchetti, P",
+      "Marchetti, Paloma"
+    ],
+    "reviewSourceId": null,
+    "schoolId": "uiuc",
+    "slug": "marchetti-paloma",
+    "subjects": [
+      "MATH"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:STAT:100",
+      "uiuc:STAT:408",
+      "uiuc:STAT:409",
+      "uiuc:STAT:428",
+      "uiuc:STAT:440",
+      "uiuc:STAT:542"
+    ],
+    "department": null,
+    "displayName": "P. Matsuda",
+    "firstName": "P",
+    "id": "uiuc:g:matsuda-p",
+    "isFictional": true,
+    "kind": "grades-only",
+    "lastName": "Matsuda",
+    "nameKey": {
+      "first": "p",
+      "firstCompact": "p",
+      "firstInitial": "p",
+      "firstToken": "p",
+      "firstTokens": [
+        "p"
+      ],
+      "last": "matsuda",
+      "lastCompact": "matsuda",
+      "lastTokens": [
+        "matsuda"
+      ],
+      "middleInitials": [],
+      "raw": "Matsuda, P"
+    },
+    "nameVariants": [
+      "Matsuda, P"
+    ],
+    "reviewSourceId": null,
+    "schoolId": "uiuc",
+    "slug": "matsuda-p",
+    "subjects": [
+      "STAT"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:STAT:400",
+      "uiuc:STAT:409",
+      "uiuc:STAT:425",
+      "uiuc:STAT:440"
+    ],
+    "department": null,
+    "displayName": "T. N'Diaye",
+    "firstName": "T",
+    "id": "uiuc:g:ndiaye-t",
+    "isFictional": true,
+    "kind": "grades-only",
+    "lastName": "N'Diaye",
+    "nameKey": {
+      "first": "t",
+      "firstCompact": "t",
+      "firstInitial": "t",
+      "firstToken": "t",
+      "firstTokens": [
+        "t"
+      ],
+      "last": "ndiaye",
+      "lastCompact": "ndiaye",
+      "lastTokens": [
+        "ndiaye"
+      ],
+      "middleInitials": [],
+      "raw": "N'Diaye, T"
+    },
+    "nameVariants": [
+      "N'Diaye, T"
+    ],
+    "reviewSourceId": null,
+    "schoolId": "uiuc",
+    "slug": "ndiaye-t",
+    "subjects": [
+      "STAT"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:ECE:310",
+      "uiuc:ECE:311"
+    ],
+    "department": null,
+    "displayName": "S. Rasmussen",
+    "firstName": "S",
+    "id": "uiuc:g:rasmussen-s",
+    "isFictional": true,
+    "kind": "grades-only",
+    "lastName": "Rasmussen",
+    "nameKey": {
+      "first": "s",
+      "firstCompact": "s",
+      "firstInitial": "s",
+      "firstToken": "s",
+      "firstTokens": [
+        "s"
+      ],
+      "last": "rasmussen",
+      "lastCompact": "rasmussen",
+      "lastTokens": [
+        "rasmussen"
+      ],
+      "middleInitials": [],
+      "raw": "Rasmussen, S"
+    },
+    "nameVariants": [
+      "Rasmussen, S"
+    ],
+    "reviewSourceId": null,
+    "schoolId": "uiuc",
+    "slug": "rasmussen-s",
+    "subjects": [
+      "ECE"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:ECE:205",
+      "uiuc:ECE:385"
+    ],
+    "department": null,
+    "displayName": "Kirabo Ravindran",
+    "firstName": "Kirabo",
+    "id": "uiuc:g:ravindran-kirabo",
+    "isFictional": true,
+    "kind": "grades-only",
+    "lastName": "Ravindran",
+    "nameKey": {
+      "first": "kirabo",
+      "firstCompact": "kirabo",
+      "firstInitial": "k",
+      "firstToken": "kirabo",
+      "firstTokens": [
+        "kirabo"
+      ],
+      "last": "ravindran",
+      "lastCompact": "ravindran",
+      "lastTokens": [
+        "ravindran"
+      ],
+      "middleInitials": [],
+      "raw": "Ravindran, Kirabo"
+    },
+    "nameVariants": [
+      "Ravindran, Kirabo"
+    ],
+    "reviewSourceId": null,
+    "schoolId": "uiuc",
+    "slug": "ravindran-kirabo",
+    "subjects": [
+      "ECE"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:CS:128",
+      "uiuc:CS:374",
+      "uiuc:CS:412",
+      "uiuc:CS:421",
+      "uiuc:CS:425"
+    ],
+    "department": null,
+    "displayName": "R. Rosenqvist",
+    "firstName": "R",
+    "id": "uiuc:g:rosenqvist-r",
+    "isFictional": true,
+    "kind": "grades-only",
+    "lastName": "Rosenqvist",
+    "nameKey": {
+      "first": "r",
+      "firstCompact": "r",
+      "firstInitial": "r",
+      "firstToken": "r",
+      "firstTokens": [
+        "r"
+      ],
+      "last": "rosenqvist",
+      "lastCompact": "rosenqvist",
+      "lastTokens": [
+        "rosenqvist"
+      ],
+      "middleInitials": [],
+      "raw": "Rosenqvist, R"
+    },
+    "nameVariants": [
+      "Rosenqvist, R"
+    ],
+    "reviewSourceId": null,
+    "schoolId": "uiuc",
+    "slug": "rosenqvist-r",
+    "subjects": [
+      "CS"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:PHYS:100",
+      "uiuc:PHYS:140",
+      "uiuc:PHYS:212",
+      "uiuc:PHYS:225",
+      "uiuc:PHYS:280",
+      "uiuc:PHYS:436"
+    ],
+    "department": null,
+    "displayName": "O. Tsao",
+    "firstName": "O",
+    "id": "uiuc:g:tsao-o",
+    "isFictional": true,
+    "kind": "grades-only",
+    "lastName": "Tsao",
+    "nameKey": {
+      "first": "o",
+      "firstCompact": "o",
+      "firstInitial": "o",
+      "firstToken": "o",
+      "firstTokens": [
+        "o"
+      ],
+      "last": "tsao",
+      "lastCompact": "tsao",
+      "lastTokens": [
+        "tsao"
+      ],
+      "middleInitials": [],
+      "raw": "Tsao, O"
+    },
+    "nameVariants": [
+      "Tsao, O"
+    ],
+    "reviewSourceId": null,
+    "schoolId": "uiuc",
+    "slug": "tsao-o",
+    "subjects": [
+      "PHYS"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:MATH:115",
+      "uiuc:MATH:125",
+      "uiuc:MATH:225",
+      "uiuc:MATH:257",
+      "uiuc:MATH:415"
+    ],
+    "department": null,
+    "displayName": "R. Westergaard",
+    "firstName": "R",
+    "id": "uiuc:g:westergaard-r",
+    "isFictional": true,
+    "kind": "grades-only",
+    "lastName": "Westergaard",
+    "nameKey": {
+      "first": "r",
+      "firstCompact": "r",
+      "firstInitial": "r",
+      "firstToken": "r",
+      "firstTokens": [
+        "r"
+      ],
+      "last": "westergaard",
+      "lastCompact": "westergaard",
+      "lastTokens": [
+        "westergaard"
+      ],
+      "middleInitials": [],
+      "raw": "Westergaard, R"
+    },
+    "nameVariants": [
+      "Westergaard, R"
+    ],
+    "reviewSourceId": null,
+    "schoolId": "uiuc",
+    "slug": "westergaard-r",
+    "subjects": [
+      "MATH"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:CS:100",
+      "uiuc:CS:173",
+      "uiuc:CS:357",
+      "uiuc:CS:411",
+      "uiuc:CS:421",
+      "uiuc:CS:425",
+      "uiuc:CS:441"
+    ],
+    "department": null,
+    "displayName": "N. Yamaguchi",
+    "firstName": "N",
+    "id": "uiuc:g:yamaguchi-n",
+    "isFictional": true,
+    "kind": "grades-only",
+    "lastName": "Yamaguchi",
+    "nameKey": {
+      "first": "n",
+      "firstCompact": "n",
+      "firstInitial": "n",
+      "firstToken": "n",
+      "firstTokens": [
+        "n"
+      ],
+      "last": "yamaguchi",
+      "lastCompact": "yamaguchi",
+      "lastTokens": [
+        "yamaguchi"
+      ],
+      "middleInitials": [],
+      "raw": "Yamaguchi, N"
+    },
+    "nameVariants": [
+      "Yamaguchi, N"
+    ],
+    "reviewSourceId": null,
+    "schoolId": "uiuc",
+    "slug": "yamaguchi-n",
+    "subjects": [
+      "CS"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:PHYS:100",
+      "uiuc:PHYS:140",
+      "uiuc:PHYS:280",
+      "uiuc:PHYS:325",
+      "uiuc:PHYS:326",
+      "uiuc:PHYS:436"
+    ],
+    "department": null,
+    "displayName": "U. Yamaguchi",
+    "firstName": "U",
+    "id": "uiuc:g:yamaguchi-u",
+    "isFictional": true,
+    "kind": "grades-only",
+    "lastName": "Yamaguchi",
+    "nameKey": {
+      "first": "u",
+      "firstCompact": "u",
+      "firstInitial": "u",
+      "firstToken": "u",
+      "firstTokens": [
+        "u"
+      ],
+      "last": "yamaguchi",
+      "lastCompact": "yamaguchi",
+      "lastTokens": [
+        "yamaguchi"
+      ],
+      "middleInitials": [],
+      "raw": "Yamaguchi, U"
+    },
+    "nameVariants": [
+      "Yamaguchi, U"
+    ],
+    "reviewSourceId": null,
+    "schoolId": "uiuc",
+    "slug": "yamaguchi-u",
+    "subjects": [
+      "PHYS"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:MATH:125",
+      "uiuc:MATH:257"
+    ],
+    "department": "Mathematics",
+    "displayName": "Aiko Vantreight",
+    "firstName": "Aiko",
+    "id": "uiuc:p:aiko-vantreight",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Vantreight",
+    "nameKey": {
+      "first": "aiko",
+      "firstCompact": "aiko",
+      "firstInitial": "a",
+      "firstToken": "aiko",
+      "firstTokens": [
+        "aiko"
+      ],
+      "last": "vantreight",
+      "lastCompact": "vantreight",
+      "lastTokens": [
+        "vantreight"
+      ],
+      "middleInitials": [],
+      "raw": "Vantreight, Aiko"
+    },
+    "nameVariants": [
+      "Vantreight, A",
+      "Vantreight, Aiko"
+    ],
+    "reviewSourceId": "demo-p-047",
+    "schoolId": "uiuc",
+    "slug": "aiko-vantreight",
+    "subjects": [
+      "MATH"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:CS:425",
+      "uiuc:CS:598",
+      "uiuc:ECE:549"
+    ],
+    "department": "Computer Science",
+    "displayName": "Alejandro Agyeman",
+    "firstName": "Alejandro",
+    "id": "uiuc:p:alejandro-agyeman",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Agyeman",
+    "nameKey": {
+      "first": "alejandro",
+      "firstCompact": "alejandro",
+      "firstInitial": "a",
+      "firstToken": "alejandro",
+      "firstTokens": [
+        "alejandro"
+      ],
+      "last": "agyeman",
+      "lastCompact": "agyeman",
+      "lastTokens": [
+        "agyeman"
+      ],
+      "middleInitials": [],
+      "raw": "Agyeman, Alejandro"
+    },
+    "nameVariants": [
+      "Agyeman, A",
+      "Agyeman, Alejandro"
+    ],
+    "reviewSourceId": "demo-p-025",
+    "schoolId": "uiuc",
+    "slug": "alejandro-agyeman",
+    "subjects": [
+      "CS"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:STAT:212",
+      "uiuc:STAT:409",
+      "uiuc:STAT:542"
+    ],
+    "department": "Statistics",
+    "displayName": "Alexander O'Halloran",
+    "firstName": "Alexander",
+    "id": "uiuc:p:alexander-ohalloran",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "O'Halloran",
+    "nameKey": {
+      "first": "alexander",
+      "firstCompact": "alexander",
+      "firstInitial": "a",
+      "firstToken": "alexander",
+      "firstTokens": [
+        "alexander"
+      ],
+      "last": "ohalloran",
+      "lastCompact": "ohalloran",
+      "lastTokens": [
+        "ohalloran"
+      ],
+      "middleInitials": [],
+      "raw": "O'Halloran, Alexander"
+    },
+    "nameVariants": [
+      "O'Halloran, A",
+      "O'Halloran, Alex",
+      "O'Halloran, Alexander"
+    ],
+    "reviewSourceId": "demo-p-090",
+    "schoolId": "uiuc",
+    "slug": "alexander-ohalloran",
+    "subjects": [
+      "STAT"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:CHEM:102",
+      "uiuc:CHEM:203",
+      "uiuc:CHEM:420"
+    ],
+    "department": "Chemistry",
+    "displayName": "Amara Bogusławski",
+    "firstName": "Amara",
+    "id": "uiuc:p:amara-boguslawski",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Bogusławski",
+    "nameKey": {
+      "first": "amara",
+      "firstCompact": "amara",
+      "firstInitial": "a",
+      "firstToken": "amara",
+      "firstTokens": [
+        "amara"
+      ],
+      "last": "boguslawski",
+      "lastCompact": "boguslawski",
+      "lastTokens": [
+        "boguslawski"
+      ],
+      "middleInitials": [],
+      "raw": "Bogusławski, Amara"
+    },
+    "nameVariants": [
+      "Boguslawski, Amara",
+      "Bogusławski, A",
+      "Bogusławski, Amara"
+    ],
+    "reviewSourceId": "demo-p-014",
+    "schoolId": "uiuc",
+    "slug": "amara-boguslawski",
+    "subjects": [
+      "CHEM"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:CS:233",
+      "uiuc:CS:421",
+      "uiuc:CS:441"
+    ],
+    "department": "Computer Science",
+    "displayName": "Amara Rowan-Achebe",
+    "firstName": "Amara",
+    "id": "uiuc:p:amara-rowan-achebe",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Rowan-Achebe",
+    "nameKey": {
+      "first": "amara",
+      "firstCompact": "amara",
+      "firstInitial": "a",
+      "firstToken": "amara",
+      "firstTokens": [
+        "amara"
+      ],
+      "last": "rowan achebe",
+      "lastCompact": "rowanachebe",
+      "lastTokens": [
+        "rowan",
+        "achebe"
+      ],
+      "middleInitials": [],
+      "raw": "Rowan-Achebe, Amara"
+    },
+    "nameVariants": [
+      "Rowan-Achebe, A",
+      "Rowan-Achebe, Amara"
+    ],
+    "reviewSourceId": "demo-p-028",
+    "schoolId": "uiuc",
+    "slug": "amara-rowan-achebe",
+    "subjects": [
+      "CS"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:CHEM:101",
+      "uiuc:CHEM:105",
+      "uiuc:CHEM:440"
+    ],
+    "department": "Chemistry",
+    "displayName": "Andrew Szymanski",
+    "firstName": "Andrew",
+    "id": "uiuc:p:andrew-szymanski",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Szymanski",
+    "nameKey": {
+      "first": "andrew",
+      "firstCompact": "andrew",
+      "firstInitial": "a",
+      "firstToken": "andrew",
+      "firstTokens": [
+        "andrew"
+      ],
+      "last": "szymanski",
+      "lastCompact": "szymanski",
+      "lastTokens": [
+        "szymanski"
+      ],
+      "middleInitials": [],
+      "raw": "Szymanski, Andrew"
+    },
+    "nameVariants": [
+      "Szymanski, A",
+      "Szymanski, Andrew"
+    ],
+    "reviewSourceId": "demo-p-008",
+    "schoolId": "uiuc",
+    "slug": "andrew-szymanski",
+    "subjects": [
+      "CHEM"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:PHYS:486",
+      "uiuc:PHYS:580"
+    ],
+    "department": "Physics",
+    "displayName": "Andrew Varga",
+    "firstName": "Andrew",
+    "id": "uiuc:p:andrew-varga",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Varga",
+    "nameKey": {
+      "first": "andrew",
+      "firstCompact": "andrew",
+      "firstInitial": "a",
+      "firstToken": "andrew",
+      "firstTokens": [
+        "andrew"
+      ],
+      "last": "varga",
+      "lastCompact": "varga",
+      "lastTokens": [
+        "varga"
+      ],
+      "middleInitials": [],
+      "raw": "Varga, Andrew"
+    },
+    "nameVariants": [
+      "Varga, A",
+      "Varga, Andrew"
+    ],
+    "reviewSourceId": "demo-p-070",
+    "schoolId": "uiuc",
+    "slug": "andrew-varga",
+    "subjects": [
+      "PHYS"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:STAT:430",
+      "uiuc:STAT:510"
+    ],
+    "department": "Statistics",
+    "displayName": "Anjali Ólafsdóttir",
+    "firstName": "Anjali",
+    "id": "uiuc:p:anjali-olafsdottir",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Ólafsdóttir",
+    "nameKey": {
+      "first": "anjali",
+      "firstCompact": "anjali",
+      "firstInitial": "a",
+      "firstToken": "anjali",
+      "firstTokens": [
+        "anjali"
+      ],
+      "last": "olafsdottir",
+      "lastCompact": "olafsdottir",
+      "lastTokens": [
+        "olafsdottir"
+      ],
+      "middleInitials": [],
+      "raw": "Ólafsdóttir, Anjali"
+    },
+    "nameVariants": [
+      "Ólafsdóttir, A",
+      "Ólafsdóttir, Anjali"
+    ],
+    "reviewSourceId": "demo-p-086",
+    "schoolId": "uiuc",
+    "slug": "anjali-olafsdottir",
+    "subjects": [
+      "STAT"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:STAT:408",
+      "uiuc:STAT:428"
+    ],
+    "department": "Statistics",
+    "displayName": "Ayşe Kealoha",
+    "firstName": "Ayşe",
+    "id": "uiuc:p:ayse-kealoha",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Kealoha",
+    "nameKey": {
+      "first": "ayse",
+      "firstCompact": "ayse",
+      "firstInitial": "a",
+      "firstToken": "ayse",
+      "firstTokens": [
+        "ayse"
+      ],
+      "last": "kealoha",
+      "lastCompact": "kealoha",
+      "lastTokens": [
+        "kealoha"
+      ],
+      "middleInitials": [],
+      "raw": "Kealoha, Ayşe"
+    },
+    "nameVariants": [
+      "Kealoha, A",
+      "Kealoha, Ayşe"
+    ],
+    "reviewSourceId": "demo-p-080",
+    "schoolId": "uiuc",
+    "slug": "ayse-kealoha",
+    "subjects": [
+      "STAT"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:STAT:100",
+      "uiuc:STAT:426"
+    ],
+    "department": "Statistics",
+    "displayName": "Bolanle Haldane",
+    "firstName": "Bolanle",
+    "id": "uiuc:p:bolanle-haldane",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Haldane",
+    "nameKey": {
+      "first": "bolanle",
+      "firstCompact": "bolanle",
+      "firstInitial": "b",
+      "firstToken": "bolanle",
+      "firstTokens": [
+        "bolanle"
+      ],
+      "last": "haldane",
+      "lastCompact": "haldane",
+      "lastTokens": [
+        "haldane"
+      ],
+      "middleInitials": [],
+      "raw": "Haldane, Bolanle"
+    },
+    "nameVariants": [
+      "Haldane, B",
+      "Haldane, Bolanle"
+    ],
+    "reviewSourceId": "demo-p-081",
+    "schoolId": "uiuc",
+    "slug": "bolanle-haldane",
+    "subjects": [
+      "STAT"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:STAT:207",
+      "uiuc:STAT:440"
+    ],
+    "department": "Statistics",
+    "displayName": "Bolanle van der Berg",
+    "firstName": "Bolanle",
+    "id": "uiuc:p:bolanle-van-der-berg",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "van der Berg",
+    "nameKey": {
+      "first": "bolanle",
+      "firstCompact": "bolanle",
+      "firstInitial": "b",
+      "firstToken": "bolanle",
+      "firstTokens": [
+        "bolanle"
+      ],
+      "last": "van der berg",
+      "lastCompact": "vanderberg",
+      "lastTokens": [
+        "van",
+        "der",
+        "berg"
+      ],
+      "middleInitials": [],
+      "raw": "van der Berg, Bolanle"
+    },
+    "nameVariants": [
+      "van der Berg, B",
+      "van der Berg, Bolanle"
+    ],
+    "reviewSourceId": "demo-p-085",
+    "schoolId": "uiuc",
+    "slug": "bolanle-van-der-berg",
+    "subjects": [
+      "STAT"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:PHYS:140",
+      "uiuc:PHYS:280",
+      "uiuc:PHYS:436"
+    ],
+    "department": "Physics",
+    "displayName": "Camille Thackeray",
+    "firstName": "Camille",
+    "id": "uiuc:p:camille-thackeray",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Thackeray",
+    "nameKey": {
+      "first": "camille",
+      "firstCompact": "camille",
+      "firstInitial": "c",
+      "firstToken": "camille",
+      "firstTokens": [
+        "camille"
+      ],
+      "last": "thackeray",
+      "lastCompact": "thackeray",
+      "lastTokens": [
+        "thackeray"
+      ],
+      "middleInitials": [],
+      "raw": "Thackeray, Camille"
+    },
+    "nameVariants": [
+      "Thackeray, C",
+      "Thackeray, Camille"
+    ],
+    "reviewSourceId": "demo-p-061",
+    "schoolId": "uiuc",
+    "slug": "camille-thackeray",
+    "subjects": [
+      "PHYS"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:CHEM:105",
+      "uiuc:CHEM:199",
+      "uiuc:CHEM:237"
+    ],
+    "department": "Chemistry",
+    "displayName": "Chinedu Galloway",
+    "firstName": "Chinedu",
+    "id": "uiuc:p:chinedu-galloway",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Galloway",
+    "nameKey": {
+      "first": "chinedu",
+      "firstCompact": "chinedu",
+      "firstInitial": "c",
+      "firstToken": "chinedu",
+      "firstTokens": [
+        "chinedu"
+      ],
+      "last": "galloway",
+      "lastCompact": "galloway",
+      "lastTokens": [
+        "galloway"
+      ],
+      "middleInitials": [],
+      "raw": "Galloway, Chinedu"
+    },
+    "nameVariants": [
+      "Galloway, C",
+      "Galloway, Chinedu"
+    ],
+    "reviewSourceId": "demo-p-010",
+    "schoolId": "uiuc",
+    "slug": "chinedu-galloway",
+    "subjects": [
+      "CHEM"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:CHEM:199",
+      "uiuc:CHEM:315"
+    ],
+    "department": "Chemistry",
+    "displayName": "Christopher Achterberg",
+    "firstName": "Christopher",
+    "id": "uiuc:p:christopher-achterberg",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Achterberg",
+    "nameKey": {
+      "first": "christopher",
+      "firstCompact": "christopher",
+      "firstInitial": "c",
+      "firstToken": "christopher",
+      "firstTokens": [
+        "christopher"
+      ],
+      "last": "achterberg",
+      "lastCompact": "achterberg",
+      "lastTokens": [
+        "achterberg"
+      ],
+      "middleInitials": [],
+      "raw": "Achterberg, Christopher"
+    },
+    "nameVariants": [
+      "Achterberg, C",
+      "Achterberg, Christopher",
+      "Achterberg, Christopher Jr"
+    ],
+    "reviewSourceId": "demo-p-004",
+    "schoolId": "uiuc",
+    "slug": "christopher-achterberg",
+    "subjects": [
+      "CHEM"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:CHEM:420",
+      "uiuc:CHEM:442"
+    ],
+    "department": "Chemistry",
+    "displayName": "Christopher Ferreira-Nakamura",
+    "firstName": "Christopher",
+    "id": "uiuc:p:christopher-ferreira-nakamura",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Ferreira-Nakamura",
+    "nameKey": {
+      "first": "christopher",
+      "firstCompact": "christopher",
+      "firstInitial": "c",
+      "firstToken": "christopher",
+      "firstTokens": [
+        "christopher"
+      ],
+      "last": "ferreira nakamura",
+      "lastCompact": "ferreiranakamura",
+      "lastTokens": [
+        "ferreira",
+        "nakamura"
+      ],
+      "middleInitials": [],
+      "raw": "Ferreira-Nakamura, Christopher"
+    },
+    "nameVariants": [
+      "Ferreira-Nakamura, C",
+      "Ferreira-Nakamura, Christopher"
+    ],
+    "reviewSourceId": "demo-p-012",
+    "schoolId": "uiuc",
+    "slug": "christopher-ferreira-nakamura",
+    "subjects": [
+      "CHEM"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:ECE:391",
+      "uiuc:ECE:445"
+    ],
+    "department": "Electrical and Computer Engineering",
+    "displayName": "Christopher Khoury",
+    "firstName": "Christopher",
+    "id": "uiuc:p:christopher-khoury",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Khoury",
+    "nameKey": {
+      "first": "christopher",
+      "firstCompact": "christopher",
+      "firstInitial": "c",
+      "firstToken": "christopher",
+      "firstTokens": [
+        "christopher"
+      ],
+      "last": "khoury",
+      "lastCompact": "khoury",
+      "lastTokens": [
+        "khoury"
+      ],
+      "middleInitials": [],
+      "raw": "Khoury, Christopher"
+    },
+    "nameVariants": [
+      "Khoury, C",
+      "Khoury, Christopher",
+      "Khoury, Christopher Jr"
+    ],
+    "reviewSourceId": "demo-p-044",
+    "schoolId": "uiuc",
+    "slug": "christopher-khoury",
+    "subjects": [
+      "ECE"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:MATH:347",
+      "uiuc:MATH:444",
+      "uiuc:MATH:461"
+    ],
+    "department": "Mathematics",
+    "displayName": "Christopher Villanueva",
+    "firstName": "Christopher",
+    "id": "uiuc:p:christopher-villanueva",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Villanueva",
+    "nameKey": {
+      "first": "christopher",
+      "firstCompact": "christopher",
+      "firstInitial": "c",
+      "firstToken": "christopher",
+      "firstTokens": [
+        "christopher"
+      ],
+      "last": "villanueva",
+      "lastCompact": "villanueva",
+      "lastTokens": [
+        "villanueva"
+      ],
+      "middleInitials": [],
+      "raw": "Villanueva, Christopher"
+    },
+    "nameVariants": [
+      "Villanueva, C",
+      "Villanueva, Chris",
+      "Villanueva, Christopher"
+    ],
+    "reviewSourceId": "demo-p-050",
+    "schoolId": "uiuc",
+    "slug": "christopher-villanueva",
+    "subjects": [
+      "MATH"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:MATH:299",
+      "uiuc:MATH:415"
+    ],
+    "department": "Mathematics",
+    "displayName": "Daniel Salazar",
+    "firstName": "Daniel",
+    "id": "uiuc:p:daniel-salazar",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Salazar",
+    "nameKey": {
+      "first": "daniel",
+      "firstCompact": "daniel",
+      "firstInitial": "d",
+      "firstToken": "daniel",
+      "firstTokens": [
+        "daniel"
+      ],
+      "last": "salazar",
+      "lastCompact": "salazar",
+      "lastTokens": [
+        "salazar"
+      ],
+      "middleInitials": [],
+      "raw": "Salazar, Daniel"
+    },
+    "nameVariants": [
+      "Salazar, D",
+      "Salazar, Dan",
+      "Salazar, Daniel"
+    ],
+    "reviewSourceId": "demo-p-059",
+    "schoolId": "uiuc",
+    "slug": "daniel-salazar",
+    "subjects": [
+      "MATH"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:CS:241"
+    ],
+    "department": "Computer Science",
+    "displayName": "Daniel Sidibe",
+    "firstName": "Daniel",
+    "id": "uiuc:p:daniel-sidibe",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Sidibe",
+    "nameKey": {
+      "first": "daniel",
+      "firstCompact": "daniel",
+      "firstInitial": "d",
+      "firstToken": "daniel",
+      "firstTokens": [
+        "daniel"
+      ],
+      "last": "sidibe",
+      "lastCompact": "sidibe",
+      "lastTokens": [
+        "sidibe"
+      ],
+      "middleInitials": [],
+      "raw": "Sidibe, Daniel"
+    },
+    "nameVariants": [
+      "Sidibe, D",
+      "Sidibe, Dan",
+      "Sidibe, Daniel"
+    ],
+    "reviewSourceId": "demo-p-027",
+    "schoolId": "uiuc",
+    "slug": "daniel-sidibe",
+    "subjects": [
+      "CS"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:CHEM:205",
+      "uiuc:CHEM:232",
+      "uiuc:CHEM:332"
+    ],
+    "department": "Chemistry",
+    "displayName": "Dariusz Baptiste",
+    "firstName": "Dariusz",
+    "id": "uiuc:p:dariusz-baptiste",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Baptiste",
+    "nameKey": {
+      "first": "dariusz",
+      "firstCompact": "dariusz",
+      "firstInitial": "d",
+      "firstToken": "dariusz",
+      "firstTokens": [
+        "dariusz"
+      ],
+      "last": "baptiste",
+      "lastCompact": "baptiste",
+      "lastTokens": [
+        "baptiste"
+      ],
+      "middleInitials": [],
+      "raw": "Baptiste, Dariusz"
+    },
+    "nameVariants": [
+      "Baptiste, D",
+      "Baptiste, Dariusz"
+    ],
+    "reviewSourceId": "demo-p-013",
+    "schoolId": "uiuc",
+    "slug": "dariusz-baptiste",
+    "subjects": [
+      "CHEM"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:CS:101",
+      "uiuc:CS:498"
+    ],
+    "department": "Computer Science",
+    "displayName": "Edward Réaumur",
+    "firstName": "Edward",
+    "id": "uiuc:p:edward-reaumur",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Réaumur",
+    "nameKey": {
+      "first": "edward",
+      "firstCompact": "edward",
+      "firstInitial": "e",
+      "firstToken": "edward",
+      "firstTokens": [
+        "edward"
+      ],
+      "last": "reaumur",
+      "lastCompact": "reaumur",
+      "lastTokens": [
+        "reaumur"
+      ],
+      "middleInitials": [],
+      "raw": "Réaumur, Edward"
+    },
+    "nameVariants": [
+      "Reaumur, Edward",
+      "Réaumur, E",
+      "Réaumur, Edward"
+    ],
+    "reviewSourceId": "demo-p-021",
+    "schoolId": "uiuc",
+    "slug": "edward-reaumur",
+    "subjects": [
+      "CS"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:STAT:207",
+      "uiuc:STAT:420",
+      "uiuc:STAT:425"
+    ],
+    "department": "Statistics",
+    "displayName": "Eitan Tremblay",
+    "firstName": "Eitan",
+    "id": "uiuc:p:eitan-tremblay",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Tremblay",
+    "nameKey": {
+      "first": "eitan",
+      "firstCompact": "eitan",
+      "firstInitial": "e",
+      "firstToken": "eitan",
+      "firstTokens": [
+        "eitan"
+      ],
+      "last": "tremblay",
+      "lastCompact": "tremblay",
+      "lastTokens": [
+        "tremblay"
+      ],
+      "middleInitials": [],
+      "raw": "Tremblay, Eitan"
+    },
+    "nameVariants": [
+      "Tremblay, E",
+      "Tremblay, Eitan"
+    ],
+    "reviewSourceId": "demo-p-076",
+    "schoolId": "uiuc",
+    "slug": "eitan-tremblay",
+    "subjects": [
+      "STAT"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:STAT:107",
+      "uiuc:STAT:430"
+    ],
+    "department": "Statistics",
+    "displayName": "Elif Jankowski",
+    "firstName": "Elif",
+    "id": "uiuc:p:elif-jankowski",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Jankowski",
+    "nameKey": {
+      "first": "elif",
+      "firstCompact": "elif",
+      "firstInitial": "e",
+      "firstToken": "elif",
+      "firstTokens": [
+        "elif"
+      ],
+      "last": "jankowski",
+      "lastCompact": "jankowski",
+      "lastTokens": [
+        "jankowski"
+      ],
+      "middleInitials": [],
+      "raw": "Jankowski, Elif"
+    },
+    "nameVariants": [
+      "Jankowski, E",
+      "Jankowski, Elif"
+    ],
+    "reviewSourceId": "demo-p-084",
+    "schoolId": "uiuc",
+    "slug": "elif-jankowski",
+    "subjects": [
+      "STAT"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:CHEM:202",
+      "uiuc:CHEM:332"
+    ],
+    "department": "Chemistry",
+    "displayName": "Elif Takahashi",
+    "firstName": "Elif",
+    "id": "uiuc:p:elif-takahashi",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Takahashi",
+    "nameKey": {
+      "first": "elif",
+      "firstCompact": "elif",
+      "firstInitial": "e",
+      "firstToken": "elif",
+      "firstTokens": [
+        "elif"
+      ],
+      "last": "takahashi",
+      "lastCompact": "takahashi",
+      "lastTokens": [
+        "takahashi"
+      ],
+      "middleInitials": [],
+      "raw": "Takahashi, Elif"
+    },
+    "nameVariants": [
+      "Takahashi, E",
+      "Takahashi, Elif"
+    ],
+    "reviewSourceId": "demo-p-003",
+    "schoolId": "uiuc",
+    "slug": "elif-takahashi",
+    "subjects": [
+      "CHEM"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:ECE:205",
+      "uiuc:ECE:385"
+    ],
+    "department": "Electrical and Computer Engineering",
+    "displayName": "Elizabeth Ngata",
+    "firstName": "Elizabeth",
+    "id": "uiuc:p:elizabeth-ngata",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Ngata",
+    "nameKey": {
+      "first": "elizabeth",
+      "firstCompact": "elizabeth",
+      "firstInitial": "e",
+      "firstToken": "elizabeth",
+      "firstTokens": [
+        "elizabeth"
+      ],
+      "last": "ngata",
+      "lastCompact": "ngata",
+      "lastTokens": [
+        "ngata"
+      ],
+      "middleInitials": [],
+      "raw": "Ngata, Elizabeth"
+    },
+    "nameVariants": [
+      "Ngata, E",
+      "Ngata, Elizabeth",
+      "Ngata, Liz"
+    ],
+    "reviewSourceId": "demo-p-038",
+    "schoolId": "uiuc",
+    "slug": "elizabeth-ngata",
+    "subjects": [
+      "ECE"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:MATH:125"
+    ],
+    "department": "Mathematics",
+    "displayName": "Elizabeth Okonkwo-Reyes",
+    "firstName": "Elizabeth",
+    "id": "uiuc:p:elizabeth-okonkwo-reyes",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Okonkwo-Reyes",
+    "nameKey": {
+      "first": "elizabeth",
+      "firstCompact": "elizabeth",
+      "firstInitial": "e",
+      "firstToken": "elizabeth",
+      "firstTokens": [
+        "elizabeth"
+      ],
+      "last": "okonkwo reyes",
+      "lastCompact": "okonkworeyes",
+      "lastTokens": [
+        "okonkwo",
+        "reyes"
+      ],
+      "middleInitials": [],
+      "raw": "Okonkwo-Reyes, Elizabeth"
+    },
+    "nameVariants": [
+      "Okonkwo-Reyes, E",
+      "Okonkwo-Reyes, Elizabeth"
+    ],
+    "reviewSourceId": "demo-p-057",
+    "schoolId": "uiuc",
+    "slug": "elizabeth-okonkwo-reyes",
+    "subjects": [
+      "MATH"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:CHEM:233",
+      "uiuc:CHEM:360"
+    ],
+    "department": "Chemistry",
+    "displayName": "Elodie Blackwood",
+    "firstName": "Elodie",
+    "id": "uiuc:p:elodie-blackwood",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Blackwood",
+    "nameKey": {
+      "first": "elodie",
+      "firstCompact": "elodie",
+      "firstInitial": "e",
+      "firstToken": "elodie",
+      "firstTokens": [
+        "elodie"
+      ],
+      "last": "blackwood",
+      "lastCompact": "blackwood",
+      "lastTokens": [
+        "blackwood"
+      ],
+      "middleInitials": [],
+      "raw": "Blackwood, Elodie"
+    },
+    "nameVariants": [
+      "Blackwood, E",
+      "Blackwood, Elodie"
+    ],
+    "reviewSourceId": "demo-p-002",
+    "schoolId": "uiuc",
+    "slug": "elodie-blackwood",
+    "subjects": [
+      "CHEM"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:PHYS:100",
+      "uiuc:PHYS:325"
+    ],
+    "department": "Physics",
+    "displayName": "Elodie von Ahlefeld",
+    "firstName": "Elodie",
+    "id": "uiuc:p:elodie-von-ahlefeld",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "von Ahlefeld",
+    "nameKey": {
+      "first": "elodie",
+      "firstCompact": "elodie",
+      "firstInitial": "e",
+      "firstToken": "elodie",
+      "firstTokens": [
+        "elodie"
+      ],
+      "last": "von ahlefeld",
+      "lastCompact": "vonahlefeld",
+      "lastTokens": [
+        "von",
+        "ahlefeld"
+      ],
+      "middleInitials": [],
+      "raw": "von Ahlefeld, Elodie"
+    },
+    "nameVariants": [
+      "von Ahlefeld, E",
+      "von Ahlefeld, Elodie"
+    ],
+    "reviewSourceId": "demo-p-072",
+    "schoolId": "uiuc",
+    "slug": "elodie-von-ahlefeld",
+    "subjects": [
+      "PHYS"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:ECE:206",
+      "uiuc:ECE:313"
+    ],
+    "department": "Electrical and Computer Engineering",
+    "displayName": "Emeka Calloway",
+    "firstName": "Emeka",
+    "id": "uiuc:p:emeka-calloway",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Calloway",
+    "nameKey": {
+      "first": "emeka",
+      "firstCompact": "emeka",
+      "firstInitial": "e",
+      "firstToken": "emeka",
+      "firstTokens": [
+        "emeka"
+      ],
+      "last": "calloway",
+      "lastCompact": "calloway",
+      "lastTokens": [
+        "calloway"
+      ],
+      "middleInitials": [],
+      "raw": "Calloway, Emeka"
+    },
+    "nameVariants": [
+      "Calloway, E",
+      "Calloway, Emeka"
+    ],
+    "reviewSourceId": "demo-p-037",
+    "schoolId": "uiuc",
+    "slug": "emeka-calloway",
+    "subjects": [
+      "ECE"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:PHYS:326",
+      "uiuc:PHYS:436",
+      "uiuc:PHYS:486"
+    ],
+    "department": "Physics",
+    "displayName": "Emeka Mahlangu",
+    "firstName": "Emeka",
+    "id": "uiuc:p:emeka-mahlangu",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Mahlangu",
+    "nameKey": {
+      "first": "emeka",
+      "firstCompact": "emeka",
+      "firstInitial": "e",
+      "firstToken": "emeka",
+      "firstTokens": [
+        "emeka"
+      ],
+      "last": "mahlangu",
+      "lastCompact": "mahlangu",
+      "lastTokens": [
+        "mahlangu"
+      ],
+      "middleInitials": [],
+      "raw": "Mahlangu, Emeka"
+    },
+    "nameVariants": [
+      "Mahlangu, E",
+      "Mahlangu, Emeka"
+    ],
+    "reviewSourceId": "demo-p-075",
+    "schoolId": "uiuc",
+    "slug": "emeka-mahlangu",
+    "subjects": [
+      "PHYS"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:MATH:125",
+      "uiuc:MATH:416"
+    ],
+    "department": "Mathematics",
+    "displayName": "Esperanza Radovanovic",
+    "firstName": "Esperanza",
+    "id": "uiuc:p:esperanza-radovanovic",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Radovanovic",
+    "nameKey": {
+      "first": "esperanza",
+      "firstCompact": "esperanza",
+      "firstInitial": "e",
+      "firstToken": "esperanza",
+      "firstTokens": [
+        "esperanza"
+      ],
+      "last": "radovanovic",
+      "lastCompact": "radovanovic",
+      "lastTokens": [
+        "radovanovic"
+      ],
+      "middleInitials": [],
+      "raw": "Radovanovic, Esperanza"
+    },
+    "nameVariants": [
+      "Radovanovic, E",
+      "Radovanovic, Esperanza"
+    ],
+    "reviewSourceId": "demo-p-053",
+    "schoolId": "uiuc",
+    "slug": "esperanza-radovanovic",
+    "subjects": [
+      "MATH"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:PHYS:212",
+      "uiuc:PHYS:225"
+    ],
+    "department": "Physics",
+    "displayName": "Farida Venkataraghavan",
+    "firstName": "Farida",
+    "id": "uiuc:p:farida-venkataraghavan",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Venkataraghavan",
+    "nameKey": {
+      "first": "farida",
+      "firstCompact": "farida",
+      "firstInitial": "f",
+      "firstToken": "farida",
+      "firstTokens": [
+        "farida"
+      ],
+      "last": "venkataraghavan",
+      "lastCompact": "venkataraghavan",
+      "lastTokens": [
+        "venkataraghavan"
+      ],
+      "middleInitials": [],
+      "raw": "Venkataraghavan, Farida"
+    },
+    "nameVariants": [
+      "Venkataraghavan, F",
+      "Venkataraghavan, Farida"
+    ],
+    "reviewSourceId": "demo-p-068",
+    "schoolId": "uiuc",
+    "slug": "farida-venkataraghavan",
+    "subjects": [
+      "PHYS"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:PHYS:101",
+      "uiuc:PHYS:102",
+      "uiuc:PHYS:140"
+    ],
+    "department": "Physics",
+    "displayName": "Fumiko di Stefano",
+    "firstName": "Fumiko",
+    "id": "uiuc:p:fumiko-di-stefano",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "di Stefano",
+    "nameKey": {
+      "first": "fumiko",
+      "firstCompact": "fumiko",
+      "firstInitial": "f",
+      "firstToken": "fumiko",
+      "firstTokens": [
+        "fumiko"
+      ],
+      "last": "di stefano",
+      "lastCompact": "distefano",
+      "lastTokens": [
+        "di",
+        "stefano"
+      ],
+      "middleInitials": [],
+      "raw": "di Stefano, Fumiko"
+    },
+    "nameVariants": [
+      "di Stefano, F",
+      "di Stefano, Fumiko",
+      "di Stefano, Fumiko Jr",
+      "di-Stefano, Fumiko"
+    ],
+    "reviewSourceId": "demo-p-069",
+    "schoolId": "uiuc",
+    "slug": "fumiko-di-stefano",
+    "subjects": [
+      "PHYS"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:STAT:100",
+      "uiuc:STAT:409"
+    ],
+    "department": "Statistics",
+    "displayName": "Geoffrey Grimaldi",
+    "firstName": "Geoffrey",
+    "id": "uiuc:p:geoffrey-grimaldi",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Grimaldi",
+    "nameKey": {
+      "first": "geoffrey",
+      "firstCompact": "geoffrey",
+      "firstInitial": "g",
+      "firstToken": "geoffrey",
+      "firstTokens": [
+        "geoffrey"
+      ],
+      "last": "grimaldi",
+      "lastCompact": "grimaldi",
+      "lastTokens": [
+        "grimaldi"
+      ],
+      "middleInitials": [],
+      "raw": "Grimaldi, Geoffrey"
+    },
+    "nameVariants": [
+      "Grimaldi, G",
+      "Grimaldi, Geoff",
+      "Grimaldi, Geoffrey"
+    ],
+    "reviewSourceId": "demo-p-082",
+    "schoolId": "uiuc",
+    "slug": "geoffrey-grimaldi",
+    "subjects": [
+      "STAT"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:PHYS:123",
+      "uiuc:PHYS:212",
+      "uiuc:PHYS:214"
+    ],
+    "department": "Physics",
+    "displayName": "Gwendolyn Dimitriou",
+    "firstName": "Gwendolyn",
+    "id": "uiuc:p:gwendolyn-dimitriou",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Dimitriou",
+    "nameKey": {
+      "first": "gwendolyn",
+      "firstCompact": "gwendolyn",
+      "firstInitial": "g",
+      "firstToken": "gwendolyn",
+      "firstTokens": [
+        "gwendolyn"
+      ],
+      "last": "dimitriou",
+      "lastCompact": "dimitriou",
+      "lastTokens": [
+        "dimitriou"
+      ],
+      "middleInitials": [],
+      "raw": "Dimitriou, Gwendolyn"
+    },
+    "nameVariants": [
+      "Dimitriou, G",
+      "Dimitriou, Gwendolyn",
+      "Dimitriou, Gwendolyn Jr"
+    ],
+    "reviewSourceId": "demo-p-063",
+    "schoolId": "uiuc",
+    "slug": "gwendolyn-dimitriou",
+    "subjects": [
+      "PHYS"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:CS:100",
+      "uiuc:CS:105",
+      "uiuc:CS:173"
+    ],
+    "department": "Computer Science",
+    "displayName": "Gwendolyn Lindgren",
+    "firstName": "Gwendolyn",
+    "id": "uiuc:p:gwendolyn-lindgren",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Lindgren",
+    "nameKey": {
+      "first": "gwendolyn",
+      "firstCompact": "gwendolyn",
+      "firstInitial": "g",
+      "firstToken": "gwendolyn",
+      "firstTokens": [
+        "gwendolyn"
+      ],
+      "last": "lindgren",
+      "lastCompact": "lindgren",
+      "lastTokens": [
+        "lindgren"
+      ],
+      "middleInitials": [],
+      "raw": "Lindgren, Gwendolyn"
+    },
+    "nameVariants": [
+      "Lindgren, G",
+      "Lindgren, Gwendolyn"
+    ],
+    "reviewSourceId": "demo-p-016",
+    "schoolId": "uiuc",
+    "slug": "gwendolyn-lindgren",
+    "subjects": [
+      "CS"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:ECE:110",
+      "uiuc:ECE:408",
+      "uiuc:ECE:549"
+    ],
+    "department": "Electrical and Computer Engineering",
+    "displayName": "Halvard Sørensen",
+    "firstName": "Halvard",
+    "id": "uiuc:p:halvard-sorensen",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Sørensen",
+    "nameKey": {
+      "first": "halvard",
+      "firstCompact": "halvard",
+      "firstInitial": "h",
+      "firstToken": "halvard",
+      "firstTokens": [
+        "halvard"
+      ],
+      "last": "sorensen",
+      "lastCompact": "sorensen",
+      "lastTokens": [
+        "sorensen"
+      ],
+      "middleInitials": [],
+      "raw": "Sørensen, Halvard"
+    },
+    "nameVariants": [
+      "Sørensen, H",
+      "Sørensen, Halvard",
+      "Sørensen, Halvard Jr"
+    ],
+    "reviewSourceId": "demo-p-042",
+    "schoolId": "uiuc",
+    "slug": "halvard-sorensen",
+    "subjects": [
+      "ECE"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:PHYS:487",
+      "uiuc:PHYS:580"
+    ],
+    "department": "Physics",
+    "displayName": "Halvard Whitcombe",
+    "firstName": "Halvard",
+    "id": "uiuc:p:halvard-whitcombe",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Whitcombe",
+    "nameKey": {
+      "first": "halvard",
+      "firstCompact": "halvard",
+      "firstInitial": "h",
+      "firstToken": "halvard",
+      "firstTokens": [
+        "halvard"
+      ],
+      "last": "whitcombe",
+      "lastCompact": "whitcombe",
+      "lastTokens": [
+        "whitcombe"
+      ],
+      "middleInitials": [],
+      "raw": "Whitcombe, Halvard"
+    },
+    "nameVariants": [
+      "Whitcombe, H",
+      "Whitcombe, Halvard"
+    ],
+    "reviewSourceId": "demo-p-067",
+    "schoolId": "uiuc",
+    "slug": "halvard-whitcombe",
+    "subjects": [
+      "PHYS"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:MATH:124",
+      "uiuc:MATH:221",
+      "uiuc:MATH:225"
+    ],
+    "department": "Mathematics",
+    "displayName": "Hana Gunnarsson",
+    "firstName": "Hana",
+    "id": "uiuc:p:hana-gunnarsson",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Gunnarsson",
+    "nameKey": {
+      "first": "hana",
+      "firstCompact": "hana",
+      "firstInitial": "h",
+      "firstToken": "hana",
+      "firstTokens": [
+        "hana"
+      ],
+      "last": "gunnarsson",
+      "lastCompact": "gunnarsson",
+      "lastTokens": [
+        "gunnarsson"
+      ],
+      "middleInitials": [],
+      "raw": "Gunnarsson, Hana"
+    },
+    "nameVariants": [
+      "Gunnarsson, H",
+      "Gunnarsson, Hana",
+      "Gunnarsson, Hana Jr"
+    ],
+    "reviewSourceId": "demo-p-060",
+    "schoolId": "uiuc",
+    "slug": "hana-gunnarsson",
+    "subjects": [
+      "MATH"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:PHYS:101",
+      "uiuc:PHYS:211",
+      "uiuc:PHYS:580"
+    ],
+    "department": "Physics",
+    "displayName": "Ibrahim Eberhardt",
+    "firstName": "Ibrahim",
+    "id": "uiuc:p:ibrahim-eberhardt",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Eberhardt",
+    "nameKey": {
+      "first": "ibrahim",
+      "firstCompact": "ibrahim",
+      "firstInitial": "i",
+      "firstToken": "ibrahim",
+      "firstTokens": [
+        "ibrahim"
+      ],
+      "last": "eberhardt",
+      "lastCompact": "eberhardt",
+      "lastTokens": [
+        "eberhardt"
+      ],
+      "middleInitials": [],
+      "raw": "Eberhardt, Ibrahim"
+    },
+    "nameVariants": [
+      "Eberhardt, I",
+      "Eberhardt, Ibrahim",
+      "Eberhardt, Ibrahim Jr"
+    ],
+    "reviewSourceId": "demo-p-073",
+    "schoolId": "uiuc",
+    "slug": "ibrahim-eberhardt",
+    "subjects": [
+      "PHYS"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:MATH:241",
+      "uiuc:MATH:257"
+    ],
+    "department": "Mathematics",
+    "displayName": "Ingrid Uzoma",
+    "firstName": "Ingrid",
+    "id": "uiuc:p:ingrid-uzoma",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Uzoma",
+    "nameKey": {
+      "first": "ingrid",
+      "firstCompact": "ingrid",
+      "firstInitial": "i",
+      "firstToken": "ingrid",
+      "firstTokens": [
+        "ingrid"
+      ],
+      "last": "uzoma",
+      "lastCompact": "uzoma",
+      "lastTokens": [
+        "uzoma"
+      ],
+      "middleInitials": [],
+      "raw": "Uzoma, Ingrid"
+    },
+    "nameVariants": [
+      "Uzoma, I",
+      "Uzoma, Ingrid"
+    ],
+    "reviewSourceId": "demo-p-052",
+    "schoolId": "uiuc",
+    "slug": "ingrid-uzoma",
+    "subjects": [
+      "MATH"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:CHEM:202",
+      "uiuc:CHEM:205"
+    ],
+    "department": "Chemistry",
+    "displayName": "Isabeau Reinholt",
+    "firstName": "Isabeau",
+    "id": "uiuc:p:isabeau-reinholt",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Reinholt",
+    "nameKey": {
+      "first": "isabeau",
+      "firstCompact": "isabeau",
+      "firstInitial": "i",
+      "firstToken": "isabeau",
+      "firstTokens": [
+        "isabeau"
+      ],
+      "last": "reinholt",
+      "lastCompact": "reinholt",
+      "lastTokens": [
+        "reinholt"
+      ],
+      "middleInitials": [],
+      "raw": "Reinholt, Isabeau"
+    },
+    "nameVariants": [
+      "Reinholt, I",
+      "Reinholt, Isabeau"
+    ],
+    "reviewSourceId": "demo-p-007",
+    "schoolId": "uiuc",
+    "slug": "isabeau-reinholt",
+    "subjects": [
+      "CHEM"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:STAT:410",
+      "uiuc:STAT:425",
+      "uiuc:STAT:440"
+    ],
+    "department": "Statistics",
+    "displayName": "James Haruna",
+    "firstName": "James",
+    "id": "uiuc:p:james-haruna",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Haruna",
+    "nameKey": {
+      "first": "james",
+      "firstCompact": "james",
+      "firstInitial": "j",
+      "firstToken": "james",
+      "firstTokens": [
+        "james"
+      ],
+      "last": "haruna",
+      "lastCompact": "haruna",
+      "lastTokens": [
+        "haruna"
+      ],
+      "middleInitials": [],
+      "raw": "Haruna, James"
+    },
+    "nameVariants": [
+      "Haruna, J",
+      "Haruna, James"
+    ],
+    "reviewSourceId": "demo-p-088",
+    "schoolId": "uiuc",
+    "slug": "james-haruna",
+    "subjects": [
+      "STAT"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:CHEM:101",
+      "uiuc:CHEM:105"
+    ],
+    "department": "Chemistry",
+    "displayName": "Jarosław Delgadillo",
+    "firstName": "Jarosław",
+    "id": "uiuc:p:jaroslaw-delgadillo",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Delgadillo",
+    "nameKey": {
+      "first": "jaroslaw",
+      "firstCompact": "jaroslaw",
+      "firstInitial": "j",
+      "firstToken": "jaroslaw",
+      "firstTokens": [
+        "jaroslaw"
+      ],
+      "last": "delgadillo",
+      "lastCompact": "delgadillo",
+      "lastTokens": [
+        "delgadillo"
+      ],
+      "middleInitials": [],
+      "raw": "Delgadillo, Jarosław"
+    },
+    "nameVariants": [
+      "Delgadillo, J",
+      "Delgadillo, Jarosław"
+    ],
+    "reviewSourceId": "demo-p-006",
+    "schoolId": "uiuc",
+    "slug": "jaroslaw-delgadillo",
+    "subjects": [
+      "CHEM"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:MATH:124",
+      "uiuc:MATH:225"
+    ],
+    "department": "Mathematics",
+    "displayName": "Jennifer Arslan",
+    "firstName": "Jennifer",
+    "id": "uiuc:p:jennifer-arslan",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Arslan",
+    "nameKey": {
+      "first": "jennifer",
+      "firstCompact": "jennifer",
+      "firstInitial": "j",
+      "firstToken": "jennifer",
+      "firstTokens": [
+        "jennifer"
+      ],
+      "last": "arslan",
+      "lastCompact": "arslan",
+      "lastTokens": [
+        "arslan"
+      ],
+      "middleInitials": [],
+      "raw": "Arslan, Jennifer"
+    },
+    "nameVariants": [
+      "Arslan, J",
+      "Arslan, Jennifer"
+    ],
+    "reviewSourceId": "demo-p-058",
+    "schoolId": "uiuc",
+    "slug": "jennifer-arslan",
+    "subjects": [
+      "MATH"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:CS:412",
+      "uiuc:CS:425"
+    ],
+    "department": "Computer Science",
+    "displayName": "Jonathan Thorvaldsen",
+    "firstName": "Jonathan",
+    "id": "uiuc:p:jonathan-thorvaldsen",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Thorvaldsen",
+    "nameKey": {
+      "first": "jonathan",
+      "firstCompact": "jonathan",
+      "firstInitial": "j",
+      "firstToken": "jonathan",
+      "firstTokens": [
+        "jonathan"
+      ],
+      "last": "thorvaldsen",
+      "lastCompact": "thorvaldsen",
+      "lastTokens": [
+        "thorvaldsen"
+      ],
+      "middleInitials": [],
+      "raw": "Thorvaldsen, Jonathan"
+    },
+    "nameVariants": [
+      "Thorvaldsen, J",
+      "Thorvaldsen, Jonathan"
+    ],
+    "reviewSourceId": "demo-p-026",
+    "schoolId": "uiuc",
+    "slug": "jonathan-thorvaldsen",
+    "subjects": [
+      "CS"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:PHYS:211",
+      "uiuc:PHYS:326"
+    ],
+    "department": "Physics",
+    "displayName": "Joseph Castellanos-Berg",
+    "firstName": "Joseph",
+    "id": "uiuc:p:joseph-castellanos-berg",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Castellanos-Berg",
+    "nameKey": {
+      "first": "joseph",
+      "firstCompact": "joseph",
+      "firstInitial": "j",
+      "firstToken": "joseph",
+      "firstTokens": [
+        "joseph"
+      ],
+      "last": "castellanos berg",
+      "lastCompact": "castellanosberg",
+      "lastTokens": [
+        "castellanos",
+        "berg"
+      ],
+      "middleInitials": [],
+      "raw": "Castellanos-Berg, Joseph"
+    },
+    "nameVariants": [
+      "Castellanos Berg, Joseph",
+      "Castellanos-Berg, J",
+      "Castellanos-Berg, Joe",
+      "Castellanos-Berg, Joseph"
+    ],
+    "reviewSourceId": "demo-p-065",
+    "schoolId": "uiuc",
+    "slug": "joseph-castellanos-berg",
+    "subjects": [
+      "PHYS"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:CS:101",
+      "uiuc:CS:105",
+      "uiuc:CS:374"
+    ],
+    "department": "Computer Science",
+    "displayName": "Jun-Seo Petrakis",
+    "firstName": "Jun-Seo",
+    "id": "uiuc:p:jun-seo-petrakis",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Petrakis",
+    "nameKey": {
+      "first": "jun seo",
+      "firstCompact": "junseo",
+      "firstInitial": "j",
+      "firstToken": "jun",
+      "firstTokens": [
+        "jun",
+        "seo"
+      ],
+      "last": "petrakis",
+      "lastCompact": "petrakis",
+      "lastTokens": [
+        "petrakis"
+      ],
+      "middleInitials": [
+        "s"
+      ],
+      "raw": "Petrakis, Jun-Seo"
+    },
+    "nameVariants": [
+      "Petrakis, J",
+      "Petrakis, Jun-Seo"
+    ],
+    "reviewSourceId": "demo-p-023",
+    "schoolId": "uiuc",
+    "slug": "jun-seo-petrakis",
+    "subjects": [
+      "CS"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:STAT:207",
+      "uiuc:STAT:432",
+      "uiuc:STAT:542"
+    ],
+    "department": "Statistics",
+    "displayName": "Liesbeth Danforth",
+    "firstName": "Liesbeth",
+    "id": "uiuc:p:liesbeth-danforth",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Danforth",
+    "nameKey": {
+      "first": "liesbeth",
+      "firstCompact": "liesbeth",
+      "firstInitial": "l",
+      "firstToken": "liesbeth",
+      "firstTokens": [
+        "liesbeth"
+      ],
+      "last": "danforth",
+      "lastCompact": "danforth",
+      "lastTokens": [
+        "danforth"
+      ],
+      "middleInitials": [],
+      "raw": "Danforth, Liesbeth"
+    },
+    "nameVariants": [
+      "Danforth, L",
+      "Danforth, Liesbeth"
+    ],
+    "reviewSourceId": "demo-p-077",
+    "schoolId": "uiuc",
+    "slug": "liesbeth-danforth",
+    "subjects": [
+      "STAT"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:STAT:400",
+      "uiuc:STAT:510"
+    ],
+    "department": "Statistics",
+    "displayName": "Liesbeth Ibáñez",
+    "firstName": "Liesbeth",
+    "id": "uiuc:p:liesbeth-ibanez",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Ibáñez",
+    "nameKey": {
+      "first": "liesbeth",
+      "firstCompact": "liesbeth",
+      "firstInitial": "l",
+      "firstToken": "liesbeth",
+      "firstTokens": [
+        "liesbeth"
+      ],
+      "last": "ibanez",
+      "lastCompact": "ibanez",
+      "lastTokens": [
+        "ibanez"
+      ],
+      "middleInitials": [],
+      "raw": "Ibáñez, Liesbeth"
+    },
+    "nameVariants": [
+      "Ibanez, Liesbeth",
+      "Ibáñez, L",
+      "Ibáñez, Liesbeth",
+      "Ibáñez, Liesbeth Jr"
+    ],
+    "reviewSourceId": "demo-p-078",
+    "schoolId": "uiuc",
+    "slug": "liesbeth-ibanez",
+    "subjects": [
+      "STAT"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:PHYS:140",
+      "uiuc:PHYS:435",
+      "uiuc:PHYS:486"
+    ],
+    "department": "Physics",
+    "displayName": "Liesbeth Shirazi",
+    "firstName": "Liesbeth",
+    "id": "uiuc:p:liesbeth-shirazi",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Shirazi",
+    "nameKey": {
+      "first": "liesbeth",
+      "firstCompact": "liesbeth",
+      "firstInitial": "l",
+      "firstToken": "liesbeth",
+      "firstTokens": [
+        "liesbeth"
+      ],
+      "last": "shirazi",
+      "lastCompact": "shirazi",
+      "lastTokens": [
+        "shirazi"
+      ],
+      "middleInitials": [],
+      "raw": "Shirazi, Liesbeth"
+    },
+    "nameVariants": [
+      "Shirazi, L",
+      "Shirazi, Liesbeth"
+    ],
+    "reviewSourceId": "demo-p-066",
+    "schoolId": "uiuc",
+    "slug": "liesbeth-shirazi",
+    "subjects": [
+      "PHYS"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:MATH:112"
+    ],
+    "department": "Mathematics",
+    "displayName": "Magnus Anand",
+    "firstName": "Magnus",
+    "id": "uiuc:p:magnus-anand",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Anand",
+    "nameKey": {
+      "first": "magnus",
+      "firstCompact": "magnus",
+      "firstInitial": "m",
+      "firstToken": "magnus",
+      "firstTokens": [
+        "magnus"
+      ],
+      "last": "anand",
+      "lastCompact": "anand",
+      "lastTokens": [
+        "anand"
+      ],
+      "middleInitials": [],
+      "raw": "Anand, Magnus"
+    },
+    "nameVariants": [
+      "Anand, M",
+      "Anand, Magnus"
+    ],
+    "reviewSourceId": "demo-p-056",
+    "schoolId": "uiuc",
+    "slug": "magnus-anand",
+    "subjects": [
+      "MATH"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:ECE:110",
+      "uiuc:ECE:310",
+      "uiuc:ECE:408"
+    ],
+    "department": "Electrical and Computer Engineering",
+    "displayName": "Magnus Chaudhry",
+    "firstName": "Magnus",
+    "id": "uiuc:p:magnus-chaudhry",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Chaudhry",
+    "nameKey": {
+      "first": "magnus",
+      "firstCompact": "magnus",
+      "firstInitial": "m",
+      "firstToken": "magnus",
+      "firstTokens": [
+        "magnus"
+      ],
+      "last": "chaudhry",
+      "lastCompact": "chaudhry",
+      "lastTokens": [
+        "chaudhry"
+      ],
+      "middleInitials": [],
+      "raw": "Chaudhry, Magnus"
+    },
+    "nameVariants": [
+      "Chaudhry, M",
+      "Chaudhry, Magnus"
+    ],
+    "reviewSourceId": "demo-p-035",
+    "schoolId": "uiuc",
+    "slug": "magnus-chaudhry",
+    "subjects": [
+      "ECE"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:CHEM:103",
+      "uiuc:CHEM:205"
+    ],
+    "department": "Chemistry",
+    "displayName": "Magnus Sevilla",
+    "firstName": "Magnus",
+    "id": "uiuc:p:magnus-sevilla",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Sevilla",
+    "nameKey": {
+      "first": "magnus",
+      "firstCompact": "magnus",
+      "firstInitial": "m",
+      "firstToken": "magnus",
+      "firstTokens": [
+        "magnus"
+      ],
+      "last": "sevilla",
+      "lastCompact": "sevilla",
+      "lastTokens": [
+        "sevilla"
+      ],
+      "middleInitials": [],
+      "raw": "Sevilla, Magnus"
+    },
+    "nameVariants": [
+      "Sevilla, M",
+      "Sevilla, Magnus"
+    ],
+    "reviewSourceId": "demo-p-009",
+    "schoolId": "uiuc",
+    "slug": "magnus-sevilla",
+    "subjects": [
+      "CHEM"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:CS:100",
+      "uiuc:CS:125",
+      "uiuc:CS:233"
+    ],
+    "department": "Computer Science",
+    "displayName": "Marisol Ibarra-Quintero",
+    "firstName": "Marisol",
+    "id": "uiuc:p:marisol-ibarra-quintero",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Ibarra-Quintero",
+    "nameKey": {
+      "first": "marisol",
+      "firstCompact": "marisol",
+      "firstInitial": "m",
+      "firstToken": "marisol",
+      "firstTokens": [
+        "marisol"
+      ],
+      "last": "ibarra quintero",
+      "lastCompact": "ibarraquintero",
+      "lastTokens": [
+        "ibarra",
+        "quintero"
+      ],
+      "middleInitials": [],
+      "raw": "Ibarra-Quintero, Marisol"
+    },
+    "nameVariants": [
+      "Ibarra-Quintero, M",
+      "Ibarra-Quintero, Marisol"
+    ],
+    "reviewSourceId": "demo-p-030",
+    "schoolId": "uiuc",
+    "slug": "marisol-ibarra-quintero",
+    "subjects": [
+      "CS"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:ECE:329",
+      "uiuc:ECE:391"
+    ],
+    "department": "Electrical and Computer Engineering",
+    "displayName": "Matthew Müller",
+    "firstName": "Matthew",
+    "id": "uiuc:p:matthew-muller",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Müller",
+    "nameKey": {
+      "first": "matthew",
+      "firstCompact": "matthew",
+      "firstInitial": "m",
+      "firstToken": "matthew",
+      "firstTokens": [
+        "matthew"
+      ],
+      "last": "muller",
+      "lastCompact": "muller",
+      "lastTokens": [
+        "muller"
+      ],
+      "middleInitials": [],
+      "raw": "Müller, Matthew"
+    },
+    "nameVariants": [
+      "Müller, M",
+      "Müller, Matt",
+      "Müller, Matthew"
+    ],
+    "reviewSourceId": "demo-p-032",
+    "schoolId": "uiuc",
+    "slug": "matthew-muller",
+    "subjects": [
+      "ECE"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:ECE:220",
+      "uiuc:ECE:329"
+    ],
+    "department": "Electrical and Computer Engineering",
+    "displayName": "Matthew Valdivia",
+    "firstName": "Matthew",
+    "id": "uiuc:p:matthew-valdivia",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Valdivia",
+    "nameKey": {
+      "first": "matthew",
+      "firstCompact": "matthew",
+      "firstInitial": "m",
+      "firstToken": "matthew",
+      "firstTokens": [
+        "matthew"
+      ],
+      "last": "valdivia",
+      "lastCompact": "valdivia",
+      "lastTokens": [
+        "valdivia"
+      ],
+      "middleInitials": [],
+      "raw": "Valdivia, Matthew"
+    },
+    "nameVariants": [
+      "Valdivia, M",
+      "Valdivia, Matthew"
+    ],
+    "reviewSourceId": "demo-p-031",
+    "schoolId": "uiuc",
+    "slug": "matthew-valdivia",
+    "subjects": [
+      "ECE"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:CS:173",
+      "uiuc:CS:233"
+    ],
+    "department": "Computer Science",
+    "displayName": "Michael Lachance",
+    "firstName": "Michael",
+    "id": "uiuc:p:michael-lachance",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Lachance",
+    "nameKey": {
+      "first": "michael",
+      "firstCompact": "michael",
+      "firstInitial": "m",
+      "firstToken": "michael",
+      "firstTokens": [
+        "michael"
+      ],
+      "last": "lachance",
+      "lastCompact": "lachance",
+      "lastTokens": [
+        "lachance"
+      ],
+      "middleInitials": [],
+      "raw": "Lachance, Michael"
+    },
+    "nameVariants": [
+      "Lachance, M"
+    ],
+    "reviewSourceId": "demo-p-024",
+    "schoolId": "uiuc",
+    "slug": "michael-lachance",
+    "subjects": [
+      "CS"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:CS:124",
+      "uiuc:CS:125",
+      "uiuc:CS:225"
+    ],
+    "department": "Computer Science",
+    "displayName": "Mihail Lindgren",
+    "firstName": "Mihail",
+    "id": "uiuc:p:mihail-lindgren",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Lindgren",
+    "nameKey": {
+      "first": "mihail",
+      "firstCompact": "mihail",
+      "firstInitial": "m",
+      "firstToken": "mihail",
+      "firstTokens": [
+        "mihail"
+      ],
+      "last": "lindgren",
+      "lastCompact": "lindgren",
+      "lastTokens": [
+        "lindgren"
+      ],
+      "middleInitials": [],
+      "raw": "Lindgren, Mihail"
+    },
+    "nameVariants": [
+      "Lindgren, M",
+      "Lindgren, Mihail"
+    ],
+    "reviewSourceId": "demo-p-017",
+    "schoolId": "uiuc",
+    "slug": "mihail-lindgren",
+    "subjects": [
+      "CS"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:CHEM:102",
+      "uiuc:CHEM:236",
+      "uiuc:CHEM:332"
+    ],
+    "department": "Chemistry",
+    "displayName": "Mihail Vasquez-Holm",
+    "firstName": "Mihail",
+    "id": "uiuc:p:mihail-vasquez-holm",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Vasquez-Holm",
+    "nameKey": {
+      "first": "mihail",
+      "firstCompact": "mihail",
+      "firstInitial": "m",
+      "firstToken": "mihail",
+      "firstTokens": [
+        "mihail"
+      ],
+      "last": "vasquez holm",
+      "lastCompact": "vasquezholm",
+      "lastTokens": [
+        "vasquez",
+        "holm"
+      ],
+      "middleInitials": [],
+      "raw": "Vasquez-Holm, Mihail"
+    },
+    "nameVariants": [
+      "Vasquez Holm, Mihail",
+      "Vasquez-Holm, M",
+      "Vasquez-Holm, Mihail",
+      "Vasquez-Holm, Mihail Jr"
+    ],
+    "reviewSourceId": "demo-p-015",
+    "schoolId": "uiuc",
+    "slug": "mihail-vasquez-holm",
+    "subjects": [
+      "CHEM"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:ECE:120",
+      "uiuc:ECE:330"
+    ],
+    "department": "Electrical and Computer Engineering",
+    "displayName": "Mihail Zuniga",
+    "firstName": "Mihail",
+    "id": "uiuc:p:mihail-zuniga",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Zuniga",
+    "nameKey": {
+      "first": "mihail",
+      "firstCompact": "mihail",
+      "firstInitial": "m",
+      "firstToken": "mihail",
+      "firstTokens": [
+        "mihail"
+      ],
+      "last": "zuniga",
+      "lastCompact": "zuniga",
+      "lastTokens": [
+        "zuniga"
+      ],
+      "middleInitials": [],
+      "raw": "Zuniga, Mihail"
+    },
+    "nameVariants": [
+      "Zuniga, M",
+      "Zuniga, Mihail",
+      "Zuniga, Mihail Jr"
+    ],
+    "reviewSourceId": "demo-p-033",
+    "schoolId": "uiuc",
+    "slug": "mihail-zuniga",
+    "subjects": [
+      "ECE"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:STAT:212",
+      "uiuc:STAT:410"
+    ],
+    "department": "Statistics",
+    "displayName": "Naledi de la Cruz",
+    "firstName": "Naledi",
+    "id": "uiuc:p:naledi-de-la-cruz",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "de la Cruz",
+    "nameKey": {
+      "first": "naledi",
+      "firstCompact": "naledi",
+      "firstInitial": "n",
+      "firstToken": "naledi",
+      "firstTokens": [
+        "naledi"
+      ],
+      "last": "de la cruz",
+      "lastCompact": "delacruz",
+      "lastTokens": [
+        "de",
+        "la",
+        "cruz"
+      ],
+      "middleInitials": [],
+      "raw": "de la Cruz, Naledi"
+    },
+    "nameVariants": [
+      "de la Cruz, N",
+      "de la Cruz, Naledi",
+      "de-la-Cruz, Naledi"
+    ],
+    "reviewSourceId": "demo-p-083",
+    "schoolId": "uiuc",
+    "slug": "naledi-de-la-cruz",
+    "subjects": [
+      "STAT"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:PHYS:100",
+      "uiuc:PHYS:102",
+      "uiuc:PHYS:325"
+    ],
+    "department": "Physics",
+    "displayName": "Nkechi Egwu",
+    "firstName": "Nkechi",
+    "id": "uiuc:p:nkechi-egwu",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Egwu",
+    "nameKey": {
+      "first": "nkechi",
+      "firstCompact": "nkechi",
+      "firstInitial": "n",
+      "firstToken": "nkechi",
+      "firstTokens": [
+        "nkechi"
+      ],
+      "last": "egwu",
+      "lastCompact": "egwu",
+      "lastTokens": [
+        "egwu"
+      ],
+      "middleInitials": [],
+      "raw": "Egwu, Nkechi"
+    },
+    "nameVariants": [
+      "Egwu, N",
+      "Egwu, Nkechi",
+      "Egwu, Nkechi Jr"
+    ],
+    "reviewSourceId": "demo-p-071",
+    "schoolId": "uiuc",
+    "slug": "nkechi-egwu",
+    "subjects": [
+      "PHYS"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:ECE:311",
+      "uiuc:ECE:313",
+      "uiuc:ECE:342"
+    ],
+    "department": "Electrical and Computer Engineering",
+    "displayName": "Oluwaseun Fairweather",
+    "firstName": "Oluwaseun",
+    "id": "uiuc:p:oluwaseun-fairweather",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Fairweather",
+    "nameKey": {
+      "first": "oluwaseun",
+      "firstCompact": "oluwaseun",
+      "firstInitial": "o",
+      "firstToken": "oluwaseun",
+      "firstTokens": [
+        "oluwaseun"
+      ],
+      "last": "fairweather",
+      "lastCompact": "fairweather",
+      "lastTokens": [
+        "fairweather"
+      ],
+      "middleInitials": [],
+      "raw": "Fairweather, Oluwaseun"
+    },
+    "nameVariants": [
+      "Fairweather, O",
+      "Fairweather, Oluwaseun",
+      "Fairweather, Oluwaseun Jr"
+    ],
+    "reviewSourceId": "demo-p-036",
+    "schoolId": "uiuc",
+    "slug": "oluwaseun-fairweather",
+    "subjects": [
+      "ECE"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:MATH:124"
+    ],
+    "department": "Mathematics",
+    "displayName": "Ondřej Ndlovu",
+    "firstName": "Ondřej",
+    "id": "uiuc:p:ondrej-ndlovu",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Ndlovu",
+    "nameKey": {
+      "first": "ondrej",
+      "firstCompact": "ondrej",
+      "firstInitial": "o",
+      "firstToken": "ondrej",
+      "firstTokens": [
+        "ondrej"
+      ],
+      "last": "ndlovu",
+      "lastCompact": "ndlovu",
+      "lastTokens": [
+        "ndlovu"
+      ],
+      "middleInitials": [],
+      "raw": "Ndlovu, Ondřej"
+    },
+    "nameVariants": [
+      "Ndlovu, O",
+      "Ndlovu, Ondřej"
+    ],
+    "reviewSourceId": "demo-p-054",
+    "schoolId": "uiuc",
+    "slug": "ondrej-ndlovu",
+    "subjects": [
+      "MATH"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:CHEM:204",
+      "uiuc:CHEM:237",
+      "uiuc:CHEM:442"
+    ],
+    "department": "Chemistry",
+    "displayName": "Oriol Alcantara",
+    "firstName": "Oriol",
+    "id": "uiuc:p:oriol-alcantara",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Alcantara",
+    "nameKey": {
+      "first": "oriol",
+      "firstCompact": "oriol",
+      "firstInitial": "o",
+      "firstToken": "oriol",
+      "firstTokens": [
+        "oriol"
+      ],
+      "last": "alcantara",
+      "lastCompact": "alcantara",
+      "lastTokens": [
+        "alcantara"
+      ],
+      "middleInitials": [],
+      "raw": "Alcantara, Oriol"
+    },
+    "nameVariants": [
+      "Alcantara, O",
+      "Alcantara, Oriol"
+    ],
+    "reviewSourceId": "demo-p-005",
+    "schoolId": "uiuc",
+    "slug": "oriol-alcantara",
+    "subjects": [
+      "CHEM"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:CS:357",
+      "uiuc:CS:411"
+    ],
+    "department": "Computer Science",
+    "displayName": "Oriol Delacroix-Moreau",
+    "firstName": "Oriol",
+    "id": "uiuc:p:oriol-delacroix-moreau",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Delacroix-Moreau",
+    "nameKey": {
+      "first": "oriol",
+      "firstCompact": "oriol",
+      "firstInitial": "o",
+      "firstToken": "oriol",
+      "firstTokens": [
+        "oriol"
+      ],
+      "last": "delacroix moreau",
+      "lastCompact": "delacroixmoreau",
+      "lastTokens": [
+        "delacroix",
+        "moreau"
+      ],
+      "middleInitials": [],
+      "raw": "Delacroix-Moreau, Oriol"
+    },
+    "nameVariants": [
+      "Delacroix-Moreau, O",
+      "Delacroix-Moreau, Oriol"
+    ],
+    "reviewSourceId": "demo-p-029",
+    "schoolId": "uiuc",
+    "slug": "oriol-delacroix-moreau",
+    "subjects": [
+      "CS"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:PHYS:211",
+      "uiuc:PHYS:225",
+      "uiuc:PHYS:401"
+    ],
+    "department": "Physics",
+    "displayName": "Oriol Şahinoğlu",
+    "firstName": "Oriol",
+    "id": "uiuc:p:oriol-sahinoglu",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Şahinoğlu",
+    "nameKey": {
+      "first": "oriol",
+      "firstCompact": "oriol",
+      "firstInitial": "o",
+      "firstToken": "oriol",
+      "firstTokens": [
+        "oriol"
+      ],
+      "last": "sahinoglu",
+      "lastCompact": "sahinoglu",
+      "lastTokens": [
+        "sahinoglu"
+      ],
+      "middleInitials": [],
+      "raw": "Şahinoğlu, Oriol"
+    },
+    "nameVariants": [
+      "Sahinoglu, Oriol",
+      "Şahinoğlu, O",
+      "Şahinoğlu, Oriol",
+      "Şahinoğlu, Oriol Jr"
+    ],
+    "reviewSourceId": "demo-p-074",
+    "schoolId": "uiuc",
+    "slug": "oriol-sahinoglu",
+    "subjects": [
+      "PHYS"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:ECE:206",
+      "uiuc:ECE:310"
+    ],
+    "department": "Electrical and Computer Engineering",
+    "displayName": "Priya Fennimore",
+    "firstName": "Priya",
+    "id": "uiuc:p:priya-fennimore",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Fennimore",
+    "nameKey": {
+      "first": "priya",
+      "firstCompact": "priya",
+      "firstInitial": "p",
+      "firstToken": "priya",
+      "firstTokens": [
+        "priya"
+      ],
+      "last": "fennimore",
+      "lastCompact": "fennimore",
+      "lastTokens": [
+        "fennimore"
+      ],
+      "middleInitials": [],
+      "raw": "Fennimore, Priya"
+    },
+    "nameVariants": [
+      "Fennimore, P",
+      "Fennimore, Priya"
+    ],
+    "reviewSourceId": "demo-p-039",
+    "schoolId": "uiuc",
+    "slug": "priya-fennimore",
+    "subjects": [
+      "ECE"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:CS:105",
+      "uiuc:CS:128",
+      "uiuc:CS:374"
+    ],
+    "department": "Computer Science",
+    "displayName": "Ravi Rosenqvist",
+    "firstName": "Ravi",
+    "id": "uiuc:p:ravi-rosenqvist",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Rosenqvist",
+    "nameKey": {
+      "first": "ravi",
+      "firstCompact": "ravi",
+      "firstInitial": "r",
+      "firstToken": "ravi",
+      "firstTokens": [
+        "ravi"
+      ],
+      "last": "rosenqvist",
+      "lastCompact": "rosenqvist",
+      "lastTokens": [
+        "rosenqvist"
+      ],
+      "middleInitials": [],
+      "raw": "Rosenqvist, Ravi"
+    },
+    "nameVariants": [
+      "Rosenqvist, Ravi"
+    ],
+    "reviewSourceId": "demo-p-018",
+    "schoolId": "uiuc",
+    "slug": "ravi-rosenqvist",
+    "subjects": [
+      "CS"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:CS:425",
+      "uiuc:CS:440",
+      "uiuc:CS:441"
+    ],
+    "department": "Computer Science",
+    "displayName": "Robert Pakhomov",
+    "firstName": "Robert",
+    "id": "uiuc:p:robert-pakhomov",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Pakhomov",
+    "nameKey": {
+      "first": "robert",
+      "firstCompact": "robert",
+      "firstInitial": "r",
+      "firstToken": "robert",
+      "firstTokens": [
+        "robert"
+      ],
+      "last": "pakhomov",
+      "lastCompact": "pakhomov",
+      "lastTokens": [
+        "pakhomov"
+      ],
+      "middleInitials": [],
+      "raw": "Pakhomov, Robert"
+    },
+    "nameVariants": [
+      "Pakhomov, Bob",
+      "Pakhomov, R",
+      "Pakhomov, Robert"
+    ],
+    "reviewSourceId": "demo-p-022",
+    "schoolId": "uiuc",
+    "slug": "robert-pakhomov",
+    "subjects": [
+      "CS"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:STAT:100",
+      "uiuc:STAT:200",
+      "uiuc:STAT:428"
+    ],
+    "department": "Statistics",
+    "displayName": "Rohan Quintanilla",
+    "firstName": "Rohan",
+    "id": "uiuc:p:rohan-quintanilla",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Quintanilla",
+    "nameKey": {
+      "first": "rohan",
+      "firstCompact": "rohan",
+      "firstInitial": "r",
+      "firstToken": "rohan",
+      "firstTokens": [
+        "rohan"
+      ],
+      "last": "quintanilla",
+      "lastCompact": "quintanilla",
+      "lastTokens": [
+        "quintanilla"
+      ],
+      "middleInitials": [],
+      "raw": "Quintanilla, Rohan"
+    },
+    "nameVariants": [
+      "Quintanilla, R",
+      "Quintanilla, Rohan"
+    ],
+    "reviewSourceId": "demo-p-089",
+    "schoolId": "uiuc",
+    "slug": "rohan-quintanilla",
+    "subjects": [
+      "STAT"
+    ]
+  },
+  {
+    "courseIds": [],
+    "department": "Computer Science",
+    "displayName": "Rohan Rosenqvist",
+    "firstName": "Rohan",
+    "id": "uiuc:p:rohan-rosenqvist",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Rosenqvist",
+    "nameKey": {
+      "first": "rohan",
+      "firstCompact": "rohan",
+      "firstInitial": "r",
+      "firstToken": "rohan",
+      "firstTokens": [
+        "rohan"
+      ],
+      "last": "rosenqvist",
+      "lastCompact": "rosenqvist",
+      "lastTokens": [
+        "rosenqvist"
+      ],
+      "middleInitials": [],
+      "raw": "Rosenqvist, Rohan"
+    },
+    "nameVariants": [],
+    "reviewSourceId": "demo-p-019",
+    "schoolId": "uiuc",
+    "slug": "rohan-rosenqvist",
+    "subjects": [
+      "CS"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:MATH:115",
+      "uiuc:MATH:415",
+      "uiuc:MATH:416"
+    ],
+    "department": "Mathematics",
+    "displayName": "Rohan Tanaka-Whitfield",
+    "firstName": "Rohan",
+    "id": "uiuc:p:rohan-tanaka-whitfield",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Tanaka-Whitfield",
+    "nameKey": {
+      "first": "rohan",
+      "firstCompact": "rohan",
+      "firstInitial": "r",
+      "firstToken": "rohan",
+      "firstTokens": [
+        "rohan"
+      ],
+      "last": "tanaka whitfield",
+      "lastCompact": "tanakawhitfield",
+      "lastTokens": [
+        "tanaka",
+        "whitfield"
+      ],
+      "middleInitials": [],
+      "raw": "Tanaka-Whitfield, Rohan"
+    },
+    "nameVariants": [
+      "Tanaka-Whitfield, R",
+      "Tanaka-Whitfield, Rohan"
+    ],
+    "reviewSourceId": "demo-p-046",
+    "schoolId": "uiuc",
+    "slug": "rohan-tanaka-whitfield",
+    "subjects": [
+      "MATH"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:ECE:340",
+      "uiuc:ECE:408"
+    ],
+    "department": "Electrical and Computer Engineering",
+    "displayName": "Rúnar Haddad-Lindqvist",
+    "firstName": "Rúnar",
+    "id": "uiuc:p:runar-haddad-lindqvist",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Haddad-Lindqvist",
+    "nameKey": {
+      "first": "runar",
+      "firstCompact": "runar",
+      "firstInitial": "r",
+      "firstToken": "runar",
+      "firstTokens": [
+        "runar"
+      ],
+      "last": "haddad lindqvist",
+      "lastCompact": "haddadlindqvist",
+      "lastTokens": [
+        "haddad",
+        "lindqvist"
+      ],
+      "middleInitials": [],
+      "raw": "Haddad-Lindqvist, Rúnar"
+    },
+    "nameVariants": [
+      "Haddad-Lindqvist, R",
+      "Haddad-Lindqvist, Rúnar",
+      "Haddad-Lindqvist, Rúnar Jr"
+    ],
+    "reviewSourceId": "demo-p-040",
+    "schoolId": "uiuc",
+    "slug": "runar-haddad-lindqvist",
+    "subjects": [
+      "ECE"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:ECE:110",
+      "uiuc:ECE:311",
+      "uiuc:ECE:333"
+    ],
+    "department": "Electrical and Computer Engineering",
+    "displayName": "Rúnar Kirchner",
+    "firstName": "Rúnar",
+    "id": "uiuc:p:runar-kirchner",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Kirchner",
+    "nameKey": {
+      "first": "runar",
+      "firstCompact": "runar",
+      "firstInitial": "r",
+      "firstToken": "runar",
+      "firstTokens": [
+        "runar"
+      ],
+      "last": "kirchner",
+      "lastCompact": "kirchner",
+      "lastTokens": [
+        "kirchner"
+      ],
+      "middleInitials": [],
+      "raw": "Kirchner, Rúnar"
+    },
+    "nameVariants": [
+      "Kirchner, R",
+      "Kirchner, Rúnar"
+    ],
+    "reviewSourceId": "demo-p-034",
+    "schoolId": "uiuc",
+    "slug": "runar-kirchner",
+    "subjects": [
+      "ECE"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:MATH:231",
+      "uiuc:MATH:285"
+    ],
+    "department": "Mathematics",
+    "displayName": "Rúnar Kuroda",
+    "firstName": "Rúnar",
+    "id": "uiuc:p:runar-kuroda",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Kuroda",
+    "nameKey": {
+      "first": "runar",
+      "firstCompact": "runar",
+      "firstInitial": "r",
+      "firstToken": "runar",
+      "firstTokens": [
+        "runar"
+      ],
+      "last": "kuroda",
+      "lastCompact": "kuroda",
+      "lastTokens": [
+        "kuroda"
+      ],
+      "middleInitials": [],
+      "raw": "Kuroda, Rúnar"
+    },
+    "nameVariants": [
+      "Kuroda, R",
+      "Kuroda, Rúnar"
+    ],
+    "reviewSourceId": "demo-p-049",
+    "schoolId": "uiuc",
+    "slug": "runar-kuroda",
+    "subjects": [
+      "MATH"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:ECE:210",
+      "uiuc:ECE:391"
+    ],
+    "department": "Electrical and Computer Engineering",
+    "displayName": "Samuel D'Amato",
+    "firstName": "Samuel",
+    "id": "uiuc:p:samuel-damato",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "D'Amato",
+    "nameKey": {
+      "first": "samuel",
+      "firstCompact": "samuel",
+      "firstInitial": "s",
+      "firstToken": "samuel",
+      "firstTokens": [
+        "samuel"
+      ],
+      "last": "damato",
+      "lastCompact": "damato",
+      "lastTokens": [
+        "damato"
+      ],
+      "middleInitials": [],
+      "raw": "D'Amato, Samuel"
+    },
+    "nameVariants": [
+      "D'Amato, S",
+      "D'Amato, Samuel"
+    ],
+    "reviewSourceId": "demo-p-041",
+    "schoolId": "uiuc",
+    "slug": "samuel-damato",
+    "subjects": [
+      "ECE"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:CHEM:203",
+      "uiuc:CHEM:420"
+    ],
+    "department": "Chemistry",
+    "displayName": "Samuel Karimi",
+    "firstName": "Samuel",
+    "id": "uiuc:p:samuel-karimi",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Karimi",
+    "nameKey": {
+      "first": "samuel",
+      "firstCompact": "samuel",
+      "firstInitial": "s",
+      "firstToken": "samuel",
+      "firstTokens": [
+        "samuel"
+      ],
+      "last": "karimi",
+      "lastCompact": "karimi",
+      "lastTokens": [
+        "karimi"
+      ],
+      "middleInitials": [],
+      "raw": "Karimi, Samuel"
+    },
+    "nameVariants": [
+      "Karimi, S",
+      "Karimi, Samuel"
+    ],
+    "reviewSourceId": "demo-p-011",
+    "schoolId": "uiuc",
+    "slug": "samuel-karimi",
+    "subjects": [
+      "CHEM"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:PHYS:401",
+      "uiuc:PHYS:427",
+      "uiuc:PHYS:436"
+    ],
+    "department": "Physics",
+    "displayName": "Samuel Mkhize",
+    "firstName": "Samuel",
+    "id": "uiuc:p:samuel-mkhize",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Mkhize",
+    "nameKey": {
+      "first": "samuel",
+      "firstCompact": "samuel",
+      "firstInitial": "s",
+      "firstToken": "samuel",
+      "firstTokens": [
+        "samuel"
+      ],
+      "last": "mkhize",
+      "lastCompact": "mkhize",
+      "lastTokens": [
+        "mkhize"
+      ],
+      "middleInitials": [],
+      "raw": "Mkhize, Samuel"
+    },
+    "nameVariants": [
+      "Mkhize, S",
+      "Mkhize, Sam",
+      "Mkhize, Samuel"
+    ],
+    "reviewSourceId": "demo-p-064",
+    "schoolId": "uiuc",
+    "slug": "samuel-mkhize",
+    "subjects": [
+      "PHYS"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:ECE:311",
+      "uiuc:ECE:329",
+      "uiuc:ECE:385"
+    ],
+    "department": "Electrical and Computer Engineering",
+    "displayName": "Søren Ekwueme",
+    "firstName": "Søren",
+    "id": "uiuc:p:soren-ekwueme",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Ekwueme",
+    "nameKey": {
+      "first": "soren",
+      "firstCompact": "soren",
+      "firstInitial": "s",
+      "firstToken": "soren",
+      "firstTokens": [
+        "soren"
+      ],
+      "last": "ekwueme",
+      "lastCompact": "ekwueme",
+      "lastTokens": [
+        "ekwueme"
+      ],
+      "middleInitials": [],
+      "raw": "Ekwueme, Søren"
+    },
+    "nameVariants": [
+      "Ekwueme, S",
+      "Ekwueme, Søren"
+    ],
+    "reviewSourceId": "demo-p-045",
+    "schoolId": "uiuc",
+    "slug": "soren-ekwueme",
+    "subjects": [
+      "ECE"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:CHEM:102",
+      "uiuc:CHEM:104",
+      "uiuc:CHEM:204"
+    ],
+    "department": "Chemistry",
+    "displayName": "Steven Brandvold",
+    "firstName": "Steven",
+    "id": "uiuc:p:steven-brandvold",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Brandvold",
+    "nameKey": {
+      "first": "steven",
+      "firstCompact": "steven",
+      "firstInitial": "s",
+      "firstToken": "steven",
+      "firstTokens": [
+        "steven"
+      ],
+      "last": "brandvold",
+      "lastCompact": "brandvold",
+      "lastTokens": [
+        "brandvold"
+      ],
+      "middleInitials": [],
+      "raw": "Brandvold, Steven"
+    },
+    "nameVariants": [
+      "Brandvold, S",
+      "Brandvold, Steve",
+      "Brandvold, Steven"
+    ],
+    "reviewSourceId": "demo-p-001",
+    "schoolId": "uiuc",
+    "slug": "steven-brandvold",
+    "subjects": [
+      "CHEM"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:ECE:340",
+      "uiuc:ECE:411"
+    ],
+    "department": "Electrical and Computer Engineering",
+    "displayName": "Teodora Wierzbicki",
+    "firstName": "Teodora",
+    "id": "uiuc:p:teodora-wierzbicki",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Wierzbicki",
+    "nameKey": {
+      "first": "teodora",
+      "firstCompact": "teodora",
+      "firstInitial": "t",
+      "firstToken": "teodora",
+      "firstTokens": [
+        "teodora"
+      ],
+      "last": "wierzbicki",
+      "lastCompact": "wierzbicki",
+      "lastTokens": [
+        "wierzbicki"
+      ],
+      "middleInitials": [],
+      "raw": "Wierzbicki, Teodora"
+    },
+    "nameVariants": [
+      "Wierzbicki, T",
+      "Wierzbicki, Teodora"
+    ],
+    "reviewSourceId": "demo-p-043",
+    "schoolId": "uiuc",
+    "slug": "teodora-wierzbicki",
+    "subjects": [
+      "ECE"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:MATH:112",
+      "uiuc:MATH:225",
+      "uiuc:MATH:347"
+    ],
+    "department": "Mathematics",
+    "displayName": "Thandiwe Macallister",
+    "firstName": "Thandiwe",
+    "id": "uiuc:p:thandiwe-macallister",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Macallister",
+    "nameKey": {
+      "first": "thandiwe",
+      "firstCompact": "thandiwe",
+      "firstInitial": "t",
+      "firstToken": "thandiwe",
+      "firstTokens": [
+        "thandiwe"
+      ],
+      "last": "macallister",
+      "lastCompact": "macallister",
+      "lastTokens": [
+        "macallister"
+      ],
+      "middleInitials": [],
+      "raw": "Macallister, Thandiwe"
+    },
+    "nameVariants": [
+      "Macallister, T",
+      "Macallister, Thandiwe"
+    ],
+    "reviewSourceId": "demo-p-048",
+    "schoolId": "uiuc",
+    "slug": "thandiwe-macallister",
+    "subjects": [
+      "MATH"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:CS:128",
+      "uiuc:CS:241",
+      "uiuc:CS:374"
+    ],
+    "department": "Computer Science",
+    "displayName": "Thomas Mbeki-Sandoval",
+    "firstName": "Thomas",
+    "id": "uiuc:p:thomas-mbeki-sandoval",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Mbeki-Sandoval",
+    "nameKey": {
+      "first": "thomas",
+      "firstCompact": "thomas",
+      "firstInitial": "t",
+      "firstToken": "thomas",
+      "firstTokens": [
+        "thomas"
+      ],
+      "last": "mbeki sandoval",
+      "lastCompact": "mbekisandoval",
+      "lastTokens": [
+        "mbeki",
+        "sandoval"
+      ],
+      "middleInitials": [],
+      "raw": "Mbeki-Sandoval, Thomas"
+    },
+    "nameVariants": [
+      "Mbeki Sandoval, Thomas",
+      "Mbeki-Sandoval, T",
+      "Mbeki-Sandoval, Thomas"
+    ],
+    "reviewSourceId": "demo-p-020",
+    "schoolId": "uiuc",
+    "slug": "thomas-mbeki-sandoval",
+    "subjects": [
+      "CS"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:STAT:400",
+      "uiuc:STAT:440",
+      "uiuc:STAT:448"
+    ],
+    "department": "Statistics",
+    "displayName": "William Oyelaran",
+    "firstName": "William",
+    "id": "uiuc:p:william-oyelaran",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Oyelaran",
+    "nameKey": {
+      "first": "william",
+      "firstCompact": "william",
+      "firstInitial": "w",
+      "firstToken": "william",
+      "firstTokens": [
+        "william"
+      ],
+      "last": "oyelaran",
+      "lastCompact": "oyelaran",
+      "lastTokens": [
+        "oyelaran"
+      ],
+      "middleInitials": [],
+      "raw": "Oyelaran, William"
+    },
+    "nameVariants": [
+      "Oyelaran, W",
+      "Oyelaran, William"
+    ],
+    "reviewSourceId": "demo-p-087",
+    "schoolId": "uiuc",
+    "slug": "william-oyelaran",
+    "subjects": [
+      "STAT"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:MATH:234",
+      "uiuc:MATH:441"
+    ],
+    "department": "Mathematics",
+    "displayName": "Wiremu Ghosh",
+    "firstName": "Wiremu",
+    "id": "uiuc:p:wiremu-ghosh",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Ghosh",
+    "nameKey": {
+      "first": "wiremu",
+      "firstCompact": "wiremu",
+      "firstInitial": "w",
+      "firstToken": "wiremu",
+      "firstTokens": [
+        "wiremu"
+      ],
+      "last": "ghosh",
+      "lastCompact": "ghosh",
+      "lastTokens": [
+        "ghosh"
+      ],
+      "middleInitials": [],
+      "raw": "Ghosh, Wiremu"
+    },
+    "nameVariants": [
+      "Ghosh, W",
+      "Ghosh, Wiremu"
+    ],
+    "reviewSourceId": "demo-p-051",
+    "schoolId": "uiuc",
+    "slug": "wiremu-ghosh",
+    "subjects": [
+      "MATH"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:MATH:220",
+      "uiuc:MATH:415",
+      "uiuc:MATH:444"
+    ],
+    "department": "Mathematics",
+    "displayName": "Wiremu Lonsdale",
+    "firstName": "Wiremu",
+    "id": "uiuc:p:wiremu-lonsdale",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Lonsdale",
+    "nameKey": {
+      "first": "wiremu",
+      "firstCompact": "wiremu",
+      "firstInitial": "w",
+      "firstToken": "wiremu",
+      "firstTokens": [
+        "wiremu"
+      ],
+      "last": "lonsdale",
+      "lastCompact": "lonsdale",
+      "lastTokens": [
+        "lonsdale"
+      ],
+      "middleInitials": [],
+      "raw": "Lonsdale, Wiremu"
+    },
+    "nameVariants": [
+      "Lonsdale, W",
+      "Lonsdale, Wiremu"
+    ],
+    "reviewSourceId": "demo-p-055",
+    "schoolId": "uiuc",
+    "slug": "wiremu-lonsdale",
+    "subjects": [
+      "MATH"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:STAT:385",
+      "uiuc:STAT:428"
+    ],
+    "department": "Statistics",
+    "displayName": "Zoltán Castellano",
+    "firstName": "Zoltán",
+    "id": "uiuc:p:zoltan-castellano",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Castellano",
+    "nameKey": {
+      "first": "zoltan",
+      "firstCompact": "zoltan",
+      "firstInitial": "z",
+      "firstToken": "zoltan",
+      "firstTokens": [
+        "zoltan"
+      ],
+      "last": "castellano",
+      "lastCompact": "castellano",
+      "lastTokens": [
+        "castellano"
+      ],
+      "middleInitials": [],
+      "raw": "Castellano, Zoltán"
+    },
+    "nameVariants": [
+      "Castellano, Z",
+      "Castellano, Zoltán",
+      "Castellano, Zoltán Jr"
+    ],
+    "reviewSourceId": "demo-p-079",
+    "schoolId": "uiuc",
+    "slug": "zoltan-castellano",
+    "subjects": [
+      "STAT"
+    ]
+  },
+  {
+    "courseIds": [
+      "uiuc:PHYS:100",
+      "uiuc:PHYS:213",
+      "uiuc:PHYS:401"
+    ],
+    "department": "Physics",
+    "displayName": "Zoltán Farahani",
+    "firstName": "Zoltán",
+    "id": "uiuc:p:zoltan-farahani",
+    "isFictional": true,
+    "kind": "reviewed",
+    "lastName": "Farahani",
+    "nameKey": {
+      "first": "zoltan",
+      "firstCompact": "zoltan",
+      "firstInitial": "z",
+      "firstToken": "zoltan",
+      "firstTokens": [
+        "zoltan"
+      ],
+      "last": "farahani",
+      "lastCompact": "farahani",
+      "lastTokens": [
+        "farahani"
+      ],
+      "middleInitials": [],
+      "raw": "Farahani, Zoltán"
+    },
+    "nameVariants": [
+      "Farahani, Z",
+      "Farahani, Zoltán"
+    ],
+    "reviewSourceId": "demo-p-062",
+    "schoolId": "uiuc",
+    "slug": "zoltan-farahani",
+    "subjects": [
+      "PHYS"
+    ]
+  }
+]

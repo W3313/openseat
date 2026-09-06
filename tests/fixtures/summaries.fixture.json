@@ -1,0 +1,72 @@
+{
+  "uiuc:p:adaeze-okonkwo": {
+    "bestFor": "Students who want to actually learn data structures and are willing to put in the hours.",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:d-00020",
+      "uiuc:r:d-00008",
+      "uiuc:r:d-00012",
+      "uiuc:r:d-00016",
+      "uiuc:r:d-00004",
+      "uiuc:r:d-00015"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-03T15:04:00Z",
+    "gradingNote": "In 2 course(s) over 5 year(s), GPA averaged 3.08 (−0.09 vs. the same courses taught by others); 1.1% withdrew.",
+    "inputHash": "0ff28de1bb40cb43",
+    "model": "claude-opus-5",
+    "professorId": "uiuc:p:adaeze-okonkwo",
+    "promptVersion": 1,
+    "reviewCount": 23,
+    "source": "claude",
+    "strengths": [
+      "Lectures are consistently described as clear and well organized",
+      "Office hours and the course notes are called genuinely useful",
+      "Grading is seen as fair and transparent despite the difficulty"
+    ],
+    "teachingStyle": [
+      "Clear, structured lectures",
+      "Heavy weekly problem sets",
+      "Exams test understanding"
+    ],
+    "verdict": "Across 23 reviews, students call Okonkwo demanding but exceptionally clear — expect heavy problem sets and exams that reward real understanding.",
+    "watchOuts": [
+      "Workload is heavy; several reviews say the problem sets take most of the week",
+      "Exams are hard and averages run low before any curve"
+    ],
+    "workload": "heavy"
+  },
+  "uiuc:p:rafael-ibarra-quintero": {
+    "bestFor": "Most students in CS — no strong pattern in the reviews",
+    "confidence": "medium",
+    "evidenceReviewIds": [
+      "uiuc:r:d-00026",
+      "uiuc:r:d-00024",
+      "uiuc:r:d-00027",
+      "uiuc:r:d-00025",
+      "uiuc:r:d-00028"
+    ],
+    "format": "discussion",
+    "generatedAt": "2026-09-04T00:00:00Z",
+    "gradingNote": "In 2 course(s) over 3 year(s), GPA averaged 3.58 (+0.01 vs. the same courses taught by others); 2.8% withdrew.",
+    "inputHash": "f2ffeae8ddd6d8d7",
+    "model": null,
+    "professorId": "uiuc:p:rafael-ibarra-quintero",
+    "promptVersion": 1,
+    "reviewCount": 6,
+    "source": "extractive",
+    "strengths": [
+      "Lectures are described as clear and well organized",
+      "“Fair grading with a transparent rubric, and partial credit is generous.”"
+    ],
+    "teachingStyle": [
+      "Clear lectures",
+      "Hard exams"
+    ],
+    "verdict": "Rated 4.3/5 across 6 reviews; grades track the course average.",
+    "watchOuts": [
+      "Exams are described as hard"
+    ],
+    "workload": "moderate"
+  }
+}

@@ -1,0 +1,6706 @@
+{
+  "courses": [
+    {
+      "courseId": "uiuc:ECE:110",
+      "number": "110",
+      "professorCount": 3,
+      "title": "Introduction to Electronics"
+    },
+    {
+      "courseId": "uiuc:ECE:120",
+      "number": "120",
+      "professorCount": 1,
+      "title": "Introduction to Computing"
+    },
+    {
+      "courseId": "uiuc:ECE:205",
+      "number": "205",
+      "professorCount": 2,
+      "title": "Electrical & Electronic Ckts"
+    },
+    {
+      "courseId": "uiuc:ECE:206",
+      "number": "206",
+      "professorCount": 2,
+      "title": "Electrical & Electronics Lab"
+    },
+    {
+      "courseId": "uiuc:ECE:210",
+      "number": "210",
+      "professorCount": 1,
+      "title": "Analog Signal Processing"
+    },
+    {
+      "courseId": "uiuc:ECE:220",
+      "number": "220",
+      "professorCount": 1,
+      "title": "Computer Systems & Programming"
+    },
+    {
+      "courseId": "uiuc:ECE:310",
+      "number": "310",
+      "professorCount": 3,
+      "title": "Digital Signal Processing"
+    },
+    {
+      "courseId": "uiuc:ECE:311",
+      "number": "311",
+      "professorCount": 4,
+      "title": "Digital Signal Processing Lab"
+    },
+    {
+      "courseId": "uiuc:ECE:313",
+      "number": "313",
+      "professorCount": 2,
+      "title": "Probability with Engrg Applic"
+    },
+    {
+      "courseId": "uiuc:ECE:329",
+      "number": "329",
+      "professorCount": 3,
+      "title": "Fields and Waves I"
+    },
+    {
+      "courseId": "uiuc:ECE:330",
+      "number": "330",
+      "professorCount": 1,
+      "title": "Power Ckts & Electromechanics"
+    },
+    {
+      "courseId": "uiuc:ECE:333",
+      "number": "333",
+      "professorCount": 1,
+      "title": "Green Electric Energy"
+    },
+    {
+      "courseId": "uiuc:ECE:340",
+      "number": "340",
+      "professorCount": 2,
+      "title": "Semiconductor Electronics"
+    },
+    {
+      "courseId": "uiuc:ECE:342",
+      "number": "342",
+      "professorCount": 1,
+      "title": "Electronic Circuits"
+    },
+    {
+      "courseId": "uiuc:ECE:385",
+      "number": "385",
+      "professorCount": 4,
+      "title": "Digital Systems Laboratory"
+    },
+    {
+      "courseId": "uiuc:ECE:391",
+      "number": "391",
+      "professorCount": 3,
+      "title": "Computer Systems Engineering"
+    },
+    {
+      "courseId": "uiuc:ECE:408",
+      "number": "408",
+      "professorCount": 3,
+      "title": "Applied Parallel Programming"
+    },
+    {
+      "courseId": "uiuc:ECE:411",
+      "number": "411",
+      "professorCount": 1,
+      "title": "Computer Organization & Design"
+    },
+    {
+      "courseId": "uiuc:ECE:445",
+      "number": "445",
+      "professorCount": 2,
+      "title": "Senior Design Project Lab"
+    },
+    {
+      "courseId": "uiuc:ECE:549",
+      "number": "549",
+      "professorCount": 2,
+      "title": "Computer Vision"
+    }
+  ],
+  "generatedAt": "2026-09-03T14:12:00Z",
+  "gradesThroughTerm": "2025-fa",
+  "mode": "demo",
+  "priorMean": 3.73,
+  "professors": [
+    {
+      "badges": [],
+      "courses": [
+        {
+          "aRate": 0.571,
+          "baselineGpa": 3.091,
+          "baselineN": 727,
+          "buckets": {
+            "a": 127,
+            "aMinus": 115,
+            "aPlus": 283,
+            "b": 58,
+            "bMinus": 49,
+            "bPlus": 101,
+            "c": 30,
+            "cMinus": 24,
+            "cPlus": 52,
+            "d": 22,
+            "dMinus": 9,
+            "dPlus": 34,
+            "f": 15,
+            "w": 17
+          },
+          "courseId": "uiuc:ECE:205",
+          "delta": 0.171,
+          "dfwRate": 0.104,
+          "gpa": 3.262,
+          "gradeRows": 6,
+          "graded": 919,
+          "isHeadline": true,
+          "number": "205",
+          "subject": "ECE",
+          "title": "Electrical & Electronic Ckts",
+          "wRate": 0.018,
+          "withdrawn": 17
+        },
+        {
+          "aRate": 0.531,
+          "baselineGpa": 3.213,
+          "baselineN": 2792,
+          "buckets": {
+            "a": 279,
+            "aMinus": 177,
+            "aPlus": 305,
+            "b": 106,
+            "bMinus": 137,
+            "bPlus": 200,
+            "c": 41,
+            "cMinus": 40,
+            "cPlus": 50,
+            "d": 40,
+            "dMinus": 22,
+            "dPlus": 21,
+            "f": 14,
+            "w": 41
+          },
+          "courseId": "uiuc:ECE:385",
+          "delta": 0.057,
+          "dfwRate": 0.094,
+          "gpa": 3.27,
+          "gradeRows": 6,
+          "graded": 1432,
+          "isHeadline": true,
+          "number": "385",
+          "subject": "ECE",
+          "title": "Digital Systems Laboratory",
+          "wRate": 0.028,
+          "withdrawn": 41
+        },
+        {
+          "aRate": 0.578,
+          "baselineGpa": null,
+          "baselineN": 0,
+          "buckets": {
+            "a": 4,
+            "aMinus": 4,
+            "aPlus": 18,
+            "b": 6,
+            "bMinus": 0,
+            "bPlus": 6,
+            "c": 4,
+            "cMinus": 2,
+            "cPlus": 0,
+            "d": 0,
+            "dMinus": 0,
+            "dPlus": 1,
+            "f": 0,
+            "w": 1
+          },
+          "courseId": "uiuc:ECE:205",
+          "delta": null,
+          "dfwRate": 0.043,
+          "gpa": 3.407,
+          "gradeRows": 1,
+          "graded": 45,
+          "isHeadline": false,
+          "number": "205",
+          "subject": "ECE",
+          "title": "Electrical & Electronic Ckts",
+          "wRate": 0.022,
+          "withdrawn": 1
+        },
+        {
+          "aRate": 0.515,
+          "baselineGpa": 3.189,
+          "baselineN": 322,
+          "buckets": {
+            "a": 8,
+            "aMinus": 3,
+            "aPlus": 6,
+            "b": 1,
+            "bMinus": 5,
+            "bPlus": 6,
+            "c": 1,
+            "cMinus": 0,
+            "cPlus": 0,
+            "d": 2,
+            "dMinus": 0,
+            "dPlus": 1,
+            "f": 0,
+            "w": 1
+          },
+          "courseId": "uiuc:ECE:385",
+          "delta": 0.105,
+          "dfwRate": 0.118,
+          "gpa": 3.293,
+          "gradeRows": 1,
+          "graded": 33,
+          "isHeadline": false,
+          "number": "385",
+          "subject": "ECE",
+          "title": "Digital Systems Laboratory",
+          "wRate": 0.029,
+          "withdrawn": 1
+        }
+      ],
+      "distribution": {
+        "a": 406,
+        "aMinus": 292,
+        "aPlus": 588,
+        "b": 164,
+        "bMinus": 186,
+        "bPlus": 301,
+        "c": 71,
+        "cMinus": 64,
+        "cPlus": 102,
+        "d": 62,
+        "dMinus": 31,
+        "dPlus": 55,
+        "f": 29,
+        "w": 58
+      },
+      "gpaByYear": [
+        {
+          "gpa": 3.226,
+          "n": 814,
+          "year": 2021
+        },
+        {
+          "gpa": 3.261,
+          "n": 528,
+          "year": 2022
+        },
+        {
+          "gpa": 3.267,
+          "n": 561,
+          "year": 2023
+        },
+        {
+          "gpa": 3.349,
+          "n": 448,
+          "year": 2024
+        }
+      ],
+      "matchProvenance": [
+        {
+          "instructorRaw": "Ngata, Elizabeth",
+          "method": "exact",
+          "rows": 9,
+          "score": 1,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Ngata, E",
+          "method": "initial",
+          "rows": 4,
+          "score": 0.85,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Ngata, Liz",
+          "method": "nickname",
+          "rows": 1,
+          "score": 0.85,
+          "source": "grades"
+        }
+      ],
+      "openSections": [],
+      "positiveReviews": [
+        {
+          "courseId": "uiuc:ECE:385",
+          "courseLabel": "ECE 385",
+          "date": "2024-02-06",
+          "difficulty": 3,
+          "gradeReceived": null,
+          "helpfulVotes": 9,
+          "id": "uiuc:r:demo-r-000491",
+          "professorId": "uiuc:p:elizabeth-ngata",
+          "quality": 5,
+          "sentiment": 0.85,
+          "sourceTags": [
+            "Participation matters"
+          ],
+          "text": "Expect to rely heavily on your classmates to get through it. Very approachable and always willing to help after class. The curve was smaller than people expected. Make a formula sheet even if you cannot use it on the…",
+          "vibeTags": [
+            "caring",
+            "curves-generously"
+          ],
+          "wouldTakeAgain": true
+        },
+        {
+          "courseId": "uiuc:ECE:205",
+          "courseLabel": "ECE 205",
+          "date": "2022-04-22",
+          "difficulty": 2,
+          "gradeReceived": "A+",
+          "helpfulVotes": 7,
+          "id": "uiuc:r:demo-r-000495",
+          "professorId": "uiuc:p:elizabeth-ngata",
+          "quality": 4,
+          "sentiment": 0.433,
+          "sourceTags": [
+            "Amazing lectures",
+            "Caring"
+          ],
+          "text": "I looked forward to every single lecture, which never happens. Amazing notes, seriously the best resource in the class. Supportive of students who were struggling, no judgment. Make a formula sheet even if you cannot…",
+          "vibeTags": [],
+          "wouldTakeAgain": false
+        }
+      ],
+      "professor": {
+        "courseIds": [
+          "uiuc:ECE:205",
+          "uiuc:ECE:385"
+        ],
+        "department": "Electrical and Computer Engineering",
+        "displayName": "Elizabeth Ngata",
+        "firstName": "Elizabeth",
+        "id": "uiuc:p:elizabeth-ngata",
+        "isFictional": true,
+        "kind": "reviewed",
+        "lastName": "Ngata",
+        "nameKey": {
+          "first": "elizabeth",
+          "firstCompact": "elizabeth",
+          "firstInitial": "e",
+          "firstToken": "elizabeth",
+          "firstTokens": [
+            "elizabeth"
+          ],
+          "last": "ngata",
+          "lastCompact": "ngata",
+          "lastTokens": [
+            "ngata"
+          ],
+          "middleInitials": [],
+          "raw": "Ngata, Elizabeth"
+        },
+        "nameVariants": [
+          "Ngata, E",
+          "Ngata, Elizabeth",
+          "Ngata, Liz"
+        ],
+        "reviewSourceId": "demo-p-038",
+        "schoolId": "uiuc",
+        "slug": "elizabeth-ngata",
+        "subjects": [
+          "ECE"
+        ]
+      },
+      "rank": null,
+      "scores": {
+        "aRate": 0.547,
+        "composite": 77.5,
+        "confidence": "medium",
+        "criticalCount": 0,
+        "deltaComparableN": 2351,
+        "dfwRate": 0.098,
+        "difficultyMean": 2.333,
+        "gpaDelta": 0.102,
+        "gpaMean": 3.267,
+        "gradeRows": 12,
+        "positiveCount": 9,
+        "priorMean": 3.73,
+        "ratingRaw": 4.667,
+        "ratingShrunk": 4.332,
+        "reviewCount": 9,
+        "soleInstructor": false,
+        "studentsGraded": 2351,
+        "wRate": 0.024,
+        "withdrawn": 58,
+        "wouldTakeAgainPct": 88.889,
+        "yearsActive": 4
+      },
+      "sectionsThisTerm": 0,
+      "summary": {
+        "bestFor": "Students new to ECE who want a well-organized, supportive first course with excellent study materials",
+        "confidence": "medium",
+        "evidenceReviewIds": [
+          "uiuc:r:demo-r-000498",
+          "uiuc:r:demo-r-000496",
+          "uiuc:r:demo-r-000493",
+          "uiuc:r:demo-r-000491",
+          "uiuc:r:demo-r-000494",
+          "uiuc:r:demo-r-000492",
+          "uiuc:r:demo-r-000495",
+          "uiuc:r:demo-r-000490",
+          "uiuc:r:demo-r-000497"
+        ],
+        "format": "mixed",
+        "generatedAt": "2026-09-06T22:54:11.833Z",
+        "gradingNote": "In 4 course(s) over 4 year(s), GPA averaged 3.27 (+0.10 vs. the same courses taught by others); 2.4% withdrew.",
+        "inputHash": "e714fac74cb787e7",
+        "model": "qwen/qwen3.8-27b",
+        "professorId": "uiuc:p:elizabeth-ngata",
+        "promptVersion": 1,
+        "provider": "Groq",
+        "reviewCount": 9,
+        "source": "openai-compatible",
+        "strengths": [
+          "Caring and approachable — office hours highlighted by multiple students",
+          "Notes so thorough the textbook becomes optional",
+          "Breaks complex ideas into digestible pieces"
+        ],
+        "teachingStyle": [
+          "Clear, structured lectures",
+          "Thorough written notes",
+          "Approachable and supportive"
+        ],
+        "verdict": "Across 9 reviews, consistently praised for clear lectures and thorough notes; expect challenging exams and a demanding project.",
+        "watchOuts": [
+          "Exams longer and harder than homework suggests",
+          "Autograder picky; budget extra time for the project",
+          "Grading felt inconsistent between TAs"
+        ],
+        "workload": "moderate"
+      },
+      "vibeTags": [
+        "caring"
+      ]
+    },
+    {
+      "badges": [
+        "open-now"
+      ],
+      "courses": [
+        {
+          "aRate": 0.2,
+          "baselineGpa": 2.606,
+          "baselineN": 276,
+          "buckets": {
+            "a": 18,
+            "aMinus": 7,
+            "aPlus": 11,
+            "b": 27,
+            "bMinus": 21,
+            "bPlus": 14,
+            "c": 21,
+            "cMinus": 12,
+            "cPlus": 15,
+            "d": 12,
+            "dMinus": 7,
+            "dPlus": 6,
+            "f": 9,
+            "w": 7
+          },
+          "courseId": "uiuc:ECE:340",
+          "delta": -0.123,
+          "dfwRate": 0.219,
+          "gpa": 2.484,
+          "gradeRows": 5,
+          "graded": 180,
+          "isHeadline": true,
+          "number": "340",
+          "subject": "ECE",
+          "title": "Semiconductor Electronics",
+          "wRate": 0.037,
+          "withdrawn": 7
+        },
+        {
+          "aRate": 0.415,
+          "baselineGpa": 3.168,
+          "baselineN": 599,
+          "buckets": {
+            "a": 94,
+            "aMinus": 66,
+            "aPlus": 10,
+            "b": 51,
+            "bMinus": 27,
+            "bPlus": 69,
+            "c": 42,
+            "cMinus": 8,
+            "cPlus": 31,
+            "d": 1,
+            "dMinus": 5,
+            "dPlus": 0,
+            "f": 6,
+            "w": 15
+          },
+          "courseId": "uiuc:ECE:408",
+          "delta": -0.029,
+          "dfwRate": 0.064,
+          "gpa": 3.139,
+          "gradeRows": 4,
+          "graded": 410,
+          "isHeadline": true,
+          "number": "408",
+          "subject": "ECE",
+          "title": "Applied Parallel Programming",
+          "wRate": 0.035,
+          "withdrawn": 15
+        },
+        {
+          "aRate": 0.381,
+          "baselineGpa": 2.911,
+          "baselineN": 15,
+          "buckets": {
+            "a": 6,
+            "aMinus": 2,
+            "aPlus": 0,
+            "b": 4,
+            "bMinus": 1,
+            "bPlus": 1,
+            "c": 0,
+            "cMinus": 0,
+            "cPlus": 1,
+            "d": 2,
+            "dMinus": 0,
+            "dPlus": 4,
+            "f": 0,
+            "w": 2
+          },
+          "courseId": "uiuc:ECE:340",
+          "delta": -0.102,
+          "dfwRate": 0.348,
+          "gpa": 2.809,
+          "gradeRows": 1,
+          "graded": 21,
+          "isHeadline": false,
+          "number": "340",
+          "subject": "ECE",
+          "title": "Semiconductor Electronics",
+          "wRate": 0.087,
+          "withdrawn": 2
+        }
+      ],
+      "distribution": {
+        "a": 112,
+        "aMinus": 73,
+        "aPlus": 21,
+        "b": 78,
+        "bMinus": 48,
+        "bPlus": 83,
+        "c": 63,
+        "cMinus": 20,
+        "cPlus": 46,
+        "d": 13,
+        "dMinus": 12,
+        "dPlus": 6,
+        "f": 15,
+        "w": 22
+      },
+      "gpaByYear": [
+        {
+          "gpa": 2.946,
+          "n": 104,
+          "year": 2022
+        },
+        {
+          "gpa": 2.995,
+          "n": 135,
+          "year": 2023
+        },
+        {
+          "gpa": 3.078,
+          "n": 144,
+          "year": 2024
+        },
+        {
+          "gpa": 2.802,
+          "n": 207,
+          "year": 2025
+        }
+      ],
+      "matchProvenance": [
+        {
+          "instructorRaw": "Haddad-Lindqvist, Rúnar",
+          "method": "exact",
+          "rows": 7,
+          "score": 1,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Haddad-Lindqvist, R",
+          "method": "initial",
+          "rows": 3,
+          "score": 0.85,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Haddad-Lindqvist, Rúnar Jr",
+          "method": "exact",
+          "rows": 1,
+          "score": 1,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Haddad-Lindqvist, Rúnar",
+          "method": "exact",
+          "rows": 1,
+          "score": 1,
+          "source": "schedule"
+        }
+      ],
+      "openSections": [
+        {
+          "courseId": "uiuc:ECE:408",
+          "crn": "41356",
+          "crossListedCourseIds": [],
+          "fetchedAt": "2026-09-03T14:12:00Z",
+          "id": "uiuc:s:2026-fa:41356",
+          "instructorsRaw": [
+            "Haddad-Lindqvist, Rúnar"
+          ],
+          "isOpen": true,
+          "meetings": [
+            {
+              "building": "Oberon Technology Center",
+              "days": [
+                "T",
+                "R"
+              ],
+              "end": "15:20",
+              "room": "239",
+              "start": "14:00",
+              "type": "LEC"
+            }
+          ],
+          "professorIds": [
+            "uiuc:p:runar-haddad-lindqvist"
+          ],
+          "schoolId": "uiuc",
+          "seatsKnown": true,
+          "sectionCode": "AL1",
+          "status": "open",
+          "term": "2026-fa",
+          "type": "LEC"
+        }
+      ],
+      "positiveReviews": [
+        {
+          "courseId": "uiuc:ECE:408",
+          "courseLabel": "ECE 408",
+          "date": "2024-08-07",
+          "difficulty": 4,
+          "gradeReceived": "A",
+          "helpfulVotes": 8,
+          "id": "uiuc:r:demo-r-000517",
+          "professorId": "uiuc:p:runar-haddad-lindqvist",
+          "quality": 5,
+          "sentiment": 0.867,
+          "sourceTags": [
+            "Graded by few things",
+            "Hilarious"
+          ],
+          "text": "Take this class with this professor if you possibly can. Review for the ECE 408 discussion and lecture combined. Breaks down complicated ideas into clear, digestible pieces. Lectures occasionally ran over time. Learn…",
+          "vibeTags": [],
+          "wouldTakeAgain": true
+        },
+        {
+          "courseId": "uiuc:ECE:340",
+          "courseLabel": "ECE 340",
+          "date": "2023-02-25",
+          "difficulty": 3,
+          "gradeReceived": "A-",
+          "helpfulVotes": 8,
+          "id": "uiuc:r:demo-r-000513",
+          "professorId": "uiuc:p:runar-haddad-lindqvist",
+          "quality": 4,
+          "sentiment": 0.379,
+          "sourceTags": [
+            "Graded by few things",
+            "Test heavy"
+          ],
+          "text": "I looked forward to every single lecture, which never happens. Took ECE 340 during a heavy semester. Super engaging lecturer who keeps the whole room awake. Expect hard exams that require real understanding, not…",
+          "vibeTags": [
+            "engaging",
+            "hard-exams"
+          ],
+          "wouldTakeAgain": false
+        }
+      ],
+      "professor": {
+        "courseIds": [
+          "uiuc:ECE:340",
+          "uiuc:ECE:408"
+        ],
+        "department": "Electrical and Computer Engineering",
+        "displayName": "Rúnar Haddad-Lindqvist",
+        "firstName": "Rúnar",
+        "id": "uiuc:p:runar-haddad-lindqvist",
+        "isFictional": true,
+        "kind": "reviewed",
+        "lastName": "Haddad-Lindqvist",
+        "nameKey": {
+          "first": "runar",
+          "firstCompact": "runar",
+          "firstInitial": "r",
+          "firstToken": "runar",
+          "firstTokens": [
+            "runar"
+          ],
+          "last": "haddad lindqvist",
+          "lastCompact": "haddadlindqvist",
+          "lastTokens": [
+            "haddad",
+            "lindqvist"
+          ],
+          "middleInitials": [],
+          "raw": "Haddad-Lindqvist, Rúnar"
+        },
+        "nameVariants": [
+          "Haddad-Lindqvist, R",
+          "Haddad-Lindqvist, Rúnar",
+          "Haddad-Lindqvist, Rúnar Jr"
+        ],
+        "reviewSourceId": "demo-p-040",
+        "schoolId": "uiuc",
+        "slug": "runar-haddad-lindqvist",
+        "subjects": [
+          "ECE"
+        ]
+      },
+      "rank": null,
+      "scores": {
+        "aRate": 0.349,
+        "composite": 73.4,
+        "confidence": "high",
+        "criticalCount": 0,
+        "deltaComparableN": 590,
+        "dfwRate": 0.111,
+        "difficultyMean": 3.294,
+        "gpaDelta": -0.057,
+        "gpaMean": 2.939,
+        "gradeRows": 9,
+        "positiveCount": 15,
+        "priorMean": 3.73,
+        "ratingRaw": 4.471,
+        "ratingShrunk": 4.302,
+        "reviewCount": 17,
+        "soleInstructor": false,
+        "studentsGraded": 590,
+        "wRate": 0.036,
+        "withdrawn": 22,
+        "wouldTakeAgainPct": 82.353,
+        "yearsActive": 4
+      },
+      "sectionsThisTerm": 1,
+      "summary": {
+        "bestFor": "Students who want an engaging, clear instructor and are willing to put in consistent effort for hard exams.",
+        "confidence": "high",
+        "evidenceReviewIds": [
+          "uiuc:r:demo-r-000509",
+          "uiuc:r:demo-r-000520",
+          "uiuc:r:demo-r-000519",
+          "uiuc:r:demo-r-000517",
+          "uiuc:r:demo-r-000511",
+          "uiuc:r:demo-r-000522",
+          "uiuc:r:demo-r-000513",
+          "uiuc:r:demo-r-000516",
+          "uiuc:r:demo-r-000523",
+          "uiuc:r:demo-r-000510"
+        ],
+        "format": "mixed",
+        "generatedAt": "2026-09-06T23:05:43.410Z",
+        "gradingNote": "In 3 course(s) over 4 year(s), GPA averaged 2.94 (−0.06 vs. the same courses taught by others); 3.6% withdrew.",
+        "inputHash": "883178a4affad31b",
+        "model": "qwen/qwen3.8-27b",
+        "professorId": "uiuc:p:runar-haddad-lindqvist",
+        "promptVersion": 1,
+        "provider": "Groq",
+        "reviewCount": 17,
+        "source": "openai-compatible",
+        "strengths": [
+          "Makes material engaging even in early morning sections",
+          "TAs in discussion sections are consistently praised",
+          "Lectures build logically and reach their stated goals",
+          "Fair and kind — students report learning more than expected"
+        ],
+        "teachingStyle": [
+          "Engaging discussions over monologue",
+          "Step-by-step clear explanations",
+          "Simplifies complex ideas",
+          "Lectures occasionally run over time"
+        ],
+        "verdict": "Based on 17 reviews, this is one of the more engaging and clear instructors in ECE — expect hard exams that test understanding, not memorization.",
+        "watchOuts": [
+          "Exams are significantly harder than homework or lectures",
+          "Difficult to get individual help in large sections",
+          "Budget extra time for the project"
+        ],
+        "workload": "moderate"
+      },
+      "vibeTags": [
+        "engaging",
+        "clear-lectures"
+      ]
+    },
+    {
+      "badges": [
+        "open-now"
+      ],
+      "courses": [],
+      "distribution": {
+        "a": 0,
+        "aMinus": 0,
+        "aPlus": 0,
+        "b": 0,
+        "bMinus": 0,
+        "bPlus": 0,
+        "c": 0,
+        "cMinus": 0,
+        "cPlus": 0,
+        "d": 0,
+        "dMinus": 0,
+        "dPlus": 0,
+        "f": 0,
+        "w": 0
+      },
+      "gpaByYear": [],
+      "matchProvenance": [
+        {
+          "instructorRaw": "Agyeman, Alejandro",
+          "method": "exact",
+          "rows": 11,
+          "score": 1,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Agyeman, A",
+          "method": "initial",
+          "rows": 2,
+          "score": 0.85,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Agyeman, Alejandro",
+          "method": "exact",
+          "rows": 2,
+          "score": 1,
+          "source": "schedule"
+        }
+      ],
+      "openSections": [
+        {
+          "courseId": "uiuc:CS:598",
+          "crn": "54752",
+          "crossListedCourseIds": [
+            "uiuc:ECE:549"
+          ],
+          "fetchedAt": "2026-09-03T14:12:00Z",
+          "id": "uiuc:s:2026-fa:54752",
+          "instructorsRaw": [
+            "Agyeman, Alejandro"
+          ],
+          "isOpen": true,
+          "meetings": [
+            {
+              "building": "Quillon Auditorium",
+              "days": [
+                "T",
+                "R"
+              ],
+              "end": "09:20",
+              "room": "461",
+              "start": "08:00",
+              "type": "LEC"
+            }
+          ],
+          "professorIds": [
+            "uiuc:p:alejandro-agyeman"
+          ],
+          "schoolId": "uiuc",
+          "seatsKnown": true,
+          "sectionCode": "AL1",
+          "status": "open",
+          "term": "2026-fa",
+          "type": "LEC"
+        }
+      ],
+      "positiveReviews": [
+        {
+          "courseId": "uiuc:CS:425",
+          "courseLabel": "CS 425",
+          "date": "2024-09-28",
+          "difficulty": 4,
+          "gradeReceived": "B+",
+          "helpfulVotes": 8,
+          "id": "uiuc:r:demo-r-000327",
+          "professorId": "uiuc:p:alejandro-agyeman",
+          "quality": 5,
+          "sentiment": 0.9,
+          "sourceTags": [
+            "Caring",
+            "Clear grading criteria",
+            "Lecture heavy"
+          ],
+          "text": "I recommend this professor to everyone in my major. Enthusiastic and entertaining without dumbing anything down. Treat the homework like exam practice. Ended up being one of my favorites.",
+          "vibeTags": [
+            "engaging"
+          ],
+          "wouldTakeAgain": true
+        },
+        {
+          "courseId": "uiuc:CS:425",
+          "courseLabel": "CS 425",
+          "date": "2024-07-01",
+          "difficulty": 3,
+          "gradeReceived": "B",
+          "helpfulVotes": 7,
+          "id": "uiuc:r:demo-r-000328",
+          "professorId": "uiuc:p:alejandro-agyeman",
+          "quality": 5,
+          "sentiment": 0.75,
+          "sourceTags": [
+            "Gives good feedback"
+          ],
+          "text": "I would sign up for anything this professor teaches. I was in the CS 425 section that met in the morning. Keeps things engaging with demos and live examples. Strict attendance policy with clicker questions every…",
+          "vibeTags": [
+            "engaging",
+            "strict-attendance"
+          ],
+          "wouldTakeAgain": false
+        }
+      ],
+      "professor": {
+        "courseIds": [
+          "uiuc:CS:425",
+          "uiuc:CS:598",
+          "uiuc:ECE:549"
+        ],
+        "department": "Computer Science",
+        "displayName": "Alejandro Agyeman",
+        "firstName": "Alejandro",
+        "id": "uiuc:p:alejandro-agyeman",
+        "isFictional": true,
+        "kind": "reviewed",
+        "lastName": "Agyeman",
+        "nameKey": {
+          "first": "alejandro",
+          "firstCompact": "alejandro",
+          "firstInitial": "a",
+          "firstToken": "alejandro",
+          "firstTokens": [
+            "alejandro"
+          ],
+          "last": "agyeman",
+          "lastCompact": "agyeman",
+          "lastTokens": [
+            "agyeman"
+          ],
+          "middleInitials": [],
+          "raw": "Agyeman, Alejandro"
+        },
+        "nameVariants": [
+          "Agyeman, A",
+          "Agyeman, Alejandro"
+        ],
+        "reviewSourceId": "demo-p-025",
+        "schoolId": "uiuc",
+        "slug": "alejandro-agyeman",
+        "subjects": [
+          "CS"
+        ]
+      },
+      "rank": null,
+      "scores": {
+        "aRate": null,
+        "composite": 70.9,
+        "confidence": "medium",
+        "criticalCount": 0,
+        "deltaComparableN": 0,
+        "dfwRate": null,
+        "difficultyMean": 4,
+        "gpaDelta": null,
+        "gpaMean": null,
+        "gradeRows": 0,
+        "positiveCount": 9,
+        "priorMean": 3.73,
+        "ratingRaw": 4.364,
+        "ratingShrunk": 4.166,
+        "reviewCount": 11,
+        "soleInstructor": false,
+        "studentsGraded": 0,
+        "wRate": null,
+        "withdrawn": 0,
+        "wouldTakeAgainPct": 72.727,
+        "yearsActive": 0
+      },
+      "sectionsThisTerm": 1,
+      "summary": {
+        "bestFor": "students who thrive on active participation and can manage a demanding schedule",
+        "confidence": "medium",
+        "evidenceReviewIds": [
+          "uiuc:r:demo-r-000326",
+          "uiuc:r:demo-r-000327",
+          "uiuc:r:demo-r-000328",
+          "uiuc:r:demo-r-000331",
+          "uiuc:r:demo-r-000335",
+          "uiuc:r:demo-r-000329",
+          "uiuc:r:demo-r-000334",
+          "uiuc:r:demo-r-000333",
+          "uiuc:r:demo-r-000332",
+          "uiuc:r:demo-r-000325",
+          "uiuc:r:demo-r-000330"
+        ],
+        "format": "discussion",
+        "generatedAt": "2026-09-06T22:22:42.611Z",
+        "gradingNote": "In 3 course(s) over 4 year(s), GPA averaged 3.20 (−0.18 vs. the same courses taught by others); 2.6% withdrew.",
+        "inputHash": "4a343932c3d1e4d3",
+        "model": "openai/gpt-oss-20b",
+        "professorId": "uiuc:p:alejandro-agyeman",
+        "promptVersion": 1,
+        "provider": "Groq",
+        "reviewCount": 11,
+        "source": "openai-compatible",
+        "strengths": [
+          "engaging discussions",
+          "supportive office hours",
+          "interactive demos"
+        ],
+        "teachingStyle": [
+          "discussion",
+          "interactive"
+        ],
+        "verdict": "Based on 11 reviews, this professor is engaging and supportive but has a heavy workload and strict attendance policy.",
+        "watchOuts": [
+          "heavy workload",
+          "strict attendance",
+          "long frequent assignments"
+        ],
+        "workload": "heavy"
+      },
+      "vibeTags": [
+        "engaging"
+      ]
+    },
+    {
+      "badges": [
+        "open-now"
+      ],
+      "courses": [
+        {
+          "aRate": 0.707,
+          "baselineGpa": 3.327,
+          "baselineN": 137,
+          "buckets": {
+            "a": 52,
+            "aMinus": 87,
+            "aPlus": 6,
+            "b": 17,
+            "bMinus": 7,
+            "bPlus": 14,
+            "c": 1,
+            "cMinus": 2,
+            "cPlus": 9,
+            "d": 2,
+            "dMinus": 2,
+            "dPlus": 4,
+            "f": 2,
+            "w": 6
+          },
+          "courseId": "uiuc:ECE:206",
+          "delta": 0.1,
+          "dfwRate": 0.076,
+          "gpa": 3.427,
+          "gradeRows": 8,
+          "graded": 205,
+          "isHeadline": true,
+          "number": "206",
+          "subject": "ECE",
+          "title": "Electrical & Electronics Lab",
+          "wRate": 0.028,
+          "withdrawn": 6
+        },
+        {
+          "aRate": 0.228,
+          "baselineGpa": 2.779,
+          "baselineN": 218,
+          "buckets": {
+            "a": 24,
+            "aMinus": 33,
+            "aPlus": 13,
+            "b": 48,
+            "bMinus": 46,
+            "bPlus": 22,
+            "c": 35,
+            "cMinus": 16,
+            "cPlus": 25,
+            "d": 13,
+            "dMinus": 10,
+            "dPlus": 10,
+            "f": 12,
+            "w": 4
+          },
+          "courseId": "uiuc:ECE:313",
+          "delta": -0.182,
+          "dfwRate": 0.158,
+          "gpa": 2.597,
+          "gradeRows": 6,
+          "graded": 307,
+          "isHeadline": true,
+          "number": "313",
+          "subject": "ECE",
+          "title": "Probability with Engrg Applic",
+          "wRate": 0.013,
+          "withdrawn": 4
+        },
+        {
+          "aRate": 0.267,
+          "baselineGpa": 2.944,
+          "baselineN": 18,
+          "buckets": {
+            "a": 3,
+            "aMinus": 5,
+            "aPlus": 0,
+            "b": 3,
+            "bMinus": 3,
+            "bPlus": 2,
+            "c": 3,
+            "cMinus": 0,
+            "cPlus": 2,
+            "d": 0,
+            "dMinus": 0,
+            "dPlus": 2,
+            "f": 7,
+            "w": 0
+          },
+          "courseId": "uiuc:ECE:313",
+          "delta": -0.7,
+          "dfwRate": 0.3,
+          "gpa": 2.245,
+          "gradeRows": 1,
+          "graded": 30,
+          "isHeadline": false,
+          "number": "313",
+          "subject": "ECE",
+          "title": "Probability with Engrg Applic",
+          "wRate": 0,
+          "withdrawn": 0
+        }
+      ],
+      "distribution": {
+        "a": 76,
+        "aMinus": 120,
+        "aPlus": 19,
+        "b": 65,
+        "bMinus": 53,
+        "bPlus": 36,
+        "c": 36,
+        "cMinus": 18,
+        "cPlus": 34,
+        "d": 15,
+        "dMinus": 12,
+        "dPlus": 14,
+        "f": 14,
+        "w": 10
+      },
+      "gpaByYear": [
+        {
+          "gpa": 2.657,
+          "n": 61,
+          "year": 2021
+        },
+        {
+          "gpa": 2.885,
+          "n": 147,
+          "year": 2022
+        },
+        {
+          "gpa": 3.069,
+          "n": 127,
+          "year": 2023
+        },
+        {
+          "gpa": 3.155,
+          "n": 65,
+          "year": 2024
+        },
+        {
+          "gpa": 2.846,
+          "n": 112,
+          "year": 2025
+        }
+      ],
+      "matchProvenance": [
+        {
+          "instructorRaw": "Calloway, Emeka",
+          "method": "exact",
+          "rows": 12,
+          "score": 1,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Calloway, E",
+          "method": "initial",
+          "rows": 4,
+          "score": 0.85,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Calloway, E",
+          "method": "initial",
+          "rows": 1,
+          "score": 0.85,
+          "source": "schedule"
+        },
+        {
+          "instructorRaw": "Calloway, Emeka",
+          "method": "exact",
+          "rows": 1,
+          "score": 1,
+          "source": "schedule"
+        }
+      ],
+      "openSections": [
+        {
+          "courseId": "uiuc:ECE:206",
+          "crn": "58116",
+          "crossListedCourseIds": [],
+          "fetchedAt": "2026-09-03T14:12:00Z",
+          "id": "uiuc:s:2026-fa:58116",
+          "instructorsRaw": [
+            "Calloway, Emeka"
+          ],
+          "isOpen": true,
+          "meetings": [
+            {
+              "building": "Harrow Hall",
+              "days": [
+                "T",
+                "R"
+              ],
+              "end": "09:20",
+              "room": "315",
+              "start": "08:00",
+              "type": "LCD"
+            }
+          ],
+          "professorIds": [
+            "uiuc:p:emeka-calloway"
+          ],
+          "schoolId": "uiuc",
+          "seatsKnown": true,
+          "sectionCode": "AL2",
+          "status": "open",
+          "term": "2026-fa",
+          "type": "LCD"
+        },
+        {
+          "courseId": "uiuc:ECE:206",
+          "crn": "76547",
+          "crossListedCourseIds": [],
+          "fetchedAt": "2026-09-03T14:12:00Z",
+          "id": "uiuc:s:2026-fa:76547",
+          "instructorsRaw": [
+            "Calloway, E"
+          ],
+          "isOpen": true,
+          "meetings": [
+            {
+              "building": "Ellery Computing Center",
+              "days": [
+                "M",
+                "W"
+              ],
+              "end": "19:20",
+              "room": "421",
+              "start": "18:00",
+              "type": "DIS"
+            }
+          ],
+          "professorIds": [
+            "uiuc:p:emeka-calloway"
+          ],
+          "schoolId": "uiuc",
+          "seatsKnown": true,
+          "sectionCode": "ADD",
+          "status": "open",
+          "term": "2026-fa",
+          "type": "DIS"
+        }
+      ],
+      "positiveReviews": [
+        {
+          "courseId": "uiuc:ECE:206",
+          "courseLabel": "ECE 206",
+          "date": "2024-11-19",
+          "difficulty": 5,
+          "gradeReceived": "A+",
+          "helpfulVotes": 9,
+          "id": "uiuc:r:demo-r-000479",
+          "professorId": "uiuc:p:emeka-calloway",
+          "quality": 5,
+          "sentiment": 0.66,
+          "sourceTags": [
+            "Lots of homework"
+          ],
+          "text": "Hard to follow and harder to get help from. This review is for ECE 206. Actually remembers your name and cares about how you are doing. Weekly problem sets that easily take ten hours each. The lecture recordings were…",
+          "vibeTags": [
+            "heavy-homework",
+            "disorganized"
+          ],
+          "wouldTakeAgain": true
+        },
+        {
+          "courseId": "uiuc:ECE:206",
+          "courseLabel": "ECE 206",
+          "date": "2024-07-11",
+          "difficulty": 5,
+          "gradeReceived": null,
+          "helpfulVotes": 8,
+          "id": "uiuc:r:demo-r-000480",
+          "professorId": "uiuc:p:emeka-calloway",
+          "quality": 4,
+          "sentiment": 0.31,
+          "sourceTags": [
+            "Inspirational"
+          ],
+          "text": "Expect to rely heavily on your classmates to get through it. I took ECE 206 last year. Heavy workload — lots of homework every single week. Interesting lectures that go beyond the slides. Late policy is strict with no…",
+          "vibeTags": [
+            "heavy-homework"
+          ],
+          "wouldTakeAgain": true
+        }
+      ],
+      "professor": {
+        "courseIds": [
+          "uiuc:ECE:206",
+          "uiuc:ECE:313"
+        ],
+        "department": "Electrical and Computer Engineering",
+        "displayName": "Emeka Calloway",
+        "firstName": "Emeka",
+        "id": "uiuc:p:emeka-calloway",
+        "isFictional": true,
+        "kind": "reviewed",
+        "lastName": "Calloway",
+        "nameKey": {
+          "first": "emeka",
+          "firstCompact": "emeka",
+          "firstInitial": "e",
+          "firstToken": "emeka",
+          "firstTokens": [
+            "emeka"
+          ],
+          "last": "calloway",
+          "lastCompact": "calloway",
+          "lastTokens": [
+            "calloway"
+          ],
+          "middleInitials": [],
+          "raw": "Calloway, Emeka"
+        },
+        "nameVariants": [
+          "Calloway, E",
+          "Calloway, Emeka"
+        ],
+        "reviewSourceId": "demo-p-037",
+        "schoolId": "uiuc",
+        "slug": "emeka-calloway",
+        "subjects": [
+          "ECE"
+        ]
+      },
+      "rank": null,
+      "scores": {
+        "aRate": 0.42,
+        "composite": 69.2,
+        "confidence": "medium",
+        "criticalCount": 0,
+        "deltaComparableN": 512,
+        "dfwRate": 0.125,
+        "difficultyMean": 4.727,
+        "gpaDelta": -0.069,
+        "gpaMean": 2.929,
+        "gradeRows": 14,
+        "positiveCount": 9,
+        "priorMean": 3.73,
+        "ratingRaw": 4.182,
+        "ratingShrunk": 4.041,
+        "reviewCount": 11,
+        "soleInstructor": false,
+        "studentsGraded": 512,
+        "wRate": 0.019,
+        "withdrawn": 10,
+        "wouldTakeAgainPct": 81.818,
+        "yearsActive": 5
+      },
+      "sectionsThisTerm": 2,
+      "summary": {
+        "bestFor": "Students who can handle intensive problem sets and appreciate generous grading curves.",
+        "confidence": "medium",
+        "evidenceReviewIds": [
+          "uiuc:r:demo-r-000481",
+          "uiuc:r:demo-r-000479",
+          "uiuc:r:demo-r-000480",
+          "uiuc:r:demo-r-000483",
+          "uiuc:r:demo-r-000484",
+          "uiuc:r:demo-r-000486",
+          "uiuc:r:demo-r-000487",
+          "uiuc:r:demo-r-000489",
+          "uiuc:r:demo-r-000488",
+          "uiuc:r:demo-r-000482",
+          "uiuc:r:demo-r-000485"
+        ],
+        "format": "mixed",
+        "generatedAt": "2026-09-06T22:28:36.814Z",
+        "gradingNote": "In 3 course(s) over 5 year(s), GPA averaged 2.93 (−0.07 vs. the same courses taught by others); 1.9% withdrew.",
+        "inputHash": "0449d39df8b9da2f",
+        "model": "openai/gpt-oss-20b",
+        "professorId": "uiuc:p:emeka-calloway",
+        "promptVersion": 1,
+        "provider": "Groq",
+        "reviewCount": 11,
+        "source": "openai-compatible",
+        "strengths": [
+          "heavy-homework:8",
+          "curves-generously:3",
+          "engaging:3",
+          "caring:1"
+        ],
+        "teachingStyle": [
+          "engaging",
+          "enthusiastic",
+          "interactive"
+        ],
+        "verdict": "Based on 11 reviews, this professor is engaging but has a heavy workload.",
+        "watchOuts": [
+          "disorganized:2",
+          "late feedback",
+          "strict late policy"
+        ],
+        "workload": "heavy"
+      },
+      "vibeTags": [
+        "engaging",
+        "curves-generously",
+        "heavy-homework"
+      ]
+    },
+    {
+      "badges": [],
+      "courses": [
+        {
+          "aRate": 0.585,
+          "baselineGpa": 3.228,
+          "baselineN": 1060,
+          "buckets": {
+            "a": 137,
+            "aMinus": 75,
+            "aPlus": 108,
+            "b": 67,
+            "bMinus": 24,
+            "bPlus": 55,
+            "c": 12,
+            "cMinus": 2,
+            "cPlus": 34,
+            "d": 5,
+            "dMinus": 1,
+            "dPlus": 19,
+            "f": 8,
+            "w": 16
+          },
+          "courseId": "uiuc:ECE:110",
+          "delta": 0.138,
+          "dfwRate": 0.087,
+          "gpa": 3.366,
+          "gradeRows": 4,
+          "graded": 547,
+          "isHeadline": true,
+          "number": "110",
+          "subject": "ECE",
+          "title": "Introduction to Electronics",
+          "wRate": 0.028,
+          "withdrawn": 16
+        },
+        {
+          "aRate": 0.393,
+          "baselineGpa": 2.913,
+          "baselineN": 210,
+          "buckets": {
+            "a": 33,
+            "aMinus": 47,
+            "aPlus": 25,
+            "b": 42,
+            "bMinus": 29,
+            "bPlus": 36,
+            "c": 10,
+            "cMinus": 8,
+            "cPlus": 19,
+            "d": 3,
+            "dMinus": 3,
+            "dPlus": 6,
+            "f": 6,
+            "w": 9
+          },
+          "courseId": "uiuc:ECE:310",
+          "delta": 0.152,
+          "dfwRate": 0.098,
+          "gpa": 3.065,
+          "gradeRows": 5,
+          "graded": 267,
+          "isHeadline": true,
+          "number": "310",
+          "subject": "ECE",
+          "title": "Digital Signal Processing",
+          "wRate": 0.033,
+          "withdrawn": 9
+        },
+        {
+          "aRate": 0.475,
+          "baselineGpa": 3.122,
+          "baselineN": 554,
+          "buckets": {
+            "a": 105,
+            "aMinus": 59,
+            "aPlus": 52,
+            "b": 52,
+            "bMinus": 40,
+            "bPlus": 54,
+            "c": 20,
+            "cMinus": 13,
+            "cPlus": 41,
+            "d": 4,
+            "dMinus": 8,
+            "dPlus": 1,
+            "f": 6,
+            "w": 13
+          },
+          "courseId": "uiuc:ECE:408",
+          "delta": 0.076,
+          "dfwRate": 0.068,
+          "gpa": 3.198,
+          "gradeRows": 5,
+          "graded": 455,
+          "isHeadline": true,
+          "number": "408",
+          "subject": "ECE",
+          "title": "Applied Parallel Programming",
+          "wRate": 0.028,
+          "withdrawn": 13
+        },
+        {
+          "aRate": 0.393,
+          "baselineGpa": 3.084,
+          "baselineN": 20,
+          "buckets": {
+            "a": 9,
+            "aMinus": 10,
+            "aPlus": 5,
+            "b": 9,
+            "bMinus": 3,
+            "bPlus": 10,
+            "c": 7,
+            "cMinus": 1,
+            "cPlus": 5,
+            "d": 0,
+            "dMinus": 0,
+            "dPlus": 0,
+            "f": 2,
+            "w": 6
+          },
+          "courseId": "uiuc:ECE:310",
+          "delta": 0.004,
+          "dfwRate": 0.119,
+          "gpa": 3.087,
+          "gradeRows": 2,
+          "graded": 61,
+          "isHeadline": false,
+          "number": "310",
+          "subject": "ECE",
+          "title": "Digital Signal Processing",
+          "wRate": 0.09,
+          "withdrawn": 6
+        },
+        {
+          "aRate": 0.455,
+          "baselineGpa": null,
+          "baselineN": 0,
+          "buckets": {
+            "a": 19,
+            "aMinus": 9,
+            "aPlus": 2,
+            "b": 8,
+            "bMinus": 11,
+            "bPlus": 6,
+            "c": 4,
+            "cMinus": 2,
+            "cPlus": 3,
+            "d": 0,
+            "dMinus": 2,
+            "dPlus": 0,
+            "f": 0,
+            "w": 2
+          },
+          "courseId": "uiuc:ECE:408",
+          "delta": null,
+          "dfwRate": 0.059,
+          "gpa": 3.183,
+          "gradeRows": 2,
+          "graded": 66,
+          "isHeadline": false,
+          "number": "408",
+          "subject": "ECE",
+          "title": "Applied Parallel Programming",
+          "wRate": 0.029,
+          "withdrawn": 2
+        }
+      ],
+      "distribution": {
+        "a": 275,
+        "aMinus": 181,
+        "aPlus": 185,
+        "b": 161,
+        "bMinus": 93,
+        "bPlus": 145,
+        "c": 42,
+        "cMinus": 23,
+        "cPlus": 94,
+        "d": 12,
+        "dMinus": 12,
+        "dPlus": 26,
+        "f": 20,
+        "w": 38
+      },
+      "gpaByYear": [
+        {
+          "gpa": 3.262,
+          "n": 237,
+          "year": 2020
+        },
+        {
+          "gpa": 3.306,
+          "n": 267,
+          "year": 2021
+        },
+        {
+          "gpa": 3.319,
+          "n": 407,
+          "year": 2022
+        },
+        {
+          "gpa": 3.095,
+          "n": 358,
+          "year": 2023
+        }
+      ],
+      "matchProvenance": [
+        {
+          "instructorRaw": "Chaudhry, Magnus",
+          "method": "exact",
+          "rows": 13,
+          "score": 1,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Chaudhry, M",
+          "method": "initial",
+          "rows": 5,
+          "score": 0.85,
+          "source": "grades"
+        }
+      ],
+      "openSections": [],
+      "positiveReviews": [
+        {
+          "courseId": "uiuc:ECE:408",
+          "courseLabel": "ECE 408",
+          "date": "2023-10-17",
+          "difficulty": 2,
+          "gradeReceived": "A",
+          "helpfulVotes": 7,
+          "id": "uiuc:r:demo-r-000470",
+          "professorId": "uiuc:p:magnus-chaudhry",
+          "quality": 5,
+          "sentiment": 0.967,
+          "sourceTags": [
+            "Amazing lectures",
+            "Caring",
+            "Extra credit"
+          ],
+          "text": "One of the most engaging instructors in the department. Had this professor for ECE 408. Amazing notes, seriously the best resource in the class. Keep a running list of questions for office hours. Overall I would take it…",
+          "vibeTags": [
+            "engaging"
+          ],
+          "wouldTakeAgain": true
+        },
+        {
+          "courseId": "uiuc:ECE:110",
+          "courseLabel": "ECE 110",
+          "date": "2023-08-21",
+          "difficulty": 2,
+          "gradeReceived": "C-",
+          "helpfulVotes": 7,
+          "id": "uiuc:r:demo-r-000471",
+          "professorId": "uiuc:p:magnus-chaudhry",
+          "quality": 4,
+          "sentiment": 0.417,
+          "sourceTags": [
+            "Amazing lectures",
+            "Caring"
+          ],
+          "text": "I would sign up for anything this professor teaches. Curved the midterm by a lot after the class average tanked. Very fair exams — no trick questions. Practice exams did not always match the real ones. Go to office…",
+          "vibeTags": [
+            "fair-grading",
+            "curves-generously"
+          ],
+          "wouldTakeAgain": true
+        }
+      ],
+      "professor": {
+        "courseIds": [
+          "uiuc:ECE:110",
+          "uiuc:ECE:310",
+          "uiuc:ECE:408"
+        ],
+        "department": "Electrical and Computer Engineering",
+        "displayName": "Magnus Chaudhry",
+        "firstName": "Magnus",
+        "id": "uiuc:p:magnus-chaudhry",
+        "isFictional": true,
+        "kind": "reviewed",
+        "lastName": "Chaudhry",
+        "nameKey": {
+          "first": "magnus",
+          "firstCompact": "magnus",
+          "firstInitial": "m",
+          "firstToken": "magnus",
+          "firstTokens": [
+            "magnus"
+          ],
+          "last": "chaudhry",
+          "lastCompact": "chaudhry",
+          "lastTokens": [
+            "chaudhry"
+          ],
+          "middleInitials": [],
+          "raw": "Chaudhry, Magnus"
+        },
+        "nameVariants": [
+          "Chaudhry, M",
+          "Chaudhry, Magnus"
+        ],
+        "reviewSourceId": "demo-p-035",
+        "schoolId": "uiuc",
+        "slug": "magnus-chaudhry",
+        "subjects": [
+          "ECE"
+        ]
+      },
+      "rank": null,
+      "scores": {
+        "aRate": 0.505,
+        "composite": 72.4,
+        "confidence": "medium",
+        "criticalCount": 1,
+        "deltaComparableN": 1269,
+        "dfwRate": 0.083,
+        "difficultyMean": 1.889,
+        "gpaDelta": 0.119,
+        "gpaMean": 3.242,
+        "gradeRows": 14,
+        "positiveCount": 7,
+        "priorMean": 3.73,
+        "ratingRaw": 4.111,
+        "ratingShrunk": 3.975,
+        "reviewCount": 9,
+        "soleInstructor": false,
+        "studentsGraded": 1269,
+        "wRate": 0.029,
+        "withdrawn": 38,
+        "wouldTakeAgainPct": 88.889,
+        "yearsActive": 4
+      },
+      "sectionsThisTerm": 0,
+      "summary": {
+        "bestFor": "students who value thorough notes, fair grading, and supportive office hours",
+        "confidence": "medium",
+        "evidenceReviewIds": [
+          "uiuc:r:demo-r-000470",
+          "uiuc:r:demo-r-000471",
+          "uiuc:r:demo-r-000473",
+          "uiuc:r:demo-r-000467",
+          "uiuc:r:demo-r-000475",
+          "uiuc:r:demo-r-000474",
+          "uiuc:r:demo-r-000472",
+          "uiuc:r:demo-r-000469",
+          "uiuc:r:demo-r-000468"
+        ],
+        "format": "mixed",
+        "generatedAt": "2026-09-06T22:35:14.794Z",
+        "gradingNote": "In 5 course(s) over 4 year(s), GPA averaged 3.24 (+0.12 vs. the same courses taught by others); 2.9% withdrew.",
+        "inputHash": "8797d1ce96b5df50",
+        "model": "openai/gpt-oss-20b",
+        "professorId": "uiuc:p:magnus-chaudhry",
+        "promptVersion": 1,
+        "provider": "Groq",
+        "reviewCount": 9,
+        "source": "openai-compatible",
+        "strengths": [
+          "excellent notes",
+          "fair grading",
+          "curves on exams",
+          "caring about learning"
+        ],
+        "teachingStyle": [
+          "engaging",
+          "fair",
+          "curves-generously"
+        ],
+        "verdict": "Based on 9 reviews, this instructor is engaging, fair, and provides great notes; consider taking a section if you want a supportive teacher.",
+        "watchOuts": [
+          "practice exams may not match real ones",
+          "pace uneven week to week",
+          "limited individual help in large class"
+        ],
+        "workload": "moderate"
+      },
+      "vibeTags": [
+        "fair-grading",
+        "caring"
+      ]
+    },
+    {
+      "badges": [
+        "open-now"
+      ],
+      "courses": [
+        {
+          "aRate": 0.318,
+          "baselineGpa": 2.778,
+          "baselineN": 653,
+          "buckets": {
+            "a": 30,
+            "aMinus": 30,
+            "aPlus": 10,
+            "b": 27,
+            "bMinus": 25,
+            "bPlus": 14,
+            "c": 27,
+            "cMinus": 11,
+            "cPlus": 15,
+            "d": 9,
+            "dMinus": 6,
+            "dPlus": 10,
+            "f": 6,
+            "w": 7
+          },
+          "courseId": "uiuc:ECE:329",
+          "delta": -0.059,
+          "dfwRate": 0.167,
+          "gpa": 2.719,
+          "gradeRows": 5,
+          "graded": 220,
+          "isHeadline": true,
+          "number": "329",
+          "subject": "ECE",
+          "title": "Fields and Waves I",
+          "wRate": 0.031,
+          "withdrawn": 7
+        },
+        {
+          "aRate": 0.254,
+          "baselineGpa": 2.906,
+          "baselineN": 2574,
+          "buckets": {
+            "a": 109,
+            "aMinus": 210,
+            "aPlus": 30,
+            "b": 179,
+            "bMinus": 197,
+            "bPlus": 128,
+            "c": 112,
+            "cMinus": 77,
+            "cPlus": 110,
+            "d": 58,
+            "dMinus": 26,
+            "dPlus": 44,
+            "f": 95,
+            "w": 36
+          },
+          "courseId": "uiuc:ECE:391",
+          "delta": -0.317,
+          "dfwRate": 0.184,
+          "gpa": 2.588,
+          "gradeRows": 8,
+          "graded": 1375,
+          "isHeadline": true,
+          "number": "391",
+          "subject": "ECE",
+          "title": "Computer Systems Engineering",
+          "wRate": 0.026,
+          "withdrawn": 36
+        },
+        {
+          "aRate": 0.28,
+          "baselineGpa": 2.839,
+          "baselineN": 85,
+          "buckets": {
+            "a": 11,
+            "aMinus": 7,
+            "aPlus": 5,
+            "b": 12,
+            "bMinus": 11,
+            "bPlus": 11,
+            "c": 3,
+            "cMinus": 1,
+            "cPlus": 16,
+            "d": 0,
+            "dMinus": 2,
+            "dPlus": 0,
+            "f": 3,
+            "w": 1
+          },
+          "courseId": "uiuc:ECE:391",
+          "delta": 0.063,
+          "dfwRate": 0.072,
+          "gpa": 2.902,
+          "gradeRows": 2,
+          "graded": 82,
+          "isHeadline": false,
+          "number": "391",
+          "subject": "ECE",
+          "title": "Computer Systems Engineering",
+          "wRate": 0.012,
+          "withdrawn": 1
+        }
+      ],
+      "distribution": {
+        "a": 139,
+        "aMinus": 240,
+        "aPlus": 40,
+        "b": 206,
+        "bMinus": 222,
+        "bPlus": 142,
+        "c": 139,
+        "cMinus": 88,
+        "cPlus": 125,
+        "d": 67,
+        "dMinus": 32,
+        "dPlus": 54,
+        "f": 101,
+        "w": 43
+      },
+      "gpaByYear": [
+        {
+          "gpa": 2.572,
+          "n": 434,
+          "year": 2021
+        },
+        {
+          "gpa": 2.582,
+          "n": 454,
+          "year": 2022
+        },
+        {
+          "gpa": 2.661,
+          "n": 395,
+          "year": 2023
+        },
+        {
+          "gpa": 2.66,
+          "n": 131,
+          "year": 2024
+        },
+        {
+          "gpa": 2.589,
+          "n": 181,
+          "year": 2025
+        }
+      ],
+      "matchProvenance": [
+        {
+          "instructorRaw": "Müller, Matthew",
+          "method": "exact",
+          "rows": 10,
+          "score": 1,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Müller, M",
+          "method": "initial",
+          "rows": 3,
+          "score": 0.85,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Müller, Matt",
+          "method": "nickname",
+          "rows": 2,
+          "score": 0.85,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Müller, Matthew",
+          "method": "exact",
+          "rows": 2,
+          "score": 1,
+          "source": "schedule"
+        }
+      ],
+      "openSections": [
+        {
+          "courseId": "uiuc:ECE:329",
+          "crn": "31454",
+          "crossListedCourseIds": [],
+          "fetchedAt": "2026-09-03T14:12:00Z",
+          "id": "uiuc:s:2026-fa:31454",
+          "instructorsRaw": [
+            "Müller, Matthew"
+          ],
+          "isOpen": true,
+          "meetings": [
+            {
+              "building": null,
+              "days": [],
+              "end": null,
+              "room": null,
+              "start": null,
+              "type": "ONL"
+            }
+          ],
+          "professorIds": [
+            "uiuc:p:matthew-muller"
+          ],
+          "schoolId": "uiuc",
+          "seatsKnown": true,
+          "sectionCode": "ONL",
+          "status": "open",
+          "term": "2026-fa",
+          "type": "ONL"
+        },
+        {
+          "courseId": "uiuc:ECE:329",
+          "crn": "61714",
+          "crossListedCourseIds": [],
+          "fetchedAt": "2026-09-03T14:12:00Z",
+          "id": "uiuc:s:2026-fa:61714",
+          "instructorsRaw": [
+            "Müller, Matthew"
+          ],
+          "isOpen": true,
+          "meetings": [
+            {
+              "building": "Quillon Auditorium",
+              "days": [
+                "M",
+                "W",
+                "F"
+              ],
+              "end": "15:50",
+              "room": "343",
+              "start": "15:00",
+              "type": "LEC"
+            }
+          ],
+          "professorIds": [
+            "uiuc:p:matthew-muller"
+          ],
+          "schoolId": "uiuc",
+          "seatsKnown": true,
+          "sectionCode": "AL2",
+          "status": "open",
+          "term": "2026-fa",
+          "type": "LEC"
+        }
+      ],
+      "positiveReviews": [
+        {
+          "courseId": "uiuc:ECE:391",
+          "courseLabel": "ECE 391",
+          "date": "2024-01-24",
+          "difficulty": 4,
+          "gradeReceived": "B-",
+          "helpfulVotes": 5,
+          "id": "uiuc:r:demo-r-000434",
+          "professorId": "uiuc:p:matthew-muller",
+          "quality": 4,
+          "sentiment": 0.45,
+          "sourceTags": [
+            "Caring"
+          ],
+          "text": "I would sign up for anything this professor teaches. I took ECE 391 last year. Provides excellent notes and practice problems with solutions. Get the textbook early and skim the first chapters. Solid pick if it fits…",
+          "vibeTags": [],
+          "wouldTakeAgain": true
+        },
+        {
+          "courseId": "uiuc:ECE:391",
+          "courseLabel": "ECE 391",
+          "date": "2021-06-20",
+          "difficulty": 3,
+          "gradeReceived": "C+",
+          "helpfulVotes": 4,
+          "id": "uiuc:r:demo-r-000433",
+          "professorId": "uiuc:p:matthew-muller",
+          "quality": 5,
+          "sentiment": 0.6,
+          "sourceTags": [
+            "Caring",
+            "Clear grading criteria"
+          ],
+          "text": "Easily a five out of five, no notes. Difficult tests that go beyond what was covered in lecture. Use the posted solutions to check your reasoning, not to copy. You have been warned.",
+          "vibeTags": [],
+          "wouldTakeAgain": false
+        }
+      ],
+      "professor": {
+        "courseIds": [
+          "uiuc:ECE:329",
+          "uiuc:ECE:391"
+        ],
+        "department": "Electrical and Computer Engineering",
+        "displayName": "Matthew Müller",
+        "firstName": "Matthew",
+        "id": "uiuc:p:matthew-muller",
+        "isFictional": true,
+        "kind": "reviewed",
+        "lastName": "Müller",
+        "nameKey": {
+          "first": "matthew",
+          "firstCompact": "matthew",
+          "firstInitial": "m",
+          "firstToken": "matthew",
+          "firstTokens": [
+            "matthew"
+          ],
+          "last": "muller",
+          "lastCompact": "muller",
+          "lastTokens": [
+            "muller"
+          ],
+          "middleInitials": [],
+          "raw": "Müller, Matthew"
+        },
+        "nameVariants": [
+          "Müller, M",
+          "Müller, Matt",
+          "Müller, Matthew"
+        ],
+        "reviewSourceId": "demo-p-032",
+        "schoolId": "uiuc",
+        "slug": "matthew-muller",
+        "subjects": [
+          "ECE"
+        ]
+      },
+      "rank": null,
+      "scores": {
+        "aRate": 0.263,
+        "composite": 59.6,
+        "confidence": "low",
+        "criticalCount": 0,
+        "deltaComparableN": 1595,
+        "dfwRate": 0.181,
+        "difficultyMean": 3.5,
+        "gpaDelta": -0.282,
+        "gpaMean": 2.606,
+        "gradeRows": 13,
+        "positiveCount": 2,
+        "priorMean": 3.73,
+        "ratingRaw": 4.5,
+        "ratingShrunk": 3.95,
+        "reviewCount": 2,
+        "soleInstructor": false,
+        "studentsGraded": 1595,
+        "wRate": 0.026,
+        "withdrawn": 43,
+        "wouldTakeAgainPct": 50,
+        "yearsActive": 5
+      },
+      "sectionsThisTerm": 2,
+      "summary": null,
+      "vibeTags": []
+    },
+    {
+      "badges": [
+        "open-now",
+        "easy-a"
+      ],
+      "courses": [
+        {
+          "aRate": 0.358,
+          "baselineGpa": 2.733,
+          "baselineN": 3114,
+          "buckets": {
+            "a": 157,
+            "aMinus": 92,
+            "aPlus": 50,
+            "b": 132,
+            "bMinus": 105,
+            "bPlus": 128,
+            "c": 33,
+            "cMinus": 28,
+            "cPlus": 29,
+            "d": 17,
+            "dMinus": 9,
+            "dPlus": 41,
+            "f": 14,
+            "w": 21
+          },
+          "courseId": "uiuc:ECE:391",
+          "delta": 0.292,
+          "dfwRate": 0.119,
+          "gpa": 3.025,
+          "gradeRows": 5,
+          "graded": 835,
+          "isHeadline": true,
+          "number": "391",
+          "subject": "ECE",
+          "title": "Computer Systems Engineering",
+          "wRate": 0.025,
+          "withdrawn": 21
+        },
+        {
+          "aRate": 0.403,
+          "baselineGpa": null,
+          "baselineN": 0,
+          "buckets": {
+            "a": 117,
+            "aMinus": 76,
+            "aPlus": 58,
+            "b": 112,
+            "bMinus": 41,
+            "bPlus": 95,
+            "c": 34,
+            "cMinus": 13,
+            "cPlus": 42,
+            "d": 12,
+            "dMinus": 6,
+            "dPlus": 11,
+            "f": 6,
+            "w": 21
+          },
+          "courseId": "uiuc:ECE:445",
+          "delta": null,
+          "dfwRate": 0.087,
+          "gpa": 3.144,
+          "gradeRows": 6,
+          "graded": 623,
+          "isHeadline": true,
+          "number": "445",
+          "subject": "ECE",
+          "title": "Senior Design Project Lab",
+          "wRate": 0.033,
+          "withdrawn": 21
+        },
+        {
+          "aRate": 0.345,
+          "baselineGpa": null,
+          "baselineN": 0,
+          "buckets": {
+            "a": 19,
+            "aMinus": 5,
+            "aPlus": 6,
+            "b": 12,
+            "bMinus": 16,
+            "bPlus": 13,
+            "c": 3,
+            "cMinus": 2,
+            "cPlus": 6,
+            "d": 0,
+            "dMinus": 1,
+            "dPlus": 1,
+            "f": 3,
+            "w": 0
+          },
+          "courseId": "uiuc:ECE:445",
+          "delta": null,
+          "dfwRate": 0.057,
+          "gpa": 3.054,
+          "gradeRows": 2,
+          "graded": 87,
+          "isHeadline": false,
+          "number": "445",
+          "subject": "ECE",
+          "title": "Senior Design Project Lab",
+          "wRate": 0,
+          "withdrawn": 0
+        }
+      ],
+      "distribution": {
+        "a": 274,
+        "aMinus": 168,
+        "aPlus": 108,
+        "b": 244,
+        "bMinus": 146,
+        "bPlus": 223,
+        "c": 67,
+        "cMinus": 41,
+        "cPlus": 71,
+        "d": 29,
+        "dMinus": 15,
+        "dPlus": 52,
+        "f": 20,
+        "w": 42
+      },
+      "gpaByYear": [
+        {
+          "gpa": 3.045,
+          "n": 396,
+          "year": 2021
+        },
+        {
+          "gpa": 3.038,
+          "n": 327,
+          "year": 2022
+        },
+        {
+          "gpa": 2.998,
+          "n": 207,
+          "year": 2023
+        },
+        {
+          "gpa": 3.153,
+          "n": 277,
+          "year": 2024
+        },
+        {
+          "gpa": 3.154,
+          "n": 251,
+          "year": 2025
+        }
+      ],
+      "matchProvenance": [
+        {
+          "instructorRaw": "Khoury, Christopher",
+          "method": "exact",
+          "rows": 8,
+          "score": 1,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Khoury, C",
+          "method": "initial",
+          "rows": 4,
+          "score": 0.85,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Khoury, Christopher Jr",
+          "method": "exact",
+          "rows": 1,
+          "score": 1,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Khoury, Christopher",
+          "method": "exact",
+          "rows": 1,
+          "score": 1,
+          "source": "schedule"
+        }
+      ],
+      "openSections": [
+        {
+          "courseId": "uiuc:ECE:445",
+          "crn": "30406",
+          "crossListedCourseIds": [],
+          "fetchedAt": "2026-09-03T14:12:00Z",
+          "id": "uiuc:s:2026-fa:30406",
+          "instructorsRaw": [
+            "Khoury, Christopher"
+          ],
+          "isOpen": true,
+          "meetings": [
+            {
+              "building": "Rookwood Hall",
+              "days": [
+                "M",
+                "W",
+                "F"
+              ],
+              "end": "15:50",
+              "room": "116",
+              "start": "15:00",
+              "type": "LEC"
+            }
+          ],
+          "professorIds": [
+            "uiuc:p:christopher-khoury"
+          ],
+          "schoolId": "uiuc",
+          "seatsKnown": true,
+          "sectionCode": "AL1",
+          "status": "open",
+          "term": "2026-fa",
+          "type": "LEC"
+        }
+      ],
+      "positiveReviews": [
+        {
+          "courseId": "uiuc:ECE:391",
+          "courseLabel": "ECE 391",
+          "date": "2022-10-19",
+          "difficulty": 5,
+          "gradeReceived": null,
+          "helpfulVotes": 3,
+          "id": "uiuc:r:demo-r-000575",
+          "professorId": "uiuc:p:christopher-khoury",
+          "quality": 5,
+          "sentiment": 0.8,
+          "sourceTags": [
+            "Clear grading criteria",
+            "Gives good feedback",
+            "Tough grader"
+          ],
+          "text": "You can tell this professor actually enjoys teaching. Signed up for ECE 391 on a friend's recommendation. Generous grading overall and a curve on every exam. The pace is relentless; miss one lecture and you are lost.…",
+          "vibeTags": [
+            "curves-generously",
+            "must-read-textbook"
+          ],
+          "wouldTakeAgain": true
+        }
+      ],
+      "professor": {
+        "courseIds": [
+          "uiuc:ECE:391",
+          "uiuc:ECE:445"
+        ],
+        "department": "Electrical and Computer Engineering",
+        "displayName": "Christopher Khoury",
+        "firstName": "Christopher",
+        "id": "uiuc:p:christopher-khoury",
+        "isFictional": true,
+        "kind": "reviewed",
+        "lastName": "Khoury",
+        "nameKey": {
+          "first": "christopher",
+          "firstCompact": "christopher",
+          "firstInitial": "c",
+          "firstToken": "christopher",
+          "firstTokens": [
+            "christopher"
+          ],
+          "last": "khoury",
+          "lastCompact": "khoury",
+          "lastTokens": [
+            "khoury"
+          ],
+          "middleInitials": [],
+          "raw": "Khoury, Christopher"
+        },
+        "nameVariants": [
+          "Khoury, C",
+          "Khoury, Christopher",
+          "Khoury, Christopher Jr"
+        ],
+        "reviewSourceId": "demo-p-044",
+        "schoolId": "uiuc",
+        "slug": "christopher-khoury",
+        "subjects": [
+          "ECE"
+        ]
+      },
+      "rank": null,
+      "scores": {
+        "aRate": 0.377,
+        "composite": 76.5,
+        "confidence": "low",
+        "criticalCount": 0,
+        "deltaComparableN": 835,
+        "dfwRate": 0.105,
+        "difficultyMean": 5,
+        "gpaDelta": 0.292,
+        "gpaMean": 3.076,
+        "gradeRows": 11,
+        "positiveCount": 1,
+        "priorMean": 3.73,
+        "ratingRaw": 5,
+        "ratingShrunk": 3.941,
+        "reviewCount": 1,
+        "soleInstructor": false,
+        "studentsGraded": 1458,
+        "wRate": 0.028,
+        "withdrawn": 42,
+        "wouldTakeAgainPct": 100,
+        "yearsActive": 5
+      },
+      "sectionsThisTerm": 1,
+      "summary": null,
+      "vibeTags": []
+    },
+    {
+      "badges": [],
+      "courses": [
+        {
+          "aRate": 0.38,
+          "baselineGpa": null,
+          "baselineN": 0,
+          "buckets": {
+            "a": 58,
+            "aMinus": 56,
+            "aPlus": 41,
+            "b": 39,
+            "bMinus": 34,
+            "bPlus": 56,
+            "c": 28,
+            "cMinus": 19,
+            "cPlus": 24,
+            "d": 21,
+            "dMinus": 12,
+            "dPlus": 4,
+            "f": 16,
+            "w": 11
+          },
+          "courseId": "uiuc:ECE:220",
+          "delta": null,
+          "dfwRate": 0.153,
+          "gpa": 2.877,
+          "gradeRows": 6,
+          "graded": 408,
+          "isHeadline": true,
+          "number": "220",
+          "subject": "ECE",
+          "title": "Computer Systems & Programming",
+          "wRate": 0.026,
+          "withdrawn": 11
+        },
+        {
+          "aRate": 0.338,
+          "baselineGpa": 2.728,
+          "baselineN": 488,
+          "buckets": {
+            "a": 61,
+            "aMinus": 34,
+            "aPlus": 35,
+            "b": 58,
+            "bMinus": 26,
+            "bPlus": 37,
+            "c": 44,
+            "cMinus": 18,
+            "cPlus": 26,
+            "d": 6,
+            "dMinus": 3,
+            "dPlus": 14,
+            "f": 23,
+            "w": 10
+          },
+          "courseId": "uiuc:ECE:329",
+          "delta": 0.079,
+          "dfwRate": 0.142,
+          "gpa": 2.807,
+          "gradeRows": 8,
+          "graded": 385,
+          "isHeadline": true,
+          "number": "329",
+          "subject": "ECE",
+          "title": "Fields and Waves I",
+          "wRate": 0.025,
+          "withdrawn": 10
+        },
+        {
+          "aRate": 0.353,
+          "baselineGpa": null,
+          "baselineN": 0,
+          "buckets": {
+            "a": 1,
+            "aMinus": 4,
+            "aPlus": 1,
+            "b": 3,
+            "bMinus": 0,
+            "bPlus": 2,
+            "c": 3,
+            "cMinus": 2,
+            "cPlus": 0,
+            "d": 0,
+            "dMinus": 0,
+            "dPlus": 1,
+            "f": 0,
+            "w": 0
+          },
+          "courseId": "uiuc:ECE:220",
+          "delta": null,
+          "dfwRate": 0.059,
+          "gpa": 2.883,
+          "gradeRows": 1,
+          "graded": 17,
+          "isHeadline": false,
+          "number": "220",
+          "subject": "ECE",
+          "title": "Computer Systems & Programming",
+          "wRate": 0,
+          "withdrawn": 0
+        },
+        {
+          "aRate": 0.5,
+          "baselineGpa": null,
+          "baselineN": 0,
+          "buckets": {
+            "a": 3,
+            "aMinus": 3,
+            "aPlus": 2,
+            "b": 0,
+            "bMinus": 2,
+            "bPlus": 0,
+            "c": 3,
+            "cMinus": 0,
+            "cPlus": 1,
+            "d": 0,
+            "dMinus": 0,
+            "dPlus": 1,
+            "f": 1,
+            "w": 0
+          },
+          "courseId": "uiuc:ECE:329",
+          "delta": null,
+          "dfwRate": 0.125,
+          "gpa": 2.876,
+          "gradeRows": 1,
+          "graded": 16,
+          "isHeadline": false,
+          "number": "329",
+          "subject": "ECE",
+          "title": "Fields and Waves I",
+          "wRate": 0,
+          "withdrawn": 0
+        }
+      ],
+      "distribution": {
+        "a": 119,
+        "aMinus": 90,
+        "aPlus": 76,
+        "b": 97,
+        "bMinus": 60,
+        "bPlus": 93,
+        "c": 72,
+        "cMinus": 37,
+        "cPlus": 50,
+        "d": 27,
+        "dMinus": 15,
+        "dPlus": 18,
+        "f": 39,
+        "w": 21
+      },
+      "gpaByYear": [
+        {
+          "gpa": 3.044,
+          "n": 98,
+          "year": 2020
+        },
+        {
+          "gpa": 2.826,
+          "n": 92,
+          "year": 2021
+        },
+        {
+          "gpa": 2.868,
+          "n": 149,
+          "year": 2022
+        },
+        {
+          "gpa": 2.827,
+          "n": 275,
+          "year": 2023
+        },
+        {
+          "gpa": 2.745,
+          "n": 179,
+          "year": 2024
+        }
+      ],
+      "matchProvenance": [
+        {
+          "instructorRaw": "Valdivia, Matthew",
+          "method": "exact",
+          "rows": 10,
+          "score": 1,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Valdivia, M",
+          "method": "initial",
+          "rows": 6,
+          "score": 0.85,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Valdivia, M",
+          "method": "initial",
+          "rows": 2,
+          "score": 0.85,
+          "source": "schedule"
+        }
+      ],
+      "openSections": [],
+      "positiveReviews": [
+        {
+          "courseId": "uiuc:ECE:220",
+          "courseLabel": "ECE 220",
+          "date": "2022-09-26",
+          "difficulty": 2,
+          "gradeReceived": "A",
+          "helpfulVotes": 10,
+          "id": "uiuc:r:demo-r-000431",
+          "professorId": "uiuc:p:matthew-valdivia",
+          "quality": 5,
+          "sentiment": 0.85,
+          "sourceTags": [
+            "Accessible outside class"
+          ],
+          "text": "Take this class with this professor if you possibly can. I took ECE 220 as an elective. Cares about students learning, not just about grades. Generous grading overall and a curve on every exam. Announcements went out at…",
+          "vibeTags": [
+            "caring",
+            "curves-generously"
+          ],
+          "wouldTakeAgain": true
+        },
+        {
+          "courseId": "uiuc:ECE:220",
+          "courseLabel": "ECE 220",
+          "date": "2020-03-21",
+          "difficulty": 2,
+          "gradeReceived": "A-",
+          "helpfulVotes": 7,
+          "id": "uiuc:r:demo-r-000430",
+          "professorId": "uiuc:p:matthew-valdivia",
+          "quality": 4,
+          "sentiment": 0.425,
+          "sourceTags": [
+            "Group projects"
+          ],
+          "text": "Easily a five out of five, no notes. Expect a curve — the raw averages look scary but the final grades are fine. Keep a running list of questions for office hours. Definitely worth it in the end.",
+          "vibeTags": [
+            "curves-generously"
+          ],
+          "wouldTakeAgain": true
+        }
+      ],
+      "professor": {
+        "courseIds": [
+          "uiuc:ECE:220",
+          "uiuc:ECE:329"
+        ],
+        "department": "Electrical and Computer Engineering",
+        "displayName": "Matthew Valdivia",
+        "firstName": "Matthew",
+        "id": "uiuc:p:matthew-valdivia",
+        "isFictional": true,
+        "kind": "reviewed",
+        "lastName": "Valdivia",
+        "nameKey": {
+          "first": "matthew",
+          "firstCompact": "matthew",
+          "firstInitial": "m",
+          "firstToken": "matthew",
+          "firstTokens": [
+            "matthew"
+          ],
+          "last": "valdivia",
+          "lastCompact": "valdivia",
+          "lastTokens": [
+            "valdivia"
+          ],
+          "middleInitials": [],
+          "raw": "Valdivia, Matthew"
+        },
+        "nameVariants": [
+          "Valdivia, M",
+          "Valdivia, Matthew"
+        ],
+        "reviewSourceId": "demo-p-031",
+        "schoolId": "uiuc",
+        "slug": "matthew-valdivia",
+        "subjects": [
+          "ECE"
+        ]
+      },
+      "rank": null,
+      "scores": {
+        "aRate": 0.359,
+        "composite": 65.5,
+        "confidence": "high",
+        "criticalCount": 2,
+        "deltaComparableN": 385,
+        "dfwRate": 0.147,
+        "difficultyMean": 2.16,
+        "gpaDelta": 0.079,
+        "gpaMean": 2.843,
+        "gradeRows": 14,
+        "positiveCount": 15,
+        "priorMean": 3.73,
+        "ratingRaw": 3.68,
+        "ratingShrunk": 3.688,
+        "reviewCount": 25,
+        "soleInstructor": false,
+        "studentsGraded": 793,
+        "wRate": 0.026,
+        "withdrawn": 21,
+        "wouldTakeAgainPct": 76,
+        "yearsActive": 5
+      },
+      "sectionsThisTerm": 2,
+      "summary": {
+        "bestFor": "Students who want a supportive, low-stress environment and are willing to do the homework consistently",
+        "confidence": "high",
+        "evidenceReviewIds": [
+          "uiuc:r:demo-r-000427",
+          "uiuc:r:demo-r-000421",
+          "uiuc:r:demo-r-000420",
+          "uiuc:r:demo-r-000411",
+          "uiuc:r:demo-r-000424",
+          "uiuc:r:demo-r-000431",
+          "uiuc:r:demo-r-000417",
+          "uiuc:r:demo-r-000409"
+        ],
+        "format": "mixed",
+        "generatedAt": "2026-09-06T23:00:01.742Z",
+        "gradingNote": "In 4 course(s) over 5 year(s), GPA averaged 2.84 (+0.08 vs. the same courses taught by others); 2.6% withdrew.",
+        "inputHash": "2296baeb2a95a898",
+        "model": "qwen/qwen3.8-27b",
+        "professorId": "uiuc:p:matthew-valdivia",
+        "promptVersion": 1,
+        "provider": "Groq",
+        "reviewCount": 25,
+        "source": "openai-compatible",
+        "strengths": [
+          "Generous curve on every exam; raw averages look scary but finals are fine",
+          "Cares about understanding, not just grades; follows up with struggling students",
+          "Helpful in office hours and quick to respond to email",
+          "Effort on homework really pays off for final grade"
+        ],
+        "teachingStyle": [
+          "Approachable, quick email replies",
+          "Follows up if you're struggling",
+          "Remembers student names",
+          "Teaching style hit or miss"
+        ],
+        "verdict": "A caring, generous-grading ECE instructor worth taking — 25 reviews confirm a supportive environment with a reliable curve.",
+        "watchOuts": [
+          "Extra credit promised but never materialized (2 reviews)",
+          "Autograder described as picky and unforgiving",
+          "Feedback on assignments sometimes weeks late; announcements at odd hours"
+        ],
+        "workload": "moderate"
+      },
+      "vibeTags": [
+        "curves-generously",
+        "caring"
+      ]
+    },
+    {
+      "badges": [],
+      "courses": [
+        {
+          "aRate": 0.257,
+          "baselineGpa": 2.484,
+          "baselineN": 180,
+          "buckets": {
+            "a": 42,
+            "aMinus": 20,
+            "aPlus": 9,
+            "b": 48,
+            "bMinus": 18,
+            "bPlus": 22,
+            "c": 35,
+            "cMinus": 19,
+            "cPlus": 19,
+            "d": 24,
+            "dMinus": 0,
+            "dPlus": 5,
+            "f": 15,
+            "w": 8
+          },
+          "courseId": "uiuc:ECE:340",
+          "delta": 0.123,
+          "dfwRate": 0.183,
+          "gpa": 2.606,
+          "gradeRows": 7,
+          "graded": 276,
+          "isHeadline": true,
+          "number": "340",
+          "subject": "ECE",
+          "title": "Semiconductor Electronics",
+          "wRate": 0.028,
+          "withdrawn": 8
+        },
+        {
+          "aRate": 0.38,
+          "baselineGpa": null,
+          "baselineN": 0,
+          "buckets": {
+            "a": 61,
+            "aMinus": 55,
+            "aPlus": 12,
+            "b": 38,
+            "bMinus": 46,
+            "bPlus": 54,
+            "c": 11,
+            "cMinus": 14,
+            "cPlus": 27,
+            "d": 12,
+            "dMinus": 4,
+            "dPlus": 3,
+            "f": 0,
+            "w": 11
+          },
+          "courseId": "uiuc:ECE:411",
+          "delta": null,
+          "dfwRate": 0.086,
+          "gpa": 3.078,
+          "gradeRows": 4,
+          "graded": 337,
+          "isHeadline": true,
+          "number": "411",
+          "subject": "ECE",
+          "title": "Computer Organization & Design",
+          "wRate": 0.032,
+          "withdrawn": 11
+        },
+        {
+          "aRate": 0.333,
+          "baselineGpa": 2.809,
+          "baselineN": 21,
+          "buckets": {
+            "a": 4,
+            "aMinus": 1,
+            "aPlus": 0,
+            "b": 4,
+            "bMinus": 0,
+            "bPlus": 1,
+            "c": 2,
+            "cMinus": 0,
+            "cPlus": 2,
+            "d": 0,
+            "dMinus": 0,
+            "dPlus": 0,
+            "f": 1,
+            "w": 1
+          },
+          "courseId": "uiuc:ECE:340",
+          "delta": 0.102,
+          "dfwRate": 0.125,
+          "gpa": 2.911,
+          "gradeRows": 1,
+          "graded": 15,
+          "isHeadline": false,
+          "number": "340",
+          "subject": "ECE",
+          "title": "Semiconductor Electronics",
+          "wRate": 0.063,
+          "withdrawn": 1
+        },
+        {
+          "aRate": 0.243,
+          "baselineGpa": null,
+          "baselineN": 0,
+          "buckets": {
+            "a": 5,
+            "aMinus": 4,
+            "aPlus": 0,
+            "b": 5,
+            "bMinus": 6,
+            "bPlus": 10,
+            "c": 1,
+            "cMinus": 1,
+            "cPlus": 0,
+            "d": 1,
+            "dMinus": 0,
+            "dPlus": 4,
+            "f": 0,
+            "w": 2
+          },
+          "courseId": "uiuc:ECE:411",
+          "delta": null,
+          "dfwRate": 0.179,
+          "gpa": 2.946,
+          "gradeRows": 1,
+          "graded": 37,
+          "isHeadline": false,
+          "number": "411",
+          "subject": "ECE",
+          "title": "Computer Organization & Design",
+          "wRate": 0.051,
+          "withdrawn": 2
+        }
+      ],
+      "distribution": {
+        "a": 103,
+        "aMinus": 75,
+        "aPlus": 21,
+        "b": 86,
+        "bMinus": 64,
+        "bPlus": 76,
+        "c": 46,
+        "cMinus": 33,
+        "cPlus": 46,
+        "d": 36,
+        "dMinus": 4,
+        "dPlus": 8,
+        "f": 15,
+        "w": 19
+      },
+      "gpaByYear": [
+        {
+          "gpa": 2.713,
+          "n": 144,
+          "year": 2022
+        },
+        {
+          "gpa": 2.835,
+          "n": 177,
+          "year": 2023
+        },
+        {
+          "gpa": 2.966,
+          "n": 116,
+          "year": 2024
+        },
+        {
+          "gpa": 2.957,
+          "n": 176,
+          "year": 2025
+        }
+      ],
+      "matchProvenance": [
+        {
+          "instructorRaw": "Wierzbicki, Teodora",
+          "method": "exact",
+          "rows": 9,
+          "score": 1,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Wierzbicki, T",
+          "method": "initial",
+          "rows": 4,
+          "score": 0.85,
+          "source": "grades"
+        }
+      ],
+      "openSections": [],
+      "positiveReviews": [
+        {
+          "courseId": "uiuc:ECE:340",
+          "courseLabel": "ECE 340",
+          "date": "2024-07-03",
+          "difficulty": 2,
+          "gradeReceived": "B",
+          "helpfulVotes": 11,
+          "id": "uiuc:r:demo-r-000560",
+          "professorId": "uiuc:p:teodora-wierzbicki",
+          "quality": 5,
+          "sentiment": 0.82,
+          "sourceTags": [
+            "Hilarious",
+            "Test heavy"
+          ],
+          "text": "Genuinely cares whether students understand the material. Took ECE 340 during a heavy semester. The lectures are engaging enough that attendance felt optional but everyone came. Review the notes the same day; the…",
+          "vibeTags": [
+            "engaging",
+            "caring"
+          ],
+          "wouldTakeAgain": true
+        },
+        {
+          "courseId": "uiuc:ECE:340",
+          "courseLabel": "ECE 340",
+          "date": "2023-09-14",
+          "difficulty": 4,
+          "gradeReceived": "C",
+          "helpfulVotes": 7,
+          "id": "uiuc:r:demo-r-000573",
+          "professorId": "uiuc:p:teodora-wierzbicki",
+          "quality": 4,
+          "sentiment": 0.425,
+          "sourceTags": [
+            "Caring",
+            "Hilarious"
+          ],
+          "text": "This is what a well-run course looks like. Took ECE 340 during a heavy semester. The lecture notes are excellent and basically a textbook. Ask for help the moment you feel lost. One of the good ones.",
+          "vibeTags": [
+            "great-notes"
+          ],
+          "wouldTakeAgain": false
+        }
+      ],
+      "professor": {
+        "courseIds": [
+          "uiuc:ECE:340",
+          "uiuc:ECE:411"
+        ],
+        "department": "Electrical and Computer Engineering",
+        "displayName": "Teodora Wierzbicki",
+        "firstName": "Teodora",
+        "id": "uiuc:p:teodora-wierzbicki",
+        "isFictional": true,
+        "kind": "reviewed",
+        "lastName": "Wierzbicki",
+        "nameKey": {
+          "first": "teodora",
+          "firstCompact": "teodora",
+          "firstInitial": "t",
+          "firstToken": "teodora",
+          "firstTokens": [
+            "teodora"
+          ],
+          "last": "wierzbicki",
+          "lastCompact": "wierzbicki",
+          "lastTokens": [
+            "wierzbicki"
+          ],
+          "middleInitials": [],
+          "raw": "Wierzbicki, Teodora"
+        },
+        "nameVariants": [
+          "Wierzbicki, T",
+          "Wierzbicki, Teodora"
+        ],
+        "reviewSourceId": "demo-p-043",
+        "schoolId": "uiuc",
+        "slug": "teodora-wierzbicki",
+        "subjects": [
+          "ECE"
+        ]
+      },
+      "rank": null,
+      "scores": {
+        "aRate": 0.325,
+        "composite": 61.4,
+        "confidence": "high",
+        "criticalCount": 1,
+        "deltaComparableN": 276,
+        "dfwRate": 0.13,
+        "difficultyMean": 2.778,
+        "gpaDelta": 0.123,
+        "gpaMean": 2.866,
+        "gradeRows": 11,
+        "positiveCount": 10,
+        "priorMean": 3.73,
+        "ratingRaw": 3.667,
+        "ratingShrunk": 3.68,
+        "reviewCount": 18,
+        "soleInstructor": false,
+        "studentsGraded": 613,
+        "wRate": 0.03,
+        "withdrawn": 19,
+        "wouldTakeAgainPct": 44.444,
+        "yearsActive": 4
+      },
+      "sectionsThisTerm": 0,
+      "summary": {
+        "bestFor": "Students who thrive with active lectures and appreciate generous grading, especially in heavy semesters.",
+        "confidence": "high",
+        "evidenceReviewIds": [
+          "uiuc:r:demo-r-000563",
+          "uiuc:r:demo-r-000571",
+          "uiuc:r:demo-r-000574",
+          "uiuc:r:demo-r-000562",
+          "uiuc:r:demo-r-000568"
+        ],
+        "format": "lecture-heavy",
+        "generatedAt": "2026-09-06T22:42:32.989Z",
+        "gradingNote": "In 4 course(s) over 4 year(s), GPA averaged 2.87 (+0.12 vs. the same courses taught by others); 3.0% withdrew.",
+        "inputHash": "d6526ddd62c8c2e8",
+        "model": "openai/gpt-oss-20b",
+        "professorId": "uiuc:p:teodora-wierzbicki",
+        "promptVersion": 1,
+        "provider": "Groq",
+        "reviewCount": 18,
+        "source": "openai-compatible",
+        "strengths": [
+          "Passionate and engaging lectures",
+          "Generous grading curves",
+          "Clear, well‑organized notes",
+          "Good office hour support"
+        ],
+        "teachingStyle": [
+          "engaging",
+          "curves-generously"
+        ],
+        "verdict": "With 18 reviews, this professor is generally engaging and generous with curves, but some students note disorganization and inconsistent exam expectations.",
+        "watchOuts": [
+          "Course site and announcements can be confusing",
+          "Practice exams may not match real ones",
+          "Some topics rushed toward semester end"
+        ],
+        "workload": "moderate"
+      },
+      "vibeTags": [
+        "engaging",
+        "curves-generously",
+        "great-notes"
+      ]
+    },
+    {
+      "badges": [],
+      "courses": [
+        {
+          "aRate": 0.583,
+          "baselineGpa": 3.262,
+          "baselineN": 1163,
+          "buckets": {
+            "a": 127,
+            "aMinus": 68,
+            "aPlus": 64,
+            "b": 44,
+            "bMinus": 24,
+            "bPlus": 37,
+            "c": 15,
+            "cMinus": 18,
+            "cPlus": 27,
+            "d": 2,
+            "dMinus": 10,
+            "dPlus": 3,
+            "f": 5,
+            "w": 11
+          },
+          "courseId": "uiuc:ECE:110",
+          "delta": 0.045,
+          "dfwRate": 0.068,
+          "gpa": 3.307,
+          "gradeRows": 4,
+          "graded": 444,
+          "isHeadline": true,
+          "number": "110",
+          "subject": "ECE",
+          "title": "Introduction to Electronics",
+          "wRate": 0.024,
+          "withdrawn": 11
+        },
+        {
+          "aRate": 0.655,
+          "baselineGpa": 3.153,
+          "baselineN": 306,
+          "buckets": {
+            "a": 47,
+            "aMinus": 11,
+            "aPlus": 18,
+            "b": 4,
+            "bMinus": 4,
+            "bPlus": 8,
+            "c": 11,
+            "cMinus": 0,
+            "cPlus": 4,
+            "d": 3,
+            "dMinus": 1,
+            "dPlus": 2,
+            "f": 3,
+            "w": 4
+          },
+          "courseId": "uiuc:ECE:311",
+          "delta": 0.186,
+          "dfwRate": 0.108,
+          "gpa": 3.339,
+          "gradeRows": 3,
+          "graded": 116,
+          "isHeadline": true,
+          "number": "311",
+          "subject": "ECE",
+          "title": "Digital Signal Processing Lab",
+          "wRate": 0.033,
+          "withdrawn": 4
+        },
+        {
+          "aRate": 0.441,
+          "baselineGpa": null,
+          "baselineN": 0,
+          "buckets": {
+            "a": 77,
+            "aMinus": 65,
+            "aPlus": 33,
+            "b": 68,
+            "bMinus": 47,
+            "bPlus": 46,
+            "c": 17,
+            "cMinus": 8,
+            "cPlus": 11,
+            "d": 6,
+            "dMinus": 7,
+            "dPlus": 3,
+            "f": 9,
+            "w": 8
+          },
+          "courseId": "uiuc:ECE:333",
+          "delta": null,
+          "dfwRate": 0.081,
+          "gpa": 3.146,
+          "gradeRows": 5,
+          "graded": 397,
+          "isHeadline": true,
+          "number": "333",
+          "subject": "ECE",
+          "title": "Green Electric Energy",
+          "wRate": 0.02,
+          "withdrawn": 8
+        },
+        {
+          "aRate": 0.621,
+          "baselineGpa": 3.323,
+          "baselineN": 30,
+          "buckets": {
+            "a": 8,
+            "aMinus": 3,
+            "aPlus": 7,
+            "b": 1,
+            "bMinus": 4,
+            "bPlus": 3,
+            "c": 1,
+            "cMinus": 0,
+            "cPlus": 0,
+            "d": 0,
+            "dMinus": 0,
+            "dPlus": 1,
+            "f": 1,
+            "w": 2
+          },
+          "courseId": "uiuc:ECE:110",
+          "delta": 0.057,
+          "dfwRate": 0.129,
+          "gpa": 3.38,
+          "gradeRows": 1,
+          "graded": 29,
+          "isHeadline": false,
+          "number": "110",
+          "subject": "ECE",
+          "title": "Introduction to Electronics",
+          "wRate": 0.065,
+          "withdrawn": 2
+        },
+        {
+          "aRate": 0.357,
+          "baselineGpa": null,
+          "baselineN": 0,
+          "buckets": {
+            "a": 5,
+            "aMinus": 3,
+            "aPlus": 2,
+            "b": 7,
+            "bMinus": 3,
+            "bPlus": 0,
+            "c": 1,
+            "cMinus": 1,
+            "cPlus": 2,
+            "d": 0,
+            "dMinus": 2,
+            "dPlus": 2,
+            "f": 0,
+            "w": 2
+          },
+          "courseId": "uiuc:ECE:333",
+          "delta": null,
+          "dfwRate": 0.2,
+          "gpa": 2.87,
+          "gradeRows": 1,
+          "graded": 28,
+          "isHeadline": false,
+          "number": "333",
+          "subject": "ECE",
+          "title": "Green Electric Energy",
+          "wRate": 0.067,
+          "withdrawn": 2
+        }
+      ],
+      "distribution": {
+        "a": 251,
+        "aMinus": 144,
+        "aPlus": 115,
+        "b": 116,
+        "bMinus": 75,
+        "bPlus": 91,
+        "c": 43,
+        "cMinus": 26,
+        "cPlus": 42,
+        "d": 11,
+        "dMinus": 18,
+        "dPlus": 8,
+        "f": 17,
+        "w": 23
+      },
+      "gpaByYear": [
+        {
+          "gpa": 3.262,
+          "n": 310,
+          "year": 2023
+        },
+        {
+          "gpa": 3.29,
+          "n": 408,
+          "year": 2024
+        },
+        {
+          "gpa": 3.143,
+          "n": 239,
+          "year": 2025
+        }
+      ],
+      "matchProvenance": [
+        {
+          "instructorRaw": "Kirchner, Rúnar",
+          "method": "exact",
+          "rows": 8,
+          "score": 1,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Kirchner, R",
+          "method": "initial",
+          "rows": 6,
+          "score": 0.85,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Kirchner, R",
+          "method": "initial",
+          "rows": 1,
+          "score": 0.85,
+          "source": "schedule"
+        }
+      ],
+      "openSections": [],
+      "positiveReviews": [
+        {
+          "courseId": "uiuc:ECE:311",
+          "courseLabel": "ECE 311",
+          "date": "2023-08-20",
+          "difficulty": 3,
+          "gradeReceived": "A",
+          "helpfulVotes": 10,
+          "id": "uiuc:r:demo-r-000459",
+          "professorId": "uiuc:p:runar-kirchner",
+          "quality": 4,
+          "sentiment": 0.55,
+          "sourceTags": [
+            "Clear grading criteria",
+            "Extra credit",
+            "Get ready to read"
+          ],
+          "text": "I learned more in this course than in any other this year. ECE 311 was my first class in the department. Very fast paced lectures that assume you did the reading. Talk to the professor after class; it is worth it. Ten…",
+          "vibeTags": [
+            "fast-paced"
+          ],
+          "wouldTakeAgain": false
+        },
+        {
+          "courseId": "uiuc:ECE:110",
+          "courseLabel": "ECE 110",
+          "date": "2023-12-14",
+          "difficulty": 3,
+          "gradeReceived": "A",
+          "helpfulVotes": 7,
+          "id": "uiuc:r:demo-r-000460",
+          "professorId": "uiuc:p:runar-kirchner",
+          "quality": 4,
+          "sentiment": 0.49,
+          "sourceTags": [
+            "Lecture heavy",
+            "Tough grader"
+          ],
+          "text": "Fantastic lecturer and an even better mentor in office hours. ECE 110 is required, so most of us had to be there. Explains clearly, step by step, without skipping the hard parts. Read the feedback on your homework…",
+          "vibeTags": [
+            "clear-lectures"
+          ],
+          "wouldTakeAgain": true
+        }
+      ],
+      "professor": {
+        "courseIds": [
+          "uiuc:ECE:110",
+          "uiuc:ECE:311",
+          "uiuc:ECE:333"
+        ],
+        "department": "Electrical and Computer Engineering",
+        "displayName": "Rúnar Kirchner",
+        "firstName": "Rúnar",
+        "id": "uiuc:p:runar-kirchner",
+        "isFictional": true,
+        "kind": "reviewed",
+        "lastName": "Kirchner",
+        "nameKey": {
+          "first": "runar",
+          "firstCompact": "runar",
+          "firstInitial": "r",
+          "firstToken": "runar",
+          "firstTokens": [
+            "runar"
+          ],
+          "last": "kirchner",
+          "lastCompact": "kirchner",
+          "lastTokens": [
+            "kirchner"
+          ],
+          "middleInitials": [],
+          "raw": "Kirchner, Rúnar"
+        },
+        "nameVariants": [
+          "Kirchner, R",
+          "Kirchner, Rúnar"
+        ],
+        "reviewSourceId": "demo-p-034",
+        "schoolId": "uiuc",
+        "slug": "runar-kirchner",
+        "subjects": [
+          "ECE"
+        ]
+      },
+      "rank": null,
+      "scores": {
+        "aRate": 0.533,
+        "composite": 63.5,
+        "confidence": "high",
+        "criticalCount": 3,
+        "deltaComparableN": 560,
+        "dfwRate": 0.079,
+        "difficultyMean": 3.05,
+        "gpaDelta": 0.074,
+        "gpaMean": 3.244,
+        "gradeRows": 12,
+        "positiveCount": 15,
+        "priorMean": 3.73,
+        "ratingRaw": 3.65,
+        "ratingShrunk": 3.666,
+        "reviewCount": 20,
+        "soleInstructor": false,
+        "studentsGraded": 957,
+        "wRate": 0.023,
+        "withdrawn": 23,
+        "wouldTakeAgainPct": 65,
+        "yearsActive": 3
+      },
+      "sectionsThisTerm": 1,
+      "summary": {
+        "bestFor": "Students who can stay ahead and enjoy a rigorous, lecture‑heavy course",
+        "confidence": "high",
+        "evidenceReviewIds": [
+          "uiuc:r:demo-r-000449",
+          "uiuc:r:demo-r-000455",
+          "uiuc:r:demo-r-000456",
+          "uiuc:r:demo-r-000453",
+          "uiuc:r:demo-r-000465"
+        ],
+        "format": "lecture-heavy",
+        "generatedAt": "2026-09-06T22:41:07.033Z",
+        "gradingNote": "In 5 course(s) over 3 year(s), GPA averaged 3.24 (+0.07 vs. the same courses taught by others); 2.3% withdrew.",
+        "inputHash": "1eb07ead157e3bf7",
+        "model": "openai/gpt-oss-20b",
+        "professorId": "uiuc:p:runar-kirchner",
+        "promptVersion": 1,
+        "provider": "Groq",
+        "reviewCount": 20,
+        "source": "openai-compatible",
+        "strengths": [
+          "covers material quickly",
+          "clear explanations even for tough topics",
+          "good office hours",
+          "project guidance"
+        ],
+        "teachingStyle": [
+          "fast-paced",
+          "clear explanations",
+          "step‑by‑step"
+        ],
+        "verdict": "Fast‑paced, clear lectures with heavy emphasis on preparation; 20 reviews suggest it’s worth it if you can keep up.",
+        "watchOuts": [
+          "requires early homework start",
+          "pace can overwhelm if you miss a lecture",
+          "grading sometimes feels arbitrary"
+        ],
+        "workload": "moderate"
+      },
+      "vibeTags": [
+        "clear-lectures",
+        "fast-paced"
+      ]
+    },
+    {
+      "badges": [],
+      "courses": [
+        {
+          "aRate": 0.25,
+          "baselineGpa": null,
+          "baselineN": 0,
+          "buckets": {
+            "a": 50,
+            "aMinus": 38,
+            "aPlus": 29,
+            "b": 80,
+            "bMinus": 54,
+            "bPlus": 47,
+            "c": 52,
+            "cMinus": 34,
+            "cPlus": 42,
+            "d": 13,
+            "dMinus": 7,
+            "dPlus": 16,
+            "f": 6,
+            "w": 14
+          },
+          "courseId": "uiuc:ECE:210",
+          "delta": null,
+          "dfwRate": 0.116,
+          "gpa": 2.764,
+          "gradeRows": 7,
+          "graded": 468,
+          "isHeadline": true,
+          "number": "210",
+          "subject": "ECE",
+          "title": "Analog Signal Processing",
+          "wRate": 0.029,
+          "withdrawn": 14
+        },
+        {
+          "aRate": 0.314,
+          "baselineGpa": 2.753,
+          "baselineN": 2210,
+          "buckets": {
+            "a": 301,
+            "aMinus": 184,
+            "aPlus": 61,
+            "b": 299,
+            "bMinus": 144,
+            "bPlus": 223,
+            "c": 132,
+            "cMinus": 69,
+            "cPlus": 117,
+            "d": 43,
+            "dMinus": 34,
+            "dPlus": 66,
+            "f": 66,
+            "w": 43
+          },
+          "courseId": "uiuc:ECE:391",
+          "delta": 0.095,
+          "dfwRate": 0.141,
+          "gpa": 2.848,
+          "gradeRows": 10,
+          "graded": 1739,
+          "isHeadline": true,
+          "number": "391",
+          "subject": "ECE",
+          "title": "Computer Systems Engineering",
+          "wRate": 0.024,
+          "withdrawn": 43
+        },
+        {
+          "aRate": 0.329,
+          "baselineGpa": 2.902,
+          "baselineN": 82,
+          "buckets": {
+            "a": 14,
+            "aMinus": 10,
+            "aPlus": 4,
+            "b": 10,
+            "bMinus": 10,
+            "bPlus": 11,
+            "c": 5,
+            "cMinus": 5,
+            "cPlus": 4,
+            "d": 5,
+            "dMinus": 0,
+            "dPlus": 5,
+            "f": 2,
+            "w": 1
+          },
+          "courseId": "uiuc:ECE:391",
+          "delta": -0.063,
+          "dfwRate": 0.151,
+          "gpa": 2.839,
+          "gradeRows": 2,
+          "graded": 85,
+          "isHeadline": false,
+          "number": "391",
+          "subject": "ECE",
+          "title": "Computer Systems Engineering",
+          "wRate": 0.012,
+          "withdrawn": 1
+        }
+      ],
+      "distribution": {
+        "a": 351,
+        "aMinus": 222,
+        "aPlus": 90,
+        "b": 379,
+        "bMinus": 198,
+        "bPlus": 270,
+        "c": 184,
+        "cMinus": 103,
+        "cPlus": 159,
+        "d": 56,
+        "dMinus": 41,
+        "dPlus": 82,
+        "f": 72,
+        "w": 57
+      },
+      "gpaByYear": [
+        {
+          "gpa": 2.775,
+          "n": 239,
+          "year": 2020
+        },
+        {
+          "gpa": 2.778,
+          "n": 231,
+          "year": 2021
+        },
+        {
+          "gpa": 2.866,
+          "n": 443,
+          "year": 2022
+        },
+        {
+          "gpa": 2.842,
+          "n": 461,
+          "year": 2023
+        },
+        {
+          "gpa": 2.937,
+          "n": 447,
+          "year": 2024
+        },
+        {
+          "gpa": 2.718,
+          "n": 386,
+          "year": 2025
+        }
+      ],
+      "matchProvenance": [
+        {
+          "instructorRaw": "D'Amato, Samuel",
+          "method": "exact",
+          "rows": 16,
+          "score": 1,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "D'Amato, S",
+          "method": "initial",
+          "rows": 3,
+          "score": 0.85,
+          "source": "grades"
+        }
+      ],
+      "openSections": [],
+      "positiveReviews": [
+        {
+          "courseId": "uiuc:ECE:210",
+          "courseLabel": "ECE 210",
+          "date": "2020-10-20",
+          "difficulty": 4,
+          "gradeReceived": "B",
+          "helpfulVotes": 6,
+          "id": "uiuc:r:demo-r-000530",
+          "professorId": "uiuc:p:samuel-damato",
+          "quality": 4,
+          "sentiment": 0.217,
+          "sourceTags": [
+            "Extra credit",
+            "Graded by few things"
+          ],
+          "text": "You can tell this professor actually enjoys teaching. Scattered and disorganized; hard to know what to study. Review the notes the same day; the material compounds. Overall I would take it again.",
+          "vibeTags": [
+            "disorganized"
+          ],
+          "wouldTakeAgain": false
+        },
+        {
+          "courseId": "uiuc:ECE:391",
+          "courseLabel": "ECE 391",
+          "date": "2025-12-15",
+          "difficulty": 2,
+          "gradeReceived": "B",
+          "helpfulVotes": 4,
+          "id": "uiuc:r:demo-r-000532",
+          "professorId": "uiuc:p:samuel-damato",
+          "quality": 4,
+          "sentiment": 0.4,
+          "sourceTags": [
+            "Extra credit",
+            "So many papers",
+            "Test heavy"
+          ],
+          "text": "Made a notoriously tough subject feel completely doable. Took ECE 391 as a requirement for my major. Expect a curve — the raw averages look scary but the final grades are fine. Redo the old exams under time pressure. Do…",
+          "vibeTags": [
+            "curves-generously"
+          ],
+          "wouldTakeAgain": true
+        }
+      ],
+      "professor": {
+        "courseIds": [
+          "uiuc:ECE:210",
+          "uiuc:ECE:391"
+        ],
+        "department": "Electrical and Computer Engineering",
+        "displayName": "Samuel D'Amato",
+        "firstName": "Samuel",
+        "id": "uiuc:p:samuel-damato",
+        "isFictional": true,
+        "kind": "reviewed",
+        "lastName": "D'Amato",
+        "nameKey": {
+          "first": "samuel",
+          "firstCompact": "samuel",
+          "firstInitial": "s",
+          "firstToken": "samuel",
+          "firstTokens": [
+            "samuel"
+          ],
+          "last": "damato",
+          "lastCompact": "damato",
+          "lastTokens": [
+            "damato"
+          ],
+          "middleInitials": [],
+          "raw": "D'Amato, Samuel"
+        },
+        "nameVariants": [
+          "D'Amato, S",
+          "D'Amato, Samuel"
+        ],
+        "reviewSourceId": "demo-p-041",
+        "schoolId": "uiuc",
+        "slug": "samuel-damato",
+        "subjects": [
+          "ECE"
+        ]
+      },
+      "rank": null,
+      "scores": {
+        "aRate": 0.3,
+        "composite": 63.3,
+        "confidence": "medium",
+        "criticalCount": 1,
+        "deltaComparableN": 1739,
+        "dfwRate": 0.136,
+        "difficultyMean": 2.889,
+        "gpaDelta": 0.095,
+        "gpaMean": 2.83,
+        "gradeRows": 17,
+        "positiveCount": 5,
+        "priorMean": 3.73,
+        "ratingRaw": 3.556,
+        "ratingShrunk": 3.618,
+        "reviewCount": 9,
+        "soleInstructor": false,
+        "studentsGraded": 2207,
+        "wRate": 0.025,
+        "withdrawn": 57,
+        "wouldTakeAgainPct": 66.667,
+        "yearsActive": 6
+      },
+      "sectionsThisTerm": 0,
+      "summary": {
+        "bestFor": "students who prefer discussion‑heavy classes and can manage a flexible schedule",
+        "confidence": "medium",
+        "evidenceReviewIds": [
+          "uiuc:r:demo-r-000532",
+          "uiuc:r:demo-r-000526",
+          "uiuc:r:demo-r-000533",
+          "uiuc:r:demo-r-000534",
+          "uiuc:r:demo-r-000527",
+          "uiuc:r:demo-r-000530"
+        ],
+        "format": "discussion",
+        "generatedAt": "2026-09-06T22:41:20.242Z",
+        "gradingNote": "In 3 course(s) over 6 year(s), GPA averaged 2.83 (+0.10 vs. the same courses taught by others); 2.5% withdrew.",
+        "inputHash": "c9dc8e3813047c6c",
+        "model": "openai/gpt-oss-20b",
+        "professorId": "uiuc:p:samuel-damato",
+        "promptVersion": 1,
+        "provider": "Groq",
+        "reviewCount": 9,
+        "source": "openai-compatible",
+        "strengths": [
+          "generous curves",
+          "engaging discussions",
+          "careful about student understanding"
+        ],
+        "teachingStyle": [
+          "engaging",
+          "discussion"
+        ],
+        "verdict": "Based on 9 reviews, this professor is engaging and generous with curves but the course organization can be inconsistent.",
+        "watchOuts": [
+          "course disorganization",
+          "inconsistent deadlines",
+          "sometimes missing recordings"
+        ],
+        "workload": "moderate"
+      },
+      "vibeTags": [
+        "curves-generously",
+        "engaging",
+        "disorganized"
+      ]
+    },
+    {
+      "badges": [],
+      "courses": [
+        {
+          "aRate": 0.648,
+          "baselineGpa": 3.213,
+          "baselineN": 314,
+          "buckets": {
+            "a": 39,
+            "aMinus": 15,
+            "aPlus": 16,
+            "b": 2,
+            "bMinus": 1,
+            "bPlus": 12,
+            "c": 3,
+            "cMinus": 2,
+            "cPlus": 1,
+            "d": 2,
+            "dMinus": 5,
+            "dPlus": 2,
+            "f": 8,
+            "w": 0
+          },
+          "courseId": "uiuc:ECE:311",
+          "delta": -0.034,
+          "dfwRate": 0.157,
+          "gpa": 3.179,
+          "gradeRows": 3,
+          "graded": 108,
+          "isHeadline": true,
+          "number": "311",
+          "subject": "ECE",
+          "title": "Digital Signal Processing Lab",
+          "wRate": 0,
+          "withdrawn": 0
+        },
+        {
+          "aRate": 0.298,
+          "baselineGpa": 2.597,
+          "baselineN": 307,
+          "buckets": {
+            "a": 29,
+            "aMinus": 15,
+            "aPlus": 21,
+            "b": 27,
+            "bMinus": 27,
+            "bPlus": 28,
+            "c": 26,
+            "cMinus": 15,
+            "cPlus": 9,
+            "d": 5,
+            "dMinus": 0,
+            "dPlus": 1,
+            "f": 15,
+            "w": 11
+          },
+          "courseId": "uiuc:ECE:313",
+          "delta": 0.182,
+          "dfwRate": 0.14,
+          "gpa": 2.779,
+          "gradeRows": 4,
+          "graded": 218,
+          "isHeadline": true,
+          "number": "313",
+          "subject": "ECE",
+          "title": "Probability with Engrg Applic",
+          "wRate": 0.048,
+          "withdrawn": 11
+        },
+        {
+          "aRate": 0.483,
+          "baselineGpa": null,
+          "baselineN": 0,
+          "buckets": {
+            "a": 75,
+            "aMinus": 40,
+            "aPlus": 13,
+            "b": 17,
+            "bMinus": 18,
+            "bPlus": 47,
+            "c": 18,
+            "cMinus": 9,
+            "cPlus": 15,
+            "d": 1,
+            "dMinus": 2,
+            "dPlus": 0,
+            "f": 10,
+            "w": 7
+          },
+          "courseId": "uiuc:ECE:342",
+          "delta": null,
+          "dfwRate": 0.074,
+          "gpa": 3.18,
+          "gradeRows": 5,
+          "graded": 265,
+          "isHeadline": true,
+          "number": "342",
+          "subject": "ECE",
+          "title": "Electronic Circuits",
+          "wRate": 0.026,
+          "withdrawn": 7
+        },
+        {
+          "aRate": 0.875,
+          "baselineGpa": 3.85,
+          "baselineN": 11,
+          "buckets": {
+            "a": 10,
+            "aMinus": 2,
+            "aPlus": 2,
+            "b": 0,
+            "bMinus": 0,
+            "bPlus": 0,
+            "c": 0,
+            "cMinus": 0,
+            "cPlus": 0,
+            "d": 0,
+            "dMinus": 0,
+            "dPlus": 0,
+            "f": 2,
+            "w": 0
+          },
+          "courseId": "uiuc:ECE:311",
+          "delta": -0.391,
+          "dfwRate": 0.125,
+          "gpa": 3.459,
+          "gradeRows": 1,
+          "graded": 16,
+          "isHeadline": false,
+          "number": "311",
+          "subject": "ECE",
+          "title": "Digital Signal Processing Lab",
+          "wRate": 0,
+          "withdrawn": 0
+        },
+        {
+          "aRate": 0.389,
+          "baselineGpa": 2.245,
+          "baselineN": 30,
+          "buckets": {
+            "a": 2,
+            "aMinus": 2,
+            "aPlus": 3,
+            "b": 2,
+            "bMinus": 2,
+            "bPlus": 1,
+            "c": 2,
+            "cMinus": 0,
+            "cPlus": 3,
+            "d": 0,
+            "dMinus": 0,
+            "dPlus": 0,
+            "f": 1,
+            "w": 0
+          },
+          "courseId": "uiuc:ECE:313",
+          "delta": 0.7,
+          "dfwRate": 0.056,
+          "gpa": 2.944,
+          "gradeRows": 1,
+          "graded": 18,
+          "isHeadline": false,
+          "number": "313",
+          "subject": "ECE",
+          "title": "Probability with Engrg Applic",
+          "wRate": 0,
+          "withdrawn": 0
+        },
+        {
+          "aRate": 0.383,
+          "baselineGpa": null,
+          "baselineN": 0,
+          "buckets": {
+            "a": 5,
+            "aMinus": 7,
+            "aPlus": 6,
+            "b": 7,
+            "bMinus": 0,
+            "bPlus": 9,
+            "c": 1,
+            "cMinus": 3,
+            "cPlus": 7,
+            "d": 2,
+            "dMinus": 0,
+            "dPlus": 0,
+            "f": 0,
+            "w": 3
+          },
+          "courseId": "uiuc:ECE:342",
+          "delta": null,
+          "dfwRate": 0.1,
+          "gpa": 3.106,
+          "gradeRows": 3,
+          "graded": 47,
+          "isHeadline": false,
+          "number": "342",
+          "subject": "ECE",
+          "title": "Electronic Circuits",
+          "wRate": 0.06,
+          "withdrawn": 3
+        }
+      ],
+      "distribution": {
+        "a": 143,
+        "aMinus": 70,
+        "aPlus": 50,
+        "b": 46,
+        "bMinus": 46,
+        "bPlus": 87,
+        "c": 47,
+        "cMinus": 26,
+        "cPlus": 25,
+        "d": 8,
+        "dMinus": 7,
+        "dPlus": 3,
+        "f": 33,
+        "w": 18
+      },
+      "gpaByYear": [
+        {
+          "gpa": 3.048,
+          "n": 188,
+          "year": 2021
+        },
+        {
+          "gpa": 2.986,
+          "n": 234,
+          "year": 2022
+        },
+        {
+          "gpa": 3.077,
+          "n": 169,
+          "year": 2023
+        }
+      ],
+      "matchProvenance": [
+        {
+          "instructorRaw": "Fairweather, Oluwaseun",
+          "method": "exact",
+          "rows": 9,
+          "score": 1,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Fairweather, O",
+          "method": "initial",
+          "rows": 8,
+          "score": 0.85,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Fairweather, Oluwaseun Jr",
+          "method": "exact",
+          "rows": 1,
+          "score": 1,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Fairweather, O",
+          "method": "initial",
+          "rows": 3,
+          "score": 0.85,
+          "source": "schedule"
+        },
+        {
+          "instructorRaw": "Fairweather, Oluwaseun",
+          "method": "exact",
+          "rows": 1,
+          "score": 1,
+          "source": "schedule"
+        }
+      ],
+      "openSections": [],
+      "positiveReviews": [
+        {
+          "courseId": "uiuc:ECE:342",
+          "courseLabel": "ECE 342",
+          "date": "2023-03-14",
+          "difficulty": 4,
+          "gradeReceived": "A+",
+          "helpfulVotes": 1,
+          "id": "uiuc:r:demo-r-000476",
+          "professorId": "uiuc:p:oluwaseun-fairweather",
+          "quality": 4,
+          "sentiment": 0.55,
+          "sourceTags": [
+            "Amazing lectures",
+            "Respected"
+          ],
+          "text": "Outstanding teacher who respects students and their time. I took ECE 342 last year. Exams are fair and reflect what was taught. The rubric for the project was posted after the deadline. Take good notes; the exams test…",
+          "vibeTags": [
+            "fair-grading",
+            "great-notes"
+          ],
+          "wouldTakeAgain": true
+        }
+      ],
+      "professor": {
+        "courseIds": [
+          "uiuc:ECE:311",
+          "uiuc:ECE:313",
+          "uiuc:ECE:342"
+        ],
+        "department": "Electrical and Computer Engineering",
+        "displayName": "Oluwaseun Fairweather",
+        "firstName": "Oluwaseun",
+        "id": "uiuc:p:oluwaseun-fairweather",
+        "isFictional": true,
+        "kind": "reviewed",
+        "lastName": "Fairweather",
+        "nameKey": {
+          "first": "oluwaseun",
+          "firstCompact": "oluwaseun",
+          "firstInitial": "o",
+          "firstToken": "oluwaseun",
+          "firstTokens": [
+            "oluwaseun"
+          ],
+          "last": "fairweather",
+          "lastCompact": "fairweather",
+          "lastTokens": [
+            "fairweather"
+          ],
+          "middleInitials": [],
+          "raw": "Fairweather, Oluwaseun"
+        },
+        "nameVariants": [
+          "Fairweather, O",
+          "Fairweather, Oluwaseun",
+          "Fairweather, Oluwaseun Jr"
+        ],
+        "reviewSourceId": "demo-p-036",
+        "schoolId": "uiuc",
+        "slug": "oluwaseun-fairweather",
+        "subjects": [
+          "ECE"
+        ]
+      },
+      "rank": null,
+      "scores": {
+        "aRate": 0.445,
+        "composite": 63.1,
+        "confidence": "low",
+        "criticalCount": 0,
+        "deltaComparableN": 326,
+        "dfwRate": 0.113,
+        "difficultyMean": 3.333,
+        "gpaDelta": 0.11,
+        "gpaMean": 3.032,
+        "gradeRows": 12,
+        "positiveCount": 1,
+        "priorMean": 3.73,
+        "ratingRaw": 3.333,
+        "ratingShrunk": 3.581,
+        "reviewCount": 3,
+        "soleInstructor": false,
+        "studentsGraded": 591,
+        "wRate": 0.03,
+        "withdrawn": 18,
+        "wouldTakeAgainPct": 66.667,
+        "yearsActive": 3
+      },
+      "sectionsThisTerm": 4,
+      "summary": {
+        "bestFor": "Students who prefer interactive classes and value fair assessment",
+        "confidence": "low",
+        "evidenceReviewIds": [
+          "uiuc:r:demo-r-000478",
+          "uiuc:r:demo-r-000476",
+          "uiuc:r:demo-r-000477"
+        ],
+        "format": "mixed",
+        "generatedAt": "2026-09-06T22:37:58.345Z",
+        "gradingNote": "In 6 course(s) over 3 year(s), GPA averaged 3.03 (+0.11 vs. the same courses taught by others); 3.0% withdrew.",
+        "inputHash": "7ad95782473a548e",
+        "model": "openai/gpt-oss-20b",
+        "professorId": "uiuc:p:oluwaseun-fairweather",
+        "promptVersion": 1,
+        "provider": "Groq",
+        "reviewCount": 3,
+        "source": "openai-compatible",
+        "strengths": [
+          "Engaging discussions",
+          "Fair grading",
+          "Clear project rubric",
+          "Supportive office hours"
+        ],
+        "teachingStyle": [
+          "discussion",
+          "mixed"
+        ],
+        "verdict": "Based on 3 reviews, this instructor is engaging and fair, but exams may be challenging.",
+        "watchOuts": [
+          "Exams reflect material but can be tough",
+          "Project rubric posted after deadline"
+        ],
+        "workload": "moderate"
+      },
+      "vibeTags": []
+    },
+    {
+      "badges": [],
+      "courses": [
+        {
+          "aRate": 0.621,
+          "baselineGpa": 3.262,
+          "baselineN": 224,
+          "buckets": {
+            "a": 53,
+            "aMinus": 52,
+            "aPlus": 18,
+            "b": 9,
+            "bMinus": 15,
+            "bPlus": 12,
+            "c": 4,
+            "cMinus": 9,
+            "cPlus": 2,
+            "d": 4,
+            "dMinus": 10,
+            "dPlus": 1,
+            "f": 9,
+            "w": 12
+          },
+          "courseId": "uiuc:ECE:311",
+          "delta": -0.123,
+          "dfwRate": 0.171,
+          "gpa": 3.139,
+          "gradeRows": 5,
+          "graded": 198,
+          "isHeadline": true,
+          "number": "311",
+          "subject": "ECE",
+          "title": "Digital Signal Processing Lab",
+          "wRate": 0.057,
+          "withdrawn": 12
+        },
+        {
+          "aRate": 0.302,
+          "baselineGpa": 2.775,
+          "baselineN": 605,
+          "buckets": {
+            "a": 38,
+            "aMinus": 30,
+            "aPlus": 13,
+            "b": 28,
+            "bMinus": 33,
+            "bPlus": 31,
+            "c": 16,
+            "cMinus": 13,
+            "cPlus": 26,
+            "d": 12,
+            "dMinus": 6,
+            "dPlus": 10,
+            "f": 12,
+            "w": 6
+          },
+          "courseId": "uiuc:ECE:329",
+          "delta": -0.04,
+          "dfwRate": 0.168,
+          "gpa": 2.735,
+          "gradeRows": 5,
+          "graded": 268,
+          "isHeadline": true,
+          "number": "329",
+          "subject": "ECE",
+          "title": "Fields and Waves I",
+          "wRate": 0.022,
+          "withdrawn": 6
+        },
+        {
+          "aRate": 0.494,
+          "baselineGpa": 3.265,
+          "baselineN": 2888,
+          "buckets": {
+            "a": 306,
+            "aMinus": 251,
+            "aPlus": 103,
+            "b": 159,
+            "bMinus": 103,
+            "bPlus": 189,
+            "c": 33,
+            "cMinus": 18,
+            "cPlus": 50,
+            "d": 9,
+            "dMinus": 22,
+            "dPlus": 38,
+            "f": 55,
+            "w": 52
+          },
+          "courseId": "uiuc:ECE:385",
+          "delta": -0.102,
+          "dfwRate": 0.127,
+          "gpa": 3.163,
+          "gradeRows": 6,
+          "graded": 1336,
+          "isHeadline": true,
+          "number": "385",
+          "subject": "ECE",
+          "title": "Digital Systems Laboratory",
+          "wRate": 0.037,
+          "withdrawn": 52
+        },
+        {
+          "aRate": 0.556,
+          "baselineGpa": 3.157,
+          "baselineN": 301,
+          "buckets": {
+            "a": 12,
+            "aMinus": 15,
+            "aPlus": 3,
+            "b": 10,
+            "bMinus": 4,
+            "bPlus": 8,
+            "c": 0,
+            "cMinus": 0,
+            "cPlus": 0,
+            "d": 0,
+            "dMinus": 0,
+            "dPlus": 2,
+            "f": 0,
+            "w": 3
+          },
+          "courseId": "uiuc:ECE:385",
+          "delta": 0.269,
+          "dfwRate": 0.088,
+          "gpa": 3.426,
+          "gradeRows": 1,
+          "graded": 54,
+          "isHeadline": false,
+          "number": "385",
+          "subject": "ECE",
+          "title": "Digital Systems Laboratory",
+          "wRate": 0.053,
+          "withdrawn": 3
+        }
+      ],
+      "distribution": {
+        "a": 397,
+        "aMinus": 333,
+        "aPlus": 134,
+        "b": 196,
+        "bMinus": 151,
+        "bPlus": 232,
+        "c": 53,
+        "cMinus": 40,
+        "cPlus": 78,
+        "d": 25,
+        "dMinus": 38,
+        "dPlus": 49,
+        "f": 76,
+        "w": 70
+      },
+      "gpaByYear": [
+        {
+          "gpa": 2.999,
+          "n": 375,
+          "year": 2021
+        },
+        {
+          "gpa": 3.179,
+          "n": 286,
+          "year": 2022
+        },
+        {
+          "gpa": 3.324,
+          "n": 346,
+          "year": 2023
+        },
+        {
+          "gpa": 3.055,
+          "n": 494,
+          "year": 2024
+        },
+        {
+          "gpa": 2.947,
+          "n": 301,
+          "year": 2025
+        }
+      ],
+      "matchProvenance": [
+        {
+          "instructorRaw": "Ekwueme, Søren",
+          "method": "exact",
+          "rows": 15,
+          "score": 1,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Ekwueme, S",
+          "method": "initial",
+          "rows": 3,
+          "score": 0.85,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Ekwueme, S",
+          "method": "initial",
+          "rows": 1,
+          "score": 0.85,
+          "source": "schedule"
+        }
+      ],
+      "openSections": [],
+      "positiveReviews": [
+        {
+          "courseId": "uiuc:ECE:311",
+          "courseLabel": "ECE 311",
+          "date": "2021-02-03",
+          "difficulty": 4,
+          "gradeReceived": "A",
+          "helpfulVotes": 4,
+          "id": "uiuc:r:demo-r-000577",
+          "professorId": "uiuc:p:soren-ekwueme",
+          "quality": 4,
+          "sentiment": 0.45,
+          "sourceTags": [
+            "Amazing lectures",
+            "Clear grading criteria",
+            "Group projects"
+          ],
+          "text": "I looked forward to every single lecture, which never happens. This was ECE 311, the evening section. Clear lectures with worked examples every single time. There is so much homework in this class. The grading felt…",
+          "vibeTags": [
+            "clear-lectures",
+            "heavy-homework"
+          ],
+          "wouldTakeAgain": true
+        },
+        {
+          "courseId": "uiuc:ECE:329",
+          "courseLabel": "ECE 329",
+          "date": "2022-06-25",
+          "difficulty": 3,
+          "gradeReceived": "A",
+          "helpfulVotes": 3,
+          "id": "uiuc:r:demo-r-000579",
+          "professorId": "uiuc:p:soren-ekwueme",
+          "quality": 4,
+          "sentiment": 0.4,
+          "sourceTags": [
+            "Amazing lectures"
+          ],
+          "text": "Made a notoriously tough subject feel completely doable. Took ECE 329 as a requirement for my major. Tons of assignments; plan your semester around it. Print the slides and annotate them during lecture. Good luck, and…",
+          "vibeTags": [
+            "heavy-homework"
+          ],
+          "wouldTakeAgain": true
+        }
+      ],
+      "professor": {
+        "courseIds": [
+          "uiuc:ECE:311",
+          "uiuc:ECE:329",
+          "uiuc:ECE:385"
+        ],
+        "department": "Electrical and Computer Engineering",
+        "displayName": "Søren Ekwueme",
+        "firstName": "Søren",
+        "id": "uiuc:p:soren-ekwueme",
+        "isFictional": true,
+        "kind": "reviewed",
+        "lastName": "Ekwueme",
+        "nameKey": {
+          "first": "soren",
+          "firstCompact": "soren",
+          "firstInitial": "s",
+          "firstToken": "soren",
+          "firstTokens": [
+            "soren"
+          ],
+          "last": "ekwueme",
+          "lastCompact": "ekwueme",
+          "lastTokens": [
+            "ekwueme"
+          ],
+          "middleInitials": [],
+          "raw": "Ekwueme, Søren"
+        },
+        "nameVariants": [
+          "Ekwueme, S",
+          "Ekwueme, Søren"
+        ],
+        "reviewSourceId": "demo-p-045",
+        "schoolId": "uiuc",
+        "slug": "soren-ekwueme",
+        "subjects": [
+          "ECE"
+        ]
+      },
+      "rank": null,
+      "scores": {
+        "aRate": 0.479,
+        "composite": 54.8,
+        "confidence": "medium",
+        "criticalCount": 1,
+        "deltaComparableN": 1802,
+        "dfwRate": 0.138,
+        "difficultyMean": 3.667,
+        "gpaDelta": -0.095,
+        "gpaMean": 3.097,
+        "gradeRows": 16,
+        "positiveCount": 2,
+        "priorMean": 3.73,
+        "ratingRaw": 3.167,
+        "ratingShrunk": 3.423,
+        "reviewCount": 6,
+        "soleInstructor": false,
+        "studentsGraded": 1802,
+        "wRate": 0.037,
+        "withdrawn": 70,
+        "wouldTakeAgainPct": 50,
+        "yearsActive": 5
+      },
+      "sectionsThisTerm": 1,
+      "summary": {
+        "bestFor": "students who can manage a lot of assignments and prefer structured lectures",
+        "confidence": "medium",
+        "evidenceReviewIds": [
+          "uiuc:r:demo-r-000580",
+          "uiuc:r:demo-r-000576",
+          "uiuc:r:demo-r-000581",
+          "uiuc:r:demo-r-000578",
+          "uiuc:r:demo-r-000579",
+          "uiuc:r:demo-r-000577"
+        ],
+        "format": "lecture-heavy",
+        "generatedAt": "2026-09-06T22:41:57.656Z",
+        "gradingNote": "In 4 course(s) over 5 year(s), GPA averaged 3.10 (−0.10 vs. the same courses taught by others); 3.7% withdrew.",
+        "inputHash": "5c07ea3e1c543ddb",
+        "model": "openai/gpt-oss-20b",
+        "professorId": "uiuc:p:soren-ekwueme",
+        "promptVersion": 1,
+        "provider": "Groq",
+        "reviewCount": 6,
+        "source": "openai-compatible",
+        "strengths": [
+          "heavy-homework",
+          "clear-lectures",
+          "worked examples"
+        ],
+        "teachingStyle": [
+          "clear lectures",
+          "worked examples"
+        ],
+        "verdict": "Based on 6 reviews, the class is heavy on homework and clear in lectures, but office hours are hard to access.",
+        "watchOuts": [
+          "hard to get office hours",
+          "inconsistent grading",
+          "heavy workload"
+        ],
+        "workload": "heavy"
+      },
+      "vibeTags": [
+        "clear-lectures",
+        "heavy-homework"
+      ]
+    },
+    {
+      "badges": [
+        "open-now"
+      ],
+      "courses": [
+        {
+          "aRate": 0.55,
+          "baselineGpa": null,
+          "baselineN": 0,
+          "buckets": {
+            "a": 120,
+            "aMinus": 90,
+            "aPlus": 75,
+            "b": 46,
+            "bMinus": 33,
+            "bPlus": 58,
+            "c": 24,
+            "cMinus": 8,
+            "cPlus": 20,
+            "d": 17,
+            "dMinus": 12,
+            "dPlus": 5,
+            "f": 10,
+            "w": 16
+          },
+          "courseId": "uiuc:ECE:120",
+          "delta": null,
+          "dfwRate": 0.112,
+          "gpa": 3.222,
+          "gradeRows": 6,
+          "graded": 518,
+          "isHeadline": true,
+          "number": "120",
+          "subject": "ECE",
+          "title": "Introduction to Computing",
+          "wRate": 0.03,
+          "withdrawn": 16
+        },
+        {
+          "aRate": 0.342,
+          "baselineGpa": null,
+          "baselineN": 0,
+          "buckets": {
+            "a": 81,
+            "aMinus": 37,
+            "aPlus": 44,
+            "b": 96,
+            "bMinus": 40,
+            "bPlus": 42,
+            "c": 41,
+            "cMinus": 15,
+            "cPlus": 23,
+            "d": 23,
+            "dMinus": 3,
+            "dPlus": 15,
+            "f": 13,
+            "w": 11
+          },
+          "courseId": "uiuc:ECE:330",
+          "delta": null,
+          "dfwRate": 0.134,
+          "gpa": 2.909,
+          "gradeRows": 7,
+          "graded": 473,
+          "isHeadline": true,
+          "number": "330",
+          "subject": "ECE",
+          "title": "Power Ckts & Electromechanics",
+          "wRate": 0.023,
+          "withdrawn": 11
+        },
+        {
+          "aRate": 0.424,
+          "baselineGpa": null,
+          "baselineN": 0,
+          "buckets": {
+            "a": 5,
+            "aMinus": 5,
+            "aPlus": 4,
+            "b": 6,
+            "bMinus": 2,
+            "bPlus": 5,
+            "c": 0,
+            "cMinus": 1,
+            "cPlus": 2,
+            "d": 0,
+            "dMinus": 1,
+            "dPlus": 2,
+            "f": 0,
+            "w": 1
+          },
+          "courseId": "uiuc:ECE:120",
+          "delta": null,
+          "dfwRate": 0.118,
+          "gpa": 3.152,
+          "gradeRows": 2,
+          "graded": 33,
+          "isHeadline": false,
+          "number": "120",
+          "subject": "ECE",
+          "title": "Introduction to Computing",
+          "wRate": 0.029,
+          "withdrawn": 1
+        },
+        {
+          "aRate": 0.441,
+          "baselineGpa": null,
+          "baselineN": 0,
+          "buckets": {
+            "a": 7,
+            "aMinus": 5,
+            "aPlus": 3,
+            "b": 6,
+            "bMinus": 3,
+            "bPlus": 1,
+            "c": 4,
+            "cMinus": 1,
+            "cPlus": 3,
+            "d": 1,
+            "dMinus": 0,
+            "dPlus": 0,
+            "f": 0,
+            "w": 3
+          },
+          "courseId": "uiuc:ECE:330",
+          "delta": null,
+          "dfwRate": 0.108,
+          "gpa": 3.099,
+          "gradeRows": 2,
+          "graded": 34,
+          "isHeadline": false,
+          "number": "330",
+          "subject": "ECE",
+          "title": "Power Ckts & Electromechanics",
+          "wRate": 0.081,
+          "withdrawn": 3
+        }
+      ],
+      "distribution": {
+        "a": 201,
+        "aMinus": 127,
+        "aPlus": 119,
+        "b": 142,
+        "bMinus": 73,
+        "bPlus": 100,
+        "c": 65,
+        "cMinus": 23,
+        "cPlus": 43,
+        "d": 40,
+        "dMinus": 15,
+        "dPlus": 20,
+        "f": 23,
+        "w": 27
+      },
+      "gpaByYear": [
+        {
+          "gpa": 2.982,
+          "n": 213,
+          "year": 2021
+        },
+        {
+          "gpa": 2.988,
+          "n": 160,
+          "year": 2022
+        },
+        {
+          "gpa": 3.335,
+          "n": 177,
+          "year": 2023
+        },
+        {
+          "gpa": 2.993,
+          "n": 183,
+          "year": 2024
+        },
+        {
+          "gpa": 3.078,
+          "n": 258,
+          "year": 2025
+        }
+      ],
+      "matchProvenance": [
+        {
+          "instructorRaw": "Zuniga, Mihail",
+          "method": "exact",
+          "rows": 11,
+          "score": 1,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Zuniga, M",
+          "method": "initial",
+          "rows": 5,
+          "score": 0.85,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Zuniga, Mihail Jr",
+          "method": "exact",
+          "rows": 1,
+          "score": 1,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Zuniga, M",
+          "method": "initial",
+          "rows": 4,
+          "score": 0.85,
+          "source": "schedule"
+        },
+        {
+          "instructorRaw": "Zuniga, Mihail",
+          "method": "exact",
+          "rows": 1,
+          "score": 1,
+          "source": "schedule"
+        }
+      ],
+      "openSections": [
+        {
+          "courseId": "uiuc:ECE:330",
+          "crn": "30010",
+          "crossListedCourseIds": [],
+          "fetchedAt": "2026-09-03T14:12:00Z",
+          "id": "uiuc:s:2026-fa:30010",
+          "instructorsRaw": [
+            "Zuniga, Mihail"
+          ],
+          "isOpen": true,
+          "meetings": [
+            {
+              "building": null,
+              "days": [],
+              "end": null,
+              "room": null,
+              "start": null,
+              "type": "LCD"
+            }
+          ],
+          "professorIds": [
+            "uiuc:p:mihail-zuniga"
+          ],
+          "schoolId": "uiuc",
+          "seatsKnown": true,
+          "sectionCode": "DL1",
+          "status": "open",
+          "term": "2026-fa",
+          "type": "LCD"
+        },
+        {
+          "courseId": "uiuc:ECE:120",
+          "crn": "40607",
+          "crossListedCourseIds": [],
+          "fetchedAt": "2026-09-03T14:12:00Z",
+          "id": "uiuc:s:2026-fa:40607",
+          "instructorsRaw": [
+            "Zuniga, M"
+          ],
+          "isOpen": true,
+          "meetings": [
+            {
+              "building": "Stonebridge Lecture Hall",
+              "days": [
+                "M",
+                "W",
+                "F"
+              ],
+              "end": "08:50",
+              "room": "317",
+              "start": "08:00",
+              "type": "LEC"
+            }
+          ],
+          "professorIds": [
+            "uiuc:p:mihail-zuniga"
+          ],
+          "schoolId": "uiuc",
+          "seatsKnown": true,
+          "sectionCode": "BL2",
+          "status": "open",
+          "term": "2026-fa",
+          "type": "LEC"
+        },
+        {
+          "courseId": "uiuc:ECE:330",
+          "crn": "42891",
+          "crossListedCourseIds": [],
+          "fetchedAt": "2026-09-03T14:12:00Z",
+          "id": "uiuc:s:2026-fa:42891",
+          "instructorsRaw": [
+            "Zuniga, M"
+          ],
+          "isOpen": true,
+          "meetings": [
+            {
+              "building": "Kestrel Physics Building",
+              "days": [
+                "T",
+                "R"
+              ],
+              "end": "13:50",
+              "room": "109",
+              "start": "12:30",
+              "type": "DIS"
+            }
+          ],
+          "professorIds": [
+            "uiuc:p:mihail-zuniga"
+          ],
+          "schoolId": "uiuc",
+          "seatsKnown": true,
+          "sectionCode": "CDA",
+          "status": "open",
+          "term": "2026-fa",
+          "type": "DIS"
+        },
+        {
+          "courseId": "uiuc:ECE:330",
+          "crn": "50585",
+          "crossListedCourseIds": [],
+          "fetchedAt": "2026-09-03T14:12:00Z",
+          "id": "uiuc:s:2026-fa:50585",
+          "instructorsRaw": [
+            "Zuniga, M"
+          ],
+          "isOpen": true,
+          "meetings": [
+            {
+              "building": "Kestrel Physics Building",
+              "days": [
+                "M",
+                "W",
+                "F"
+              ],
+              "end": "11:50",
+              "room": "145",
+              "start": "11:00",
+              "type": "LEC"
+            }
+          ],
+          "professorIds": [
+            "uiuc:p:mihail-zuniga"
+          ],
+          "schoolId": "uiuc",
+          "seatsKnown": true,
+          "sectionCode": "DL1",
+          "status": "open",
+          "term": "2026-fa",
+          "type": "LEC"
+        },
+        {
+          "courseId": "uiuc:ECE:330",
+          "crn": "59280",
+          "crossListedCourseIds": [],
+          "fetchedAt": "2026-09-03T14:12:00Z",
+          "id": "uiuc:s:2026-fa:59280",
+          "instructorsRaw": [
+            "Zuniga, M"
+          ],
+          "isOpen": true,
+          "meetings": [
+            {
+              "building": "Ellery Computing Center",
+              "days": [
+                "M",
+                "W",
+                "F"
+              ],
+              "end": "13:50",
+              "room": "158",
+              "start": "13:00",
+              "type": "DIS"
+            }
+          ],
+          "professorIds": [
+            "uiuc:p:mihail-zuniga"
+          ],
+          "schoolId": "uiuc",
+          "seatsKnown": true,
+          "sectionCode": "BDB",
+          "status": "open",
+          "term": "2026-fa",
+          "type": "DIS"
+        }
+      ],
+      "positiveReviews": [
+        {
+          "courseId": "uiuc:ECE:120",
+          "courseLabel": "ECE 120",
+          "date": "2021-04-03",
+          "difficulty": 4,
+          "gradeReceived": null,
+          "helpfulVotes": 4,
+          "id": "uiuc:r:demo-r-000444",
+          "professorId": "uiuc:p:mihail-zuniga",
+          "quality": 4,
+          "sentiment": 0.383,
+          "sourceTags": [
+            "Get ready to read"
+          ],
+          "text": "Absolutely loved this class from week one. Hard exams with almost no partial credit. Keep a running list of questions for office hours. Ended up being one of my favorites.",
+          "vibeTags": [
+            "hard-exams"
+          ],
+          "wouldTakeAgain": true
+        },
+        {
+          "courseId": "uiuc:ECE:330",
+          "courseLabel": "ECE 330",
+          "date": "2025-11-07",
+          "difficulty": 3,
+          "gradeReceived": "B+",
+          "helpfulVotes": 3,
+          "id": "uiuc:r:demo-r-000438",
+          "professorId": "uiuc:p:mihail-zuniga",
+          "quality": 4,
+          "sentiment": 0.325,
+          "sourceTags": [
+            "Get ready to read",
+            "Group projects",
+            "Lots of homework"
+          ],
+          "text": "I recommend this professor to everyone in my major. I took ECE 330 with about two hundred other students. Heavy workload compared to other courses at this level. Hard midterms, harder final. Start studying for the final…",
+          "vibeTags": [
+            "heavy-homework"
+          ],
+          "wouldTakeAgain": true
+        }
+      ],
+      "professor": {
+        "courseIds": [
+          "uiuc:ECE:120",
+          "uiuc:ECE:330"
+        ],
+        "department": "Electrical and Computer Engineering",
+        "displayName": "Mihail Zuniga",
+        "firstName": "Mihail",
+        "id": "uiuc:p:mihail-zuniga",
+        "isFictional": true,
+        "kind": "reviewed",
+        "lastName": "Zuniga",
+        "nameKey": {
+          "first": "mihail",
+          "firstCompact": "mihail",
+          "firstInitial": "m",
+          "firstToken": "mihail",
+          "firstTokens": [
+            "mihail"
+          ],
+          "last": "zuniga",
+          "lastCompact": "zuniga",
+          "lastTokens": [
+            "zuniga"
+          ],
+          "middleInitials": [],
+          "raw": "Zuniga, Mihail"
+        },
+        "nameVariants": [
+          "Zuniga, M",
+          "Zuniga, Mihail",
+          "Zuniga, Mihail Jr"
+        ],
+        "reviewSourceId": "demo-p-033",
+        "schoolId": "uiuc",
+        "slug": "mihail-zuniga",
+        "subjects": [
+          "ECE"
+        ]
+      },
+      "rank": null,
+      "scores": {
+        "aRate": 0.451,
+        "composite": 58.4,
+        "confidence": "medium",
+        "criticalCount": 2,
+        "deltaComparableN": 0,
+        "dfwRate": 0.123,
+        "difficultyMean": 3.667,
+        "gpaDelta": null,
+        "gpaMean": 3.073,
+        "gradeRows": 13,
+        "positiveCount": 5,
+        "priorMean": 3.73,
+        "ratingRaw": 3.25,
+        "ratingShrunk": 3.391,
+        "reviewCount": 12,
+        "soleInstructor": true,
+        "studentsGraded": 991,
+        "wRate": 0.027,
+        "withdrawn": 27,
+        "wouldTakeAgainPct": 66.667,
+        "yearsActive": 5
+      },
+      "sectionsThisTerm": 5,
+      "summary": {
+        "bestFor": "Students who read ahead consistently and can sustain a heavy workload without cramming",
+        "confidence": "medium",
+        "evidenceReviewIds": [
+          "uiuc:r:demo-r-000438",
+          "uiuc:r:demo-r-000439",
+          "uiuc:r:demo-r-000435",
+          "uiuc:r:demo-r-000440",
+          "uiuc:r:demo-r-000437",
+          "uiuc:r:demo-r-000441",
+          "uiuc:r:demo-r-000442",
+          "uiuc:r:demo-r-000443",
+          "uiuc:r:demo-r-000446",
+          "uiuc:r:demo-r-000445",
+          "uiuc:r:demo-r-000436",
+          "uiuc:r:demo-r-000444"
+        ],
+        "format": "mixed",
+        "generatedAt": "2026-09-06T23:22:24.750Z",
+        "gradingNote": "In 4 course(s) over 5 year(s), GPA averaged 3.07; no comparison group in the window.",
+        "inputHash": "6520938910815614",
+        "model": "qwen/qwen3.8-27b",
+        "professorId": "uiuc:p:mihail-zuniga",
+        "promptVersion": 1,
+        "provider": "Groq",
+        "reviewCount": 12,
+        "source": "openai-compatible",
+        "strengths": [
+          "Material quality praised even when delivery varies",
+          "Genuinely cares about student understanding",
+          "Strong TAs and discussion sections",
+          "Several students found it rewarding and would retake"
+        ],
+        "teachingStyle": [
+          "Textbook-first approach",
+          "Exams test beyond lectures",
+          "Minimal partial credit",
+          "Consistent weekly load"
+        ],
+        "verdict": "Based on 12 reviews, this is a demanding but rewarding course if you read the textbook before every lecture and keep up with the heavy weekly workload.",
+        "watchOuts": [
+          "Heavy workload; multiple reviews say to plan your semester around it",
+          "Exams are hard with almost no partial credit",
+          "One review notes vague syllabus on grading; another says extra credit never materialized"
+        ],
+        "workload": "heavy"
+      },
+      "vibeTags": [
+        "heavy-homework",
+        "hard-exams",
+        "must-read-textbook"
+      ]
+    },
+    {
+      "badges": [
+        "open-now"
+      ],
+      "courses": [
+        {
+          "aRate": 0.672,
+          "baselineGpa": 3.427,
+          "baselineN": 205,
+          "buckets": {
+            "a": 47,
+            "aMinus": 36,
+            "aPlus": 9,
+            "b": 6,
+            "bMinus": 7,
+            "bPlus": 10,
+            "c": 6,
+            "cMinus": 3,
+            "cPlus": 2,
+            "d": 4,
+            "dMinus": 2,
+            "dPlus": 2,
+            "f": 3,
+            "w": 3
+          },
+          "courseId": "uiuc:ECE:206",
+          "delta": -0.1,
+          "dfwRate": 0.1,
+          "gpa": 3.327,
+          "gradeRows": 5,
+          "graded": 137,
+          "isHeadline": true,
+          "number": "206",
+          "subject": "ECE",
+          "title": "Electrical & Electronics Lab",
+          "wRate": 0.021,
+          "withdrawn": 3
+        },
+        {
+          "aRate": 0.343,
+          "baselineGpa": 3.065,
+          "baselineN": 267,
+          "buckets": {
+            "a": 31,
+            "aMinus": 30,
+            "aPlus": 11,
+            "b": 25,
+            "bMinus": 33,
+            "bPlus": 21,
+            "c": 4,
+            "cMinus": 14,
+            "cPlus": 19,
+            "d": 5,
+            "dMinus": 0,
+            "dPlus": 15,
+            "f": 2,
+            "w": 6
+          },
+          "courseId": "uiuc:ECE:310",
+          "delta": -0.152,
+          "dfwRate": 0.13,
+          "gpa": 2.913,
+          "gradeRows": 3,
+          "graded": 210,
+          "isHeadline": true,
+          "number": "310",
+          "subject": "ECE",
+          "title": "Digital Signal Processing",
+          "wRate": 0.028,
+          "withdrawn": 6
+        },
+        {
+          "aRate": 0.25,
+          "baselineGpa": 3.087,
+          "baselineN": 61,
+          "buckets": {
+            "a": 3,
+            "aMinus": 1,
+            "aPlus": 1,
+            "b": 2,
+            "bMinus": 6,
+            "bPlus": 5,
+            "c": 0,
+            "cMinus": 0,
+            "cPlus": 1,
+            "d": 1,
+            "dMinus": 0,
+            "dPlus": 0,
+            "f": 0,
+            "w": 0
+          },
+          "courseId": "uiuc:ECE:310",
+          "delta": -0.004,
+          "dfwRate": 0.05,
+          "gpa": 3.084,
+          "gradeRows": 1,
+          "graded": 20,
+          "isHeadline": false,
+          "number": "310",
+          "subject": "ECE",
+          "title": "Digital Signal Processing",
+          "wRate": 0,
+          "withdrawn": 0
+        }
+      ],
+      "distribution": {
+        "a": 78,
+        "aMinus": 66,
+        "aPlus": 20,
+        "b": 31,
+        "bMinus": 40,
+        "bPlus": 31,
+        "c": 10,
+        "cMinus": 17,
+        "cPlus": 21,
+        "d": 9,
+        "dMinus": 2,
+        "dPlus": 17,
+        "f": 5,
+        "w": 9
+      },
+      "gpaByYear": [
+        {
+          "gpa": 3.118,
+          "n": 100,
+          "year": 2021
+        },
+        {
+          "gpa": 3.028,
+          "n": 95,
+          "year": 2022
+        },
+        {
+          "gpa": 3.079,
+          "n": 152,
+          "year": 2023
+        }
+      ],
+      "matchProvenance": [
+        {
+          "instructorRaw": "Fennimore, Priya",
+          "method": "exact",
+          "rows": 8,
+          "score": 1,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Fennimore, P",
+          "method": "initial",
+          "rows": 3,
+          "score": 0.85,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Fennimore, Priya",
+          "method": "exact",
+          "rows": 2,
+          "score": 1,
+          "source": "schedule"
+        }
+      ],
+      "openSections": [
+        {
+          "courseId": "uiuc:ECE:310",
+          "crn": "38977",
+          "crossListedCourseIds": [],
+          "fetchedAt": "2026-09-03T14:12:00Z",
+          "id": "uiuc:s:2026-fa:38977",
+          "instructorsRaw": [
+            "Fennimore, Priya"
+          ],
+          "isOpen": true,
+          "meetings": [
+            {
+              "building": "Larkin Mathematics Hall",
+              "days": [
+                "T",
+                "R"
+              ],
+              "end": "10:50",
+              "room": "378",
+              "start": "09:30",
+              "type": "LEC"
+            }
+          ],
+          "professorIds": [
+            "uiuc:p:priya-fennimore"
+          ],
+          "schoolId": "uiuc",
+          "seatsKnown": true,
+          "sectionCode": "AL3",
+          "status": "open",
+          "term": "2026-fa",
+          "type": "LEC"
+        },
+        {
+          "courseId": "uiuc:ECE:310",
+          "crn": "79921",
+          "crossListedCourseIds": [],
+          "fetchedAt": "2026-09-03T14:12:00Z",
+          "id": "uiuc:s:2026-fa:79921",
+          "instructorsRaw": [
+            "Fennimore, Priya"
+          ],
+          "isOpen": true,
+          "meetings": [
+            {
+              "building": "Halcyon Hall",
+              "days": [
+                "M",
+                "W"
+              ],
+              "end": "19:20",
+              "room": "192",
+              "start": "18:00",
+              "type": "LEC"
+            }
+          ],
+          "professorIds": [
+            "uiuc:p:priya-fennimore"
+          ],
+          "schoolId": "uiuc",
+          "seatsKnown": true,
+          "sectionCode": "CL1",
+          "status": "open",
+          "term": "2026-fa",
+          "type": "LEC"
+        }
+      ],
+      "positiveReviews": [
+        {
+          "courseId": "uiuc:ECE:310",
+          "courseLabel": "ECE 310",
+          "date": "2021-09-14",
+          "difficulty": 4,
+          "gradeReceived": null,
+          "helpfulVotes": 4,
+          "id": "uiuc:r:demo-r-000504",
+          "professorId": "uiuc:p:priya-fennimore",
+          "quality": 4,
+          "sentiment": 0.4,
+          "sourceTags": [
+            "Caring",
+            "Get ready to read",
+            "Inspirational"
+          ],
+          "text": "I looked forward to every single lecture, which never happens. I was in the ECE 310 section that met in the morning. Read the textbook — lectures only cover half the material. Go to office hours early and often. Glad I…",
+          "vibeTags": [
+            "must-read-textbook"
+          ],
+          "wouldTakeAgain": true
+        },
+        {
+          "courseId": "uiuc:ECE:310",
+          "courseLabel": "ECE 310",
+          "date": "2023-07-28",
+          "difficulty": 3,
+          "gradeReceived": "A+",
+          "helpfulVotes": 1,
+          "id": "uiuc:r:demo-r-000506",
+          "professorId": "uiuc:p:priya-fennimore",
+          "quality": 4,
+          "sentiment": 0.47,
+          "sourceTags": [
+            "Get ready to read",
+            "Test heavy"
+          ],
+          "text": "I learned more in this course than in any other this year. Very approachable and always willing to help after class. Exam questions come straight from the textbook readings. Do every optional problem; they show up…",
+          "vibeTags": [
+            "caring"
+          ],
+          "wouldTakeAgain": true
+        }
+      ],
+      "professor": {
+        "courseIds": [
+          "uiuc:ECE:206",
+          "uiuc:ECE:310"
+        ],
+        "department": "Electrical and Computer Engineering",
+        "displayName": "Priya Fennimore",
+        "firstName": "Priya",
+        "id": "uiuc:p:priya-fennimore",
+        "isFictional": true,
+        "kind": "reviewed",
+        "lastName": "Fennimore",
+        "nameKey": {
+          "first": "priya",
+          "firstCompact": "priya",
+          "firstInitial": "p",
+          "firstToken": "priya",
+          "firstTokens": [
+            "priya"
+          ],
+          "last": "fennimore",
+          "lastCompact": "fennimore",
+          "lastTokens": [
+            "fennimore"
+          ],
+          "middleInitials": [],
+          "raw": "Fennimore, Priya"
+        },
+        "nameVariants": [
+          "Fennimore, P",
+          "Fennimore, Priya"
+        ],
+        "reviewSourceId": "demo-p-039",
+        "schoolId": "uiuc",
+        "slug": "priya-fennimore",
+        "subjects": [
+          "ECE"
+        ]
+      },
+      "rank": null,
+      "scores": {
+        "aRate": 0.473,
+        "composite": 56.5,
+        "confidence": "medium",
+        "criticalCount": 3,
+        "deltaComparableN": 347,
+        "dfwRate": 0.118,
+        "difficultyMean": 3.2,
+        "gpaDelta": -0.132,
+        "gpaMean": 3.076,
+        "gradeRows": 8,
+        "positiveCount": 4,
+        "priorMean": 3.73,
+        "ratingRaw": 3.2,
+        "ratingShrunk": 3.377,
+        "reviewCount": 10,
+        "soleInstructor": false,
+        "studentsGraded": 347,
+        "wRate": 0.025,
+        "withdrawn": 9,
+        "wouldTakeAgainPct": 70,
+        "yearsActive": 3
+      },
+      "sectionsThisTerm": 2,
+      "summary": {
+        "bestFor": "students who are disciplined, enjoy reading the textbook, and can handle a fast-paced, homework-intensive course",
+        "confidence": "medium",
+        "evidenceReviewIds": [
+          "uiuc:r:demo-r-000500",
+          "uiuc:r:demo-r-000502",
+          "uiuc:r:demo-r-000506",
+          "uiuc:r:demo-r-000508",
+          "uiuc:r:demo-r-000499",
+          "uiuc:r:demo-r-000501",
+          "uiuc:r:demo-r-000504",
+          "uiuc:r:demo-r-000505"
+        ],
+        "format": "lecture-heavy",
+        "generatedAt": "2026-09-06T22:39:11.301Z",
+        "gradingNote": "In 3 course(s) over 3 year(s), GPA averaged 3.08 (−0.13 vs. the same courses taught by others); 2.5% withdrew.",
+        "inputHash": "2174145ff866aae5",
+        "model": "openai/gpt-oss-20b",
+        "professorId": "uiuc:p:priya-fennimore",
+        "promptVersion": 1,
+        "provider": "Groq",
+        "reviewCount": 10,
+        "source": "openai-compatible",
+        "strengths": [
+          "approachable and helpful after class",
+          "caring about student learning",
+          "good use of optional problems"
+        ],
+        "teachingStyle": [
+          "fast-paced",
+          "supportive",
+          "textbook-focused"
+        ],
+        "verdict": "Based on 10 reviews, this instructor is approachable but requires heavy textbook reading and a fast pace.",
+        "watchOuts": [
+          "heavy workload and frequent homework",
+          "fast pace especially later in semester",
+          "project instructions sometimes vague"
+        ],
+        "workload": "heavy"
+      },
+      "vibeTags": [
+        "caring",
+        "heavy-homework",
+        "must-read-textbook"
+      ]
+    },
+    {
+      "badges": [
+        "open-now"
+      ],
+      "courses": [
+        {
+          "aRate": 0.512,
+          "baselineGpa": 3.292,
+          "baselineN": 1228,
+          "buckets": {
+            "a": 93,
+            "aMinus": 39,
+            "aPlus": 62,
+            "b": 40,
+            "bMinus": 17,
+            "bPlus": 51,
+            "c": 21,
+            "cMinus": 5,
+            "cPlus": 25,
+            "d": 4,
+            "dMinus": 4,
+            "dPlus": 5,
+            "f": 13,
+            "w": 13
+          },
+          "courseId": "uiuc:ECE:110",
+          "delta": -0.072,
+          "dfwRate": 0.099,
+          "gpa": 3.22,
+          "gradeRows": 3,
+          "graded": 379,
+          "isHeadline": true,
+          "number": "110",
+          "subject": "ECE",
+          "title": "Introduction to Electronics",
+          "wRate": 0.033,
+          "withdrawn": 13
+        },
+        {
+          "aRate": 0.389,
+          "baselineGpa": 3.17,
+          "baselineN": 865,
+          "buckets": {
+            "a": 33,
+            "aMinus": 21,
+            "aPlus": 2,
+            "b": 25,
+            "bMinus": 14,
+            "bPlus": 17,
+            "c": 13,
+            "cMinus": 5,
+            "cPlus": 9,
+            "d": 1,
+            "dMinus": 0,
+            "dPlus": 0,
+            "f": 4,
+            "w": 4
+          },
+          "courseId": "uiuc:ECE:408",
+          "delta": -0.098,
+          "dfwRate": 0.061,
+          "gpa": 3.072,
+          "gradeRows": 2,
+          "graded": 144,
+          "isHeadline": true,
+          "number": "408",
+          "subject": "ECE",
+          "title": "Applied Parallel Programming",
+          "wRate": 0.027,
+          "withdrawn": 4
+        },
+        {
+          "aRate": 0.762,
+          "baselineGpa": null,
+          "baselineN": 0,
+          "buckets": {
+            "a": 256,
+            "aMinus": 35,
+            "aPlus": 38,
+            "b": 33,
+            "bMinus": 2,
+            "bPlus": 23,
+            "c": 6,
+            "cMinus": 13,
+            "cPlus": 7,
+            "d": 12,
+            "dMinus": 4,
+            "dPlus": 3,
+            "f": 0,
+            "w": 10
+          },
+          "courseId": "uiuc:ECE:549",
+          "delta": null,
+          "dfwRate": 0.066,
+          "gpa": 3.597,
+          "gradeRows": 5,
+          "graded": 432,
+          "isHeadline": true,
+          "number": "549",
+          "subject": "ECE",
+          "title": "Computer Vision",
+          "wRate": 0.023,
+          "withdrawn": 10
+        },
+        {
+          "aRate": 0.567,
+          "baselineGpa": 3.38,
+          "baselineN": 29,
+          "buckets": {
+            "a": 6,
+            "aMinus": 6,
+            "aPlus": 5,
+            "b": 3,
+            "bMinus": 3,
+            "bPlus": 3,
+            "c": 2,
+            "cMinus": 1,
+            "cPlus": 0,
+            "d": 1,
+            "dMinus": 0,
+            "dPlus": 0,
+            "f": 0,
+            "w": 1
+          },
+          "courseId": "uiuc:ECE:110",
+          "delta": -0.057,
+          "dfwRate": 0.065,
+          "gpa": 3.323,
+          "gradeRows": 1,
+          "graded": 30,
+          "isHeadline": false,
+          "number": "110",
+          "subject": "ECE",
+          "title": "Introduction to Electronics",
+          "wRate": 0.032,
+          "withdrawn": 1
+        },
+        {
+          "aRate": 0.627,
+          "baselineGpa": null,
+          "baselineN": 0,
+          "buckets": {
+            "a": 21,
+            "aMinus": 4,
+            "aPlus": 7,
+            "b": 2,
+            "bMinus": 1,
+            "bPlus": 5,
+            "c": 2,
+            "cMinus": 1,
+            "cPlus": 4,
+            "d": 2,
+            "dMinus": 2,
+            "dPlus": 0,
+            "f": 0,
+            "w": 0
+          },
+          "courseId": "uiuc:ECE:549",
+          "delta": null,
+          "dfwRate": 0.078,
+          "gpa": 3.34,
+          "gradeRows": 2,
+          "graded": 51,
+          "isHeadline": false,
+          "number": "549",
+          "subject": "ECE",
+          "title": "Computer Vision",
+          "wRate": 0,
+          "withdrawn": 0
+        }
+      ],
+      "distribution": {
+        "a": 382,
+        "aMinus": 95,
+        "aPlus": 102,
+        "b": 98,
+        "bMinus": 33,
+        "bPlus": 91,
+        "c": 40,
+        "cMinus": 23,
+        "cPlus": 41,
+        "d": 17,
+        "dMinus": 8,
+        "dPlus": 8,
+        "f": 17,
+        "w": 27
+      },
+      "gpaByYear": [
+        {
+          "gpa": 3.799,
+          "n": 106,
+          "year": 2020
+        },
+        {
+          "gpa": 3.295,
+          "n": 439,
+          "year": 2021
+        },
+        {
+          "gpa": 3.335,
+          "n": 410,
+          "year": 2022
+        }
+      ],
+      "matchProvenance": [
+        {
+          "instructorRaw": "Sørensen, Halvard",
+          "method": "exact",
+          "rows": 7,
+          "score": 1,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Sørensen, H",
+          "method": "initial",
+          "rows": 5,
+          "score": 0.85,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Sørensen, Halvard Jr",
+          "method": "exact",
+          "rows": 1,
+          "score": 1,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Sørensen, H",
+          "method": "initial",
+          "rows": 1,
+          "score": 0.85,
+          "source": "schedule"
+        },
+        {
+          "instructorRaw": "Sørensen, Halvard",
+          "method": "exact",
+          "rows": 1,
+          "score": 1,
+          "source": "schedule"
+        }
+      ],
+      "openSections": [
+        {
+          "courseId": "uiuc:ECE:110",
+          "crn": "33444",
+          "crossListedCourseIds": [],
+          "fetchedAt": "2026-09-03T14:12:00Z",
+          "id": "uiuc:s:2026-fa:33444",
+          "instructorsRaw": [
+            "Sørensen, H"
+          ],
+          "isOpen": true,
+          "meetings": [
+            {
+              "building": "Greyfell Learning Commons",
+              "days": [
+                "T",
+                "R"
+              ],
+              "end": "12:20",
+              "room": "246",
+              "start": "11:00",
+              "type": "DIS"
+            }
+          ],
+          "professorIds": [
+            "uiuc:p:halvard-sorensen"
+          ],
+          "schoolId": "uiuc",
+          "seatsKnown": true,
+          "sectionCode": "CDA",
+          "status": "open",
+          "term": "2026-fa",
+          "type": "DIS"
+        },
+        {
+          "courseId": "uiuc:ECE:110",
+          "crn": "53252",
+          "crossListedCourseIds": [],
+          "fetchedAt": "2026-09-03T14:12:00Z",
+          "id": "uiuc:s:2026-fa:53252",
+          "instructorsRaw": [
+            "Sørensen, Halvard"
+          ],
+          "isOpen": true,
+          "meetings": [
+            {
+              "building": "Ellery Computing Center",
+              "days": [
+                "M",
+                "W",
+                "F"
+              ],
+              "end": "15:50",
+              "room": "397",
+              "start": "15:00",
+              "type": "LEC"
+            }
+          ],
+          "professorIds": [
+            "uiuc:p:halvard-sorensen"
+          ],
+          "schoolId": "uiuc",
+          "seatsKnown": true,
+          "sectionCode": "EL1",
+          "status": "open",
+          "term": "2026-fa",
+          "type": "LEC"
+        }
+      ],
+      "positiveReviews": [
+        {
+          "courseId": "uiuc:ECE:408",
+          "courseLabel": "ECE 408",
+          "date": "2021-03-08",
+          "difficulty": 3,
+          "gradeReceived": "B-",
+          "helpfulVotes": 7,
+          "id": "uiuc:r:demo-r-000535",
+          "professorId": "uiuc:p:halvard-sorensen",
+          "quality": 4,
+          "sentiment": 0.4,
+          "sourceTags": [
+            "Test heavy"
+          ],
+          "text": "I learned more in this course than in any other this year. ECE 408 is required, so most of us had to be there. Very difficult exams; study the old ones religiously. Read the feedback on your homework carefully. Wish…",
+          "vibeTags": [
+            "hard-exams"
+          ],
+          "wouldTakeAgain": true
+        },
+        {
+          "courseId": null,
+          "courseLabel": null,
+          "date": "2020-08-06",
+          "difficulty": 3,
+          "gradeReceived": null,
+          "helpfulVotes": 4,
+          "id": "uiuc:r:demo-r-000540",
+          "professorId": "uiuc:p:halvard-sorensen",
+          "quality": 4,
+          "sentiment": 0.279,
+          "sourceTags": [
+            "Graded by few things",
+            "Tough grader"
+          ],
+          "text": "I looked forward to every single lecture, which never happens. Scattered and disorganized; hard to know what to study. The exams are hard — much harder than the homework. The grading felt inconsistent between TAs. Keep…",
+          "vibeTags": [
+            "hard-exams",
+            "disorganized"
+          ],
+          "wouldTakeAgain": true
+        }
+      ],
+      "professor": {
+        "courseIds": [
+          "uiuc:ECE:110",
+          "uiuc:ECE:408",
+          "uiuc:ECE:549"
+        ],
+        "department": "Electrical and Computer Engineering",
+        "displayName": "Halvard Sørensen",
+        "firstName": "Halvard",
+        "id": "uiuc:p:halvard-sorensen",
+        "isFictional": true,
+        "kind": "reviewed",
+        "lastName": "Sørensen",
+        "nameKey": {
+          "first": "halvard",
+          "firstCompact": "halvard",
+          "firstInitial": "h",
+          "firstToken": "halvard",
+          "firstTokens": [
+            "halvard"
+          ],
+          "last": "sorensen",
+          "lastCompact": "sorensen",
+          "lastTokens": [
+            "sorensen"
+          ],
+          "middleInitials": [],
+          "raw": "Sørensen, Halvard"
+        },
+        "nameVariants": [
+          "Sørensen, H",
+          "Sørensen, Halvard",
+          "Sørensen, Halvard Jr"
+        ],
+        "reviewSourceId": "demo-p-042",
+        "schoolId": "uiuc",
+        "slug": "halvard-sorensen",
+        "subjects": [
+          "ECE"
+        ]
+      },
+      "rank": null,
+      "scores": {
+        "aRate": 0.606,
+        "composite": 48.2,
+        "confidence": "high",
+        "criticalCount": 8,
+        "deltaComparableN": 523,
+        "dfwRate": 0.078,
+        "difficultyMean": 2.636,
+        "gpaDelta": -0.079,
+        "gpaMean": 3.368,
+        "gradeRows": 10,
+        "positiveCount": 5,
+        "priorMean": 3.73,
+        "ratingRaw": 2.909,
+        "ratingShrunk": 3.061,
+        "reviewCount": 22,
+        "soleInstructor": false,
+        "studentsGraded": 955,
+        "wRate": 0.027,
+        "withdrawn": 27,
+        "wouldTakeAgainPct": 40.909,
+        "yearsActive": 3
+      },
+      "sectionsThisTerm": 2,
+      "summary": {
+        "bestFor": "Students who thrive in rigorous, exam‑heavy courses and can self‑manage study schedules.",
+        "confidence": "high",
+        "evidenceReviewIds": [
+          "uiuc:r:demo-r-000550",
+          "uiuc:r:demo-r-000549",
+          "uiuc:r:demo-r-000538",
+          "uiuc:r:demo-r-000541",
+          "uiuc:r:demo-r-000551",
+          "uiuc:r:demo-r-000537",
+          "uiuc:r:demo-r-000556",
+          "uiuc:r:demo-r-000552",
+          "uiuc:r:demo-r-000544",
+          "uiuc:r:demo-r-000535",
+          "uiuc:r:demo-r-000536",
+          "uiuc:r:demo-r-000554"
+        ],
+        "format": "lecture-heavy",
+        "generatedAt": "2026-09-06T22:30:57.663Z",
+        "gradingNote": "In 5 course(s) over 3 year(s), GPA averaged 3.37 (−0.08 vs. the same courses taught by others); 2.7% withdrew.",
+        "inputHash": "1e4aaa62d75a0136",
+        "model": "openai/gpt-oss-20b",
+        "professorId": "uiuc:p:halvard-sorensen",
+        "promptVersion": 1,
+        "provider": "Groq",
+        "reviewCount": 22,
+        "source": "openai-compatible",
+        "strengths": [
+          "Hard exams that test real understanding",
+          "Strong emphasis on homework as practice",
+          "Clear feedback on assignments"
+        ],
+        "teachingStyle": [
+          "lecture-heavy",
+          "discussion"
+        ],
+        "verdict": "With 22 reviews, the instructor is generally considered challenging but manageable for students who stay on top of work.",
+        "watchOuts": [
+          "Frequent schedule changes and disorganization",
+          "Hard exams with little partial credit",
+          "Limited office hour availability"
+        ],
+        "workload": "moderate"
+      },
+      "vibeTags": [
+        "hard-exams",
+        "disorganized"
+      ]
+    },
+    {
+      "badges": [],
+      "courses": [
+        {
+          "aRate": 0.457,
+          "baselineGpa": 3.262,
+          "baselineN": 919,
+          "buckets": {
+            "a": 130,
+            "aMinus": 99,
+            "aPlus": 103,
+            "b": 84,
+            "bMinus": 57,
+            "bPlus": 83,
+            "c": 46,
+            "cMinus": 28,
+            "cPlus": 31,
+            "d": 22,
+            "dMinus": 23,
+            "dPlus": 17,
+            "f": 4,
+            "w": 17
+          },
+          "courseId": "uiuc:ECE:205",
+          "delta": -0.171,
+          "dfwRate": 0.112,
+          "gpa": 3.091,
+          "gradeRows": 6,
+          "graded": 727,
+          "isHeadline": true,
+          "number": "205",
+          "subject": "ECE",
+          "title": "Electrical & Electronic Ckts",
+          "wRate": 0.023,
+          "withdrawn": 17
+        },
+        {
+          "aRate": 0.523,
+          "baselineGpa": 3.218,
+          "baselineN": 2768,
+          "buckets": {
+            "a": 340,
+            "aMinus": 307,
+            "aPlus": 114,
+            "b": 143,
+            "bMinus": 126,
+            "bPlus": 197,
+            "c": 25,
+            "cMinus": 83,
+            "cPlus": 63,
+            "d": 2,
+            "dMinus": 32,
+            "dPlus": 17,
+            "f": 7,
+            "w": 51
+          },
+          "courseId": "uiuc:ECE:385",
+          "delta": 0.041,
+          "dfwRate": 0.072,
+          "gpa": 3.259,
+          "gradeRows": 5,
+          "graded": 1456,
+          "isHeadline": true,
+          "number": "385",
+          "subject": "ECE",
+          "title": "Digital Systems Laboratory",
+          "wRate": 0.034,
+          "withdrawn": 51
+        },
+        {
+          "aRate": 0.427,
+          "baselineGpa": 3.213,
+          "baselineN": 191,
+          "buckets": {
+            "a": 33,
+            "aMinus": 24,
+            "aPlus": 13,
+            "b": 29,
+            "bMinus": 11,
+            "bPlus": 24,
+            "c": 10,
+            "cMinus": 0,
+            "cPlus": 11,
+            "d": 1,
+            "dMinus": 2,
+            "dPlus": 4,
+            "f": 2,
+            "w": 5
+          },
+          "courseId": "uiuc:ECE:385",
+          "delta": -0.032,
+          "dfwRate": 0.083,
+          "gpa": 3.181,
+          "gradeRows": 2,
+          "graded": 164,
+          "isHeadline": false,
+          "number": "385",
+          "subject": "ECE",
+          "title": "Digital Systems Laboratory",
+          "wRate": 0.03,
+          "withdrawn": 5
+        }
+      ],
+      "distribution": {
+        "a": 470,
+        "aMinus": 406,
+        "aPlus": 217,
+        "b": 227,
+        "bMinus": 183,
+        "bPlus": 280,
+        "c": 71,
+        "cMinus": 111,
+        "cPlus": 94,
+        "d": 24,
+        "dMinus": 55,
+        "dPlus": 34,
+        "f": 11,
+        "w": 68
+      },
+      "gpaByYear": [
+        {
+          "gpa": 3.226,
+          "n": 239,
+          "year": 2020
+        },
+        {
+          "gpa": 3.142,
+          "n": 608,
+          "year": 2021
+        },
+        {
+          "gpa": 3.152,
+          "n": 416,
+          "year": 2022
+        },
+        {
+          "gpa": 3.277,
+          "n": 499,
+          "year": 2023
+        },
+        {
+          "gpa": 3.24,
+          "n": 421,
+          "year": 2024
+        }
+      ],
+      "matchProvenance": [
+        {
+          "instructorRaw": "Ravindran, Kirabo",
+          "method": "unmatched",
+          "rows": 13,
+          "score": 0,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Ravindran, Kirabo",
+          "method": "exact",
+          "rows": 2,
+          "score": 1,
+          "source": "schedule"
+        }
+      ],
+      "openSections": [],
+      "positiveReviews": [],
+      "professor": {
+        "courseIds": [
+          "uiuc:ECE:205",
+          "uiuc:ECE:385"
+        ],
+        "department": null,
+        "displayName": "Kirabo Ravindran",
+        "firstName": "Kirabo",
+        "id": "uiuc:g:ravindran-kirabo",
+        "isFictional": true,
+        "kind": "grades-only",
+        "lastName": "Ravindran",
+        "nameKey": {
+          "first": "kirabo",
+          "firstCompact": "kirabo",
+          "firstInitial": "k",
+          "firstToken": "kirabo",
+          "firstTokens": [
+            "kirabo"
+          ],
+          "last": "ravindran",
+          "lastCompact": "ravindran",
+          "lastTokens": [
+            "ravindran"
+          ],
+          "middleInitials": [],
+          "raw": "Ravindran, Kirabo"
+        },
+        "nameVariants": [
+          "Ravindran, Kirabo"
+        ],
+        "reviewSourceId": null,
+        "schoolId": "uiuc",
+        "slug": "ravindran-kirabo",
+        "subjects": [
+          "ECE"
+        ]
+      },
+      "rank": null,
+      "scores": {
+        "aRate": 0.501,
+        "composite": null,
+        "confidence": "low",
+        "criticalCount": 0,
+        "deltaComparableN": 2183,
+        "dfwRate": 0.085,
+        "difficultyMean": null,
+        "gpaDelta": -0.03,
+        "gpaMean": 3.203,
+        "gradeRows": 11,
+        "positiveCount": 0,
+        "priorMean": 3.73,
+        "ratingRaw": null,
+        "ratingShrunk": null,
+        "reviewCount": 0,
+        "soleInstructor": false,
+        "studentsGraded": 2183,
+        "wRate": 0.03,
+        "withdrawn": 68,
+        "wouldTakeAgainPct": null,
+        "yearsActive": 5
+      },
+      "sectionsThisTerm": 2,
+      "summary": null,
+      "vibeTags": []
+    },
+    {
+      "badges": [
+        "open-now"
+      ],
+      "courses": [
+        {
+          "aRate": 0.471,
+          "baselineGpa": 3.248,
+          "baselineN": 251,
+          "buckets": {
+            "a": 13,
+            "aMinus": 13,
+            "aPlus": 23,
+            "b": 14,
+            "bMinus": 2,
+            "bPlus": 13,
+            "c": 6,
+            "cMinus": 7,
+            "cPlus": 3,
+            "d": 3,
+            "dMinus": 0,
+            "dPlus": 3,
+            "f": 4,
+            "w": 2
+          },
+          "courseId": "uiuc:ECE:385",
+          "delta": -0.171,
+          "dfwRate": 0.113,
+          "gpa": 3.077,
+          "gradeRows": 1,
+          "graded": 104,
+          "isHeadline": false,
+          "number": "385",
+          "subject": "ECE",
+          "title": "Digital Systems Laboratory",
+          "wRate": 0.019,
+          "withdrawn": 2
+        }
+      ],
+      "distribution": {
+        "a": 0,
+        "aMinus": 0,
+        "aPlus": 0,
+        "b": 0,
+        "bMinus": 0,
+        "bPlus": 0,
+        "c": 0,
+        "cMinus": 0,
+        "cPlus": 0,
+        "d": 0,
+        "dMinus": 0,
+        "dPlus": 0,
+        "f": 0,
+        "w": 0
+      },
+      "gpaByYear": [],
+      "matchProvenance": [
+        {
+          "instructorRaw": "Balogun, K",
+          "method": "unmatched",
+          "rows": 2,
+          "score": 0,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Balogun, K",
+          "method": "exact",
+          "rows": 1,
+          "score": 1,
+          "source": "schedule"
+        }
+      ],
+      "openSections": [
+        {
+          "courseId": "uiuc:ECE:445",
+          "crn": "35732",
+          "crossListedCourseIds": [],
+          "fetchedAt": "2026-09-03T14:12:00Z",
+          "id": "uiuc:s:2026-fa:35732",
+          "instructorsRaw": [
+            "Balogun, K"
+          ],
+          "isOpen": true,
+          "meetings": [
+            {
+              "building": "Silverthorne Pavilion",
+              "days": [
+                "T",
+                "R"
+              ],
+              "end": "10:50",
+              "room": "168",
+              "start": "09:30",
+              "type": "DIS"
+            }
+          ],
+          "professorIds": [
+            "uiuc:g:balogun-k"
+          ],
+          "schoolId": "uiuc",
+          "seatsKnown": true,
+          "sectionCode": "ADC",
+          "status": "open",
+          "term": "2026-fa",
+          "type": "DIS"
+        }
+      ],
+      "positiveReviews": [],
+      "professor": {
+        "courseIds": [
+          "uiuc:ECE:206",
+          "uiuc:ECE:385",
+          "uiuc:ECE:445"
+        ],
+        "department": null,
+        "displayName": "K. Balogun",
+        "firstName": "K",
+        "id": "uiuc:g:balogun-k",
+        "isFictional": true,
+        "kind": "grades-only",
+        "lastName": "Balogun",
+        "nameKey": {
+          "first": "k",
+          "firstCompact": "k",
+          "firstInitial": "k",
+          "firstToken": "k",
+          "firstTokens": [
+            "k"
+          ],
+          "last": "balogun",
+          "lastCompact": "balogun",
+          "lastTokens": [
+            "balogun"
+          ],
+          "middleInitials": [],
+          "raw": "Balogun, K"
+        },
+        "nameVariants": [
+          "Balogun, K"
+        ],
+        "reviewSourceId": null,
+        "schoolId": "uiuc",
+        "slug": "balogun-k",
+        "subjects": [
+          "ECE"
+        ]
+      },
+      "rank": null,
+      "scores": {
+        "aRate": null,
+        "composite": null,
+        "confidence": "low",
+        "criticalCount": 0,
+        "deltaComparableN": 0,
+        "dfwRate": null,
+        "difficultyMean": null,
+        "gpaDelta": null,
+        "gpaMean": null,
+        "gradeRows": 0,
+        "positiveCount": 0,
+        "priorMean": 3.73,
+        "ratingRaw": null,
+        "ratingShrunk": null,
+        "reviewCount": 0,
+        "soleInstructor": false,
+        "studentsGraded": 0,
+        "wRate": null,
+        "withdrawn": 0,
+        "wouldTakeAgainPct": null,
+        "yearsActive": 0
+      },
+      "sectionsThisTerm": 1,
+      "summary": null,
+      "vibeTags": []
+    },
+    {
+      "badges": [
+        "open-now"
+      ],
+      "courses": [
+        {
+          "aRate": 1,
+          "baselineGpa": 3.459,
+          "baselineN": 16,
+          "buckets": {
+            "a": 6,
+            "aMinus": 5,
+            "aPlus": 0,
+            "b": 0,
+            "bMinus": 0,
+            "bPlus": 0,
+            "c": 0,
+            "cMinus": 0,
+            "cPlus": 0,
+            "d": 0,
+            "dMinus": 0,
+            "dPlus": 0,
+            "f": 0,
+            "w": 0
+          },
+          "courseId": "uiuc:ECE:311",
+          "delta": 0.391,
+          "dfwRate": 0,
+          "gpa": 3.85,
+          "gradeRows": 1,
+          "graded": 11,
+          "isHeadline": false,
+          "number": "311",
+          "subject": "ECE",
+          "title": "Digital Signal Processing Lab",
+          "wRate": 0,
+          "withdrawn": 0
+        }
+      ],
+      "distribution": {
+        "a": 0,
+        "aMinus": 0,
+        "aPlus": 0,
+        "b": 0,
+        "bMinus": 0,
+        "bPlus": 0,
+        "c": 0,
+        "cMinus": 0,
+        "cPlus": 0,
+        "d": 0,
+        "dMinus": 0,
+        "dPlus": 0,
+        "f": 0,
+        "w": 0
+      },
+      "gpaByYear": [],
+      "matchProvenance": [
+        {
+          "instructorRaw": "Rasmussen, S",
+          "method": "unmatched",
+          "rows": 1,
+          "score": 0,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Rasmussen, S",
+          "method": "exact",
+          "rows": 1,
+          "score": 1,
+          "source": "schedule"
+        }
+      ],
+      "openSections": [
+        {
+          "courseId": "uiuc:ECE:310",
+          "crn": "53849",
+          "crossListedCourseIds": [],
+          "fetchedAt": "2026-09-03T14:12:00Z",
+          "id": "uiuc:s:2026-fa:53849",
+          "instructorsRaw": [
+            "Rasmussen, S"
+          ],
+          "isOpen": true,
+          "meetings": [
+            {
+              "building": "Ashcombe Center",
+              "days": [
+                "M",
+                "W",
+                "F"
+              ],
+              "end": "13:50",
+              "room": "419",
+              "start": "13:00",
+              "type": "DIS"
+            }
+          ],
+          "professorIds": [
+            "uiuc:g:rasmussen-s"
+          ],
+          "schoolId": "uiuc",
+          "seatsKnown": true,
+          "sectionCode": "ADB",
+          "status": "open",
+          "term": "2026-fa",
+          "type": "DIS"
+        }
+      ],
+      "positiveReviews": [],
+      "professor": {
+        "courseIds": [
+          "uiuc:ECE:310",
+          "uiuc:ECE:311"
+        ],
+        "department": null,
+        "displayName": "S. Rasmussen",
+        "firstName": "S",
+        "id": "uiuc:g:rasmussen-s",
+        "isFictional": true,
+        "kind": "grades-only",
+        "lastName": "Rasmussen",
+        "nameKey": {
+          "first": "s",
+          "firstCompact": "s",
+          "firstInitial": "s",
+          "firstToken": "s",
+          "firstTokens": [
+            "s"
+          ],
+          "last": "rasmussen",
+          "lastCompact": "rasmussen",
+          "lastTokens": [
+            "rasmussen"
+          ],
+          "middleInitials": [],
+          "raw": "Rasmussen, S"
+        },
+        "nameVariants": [
+          "Rasmussen, S"
+        ],
+        "reviewSourceId": null,
+        "schoolId": "uiuc",
+        "slug": "rasmussen-s",
+        "subjects": [
+          "ECE"
+        ]
+      },
+      "rank": null,
+      "scores": {
+        "aRate": null,
+        "composite": null,
+        "confidence": "low",
+        "criticalCount": 0,
+        "deltaComparableN": 0,
+        "dfwRate": null,
+        "difficultyMean": null,
+        "gpaDelta": null,
+        "gpaMean": null,
+        "gradeRows": 0,
+        "positiveCount": 0,
+        "priorMean": 3.73,
+        "ratingRaw": null,
+        "ratingShrunk": null,
+        "reviewCount": 0,
+        "soleInstructor": false,
+        "studentsGraded": 0,
+        "wRate": null,
+        "withdrawn": 0,
+        "wouldTakeAgainPct": null,
+        "yearsActive": 0
+      },
+      "sectionsThisTerm": 1,
+      "summary": null,
+      "vibeTags": []
+    }
+  ],
+  "school": {
+    "currentTerm": "2026-fa",
+    "id": "uiuc",
+    "name": "University of Illinois Urbana-Champaign",
+    "seatStatusAvailable": true,
+    "shortName": "UIUC",
+    "sources": {
+      "grades": "demo-grades",
+      "reviews": "demo-reviews",
+      "schedule": "demo-schedule"
+    },
+    "timezone": "America/Chicago"
+  },
+  "scope": {
+    "kind": "subject"
+  },
+  "seatsFetchedAt": "2026-09-03T14:12:00Z",
+  "sparklineRange": [
+    2.4,
+    3.9
+  ],
+  "subject": {
+    "code": "ECE",
+    "courseCount": 20,
+    "name": "Electrical and Computer Engineering",
+    "openSectionCount": 18,
+    "professorCount": 18,
+    "schoolId": "uiuc"
+  },
+  "subjectGpaMean": 3.057,
+  "subjectWRate": 0.028,
+  "term": "2026-fa",
+  "termFallback": false
+}

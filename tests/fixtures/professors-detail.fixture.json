@@ -1,0 +1,1723 @@
+{
+  "achterberg-n": {
+    "badges": [],
+    "courses": [
+      {
+        "aRate": 0.678,
+        "baselineGpa": 3.337,
+        "baselineN": 960,
+        "buckets": {
+          "a": 294,
+          "aMinus": 52,
+          "aPlus": 81,
+          "b": 58,
+          "bMinus": 11,
+          "bPlus": 16,
+          "c": 48,
+          "cMinus": 10,
+          "cPlus": 13,
+          "d": 16,
+          "dMinus": 2,
+          "dPlus": 2,
+          "f": 27,
+          "w": 33
+        },
+        "courseId": "uiuc:CS:233",
+        "delta": 0.013,
+        "dfwRate": 0.121,
+        "gpa": 3.35,
+        "gradeRows": 3,
+        "graded": 630,
+        "isHeadline": true,
+        "number": "233",
+        "subject": "CS",
+        "title": "Computer Architecture",
+        "wRate": 0.05,
+        "withdrawn": 33
+      }
+    ],
+    "distribution": {
+      "a": 294,
+      "aMinus": 52,
+      "aPlus": 81,
+      "b": 58,
+      "bMinus": 11,
+      "bPlus": 16,
+      "c": 48,
+      "cMinus": 10,
+      "cPlus": 13,
+      "d": 16,
+      "dMinus": 2,
+      "dPlus": 2,
+      "f": 27,
+      "w": 33
+    },
+    "gpaByYear": [
+      {
+        "gpa": 3.345,
+        "n": 210,
+        "year": 2022
+      },
+      {
+        "gpa": 3.281,
+        "n": 210,
+        "year": 2023
+      },
+      {
+        "gpa": 3.424,
+        "n": 210,
+        "year": 2024
+      }
+    ],
+    "matchProvenance": [
+      {
+        "instructorRaw": "Achterberg, N",
+        "method": "unmatched",
+        "rows": 3,
+        "score": 0,
+        "source": "grades"
+      },
+      {
+        "instructorRaw": "Achterberg, N",
+        "method": "initial",
+        "rows": 1,
+        "score": 0.85,
+        "source": "schedule"
+      }
+    ],
+    "professor": {
+      "courseIds": [
+        "uiuc:CS:233"
+      ],
+      "department": null,
+      "displayName": "N. Achterberg",
+      "firstName": "N.",
+      "id": "uiuc:g:achterberg-n",
+      "isFictional": true,
+      "kind": "grades-only",
+      "lastName": "Achterberg",
+      "nameKey": {
+        "first": "n",
+        "firstCompact": "n",
+        "firstInitial": "n",
+        "firstToken": "n",
+        "firstTokens": [
+          "n"
+        ],
+        "last": "achterberg",
+        "lastCompact": "achterberg",
+        "lastTokens": [
+          "achterberg"
+        ],
+        "middleInitials": [],
+        "raw": "Achterberg, N"
+      },
+      "nameVariants": [
+        "Achterberg, N"
+      ],
+      "reviewSourceId": null,
+      "schoolId": "uiuc",
+      "slug": "achterberg-n",
+      "subjects": [
+        "CS"
+      ]
+    },
+    "rankBySubject": [
+      {
+        "rank": null,
+        "subject": "CS"
+      }
+    ],
+    "reviews": [],
+    "scores": {
+      "aRate": 0.678,
+      "composite": null,
+      "confidence": "low",
+      "criticalCount": 0,
+      "deltaComparableN": 630,
+      "dfwRate": 0.121,
+      "difficultyMean": null,
+      "gpaDelta": 0.013,
+      "gpaMean": 3.35,
+      "gradeRows": 3,
+      "positiveCount": 0,
+      "priorMean": 4.121,
+      "ratingRaw": null,
+      "ratingShrunk": null,
+      "reviewCount": 0,
+      "soleInstructor": false,
+      "studentsGraded": 630,
+      "wRate": 0.05,
+      "withdrawn": 33,
+      "wouldTakeAgainPct": null,
+      "yearsActive": 3
+    },
+    "sections": [
+      {
+        "courseId": "uiuc:CS:233",
+        "crn": "30401",
+        "crossListedCourseIds": [],
+        "fetchedAt": "2026-09-03T14:12:00Z",
+        "id": "uiuc:s:2026-fa:30401",
+        "instructorsRaw": [
+          "Achterberg, N"
+        ],
+        "isOpen": false,
+        "meetings": [
+          {
+            "building": null,
+            "days": [],
+            "end": null,
+            "room": null,
+            "start": null,
+            "type": "ONL"
+          }
+        ],
+        "professorIds": [
+          "uiuc:g:achterberg-n"
+        ],
+        "schoolId": "uiuc",
+        "seatsKnown": true,
+        "sectionCode": "DL1",
+        "status": "closed",
+        "term": "2026-fa",
+        "type": "ONL"
+      }
+    ],
+    "summary": null,
+    "vibeTags": []
+  },
+  "adaeze-okonkwo": {
+    "badges": [
+      "open-now",
+      "low-withdrawal"
+    ],
+    "courses": [
+      {
+        "aRate": 0.598,
+        "baselineGpa": 3.254,
+        "baselineN": 1760,
+        "buckets": {
+          "a": 309,
+          "aMinus": 249,
+          "aPlus": 28,
+          "b": 74,
+          "bMinus": 63,
+          "bPlus": 73,
+          "c": 41,
+          "cMinus": 30,
+          "cPlus": 27,
+          "d": 18,
+          "dMinus": 13,
+          "dPlus": 12,
+          "f": 43,
+          "w": 10
+        },
+        "courseId": "uiuc:CS:225",
+        "delta": -0.058,
+        "dfwRate": 0.097,
+        "gpa": 3.197,
+        "gradeRows": 5,
+        "graded": 980,
+        "isHeadline": true,
+        "number": "225",
+        "subject": "CS",
+        "title": "Data Structures",
+        "wRate": 0.01,
+        "withdrawn": 10
+      },
+      {
+        "aRate": 0.29,
+        "baselineGpa": 2.872,
+        "baselineN": 540,
+        "buckets": {
+          "a": 31,
+          "aMinus": 45,
+          "aPlus": 11,
+          "b": 39,
+          "bMinus": 22,
+          "bPlus": 38,
+          "c": 38,
+          "cMinus": 22,
+          "cPlus": 17,
+          "d": 6,
+          "dMinus": 5,
+          "dPlus": 9,
+          "f": 17,
+          "w": 4
+        },
+        "courseId": "uiuc:CS:374",
+        "delta": -0.175,
+        "dfwRate": 0.135,
+        "gpa": 2.697,
+        "gradeRows": 2,
+        "graded": 300,
+        "isHeadline": true,
+        "number": "374",
+        "subject": "CS",
+        "title": "Intro to Algs & Models of Comp",
+        "wRate": 0.013,
+        "withdrawn": 4
+      },
+      {
+        "aRate": 0.65,
+        "baselineGpa": null,
+        "baselineN": 0,
+        "buckets": {
+          "a": 21,
+          "aMinus": 16,
+          "aPlus": 2,
+          "b": 2,
+          "bMinus": 1,
+          "bPlus": 6,
+          "c": 4,
+          "cMinus": 1,
+          "cPlus": 3,
+          "d": 2,
+          "dMinus": 1,
+          "dPlus": 1,
+          "f": 0,
+          "w": 1
+        },
+        "courseId": "uiuc:CS:225",
+        "delta": null,
+        "dfwRate": 0.082,
+        "gpa": 3.334,
+        "gradeRows": 1,
+        "graded": 60,
+        "isHeadline": false,
+        "number": "225",
+        "subject": "CS",
+        "title": "Data Structures",
+        "wRate": 0.016,
+        "withdrawn": 1
+      }
+    ],
+    "distribution": {
+      "a": 340,
+      "aMinus": 294,
+      "aPlus": 39,
+      "b": 113,
+      "bMinus": 85,
+      "bPlus": 111,
+      "c": 79,
+      "cMinus": 52,
+      "cPlus": 44,
+      "d": 24,
+      "dMinus": 18,
+      "dPlus": 21,
+      "f": 60,
+      "w": 14
+    },
+    "gpaByYear": [
+      {
+        "gpa": 3.143,
+        "n": 190,
+        "year": 2021
+      },
+      {
+        "gpa": 3,
+        "n": 340,
+        "year": 2022
+      },
+      {
+        "gpa": 3.185,
+        "n": 190,
+        "year": 2023
+      },
+      {
+        "gpa": 2.986,
+        "n": 355,
+        "year": 2024
+      },
+      {
+        "gpa": 3.219,
+        "n": 205,
+        "year": 2025
+      }
+    ],
+    "matchProvenance": [
+      {
+        "instructorRaw": "Okonkwo, A",
+        "method": "initial",
+        "rows": 2,
+        "score": 0.85,
+        "source": "grades"
+      },
+      {
+        "instructorRaw": "Okonkwo, Adaeze",
+        "method": "exact",
+        "rows": 6,
+        "score": 1,
+        "source": "grades"
+      },
+      {
+        "instructorRaw": "Okonkwo, A",
+        "method": "initial",
+        "rows": 3,
+        "score": 0.85,
+        "source": "schedule"
+      }
+    ],
+    "professor": {
+      "courseIds": [
+        "uiuc:CS:225",
+        "uiuc:CS:374"
+      ],
+      "department": "Computer Science",
+      "displayName": "Adaeze Okonkwo",
+      "firstName": "Adaeze",
+      "id": "uiuc:p:adaeze-okonkwo",
+      "isFictional": true,
+      "kind": "reviewed",
+      "lastName": "Okonkwo",
+      "nameKey": {
+        "first": "adaeze",
+        "firstCompact": "adaeze",
+        "firstInitial": "a",
+        "firstToken": "adaeze",
+        "firstTokens": [
+          "adaeze"
+        ],
+        "last": "okonkwo",
+        "lastCompact": "okonkwo",
+        "lastTokens": [
+          "okonkwo"
+        ],
+        "middleInitials": [],
+        "raw": "Okonkwo, Adaeze"
+      },
+      "nameVariants": [
+        "Okonkwo, A",
+        "Okonkwo, Adaeze"
+      ],
+      "reviewSourceId": "demo-adaeze-okonkwo",
+      "schoolId": "uiuc",
+      "slug": "adaeze-okonkwo",
+      "subjects": [
+        "CS"
+      ]
+    },
+    "rankBySubject": [
+      {
+        "rank": 1,
+        "subject": "CS"
+      }
+    ],
+    "reviews": [
+      {
+        "courseId": "uiuc:CS:374",
+        "courseLabel": "CS 374",
+        "date": "2026-12-26",
+        "difficulty": 5,
+        "gradeReceived": "C+",
+        "helpfulVotes": 3,
+        "id": "uiuc:r:d-00020",
+        "professorId": "uiuc:p:adaeze-okonkwo",
+        "quality": 4,
+        "sentiment": 0.475,
+        "sourceTags": [
+          "Lots of homework",
+          "Test heavy",
+          "Skip class? You won't pass."
+        ],
+        "text": "Fair grading with a transparent rubric, and partial credit is generous. Lectures are incredibly clear and well organized; every topic builds on the last. Do not skip the discussion section.",
+        "vibeTags": [
+          "clear-lectures",
+          "fair-grading"
+        ],
+        "wouldTakeAgain": true
+      },
+      {
+        "courseId": null,
+        "courseLabel": null,
+        "date": "2026-12-23",
+        "difficulty": 3,
+        "gradeReceived": "B-",
+        "helpfulVotes": 2,
+        "id": "uiuc:r:d-00008",
+        "professorId": "uiuc:p:adaeze-okonkwo",
+        "quality": 5,
+        "sentiment": 0.75,
+        "sourceTags": [
+          "Gives good feedback",
+          "Clear grading criteria"
+        ],
+        "text": "Weekly problem sets are heavy but they are exactly what the exams test. Engaging lecturer who keeps a 200-person room awake at 8 AM. Do every practice exam.",
+        "vibeTags": [
+          "engaging",
+          "heavy-homework"
+        ],
+        "wouldTakeAgain": false
+      },
+      {
+        "courseId": "uiuc:CS:374",
+        "courseLabel": "CS 374",
+        "date": "2026-08-24",
+        "difficulty": 4,
+        "gradeReceived": "B",
+        "helpfulVotes": 7,
+        "id": "uiuc:r:d-00012",
+        "professorId": "uiuc:p:adaeze-okonkwo",
+        "quality": 5,
+        "sentiment": 1,
+        "sourceTags": [
+          "Caring"
+        ],
+        "text": "Recommend taking this section even if the time slot is inconvenient. Best instructor I have had in this department; would take again in a heartbeat. Do every practice exam.",
+        "vibeTags": [],
+        "wouldTakeAgain": true
+      },
+      {
+        "courseId": "uiuc:CS:374",
+        "courseLabel": "CS 374",
+        "date": "2026-04-25",
+        "difficulty": 4,
+        "gradeReceived": null,
+        "helpfulVotes": 4,
+        "id": "uiuc:r:d-00016",
+        "professorId": "uiuc:p:adaeze-okonkwo",
+        "quality": 4,
+        "sentiment": 0.55,
+        "sourceTags": [
+          "Test heavy"
+        ],
+        "text": "Fair grading with a transparent rubric, and partial credit is generous. Genuinely cares whether students understand, and office hours are worth attending. Read the notes before lecture.",
+        "vibeTags": [
+          "caring",
+          "fair-grading"
+        ],
+        "wouldTakeAgain": true
+      },
+      {
+        "courseId": "uiuc:CS:374",
+        "courseLabel": "CS 374",
+        "date": "2026-04-22",
+        "difficulty": 4,
+        "gradeReceived": "B-",
+        "helpfulVotes": 7,
+        "id": "uiuc:r:d-00004",
+        "professorId": "uiuc:p:adaeze-okonkwo",
+        "quality": 5,
+        "sentiment": 0.767,
+        "sourceTags": [
+          "Test heavy",
+          "Clear grading criteria"
+        ],
+        "text": "I learned more in this class than in the rest of the semester combined. Curves generously at the end, so do not panic about the midterm average. Go to office hours.",
+        "vibeTags": [
+          "curves-generously"
+        ],
+        "wouldTakeAgain": true
+      },
+      {
+        "courseId": "uiuc:CS:225",
+        "courseLabel": "CS 225",
+        "date": "2025-11-18",
+        "difficulty": 3,
+        "gradeReceived": "B",
+        "helpfulVotes": 3,
+        "id": "uiuc:r:d-00015",
+        "professorId": "uiuc:p:adaeze-okonkwo",
+        "quality": 5,
+        "sentiment": 0.78,
+        "sourceTags": [
+          "Clear grading criteria",
+          "Test heavy"
+        ],
+        "text": "Hard exams, but they reward understanding rather than memorization. Fair grading with a transparent rubric, and partial credit is generous. Do not skip the discussion section.",
+        "vibeTags": [
+          "fair-grading",
+          "hard-exams"
+        ],
+        "wouldTakeAgain": true
+      },
+      {
+        "courseId": "uiuc:CS:225",
+        "courseLabel": "CS 225",
+        "date": "2025-11-15",
+        "difficulty": 5,
+        "gradeReceived": "A",
+        "helpfulVotes": 1,
+        "id": "uiuc:r:d-00003",
+        "professorId": "uiuc:p:adaeze-okonkwo",
+        "quality": 5,
+        "sentiment": 0.75,
+        "sourceTags": [
+          "Amazing lectures",
+          "Inspirational",
+          "Skip class? You won't pass."
+        ],
+        "text": "Explains hard concepts in a way that finally clicked for me. Lectures are incredibly clear and well organized; every topic builds on the last. Do every practice exam.",
+        "vibeTags": [
+          "clear-lectures"
+        ],
+        "wouldTakeAgain": true
+      },
+      {
+        "courseId": "uiuc:CS:225",
+        "courseLabel": "CS 225",
+        "date": "2025-07-19",
+        "difficulty": 3,
+        "gradeReceived": "A",
+        "helpfulVotes": 6,
+        "id": "uiuc:r:d-00019",
+        "professorId": "uiuc:p:adaeze-okonkwo",
+        "quality": 4,
+        "sentiment": 0.6,
+        "sourceTags": [
+          "Inspirational",
+          "Get ready to read",
+          "Test heavy"
+        ],
+        "text": "Engaging lecturer who keeps a 200-person room awake at 8 AM. Recommend taking this section even if the time slot is inconvenient. Start the assignments early.",
+        "vibeTags": [
+          "engaging"
+        ],
+        "wouldTakeAgain": true
+      },
+      {
+        "courseId": "uiuc:CS:225",
+        "courseLabel": "CS 225",
+        "date": "2025-07-16",
+        "difficulty": 4,
+        "gradeReceived": "B+",
+        "helpfulVotes": 5,
+        "id": "uiuc:r:d-00007",
+        "professorId": "uiuc:p:adaeze-okonkwo",
+        "quality": 5,
+        "sentiment": 0.8,
+        "sourceTags": [
+          "Gives good feedback",
+          "Clear grading criteria"
+        ],
+        "text": "Weekly problem sets are heavy but they are exactly what the exams test. Best instructor I have had in this department; would take again in a heartbeat. Go to office hours.",
+        "vibeTags": [
+          "heavy-homework"
+        ],
+        "wouldTakeAgain": true
+      },
+      {
+        "courseId": "uiuc:CS:225",
+        "courseLabel": "CS 225",
+        "date": "2025-03-20",
+        "difficulty": 5,
+        "gradeReceived": null,
+        "helpfulVotes": 3,
+        "id": "uiuc:r:d-00023",
+        "professorId": "uiuc:p:adaeze-okonkwo",
+        "quality": 3,
+        "sentiment": -0.1,
+        "sourceTags": [
+          "Tough grader",
+          "Clear grading criteria"
+        ],
+        "text": "Decent explanations, but the slides could use more worked examples. Grading felt fair; exams were about as hard as expected. Do every practice exam.",
+        "vibeTags": [
+          "fair-grading"
+        ],
+        "wouldTakeAgain": true
+      },
+      {
+        "courseId": "uiuc:CS:225",
+        "courseLabel": "CS 225",
+        "date": "2025-03-17",
+        "difficulty": 5,
+        "gradeReceived": "C+",
+        "helpfulVotes": 0,
+        "id": "uiuc:r:d-00011",
+        "professorId": "uiuc:p:adaeze-okonkwo",
+        "quality": 5,
+        "sentiment": 0.76,
+        "sourceTags": [
+          "Respected",
+          "Skip class? You won't pass.",
+          "Inspirational"
+        ],
+        "text": "Curves generously at the end, so do not panic about the midterm average. Fair grading with a transparent rubric, and partial credit is generous. Do not skip the discussion section.",
+        "vibeTags": [
+          "fair-grading",
+          "curves-generously"
+        ],
+        "wouldTakeAgain": true
+      },
+      {
+        "courseId": "uiuc:CS:374",
+        "courseLabel": "CS 374",
+        "date": "2024-10-13",
+        "difficulty": null,
+        "gradeReceived": "B+",
+        "helpfulVotes": 4,
+        "id": "uiuc:r:d-00022",
+        "professorId": "uiuc:p:adaeze-okonkwo",
+        "quality": 3,
+        "sentiment": 0,
+        "sourceTags": [
+          "Get ready to read",
+          "Tough grader"
+        ],
+        "text": "You must read the textbook because lectures skip some derivations. Solid course overall, though the pace is fast and you have to keep up. Start the assignments early.",
+        "vibeTags": [
+          "fast-paced",
+          "must-read-textbook"
+        ],
+        "wouldTakeAgain": false
+      },
+      {
+        "courseId": "uiuc:CS:374",
+        "courseLabel": "CS 374",
+        "date": "2024-10-10",
+        "difficulty": 4,
+        "gradeReceived": "B",
+        "helpfulVotes": 3,
+        "id": "uiuc:r:d-00010",
+        "professorId": "uiuc:p:adaeze-okonkwo",
+        "quality": 5,
+        "sentiment": 0.95,
+        "sourceTags": [
+          "Skip class? You won't pass."
+        ],
+        "text": "Recommend taking this section even if the time slot is inconvenient. Engaging lecturer who keeps a 200-person room awake at 8 AM. Read the notes before lecture.",
+        "vibeTags": [
+          "engaging"
+        ],
+        "wouldTakeAgain": true
+      },
+      {
+        "courseId": "uiuc:CS:374",
+        "courseLabel": "CS 374",
+        "date": "2024-06-11",
+        "difficulty": 5,
+        "gradeReceived": "B+",
+        "helpfulVotes": 6,
+        "id": "uiuc:r:d-00014",
+        "professorId": "uiuc:p:adaeze-okonkwo",
+        "quality": 5,
+        "sentiment": 0.667,
+        "sourceTags": [
+          "Tough grader"
+        ],
+        "text": "Explains hard concepts in a way that finally clicked for me. Curves generously at the end, so do not panic about the midterm average. Read the notes before lecture.",
+        "vibeTags": [
+          "clear-lectures",
+          "curves-generously"
+        ],
+        "wouldTakeAgain": true
+      },
+      {
+        "courseId": "uiuc:CS:374",
+        "courseLabel": "CS 374",
+        "date": "2024-06-08",
+        "difficulty": 4,
+        "gradeReceived": "C+",
+        "helpfulVotes": 6,
+        "id": "uiuc:r:d-00002",
+        "professorId": "uiuc:p:adaeze-okonkwo",
+        "quality": 5,
+        "sentiment": 0.9,
+        "sourceTags": [
+          "Caring",
+          "Get ready to read",
+          "Lots of homework"
+        ],
+        "text": "Genuinely cares whether students understand, and office hours are worth attending. Lectures are incredibly clear and well organized; every topic builds on the last. Read the notes before lecture.",
+        "vibeTags": [
+          "clear-lectures",
+          "caring"
+        ],
+        "wouldTakeAgain": true
+      },
+      {
+        "courseId": "uiuc:CS:374",
+        "courseLabel": "CS 374",
+        "date": "2024-02-12",
+        "difficulty": 4,
+        "gradeReceived": "C+",
+        "helpfulVotes": 6,
+        "id": "uiuc:r:d-00018",
+        "professorId": "uiuc:p:adaeze-okonkwo",
+        "quality": 4,
+        "sentiment": 0.35,
+        "sourceTags": [
+          "Get ready to read"
+        ],
+        "text": "Hard exams, but they reward understanding rather than memorization. Explains hard concepts in a way that finally clicked for me. Go to office hours.",
+        "vibeTags": [
+          "clear-lectures",
+          "hard-exams"
+        ],
+        "wouldTakeAgain": true
+      },
+      {
+        "courseId": "uiuc:CS:374",
+        "courseLabel": "CS 374",
+        "date": "2024-02-09",
+        "difficulty": 4,
+        "gradeReceived": "C+",
+        "helpfulVotes": 4,
+        "id": "uiuc:r:d-00006",
+        "professorId": "uiuc:p:adaeze-okonkwo",
+        "quality": 5,
+        "sentiment": 0.88,
+        "sourceTags": [
+          "Skip class? You won't pass.",
+          "Amazing lectures"
+        ],
+        "text": "The posted notes are excellent — great notes that made exam review painless. Hard exams, but they reward understanding rather than memorization. Read the notes before lecture.",
+        "vibeTags": [
+          "great-notes",
+          "hard-exams"
+        ],
+        "wouldTakeAgain": true
+      },
+      {
+        "courseId": "uiuc:CS:225",
+        "courseLabel": "CS 225",
+        "date": "2023-09-05",
+        "difficulty": 4,
+        "gradeReceived": "A",
+        "helpfulVotes": 4,
+        "id": "uiuc:r:d-00017",
+        "professorId": "uiuc:p:adaeze-okonkwo",
+        "quality": 4,
+        "sentiment": 0.59,
+        "sourceTags": [
+          "Test heavy",
+          "Tough grader",
+          "Respected"
+        ],
+        "text": "Fair grading with a transparent rubric, and partial credit is generous. The posted notes are excellent — great notes that made exam review painless. Form a study group.",
+        "vibeTags": [
+          "fair-grading",
+          "great-notes"
+        ],
+        "wouldTakeAgain": true
+      },
+      {
+        "courseId": "uiuc:CS:225",
+        "courseLabel": "CS 225",
+        "date": "2023-09-02",
+        "difficulty": 4,
+        "gradeReceived": "B-",
+        "helpfulVotes": 5,
+        "id": "uiuc:r:d-00005",
+        "professorId": "uiuc:p:adaeze-okonkwo",
+        "quality": 5,
+        "sentiment": 0.82,
+        "sourceTags": [
+          "Lots of homework",
+          "Test heavy",
+          "Caring"
+        ],
+        "text": "Explains hard concepts in a way that finally clicked for me. The posted notes are excellent — great notes that made exam review painless. Do not skip the discussion section.",
+        "vibeTags": [
+          "clear-lectures",
+          "great-notes"
+        ],
+        "wouldTakeAgain": true
+      },
+      {
+        "courseId": null,
+        "courseLabel": null,
+        "date": "2023-05-06",
+        "difficulty": 4,
+        "gradeReceived": "B+",
+        "helpfulVotes": 1,
+        "id": "uiuc:r:d-00021",
+        "professorId": "uiuc:p:adaeze-okonkwo",
+        "quality": 4,
+        "sentiment": 0.6,
+        "sourceTags": [
+          "Lots of homework",
+          "Clear grading criteria",
+          "Skip class? You won't pass."
+        ],
+        "text": "Best instructor I have had in this department; would take again in a heartbeat. Lectures are incredibly clear and well organized; every topic builds on the last. Start the assignments early.",
+        "vibeTags": [
+          "clear-lectures"
+        ],
+        "wouldTakeAgain": true
+      },
+      {
+        "courseId": "uiuc:CS:225",
+        "courseLabel": "CS 225",
+        "date": "2023-05-03",
+        "difficulty": 4,
+        "gradeReceived": "A",
+        "helpfulVotes": 5,
+        "id": "uiuc:r:d-00009",
+        "professorId": "uiuc:p:adaeze-okonkwo",
+        "quality": 5,
+        "sentiment": 0.8,
+        "sourceTags": [
+          "Test heavy",
+          "Clear grading criteria",
+          "Lots of homework"
+        ],
+        "text": "Weekly problem sets are heavy but they are exactly what the exams test. Fair grading with a transparent rubric, and partial credit is generous. Start the assignments early.",
+        "vibeTags": [
+          "fair-grading",
+          "heavy-homework"
+        ],
+        "wouldTakeAgain": true
+      },
+      {
+        "courseId": "uiuc:CS:225",
+        "courseLabel": "CS 225",
+        "date": "2023-01-04",
+        "difficulty": 5,
+        "gradeReceived": "A",
+        "helpfulVotes": 5,
+        "id": "uiuc:r:d-00013",
+        "professorId": "uiuc:p:adaeze-okonkwo",
+        "quality": 5,
+        "sentiment": 0.8,
+        "sourceTags": [
+          "Tough grader"
+        ],
+        "text": "Engaging lecturer who keeps a 200-person room awake at 8 AM. I learned more in this class than in the rest of the semester combined. Do not skip the discussion section.",
+        "vibeTags": [
+          "engaging"
+        ],
+        "wouldTakeAgain": true
+      },
+      {
+        "courseId": "uiuc:CS:225",
+        "courseLabel": "CS 225",
+        "date": "2023-01-01",
+        "difficulty": 5,
+        "gradeReceived": "A",
+        "helpfulVotes": 3,
+        "id": "uiuc:r:d-00001",
+        "professorId": "uiuc:p:adaeze-okonkwo",
+        "quality": 5,
+        "sentiment": 0.8,
+        "sourceTags": [
+          "Respected",
+          "Clear grading criteria"
+        ],
+        "text": "Weekly problem sets are heavy but they are exactly what the exams test. Best instructor I have had in this department; would take again in a heartbeat. Form a study group.",
+        "vibeTags": [
+          "heavy-homework"
+        ],
+        "wouldTakeAgain": true
+      }
+    ],
+    "scores": {
+      "aRate": 0.526,
+      "composite": 77.1,
+      "confidence": "high",
+      "criticalCount": 0,
+      "deltaComparableN": 1280,
+      "dfwRate": 0.106,
+      "difficultyMean": 4.182,
+      "gpaDelta": -0.085,
+      "gpaMean": 3.08,
+      "gradeRows": 7,
+      "positiveCount": 21,
+      "priorMean": 4.121,
+      "ratingRaw": 4.565,
+      "ratingShrunk": 4.486,
+      "reviewCount": 23,
+      "soleInstructor": false,
+      "studentsGraded": 1280,
+      "wRate": 0.011,
+      "withdrawn": 14,
+      "wouldTakeAgainPct": 91.304,
+      "yearsActive": 5
+    },
+    "sections": [
+      {
+        "courseId": "uiuc:CS:225",
+        "crn": "30101",
+        "crossListedCourseIds": [],
+        "fetchedAt": "2026-09-03T14:12:00Z",
+        "id": "uiuc:s:2026-fa:30101",
+        "instructorsRaw": [
+          "Okonkwo, A"
+        ],
+        "isOpen": true,
+        "meetings": [
+          {
+            "building": "Harrow Hall",
+            "days": [
+              "M",
+              "W",
+              "F"
+            ],
+            "end": "11:50",
+            "room": "210",
+            "start": "11:00",
+            "type": "LEC"
+          }
+        ],
+        "professorIds": [
+          "uiuc:p:adaeze-okonkwo"
+        ],
+        "schoolId": "uiuc",
+        "seatsKnown": true,
+        "sectionCode": "AL1",
+        "status": "open",
+        "term": "2026-fa",
+        "type": "LEC"
+      },
+      {
+        "courseId": "uiuc:CS:225",
+        "crn": "30102",
+        "crossListedCourseIds": [],
+        "fetchedAt": "2026-09-03T14:12:00Z",
+        "id": "uiuc:s:2026-fa:30102",
+        "instructorsRaw": [
+          "Okonkwo, A"
+        ],
+        "isOpen": false,
+        "meetings": [
+          {
+            "building": "Harrow Hall",
+            "days": [
+              "T",
+              "R"
+            ],
+            "end": "10:50",
+            "room": "210",
+            "start": "09:30",
+            "type": "LEC"
+          }
+        ],
+        "professorIds": [
+          "uiuc:p:adaeze-okonkwo"
+        ],
+        "schoolId": "uiuc",
+        "seatsKnown": true,
+        "sectionCode": "AL2",
+        "status": "waitlist",
+        "term": "2026-fa",
+        "type": "LEC"
+      },
+      {
+        "courseId": "uiuc:CS:374",
+        "crn": "30201",
+        "crossListedCourseIds": [],
+        "fetchedAt": "2026-09-03T14:12:00Z",
+        "id": "uiuc:s:2026-fa:30201",
+        "instructorsRaw": [
+          "Okonkwo, A"
+        ],
+        "isOpen": false,
+        "meetings": [
+          {
+            "building": "Whitlock Center",
+            "days": [
+              "M",
+              "W"
+            ],
+            "end": "15:20",
+            "room": "140",
+            "start": "14:00",
+            "type": "LCD"
+          }
+        ],
+        "professorIds": [
+          "uiuc:p:adaeze-okonkwo"
+        ],
+        "schoolId": "uiuc",
+        "seatsKnown": true,
+        "sectionCode": "BL1",
+        "status": "closed",
+        "term": "2026-fa",
+        "type": "LCD"
+      }
+    ],
+    "summary": {
+      "bestFor": "Students who want to actually learn data structures and are willing to put in the hours.",
+      "confidence": "high",
+      "evidenceReviewIds": [
+        "uiuc:r:d-00020",
+        "uiuc:r:d-00008",
+        "uiuc:r:d-00012",
+        "uiuc:r:d-00016",
+        "uiuc:r:d-00004",
+        "uiuc:r:d-00015"
+      ],
+      "format": "lecture-heavy",
+      "generatedAt": "2026-09-03T15:04:00Z",
+      "gradingNote": "In 2 course(s) over 5 year(s), GPA averaged 3.08 (−0.09 vs. the same courses taught by others); 1.1% withdrew.",
+      "inputHash": "0ff28de1bb40cb43",
+      "model": "claude-opus-5",
+      "professorId": "uiuc:p:adaeze-okonkwo",
+      "promptVersion": 1,
+      "reviewCount": 23,
+      "source": "claude",
+      "strengths": [
+        "Lectures are consistently described as clear and well organized",
+        "Office hours and the course notes are called genuinely useful",
+        "Grading is seen as fair and transparent despite the difficulty"
+      ],
+      "teachingStyle": [
+        "Clear, structured lectures",
+        "Heavy weekly problem sets",
+        "Exams test understanding"
+      ],
+      "verdict": "Across 23 reviews, students call Okonkwo demanding but exceptionally clear — expect heavy problem sets and exams that reward real understanding.",
+      "watchOuts": [
+        "Workload is heavy; several reviews say the problem sets take most of the week",
+        "Exams are hard and averages run low before any curve"
+      ],
+      "workload": "heavy"
+    },
+    "vibeTags": [
+      "clear-lectures",
+      "fair-grading"
+    ]
+  },
+  "halvard-sorensen": {
+    "badges": [
+      "open-now"
+    ],
+    "courses": [
+      {
+        "aRate": 0.769,
+        "baselineGpa": null,
+        "baselineN": 0,
+        "buckets": {
+          "a": 82,
+          "aMinus": 20,
+          "aPlus": 41,
+          "b": 11,
+          "bMinus": 11,
+          "bPlus": 8,
+          "c": 3,
+          "cMinus": 5,
+          "cPlus": 2,
+          "d": 0,
+          "dMinus": 0,
+          "dPlus": 1,
+          "f": 2,
+          "w": 9
+        },
+        "courseId": "uiuc:CS:498",
+        "delta": null,
+        "dfwRate": 0.062,
+        "gpa": 3.628,
+        "gradeRows": 3,
+        "graded": 186,
+        "isHeadline": true,
+        "number": "498",
+        "subject": "CS",
+        "title": "Cloud Computing Applications",
+        "wRate": 0.046,
+        "withdrawn": 9
+      }
+    ],
+    "distribution": {
+      "a": 82,
+      "aMinus": 20,
+      "aPlus": 41,
+      "b": 11,
+      "bMinus": 11,
+      "bPlus": 8,
+      "c": 3,
+      "cMinus": 5,
+      "cPlus": 2,
+      "d": 0,
+      "dMinus": 0,
+      "dPlus": 1,
+      "f": 2,
+      "w": 9
+    },
+    "gpaByYear": [
+      {
+        "gpa": 3.64,
+        "n": 62,
+        "year": 2023
+      },
+      {
+        "gpa": 3.501,
+        "n": 62,
+        "year": 2024
+      },
+      {
+        "gpa": 3.742,
+        "n": 62,
+        "year": 2025
+      }
+    ],
+    "matchProvenance": [
+      {
+        "instructorRaw": "Sorensen, Halvard",
+        "method": "exact",
+        "rows": 3,
+        "score": 1,
+        "source": "grades"
+      },
+      {
+        "instructorRaw": "Sorensen, H",
+        "method": "initial",
+        "rows": 1,
+        "score": 0.85,
+        "source": "schedule"
+      }
+    ],
+    "professor": {
+      "courseIds": [
+        "uiuc:CS:411",
+        "uiuc:CS:498"
+      ],
+      "department": "Computer Science",
+      "displayName": "Halvard Sørensen",
+      "firstName": "Halvard",
+      "id": "uiuc:p:halvard-sorensen",
+      "isFictional": true,
+      "kind": "reviewed",
+      "lastName": "Sørensen",
+      "nameKey": {
+        "first": "halvard",
+        "firstCompact": "halvard",
+        "firstInitial": "h",
+        "firstToken": "halvard",
+        "firstTokens": [
+          "halvard"
+        ],
+        "last": "sorensen",
+        "lastCompact": "sorensen",
+        "lastTokens": [
+          "sorensen"
+        ],
+        "middleInitials": [],
+        "raw": "Sørensen, Halvard"
+      },
+      "nameVariants": [
+        "Sorensen, H",
+        "Sorensen, Halvard"
+      ],
+      "reviewSourceId": "demo-halvard-sorensen",
+      "schoolId": "uiuc",
+      "slug": "halvard-sorensen",
+      "subjects": [
+        "CS"
+      ]
+    },
+    "rankBySubject": [
+      {
+        "rank": null,
+        "subject": "CS"
+      }
+    ],
+    "reviews": [
+      {
+        "courseId": "uiuc:CS:498",
+        "courseLabel": "CS 498",
+        "date": "2024-06-08",
+        "difficulty": 2,
+        "gradeReceived": "C+",
+        "helpfulVotes": 2,
+        "id": "uiuc:r:d-00031",
+        "professorId": "uiuc:p:halvard-sorensen",
+        "quality": 3,
+        "sentiment": -0.1,
+        "sourceTags": [
+          "Inspirational",
+          "Caring",
+          "Skip class? You won't pass."
+        ],
+        "text": "Grading felt fair; exams were about as hard as expected. Decent explanations, but the slides could use more worked examples. Do every practice exam.",
+        "vibeTags": [
+          "fair-grading"
+        ],
+        "wouldTakeAgain": true
+      },
+      {
+        "courseId": "uiuc:CS:498",
+        "courseLabel": "CS 498",
+        "date": "2023-01-01",
+        "difficulty": 2,
+        "gradeReceived": "B+",
+        "helpfulVotes": 1,
+        "id": "uiuc:r:d-00030",
+        "professorId": "uiuc:p:halvard-sorensen",
+        "quality": 4,
+        "sentiment": 0.4,
+        "sourceTags": [
+          "Amazing lectures",
+          "Tough grader",
+          "Lots of homework"
+        ],
+        "text": "Explains hard concepts in a way that finally clicked for me. I learned more in this class than in the rest of the semester combined. Start the assignments early.",
+        "vibeTags": [
+          "clear-lectures"
+        ],
+        "wouldTakeAgain": true
+      }
+    ],
+    "scores": {
+      "aRate": 0.769,
+      "composite": 71.7,
+      "confidence": "low",
+      "criticalCount": 0,
+      "deltaComparableN": 0,
+      "dfwRate": 0.062,
+      "difficultyMean": 2,
+      "gpaDelta": null,
+      "gpaMean": 3.628,
+      "gradeRows": 3,
+      "positiveCount": 1,
+      "priorMean": 4.121,
+      "ratingRaw": 3.5,
+      "ratingShrunk": 3.944,
+      "reviewCount": 2,
+      "soleInstructor": true,
+      "studentsGraded": 186,
+      "wRate": 0.046,
+      "withdrawn": 9,
+      "wouldTakeAgainPct": 100,
+      "yearsActive": 3
+    },
+    "sections": [
+      {
+        "courseId": "uiuc:CS:411",
+        "crn": "30301",
+        "crossListedCourseIds": [],
+        "fetchedAt": "2026-09-03T14:12:00Z",
+        "id": "uiuc:s:2026-fa:30301",
+        "instructorsRaw": [
+          "Ibarra-Quintero, R",
+          "Sorensen, H"
+        ],
+        "isOpen": true,
+        "meetings": [
+          {
+            "building": "Marlowe Hall",
+            "days": [
+              "T",
+              "R"
+            ],
+            "end": "13:50",
+            "room": "1002",
+            "start": "12:30",
+            "type": "LEC"
+          }
+        ],
+        "professorIds": [
+          "uiuc:p:rafael-ibarra-quintero",
+          "uiuc:p:halvard-sorensen"
+        ],
+        "schoolId": "uiuc",
+        "seatsKnown": true,
+        "sectionCode": "CL1",
+        "status": "open",
+        "term": "2026-fa",
+        "type": "LEC"
+      }
+    ],
+    "summary": null,
+    "vibeTags": []
+  },
+  "rafael-ibarra-quintero": {
+    "badges": [
+      "open-now",
+      "hidden-gem"
+    ],
+    "courses": [
+      {
+        "aRate": 0.694,
+        "baselineGpa": 3.215,
+        "baselineN": 2580,
+        "buckets": {
+          "a": 56,
+          "aMinus": 7,
+          "aPlus": 48,
+          "b": 8,
+          "bMinus": 6,
+          "bPlus": 15,
+          "c": 5,
+          "cMinus": 2,
+          "cPlus": 9,
+          "d": 0,
+          "dMinus": 1,
+          "dPlus": 0,
+          "f": 3,
+          "w": 5
+        },
+        "courseId": "uiuc:CS:225",
+        "delta": 0.327,
+        "dfwRate": 0.055,
+        "gpa": 3.542,
+        "gradeRows": 1,
+        "graded": 160,
+        "isHeadline": true,
+        "number": "225",
+        "subject": "CS",
+        "title": "Data Structures",
+        "wRate": 0.03,
+        "withdrawn": 5
+      },
+      {
+        "aRate": 0.738,
+        "baselineGpa": 3.644,
+        "baselineN": 570,
+        "buckets": {
+          "a": 243,
+          "aMinus": 88,
+          "aPlus": 311,
+          "b": 57,
+          "bMinus": 22,
+          "bPlus": 68,
+          "c": 21,
+          "cMinus": 13,
+          "cPlus": 19,
+          "d": 14,
+          "dMinus": 3,
+          "dPlus": 4,
+          "f": 7,
+          "w": 25
+        },
+        "courseId": "uiuc:CS:411",
+        "delta": -0.053,
+        "dfwRate": 0.059,
+        "gpa": 3.591,
+        "gradeRows": 5,
+        "graded": 870,
+        "isHeadline": true,
+        "number": "411",
+        "subject": "CS",
+        "title": "Database Systems",
+        "wRate": 0.028,
+        "withdrawn": 25
+      }
+    ],
+    "distribution": {
+      "a": 299,
+      "aMinus": 95,
+      "aPlus": 359,
+      "b": 65,
+      "bMinus": 28,
+      "bPlus": 83,
+      "c": 26,
+      "cMinus": 15,
+      "cPlus": 28,
+      "d": 14,
+      "dMinus": 4,
+      "dPlus": 4,
+      "f": 10,
+      "w": 30
+    },
+    "gpaByYear": [
+      {
+        "gpa": 3.601,
+        "n": 350,
+        "year": 2023
+      },
+      {
+        "gpa": 3.63,
+        "n": 350,
+        "year": 2024
+      },
+      {
+        "gpa": 3.516,
+        "n": 330,
+        "year": 2025
+      }
+    ],
+    "matchProvenance": [
+      {
+        "instructorRaw": "Ibarra Quintero, Rafael",
+        "method": "exact",
+        "rows": 2,
+        "score": 1,
+        "source": "grades"
+      },
+      {
+        "instructorRaw": "Ibarra-Quintero, Rafael",
+        "method": "exact",
+        "rows": 5,
+        "score": 1,
+        "source": "grades"
+      },
+      {
+        "instructorRaw": "Ibarra-Quintero, R",
+        "method": "initial",
+        "rows": 1,
+        "score": 0.85,
+        "source": "schedule"
+      }
+    ],
+    "professor": {
+      "courseIds": [
+        "uiuc:CS:225",
+        "uiuc:CS:411"
+      ],
+      "department": "Computer Science",
+      "displayName": "Rafael Ibarra-Quintero",
+      "firstName": "Rafael",
+      "id": "uiuc:p:rafael-ibarra-quintero",
+      "isFictional": true,
+      "kind": "reviewed",
+      "lastName": "Ibarra-Quintero",
+      "nameKey": {
+        "first": "rafael",
+        "firstCompact": "rafael",
+        "firstInitial": "r",
+        "firstToken": "rafael",
+        "firstTokens": [
+          "rafael"
+        ],
+        "last": "ibarra quintero",
+        "lastCompact": "ibarraquintero",
+        "lastTokens": [
+          "ibarra",
+          "quintero"
+        ],
+        "middleInitials": [],
+        "raw": "Ibarra-Quintero, Rafael"
+      },
+      "nameVariants": [
+        "Ibarra Quintero, Rafael",
+        "Ibarra-Quintero, R",
+        "Ibarra-Quintero, Rafael"
+      ],
+      "reviewSourceId": "demo-rafael-ibarra-quintero",
+      "schoolId": "uiuc",
+      "slug": "rafael-ibarra-quintero",
+      "subjects": [
+        "CS"
+      ]
+    },
+    "rankBySubject": [
+      {
+        "rank": 2,
+        "subject": "CS"
+      }
+    ],
+    "reviews": [
+      {
+        "courseId": "uiuc:CS:225",
+        "courseLabel": "CS 225",
+        "date": "2026-04-22",
+        "difficulty": 2,
+        "gradeReceived": null,
+        "helpfulVotes": 1,
+        "id": "uiuc:r:d-00027",
+        "professorId": "uiuc:p:rafael-ibarra-quintero",
+        "quality": 4,
+        "sentiment": 0.475,
+        "sourceTags": [
+          "Test heavy",
+          "Caring",
+          "Tough grader"
+        ],
+        "text": "Fair grading with a transparent rubric, and partial credit is generous. I learned more in this class than in the rest of the semester combined. Do not skip the discussion section.",
+        "vibeTags": [
+          "fair-grading"
+        ],
+        "wouldTakeAgain": true
+      },
+      {
+        "courseId": "uiuc:CS:411",
+        "courseLabel": "CS 411",
+        "date": "2025-11-15",
+        "difficulty": 2,
+        "gradeReceived": "B+",
+        "helpfulVotes": 4,
+        "id": "uiuc:r:d-00026",
+        "professorId": "uiuc:p:rafael-ibarra-quintero",
+        "quality": 5,
+        "sentiment": 0.767,
+        "sourceTags": [
+          "Get ready to read",
+          "Inspirational"
+        ],
+        "text": "Curves generously at the end, so do not panic about the midterm average. Lectures are incredibly clear and well organized; every topic builds on the last. Start the assignments early.",
+        "vibeTags": [
+          "clear-lectures",
+          "curves-generously"
+        ],
+        "wouldTakeAgain": true
+      },
+      {
+        "courseId": "uiuc:CS:225",
+        "courseLabel": "CS 225",
+        "date": "2024-06-08",
+        "difficulty": 3,
+        "gradeReceived": "B",
+        "helpfulVotes": 4,
+        "id": "uiuc:r:d-00025",
+        "professorId": "uiuc:p:rafael-ibarra-quintero",
+        "quality": 5,
+        "sentiment": 0.833,
+        "sourceTags": [
+          "Get ready to read",
+          "Skip class? You won't pass."
+        ],
+        "text": "Recommend taking this section even if the time slot is inconvenient. Hard exams, but they reward understanding rather than memorization. Go to office hours.",
+        "vibeTags": [
+          "hard-exams"
+        ],
+        "wouldTakeAgain": true
+      },
+      {
+        "courseId": "uiuc:CS:225",
+        "courseLabel": "CS 225",
+        "date": "2024-02-09",
+        "difficulty": 4,
+        "gradeReceived": "A-",
+        "helpfulVotes": 5,
+        "id": "uiuc:r:d-00029",
+        "professorId": "uiuc:p:rafael-ibarra-quintero",
+        "quality": 4,
+        "sentiment": 0.583,
+        "sourceTags": [
+          "Get ready to read",
+          "Lots of homework",
+          "Clear grading criteria"
+        ],
+        "text": "Genuinely cares whether students understand, and office hours are worth attending. Recommend taking this section even if the time slot is inconvenient. Read the notes before lecture.",
+        "vibeTags": [
+          "caring"
+        ],
+        "wouldTakeAgain": false
+      },
+      {
+        "courseId": "uiuc:CS:411",
+        "courseLabel": "CS 411",
+        "date": "2023-09-02",
+        "difficulty": null,
+        "gradeReceived": "B-",
+        "helpfulVotes": 5,
+        "id": "uiuc:r:d-00028",
+        "professorId": "uiuc:p:rafael-ibarra-quintero",
+        "quality": 4,
+        "sentiment": 0.45,
+        "sourceTags": [
+          "Skip class? You won't pass.",
+          "Get ready to read",
+          "Lots of homework"
+        ],
+        "text": "Engaging lecturer who keeps a 200-person room awake at 8 AM. Hard exams, but they reward understanding rather than memorization. Form a study group.",
+        "vibeTags": [
+          "engaging",
+          "hard-exams"
+        ],
+        "wouldTakeAgain": false
+      },
+      {
+        "courseId": "uiuc:CS:411",
+        "courseLabel": "CS 411",
+        "date": "2023-01-01",
+        "difficulty": 2,
+        "gradeReceived": "A",
+        "helpfulVotes": 5,
+        "id": "uiuc:r:d-00024",
+        "professorId": "uiuc:p:rafael-ibarra-quintero",
+        "quality": 5,
+        "sentiment": 0.8,
+        "sourceTags": [
+          "Caring",
+          "Clear grading criteria"
+        ],
+        "text": "Hard exams, but they reward understanding rather than memorization. Lectures are incredibly clear and well organized; every topic builds on the last. Form a study group.",
+        "vibeTags": [
+          "clear-lectures",
+          "hard-exams"
+        ],
+        "wouldTakeAgain": true
+      }
+    ],
+    "scores": {
+      "aRate": 0.731,
+      "composite": 72.5,
+      "confidence": "medium",
+      "criticalCount": 0,
+      "deltaComparableN": 1030,
+      "dfwRate": 0.058,
+      "difficultyMean": 2.6,
+      "gpaDelta": 0.006,
+      "gpaMean": 3.584,
+      "gradeRows": 6,
+      "positiveCount": 6,
+      "priorMean": 4.121,
+      "ratingRaw": 4.5,
+      "ratingShrunk": 4.328,
+      "reviewCount": 6,
+      "soleInstructor": false,
+      "studentsGraded": 1030,
+      "wRate": 0.028,
+      "withdrawn": 30,
+      "wouldTakeAgainPct": 66.667,
+      "yearsActive": 3
+    },
+    "sections": [
+      {
+        "courseId": "uiuc:CS:411",
+        "crn": "30301",
+        "crossListedCourseIds": [],
+        "fetchedAt": "2026-09-03T14:12:00Z",
+        "id": "uiuc:s:2026-fa:30301",
+        "instructorsRaw": [
+          "Ibarra-Quintero, R",
+          "Sorensen, H"
+        ],
+        "isOpen": true,
+        "meetings": [
+          {
+            "building": "Marlowe Hall",
+            "days": [
+              "T",
+              "R"
+            ],
+            "end": "13:50",
+            "room": "1002",
+            "start": "12:30",
+            "type": "LEC"
+          }
+        ],
+        "professorIds": [
+          "uiuc:p:rafael-ibarra-quintero",
+          "uiuc:p:halvard-sorensen"
+        ],
+        "schoolId": "uiuc",
+        "seatsKnown": true,
+        "sectionCode": "CL1",
+        "status": "open",
+        "term": "2026-fa",
+        "type": "LEC"
+      }
+    ],
+    "summary": {
+      "bestFor": "Most students in CS — no strong pattern in the reviews",
+      "confidence": "medium",
+      "evidenceReviewIds": [
+        "uiuc:r:d-00026",
+        "uiuc:r:d-00024",
+        "uiuc:r:d-00027",
+        "uiuc:r:d-00025",
+        "uiuc:r:d-00028"
+      ],
+      "format": "discussion",
+      "generatedAt": "2026-09-04T00:00:00Z",
+      "gradingNote": "In 2 course(s) over 3 year(s), GPA averaged 3.58 (+0.01 vs. the same courses taught by others); 2.8% withdrew.",
+      "inputHash": "f2ffeae8ddd6d8d7",
+      "model": null,
+      "professorId": "uiuc:p:rafael-ibarra-quintero",
+      "promptVersion": 1,
+      "reviewCount": 6,
+      "source": "extractive",
+      "strengths": [
+        "Lectures are described as clear and well organized",
+        "“Fair grading with a transparent rubric, and partial credit is generous.”"
+      ],
+      "teachingStyle": [
+        "Clear lectures",
+        "Hard exams"
+      ],
+      "verdict": "Rated 4.3/5 across 6 reviews; grades track the course average.",
+      "watchOuts": [
+        "Exams are described as hard"
+      ],
+      "workload": "moderate"
+    },
+    "vibeTags": [
+      "clear-lectures",
+      "hard-exams"
+    ]
+  }
+}

@@ -1,0 +1,6836 @@
+{
+  "courses": [
+    {
+      "courseId": "uiuc:CS:100",
+      "number": "100",
+      "professorCount": 4,
+      "title": "Computer Science Orientation"
+    },
+    {
+      "courseId": "uiuc:CS:101",
+      "number": "101",
+      "professorCount": 3,
+      "title": "Intro Computing: Engrg & Sci"
+    },
+    {
+      "courseId": "uiuc:CS:105",
+      "number": "105",
+      "professorCount": 4,
+      "title": "Intro Computing: Non-Tech"
+    },
+    {
+      "courseId": "uiuc:CS:124",
+      "number": "124",
+      "professorCount": 1,
+      "title": "Intro to Computer Science I"
+    },
+    {
+      "courseId": "uiuc:CS:125",
+      "number": "125",
+      "professorCount": 2,
+      "title": "Intro to Computer Science"
+    },
+    {
+      "courseId": "uiuc:CS:128",
+      "number": "128",
+      "professorCount": 3,
+      "title": "Intro to Computer Science II"
+    },
+    {
+      "courseId": "uiuc:CS:173",
+      "number": "173",
+      "professorCount": 3,
+      "title": "Discrete Structures"
+    },
+    {
+      "courseId": "uiuc:CS:225",
+      "number": "225",
+      "professorCount": 1,
+      "title": "Data Structures"
+    },
+    {
+      "courseId": "uiuc:CS:233",
+      "number": "233",
+      "professorCount": 3,
+      "title": "Computer Architecture"
+    },
+    {
+      "courseId": "uiuc:CS:241",
+      "number": "241",
+      "professorCount": 2,
+      "title": "System Programming"
+    },
+    {
+      "courseId": "uiuc:CS:357",
+      "number": "357",
+      "professorCount": 2,
+      "title": "Numerical Methods I"
+    },
+    {
+      "courseId": "uiuc:CS:374",
+      "number": "374",
+      "professorCount": 4,
+      "title": "Intro to Algs & Models of Comp"
+    },
+    {
+      "courseId": "uiuc:CS:411",
+      "number": "411",
+      "professorCount": 2,
+      "title": "Database Systems"
+    },
+    {
+      "courseId": "uiuc:CS:412",
+      "number": "412",
+      "professorCount": 2,
+      "title": "Introduction to Data Mining"
+    },
+    {
+      "courseId": "uiuc:CS:421",
+      "number": "421",
+      "professorCount": 3,
+      "title": "Progrmg Languages & Compilers"
+    },
+    {
+      "courseId": "uiuc:CS:425",
+      "number": "425",
+      "professorCount": 5,
+      "title": "Distributed Systems"
+    },
+    {
+      "courseId": "uiuc:CS:440",
+      "number": "440",
+      "professorCount": 2,
+      "title": "Artificial Intelligence"
+    },
+    {
+      "courseId": "uiuc:CS:441",
+      "number": "441",
+      "professorCount": 3,
+      "title": "Applied Machine Learning"
+    },
+    {
+      "courseId": "uiuc:CS:498",
+      "number": "498",
+      "professorCount": 1,
+      "title": "Cloud Computing Applications"
+    },
+    {
+      "courseId": "uiuc:CS:598",
+      "number": "598",
+      "professorCount": 1,
+      "title": "Advanced Perform Engineering"
+    }
+  ],
+  "generatedAt": "2026-09-03T14:12:00Z",
+  "gradesThroughTerm": "2025-fa",
+  "mode": "demo",
+  "priorMean": 3.479,
+  "professors": [
+    {
+      "badges": [
+        "open-now"
+      ],
+      "courses": [
+        {
+          "aRate": 0.663,
+          "baselineGpa": 3.368,
+          "baselineN": 768,
+          "buckets": {
+            "a": 228,
+            "aMinus": 138,
+            "aPlus": 172,
+            "b": 63,
+            "bMinus": 45,
+            "bPlus": 80,
+            "c": 8,
+            "cMinus": 6,
+            "cPlus": 30,
+            "d": 17,
+            "dMinus": 11,
+            "dPlus": 5,
+            "f": 8,
+            "w": 32
+          },
+          "courseId": "uiuc:CS:412",
+          "delta": 0.096,
+          "dfwRate": 0.087,
+          "gpa": 3.464,
+          "gradeRows": 6,
+          "graded": 811,
+          "isHeadline": true,
+          "number": "412",
+          "subject": "CS",
+          "title": "Introduction to Data Mining",
+          "wRate": 0.038,
+          "withdrawn": 32
+        },
+        {
+          "aRate": 0.567,
+          "baselineGpa": null,
+          "baselineN": 0,
+          "buckets": {
+            "a": 26,
+            "aMinus": 25,
+            "aPlus": 17,
+            "b": 11,
+            "bMinus": 7,
+            "bPlus": 17,
+            "c": 2,
+            "cMinus": 0,
+            "cPlus": 2,
+            "d": 2,
+            "dMinus": 4,
+            "dPlus": 0,
+            "f": 7,
+            "w": 3
+          },
+          "courseId": "uiuc:CS:412",
+          "delta": null,
+          "dfwRate": 0.13,
+          "gpa": 3.212,
+          "gradeRows": 3,
+          "graded": 120,
+          "isHeadline": false,
+          "number": "412",
+          "subject": "CS",
+          "title": "Introduction to Data Mining",
+          "wRate": 0.024,
+          "withdrawn": 3
+        }
+      ],
+      "distribution": {
+        "a": 228,
+        "aMinus": 138,
+        "aPlus": 172,
+        "b": 63,
+        "bMinus": 45,
+        "bPlus": 80,
+        "c": 8,
+        "cMinus": 6,
+        "cPlus": 30,
+        "d": 17,
+        "dMinus": 11,
+        "dPlus": 5,
+        "f": 8,
+        "w": 32
+      },
+      "gpaByYear": [
+        {
+          "gpa": 3.589,
+          "n": 124,
+          "year": 2020
+        },
+        {
+          "gpa": 3.542,
+          "n": 120,
+          "year": 2021
+        },
+        {
+          "gpa": 3.484,
+          "n": 153,
+          "year": 2022
+        },
+        {
+          "gpa": 3.322,
+          "n": 314,
+          "year": 2023
+        },
+        {
+          "gpa": 3.627,
+          "n": 100,
+          "year": 2024
+        }
+      ],
+      "matchProvenance": [
+        {
+          "instructorRaw": "Thorvaldsen, Jonathan",
+          "method": "exact",
+          "rows": 5,
+          "score": 1,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Thorvaldsen, J",
+          "method": "initial",
+          "rows": 4,
+          "score": 0.85,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Thorvaldsen, Jonathan",
+          "method": "exact",
+          "rows": 2,
+          "score": 1,
+          "source": "schedule"
+        },
+        {
+          "instructorRaw": "Thorvaldsen, J",
+          "method": "initial",
+          "rows": 1,
+          "score": 0.85,
+          "source": "schedule"
+        }
+      ],
+      "openSections": [
+        {
+          "courseId": "uiuc:CS:425",
+          "crn": "40775",
+          "crossListedCourseIds": [],
+          "fetchedAt": "2026-09-03T14:12:00Z",
+          "id": "uiuc:s:2026-fa:40775",
+          "instructorsRaw": [
+            "Agyeman, Alejandro",
+            "Thorvaldsen, Jonathan"
+          ],
+          "isOpen": true,
+          "meetings": [
+            {
+              "building": null,
+              "days": [],
+              "end": null,
+              "room": null,
+              "start": null,
+              "type": "LEC"
+            }
+          ],
+          "professorIds": [
+            "uiuc:p:alejandro-agyeman",
+            "uiuc:p:jonathan-thorvaldsen"
+          ],
+          "schoolId": "uiuc",
+          "seatsKnown": true,
+          "sectionCode": "AL2",
+          "status": "open",
+          "term": "2026-fa",
+          "type": "LEC"
+        }
+      ],
+      "positiveReviews": [
+        {
+          "courseId": "uiuc:CS:412",
+          "courseLabel": "CS 412",
+          "date": "2021-10-22",
+          "difficulty": 2,
+          "gradeReceived": "B",
+          "helpfulVotes": 8,
+          "id": "uiuc:r:demo-r-000340",
+          "professorId": "uiuc:p:jonathan-thorvaldsen",
+          "quality": 4,
+          "sentiment": 0.49,
+          "sourceTags": [
+            "Accessible outside class",
+            "Group projects"
+          ],
+          "text": "One of the most engaging instructors in the department. Curved the midterm by a lot after the class average tanked. Genuinely cares about students and it shows. Pair up with someone who took the prerequisite recently.…",
+          "vibeTags": [
+            "engaging",
+            "caring",
+            "curves-generously"
+          ],
+          "wouldTakeAgain": true
+        },
+        {
+          "courseId": null,
+          "courseLabel": null,
+          "date": "2022-04-27",
+          "difficulty": 2,
+          "gradeReceived": null,
+          "helpfulVotes": 7,
+          "id": "uiuc:r:demo-r-000339",
+          "professorId": "uiuc:p:jonathan-thorvaldsen",
+          "quality": 5,
+          "sentiment": 0.86,
+          "sourceTags": [
+            "Accessible outside class"
+          ],
+          "text": "One of the most engaging instructors in the department. You can tell this professor cares about every student in the room. Expect a curve — the raw averages look scary but the final grades are fine. Start the homework…",
+          "vibeTags": [
+            "engaging",
+            "curves-generously"
+          ],
+          "wouldTakeAgain": true
+        }
+      ],
+      "professor": {
+        "courseIds": [
+          "uiuc:CS:412",
+          "uiuc:CS:425"
+        ],
+        "department": "Computer Science",
+        "displayName": "Jonathan Thorvaldsen",
+        "firstName": "Jonathan",
+        "id": "uiuc:p:jonathan-thorvaldsen",
+        "isFictional": true,
+        "kind": "reviewed",
+        "lastName": "Thorvaldsen",
+        "nameKey": {
+          "first": "jonathan",
+          "firstCompact": "jonathan",
+          "firstInitial": "j",
+          "firstToken": "jonathan",
+          "firstTokens": [
+            "jonathan"
+          ],
+          "last": "thorvaldsen",
+          "lastCompact": "thorvaldsen",
+          "lastTokens": [
+            "thorvaldsen"
+          ],
+          "middleInitials": [],
+          "raw": "Thorvaldsen, Jonathan"
+        },
+        "nameVariants": [
+          "Thorvaldsen, J",
+          "Thorvaldsen, Jonathan"
+        ],
+        "reviewSourceId": "demo-p-026",
+        "schoolId": "uiuc",
+        "slug": "jonathan-thorvaldsen",
+        "subjects": [
+          "CS"
+        ]
+      },
+      "rank": null,
+      "scores": {
+        "aRate": 0.663,
+        "composite": 70.1,
+        "confidence": "high",
+        "criticalCount": 0,
+        "deltaComparableN": 811,
+        "dfwRate": 0.087,
+        "difficultyMean": 2.526,
+        "gpaDelta": 0.096,
+        "gpaMean": 3.464,
+        "gradeRows": 6,
+        "positiveCount": 15,
+        "priorMean": 3.479,
+        "ratingRaw": 4.263,
+        "ratingShrunk": 4.1,
+        "reviewCount": 19,
+        "soleInstructor": false,
+        "studentsGraded": 811,
+        "wRate": 0.038,
+        "withdrawn": 32,
+        "wouldTakeAgainPct": 63.158,
+        "yearsActive": 5
+      },
+      "sectionsThisTerm": 3,
+      "summary": {
+        "bestFor": "students who thrive with supportive guidance and can manage a demanding workload",
+        "confidence": "high",
+        "evidenceReviewIds": [
+          "uiuc:r:demo-r-000352",
+          "uiuc:r:demo-r-000341",
+          "uiuc:r:demo-r-000345",
+          "uiuc:r:demo-r-000336",
+          "uiuc:r:demo-r-000348",
+          "uiuc:r:demo-r-000354"
+        ],
+        "format": "mixed",
+        "generatedAt": "2026-09-06T22:33:32.939Z",
+        "gradingNote": "In 2 course(s) over 5 year(s), GPA averaged 3.46 (+0.10 vs. the same courses taught by others); 3.8% withdrew.",
+        "inputHash": "ca6e396c3c75c499",
+        "model": "openai/gpt-oss-20b",
+        "professorId": "uiuc:p:jonathan-thorvaldsen",
+        "promptVersion": 1,
+        "provider": "Groq",
+        "reviewCount": 19,
+        "source": "openai-compatible",
+        "strengths": [
+          "generous grading and curves",
+          "supportive office hours",
+          "clear communication",
+          "student-centered approach"
+        ],
+        "teachingStyle": [
+          "engaging",
+          "caring",
+          "generous"
+        ],
+        "verdict": "With 19 reviews, this instructor is generally supportive and generous with curves, but the workload is heavy and pacing can be fast.",
+        "watchOuts": [
+          "heavy homework load",
+          "fast pacing before final"
+        ],
+        "workload": "heavy"
+      },
+      "vibeTags": [
+        "curves-generously",
+        "caring",
+        "heavy-homework"
+      ]
+    },
+    {
+      "badges": [
+        "open-now"
+      ],
+      "courses": [
+        {
+          "aRate": 0.37,
+          "baselineGpa": 3.3,
+          "baselineN": 1004,
+          "buckets": {
+            "a": 115,
+            "aMinus": 257,
+            "aPlus": 39,
+            "b": 178,
+            "bMinus": 124,
+            "bPlus": 240,
+            "c": 39,
+            "cMinus": 15,
+            "cPlus": 49,
+            "d": 22,
+            "dMinus": 13,
+            "dPlus": 2,
+            "f": 19,
+            "w": 30
+          },
+          "courseId": "uiuc:CS:425",
+          "delta": -0.176,
+          "dfwRate": 0.075,
+          "gpa": 3.124,
+          "gradeRows": 7,
+          "graded": 1112,
+          "isHeadline": true,
+          "number": "425",
+          "subject": "CS",
+          "title": "Distributed Systems",
+          "wRate": 0.026,
+          "withdrawn": 30
+        },
+        {
+          "aRate": 0.834,
+          "baselineGpa": null,
+          "baselineN": 0,
+          "buckets": {
+            "a": 73,
+            "aMinus": 52,
+            "aPlus": 36,
+            "b": 8,
+            "bMinus": 4,
+            "bPlus": 10,
+            "c": 0,
+            "cMinus": 1,
+            "cPlus": 1,
+            "d": 3,
+            "dMinus": 0,
+            "dPlus": 2,
+            "f": 3,
+            "w": 5
+          },
+          "courseId": "uiuc:CS:598",
+          "delta": null,
+          "dfwRate": 0.066,
+          "gpa": 3.65,
+          "gradeRows": 5,
+          "graded": 193,
+          "isHeadline": true,
+          "number": "598",
+          "subject": "CS",
+          "title": "Advanced Perform Engineering",
+          "wRate": 0.025,
+          "withdrawn": 5
+        },
+        {
+          "aRate": 0.737,
+          "baselineGpa": null,
+          "baselineN": 0,
+          "buckets": {
+            "a": 5,
+            "aMinus": 6,
+            "aPlus": 3,
+            "b": 0,
+            "bMinus": 1,
+            "bPlus": 1,
+            "c": 1,
+            "cMinus": 1,
+            "cPlus": 0,
+            "d": 0,
+            "dMinus": 1,
+            "dPlus": 0,
+            "f": 0,
+            "w": 1
+          },
+          "courseId": "uiuc:CS:598",
+          "delta": null,
+          "dfwRate": 0.1,
+          "gpa": 3.387,
+          "gradeRows": 1,
+          "graded": 19,
+          "isHeadline": false,
+          "number": "598",
+          "subject": "CS",
+          "title": "Advanced Perform Engineering",
+          "wRate": 0.05,
+          "withdrawn": 1
+        }
+      ],
+      "distribution": {
+        "a": 188,
+        "aMinus": 309,
+        "aPlus": 75,
+        "b": 186,
+        "bMinus": 128,
+        "bPlus": 250,
+        "c": 39,
+        "cMinus": 16,
+        "cPlus": 50,
+        "d": 25,
+        "dMinus": 13,
+        "dPlus": 4,
+        "f": 22,
+        "w": 35
+      },
+      "gpaByYear": [
+        {
+          "gpa": 2.997,
+          "n": 355,
+          "year": 2021
+        },
+        {
+          "gpa": 3.321,
+          "n": 335,
+          "year": 2022
+        },
+        {
+          "gpa": 3.313,
+          "n": 426,
+          "year": 2023
+        },
+        {
+          "gpa": 3.126,
+          "n": 189,
+          "year": 2024
+        }
+      ],
+      "matchProvenance": [
+        {
+          "instructorRaw": "Agyeman, Alejandro",
+          "method": "exact",
+          "rows": 11,
+          "score": 1,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Agyeman, A",
+          "method": "initial",
+          "rows": 2,
+          "score": 0.85,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Agyeman, Alejandro",
+          "method": "exact",
+          "rows": 2,
+          "score": 1,
+          "source": "schedule"
+        }
+      ],
+      "openSections": [
+        {
+          "courseId": "uiuc:CS:425",
+          "crn": "40775",
+          "crossListedCourseIds": [],
+          "fetchedAt": "2026-09-03T14:12:00Z",
+          "id": "uiuc:s:2026-fa:40775",
+          "instructorsRaw": [
+            "Agyeman, Alejandro",
+            "Thorvaldsen, Jonathan"
+          ],
+          "isOpen": true,
+          "meetings": [
+            {
+              "building": null,
+              "days": [],
+              "end": null,
+              "room": null,
+              "start": null,
+              "type": "LEC"
+            }
+          ],
+          "professorIds": [
+            "uiuc:p:alejandro-agyeman",
+            "uiuc:p:jonathan-thorvaldsen"
+          ],
+          "schoolId": "uiuc",
+          "seatsKnown": true,
+          "sectionCode": "AL2",
+          "status": "open",
+          "term": "2026-fa",
+          "type": "LEC"
+        },
+        {
+          "courseId": "uiuc:CS:598",
+          "crn": "54752",
+          "crossListedCourseIds": [
+            "uiuc:ECE:549"
+          ],
+          "fetchedAt": "2026-09-03T14:12:00Z",
+          "id": "uiuc:s:2026-fa:54752",
+          "instructorsRaw": [
+            "Agyeman, Alejandro"
+          ],
+          "isOpen": true,
+          "meetings": [
+            {
+              "building": "Quillon Auditorium",
+              "days": [
+                "T",
+                "R"
+              ],
+              "end": "09:20",
+              "room": "461",
+              "start": "08:00",
+              "type": "LEC"
+            }
+          ],
+          "professorIds": [
+            "uiuc:p:alejandro-agyeman"
+          ],
+          "schoolId": "uiuc",
+          "seatsKnown": true,
+          "sectionCode": "AL1",
+          "status": "open",
+          "term": "2026-fa",
+          "type": "LEC"
+        }
+      ],
+      "positiveReviews": [
+        {
+          "courseId": "uiuc:CS:425",
+          "courseLabel": "CS 425",
+          "date": "2024-09-28",
+          "difficulty": 4,
+          "gradeReceived": "B+",
+          "helpfulVotes": 8,
+          "id": "uiuc:r:demo-r-000327",
+          "professorId": "uiuc:p:alejandro-agyeman",
+          "quality": 5,
+          "sentiment": 0.9,
+          "sourceTags": [
+            "Caring",
+            "Clear grading criteria",
+            "Lecture heavy"
+          ],
+          "text": "I recommend this professor to everyone in my major. Enthusiastic and entertaining without dumbing anything down. Treat the homework like exam practice. Ended up being one of my favorites.",
+          "vibeTags": [
+            "engaging"
+          ],
+          "wouldTakeAgain": true
+        },
+        {
+          "courseId": "uiuc:CS:425",
+          "courseLabel": "CS 425",
+          "date": "2024-07-01",
+          "difficulty": 3,
+          "gradeReceived": "B",
+          "helpfulVotes": 7,
+          "id": "uiuc:r:demo-r-000328",
+          "professorId": "uiuc:p:alejandro-agyeman",
+          "quality": 5,
+          "sentiment": 0.75,
+          "sourceTags": [
+            "Gives good feedback"
+          ],
+          "text": "I would sign up for anything this professor teaches. I was in the CS 425 section that met in the morning. Keeps things engaging with demos and live examples. Strict attendance policy with clicker questions every…",
+          "vibeTags": [
+            "engaging",
+            "strict-attendance"
+          ],
+          "wouldTakeAgain": false
+        }
+      ],
+      "professor": {
+        "courseIds": [
+          "uiuc:CS:425",
+          "uiuc:CS:598",
+          "uiuc:ECE:549"
+        ],
+        "department": "Computer Science",
+        "displayName": "Alejandro Agyeman",
+        "firstName": "Alejandro",
+        "id": "uiuc:p:alejandro-agyeman",
+        "isFictional": true,
+        "kind": "reviewed",
+        "lastName": "Agyeman",
+        "nameKey": {
+          "first": "alejandro",
+          "firstCompact": "alejandro",
+          "firstInitial": "a",
+          "firstToken": "alejandro",
+          "firstTokens": [
+            "alejandro"
+          ],
+          "last": "agyeman",
+          "lastCompact": "agyeman",
+          "lastTokens": [
+            "agyeman"
+          ],
+          "middleInitials": [],
+          "raw": "Agyeman, Alejandro"
+        },
+        "nameVariants": [
+          "Agyeman, A",
+          "Agyeman, Alejandro"
+        ],
+        "reviewSourceId": "demo-p-025",
+        "schoolId": "uiuc",
+        "slug": "alejandro-agyeman",
+        "subjects": [
+          "CS"
+        ]
+      },
+      "rank": null,
+      "scores": {
+        "aRate": 0.438,
+        "composite": 66.8,
+        "confidence": "medium",
+        "criticalCount": 0,
+        "deltaComparableN": 1112,
+        "dfwRate": 0.074,
+        "difficultyMean": 4,
+        "gpaDelta": -0.176,
+        "gpaMean": 3.202,
+        "gradeRows": 12,
+        "positiveCount": 9,
+        "priorMean": 3.479,
+        "ratingRaw": 4.364,
+        "ratingShrunk": 4.087,
+        "reviewCount": 11,
+        "soleInstructor": false,
+        "studentsGraded": 1305,
+        "wRate": 0.026,
+        "withdrawn": 35,
+        "wouldTakeAgainPct": 72.727,
+        "yearsActive": 4
+      },
+      "sectionsThisTerm": 2,
+      "summary": {
+        "bestFor": "students who thrive on active participation and can manage a demanding schedule",
+        "confidence": "medium",
+        "evidenceReviewIds": [
+          "uiuc:r:demo-r-000326",
+          "uiuc:r:demo-r-000327",
+          "uiuc:r:demo-r-000328",
+          "uiuc:r:demo-r-000331",
+          "uiuc:r:demo-r-000335",
+          "uiuc:r:demo-r-000329",
+          "uiuc:r:demo-r-000334",
+          "uiuc:r:demo-r-000333",
+          "uiuc:r:demo-r-000332",
+          "uiuc:r:demo-r-000325",
+          "uiuc:r:demo-r-000330"
+        ],
+        "format": "discussion",
+        "generatedAt": "2026-09-06T22:22:42.611Z",
+        "gradingNote": "In 3 course(s) over 4 year(s), GPA averaged 3.20 (−0.18 vs. the same courses taught by others); 2.6% withdrew.",
+        "inputHash": "4a343932c3d1e4d3",
+        "model": "openai/gpt-oss-20b",
+        "professorId": "uiuc:p:alejandro-agyeman",
+        "promptVersion": 1,
+        "provider": "Groq",
+        "reviewCount": 11,
+        "source": "openai-compatible",
+        "strengths": [
+          "engaging discussions",
+          "supportive office hours",
+          "interactive demos"
+        ],
+        "teachingStyle": [
+          "discussion",
+          "interactive"
+        ],
+        "verdict": "Based on 11 reviews, this professor is engaging and supportive but has a heavy workload and strict attendance policy.",
+        "watchOuts": [
+          "heavy workload",
+          "strict attendance",
+          "long frequent assignments"
+        ],
+        "workload": "heavy"
+      },
+      "vibeTags": [
+        "engaging"
+      ]
+    },
+    {
+      "badges": [
+        "open-now"
+      ],
+      "courses": [
+        {
+          "aRate": 0.685,
+          "baselineGpa": 3.319,
+          "baselineN": 303,
+          "buckets": {
+            "a": 64,
+            "aMinus": 31,
+            "aPlus": 42,
+            "b": 13,
+            "bMinus": 14,
+            "bPlus": 12,
+            "c": 7,
+            "cMinus": 1,
+            "cPlus": 10,
+            "d": 0,
+            "dMinus": 1,
+            "dPlus": 2,
+            "f": 3,
+            "w": 4
+          },
+          "courseId": "uiuc:CS:101",
+          "delta": 0.163,
+          "dfwRate": 0.049,
+          "gpa": 3.482,
+          "gradeRows": 5,
+          "graded": 200,
+          "isHeadline": true,
+          "number": "101",
+          "subject": "CS",
+          "title": "Intro Computing: Engrg & Sci",
+          "wRate": 0.02,
+          "withdrawn": 4
+        },
+        {
+          "aRate": 0.531,
+          "baselineGpa": 3.199,
+          "baselineN": 580,
+          "buckets": {
+            "a": 70,
+            "aMinus": 43,
+            "aPlus": 34,
+            "b": 20,
+            "bMinus": 24,
+            "bPlus": 40,
+            "c": 7,
+            "cMinus": 8,
+            "cPlus": 9,
+            "d": 5,
+            "dMinus": 6,
+            "dPlus": 5,
+            "f": 6,
+            "w": 9
+          },
+          "courseId": "uiuc:CS:105",
+          "delta": 0.033,
+          "dfwRate": 0.108,
+          "gpa": 3.231,
+          "gradeRows": 7,
+          "graded": 277,
+          "isHeadline": true,
+          "number": "105",
+          "subject": "CS",
+          "title": "Intro Computing: Non-Tech",
+          "wRate": 0.031,
+          "withdrawn": 9
+        },
+        {
+          "aRate": 0.282,
+          "baselineGpa": 2.799,
+          "baselineN": 2846,
+          "buckets": {
+            "a": 215,
+            "aMinus": 209,
+            "aPlus": 73,
+            "b": 247,
+            "bMinus": 145,
+            "bPlus": 261,
+            "c": 153,
+            "cMinus": 116,
+            "cPlus": 143,
+            "d": 37,
+            "dMinus": 46,
+            "dPlus": 92,
+            "f": 24,
+            "w": 39
+          },
+          "courseId": "uiuc:CS:374",
+          "delta": 0.006,
+          "dfwRate": 0.132,
+          "gpa": 2.805,
+          "gradeRows": 6,
+          "graded": 1761,
+          "isHeadline": true,
+          "number": "374",
+          "subject": "CS",
+          "title": "Intro to Algs & Models of Comp",
+          "wRate": 0.022,
+          "withdrawn": 39
+        },
+        {
+          "aRate": 0.538,
+          "baselineGpa": 3.08,
+          "baselineN": 21,
+          "buckets": {
+            "a": 5,
+            "aMinus": 8,
+            "aPlus": 1,
+            "b": 4,
+            "bMinus": 2,
+            "bPlus": 2,
+            "c": 0,
+            "cMinus": 1,
+            "cPlus": 1,
+            "d": 1,
+            "dMinus": 0,
+            "dPlus": 1,
+            "f": 0,
+            "w": 0
+          },
+          "courseId": "uiuc:CS:105",
+          "delta": 0.139,
+          "dfwRate": 0.077,
+          "gpa": 3.219,
+          "gradeRows": 2,
+          "graded": 26,
+          "isHeadline": false,
+          "number": "105",
+          "subject": "CS",
+          "title": "Intro Computing: Non-Tech",
+          "wRate": 0,
+          "withdrawn": 0
+        },
+        {
+          "aRate": 0.289,
+          "baselineGpa": null,
+          "baselineN": 0,
+          "buckets": {
+            "a": 23,
+            "aMinus": 14,
+            "aPlus": 11,
+            "b": 22,
+            "bMinus": 19,
+            "bPlus": 20,
+            "c": 9,
+            "cMinus": 6,
+            "cPlus": 30,
+            "d": 1,
+            "dMinus": 2,
+            "dPlus": 9,
+            "f": 0,
+            "w": 3
+          },
+          "courseId": "uiuc:CS:374",
+          "delta": null,
+          "dfwRate": 0.089,
+          "gpa": 2.909,
+          "gradeRows": 2,
+          "graded": 166,
+          "isHeadline": false,
+          "number": "374",
+          "subject": "CS",
+          "title": "Intro to Algs & Models of Comp",
+          "wRate": 0.018,
+          "withdrawn": 3
+        }
+      ],
+      "distribution": {
+        "a": 349,
+        "aMinus": 283,
+        "aPlus": 149,
+        "b": 280,
+        "bMinus": 183,
+        "bPlus": 313,
+        "c": 167,
+        "cMinus": 125,
+        "cPlus": 162,
+        "d": 42,
+        "dMinus": 53,
+        "dPlus": 99,
+        "f": 33,
+        "w": 52
+      },
+      "gpaByYear": [
+        {
+          "gpa": 2.784,
+          "n": 299,
+          "year": 2020
+        },
+        {
+          "gpa": 2.999,
+          "n": 385,
+          "year": 2021
+        },
+        {
+          "gpa": 2.977,
+          "n": 513,
+          "year": 2022
+        },
+        {
+          "gpa": 2.963,
+          "n": 386,
+          "year": 2023
+        },
+        {
+          "gpa": 2.86,
+          "n": 655,
+          "year": 2024
+        }
+      ],
+      "matchProvenance": [
+        {
+          "instructorRaw": "Petrakis, Jun-Seo",
+          "method": "exact",
+          "rows": 16,
+          "score": 1,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Petrakis, J",
+          "method": "initial",
+          "rows": 7,
+          "score": 0.85,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Petrakis, J",
+          "method": "initial",
+          "rows": 3,
+          "score": 0.85,
+          "source": "schedule"
+        },
+        {
+          "instructorRaw": "Petrakis, Jun-Seo",
+          "method": "exact",
+          "rows": 1,
+          "score": 1,
+          "source": "schedule"
+        }
+      ],
+      "openSections": [
+        {
+          "courseId": "uiuc:CS:105",
+          "crn": "48167",
+          "crossListedCourseIds": [],
+          "fetchedAt": "2026-09-03T14:12:00Z",
+          "id": "uiuc:s:2026-fa:48167",
+          "instructorsRaw": [
+            "Petrakis, J"
+          ],
+          "isOpen": true,
+          "meetings": [
+            {
+              "building": null,
+              "days": [],
+              "end": null,
+              "room": null,
+              "start": null,
+              "type": "LEC"
+            }
+          ],
+          "professorIds": [
+            "uiuc:p:jun-seo-petrakis"
+          ],
+          "schoolId": "uiuc",
+          "seatsKnown": true,
+          "sectionCode": "BL1",
+          "status": "open",
+          "term": "2026-fa",
+          "type": "LEC"
+        },
+        {
+          "courseId": "uiuc:CS:374",
+          "crn": "53900",
+          "crossListedCourseIds": [],
+          "fetchedAt": "2026-09-03T14:12:00Z",
+          "id": "uiuc:s:2026-fa:53900",
+          "instructorsRaw": [
+            "Petrakis, J"
+          ],
+          "isOpen": true,
+          "meetings": [
+            {
+              "building": null,
+              "days": [],
+              "end": null,
+              "room": null,
+              "start": null,
+              "type": "LEC"
+            }
+          ],
+          "professorIds": [
+            "uiuc:p:jun-seo-petrakis"
+          ],
+          "schoolId": "uiuc",
+          "seatsKnown": true,
+          "sectionCode": "BL2",
+          "status": "open",
+          "term": "2026-fa",
+          "type": "LEC"
+        },
+        {
+          "courseId": "uiuc:CS:101",
+          "crn": "64971",
+          "crossListedCourseIds": [],
+          "fetchedAt": "2026-09-03T14:12:00Z",
+          "id": "uiuc:s:2026-fa:64971",
+          "instructorsRaw": [
+            "Petrakis, Jun-Seo"
+          ],
+          "isOpen": true,
+          "meetings": [
+            {
+              "building": "Wrenfield Laboratory",
+              "days": [
+                "T",
+                "R"
+              ],
+              "end": "15:20",
+              "room": "157",
+              "start": "14:00",
+              "type": "LCD"
+            }
+          ],
+          "professorIds": [
+            "uiuc:p:jun-seo-petrakis"
+          ],
+          "schoolId": "uiuc",
+          "seatsKnown": true,
+          "sectionCode": "DL1",
+          "status": "open",
+          "term": "2026-fa",
+          "type": "LCD"
+        },
+        {
+          "courseId": "uiuc:CS:105",
+          "crn": "67127",
+          "crossListedCourseIds": [],
+          "fetchedAt": "2026-09-03T14:12:00Z",
+          "id": "uiuc:s:2026-fa:67127",
+          "instructorsRaw": [
+            "Petrakis, J"
+          ],
+          "isOpen": true,
+          "meetings": [
+            {
+              "building": "Oberon Technology Center",
+              "days": [
+                "T",
+                "R"
+              ],
+              "end": "12:20",
+              "room": "271",
+              "start": "11:00",
+              "type": "DIS"
+            }
+          ],
+          "professorIds": [
+            "uiuc:p:jun-seo-petrakis"
+          ],
+          "schoolId": "uiuc",
+          "seatsKnown": true,
+          "sectionCode": "ADD",
+          "status": "open",
+          "term": "2026-fa",
+          "type": "DIS"
+        }
+      ],
+      "positiveReviews": [
+        {
+          "courseId": "uiuc:CS:101",
+          "courseLabel": "CS 101",
+          "date": "2023-07-15",
+          "difficulty": 4,
+          "gradeReceived": "C+",
+          "helpfulVotes": 5,
+          "id": "uiuc:r:demo-r-000307",
+          "professorId": "uiuc:p:jun-seo-petrakis",
+          "quality": 5,
+          "sentiment": 0.85,
+          "sourceTags": [
+            "Clear grading criteria",
+            "Get ready to read"
+          ],
+          "text": "Absolutely loved this class from week one. Took CS 101 during a heavy semester. The book is essential; the slides alone are not enough. Very clear explanations even for the trickiest topics. Redo the old exams under…",
+          "vibeTags": [
+            "clear-lectures"
+          ],
+          "wouldTakeAgain": true
+        },
+        {
+          "courseId": "uiuc:CS:105",
+          "courseLabel": "CS 105",
+          "date": "2021-09-03",
+          "difficulty": 4,
+          "gradeReceived": "A+",
+          "helpfulVotes": 5,
+          "id": "uiuc:r:demo-r-000313",
+          "professorId": "uiuc:p:jun-seo-petrakis",
+          "quality": 4,
+          "sentiment": 0.5,
+          "sourceTags": [
+            "Amazing lectures",
+            "Test heavy"
+          ],
+          "text": "One of the most engaging instructors in the department. You need the textbook; lectures assume you have read it. Budget more time than you think for the project. Do the work and you will be fine.",
+          "vibeTags": [
+            "engaging",
+            "must-read-textbook"
+          ],
+          "wouldTakeAgain": true
+        }
+      ],
+      "professor": {
+        "courseIds": [
+          "uiuc:CS:101",
+          "uiuc:CS:105",
+          "uiuc:CS:374"
+        ],
+        "department": "Computer Science",
+        "displayName": "Jun-Seo Petrakis",
+        "firstName": "Jun-Seo",
+        "id": "uiuc:p:jun-seo-petrakis",
+        "isFictional": true,
+        "kind": "reviewed",
+        "lastName": "Petrakis",
+        "nameKey": {
+          "first": "jun seo",
+          "firstCompact": "junseo",
+          "firstInitial": "j",
+          "firstToken": "jun",
+          "firstTokens": [
+            "jun",
+            "seo"
+          ],
+          "last": "petrakis",
+          "lastCompact": "petrakis",
+          "lastTokens": [
+            "petrakis"
+          ],
+          "middleInitials": [
+            "s"
+          ],
+          "raw": "Petrakis, Jun-Seo"
+        },
+        "nameVariants": [
+          "Petrakis, J",
+          "Petrakis, Jun-Seo"
+        ],
+        "reviewSourceId": "demo-p-023",
+        "schoolId": "uiuc",
+        "slug": "jun-seo-petrakis",
+        "subjects": [
+          "CS"
+        ]
+      },
+      "rank": null,
+      "scores": {
+        "aRate": 0.349,
+        "composite": 70,
+        "confidence": "medium",
+        "criticalCount": 0,
+        "deltaComparableN": 2238,
+        "dfwRate": 0.122,
+        "difficultyMean": 4.111,
+        "gpaDelta": 0.024,
+        "gpaMean": 2.918,
+        "gradeRows": 18,
+        "positiveCount": 8,
+        "priorMean": 3.479,
+        "ratingRaw": 4.333,
+        "ratingShrunk": 4.028,
+        "reviewCount": 9,
+        "soleInstructor": false,
+        "studentsGraded": 2238,
+        "wRate": 0.023,
+        "withdrawn": 52,
+        "wouldTakeAgainPct": 77.778,
+        "yearsActive": 5
+      },
+      "sectionsThisTerm": 4,
+      "summary": {
+        "bestFor": "Students who are disciplined, read ahead, and prefer a textbook‑driven, fast‑paced environment.",
+        "confidence": "medium",
+        "evidenceReviewIds": [
+          "uiuc:r:demo-r-000315",
+          "uiuc:r:demo-r-000314",
+          "uiuc:r:demo-r-000307",
+          "uiuc:r:demo-r-000310",
+          "uiuc:r:demo-r-000309",
+          "uiuc:r:demo-r-000313",
+          "uiuc:r:demo-r-000311",
+          "uiuc:r:demo-r-000308",
+          "uiuc:r:demo-r-000312"
+        ],
+        "format": "lecture-heavy",
+        "generatedAt": "2026-09-06T22:33:54.302Z",
+        "gradingNote": "In 5 course(s) over 5 year(s), GPA averaged 2.92 (+0.02 vs. the same courses taught by others); 2.3% withdrew.",
+        "inputHash": "41ad3fd82b94e30d",
+        "model": "openai/gpt-oss-20b",
+        "professorId": "uiuc:p:jun-seo-petrakis",
+        "promptVersion": 1,
+        "provider": "Groq",
+        "reviewCount": 9,
+        "source": "openai-compatible",
+        "strengths": [
+          "Clear step‑by‑step explanations",
+          "Fast‑paced lectures that assume prior reading",
+          "Strong emphasis on practice problems",
+          "Respectful of students’ time"
+        ],
+        "teachingStyle": [
+          "fast-paced",
+          "clear explanations",
+          "textbook-focused"
+        ],
+        "verdict": "Based on 9 reviews, this instructor is fast‑paced and clear but requires heavy textbook reading.",
+        "watchOuts": [
+          "Disorganized discussion sections",
+          "Heavy reading load",
+          "Requires early office‑hour visits"
+        ],
+        "workload": "heavy"
+      },
+      "vibeTags": [
+        "clear-lectures",
+        "must-read-textbook",
+        "fast-paced"
+      ]
+    },
+    {
+      "badges": [],
+      "courses": [
+        {
+          "aRate": 0.74,
+          "baselineGpa": 3.512,
+          "baselineN": 2685,
+          "buckets": {
+            "a": 441,
+            "aMinus": 392,
+            "aPlus": 0,
+            "b": 26,
+            "bMinus": 39,
+            "bPlus": 56,
+            "c": 27,
+            "cMinus": 12,
+            "cPlus": 15,
+            "d": 8,
+            "dMinus": 51,
+            "dPlus": 6,
+            "f": 52,
+            "w": 25
+          },
+          "courseId": "uiuc:CS:128",
+          "delta": -0.196,
+          "dfwRate": 0.123,
+          "gpa": 3.316,
+          "gradeRows": 3,
+          "graded": 1125,
+          "isHeadline": true,
+          "number": "128",
+          "subject": "CS",
+          "title": "Intro to Computer Science II",
+          "wRate": 0.022,
+          "withdrawn": 25
+        },
+        {
+          "aRate": 0.361,
+          "baselineGpa": 2.965,
+          "baselineN": 715,
+          "buckets": {
+            "a": 134,
+            "aMinus": 112,
+            "aPlus": 36,
+            "b": 78,
+            "bMinus": 63,
+            "bPlus": 91,
+            "c": 27,
+            "cMinus": 59,
+            "cPlus": 59,
+            "d": 30,
+            "dMinus": 20,
+            "dPlus": 25,
+            "f": 47,
+            "w": 14
+          },
+          "courseId": "uiuc:CS:241",
+          "delta": -0.196,
+          "dfwRate": 0.171,
+          "gpa": 2.769,
+          "gradeRows": 5,
+          "graded": 781,
+          "isHeadline": true,
+          "number": "241",
+          "subject": "CS",
+          "title": "System Programming",
+          "wRate": 0.018,
+          "withdrawn": 14
+        },
+        {
+          "aRate": 0.288,
+          "baselineGpa": 2.795,
+          "baselineN": 3705,
+          "buckets": {
+            "a": 124,
+            "aMinus": 92,
+            "aPlus": 44,
+            "b": 136,
+            "bMinus": 67,
+            "bPlus": 132,
+            "c": 95,
+            "cMinus": 27,
+            "cPlus": 82,
+            "d": 36,
+            "dMinus": 26,
+            "dPlus": 24,
+            "f": 17,
+            "w": 14
+          },
+          "courseId": "uiuc:CS:374",
+          "delta": 0.029,
+          "dfwRate": 0.128,
+          "gpa": 2.824,
+          "gradeRows": 3,
+          "graded": 902,
+          "isHeadline": true,
+          "number": "374",
+          "subject": "CS",
+          "title": "Intro to Algs & Models of Comp",
+          "wRate": 0.015,
+          "withdrawn": 14
+        },
+        {
+          "aRate": 0.387,
+          "baselineGpa": 2.926,
+          "baselineN": 36,
+          "buckets": {
+            "a": 6,
+            "aMinus": 5,
+            "aPlus": 1,
+            "b": 1,
+            "bMinus": 3,
+            "bPlus": 2,
+            "c": 2,
+            "cMinus": 3,
+            "cPlus": 2,
+            "d": 1,
+            "dMinus": 1,
+            "dPlus": 2,
+            "f": 2,
+            "w": 0
+          },
+          "courseId": "uiuc:CS:241",
+          "delta": -0.28,
+          "dfwRate": 0.194,
+          "gpa": 2.646,
+          "gradeRows": 1,
+          "graded": 31,
+          "isHeadline": false,
+          "number": "241",
+          "subject": "CS",
+          "title": "System Programming",
+          "wRate": 0,
+          "withdrawn": 0
+        }
+      ],
+      "distribution": {
+        "a": 699,
+        "aMinus": 596,
+        "aPlus": 80,
+        "b": 240,
+        "bMinus": 169,
+        "bPlus": 279,
+        "c": 149,
+        "cMinus": 98,
+        "cPlus": 156,
+        "d": 74,
+        "dMinus": 97,
+        "dPlus": 55,
+        "f": 116,
+        "w": 53
+      },
+      "gpaByYear": [
+        {
+          "gpa": 3.021,
+          "n": 970,
+          "year": 2021
+        },
+        {
+          "gpa": 3.009,
+          "n": 1011,
+          "year": 2022
+        },
+        {
+          "gpa": 2.984,
+          "n": 827,
+          "year": 2023
+        }
+      ],
+      "matchProvenance": [
+        {
+          "instructorRaw": "Mbeki-Sandoval, Thomas",
+          "method": "exact",
+          "rows": 9,
+          "score": 1,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Mbeki Sandoval, Thomas",
+          "method": "exact",
+          "rows": 2,
+          "score": 1,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Mbeki-Sandoval, T",
+          "method": "initial",
+          "rows": 1,
+          "score": 0.85,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Mbeki-Sandoval, Thomas",
+          "method": "exact",
+          "rows": 1,
+          "score": 1,
+          "source": "schedule"
+        }
+      ],
+      "openSections": [],
+      "positiveReviews": [
+        {
+          "courseId": "uiuc:CS:128",
+          "courseLabel": "CS 128",
+          "date": "2022-08-08",
+          "difficulty": 3,
+          "gradeReceived": null,
+          "helpfulVotes": 5,
+          "id": "uiuc:r:demo-r-000277",
+          "professorId": "uiuc:p:thomas-mbeki-sandoval",
+          "quality": 5,
+          "sentiment": 0.9,
+          "sourceTags": [
+            "Amazing lectures"
+          ],
+          "text": "Clear, kind, and fair — everything you want in a professor. This was for CS 128. Fair grading, fair deadlines, fair professor. The lectures are incredibly clear and build on each other logically. Take good notes; the…",
+          "vibeTags": [
+            "fair-grading",
+            "great-notes"
+          ],
+          "wouldTakeAgain": true
+        },
+        {
+          "courseId": "uiuc:CS:241",
+          "courseLabel": "CS 241",
+          "date": "2022-01-20",
+          "difficulty": 5,
+          "gradeReceived": "A",
+          "helpfulVotes": 5,
+          "id": "uiuc:r:demo-r-000276",
+          "professorId": "uiuc:p:thomas-mbeki-sandoval",
+          "quality": 5,
+          "sentiment": 0.8,
+          "sourceTags": [
+            "Clear grading criteria",
+            "Gives good feedback",
+            "Skip class? You won't pass"
+          ],
+          "text": "I recommend this professor to everyone in my major. This was for CS 241. Clear and well structured lectures from day one. Fair grader who explains exactly where points were lost. The textbook edition kept changing…",
+          "vibeTags": [
+            "fair-grading"
+          ],
+          "wouldTakeAgain": true
+        }
+      ],
+      "professor": {
+        "courseIds": [
+          "uiuc:CS:128",
+          "uiuc:CS:241",
+          "uiuc:CS:374"
+        ],
+        "department": "Computer Science",
+        "displayName": "Thomas Mbeki-Sandoval",
+        "firstName": "Thomas",
+        "id": "uiuc:p:thomas-mbeki-sandoval",
+        "isFictional": true,
+        "kind": "reviewed",
+        "lastName": "Mbeki-Sandoval",
+        "nameKey": {
+          "first": "thomas",
+          "firstCompact": "thomas",
+          "firstInitial": "t",
+          "firstToken": "thomas",
+          "firstTokens": [
+            "thomas"
+          ],
+          "last": "mbeki sandoval",
+          "lastCompact": "mbekisandoval",
+          "lastTokens": [
+            "mbeki",
+            "sandoval"
+          ],
+          "middleInitials": [],
+          "raw": "Mbeki-Sandoval, Thomas"
+        },
+        "nameVariants": [
+          "Mbeki Sandoval, Thomas",
+          "Mbeki-Sandoval, T",
+          "Mbeki-Sandoval, Thomas"
+        ],
+        "reviewSourceId": "demo-p-020",
+        "schoolId": "uiuc",
+        "slug": "thomas-mbeki-sandoval",
+        "subjects": [
+          "CS"
+        ]
+      },
+      "rank": null,
+      "scores": {
+        "aRate": 0.49,
+        "composite": 63.5,
+        "confidence": "medium",
+        "criticalCount": 0,
+        "deltaComparableN": 2808,
+        "dfwRate": 0.138,
+        "difficultyMean": 3.455,
+        "gpaDelta": -0.124,
+        "gpaMean": 3.006,
+        "gradeRows": 11,
+        "positiveCount": 7,
+        "priorMean": 3.479,
+        "ratingRaw": 4.091,
+        "ratingShrunk": 3.9,
+        "reviewCount": 11,
+        "soleInstructor": false,
+        "studentsGraded": 2808,
+        "wRate": 0.019,
+        "withdrawn": 53,
+        "wouldTakeAgainPct": 63.636,
+        "yearsActive": 3
+      },
+      "sectionsThisTerm": 1,
+      "summary": {
+        "bestFor": "Students who prefer structured, transparent instruction and are comfortable with rigorous grading",
+        "confidence": "medium",
+        "evidenceReviewIds": [
+          "uiuc:r:demo-r-000274",
+          "uiuc:r:demo-r-000275",
+          "uiuc:r:demo-r-000276",
+          "uiuc:r:demo-r-000281",
+          "uiuc:r:demo-r-000279",
+          "uiuc:r:demo-r-000283"
+        ],
+        "format": "lecture-heavy",
+        "generatedAt": "2026-09-06T22:43:10.619Z",
+        "gradingNote": "In 4 course(s) over 3 year(s), GPA averaged 3.01 (−0.12 vs. the same courses taught by others); 1.9% withdrew.",
+        "inputHash": "03b079553d909ef2",
+        "model": "openai/gpt-oss-20b",
+        "professorId": "uiuc:p:thomas-mbeki-sandoval",
+        "promptVersion": 1,
+        "provider": "Groq",
+        "reviewCount": 11,
+        "source": "openai-compatible",
+        "strengths": [
+          "Clear explanations even for tough topics",
+          "Fair exams with no trick questions",
+          "Consistent grading policy",
+          "Encourages study groups"
+        ],
+        "teachingStyle": [
+          "clear lectures",
+          "fair grading",
+          "office hour support"
+        ],
+        "verdict": "Based on 11 reviews, this professor is clear and fair, but the autograder can be unforgiving.",
+        "watchOuts": [
+          "Autograder is picky and unforgiving",
+          "Late policy strict with no exceptions",
+          "Course website confusing"
+        ],
+        "workload": "moderate"
+      },
+      "vibeTags": [
+        "fair-grading",
+        "clear-lectures"
+      ]
+    },
+    {
+      "badges": [],
+      "courses": [
+        {
+          "aRate": 0.627,
+          "baselineGpa": 3.482,
+          "baselineN": 200,
+          "buckets": {
+            "a": 89,
+            "aMinus": 33,
+            "aPlus": 68,
+            "b": 16,
+            "bMinus": 24,
+            "bPlus": 25,
+            "c": 13,
+            "cMinus": 7,
+            "cPlus": 4,
+            "d": 1,
+            "dMinus": 4,
+            "dPlus": 8,
+            "f": 11,
+            "w": 7
+          },
+          "courseId": "uiuc:CS:101",
+          "delta": -0.163,
+          "dfwRate": 0.1,
+          "gpa": 3.319,
+          "gradeRows": 7,
+          "graded": 303,
+          "isHeadline": true,
+          "number": "101",
+          "subject": "CS",
+          "title": "Intro Computing: Engrg & Sci",
+          "wRate": 0.023,
+          "withdrawn": 7
+        },
+        {
+          "aRate": 0.685,
+          "baselineGpa": null,
+          "baselineN": 0,
+          "buckets": {
+            "a": 146,
+            "aMinus": 40,
+            "aPlus": 47,
+            "b": 27,
+            "bMinus": 5,
+            "bPlus": 31,
+            "c": 9,
+            "cMinus": 9,
+            "cPlus": 5,
+            "d": 2,
+            "dMinus": 5,
+            "dPlus": 5,
+            "f": 9,
+            "w": 8
+          },
+          "courseId": "uiuc:CS:498",
+          "delta": null,
+          "dfwRate": 0.083,
+          "gpa": 3.45,
+          "gradeRows": 5,
+          "graded": 340,
+          "isHeadline": true,
+          "number": "498",
+          "subject": "CS",
+          "title": "Cloud Computing Applications",
+          "wRate": 0.023,
+          "withdrawn": 8
+        },
+        {
+          "aRate": 0.607,
+          "baselineGpa": 3.544,
+          "baselineN": 19,
+          "buckets": {
+            "a": 8,
+            "aMinus": 2,
+            "aPlus": 7,
+            "b": 4,
+            "bMinus": 1,
+            "bPlus": 3,
+            "c": 0,
+            "cMinus": 1,
+            "cPlus": 0,
+            "d": 0,
+            "dMinus": 0,
+            "dPlus": 0,
+            "f": 2,
+            "w": 1
+          },
+          "courseId": "uiuc:CS:101",
+          "delta": -0.198,
+          "dfwRate": 0.103,
+          "gpa": 3.345,
+          "gradeRows": 2,
+          "graded": 28,
+          "isHeadline": false,
+          "number": "101",
+          "subject": "CS",
+          "title": "Intro Computing: Engrg & Sci",
+          "wRate": 0.034,
+          "withdrawn": 1
+        },
+        {
+          "aRate": 0.769,
+          "baselineGpa": null,
+          "baselineN": 0,
+          "buckets": {
+            "a": 16,
+            "aMinus": 6,
+            "aPlus": 8,
+            "b": 3,
+            "bMinus": 0,
+            "bPlus": 1,
+            "c": 0,
+            "cMinus": 1,
+            "cPlus": 0,
+            "d": 3,
+            "dMinus": 0,
+            "dPlus": 0,
+            "f": 1,
+            "w": 2
+          },
+          "courseId": "uiuc:CS:498",
+          "delta": null,
+          "dfwRate": 0.146,
+          "gpa": 3.462,
+          "gradeRows": 2,
+          "graded": 39,
+          "isHeadline": false,
+          "number": "498",
+          "subject": "CS",
+          "title": "Cloud Computing Applications",
+          "wRate": 0.049,
+          "withdrawn": 2
+        }
+      ],
+      "distribution": {
+        "a": 235,
+        "aMinus": 73,
+        "aPlus": 115,
+        "b": 43,
+        "bMinus": 29,
+        "bPlus": 56,
+        "c": 22,
+        "cMinus": 16,
+        "cPlus": 9,
+        "d": 3,
+        "dMinus": 9,
+        "dPlus": 13,
+        "f": 20,
+        "w": 15
+      },
+      "gpaByYear": [
+        {
+          "gpa": 3.352,
+          "n": 151,
+          "year": 2022
+        },
+        {
+          "gpa": 3.423,
+          "n": 187,
+          "year": 2023
+        },
+        {
+          "gpa": 3.304,
+          "n": 172,
+          "year": 2024
+        },
+        {
+          "gpa": 3.491,
+          "n": 133,
+          "year": 2025
+        }
+      ],
+      "matchProvenance": [
+        {
+          "instructorRaw": "Réaumur, Edward",
+          "method": "exact",
+          "rows": 9,
+          "score": 1,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Réaumur, E",
+          "method": "initial",
+          "rows": 7,
+          "score": 0.85,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Reaumur, Edward",
+          "method": "exact",
+          "rows": 1,
+          "score": 1,
+          "source": "grades"
+        }
+      ],
+      "openSections": [],
+      "positiveReviews": [
+        {
+          "courseId": "uiuc:CS:498",
+          "courseLabel": "CS 498",
+          "date": "2023-02-13",
+          "difficulty": 4,
+          "gradeReceived": null,
+          "helpfulVotes": 7,
+          "id": "uiuc:r:demo-r-000295",
+          "professorId": "uiuc:p:edward-reaumur",
+          "quality": 4,
+          "sentiment": 0.5,
+          "sourceTags": [
+            "Hilarious",
+            "Lecture heavy",
+            "Respected"
+          ],
+          "text": "Take this class with this professor if you possibly can. Exams are fair and reflect what was taught. The homework was much longer than advertised. Take the quizzes seriously, they add up. Solid pick if it fits your…",
+          "vibeTags": [
+            "fair-grading"
+          ],
+          "wouldTakeAgain": true
+        },
+        {
+          "courseId": "uiuc:CS:101",
+          "courseLabel": "CS 101",
+          "date": "2024-08-14",
+          "difficulty": 4,
+          "gradeReceived": "F",
+          "helpfulVotes": 5,
+          "id": "uiuc:r:demo-r-000296",
+          "professorId": "uiuc:p:edward-reaumur",
+          "quality": 4,
+          "sentiment": 0.5,
+          "sourceTags": [
+            "Gives good feedback",
+            "Respected"
+          ],
+          "text": "This is what a well-run course looks like. Fair and transparent grading policy from the start. The notes are so thorough that the textbook is optional. Budget more time than you think for the project. Solid pick if it…",
+          "vibeTags": [],
+          "wouldTakeAgain": true
+        }
+      ],
+      "professor": {
+        "courseIds": [
+          "uiuc:CS:101",
+          "uiuc:CS:498"
+        ],
+        "department": "Computer Science",
+        "displayName": "Edward Réaumur",
+        "firstName": "Edward",
+        "id": "uiuc:p:edward-reaumur",
+        "isFictional": true,
+        "kind": "reviewed",
+        "lastName": "Réaumur",
+        "nameKey": {
+          "first": "edward",
+          "firstCompact": "edward",
+          "firstInitial": "e",
+          "firstToken": "edward",
+          "firstTokens": [
+            "edward"
+          ],
+          "last": "reaumur",
+          "lastCompact": "reaumur",
+          "lastTokens": [
+            "reaumur"
+          ],
+          "middleInitials": [],
+          "raw": "Réaumur, Edward"
+        },
+        "nameVariants": [
+          "Reaumur, Edward",
+          "Réaumur, E",
+          "Réaumur, Edward"
+        ],
+        "reviewSourceId": "demo-p-021",
+        "schoolId": "uiuc",
+        "slug": "edward-reaumur",
+        "subjects": [
+          "CS"
+        ]
+      },
+      "rank": null,
+      "scores": {
+        "aRate": 0.658,
+        "composite": 63.3,
+        "confidence": "high",
+        "criticalCount": 1,
+        "deltaComparableN": 303,
+        "dfwRate": 0.091,
+        "difficultyMean": 3.5,
+        "gpaDelta": -0.163,
+        "gpaMean": 3.389,
+        "gradeRows": 12,
+        "positiveCount": 14,
+        "priorMean": 3.479,
+        "ratingRaw": 3.944,
+        "ratingShrunk": 3.843,
+        "reviewCount": 18,
+        "soleInstructor": false,
+        "studentsGraded": 643,
+        "wRate": 0.023,
+        "withdrawn": 15,
+        "wouldTakeAgainPct": 72.222,
+        "yearsActive": 4
+      },
+      "sectionsThisTerm": 0,
+      "summary": {
+        "bestFor": "Students who thrive on active participation and thorough notes, especially in CS 498 and CS 101.",
+        "confidence": "high",
+        "evidenceReviewIds": [
+          "uiuc:r:demo-r-000285",
+          "uiuc:r:demo-r-000300",
+          "uiuc:r:demo-r-000296",
+          "uiuc:r:demo-r-000290"
+        ],
+        "format": "lecture-heavy",
+        "generatedAt": "2026-09-06T22:26:45.910Z",
+        "gradingNote": "In 4 course(s) over 4 year(s), GPA averaged 3.39 (−0.16 vs. the same courses taught by others); 2.3% withdrew.",
+        "inputHash": "48372d9216a338f6",
+        "model": "openai/gpt-oss-20b",
+        "professorId": "uiuc:p:edward-reaumur",
+        "promptVersion": 1,
+        "provider": "Groq",
+        "reviewCount": 18,
+        "source": "openai-compatible",
+        "strengths": [
+          "Excellent lecture notes",
+          "Fair grading",
+          "Clear rubric",
+          "Encourages questions"
+        ],
+        "teachingStyle": [
+          "engaging",
+          "interactive",
+          "note‑rich"
+        ],
+        "verdict": "Based on 18 reviews, this instructor is engaging and well‑organized, but the workload can be heavy and the textbook is essential.",
+        "watchOuts": [
+          "Heavy workload",
+          "Textbook required"
+        ],
+        "workload": "heavy"
+      },
+      "vibeTags": [
+        "engaging",
+        "must-read-textbook"
+      ]
+    },
+    {
+      "badges": [],
+      "courses": [
+        {
+          "aRate": 0.797,
+          "baselineGpa": 3.616,
+          "baselineN": 2904,
+          "buckets": {
+            "a": 515,
+            "aMinus": 13,
+            "aPlus": 507,
+            "b": 47,
+            "bMinus": 14,
+            "bPlus": 29,
+            "c": 42,
+            "cMinus": 17,
+            "cPlus": 34,
+            "d": 24,
+            "dMinus": 10,
+            "dPlus": 12,
+            "f": 34,
+            "w": 34
+          },
+          "courseId": "uiuc:CS:100",
+          "delta": -0.034,
+          "dfwRate": 0.086,
+          "gpa": 3.582,
+          "gradeRows": 5,
+          "graded": 1298,
+          "isHeadline": true,
+          "number": "100",
+          "subject": "CS",
+          "title": "Computer Science Orientation",
+          "wRate": 0.026,
+          "withdrawn": 34
+        },
+        {
+          "aRate": 0.56,
+          "baselineGpa": 3.188,
+          "baselineN": 623,
+          "buckets": {
+            "a": 33,
+            "aMinus": 32,
+            "aPlus": 66,
+            "b": 23,
+            "bMinus": 11,
+            "bPlus": 25,
+            "c": 9,
+            "cMinus": 8,
+            "cPlus": 11,
+            "d": 7,
+            "dMinus": 2,
+            "dPlus": 3,
+            "f": 4,
+            "w": 4
+          },
+          "courseId": "uiuc:CS:105",
+          "delta": 0.079,
+          "dfwRate": 0.084,
+          "gpa": 3.267,
+          "gradeRows": 6,
+          "graded": 234,
+          "isHeadline": true,
+          "number": "105",
+          "subject": "CS",
+          "title": "Intro Computing: Non-Tech",
+          "wRate": 0.017,
+          "withdrawn": 4
+        },
+        {
+          "aRate": 0.382,
+          "baselineGpa": 3.113,
+          "baselineN": 163,
+          "buckets": {
+            "a": 17,
+            "aMinus": 13,
+            "aPlus": 28,
+            "b": 28,
+            "bMinus": 7,
+            "bPlus": 23,
+            "c": 2,
+            "cMinus": 4,
+            "cPlus": 15,
+            "d": 4,
+            "dMinus": 3,
+            "dPlus": 7,
+            "f": 1,
+            "w": 3
+          },
+          "courseId": "uiuc:CS:173",
+          "delta": -0.034,
+          "dfwRate": 0.116,
+          "gpa": 3.079,
+          "gradeRows": 6,
+          "graded": 152,
+          "isHeadline": true,
+          "number": "173",
+          "subject": "CS",
+          "title": "Discrete Structures",
+          "wRate": 0.019,
+          "withdrawn": 3
+        }
+      ],
+      "distribution": {
+        "a": 565,
+        "aMinus": 58,
+        "aPlus": 601,
+        "b": 98,
+        "bMinus": 32,
+        "bPlus": 77,
+        "c": 53,
+        "cMinus": 29,
+        "cPlus": 60,
+        "d": 35,
+        "dMinus": 15,
+        "dPlus": 22,
+        "f": 39,
+        "w": 41
+      },
+      "gpaByYear": [
+        {
+          "gpa": 3.508,
+          "n": 390,
+          "year": 2021
+        },
+        {
+          "gpa": 3.355,
+          "n": 326,
+          "year": 2022
+        },
+        {
+          "gpa": 3.554,
+          "n": 222,
+          "year": 2023
+        },
+        {
+          "gpa": 3.414,
+          "n": 339,
+          "year": 2024
+        },
+        {
+          "gpa": 3.619,
+          "n": 407,
+          "year": 2025
+        }
+      ],
+      "matchProvenance": [
+        {
+          "instructorRaw": "Lindgren, Gwendolyn",
+          "method": "exact",
+          "rows": 16,
+          "score": 1,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Lindgren, G",
+          "method": "initial",
+          "rows": 1,
+          "score": 0.85,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Lindgren, G",
+          "method": "initial",
+          "rows": 2,
+          "score": 0.85,
+          "source": "schedule"
+        },
+        {
+          "instructorRaw": "Lindgren, Gwendolyn",
+          "method": "exact",
+          "rows": 1,
+          "score": 1,
+          "source": "schedule"
+        }
+      ],
+      "openSections": [],
+      "positiveReviews": [
+        {
+          "courseId": "uiuc:CS:105",
+          "courseLabel": "CS 105",
+          "date": "2023-06-17",
+          "difficulty": 4,
+          "gradeReceived": "A+",
+          "helpfulVotes": 8,
+          "id": "uiuc:r:demo-r-000216",
+          "professorId": "uiuc:p:gwendolyn-lindgren",
+          "quality": 5,
+          "sentiment": 0.85,
+          "sourceTags": [
+            "Gives good feedback"
+          ],
+          "text": "Honestly one of the best professors I have had here. I took CS 105 and the follow-up course with the same professor. Clear lectures with worked examples every single time. The pace was uneven from week to week. Ask for…",
+          "vibeTags": [
+            "clear-lectures"
+          ],
+          "wouldTakeAgain": true
+        },
+        {
+          "courseId": "uiuc:CS:173",
+          "courseLabel": "CS 173",
+          "date": "2021-04-24",
+          "difficulty": 2,
+          "gradeReceived": "B-",
+          "helpfulVotes": 5,
+          "id": "uiuc:r:demo-r-000227",
+          "professorId": "uiuc:p:gwendolyn-lindgren",
+          "quality": 4,
+          "sentiment": 0.4,
+          "sourceTags": [
+            "Graded by few things"
+          ],
+          "text": "I would sign up for anything this professor teaches. Context: CS 173, large lecture section. Explains clearly, step by step, without skipping the hard parts. Expect a curve — the raw averages look scary but the final…",
+          "vibeTags": [
+            "clear-lectures",
+            "curves-generously"
+          ],
+          "wouldTakeAgain": true
+        }
+      ],
+      "professor": {
+        "courseIds": [
+          "uiuc:CS:100",
+          "uiuc:CS:105",
+          "uiuc:CS:173"
+        ],
+        "department": "Computer Science",
+        "displayName": "Gwendolyn Lindgren",
+        "firstName": "Gwendolyn",
+        "id": "uiuc:p:gwendolyn-lindgren",
+        "isFictional": true,
+        "kind": "reviewed",
+        "lastName": "Lindgren",
+        "nameKey": {
+          "first": "gwendolyn",
+          "firstCompact": "gwendolyn",
+          "firstInitial": "g",
+          "firstToken": "gwendolyn",
+          "firstTokens": [
+            "gwendolyn"
+          ],
+          "last": "lindgren",
+          "lastCompact": "lindgren",
+          "lastTokens": [
+            "lindgren"
+          ],
+          "middleInitials": [],
+          "raw": "Lindgren, Gwendolyn"
+        },
+        "nameVariants": [
+          "Lindgren, G",
+          "Lindgren, Gwendolyn"
+        ],
+        "reviewSourceId": "demo-p-016",
+        "schoolId": "uiuc",
+        "slug": "gwendolyn-lindgren",
+        "subjects": [
+          "CS"
+        ]
+      },
+      "rank": null,
+      "scores": {
+        "aRate": 0.727,
+        "composite": 64.3,
+        "confidence": "high",
+        "criticalCount": 0,
+        "deltaComparableN": 1684,
+        "dfwRate": 0.088,
+        "difficultyMean": 2.8,
+        "gpaDelta": -0.019,
+        "gpaMean": 3.492,
+        "gradeRows": 17,
+        "positiveCount": 13,
+        "priorMean": 3.479,
+        "ratingRaw": 3.85,
+        "ratingShrunk": 3.776,
+        "reviewCount": 20,
+        "soleInstructor": false,
+        "studentsGraded": 1684,
+        "wRate": 0.024,
+        "withdrawn": 41,
+        "wouldTakeAgainPct": 70,
+        "yearsActive": 5
+      },
+      "sectionsThisTerm": 3,
+      "summary": {
+        "bestFor": "Students who benefit from structured, step-by-step explanations and want a supportive instructor who checks understanding.",
+        "confidence": "high",
+        "evidenceReviewIds": [
+          "uiuc:r:demo-r-000231",
+          "uiuc:r:demo-r-000233",
+          "uiuc:r:demo-r-000216",
+          "uiuc:r:demo-r-000220",
+          "uiuc:r:demo-r-000222",
+          "uiuc:r:demo-r-000224",
+          "uiuc:r:demo-r-000221",
+          "uiuc:r:demo-r-000229",
+          "uiuc:r:demo-r-000227"
+        ],
+        "format": "mixed",
+        "generatedAt": "2026-09-06T23:17:04.586Z",
+        "gradingNote": "In 3 course(s) over 5 year(s), GPA averaged 3.49 (−0.02 vs. the same courses taught by others); 2.4% withdrew.",
+        "inputHash": "8d26a9eb288386e2",
+        "model": "qwen/qwen3.8-27b",
+        "professorId": "uiuc:p:gwendolyn-lindgren",
+        "promptVersion": 1,
+        "provider": "Groq",
+        "reviewCount": 20,
+        "source": "openai-compatible",
+        "strengths": [
+          "Lectures are consistently clear with worked examples every session",
+          "Generous curve at end of semester per multiple reviews",
+          "Responsive in office hours and email; follows up on understanding"
+        ],
+        "teachingStyle": [
+          "Step-by-step with worked examples",
+          "Caring and approachable",
+          "Clear logical structure"
+        ],
+        "verdict": "A solid, caring instructor with clear lectures and a generally generous curve — 20 reviews rate her 3.8/5 with 70% willing to retake.",
+        "watchOuts": [
+          "Exams can be harder than homework suggests; limited partial credit",
+          "Pace is uneven week to week; some weeks drag",
+          "One review notes promised extra credit never materialized"
+        ],
+        "workload": "moderate"
+      },
+      "vibeTags": [
+        "clear-lectures",
+        "curves-generously",
+        "caring"
+      ]
+    },
+    {
+      "badges": [
+        "open-now"
+      ],
+      "courses": [],
+      "distribution": {
+        "a": 0,
+        "aMinus": 0,
+        "aPlus": 0,
+        "b": 0,
+        "bMinus": 0,
+        "bPlus": 0,
+        "c": 0,
+        "cMinus": 0,
+        "cPlus": 0,
+        "d": 0,
+        "dMinus": 0,
+        "dPlus": 0,
+        "f": 0,
+        "w": 0
+      },
+      "gpaByYear": [],
+      "matchProvenance": [
+        {
+          "instructorRaw": "Lachance, M",
+          "method": "initial",
+          "rows": 3,
+          "score": 0.85,
+          "source": "schedule"
+        }
+      ],
+      "openSections": [
+        {
+          "courseId": "uiuc:CS:173",
+          "crn": "57572",
+          "crossListedCourseIds": [],
+          "fetchedAt": "2026-09-03T14:12:00Z",
+          "id": "uiuc:s:2026-fa:57572",
+          "instructorsRaw": [
+            "Lachance, M"
+          ],
+          "isOpen": true,
+          "meetings": [
+            {
+              "building": null,
+              "days": [],
+              "end": null,
+              "room": null,
+              "start": null,
+              "type": "LEC"
+            }
+          ],
+          "professorIds": [
+            "uiuc:p:michael-lachance"
+          ],
+          "schoolId": "uiuc",
+          "seatsKnown": true,
+          "sectionCode": "DL1",
+          "status": "open",
+          "term": "2026-fa",
+          "type": "LEC"
+        },
+        {
+          "courseId": "uiuc:CS:233",
+          "crn": "64433",
+          "crossListedCourseIds": [],
+          "fetchedAt": "2026-09-03T14:12:00Z",
+          "id": "uiuc:s:2026-fa:64433",
+          "instructorsRaw": [
+            "Lachance, M"
+          ],
+          "isOpen": true,
+          "meetings": [
+            {
+              "building": "Larkin Mathematics Hall",
+              "days": [
+                "M",
+                "W",
+                "F"
+              ],
+              "end": "12:50",
+              "room": "180",
+              "start": "12:00",
+              "type": "LEC"
+            }
+          ],
+          "professorIds": [
+            "uiuc:p:michael-lachance"
+          ],
+          "schoolId": "uiuc",
+          "seatsKnown": true,
+          "sectionCode": "AL1",
+          "status": "open",
+          "term": "2026-fa",
+          "type": "LEC"
+        },
+        {
+          "courseId": "uiuc:CS:173",
+          "crn": "72401",
+          "crossListedCourseIds": [],
+          "fetchedAt": "2026-09-03T14:12:00Z",
+          "id": "uiuc:s:2026-fa:72401",
+          "instructorsRaw": [
+            "Lachance, M"
+          ],
+          "isOpen": true,
+          "meetings": [
+            {
+              "building": "Thornbury Hall",
+              "days": [
+                "T",
+                "R"
+              ],
+              "end": "12:20",
+              "room": "168",
+              "start": "11:00",
+              "type": "LEC"
+            }
+          ],
+          "professorIds": [
+            "uiuc:p:michael-lachance"
+          ],
+          "schoolId": "uiuc",
+          "seatsKnown": true,
+          "sectionCode": "DL1",
+          "status": "open",
+          "term": "2026-fa",
+          "type": "LEC"
+        }
+      ],
+      "positiveReviews": [
+        {
+          "courseId": null,
+          "courseLabel": null,
+          "date": "2022-11-04",
+          "difficulty": 2,
+          "gradeReceived": null,
+          "helpfulVotes": 4,
+          "id": "uiuc:r:demo-r-000322",
+          "professorId": "uiuc:p:michael-lachance",
+          "quality": 5,
+          "sentiment": 0.75,
+          "sourceTags": [
+            "Gives good feedback"
+          ],
+          "text": "If you get the chance, take this section. The tests are difficult and the questions are long. The lectures are incredibly clear and build on each other logically. Budget more time than you think for the project. The…",
+          "vibeTags": [],
+          "wouldTakeAgain": true
+        },
+        {
+          "courseId": "uiuc:CS:421",
+          "courseLabel": "CS 421",
+          "date": "2021-12-30",
+          "difficulty": 3,
+          "gradeReceived": "A",
+          "helpfulVotes": 3,
+          "id": "uiuc:r:demo-r-000317",
+          "professorId": "uiuc:p:michael-lachance",
+          "quality": 4,
+          "sentiment": 0.55,
+          "sourceTags": [
+            "Amazing lectures",
+            "Beware of pop quizzes"
+          ],
+          "text": "This is what a well-run course looks like. Breaks down complicated ideas into clear, digestible pieces. Start studying for the final two weeks out. The material is great even when the delivery is not.",
+          "vibeTags": [],
+          "wouldTakeAgain": true
+        }
+      ],
+      "professor": {
+        "courseIds": [
+          "uiuc:CS:173",
+          "uiuc:CS:233"
+        ],
+        "department": "Computer Science",
+        "displayName": "Michael Lachance",
+        "firstName": "Michael",
+        "id": "uiuc:p:michael-lachance",
+        "isFictional": true,
+        "kind": "reviewed",
+        "lastName": "Lachance",
+        "nameKey": {
+          "first": "michael",
+          "firstCompact": "michael",
+          "firstInitial": "m",
+          "firstToken": "michael",
+          "firstTokens": [
+            "michael"
+          ],
+          "last": "lachance",
+          "lastCompact": "lachance",
+          "lastTokens": [
+            "lachance"
+          ],
+          "middleInitials": [],
+          "raw": "Lachance, Michael"
+        },
+        "nameVariants": [
+          "Lachance, M"
+        ],
+        "reviewSourceId": "demo-p-024",
+        "schoolId": "uiuc",
+        "slug": "michael-lachance",
+        "subjects": [
+          "CS"
+        ]
+      },
+      "rank": null,
+      "scores": {
+        "aRate": null,
+        "composite": 65.3,
+        "confidence": "medium",
+        "criticalCount": 0,
+        "deltaComparableN": 0,
+        "dfwRate": null,
+        "difficultyMean": 2.667,
+        "gpaDelta": null,
+        "gpaMean": null,
+        "gradeRows": 0,
+        "positiveCount": 6,
+        "priorMean": 3.479,
+        "ratingRaw": 3.889,
+        "ratingShrunk": 3.743,
+        "reviewCount": 9,
+        "soleInstructor": false,
+        "studentsGraded": 0,
+        "wRate": null,
+        "withdrawn": 0,
+        "wouldTakeAgainPct": 77.778,
+        "yearsActive": 0
+      },
+      "sectionsThisTerm": 3,
+      "summary": {
+        "bestFor": "Students who prefer structured, lecture‑heavy courses and are willing to study hard for tough exams",
+        "confidence": "medium",
+        "evidenceReviewIds": [
+          "uiuc:r:demo-r-000320",
+          "uiuc:r:demo-r-000321",
+          "uiuc:r:demo-r-000323",
+          "uiuc:r:demo-r-000316",
+          "uiuc:r:demo-r-000322",
+          "uiuc:r:demo-r-000319",
+          "uiuc:r:demo-r-000318",
+          "uiuc:r:demo-r-000317",
+          "uiuc:r:demo-r-000324"
+        ],
+        "format": "lecture-heavy",
+        "generatedAt": "2026-09-06T22:36:24.957Z",
+        "gradingNote": "No grade data linked yet.",
+        "inputHash": "b5e8d885a034858f",
+        "model": "openai/gpt-oss-20b",
+        "professorId": "uiuc:p:michael-lachance",
+        "promptVersion": 1,
+        "provider": "Groq",
+        "reviewCount": 9,
+        "source": "openai-compatible",
+        "strengths": [
+          "Clear, step‑by‑step explanations",
+          "Logical lecture flow",
+          "Engaging delivery",
+          "Practice exams helpful"
+        ],
+        "teachingStyle": [
+          "clear",
+          "digestible",
+          "logical"
+        ],
+        "verdict": "Based on 9 reviews, this instructor’s clear lectures and challenging exams make the course suitable for diligent students.",
+        "watchOuts": [
+          "Exams are difficult and long",
+          "Announcements sometimes late",
+          "Slides can be dense"
+        ],
+        "workload": "moderate"
+      },
+      "vibeTags": [
+        "clear-lectures",
+        "hard-exams"
+      ]
+    },
+    {
+      "badges": [],
+      "courses": [
+        {
+          "aRate": 0.597,
+          "baselineGpa": 3.243,
+          "baselineN": 982,
+          "buckets": {
+            "a": 340,
+            "aMinus": 88,
+            "aPlus": 95,
+            "b": 119,
+            "bMinus": 30,
+            "bPlus": 35,
+            "c": 28,
+            "cMinus": 14,
+            "cPlus": 18,
+            "d": 30,
+            "dMinus": 19,
+            "dPlus": 22,
+            "f": 38,
+            "w": 28
+          },
+          "courseId": "uiuc:CS:233",
+          "delta": -0.036,
+          "dfwRate": 0.152,
+          "gpa": 3.208,
+          "gradeRows": 5,
+          "graded": 876,
+          "isHeadline": true,
+          "number": "233",
+          "subject": "CS",
+          "title": "Computer Architecture",
+          "wRate": 0.031,
+          "withdrawn": 28
+        },
+        {
+          "aRate": 0.636,
+          "baselineGpa": 3.387,
+          "baselineN": 413,
+          "buckets": {
+            "a": 159,
+            "aMinus": 55,
+            "aPlus": 62,
+            "b": 20,
+            "bMinus": 25,
+            "bPlus": 25,
+            "c": 18,
+            "cMinus": 10,
+            "cPlus": 26,
+            "d": 11,
+            "dMinus": 4,
+            "dPlus": 10,
+            "f": 9,
+            "w": 12
+          },
+          "courseId": "uiuc:CS:421",
+          "delta": -0.078,
+          "dfwRate": 0.103,
+          "gpa": 3.309,
+          "gradeRows": 4,
+          "graded": 434,
+          "isHeadline": true,
+          "number": "421",
+          "subject": "CS",
+          "title": "Progrmg Languages & Compilers",
+          "wRate": 0.027,
+          "withdrawn": 12
+        },
+        {
+          "aRate": 0.806,
+          "baselineGpa": 3.467,
+          "baselineN": 661,
+          "buckets": {
+            "a": 788,
+            "aMinus": 236,
+            "aPlus": 219,
+            "b": 45,
+            "bMinus": 31,
+            "bPlus": 70,
+            "c": 38,
+            "cMinus": 35,
+            "cPlus": 26,
+            "d": 7,
+            "dMinus": 12,
+            "dPlus": 15,
+            "f": 21,
+            "w": 40
+          },
+          "courseId": "uiuc:CS:441",
+          "delta": 0.146,
+          "dfwRate": 0.06,
+          "gpa": 3.613,
+          "gradeRows": 6,
+          "graded": 1543,
+          "isHeadline": true,
+          "number": "441",
+          "subject": "CS",
+          "title": "Applied Machine Learning",
+          "wRate": 0.025,
+          "withdrawn": 40
+        },
+        {
+          "aRate": 0.436,
+          "baselineGpa": 3.153,
+          "baselineN": 48,
+          "buckets": {
+            "a": 12,
+            "aMinus": 3,
+            "aPlus": 2,
+            "b": 4,
+            "bMinus": 1,
+            "bPlus": 4,
+            "c": 1,
+            "cMinus": 0,
+            "cPlus": 6,
+            "d": 0,
+            "dMinus": 0,
+            "dPlus": 2,
+            "f": 4,
+            "w": 3
+          },
+          "courseId": "uiuc:CS:233",
+          "delta": -0.239,
+          "dfwRate": 0.214,
+          "gpa": 2.914,
+          "gradeRows": 1,
+          "graded": 39,
+          "isHeadline": false,
+          "number": "233",
+          "subject": "CS",
+          "title": "Computer Architecture",
+          "wRate": 0.071,
+          "withdrawn": 3
+        },
+        {
+          "aRate": 0.926,
+          "baselineGpa": 3.598,
+          "baselineN": 148,
+          "buckets": {
+            "a": 16,
+            "aMinus": 4,
+            "aPlus": 5,
+            "b": 0,
+            "bMinus": 0,
+            "bPlus": 0,
+            "c": 0,
+            "cMinus": 0,
+            "cPlus": 2,
+            "d": 0,
+            "dMinus": 0,
+            "dPlus": 0,
+            "f": 0,
+            "w": 0
+          },
+          "courseId": "uiuc:CS:441",
+          "delta": 0.23,
+          "dfwRate": 0,
+          "gpa": 3.827,
+          "gradeRows": 1,
+          "graded": 27,
+          "isHeadline": false,
+          "number": "441",
+          "subject": "CS",
+          "title": "Applied Machine Learning",
+          "wRate": 0,
+          "withdrawn": 0
+        }
+      ],
+      "distribution": {
+        "a": 1287,
+        "aMinus": 379,
+        "aPlus": 376,
+        "b": 184,
+        "bMinus": 86,
+        "bPlus": 130,
+        "c": 84,
+        "cMinus": 59,
+        "cPlus": 70,
+        "d": 48,
+        "dMinus": 35,
+        "dPlus": 47,
+        "f": 68,
+        "w": 80
+      },
+      "gpaByYear": [
+        {
+          "gpa": 3.552,
+          "n": 529,
+          "year": 2020
+        },
+        {
+          "gpa": 3.382,
+          "n": 878,
+          "year": 2021
+        },
+        {
+          "gpa": 3.465,
+          "n": 902,
+          "year": 2022
+        },
+        {
+          "gpa": 3.397,
+          "n": 544,
+          "year": 2023
+        }
+      ],
+      "matchProvenance": [
+        {
+          "instructorRaw": "Rowan-Achebe, Amara",
+          "method": "exact",
+          "rows": 11,
+          "score": 1,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Rowan-Achebe, A",
+          "method": "initial",
+          "rows": 7,
+          "score": 0.85,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Rowan-Achebe, Amara",
+          "method": "exact",
+          "rows": 1,
+          "score": 1,
+          "source": "schedule"
+        }
+      ],
+      "openSections": [],
+      "positiveReviews": [
+        {
+          "courseId": "uiuc:CS:421",
+          "courseLabel": "CS 421",
+          "date": "2023-08-07",
+          "difficulty": 2,
+          "gradeReceived": "A+",
+          "helpfulVotes": 7,
+          "id": "uiuc:r:demo-r-000377",
+          "professorId": "uiuc:p:amara-rowan-achebe",
+          "quality": 4,
+          "sentiment": 0.31,
+          "sourceTags": [
+            "Caring",
+            "Lecture heavy",
+            "Test heavy"
+          ],
+          "text": "I looked forward to every single lecture, which never happens. CS 421 is a tough course to begin with. The tests are difficult and the questions are long. Review the notes the same day; the material compounds. Ten out…",
+          "vibeTags": [],
+          "wouldTakeAgain": true
+        },
+        {
+          "courseId": "uiuc:CS:421",
+          "courseLabel": "CS 421",
+          "date": "2023-04-21",
+          "difficulty": 2,
+          "gradeReceived": "C",
+          "helpfulVotes": 5,
+          "id": "uiuc:r:demo-r-000379",
+          "professorId": "uiuc:p:amara-rowan-achebe",
+          "quality": 4,
+          "sentiment": 0.567,
+          "sourceTags": [
+            "Accessible outside class",
+            "Lecture heavy",
+            "Tough grader"
+          ],
+          "text": "Best course of my semester by a wide margin. Fair grading with clear expectations for every assignment. Take good notes; the exams test understanding, not memory. Would recommend to anyone in the major.",
+          "vibeTags": [
+            "fair-grading",
+            "great-notes"
+          ],
+          "wouldTakeAgain": true
+        }
+      ],
+      "professor": {
+        "courseIds": [
+          "uiuc:CS:233",
+          "uiuc:CS:421",
+          "uiuc:CS:441"
+        ],
+        "department": "Computer Science",
+        "displayName": "Amara Rowan-Achebe",
+        "firstName": "Amara",
+        "id": "uiuc:p:amara-rowan-achebe",
+        "isFictional": true,
+        "kind": "reviewed",
+        "lastName": "Rowan-Achebe",
+        "nameKey": {
+          "first": "amara",
+          "firstCompact": "amara",
+          "firstInitial": "a",
+          "firstToken": "amara",
+          "firstTokens": [
+            "amara"
+          ],
+          "last": "rowan achebe",
+          "lastCompact": "rowanachebe",
+          "lastTokens": [
+            "rowan",
+            "achebe"
+          ],
+          "middleInitials": [],
+          "raw": "Rowan-Achebe, Amara"
+        },
+        "nameVariants": [
+          "Rowan-Achebe, A",
+          "Rowan-Achebe, Amara"
+        ],
+        "reviewSourceId": "demo-p-028",
+        "schoolId": "uiuc",
+        "slug": "amara-rowan-achebe",
+        "subjects": [
+          "CS"
+        ]
+      },
+      "rank": null,
+      "scores": {
+        "aRate": 0.716,
+        "composite": 62,
+        "confidence": "medium",
+        "criticalCount": 1,
+        "deltaComparableN": 2853,
+        "dfwRate": 0.095,
+        "difficultyMean": 2.6,
+        "gpaDelta": 0.056,
+        "gpaMean": 3.442,
+        "gradeRows": 15,
+        "positiveCount": 3,
+        "priorMean": 3.479,
+        "ratingRaw": 3.4,
+        "ratingShrunk": 3.44,
+        "reviewCount": 5,
+        "soleInstructor": false,
+        "studentsGraded": 2853,
+        "wRate": 0.027,
+        "withdrawn": 80,
+        "wouldTakeAgainPct": 80,
+        "yearsActive": 4
+      },
+      "sectionsThisTerm": 1,
+      "summary": {
+        "bestFor": "Students who appreciate clear grading and supportive feedback but are prepared for a demanding workload.",
+        "confidence": "medium",
+        "evidenceReviewIds": [
+          "uiuc:r:demo-r-000377",
+          "uiuc:r:demo-r-000379",
+          "uiuc:r:demo-r-000376",
+          "uiuc:r:demo-r-000375",
+          "uiuc:r:demo-r-000378"
+        ],
+        "format": "lecture-heavy",
+        "generatedAt": "2026-09-06T22:23:05.060Z",
+        "gradingNote": "In 5 course(s) over 4 year(s), GPA averaged 3.44 (+0.06 vs. the same courses taught by others); 2.7% withdrew.",
+        "inputHash": "fdbf48afb1036d8f",
+        "model": "openai/gpt-oss-20b",
+        "professorId": "uiuc:p:amara-rowan-achebe",
+        "promptVersion": 1,
+        "provider": "Groq",
+        "reviewCount": 5,
+        "source": "openai-compatible",
+        "strengths": [
+          "Clear grading and expectations",
+          "Supportive and caring",
+          "Good notes and feedback",
+          "Engaging lectures"
+        ],
+        "teachingStyle": [
+          "clear expectations",
+          "fair grading",
+          "supportive",
+          "interactive"
+        ],
+        "verdict": "With 5 reviews, this instructor is generally well-liked for clear grading and supportive teaching, but the workload can be heavy for some students.",
+        "watchOuts": [
+          "Heavy final exam weight",
+          "Requires textbook reading before lectures",
+          "Course can be challenging for some learning styles"
+        ],
+        "workload": "heavy"
+      },
+      "vibeTags": [
+        "fair-grading"
+      ]
+    },
+    {
+      "badges": [],
+      "courses": [
+        {
+          "aRate": 0.42,
+          "baselineGpa": 3.194,
+          "baselineN": 1730,
+          "buckets": {
+            "a": 53,
+            "aMinus": 93,
+            "aPlus": 16,
+            "b": 68,
+            "bMinus": 33,
+            "bPlus": 87,
+            "c": 9,
+            "cMinus": 3,
+            "cPlus": 13,
+            "d": 3,
+            "dMinus": 0,
+            "dPlus": 5,
+            "f": 3,
+            "w": 11
+          },
+          "courseId": "uiuc:CS:425",
+          "delta": 0.076,
+          "dfwRate": 0.055,
+          "gpa": 3.27,
+          "gradeRows": 3,
+          "graded": 386,
+          "isHeadline": true,
+          "number": "425",
+          "subject": "CS",
+          "title": "Distributed Systems",
+          "wRate": 0.028,
+          "withdrawn": 11
+        },
+        {
+          "aRate": 0.484,
+          "baselineGpa": null,
+          "baselineN": 0,
+          "buckets": {
+            "a": 134,
+            "aMinus": 136,
+            "aPlus": 25,
+            "b": 71,
+            "bMinus": 62,
+            "bPlus": 78,
+            "c": 26,
+            "cMinus": 6,
+            "cPlus": 31,
+            "d": 0,
+            "dMinus": 24,
+            "dPlus": 17,
+            "f": 0,
+            "w": 20
+          },
+          "courseId": "uiuc:CS:440",
+          "delta": null,
+          "dfwRate": 0.097,
+          "gpa": 3.191,
+          "gradeRows": 3,
+          "graded": 610,
+          "isHeadline": true,
+          "number": "440",
+          "subject": "CS",
+          "title": "Artificial Intelligence",
+          "wRate": 0.032,
+          "withdrawn": 20
+        },
+        {
+          "aRate": 0.794,
+          "baselineGpa": 3.613,
+          "baselineN": 1543,
+          "buckets": {
+            "a": 290,
+            "aMinus": 182,
+            "aPlus": 53,
+            "b": 15,
+            "bMinus": 6,
+            "bPlus": 47,
+            "c": 0,
+            "cMinus": 0,
+            "cPlus": 3,
+            "d": 9,
+            "dMinus": 21,
+            "dPlus": 3,
+            "f": 32,
+            "w": 16
+          },
+          "courseId": "uiuc:CS:441",
+          "delta": -0.146,
+          "dfwRate": 0.12,
+          "gpa": 3.467,
+          "gradeRows": 2,
+          "graded": 661,
+          "isHeadline": true,
+          "number": "441",
+          "subject": "CS",
+          "title": "Applied Machine Learning",
+          "wRate": 0.024,
+          "withdrawn": 16
+        },
+        {
+          "aRate": 0.45,
+          "baselineGpa": 3.309,
+          "baselineN": 80,
+          "buckets": {
+            "a": 11,
+            "aMinus": 5,
+            "aPlus": 2,
+            "b": 2,
+            "bMinus": 2,
+            "bPlus": 13,
+            "c": 0,
+            "cMinus": 0,
+            "cPlus": 1,
+            "d": 2,
+            "dMinus": 0,
+            "dPlus": 0,
+            "f": 2,
+            "w": 0
+          },
+          "courseId": "uiuc:CS:425",
+          "delta": -0.076,
+          "dfwRate": 0.1,
+          "gpa": 3.233,
+          "gradeRows": 1,
+          "graded": 40,
+          "isHeadline": false,
+          "number": "425",
+          "subject": "CS",
+          "title": "Distributed Systems",
+          "wRate": 0,
+          "withdrawn": 0
+        },
+        {
+          "aRate": 0.877,
+          "baselineGpa": 3.631,
+          "baselineN": 102,
+          "buckets": {
+            "a": 27,
+            "aMinus": 30,
+            "aPlus": 7,
+            "b": 0,
+            "bMinus": 1,
+            "bPlus": 2,
+            "c": 4,
+            "cMinus": 0,
+            "cPlus": 0,
+            "d": 2,
+            "dMinus": 0,
+            "dPlus": 0,
+            "f": 0,
+            "w": 1
+          },
+          "courseId": "uiuc:CS:441",
+          "delta": 0.005,
+          "dfwRate": 0.041,
+          "gpa": 3.636,
+          "gradeRows": 1,
+          "graded": 73,
+          "isHeadline": false,
+          "number": "441",
+          "subject": "CS",
+          "title": "Applied Machine Learning",
+          "wRate": 0.014,
+          "withdrawn": 1
+        }
+      ],
+      "distribution": {
+        "a": 477,
+        "aMinus": 411,
+        "aPlus": 94,
+        "b": 154,
+        "bMinus": 101,
+        "bPlus": 212,
+        "c": 35,
+        "cMinus": 9,
+        "cPlus": 47,
+        "d": 12,
+        "dMinus": 45,
+        "dPlus": 25,
+        "f": 35,
+        "w": 47
+      },
+      "gpaByYear": [
+        {
+          "gpa": 3.179,
+          "n": 213,
+          "year": 2020
+        },
+        {
+          "gpa": 3.345,
+          "n": 760,
+          "year": 2021
+        },
+        {
+          "gpa": 3.334,
+          "n": 684,
+          "year": 2022
+        }
+      ],
+      "matchProvenance": [
+        {
+          "instructorRaw": "Pakhomov, Robert",
+          "method": "exact",
+          "rows": 8,
+          "score": 1,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Pakhomov, R",
+          "method": "initial",
+          "rows": 2,
+          "score": 0.85,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Pakhomov, Bob",
+          "method": "nickname",
+          "rows": 1,
+          "score": 0.85,
+          "source": "schedule"
+        }
+      ],
+      "openSections": [],
+      "positiveReviews": [
+        {
+          "courseId": "uiuc:CS:425",
+          "courseLabel": "CS 425",
+          "date": "2022-07-25",
+          "difficulty": 4,
+          "gradeReceived": "B",
+          "helpfulVotes": 2,
+          "id": "uiuc:r:demo-r-000303",
+          "professorId": "uiuc:p:robert-pakhomov",
+          "quality": 4,
+          "sentiment": 0.4,
+          "sourceTags": [
+            "Lecture heavy"
+          ],
+          "text": "Easily a five out of five, no notes. I took CS 425 with about two hundred other students. The course moves fast, so do not fall behind. The book is essential; the slides alone are not enough. Watch the recordings if you…",
+          "vibeTags": [
+            "fast-paced"
+          ],
+          "wouldTakeAgain": true
+        },
+        {
+          "courseId": "uiuc:CS:440",
+          "courseLabel": "CS 440",
+          "date": "2021-09-12",
+          "difficulty": 4,
+          "gradeReceived": null,
+          "helpfulVotes": 2,
+          "id": "uiuc:r:demo-r-000305",
+          "professorId": "uiuc:p:robert-pakhomov",
+          "quality": 4,
+          "sentiment": 0.5,
+          "sourceTags": [
+            "Get ready to read"
+          ],
+          "text": "Take this class with this professor if you possibly can. Review for the CS 440 discussion and lecture combined. Fast paced class that rewards students who prepare ahead. Reading the textbook is mandatory, not optional…",
+          "vibeTags": [
+            "curves-generously",
+            "fast-paced"
+          ],
+          "wouldTakeAgain": true
+        }
+      ],
+      "professor": {
+        "courseIds": [
+          "uiuc:CS:425",
+          "uiuc:CS:440",
+          "uiuc:CS:441"
+        ],
+        "department": "Computer Science",
+        "displayName": "Robert Pakhomov",
+        "firstName": "Robert",
+        "id": "uiuc:p:robert-pakhomov",
+        "isFictional": true,
+        "kind": "reviewed",
+        "lastName": "Pakhomov",
+        "nameKey": {
+          "first": "robert",
+          "firstCompact": "robert",
+          "firstInitial": "r",
+          "firstToken": "robert",
+          "firstTokens": [
+            "robert"
+          ],
+          "last": "pakhomov",
+          "lastCompact": "pakhomov",
+          "lastTokens": [
+            "pakhomov"
+          ],
+          "middleInitials": [],
+          "raw": "Pakhomov, Robert"
+        },
+        "nameVariants": [
+          "Pakhomov, Bob",
+          "Pakhomov, R",
+          "Pakhomov, Robert"
+        ],
+        "reviewSourceId": "demo-p-022",
+        "schoolId": "uiuc",
+        "slug": "robert-pakhomov",
+        "subjects": [
+          "CS"
+        ]
+      },
+      "rank": null,
+      "scores": {
+        "aRate": 0.593,
+        "composite": 54.6,
+        "confidence": "low",
+        "criticalCount": 1,
+        "deltaComparableN": 1047,
+        "dfwRate": 0.096,
+        "difficultyMean": 3.75,
+        "gpaDelta": -0.065,
+        "gpaMean": 3.319,
+        "gradeRows": 8,
+        "positiveCount": 2,
+        "priorMean": 3.479,
+        "ratingRaw": 3.25,
+        "ratingShrunk": 3.377,
+        "reviewCount": 4,
+        "soleInstructor": false,
+        "studentsGraded": 1657,
+        "wRate": 0.028,
+        "withdrawn": 47,
+        "wouldTakeAgainPct": 50,
+        "yearsActive": 3
+      },
+      "sectionsThisTerm": 1,
+      "summary": {
+        "bestFor": "Students who prefer a rigorous, textbook‑driven environment and can keep up with a fast pace",
+        "confidence": "low",
+        "evidenceReviewIds": [
+          "uiuc:r:demo-r-000304",
+          "uiuc:r:demo-r-000303",
+          "uiuc:r:demo-r-000305",
+          "uiuc:r:demo-r-000306"
+        ],
+        "format": "lecture-heavy",
+        "generatedAt": "2026-09-06T22:39:36.767Z",
+        "gradingNote": "In 5 course(s) over 3 year(s), GPA averaged 3.32 (−0.07 vs. the same courses taught by others); 2.8% withdrew.",
+        "inputHash": "ce1d3b04caa8b705",
+        "model": "openai/gpt-oss-20b",
+        "professorId": "uiuc:p:robert-pakhomov",
+        "promptVersion": 1,
+        "provider": "Groq",
+        "reviewCount": 4,
+        "source": "openai-compatible",
+        "strengths": [
+          "Strong emphasis on textbook reading",
+          "Clear recommendation for students who prepare ahead",
+          "High recommendation rate from students who succeeded"
+        ],
+        "teachingStyle": [
+          "fast-paced",
+          "lecture-heavy"
+        ],
+        "verdict": "Based on 4 reviews, this professor runs fast‑paced courses that require consistent textbook reading and early preparation.",
+        "watchOuts": [
+          "Course website navigation can be confusing",
+          "Exam questions directly from textbook may be challenging",
+          "Requires early and consistent study"
+        ],
+        "workload": "heavy"
+      },
+      "vibeTags": [
+        "fast-paced"
+      ]
+    },
+    {
+      "badges": [],
+      "courses": [],
+      "distribution": {
+        "a": 0,
+        "aMinus": 0,
+        "aPlus": 0,
+        "b": 0,
+        "bMinus": 0,
+        "bPlus": 0,
+        "c": 0,
+        "cMinus": 0,
+        "cPlus": 0,
+        "d": 0,
+        "dMinus": 0,
+        "dPlus": 0,
+        "f": 0,
+        "w": 0
+      },
+      "gpaByYear": [],
+      "matchProvenance": [],
+      "openSections": [],
+      "positiveReviews": [
+        {
+          "courseId": "uiuc:CS:421",
+          "courseLabel": "CS 421",
+          "date": "2024-01-17",
+          "difficulty": 2,
+          "gradeReceived": "A",
+          "helpfulVotes": 7,
+          "id": "uiuc:r:demo-r-000271",
+          "professorId": "uiuc:p:rohan-rosenqvist",
+          "quality": 4,
+          "sentiment": 0.5,
+          "sourceTags": [
+            "Clear grading criteria"
+          ],
+          "text": "Take this class with this professor if you possibly can. This review is for CS 421. Grading is fair and the rubric is posted ahead of time. Curves generously so do not panic after the first midterm. Treat the homework…",
+          "vibeTags": [
+            "curves-generously"
+          ],
+          "wouldTakeAgain": false
+        },
+        {
+          "courseId": "uiuc:CS:421",
+          "courseLabel": "CS 421",
+          "date": "2022-05-14",
+          "difficulty": 2,
+          "gradeReceived": "A",
+          "helpfulVotes": 3,
+          "id": "uiuc:r:demo-r-000269",
+          "professorId": "uiuc:p:rohan-rosenqvist",
+          "quality": 4,
+          "sentiment": 0.45,
+          "sourceTags": [
+            "Clear grading criteria"
+          ],
+          "text": "I would sign up for anything this professor teaches. This review is for CS 421. Grading is fair and the rubric is posted ahead of time. Do the practice problems; they are basically the exam. Ten out of ten would…",
+          "vibeTags": [],
+          "wouldTakeAgain": false
+        }
+      ],
+      "professor": {
+        "courseIds": [],
+        "department": "Computer Science",
+        "displayName": "Rohan Rosenqvist",
+        "firstName": "Rohan",
+        "id": "uiuc:p:rohan-rosenqvist",
+        "isFictional": true,
+        "kind": "reviewed",
+        "lastName": "Rosenqvist",
+        "nameKey": {
+          "first": "rohan",
+          "firstCompact": "rohan",
+          "firstInitial": "r",
+          "firstToken": "rohan",
+          "firstTokens": [
+            "rohan"
+          ],
+          "last": "rosenqvist",
+          "lastCompact": "rosenqvist",
+          "lastTokens": [
+            "rosenqvist"
+          ],
+          "middleInitials": [],
+          "raw": "Rosenqvist, Rohan"
+        },
+        "nameVariants": [],
+        "reviewSourceId": "demo-p-019",
+        "schoolId": "uiuc",
+        "slug": "rohan-rosenqvist",
+        "subjects": [
+          "CS"
+        ]
+      },
+      "rank": null,
+      "scores": {
+        "aRate": null,
+        "composite": 52,
+        "confidence": "high",
+        "criticalCount": 4,
+        "deltaComparableN": 0,
+        "dfwRate": null,
+        "difficultyMean": 2.4,
+        "gpaDelta": null,
+        "gpaMean": null,
+        "gradeRows": 0,
+        "positiveCount": 5,
+        "priorMean": 3.479,
+        "ratingRaw": 3.067,
+        "ratingShrunk": 3.17,
+        "reviewCount": 15,
+        "soleInstructor": false,
+        "studentsGraded": 0,
+        "wRate": null,
+        "withdrawn": 0,
+        "wouldTakeAgainPct": 46.667,
+        "yearsActive": 0
+      },
+      "sectionsThisTerm": 0,
+      "summary": {
+        "bestFor": "students who prefer structured support and can stay on top of attendance",
+        "confidence": "high",
+        "evidenceReviewIds": [
+          "uiuc:r:demo-r-000268",
+          "uiuc:r:demo-r-000271",
+          "uiuc:r:demo-r-000272",
+          "uiuc:r:demo-r-000270",
+          "uiuc:r:demo-r-000265"
+        ],
+        "format": "lecture-heavy",
+        "generatedAt": "2026-09-06T22:40:14.298Z",
+        "gradingNote": "No grade data linked yet.",
+        "inputHash": "f50b03ed7695eff7",
+        "model": "openai/gpt-oss-20b",
+        "professorId": "uiuc:p:rohan-rosenqvist",
+        "promptVersion": 1,
+        "provider": "Groq",
+        "reviewCount": 15,
+        "source": "openai-compatible",
+        "strengths": [
+          "fair grading",
+          "generous curves",
+          "good notes"
+        ],
+        "teachingStyle": [
+          "organized",
+          "note-heavy",
+          "practice-problem"
+        ],
+        "verdict": "With 15 reviews, this professor offers fair grading and generous curves but requires strict attendance and clear communication.",
+        "watchOuts": [
+          "attendance is tracked and graded",
+          "course website confusing",
+          "odd announcement timing"
+        ],
+        "workload": "moderate"
+      },
+      "vibeTags": [
+        "curves-generously",
+        "fair-grading"
+      ]
+    },
+    {
+      "badges": [
+        "open-now"
+      ],
+      "courses": [
+        {
+          "aRate": 0.491,
+          "baselineGpa": 3.247,
+          "baselineN": 511,
+          "buckets": {
+            "a": 79,
+            "aMinus": 42,
+            "aPlus": 49,
+            "b": 43,
+            "bMinus": 27,
+            "bPlus": 32,
+            "c": 17,
+            "cMinus": 9,
+            "cPlus": 21,
+            "d": 7,
+            "dMinus": 8,
+            "dPlus": 5,
+            "f": 7,
+            "w": 15
+          },
+          "courseId": "uiuc:CS:105",
+          "delta": -0.095,
+          "dfwRate": 0.116,
+          "gpa": 3.152,
+          "gradeRows": 8,
+          "graded": 346,
+          "isHeadline": true,
+          "number": "105",
+          "subject": "CS",
+          "title": "Intro Computing: Non-Tech",
+          "wRate": 0.042,
+          "withdrawn": 15
+        },
+        {
+          "aRate": 0.782,
+          "baselineGpa": 3.339,
+          "baselineN": 1925,
+          "buckets": {
+            "a": 1263,
+            "aMinus": 114,
+            "aPlus": 98,
+            "b": 62,
+            "bMinus": 21,
+            "bPlus": 96,
+            "c": 46,
+            "cMinus": 59,
+            "cPlus": 35,
+            "d": 21,
+            "dMinus": 23,
+            "dPlus": 0,
+            "f": 47,
+            "w": 60
+          },
+          "courseId": "uiuc:CS:128",
+          "delta": 0.232,
+          "dfwRate": 0.078,
+          "gpa": 3.572,
+          "gradeRows": 5,
+          "graded": 1885,
+          "isHeadline": true,
+          "number": "128",
+          "subject": "CS",
+          "title": "Intro to Computer Science II",
+          "wRate": 0.031,
+          "withdrawn": 60
+        },
+        {
+          "aRate": 0.337,
+          "baselineGpa": 2.805,
+          "baselineN": 3018,
+          "buckets": {
+            "a": 238,
+            "aMinus": 178,
+            "aPlus": 120,
+            "b": 202,
+            "bMinus": 139,
+            "bPlus": 152,
+            "c": 121,
+            "cMinus": 103,
+            "cPlus": 120,
+            "d": 47,
+            "dMinus": 48,
+            "dPlus": 73,
+            "f": 48,
+            "w": 46
+          },
+          "courseId": "uiuc:CS:374",
+          "delta": -0.012,
+          "dfwRate": 0.16,
+          "gpa": 2.793,
+          "gradeRows": 6,
+          "graded": 1589,
+          "isHeadline": true,
+          "number": "374",
+          "subject": "CS",
+          "title": "Intro to Algs & Models of Comp",
+          "wRate": 0.028,
+          "withdrawn": 46
+        }
+      ],
+      "distribution": {
+        "a": 1580,
+        "aMinus": 334,
+        "aPlus": 267,
+        "b": 307,
+        "bMinus": 187,
+        "bPlus": 280,
+        "c": 184,
+        "cMinus": 171,
+        "cPlus": 176,
+        "d": 75,
+        "dMinus": 79,
+        "dPlus": 78,
+        "f": 102,
+        "w": 121
+      },
+      "gpaByYear": [
+        {
+          "gpa": 3.14,
+          "n": 636,
+          "year": 2020
+        },
+        {
+          "gpa": 3.322,
+          "n": 638,
+          "year": 2021
+        },
+        {
+          "gpa": 3.328,
+          "n": 749,
+          "year": 2022
+        },
+        {
+          "gpa": 3.158,
+          "n": 678,
+          "year": 2023
+        },
+        {
+          "gpa": 3.232,
+          "n": 772,
+          "year": 2024
+        },
+        {
+          "gpa": 2.928,
+          "n": 347,
+          "year": 2025
+        }
+      ],
+      "matchProvenance": [
+        {
+          "instructorRaw": "Rosenqvist, Ravi",
+          "method": "exact",
+          "rows": 19,
+          "score": 1,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Rosenqvist, Ravi",
+          "method": "exact",
+          "rows": 1,
+          "score": 1,
+          "source": "schedule"
+        }
+      ],
+      "openSections": [
+        {
+          "courseId": "uiuc:CS:105",
+          "crn": "44367",
+          "crossListedCourseIds": [],
+          "fetchedAt": "2026-09-03T14:12:00Z",
+          "id": "uiuc:s:2026-fa:44367",
+          "instructorsRaw": [
+            "Rosenqvist, Ravi"
+          ],
+          "isOpen": true,
+          "meetings": [
+            {
+              "building": "Marlowe Sciences Hall",
+              "days": [
+                "M",
+                "W",
+                "F"
+              ],
+              "end": "14:50",
+              "room": "136",
+              "start": "14:00",
+              "type": "LCD"
+            }
+          ],
+          "professorIds": [
+            "uiuc:p:ravi-rosenqvist"
+          ],
+          "schoolId": "uiuc",
+          "seatsKnown": true,
+          "sectionCode": "BL2",
+          "status": "open",
+          "term": "2026-fa",
+          "type": "LCD"
+        }
+      ],
+      "positiveReviews": [
+        {
+          "courseId": "uiuc:CS:374",
+          "courseLabel": "CS 374",
+          "date": "2025-01-07",
+          "difficulty": 2,
+          "gradeReceived": null,
+          "helpfulVotes": 5,
+          "id": "uiuc:r:demo-r-000247",
+          "professorId": "uiuc:p:ravi-rosenqvist",
+          "quality": 5,
+          "sentiment": 0.84,
+          "sourceTags": [
+            "Respected",
+            "So many papers"
+          ],
+          "text": "Fantastic lecturer and an even better mentor in office hours. CS 374 is required, so most of us had to be there. So much homework that the class felt like a part-time job. Grading is fair and the rubric is posted ahead…",
+          "vibeTags": [
+            "heavy-homework"
+          ],
+          "wouldTakeAgain": true
+        },
+        {
+          "courseId": "uiuc:CS:105",
+          "courseLabel": "CS 105",
+          "date": "2024-08-03",
+          "difficulty": 1,
+          "gradeReceived": "A+",
+          "helpfulVotes": 4,
+          "id": "uiuc:r:demo-r-000254",
+          "professorId": "uiuc:p:ravi-rosenqvist",
+          "quality": 4,
+          "sentiment": 0.375,
+          "sourceTags": [
+            "Gives good feedback",
+            "Group projects"
+          ],
+          "text": "Made a notoriously tough subject feel completely doable. My CS 105 section was small, which helped. Tons of assignments; plan your semester around it. Grading is fair and the rubric is posted ahead of time. Regrade…",
+          "vibeTags": [
+            "heavy-homework"
+          ],
+          "wouldTakeAgain": true
+        }
+      ],
+      "professor": {
+        "courseIds": [
+          "uiuc:CS:105",
+          "uiuc:CS:128",
+          "uiuc:CS:374"
+        ],
+        "department": "Computer Science",
+        "displayName": "Ravi Rosenqvist",
+        "firstName": "Ravi",
+        "id": "uiuc:p:ravi-rosenqvist",
+        "isFictional": true,
+        "kind": "reviewed",
+        "lastName": "Rosenqvist",
+        "nameKey": {
+          "first": "ravi",
+          "firstCompact": "ravi",
+          "firstInitial": "r",
+          "firstToken": "ravi",
+          "firstTokens": [
+            "ravi"
+          ],
+          "last": "rosenqvist",
+          "lastCompact": "rosenqvist",
+          "lastTokens": [
+            "rosenqvist"
+          ],
+          "middleInitials": [],
+          "raw": "Rosenqvist, Ravi"
+        },
+        "nameVariants": [
+          "Rosenqvist, Ravi"
+        ],
+        "reviewSourceId": "demo-p-018",
+        "schoolId": "uiuc",
+        "slug": "ravi-rosenqvist",
+        "subjects": [
+          "CS"
+        ]
+      },
+      "rank": null,
+      "scores": {
+        "aRate": 0.571,
+        "composite": 55,
+        "confidence": "medium",
+        "criticalCount": 4,
+        "deltaComparableN": 3820,
+        "dfwRate": 0.115,
+        "difficultyMean": 1.833,
+        "gpaDelta": 0.101,
+        "gpaMean": 3.21,
+        "gradeRows": 19,
+        "positiveCount": 3,
+        "priorMean": 3.479,
+        "ratingRaw": 3,
+        "ratingShrunk": 3.141,
+        "reviewCount": 12,
+        "soleInstructor": false,
+        "studentsGraded": 3820,
+        "wRate": 0.031,
+        "withdrawn": 121,
+        "wouldTakeAgainPct": 58.333,
+        "yearsActive": 6
+      },
+      "sectionsThisTerm": 1,
+      "summary": {
+        "bestFor": "Students who can manage a heavy workload and seek detailed feedback",
+        "confidence": "medium",
+        "evidenceReviewIds": [
+          "uiuc:r:demo-r-000249",
+          "uiuc:r:demo-r-000248",
+          "uiuc:r:demo-r-000247",
+          "uiuc:r:demo-r-000254",
+          "uiuc:r:demo-r-000257",
+          "uiuc:r:demo-r-000256",
+          "uiuc:r:demo-r-000253",
+          "uiuc:r:demo-r-000258",
+          "uiuc:r:demo-r-000250",
+          "uiuc:r:demo-r-000255",
+          "uiuc:r:demo-r-000252",
+          "uiuc:r:demo-r-000251"
+        ],
+        "format": "lecture-heavy",
+        "generatedAt": "2026-09-06T22:39:26.505Z",
+        "gradingNote": "In 3 course(s) over 6 year(s), GPA averaged 3.21 (+0.10 vs. the same courses taught by others); 3.1% withdrew.",
+        "inputHash": "6114105218c7dc21",
+        "model": "openai/gpt-oss-20b",
+        "professorId": "uiuc:p:ravi-rosenqvist",
+        "promptVersion": 1,
+        "provider": "Groq",
+        "reviewCount": 12,
+        "source": "openai-compatible",
+        "strengths": [
+          "fair grading with clear rubric",
+          "strong office hour mentorship",
+          "good exam alignment",
+          "engaging lectures"
+        ],
+        "teachingStyle": [
+          "fair grading",
+          "office hour support"
+        ],
+        "verdict": "With 12 reviews, the instructor is generally fair but has a heavy workload and uneven pacing.",
+        "watchOuts": [
+          "heavy homework load",
+          "uneven pacing",
+          "late feedback on assignments"
+        ],
+        "workload": "heavy"
+      },
+      "vibeTags": [
+        "fair-grading",
+        "heavy-homework"
+      ]
+    },
+    {
+      "badges": [
+        "open-now"
+      ],
+      "courses": [
+        {
+          "aRate": 0.535,
+          "baselineGpa": null,
+          "baselineN": 0,
+          "buckets": {
+            "a": 269,
+            "aMinus": 362,
+            "aPlus": 42,
+            "b": 79,
+            "bMinus": 125,
+            "bPlus": 121,
+            "c": 43,
+            "cMinus": 44,
+            "cPlus": 69,
+            "d": 16,
+            "dMinus": 35,
+            "dPlus": 25,
+            "f": 28,
+            "w": 33
+          },
+          "courseId": "uiuc:CS:357",
+          "delta": null,
+          "dfwRate": 0.106,
+          "gpa": 3.131,
+          "gradeRows": 7,
+          "graded": 1258,
+          "isHeadline": true,
+          "number": "357",
+          "subject": "CS",
+          "title": "Numerical Methods I",
+          "wRate": 0.026,
+          "withdrawn": 33
+        },
+        {
+          "aRate": 0.647,
+          "baselineGpa": null,
+          "baselineN": 0,
+          "buckets": {
+            "a": 258,
+            "aMinus": 344,
+            "aPlus": 81,
+            "b": 81,
+            "bMinus": 38,
+            "bPlus": 115,
+            "c": 33,
+            "cMinus": 19,
+            "cPlus": 34,
+            "d": 19,
+            "dMinus": 10,
+            "dPlus": 16,
+            "f": 8,
+            "w": 33
+          },
+          "courseId": "uiuc:CS:411",
+          "delta": null,
+          "dfwRate": 0.079,
+          "gpa": 3.381,
+          "gradeRows": 5,
+          "graded": 1056,
+          "isHeadline": true,
+          "number": "411",
+          "subject": "CS",
+          "title": "Database Systems",
+          "wRate": 0.03,
+          "withdrawn": 33
+        }
+      ],
+      "distribution": {
+        "a": 527,
+        "aMinus": 706,
+        "aPlus": 123,
+        "b": 160,
+        "bMinus": 163,
+        "bPlus": 236,
+        "c": 76,
+        "cMinus": 63,
+        "cPlus": 103,
+        "d": 35,
+        "dMinus": 45,
+        "dPlus": 41,
+        "f": 36,
+        "w": 66
+      },
+      "gpaByYear": [
+        {
+          "gpa": 3.209,
+          "n": 475,
+          "year": 2021
+        },
+        {
+          "gpa": 3.196,
+          "n": 459,
+          "year": 2022
+        },
+        {
+          "gpa": 3.34,
+          "n": 546,
+          "year": 2023
+        },
+        {
+          "gpa": 3.163,
+          "n": 402,
+          "year": 2024
+        },
+        {
+          "gpa": 3.294,
+          "n": 432,
+          "year": 2025
+        }
+      ],
+      "matchProvenance": [
+        {
+          "instructorRaw": "Delacroix-Moreau, Oriol",
+          "method": "exact",
+          "rows": 9,
+          "score": 1,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Delacroix-Moreau, O",
+          "method": "initial",
+          "rows": 3,
+          "score": 0.85,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Delacroix-Moreau, O",
+          "method": "initial",
+          "rows": 1,
+          "score": 0.85,
+          "source": "schedule"
+        },
+        {
+          "instructorRaw": "Delacroix-Moreau, Oriol",
+          "method": "exact",
+          "rows": 1,
+          "score": 1,
+          "source": "schedule"
+        }
+      ],
+      "openSections": [
+        {
+          "courseId": "uiuc:CS:411",
+          "crn": "30530",
+          "crossListedCourseIds": [],
+          "fetchedAt": "2026-09-03T14:12:00Z",
+          "id": "uiuc:s:2026-fa:30530",
+          "instructorsRaw": [
+            "Delacroix-Moreau, Oriol"
+          ],
+          "isOpen": true,
+          "meetings": [
+            {
+              "building": "Oberon Technology Center",
+              "days": [
+                "T",
+                "R"
+              ],
+              "end": "09:20",
+              "room": "232",
+              "start": "08:00",
+              "type": "LEC"
+            }
+          ],
+          "professorIds": [
+            "uiuc:p:oriol-delacroix-moreau"
+          ],
+          "schoolId": "uiuc",
+          "seatsKnown": true,
+          "sectionCode": "AL1",
+          "status": "open",
+          "term": "2026-fa",
+          "type": "LEC"
+        },
+        {
+          "courseId": "uiuc:CS:357",
+          "crn": "59304",
+          "crossListedCourseIds": [],
+          "fetchedAt": "2026-09-03T14:12:00Z",
+          "id": "uiuc:s:2026-fa:59304",
+          "instructorsRaw": [
+            "Delacroix-Moreau, O"
+          ],
+          "isOpen": true,
+          "meetings": [
+            {
+              "building": "Pellham Chemistry Annex",
+              "days": [
+                "M",
+                "W"
+              ],
+              "end": "19:20",
+              "room": "224",
+              "start": "18:00",
+              "type": "LEC"
+            }
+          ],
+          "professorIds": [
+            "uiuc:p:oriol-delacroix-moreau"
+          ],
+          "schoolId": "uiuc",
+          "seatsKnown": true,
+          "sectionCode": "AL3",
+          "status": "open",
+          "term": "2026-fa",
+          "type": "LEC"
+        }
+      ],
+      "positiveReviews": [
+        {
+          "courseId": null,
+          "courseLabel": null,
+          "date": "2023-01-27",
+          "difficulty": 4,
+          "gradeReceived": null,
+          "helpfulVotes": 6,
+          "id": "uiuc:r:demo-r-000389",
+          "professorId": "uiuc:p:oriol-delacroix-moreau",
+          "quality": 4,
+          "sentiment": 0.27,
+          "sourceTags": [
+            "Get ready to read",
+            "Group projects"
+          ],
+          "text": "This class changed how I think about the subject. Must read the textbook before each lecture or you will be lost. Poorly organized course with confusing instructions. Ask for help the moment you feel lost. You have been…",
+          "vibeTags": [
+            "disorganized",
+            "must-read-textbook"
+          ],
+          "wouldTakeAgain": true
+        },
+        {
+          "courseId": null,
+          "courseLabel": null,
+          "date": "2024-02-25",
+          "difficulty": 4,
+          "gradeReceived": null,
+          "helpfulVotes": 4,
+          "id": "uiuc:r:demo-r-000387",
+          "professorId": "uiuc:p:oriol-delacroix-moreau",
+          "quality": 4,
+          "sentiment": 0.35,
+          "sourceTags": [
+            "Get ready to read"
+          ],
+          "text": "I learned more in this course than in any other this year. The textbook does most of the teaching, honestly. Lectures felt unprepared and unorganized most weeks. Learn the material as you go instead of cramming. Solid…",
+          "vibeTags": [
+            "disorganized"
+          ],
+          "wouldTakeAgain": true
+        }
+      ],
+      "professor": {
+        "courseIds": [
+          "uiuc:CS:357",
+          "uiuc:CS:411"
+        ],
+        "department": "Computer Science",
+        "displayName": "Oriol Delacroix-Moreau",
+        "firstName": "Oriol",
+        "id": "uiuc:p:oriol-delacroix-moreau",
+        "isFictional": true,
+        "kind": "reviewed",
+        "lastName": "Delacroix-Moreau",
+        "nameKey": {
+          "first": "oriol",
+          "firstCompact": "oriol",
+          "firstInitial": "o",
+          "firstToken": "oriol",
+          "firstTokens": [
+            "oriol"
+          ],
+          "last": "delacroix moreau",
+          "lastCompact": "delacroixmoreau",
+          "lastTokens": [
+            "delacroix",
+            "moreau"
+          ],
+          "middleInitials": [],
+          "raw": "Delacroix-Moreau, Oriol"
+        },
+        "nameVariants": [
+          "Delacroix-Moreau, O",
+          "Delacroix-Moreau, Oriol"
+        ],
+        "reviewSourceId": "demo-p-029",
+        "schoolId": "uiuc",
+        "slug": "oriol-delacroix-moreau",
+        "subjects": [
+          "CS"
+        ]
+      },
+      "rank": null,
+      "scores": {
+        "aRate": 0.586,
+        "composite": 52.1,
+        "confidence": "medium",
+        "criticalCount": 4,
+        "deltaComparableN": 0,
+        "dfwRate": 0.094,
+        "difficultyMean": 4.417,
+        "gpaDelta": null,
+        "gpaMean": 3.245,
+        "gradeRows": 12,
+        "positiveCount": 5,
+        "priorMean": 3.479,
+        "ratingRaw": 3,
+        "ratingShrunk": 3.141,
+        "reviewCount": 12,
+        "soleInstructor": true,
+        "studentsGraded": 2314,
+        "wRate": 0.028,
+        "withdrawn": 66,
+        "wouldTakeAgainPct": 50,
+        "yearsActive": 5
+      },
+      "sectionsThisTerm": 2,
+      "summary": {
+        "bestFor": "Students who thrive on textbook study and can manage a demanding schedule",
+        "confidence": "medium",
+        "evidenceReviewIds": [
+          "uiuc:r:demo-r-000385",
+          "uiuc:r:demo-r-000383",
+          "uiuc:r:demo-r-000382",
+          "uiuc:r:demo-r-000387",
+          "uiuc:r:demo-r-000386",
+          "uiuc:r:demo-r-000390",
+          "uiuc:r:demo-r-000389",
+          "uiuc:r:demo-r-000380",
+          "uiuc:r:demo-r-000388",
+          "uiuc:r:demo-r-000384",
+          "uiuc:r:demo-r-000391",
+          "uiuc:r:demo-r-000381"
+        ],
+        "format": "lecture-heavy",
+        "generatedAt": "2026-09-06T22:38:48.043Z",
+        "gradingNote": "In 2 course(s) over 5 year(s), GPA averaged 3.25; no comparison group in the window.",
+        "inputHash": "0cc21b017007c201",
+        "model": "openai/gpt-oss-20b",
+        "professorId": "uiuc:p:oriol-delacroix-moreau",
+        "promptVersion": 1,
+        "provider": "Groq",
+        "reviewCount": 12,
+        "source": "openai-compatible",
+        "strengths": [
+          "Requires textbook for deep understanding",
+          "Encourages office hours",
+          "Good for students who can self‑direct"
+        ],
+        "teachingStyle": [
+          "caring",
+          "disorganized"
+        ],
+        "verdict": "Based on 12 reviews, the professor is caring but disorganized, so choose if you can handle heavy textbook work and unclear structure.",
+        "watchOuts": [
+          "Poorly organized lectures and assignments",
+          "Confusing instructions and late postings",
+          "Heavy reading load"
+        ],
+        "workload": "heavy"
+      },
+      "vibeTags": [
+        "disorganized",
+        "must-read-textbook"
+      ]
+    },
+    {
+      "badges": [],
+      "courses": [
+        {
+          "aRate": 0.809,
+          "baselineGpa": 3.613,
+          "baselineN": 2947,
+          "buckets": {
+            "a": 640,
+            "aMinus": 47,
+            "aPlus": 328,
+            "b": 57,
+            "bMinus": 21,
+            "bPlus": 15,
+            "c": 8,
+            "cMinus": 21,
+            "cPlus": 29,
+            "d": 24,
+            "dMinus": 14,
+            "dPlus": 21,
+            "f": 30,
+            "w": 29
+          },
+          "courseId": "uiuc:CS:100",
+          "delta": -0.026,
+          "dfwRate": 0.092,
+          "gpa": 3.587,
+          "gradeRows": 5,
+          "graded": 1255,
+          "isHeadline": true,
+          "number": "100",
+          "subject": "CS",
+          "title": "Computer Science Orientation",
+          "wRate": 0.023,
+          "withdrawn": 29
+        },
+        {
+          "aRate": 0.656,
+          "baselineGpa": 3.392,
+          "baselineN": 1179,
+          "buckets": {
+            "a": 384,
+            "aMinus": 130,
+            "aPlus": 430,
+            "b": 71,
+            "bMinus": 35,
+            "bPlus": 144,
+            "c": 66,
+            "cMinus": 23,
+            "cPlus": 49,
+            "d": 38,
+            "dMinus": 33,
+            "dPlus": 14,
+            "f": 22,
+            "w": 46
+          },
+          "courseId": "uiuc:CS:125",
+          "delta": 0.001,
+          "dfwRate": 0.103,
+          "gpa": 3.393,
+          "gradeRows": 7,
+          "graded": 1439,
+          "isHeadline": true,
+          "number": "125",
+          "subject": "CS",
+          "title": "Intro to Computer Science",
+          "wRate": 0.031,
+          "withdrawn": 46
+        },
+        {
+          "aRate": 0.585,
+          "baselineGpa": 3.208,
+          "baselineN": 876,
+          "buckets": {
+            "a": 282,
+            "aMinus": 24,
+            "aPlus": 268,
+            "b": 105,
+            "bMinus": 24,
+            "bPlus": 70,
+            "c": 42,
+            "cMinus": 11,
+            "cPlus": 44,
+            "d": 47,
+            "dMinus": 25,
+            "dPlus": 12,
+            "f": 28,
+            "w": 21
+          },
+          "courseId": "uiuc:CS:233",
+          "delta": 0.036,
+          "dfwRate": 0.133,
+          "gpa": 3.243,
+          "gradeRows": 6,
+          "graded": 982,
+          "isHeadline": true,
+          "number": "233",
+          "subject": "CS",
+          "title": "Computer Architecture",
+          "wRate": 0.021,
+          "withdrawn": 21
+        },
+        {
+          "aRate": 0.681,
+          "baselineGpa": 3.514,
+          "baselineN": 188,
+          "buckets": {
+            "a": 28,
+            "aMinus": 2,
+            "aPlus": 19,
+            "b": 2,
+            "bMinus": 0,
+            "bPlus": 4,
+            "c": 0,
+            "cMinus": 0,
+            "cPlus": 3,
+            "d": 5,
+            "dMinus": 4,
+            "dPlus": 4,
+            "f": 1,
+            "w": 2
+          },
+          "courseId": "uiuc:CS:100",
+          "delta": -0.255,
+          "dfwRate": 0.216,
+          "gpa": 3.259,
+          "gradeRows": 1,
+          "graded": 72,
+          "isHeadline": false,
+          "number": "100",
+          "subject": "CS",
+          "title": "Computer Science Orientation",
+          "wRate": 0.027,
+          "withdrawn": 2
+        },
+        {
+          "aRate": 0.715,
+          "baselineGpa": 3.209,
+          "baselineN": 59,
+          "buckets": {
+            "a": 65,
+            "aMinus": 20,
+            "aPlus": 63,
+            "b": 14,
+            "bMinus": 8,
+            "bPlus": 9,
+            "c": 1,
+            "cMinus": 4,
+            "cPlus": 8,
+            "d": 4,
+            "dMinus": 5,
+            "dPlus": 6,
+            "f": 0,
+            "w": 8
+          },
+          "courseId": "uiuc:CS:125",
+          "delta": 0.276,
+          "dfwRate": 0.107,
+          "gpa": 3.485,
+          "gradeRows": 4,
+          "graded": 207,
+          "isHeadline": false,
+          "number": "125",
+          "subject": "CS",
+          "title": "Intro to Computer Science",
+          "wRate": 0.037,
+          "withdrawn": 8
+        },
+        {
+          "aRate": 0.646,
+          "baselineGpa": 2.914,
+          "baselineN": 39,
+          "buckets": {
+            "a": 14,
+            "aMinus": 0,
+            "aPlus": 17,
+            "b": 2,
+            "bMinus": 0,
+            "bPlus": 2,
+            "c": 6,
+            "cMinus": 0,
+            "cPlus": 0,
+            "d": 2,
+            "dMinus": 1,
+            "dPlus": 0,
+            "f": 4,
+            "w": 3
+          },
+          "courseId": "uiuc:CS:233",
+          "delta": 0.239,
+          "dfwRate": 0.196,
+          "gpa": 3.153,
+          "gradeRows": 1,
+          "graded": 48,
+          "isHeadline": false,
+          "number": "233",
+          "subject": "CS",
+          "title": "Computer Architecture",
+          "wRate": 0.059,
+          "withdrawn": 3
+        }
+      ],
+      "distribution": {
+        "a": 1306,
+        "aMinus": 201,
+        "aPlus": 1026,
+        "b": 233,
+        "bMinus": 80,
+        "bPlus": 229,
+        "c": 116,
+        "cMinus": 55,
+        "cPlus": 122,
+        "d": 109,
+        "dMinus": 72,
+        "dPlus": 47,
+        "f": 80,
+        "w": 96
+      },
+      "gpaByYear": [
+        {
+          "gpa": 3.473,
+          "n": 98,
+          "year": 2020
+        },
+        {
+          "gpa": 3.47,
+          "n": 864,
+          "year": 2021
+        },
+        {
+          "gpa": 3.23,
+          "n": 589,
+          "year": 2022
+        },
+        {
+          "gpa": 3.446,
+          "n": 1212,
+          "year": 2023
+        },
+        {
+          "gpa": 3.452,
+          "n": 913,
+          "year": 2024
+        }
+      ],
+      "matchProvenance": [
+        {
+          "instructorRaw": "Ibarra-Quintero, Marisol",
+          "method": "exact",
+          "rows": 18,
+          "score": 1,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Ibarra-Quintero, M",
+          "method": "initial",
+          "rows": 6,
+          "score": 0.85,
+          "source": "grades"
+        }
+      ],
+      "openSections": [],
+      "positiveReviews": [
+        {
+          "courseId": "uiuc:CS:233",
+          "courseLabel": "CS 233",
+          "date": "2024-06-30",
+          "difficulty": 2,
+          "gradeReceived": "B",
+          "helpfulVotes": 4,
+          "id": "uiuc:r:demo-r-000401",
+          "professorId": "uiuc:p:marisol-ibarra-quintero",
+          "quality": 4,
+          "sentiment": 0.4,
+          "sourceTags": [
+            "Clear grading criteria",
+            "Get ready to read"
+          ],
+          "text": "Outstanding teacher who respects students and their time. CS 233 is a tough course to begin with. The posted notes are clear and complete; use them. Attendance policy felt a bit strict for a large lecture. Do every…",
+          "vibeTags": [
+            "strict-attendance"
+          ],
+          "wouldTakeAgain": true
+        },
+        {
+          "courseId": "uiuc:CS:233",
+          "courseLabel": "CS 233",
+          "date": "2021-04-10",
+          "difficulty": 2,
+          "gradeReceived": null,
+          "helpfulVotes": 3,
+          "id": "uiuc:r:demo-r-000398",
+          "professorId": "uiuc:p:marisol-ibarra-quintero",
+          "quality": 4,
+          "sentiment": 0.525,
+          "sourceTags": [
+            "Lecture heavy"
+          ],
+          "text": "Best course of my semester by a wide margin. Took CS 233 during a heavy semester. The lecture notes are excellent and basically a textbook. The book is essential; the slides alone are not enough. Show up to every review…",
+          "vibeTags": [
+            "great-notes"
+          ],
+          "wouldTakeAgain": true
+        }
+      ],
+      "professor": {
+        "courseIds": [
+          "uiuc:CS:100",
+          "uiuc:CS:125",
+          "uiuc:CS:233"
+        ],
+        "department": "Computer Science",
+        "displayName": "Marisol Ibarra-Quintero",
+        "firstName": "Marisol",
+        "id": "uiuc:p:marisol-ibarra-quintero",
+        "isFictional": true,
+        "kind": "reviewed",
+        "lastName": "Ibarra-Quintero",
+        "nameKey": {
+          "first": "marisol",
+          "firstCompact": "marisol",
+          "firstInitial": "m",
+          "firstToken": "marisol",
+          "firstTokens": [
+            "marisol"
+          ],
+          "last": "ibarra quintero",
+          "lastCompact": "ibarraquintero",
+          "lastTokens": [
+            "ibarra",
+            "quintero"
+          ],
+          "middleInitials": [],
+          "raw": "Ibarra-Quintero, Marisol"
+        },
+        "nameVariants": [
+          "Ibarra-Quintero, M",
+          "Ibarra-Quintero, Marisol"
+        ],
+        "reviewSourceId": "demo-p-030",
+        "schoolId": "uiuc",
+        "slug": "marisol-ibarra-quintero",
+        "subjects": [
+          "CS"
+        ]
+      },
+      "rank": null,
+      "scores": {
+        "aRate": 0.689,
+        "composite": 49.1,
+        "confidence": "high",
+        "criticalCount": 5,
+        "deltaComparableN": 3676,
+        "dfwRate": 0.107,
+        "difficultyMean": 2.375,
+        "gpaDelta": 0.001,
+        "gpaMean": 3.419,
+        "gradeRows": 18,
+        "positiveCount": 2,
+        "priorMean": 3.479,
+        "ratingRaw": 2.688,
+        "ratingShrunk": 2.876,
+        "reviewCount": 16,
+        "soleInstructor": false,
+        "studentsGraded": 3676,
+        "wRate": 0.025,
+        "withdrawn": 96,
+        "wouldTakeAgainPct": 56.25,
+        "yearsActive": 5
+      },
+      "sectionsThisTerm": 0,
+      "summary": {
+        "bestFor": "Students who prefer structured lectures and can commit to reading the textbook before class.",
+        "confidence": "high",
+        "evidenceReviewIds": [
+          "uiuc:r:demo-r-000397",
+          "uiuc:r:demo-r-000401",
+          "uiuc:r:demo-r-000405",
+          "uiuc:r:demo-r-000406"
+        ],
+        "format": "lecture-heavy",
+        "generatedAt": "2026-09-06T22:35:47.040Z",
+        "gradingNote": "In 6 course(s) over 5 year(s), GPA averaged 3.42 (+0.00 vs. the same courses taught by others); 2.5% withdrew.",
+        "inputHash": "aa47400ab77ab51c",
+        "model": "openai/gpt-oss-20b",
+        "professorId": "uiuc:p:marisol-ibarra-quintero",
+        "promptVersion": 1,
+        "provider": "Groq",
+        "reviewCount": 16,
+        "source": "openai-compatible",
+        "strengths": [
+          "Excellent, textbook‑like notes",
+          "Clear, complete posted notes",
+          "Strong emphasis on practice problems"
+        ],
+        "teachingStyle": [
+          "lecture-heavy",
+          "mixed"
+        ],
+        "verdict": "Based on 16 reviews, this instructor’s CS courses are solid but require diligent textbook reading and note review.",
+        "watchOuts": [
+          "Requires heavy textbook preparation",
+          "Exams often long and difficult",
+          "Attendance policy can feel strict"
+        ],
+        "workload": "moderate"
+      },
+      "vibeTags": [
+        "great-notes",
+        "must-read-textbook"
+      ]
+    },
+    {
+      "badges": [],
+      "courses": [
+        {
+          "aRate": 0.462,
+          "baselineGpa": 2.769,
+          "baselineN": 781,
+          "buckets": {
+            "a": 88,
+            "aMinus": 74,
+            "aPlus": 168,
+            "b": 57,
+            "bMinus": 49,
+            "bPlus": 63,
+            "c": 38,
+            "cMinus": 48,
+            "cPlus": 33,
+            "d": 36,
+            "dMinus": 16,
+            "dPlus": 25,
+            "f": 20,
+            "w": 22
+          },
+          "courseId": "uiuc:CS:241",
+          "delta": 0.196,
+          "dfwRate": 0.161,
+          "gpa": 2.965,
+          "gradeRows": 4,
+          "graded": 715,
+          "isHeadline": true,
+          "number": "241",
+          "subject": "CS",
+          "title": "System Programming",
+          "wRate": 0.03,
+          "withdrawn": 22
+        },
+        {
+          "aRate": 0.5,
+          "baselineGpa": 2.646,
+          "baselineN": 31,
+          "buckets": {
+            "a": 5,
+            "aMinus": 4,
+            "aPlus": 9,
+            "b": 1,
+            "bMinus": 4,
+            "bPlus": 2,
+            "c": 1,
+            "cMinus": 1,
+            "cPlus": 2,
+            "d": 0,
+            "dMinus": 1,
+            "dPlus": 4,
+            "f": 2,
+            "w": 1
+          },
+          "courseId": "uiuc:CS:241",
+          "delta": 0.28,
+          "dfwRate": 0.216,
+          "gpa": 2.926,
+          "gradeRows": 1,
+          "graded": 36,
+          "isHeadline": false,
+          "number": "241",
+          "subject": "CS",
+          "title": "System Programming",
+          "wRate": 0.027,
+          "withdrawn": 1
+        }
+      ],
+      "distribution": {
+        "a": 88,
+        "aMinus": 74,
+        "aPlus": 168,
+        "b": 57,
+        "bMinus": 49,
+        "bPlus": 63,
+        "c": 38,
+        "cMinus": 48,
+        "cPlus": 33,
+        "d": 36,
+        "dMinus": 16,
+        "dPlus": 25,
+        "f": 20,
+        "w": 22
+      },
+      "gpaByYear": [
+        {
+          "gpa": 3.147,
+          "n": 138,
+          "year": 2021
+        },
+        {
+          "gpa": 2.616,
+          "n": 172,
+          "year": 2022
+        },
+        {
+          "gpa": 3.052,
+          "n": 405,
+          "year": 2023
+        }
+      ],
+      "matchProvenance": [
+        {
+          "instructorRaw": "Sidibe, D",
+          "method": "initial",
+          "rows": 3,
+          "score": 0.85,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Sidibe, Dan",
+          "method": "nickname",
+          "rows": 1,
+          "score": 0.85,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Sidibe, Daniel",
+          "method": "exact",
+          "rows": 1,
+          "score": 1,
+          "source": "grades"
+        }
+      ],
+      "openSections": [],
+      "positiveReviews": [
+        {
+          "courseId": "uiuc:CS:241",
+          "courseLabel": "CS 241",
+          "date": "2020-08-14",
+          "difficulty": 2,
+          "gradeReceived": "A",
+          "helpfulVotes": 11,
+          "id": "uiuc:r:demo-r-000363",
+          "professorId": "uiuc:p:daniel-sidibe",
+          "quality": 4,
+          "sentiment": 0.4,
+          "sourceTags": [
+            "Lecture heavy",
+            "Skip class? You won't pass"
+          ],
+          "text": "I recommend this professor to everyone in my major. CS 241 is required, so most of us had to be there. Strict attendance; the clicker points add up quickly. Exam questions come straight from the textbook readings. Start…",
+          "vibeTags": [
+            "strict-attendance"
+          ],
+          "wouldTakeAgain": true
+        },
+        {
+          "courseId": "uiuc:CS:241",
+          "courseLabel": "CS 241",
+          "date": "2020-10-15",
+          "difficulty": 2,
+          "gradeReceived": "A+",
+          "helpfulVotes": 7,
+          "id": "uiuc:r:demo-r-000360",
+          "professorId": "uiuc:p:daniel-sidibe",
+          "quality": 4,
+          "sentiment": 0.55,
+          "sourceTags": [
+            "Clear grading criteria",
+            "Extra credit",
+            "Tough grader"
+          ],
+          "text": "Fantastic lecturer and an even better mentor in office hours. Took CS 241 as a requirement for my major. Takes attendance every day; missing class costs points. Start the homework the day it is assigned. Overall I would…",
+          "vibeTags": [
+            "strict-attendance"
+          ],
+          "wouldTakeAgain": true
+        }
+      ],
+      "professor": {
+        "courseIds": [
+          "uiuc:CS:241"
+        ],
+        "department": "Computer Science",
+        "displayName": "Daniel Sidibe",
+        "firstName": "Daniel",
+        "id": "uiuc:p:daniel-sidibe",
+        "isFictional": true,
+        "kind": "reviewed",
+        "lastName": "Sidibe",
+        "nameKey": {
+          "first": "daniel",
+          "firstCompact": "daniel",
+          "firstInitial": "d",
+          "firstToken": "daniel",
+          "firstTokens": [
+            "daniel"
+          ],
+          "last": "sidibe",
+          "lastCompact": "sidibe",
+          "lastTokens": [
+            "sidibe"
+          ],
+          "middleInitials": [],
+          "raw": "Sidibe, Daniel"
+        },
+        "nameVariants": [
+          "Sidibe, D",
+          "Sidibe, Dan",
+          "Sidibe, Daniel"
+        ],
+        "reviewSourceId": "demo-p-027",
+        "schoolId": "uiuc",
+        "slug": "daniel-sidibe",
+        "subjects": [
+          "CS"
+        ]
+      },
+      "rank": null,
+      "scores": {
+        "aRate": 0.462,
+        "composite": 51.9,
+        "confidence": "high",
+        "criticalCount": 9,
+        "deltaComparableN": 715,
+        "dfwRate": 0.161,
+        "difficultyMean": 2.05,
+        "gpaDelta": 0.196,
+        "gpaMean": 2.965,
+        "gradeRows": 4,
+        "positiveCount": 5,
+        "priorMean": 3.479,
+        "ratingRaw": 2.7,
+        "ratingShrunk": 2.856,
+        "reviewCount": 20,
+        "soleInstructor": false,
+        "studentsGraded": 715,
+        "wRate": 0.03,
+        "withdrawn": 22,
+        "wouldTakeAgainPct": 55,
+        "yearsActive": 3
+      },
+      "sectionsThisTerm": 0,
+      "summary": {
+        "bestFor": "Students who prefer structured, textbook-driven courses and are comfortable with rigorous exams.",
+        "confidence": "high",
+        "evidenceReviewIds": [
+          "uiuc:r:demo-r-000373",
+          "uiuc:r:demo-r-000364",
+          "uiuc:r:demo-r-000359",
+          "uiuc:r:demo-r-000370",
+          "uiuc:r:demo-r-000358",
+          "uiuc:r:demo-r-000362",
+          "uiuc:r:demo-r-000355",
+          "uiuc:r:demo-r-000372",
+          "uiuc:r:demo-r-000368",
+          "uiuc:r:demo-r-000357",
+          "uiuc:r:demo-r-000361",
+          "uiuc:r:demo-r-000365"
+        ],
+        "format": "lecture-heavy",
+        "generatedAt": "2026-09-06T22:26:08.392Z",
+        "gradingNote": "In 2 course(s) over 3 year(s), GPA averaged 2.96 (+0.20 vs. the same courses taught by others); 3.0% withdrew.",
+        "inputHash": "65867f1732cd24ff",
+        "model": "openai/gpt-oss-20b",
+        "professorId": "uiuc:p:daniel-sidibe",
+        "promptVersion": 1,
+        "provider": "Groq",
+        "reviewCount": 20,
+        "source": "openai-compatible",
+        "strengths": [
+          "Hard exams that reflect textbook content",
+          "Practice problems mirror exam style",
+          "Good office hours and mentorship",
+          "Clear emphasis on attendance"
+        ],
+        "teachingStyle": [
+          "strict attendance",
+          "clicker points",
+          "textbook-focused"
+        ],
+        "verdict": "Based on 20 reviews, this CS 241 instructor is demanding but helpful for students who attend regularly and study the textbook.",
+        "watchOuts": [
+          "Exams are very hard with little partial credit",
+          "Attendance is strictly enforced",
+          "Lectures sometimes run over time"
+        ],
+        "workload": "moderate"
+      },
+      "vibeTags": [
+        "strict-attendance",
+        "hard-exams",
+        "must-read-textbook"
+      ]
+    },
+    {
+      "badges": [
+        "open-now"
+      ],
+      "courses": [
+        {
+          "aRate": 0.702,
+          "baselineGpa": null,
+          "baselineN": 0,
+          "buckets": {
+            "a": 1235,
+            "aMinus": 115,
+            "aPlus": 54,
+            "b": 78,
+            "bMinus": 35,
+            "bPlus": 121,
+            "c": 53,
+            "cMinus": 63,
+            "cPlus": 74,
+            "d": 50,
+            "dMinus": 25,
+            "dPlus": 15,
+            "f": 82,
+            "w": 70
+          },
+          "courseId": "uiuc:CS:124",
+          "delta": null,
+          "dfwRate": 0.117,
+          "gpa": 3.389,
+          "gradeRows": 5,
+          "graded": 2000,
+          "isHeadline": true,
+          "number": "124",
+          "subject": "CS",
+          "title": "Intro to Computer Science I",
+          "wRate": 0.034,
+          "withdrawn": 70
+        },
+        {
+          "aRate": 0.659,
+          "baselineGpa": 3.393,
+          "baselineN": 1439,
+          "buckets": {
+            "a": 442,
+            "aMinus": 119,
+            "aPlus": 216,
+            "b": 57,
+            "bMinus": 48,
+            "bPlus": 95,
+            "c": 24,
+            "cMinus": 20,
+            "cPlus": 71,
+            "d": 48,
+            "dMinus": 20,
+            "dPlus": 5,
+            "f": 14,
+            "w": 35
+          },
+          "courseId": "uiuc:CS:125",
+          "delta": -0.001,
+          "dfwRate": 0.1,
+          "gpa": 3.392,
+          "gradeRows": 6,
+          "graded": 1179,
+          "isHeadline": true,
+          "number": "125",
+          "subject": "CS",
+          "title": "Intro to Computer Science",
+          "wRate": 0.029,
+          "withdrawn": 35
+        },
+        {
+          "aRate": 0.555,
+          "baselineGpa": null,
+          "baselineN": 0,
+          "buckets": {
+            "a": 672,
+            "aMinus": 107,
+            "aPlus": 55,
+            "b": 125,
+            "bMinus": 69,
+            "bPlus": 111,
+            "c": 86,
+            "cMinus": 47,
+            "cPlus": 35,
+            "d": 64,
+            "dMinus": 15,
+            "dPlus": 13,
+            "f": 104,
+            "w": 56
+          },
+          "courseId": "uiuc:CS:225",
+          "delta": null,
+          "dfwRate": 0.162,
+          "gpa": 3.096,
+          "gradeRows": 7,
+          "graded": 1503,
+          "isHeadline": true,
+          "number": "225",
+          "subject": "CS",
+          "title": "Data Structures",
+          "wRate": 0.036,
+          "withdrawn": 56
+        },
+        {
+          "aRate": 0.714,
+          "baselineGpa": null,
+          "baselineN": 0,
+          "buckets": {
+            "a": 40,
+            "aMinus": 6,
+            "aPlus": 4,
+            "b": 3,
+            "bMinus": 0,
+            "bPlus": 4,
+            "c": 4,
+            "cMinus": 0,
+            "cPlus": 2,
+            "d": 5,
+            "dMinus": 2,
+            "dPlus": 0,
+            "f": 0,
+            "w": 2
+          },
+          "courseId": "uiuc:CS:124",
+          "delta": null,
+          "dfwRate": 0.125,
+          "gpa": 3.419,
+          "gradeRows": 1,
+          "graded": 70,
+          "isHeadline": false,
+          "number": "124",
+          "subject": "CS",
+          "title": "Intro to Computer Science I",
+          "wRate": 0.028,
+          "withdrawn": 2
+        },
+        {
+          "aRate": 0.644,
+          "baselineGpa": 3.485,
+          "baselineN": 207,
+          "buckets": {
+            "a": 19,
+            "aMinus": 8,
+            "aPlus": 11,
+            "b": 0,
+            "bMinus": 1,
+            "bPlus": 4,
+            "c": 2,
+            "cMinus": 3,
+            "cPlus": 6,
+            "d": 1,
+            "dMinus": 0,
+            "dPlus": 0,
+            "f": 4,
+            "w": 0
+          },
+          "courseId": "uiuc:CS:125",
+          "delta": -0.276,
+          "dfwRate": 0.085,
+          "gpa": 3.209,
+          "gradeRows": 1,
+          "graded": 59,
+          "isHeadline": false,
+          "number": "125",
+          "subject": "CS",
+          "title": "Intro to Computer Science",
+          "wRate": 0,
+          "withdrawn": 0
+        }
+      ],
+      "distribution": {
+        "a": 2349,
+        "aMinus": 341,
+        "aPlus": 325,
+        "b": 260,
+        "bMinus": 152,
+        "bPlus": 327,
+        "c": 163,
+        "cMinus": 130,
+        "cPlus": 180,
+        "d": 162,
+        "dMinus": 60,
+        "dPlus": 33,
+        "f": 200,
+        "w": 161
+      },
+      "gpaByYear": [
+        {
+          "gpa": 3.354,
+          "n": 1331,
+          "year": 2021
+        },
+        {
+          "gpa": 3.269,
+          "n": 1021,
+          "year": 2022
+        },
+        {
+          "gpa": 3.15,
+          "n": 1163,
+          "year": 2023
+        },
+        {
+          "gpa": 3.397,
+          "n": 1167,
+          "year": 2024
+        }
+      ],
+      "matchProvenance": [
+        {
+          "instructorRaw": "Lindgren, Mihail",
+          "method": "exact",
+          "rows": 15,
+          "score": 1,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Lindgren, M",
+          "method": "initial",
+          "rows": 5,
+          "score": 0.85,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Lindgren, Mihail",
+          "method": "exact",
+          "rows": 2,
+          "score": 1,
+          "source": "schedule"
+        },
+        {
+          "instructorRaw": "Lindgren, M",
+          "method": "initial",
+          "rows": 1,
+          "score": 0.85,
+          "source": "schedule"
+        }
+      ],
+      "openSections": [
+        {
+          "courseId": "uiuc:CS:225",
+          "crn": "52372",
+          "crossListedCourseIds": [],
+          "fetchedAt": "2026-09-03T14:12:00Z",
+          "id": "uiuc:s:2026-fa:52372",
+          "instructorsRaw": [
+            "Lindgren, Mihail"
+          ],
+          "isOpen": true,
+          "meetings": [
+            {
+              "building": "Harrow Hall",
+              "days": [
+                "T",
+                "R"
+              ],
+              "end": "16:50",
+              "room": "248",
+              "start": "15:30",
+              "type": "LCD"
+            }
+          ],
+          "professorIds": [
+            "uiuc:p:mihail-lindgren"
+          ],
+          "schoolId": "uiuc",
+          "seatsKnown": true,
+          "sectionCode": "AL3",
+          "status": "open",
+          "term": "2026-fa",
+          "type": "LCD"
+        },
+        {
+          "courseId": "uiuc:CS:125",
+          "crn": "64400",
+          "crossListedCourseIds": [],
+          "fetchedAt": "2026-09-03T14:12:00Z",
+          "id": "uiuc:s:2026-fa:64400",
+          "instructorsRaw": [
+            "Lindgren, M"
+          ],
+          "isOpen": true,
+          "meetings": [
+            {
+              "building": "Oberon Technology Center",
+              "days": [
+                "M",
+                "W",
+                "F"
+              ],
+              "end": "16:50",
+              "room": "220",
+              "start": "16:00",
+              "type": "LEC"
+            }
+          ],
+          "professorIds": [
+            "uiuc:p:mihail-lindgren"
+          ],
+          "schoolId": "uiuc",
+          "seatsKnown": true,
+          "sectionCode": "AL1",
+          "status": "open",
+          "term": "2026-fa",
+          "type": "LEC"
+        },
+        {
+          "courseId": "uiuc:CS:225",
+          "crn": "66479",
+          "crossListedCourseIds": [],
+          "fetchedAt": "2026-09-03T14:12:00Z",
+          "id": "uiuc:s:2026-fa:66479",
+          "instructorsRaw": [
+            "Lindgren, Mihail"
+          ],
+          "isOpen": true,
+          "meetings": [
+            {
+              "building": "Stonebridge Lecture Hall",
+              "days": [
+                "M",
+                "W",
+                "F"
+              ],
+              "end": "12:50",
+              "room": "196",
+              "start": "12:00",
+              "type": "LEC"
+            }
+          ],
+          "professorIds": [
+            "uiuc:p:mihail-lindgren"
+          ],
+          "schoolId": "uiuc",
+          "seatsKnown": true,
+          "sectionCode": "CL1",
+          "status": "open",
+          "term": "2026-fa",
+          "type": "LEC"
+        }
+      ],
+      "positiveReviews": [
+        {
+          "courseId": "uiuc:CS:124",
+          "courseLabel": "CS 124",
+          "date": "2022-06-03",
+          "difficulty": 3,
+          "gradeReceived": null,
+          "helpfulVotes": 7,
+          "id": "uiuc:r:demo-r-000245",
+          "professorId": "uiuc:p:mihail-lindgren",
+          "quality": 4,
+          "sentiment": 0.55,
+          "sourceTags": [
+            "Lots of homework"
+          ],
+          "text": "Outstanding teacher who respects students and their time. The course site was a mess and announcements contradicted each other. Covers a lot of material very quickly. The curve was smaller than people expected. Make a…",
+          "vibeTags": [
+            "curves-generously",
+            "fast-paced"
+          ],
+          "wouldTakeAgain": true
+        },
+        {
+          "courseId": "uiuc:CS:125",
+          "courseLabel": "CS 125",
+          "date": "2022-08-06",
+          "difficulty": 3,
+          "gradeReceived": "A+",
+          "helpfulVotes": 3,
+          "id": "uiuc:r:demo-r-000242",
+          "professorId": "uiuc:p:mihail-lindgren",
+          "quality": 4,
+          "sentiment": 0.5,
+          "sourceTags": [
+            "Lecture heavy"
+          ],
+          "text": "Best course of my semester by a wide margin. Second attempt at CS 125, and this time it stuck. Expect hard exams that require real understanding, not memorization. The grading felt inconsistent between TAs. Get the…",
+          "vibeTags": [
+            "hard-exams"
+          ],
+          "wouldTakeAgain": true
+        }
+      ],
+      "professor": {
+        "courseIds": [
+          "uiuc:CS:124",
+          "uiuc:CS:125",
+          "uiuc:CS:225"
+        ],
+        "department": "Computer Science",
+        "displayName": "Mihail Lindgren",
+        "firstName": "Mihail",
+        "id": "uiuc:p:mihail-lindgren",
+        "isFictional": true,
+        "kind": "reviewed",
+        "lastName": "Lindgren",
+        "nameKey": {
+          "first": "mihail",
+          "firstCompact": "mihail",
+          "firstInitial": "m",
+          "firstToken": "mihail",
+          "firstTokens": [
+            "mihail"
+          ],
+          "last": "lindgren",
+          "lastCompact": "lindgren",
+          "lastTokens": [
+            "lindgren"
+          ],
+          "middleInitials": [],
+          "raw": "Lindgren, Mihail"
+        },
+        "nameVariants": [
+          "Lindgren, M",
+          "Lindgren, Mihail"
+        ],
+        "reviewSourceId": "demo-p-017",
+        "schoolId": "uiuc",
+        "slug": "mihail-lindgren",
+        "subjects": [
+          "CS"
+        ]
+      },
+      "rank": null,
+      "scores": {
+        "aRate": 0.644,
+        "composite": 44.9,
+        "confidence": "medium",
+        "criticalCount": 7,
+        "deltaComparableN": 1179,
+        "dfwRate": 0.127,
+        "difficultyMean": 2.692,
+        "gpaDelta": -0.001,
+        "gpaMean": 3.296,
+        "gradeRows": 18,
+        "positiveCount": 3,
+        "priorMean": 3.479,
+        "ratingRaw": 2.615,
+        "ratingShrunk": 2.855,
+        "reviewCount": 13,
+        "soleInstructor": false,
+        "studentsGraded": 4682,
+        "wRate": 0.033,
+        "withdrawn": 161,
+        "wouldTakeAgainPct": 30.769,
+        "yearsActive": 4
+      },
+      "sectionsThisTerm": 3,
+      "summary": {
+        "bestFor": "Self-motivated students who can manage a heavy workload and are taking the course as a requirement.",
+        "confidence": "medium",
+        "evidenceReviewIds": [
+          "uiuc:r:demo-r-000244",
+          "uiuc:r:demo-r-000237",
+          "uiuc:r:demo-r-000235",
+          "uiuc:r:demo-r-000236",
+          "uiuc:r:demo-r-000241",
+          "uiuc:r:demo-r-000242",
+          "uiuc:r:demo-r-000243",
+          "uiuc:r:demo-r-000245",
+          "uiuc:r:demo-r-000239",
+          "uiuc:r:demo-r-000234"
+        ],
+        "format": "lecture-heavy",
+        "generatedAt": "2026-09-06T23:19:45.082Z",
+        "gradingNote": "In 5 course(s) over 4 year(s), GPA averaged 3.30 (+0.00 vs. the same courses taught by others); 3.3% withdrew.",
+        "inputHash": "3252589cfd0a22a5",
+        "model": "qwen/qwen3.8-27b",
+        "professorId": "uiuc:p:mihail-lindgren",
+        "promptVersion": 1,
+        "provider": "Groq",
+        "reviewCount": 13,
+        "source": "openai-compatible",
+        "strengths": [
+          "Several students report learning a lot despite the difficulty",
+          "Exams test real understanding rather than memorization",
+          "Some students found the course rewarding when they kept up"
+        ],
+        "teachingStyle": [
+          "Fast-paced lectures",
+          "Disorganized course flow",
+          "Assumes prior reading",
+          "Large lecture format"
+        ],
+        "verdict": "Based on 13 reviews, expect a heavy, fast-paced course with disorganized logistics; only take if required or highly self-motivated.",
+        "watchOuts": [
+          "Heavy weekly homework load; multiple reviews call it a part-time job",
+          "Inconsistent grading between TAs and late or missing feedback",
+          "Disorganized lectures and course site with contradictory announcements"
+        ],
+        "workload": "heavy"
+      },
+      "vibeTags": [
+        "heavy-homework",
+        "hard-exams",
+        "disorganized"
+      ]
+    },
+    {
+      "badges": [
+        "open-now"
+      ],
+      "courses": [
+        {
+          "aRate": 0.832,
+          "baselineGpa": 3.572,
+          "baselineN": 3070,
+          "buckets": {
+            "a": 892,
+            "aMinus": 9,
+            "aPlus": 41,
+            "b": 58,
+            "bMinus": 11,
+            "bPlus": 12,
+            "c": 50,
+            "cMinus": 4,
+            "cPlus": 13,
+            "d": 17,
+            "dMinus": 6,
+            "dPlus": 13,
+            "f": 6,
+            "w": 36
+          },
+          "courseId": "uiuc:CS:100",
+          "delta": 0.124,
+          "dfwRate": 0.067,
+          "gpa": 3.696,
+          "gradeRows": 4,
+          "graded": 1132,
+          "isHeadline": true,
+          "number": "100",
+          "subject": "CS",
+          "title": "Computer Science Orientation",
+          "wRate": 0.031,
+          "withdrawn": 36
+        },
+        {
+          "aRate": 0.485,
+          "baselineGpa": 3.079,
+          "baselineN": 152,
+          "buckets": {
+            "a": 45,
+            "aMinus": 22,
+            "aPlus": 12,
+            "b": 22,
+            "bMinus": 12,
+            "bPlus": 18,
+            "c": 5,
+            "cMinus": 1,
+            "cPlus": 4,
+            "d": 3,
+            "dMinus": 5,
+            "dPlus": 10,
+            "f": 4,
+            "w": 2
+          },
+          "courseId": "uiuc:CS:173",
+          "delta": 0.034,
+          "dfwRate": 0.145,
+          "gpa": 3.113,
+          "gradeRows": 5,
+          "graded": 163,
+          "isHeadline": true,
+          "number": "173",
+          "subject": "CS",
+          "title": "Discrete Structures",
+          "wRate": 0.012,
+          "withdrawn": 2
+        },
+        {
+          "aRate": 0.814,
+          "baselineGpa": 3.415,
+          "baselineN": 147,
+          "buckets": {
+            "a": 80,
+            "aMinus": 12,
+            "aPlus": 0,
+            "b": 0,
+            "bMinus": 0,
+            "bPlus": 1,
+            "c": 6,
+            "cMinus": 0,
+            "cPlus": 3,
+            "d": 1,
+            "dMinus": 5,
+            "dPlus": 2,
+            "f": 3,
+            "w": 1
+          },
+          "courseId": "uiuc:CS:100",
+          "delta": 0.066,
+          "dfwRate": 0.105,
+          "gpa": 3.481,
+          "gradeRows": 1,
+          "graded": 113,
+          "isHeadline": false,
+          "number": "100",
+          "subject": "CS",
+          "title": "Computer Science Orientation",
+          "wRate": 0.009,
+          "withdrawn": 1
+        },
+        {
+          "aRate": 0.538,
+          "baselineGpa": null,
+          "baselineN": 0,
+          "buckets": {
+            "a": 3,
+            "aMinus": 3,
+            "aPlus": 1,
+            "b": 3,
+            "bMinus": 0,
+            "bPlus": 1,
+            "c": 0,
+            "cMinus": 0,
+            "cPlus": 0,
+            "d": 2,
+            "dMinus": 0,
+            "dPlus": 0,
+            "f": 0,
+            "w": 0
+          },
+          "courseId": "uiuc:CS:173",
+          "delta": null,
+          "dfwRate": 0.154,
+          "gpa": 3.18,
+          "gradeRows": 1,
+          "graded": 13,
+          "isHeadline": false,
+          "number": "173",
+          "subject": "CS",
+          "title": "Discrete Structures",
+          "wRate": 0,
+          "withdrawn": 0
+        }
+      ],
+      "distribution": {
+        "a": 937,
+        "aMinus": 31,
+        "aPlus": 53,
+        "b": 80,
+        "bMinus": 23,
+        "bPlus": 30,
+        "c": 55,
+        "cMinus": 5,
+        "cPlus": 17,
+        "d": 20,
+        "dMinus": 11,
+        "dPlus": 23,
+        "f": 10,
+        "w": 38
+      },
+      "gpaByYear": [
+        {
+          "gpa": 3.739,
+          "n": 305,
+          "year": 2021
+        },
+        {
+          "gpa": 3.531,
+          "n": 430,
+          "year": 2022
+        },
+        {
+          "gpa": 3.361,
+          "n": 119,
+          "year": 2023
+        },
+        {
+          "gpa": 3.701,
+          "n": 441,
+          "year": 2024
+        }
+      ],
+      "matchProvenance": [
+        {
+          "instructorRaw": "Adichie, Esperanza",
+          "method": "unmatched",
+          "rows": 11,
+          "score": 0,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Adichie, E",
+          "method": "initial",
+          "rows": 1,
+          "score": 0.85,
+          "source": "schedule"
+        },
+        {
+          "instructorRaw": "Adichie, Esperanza",
+          "method": "exact",
+          "rows": 1,
+          "score": 1,
+          "source": "schedule"
+        }
+      ],
+      "openSections": [
+        {
+          "courseId": "uiuc:CS:173",
+          "crn": "33303",
+          "crossListedCourseIds": [],
+          "fetchedAt": "2026-09-03T14:12:00Z",
+          "id": "uiuc:s:2026-fa:33303",
+          "instructorsRaw": [
+            "Adichie, E"
+          ],
+          "isOpen": true,
+          "meetings": [
+            {
+              "building": "Larkin Mathematics Hall",
+              "days": [
+                "M",
+                "W"
+              ],
+              "end": "19:20",
+              "room": "261",
+              "start": "18:00",
+              "type": "LEC"
+            }
+          ],
+          "professorIds": [
+            "uiuc:g:adichie-esperanza"
+          ],
+          "schoolId": "uiuc",
+          "seatsKnown": true,
+          "sectionCode": "BL2",
+          "status": "open",
+          "term": "2026-fa",
+          "type": "LEC"
+        },
+        {
+          "courseId": "uiuc:CS:173",
+          "crn": "50604",
+          "crossListedCourseIds": [],
+          "fetchedAt": "2026-09-03T14:12:00Z",
+          "id": "uiuc:s:2026-fa:50604",
+          "instructorsRaw": [
+            "Adichie, Esperanza"
+          ],
+          "isOpen": true,
+          "meetings": [
+            {
+              "building": null,
+              "days": [],
+              "end": null,
+              "room": null,
+              "start": null,
+              "type": "ONL"
+            }
+          ],
+          "professorIds": [
+            "uiuc:g:adichie-esperanza"
+          ],
+          "schoolId": "uiuc",
+          "seatsKnown": true,
+          "sectionCode": "ON2",
+          "status": "open",
+          "term": "2026-fa",
+          "type": "ONL"
+        }
+      ],
+      "positiveReviews": [],
+      "professor": {
+        "courseIds": [
+          "uiuc:CS:100",
+          "uiuc:CS:173"
+        ],
+        "department": null,
+        "displayName": "Esperanza Adichie",
+        "firstName": "Esperanza",
+        "id": "uiuc:g:adichie-esperanza",
+        "isFictional": true,
+        "kind": "grades-only",
+        "lastName": "Adichie",
+        "nameKey": {
+          "first": "esperanza",
+          "firstCompact": "esperanza",
+          "firstInitial": "e",
+          "firstToken": "esperanza",
+          "firstTokens": [
+            "esperanza"
+          ],
+          "last": "adichie",
+          "lastCompact": "adichie",
+          "lastTokens": [
+            "adichie"
+          ],
+          "middleInitials": [],
+          "raw": "Adichie, Esperanza"
+        },
+        "nameVariants": [
+          "Adichie, E",
+          "Adichie, Esperanza"
+        ],
+        "reviewSourceId": null,
+        "schoolId": "uiuc",
+        "slug": "adichie-esperanza",
+        "subjects": [
+          "CS"
+        ]
+      },
+      "rank": null,
+      "scores": {
+        "aRate": 0.788,
+        "composite": null,
+        "confidence": "low",
+        "criticalCount": 0,
+        "deltaComparableN": 1295,
+        "dfwRate": 0.077,
+        "difficultyMean": null,
+        "gpaDelta": 0.113,
+        "gpaMean": 3.622,
+        "gradeRows": 9,
+        "positiveCount": 0,
+        "priorMean": 3.479,
+        "ratingRaw": null,
+        "ratingShrunk": null,
+        "reviewCount": 0,
+        "soleInstructor": false,
+        "studentsGraded": 1295,
+        "wRate": 0.029,
+        "withdrawn": 38,
+        "wouldTakeAgainPct": null,
+        "yearsActive": 4
+      },
+      "sectionsThisTerm": 2,
+      "summary": null,
+      "vibeTags": []
+    },
+    {
+      "badges": [
+        "open-now"
+      ],
+      "courses": [
+        {
+          "aRate": 0.726,
+          "baselineGpa": 3.476,
+          "baselineN": 3010,
+          "buckets": {
+            "a": 503,
+            "aMinus": 36,
+            "aPlus": 42,
+            "b": 20,
+            "bMinus": 31,
+            "bPlus": 29,
+            "c": 23,
+            "cMinus": 24,
+            "cPlus": 17,
+            "d": 10,
+            "dMinus": 16,
+            "dPlus": 0,
+            "f": 49,
+            "w": 21
+          },
+          "courseId": "uiuc:CS:128",
+          "delta": -0.104,
+          "dfwRate": 0.117,
+          "gpa": 3.372,
+          "gradeRows": 2,
+          "graded": 800,
+          "isHeadline": true,
+          "number": "128",
+          "subject": "CS",
+          "title": "Intro to Computer Science II",
+          "wRate": 0.026,
+          "withdrawn": 21
+        },
+        {
+          "aRate": 0.299,
+          "baselineGpa": 2.805,
+          "baselineN": 4252,
+          "buckets": {
+            "a": 50,
+            "aMinus": 40,
+            "aPlus": 16,
+            "b": 51,
+            "bMinus": 40,
+            "bPlus": 38,
+            "c": 34,
+            "cMinus": 30,
+            "cPlus": 17,
+            "d": 8,
+            "dMinus": 0,
+            "dPlus": 12,
+            "f": 19,
+            "w": 8
+          },
+          "courseId": "uiuc:CS:374",
+          "delta": -0.047,
+          "dfwRate": 0.129,
+          "gpa": 2.757,
+          "gradeRows": 1,
+          "graded": 355,
+          "isHeadline": true,
+          "number": "374",
+          "subject": "CS",
+          "title": "Intro to Algs & Models of Comp",
+          "wRate": 0.022,
+          "withdrawn": 8
+        },
+        {
+          "aRate": 0.645,
+          "baselineGpa": 3.464,
+          "baselineN": 811,
+          "buckets": {
+            "a": 205,
+            "aMinus": 118,
+            "aPlus": 172,
+            "b": 59,
+            "bMinus": 24,
+            "bPlus": 75,
+            "c": 12,
+            "cMinus": 3,
+            "cPlus": 37,
+            "d": 6,
+            "dMinus": 28,
+            "dPlus": 11,
+            "f": 18,
+            "w": 19
+          },
+          "courseId": "uiuc:CS:412",
+          "delta": -0.096,
+          "dfwRate": 0.104,
+          "gpa": 3.368,
+          "gradeRows": 5,
+          "graded": 768,
+          "isHeadline": true,
+          "number": "412",
+          "subject": "CS",
+          "title": "Introduction to Data Mining",
+          "wRate": 0.024,
+          "withdrawn": 19
+        },
+        {
+          "aRate": 0.651,
+          "baselineGpa": 3.309,
+          "baselineN": 434,
+          "buckets": {
+            "a": 96,
+            "aMinus": 25,
+            "aPlus": 148,
+            "b": 41,
+            "bMinus": 9,
+            "bPlus": 20,
+            "c": 22,
+            "cMinus": 11,
+            "cPlus": 21,
+            "d": 2,
+            "dMinus": 6,
+            "dPlus": 0,
+            "f": 12,
+            "w": 12
+          },
+          "courseId": "uiuc:CS:421",
+          "delta": 0.078,
+          "dfwRate": 0.075,
+          "gpa": 3.387,
+          "gradeRows": 4,
+          "graded": 413,
+          "isHeadline": true,
+          "number": "421",
+          "subject": "CS",
+          "title": "Progrmg Languages & Compilers",
+          "wRate": 0.028,
+          "withdrawn": 12
+        },
+        {
+          "aRate": 0.524,
+          "baselineGpa": 3.162,
+          "baselineN": 1498,
+          "buckets": {
+            "a": 122,
+            "aMinus": 137,
+            "aPlus": 65,
+            "b": 74,
+            "bMinus": 45,
+            "bPlus": 108,
+            "c": 14,
+            "cMinus": 0,
+            "cPlus": 22,
+            "d": 15,
+            "dMinus": 7,
+            "dPlus": 0,
+            "f": 9,
+            "w": 24
+          },
+          "courseId": "uiuc:CS:425",
+          "delta": 0.158,
+          "dfwRate": 0.086,
+          "gpa": 3.32,
+          "gradeRows": 5,
+          "graded": 618,
+          "isHeadline": true,
+          "number": "425",
+          "subject": "CS",
+          "title": "Distributed Systems",
+          "wRate": 0.037,
+          "withdrawn": 24
+        },
+        {
+          "aRate": 0.579,
+          "baselineGpa": 3.207,
+          "baselineN": 82,
+          "buckets": {
+            "a": 11,
+            "aMinus": 6,
+            "aPlus": 5,
+            "b": 6,
+            "bMinus": 4,
+            "bPlus": 4,
+            "c": 0,
+            "cMinus": 0,
+            "cPlus": 1,
+            "d": 0,
+            "dMinus": 1,
+            "dPlus": 0,
+            "f": 0,
+            "w": 2
+          },
+          "courseId": "uiuc:CS:425",
+          "delta": 0.241,
+          "dfwRate": 0.075,
+          "gpa": 3.448,
+          "gradeRows": 1,
+          "graded": 38,
+          "isHeadline": false,
+          "number": "425",
+          "subject": "CS",
+          "title": "Distributed Systems",
+          "wRate": 0.05,
+          "withdrawn": 2
+        }
+      ],
+      "distribution": {
+        "a": 976,
+        "aMinus": 356,
+        "aPlus": 443,
+        "b": 245,
+        "bMinus": 149,
+        "bPlus": 270,
+        "c": 105,
+        "cMinus": 68,
+        "cPlus": 114,
+        "d": 41,
+        "dMinus": 57,
+        "dPlus": 23,
+        "f": 107,
+        "w": 84
+      },
+      "gpaByYear": [
+        {
+          "gpa": 3.22,
+          "n": 1409,
+          "year": 2021
+        },
+        {
+          "gpa": 3.367,
+          "n": 345,
+          "year": 2022
+        },
+        {
+          "gpa": 3.431,
+          "n": 429,
+          "year": 2023
+        },
+        {
+          "gpa": 3.21,
+          "n": 371,
+          "year": 2024
+        },
+        {
+          "gpa": 3.381,
+          "n": 400,
+          "year": 2025
+        }
+      ],
+      "matchProvenance": [
+        {
+          "instructorRaw": "Rosenqvist, R",
+          "method": "ambiguous",
+          "rows": 18,
+          "score": 0.85,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Rosenqvist, R",
+          "method": "exact",
+          "rows": 2,
+          "score": 1,
+          "source": "schedule"
+        }
+      ],
+      "openSections": [
+        {
+          "courseId": "uiuc:CS:374",
+          "crn": "51550",
+          "crossListedCourseIds": [],
+          "fetchedAt": "2026-09-03T14:12:00Z",
+          "id": "uiuc:s:2026-fa:51550",
+          "instructorsRaw": [
+            "Rosenqvist, R"
+          ],
+          "isOpen": true,
+          "meetings": [
+            {
+              "building": "Quillon Auditorium",
+              "days": [
+                "M",
+                "W"
+              ],
+              "end": "19:20",
+              "room": "190",
+              "start": "18:00",
+              "type": "LCD"
+            }
+          ],
+          "professorIds": [
+            "uiuc:g:rosenqvist-r"
+          ],
+          "schoolId": "uiuc",
+          "seatsKnown": true,
+          "sectionCode": "EL1",
+          "status": "open",
+          "term": "2026-fa",
+          "type": "LCD"
+        },
+        {
+          "courseId": "uiuc:CS:128",
+          "crn": "62118",
+          "crossListedCourseIds": [],
+          "fetchedAt": "2026-09-03T14:12:00Z",
+          "id": "uiuc:s:2026-fa:62118",
+          "instructorsRaw": [
+            "Rosenqvist, R"
+          ],
+          "isOpen": true,
+          "meetings": [
+            {
+              "building": null,
+              "days": [],
+              "end": null,
+              "room": null,
+              "start": null,
+              "type": "LEC"
+            }
+          ],
+          "professorIds": [
+            "uiuc:g:rosenqvist-r"
+          ],
+          "schoolId": "uiuc",
+          "seatsKnown": true,
+          "sectionCode": "AL1",
+          "status": "open",
+          "term": "2026-fa",
+          "type": "LEC"
+        }
+      ],
+      "positiveReviews": [],
+      "professor": {
+        "courseIds": [
+          "uiuc:CS:128",
+          "uiuc:CS:374",
+          "uiuc:CS:412",
+          "uiuc:CS:421",
+          "uiuc:CS:425"
+        ],
+        "department": null,
+        "displayName": "R. Rosenqvist",
+        "firstName": "R",
+        "id": "uiuc:g:rosenqvist-r",
+        "isFictional": true,
+        "kind": "grades-only",
+        "lastName": "Rosenqvist",
+        "nameKey": {
+          "first": "r",
+          "firstCompact": "r",
+          "firstInitial": "r",
+          "firstToken": "r",
+          "firstTokens": [
+            "r"
+          ],
+          "last": "rosenqvist",
+          "lastCompact": "rosenqvist",
+          "lastTokens": [
+            "rosenqvist"
+          ],
+          "middleInitials": [],
+          "raw": "Rosenqvist, R"
+        },
+        "nameVariants": [
+          "Rosenqvist, R"
+        ],
+        "reviewSourceId": null,
+        "schoolId": "uiuc",
+        "slug": "rosenqvist-r",
+        "subjects": [
+          "CS"
+        ]
+      },
+      "rank": null,
+      "scores": {
+        "aRate": 0.601,
+        "composite": null,
+        "confidence": "low",
+        "criticalCount": 0,
+        "deltaComparableN": 2954,
+        "dfwRate": 0.103,
+        "difficultyMean": null,
+        "gpaDelta": -0.015,
+        "gpaMean": 3.288,
+        "gradeRows": 17,
+        "positiveCount": 0,
+        "priorMean": 3.479,
+        "ratingRaw": null,
+        "ratingShrunk": null,
+        "reviewCount": 0,
+        "soleInstructor": false,
+        "studentsGraded": 2954,
+        "wRate": 0.028,
+        "withdrawn": 84,
+        "wouldTakeAgainPct": null,
+        "yearsActive": 5
+      },
+      "sectionsThisTerm": 2,
+      "summary": null,
+      "vibeTags": []
+    },
+    {
+      "badges": [],
+      "courses": [
+        {
+          "aRate": 0.632,
+          "baselineGpa": 3.345,
+          "baselineN": 28,
+          "buckets": {
+            "a": 8,
+            "aMinus": 1,
+            "aPlus": 3,
+            "b": 1,
+            "bMinus": 1,
+            "bPlus": 4,
+            "c": 0,
+            "cMinus": 0,
+            "cPlus": 0,
+            "d": 0,
+            "dMinus": 1,
+            "dPlus": 0,
+            "f": 0,
+            "w": 1
+          },
+          "courseId": "uiuc:CS:101",
+          "delta": 0.198,
+          "dfwRate": 0.1,
+          "gpa": 3.544,
+          "gradeRows": 1,
+          "graded": 19,
+          "isHeadline": false,
+          "number": "101",
+          "subject": "CS",
+          "title": "Intro Computing: Engrg & Sci",
+          "wRate": 0.05,
+          "withdrawn": 1
+        },
+        {
+          "aRate": 0.476,
+          "baselineGpa": 3.219,
+          "baselineN": 26,
+          "buckets": {
+            "a": 5,
+            "aMinus": 4,
+            "aPlus": 1,
+            "b": 5,
+            "bMinus": 0,
+            "bPlus": 1,
+            "c": 1,
+            "cMinus": 2,
+            "cPlus": 1,
+            "d": 0,
+            "dMinus": 0,
+            "dPlus": 0,
+            "f": 1,
+            "w": 0
+          },
+          "courseId": "uiuc:CS:105",
+          "delta": -0.139,
+          "dfwRate": 0.048,
+          "gpa": 3.08,
+          "gradeRows": 2,
+          "graded": 21,
+          "isHeadline": false,
+          "number": "105",
+          "subject": "CS",
+          "title": "Intro Computing: Non-Tech",
+          "wRate": 0,
+          "withdrawn": 0
+        },
+        {
+          "aRate": 0.568,
+          "baselineGpa": null,
+          "baselineN": 0,
+          "buckets": {
+            "a": 27,
+            "aMinus": 13,
+            "aPlus": 6,
+            "b": 9,
+            "bMinus": 12,
+            "bPlus": 7,
+            "c": 0,
+            "cMinus": 0,
+            "cPlus": 0,
+            "d": 3,
+            "dMinus": 0,
+            "dPlus": 0,
+            "f": 4,
+            "w": 0
+          },
+          "courseId": "uiuc:CS:440",
+          "delta": null,
+          "dfwRate": 0.086,
+          "gpa": 3.272,
+          "gradeRows": 1,
+          "graded": 81,
+          "isHeadline": false,
+          "number": "440",
+          "subject": "CS",
+          "title": "Artificial Intelligence",
+          "wRate": 0,
+          "withdrawn": 0
+        }
+      ],
+      "distribution": {
+        "a": 0,
+        "aMinus": 0,
+        "aPlus": 0,
+        "b": 0,
+        "bMinus": 0,
+        "bPlus": 0,
+        "c": 0,
+        "cMinus": 0,
+        "cPlus": 0,
+        "d": 0,
+        "dMinus": 0,
+        "dPlus": 0,
+        "f": 0,
+        "w": 0
+      },
+      "gpaByYear": [],
+      "matchProvenance": [
+        {
+          "instructorRaw": "Adeyemi-Park, E",
+          "method": "unmatched",
+          "rows": 4,
+          "score": 0,
+          "source": "grades"
+        }
+      ],
+      "openSections": [],
+      "positiveReviews": [],
+      "professor": {
+        "courseIds": [
+          "uiuc:CS:101",
+          "uiuc:CS:105",
+          "uiuc:CS:440"
+        ],
+        "department": null,
+        "displayName": "E. Adeyemi-Park",
+        "firstName": "E",
+        "id": "uiuc:g:adeyemipark-e",
+        "isFictional": true,
+        "kind": "grades-only",
+        "lastName": "Adeyemi-Park",
+        "nameKey": {
+          "first": "e",
+          "firstCompact": "e",
+          "firstInitial": "e",
+          "firstToken": "e",
+          "firstTokens": [
+            "e"
+          ],
+          "last": "adeyemi park",
+          "lastCompact": "adeyemipark",
+          "lastTokens": [
+            "adeyemi",
+            "park"
+          ],
+          "middleInitials": [],
+          "raw": "Adeyemi-Park, E"
+        },
+        "nameVariants": [
+          "Adeyemi-Park, E"
+        ],
+        "reviewSourceId": null,
+        "schoolId": "uiuc",
+        "slug": "adeyemipark-e",
+        "subjects": [
+          "CS"
+        ]
+      },
+      "rank": null,
+      "scores": {
+        "aRate": null,
+        "composite": null,
+        "confidence": "low",
+        "criticalCount": 0,
+        "deltaComparableN": 0,
+        "dfwRate": null,
+        "difficultyMean": null,
+        "gpaDelta": null,
+        "gpaMean": null,
+        "gradeRows": 0,
+        "positiveCount": 0,
+        "priorMean": 3.479,
+        "ratingRaw": null,
+        "ratingShrunk": null,
+        "reviewCount": 0,
+        "soleInstructor": false,
+        "studentsGraded": 0,
+        "wRate": null,
+        "withdrawn": 0,
+        "wouldTakeAgainPct": null,
+        "yearsActive": 0
+      },
+      "sectionsThisTerm": 0,
+      "summary": null,
+      "vibeTags": []
+    },
+    {
+      "badges": [],
+      "courses": [
+        {
+          "aRate": 0.76,
+          "baselineGpa": 3.395,
+          "baselineN": 185,
+          "buckets": {
+            "a": 56,
+            "aMinus": 0,
+            "aPlus": 1,
+            "b": 6,
+            "bMinus": 0,
+            "bPlus": 0,
+            "c": 4,
+            "cMinus": 0,
+            "cPlus": 4,
+            "d": 0,
+            "dMinus": 2,
+            "dPlus": 2,
+            "f": 0,
+            "w": 2
+          },
+          "courseId": "uiuc:CS:100",
+          "delta": 0.17,
+          "dfwRate": 0.078,
+          "gpa": 3.564,
+          "gradeRows": 1,
+          "graded": 75,
+          "isHeadline": false,
+          "number": "100",
+          "subject": "CS",
+          "title": "Computer Science Orientation",
+          "wRate": 0.026,
+          "withdrawn": 2
+        },
+        {
+          "aRate": 0.469,
+          "baselineGpa": null,
+          "baselineN": 0,
+          "buckets": {
+            "a": 11,
+            "aMinus": 19,
+            "aPlus": 0,
+            "b": 5,
+            "bMinus": 7,
+            "bPlus": 9,
+            "c": 0,
+            "cMinus": 2,
+            "cPlus": 1,
+            "d": 3,
+            "dMinus": 0,
+            "dPlus": 6,
+            "f": 1,
+            "w": 1
+          },
+          "courseId": "uiuc:CS:357",
+          "delta": null,
+          "dfwRate": 0.169,
+          "gpa": 3.032,
+          "gradeRows": 1,
+          "graded": 64,
+          "isHeadline": false,
+          "number": "357",
+          "subject": "CS",
+          "title": "Numerical Methods I",
+          "wRate": 0.015,
+          "withdrawn": 1
+        },
+        {
+          "aRate": 0.587,
+          "baselineGpa": null,
+          "baselineN": 0,
+          "buckets": {
+            "a": 15,
+            "aMinus": 11,
+            "aPlus": 1,
+            "b": 5,
+            "bMinus": 5,
+            "bPlus": 4,
+            "c": 0,
+            "cMinus": 2,
+            "cPlus": 2,
+            "d": 0,
+            "dMinus": 1,
+            "dPlus": 0,
+            "f": 0,
+            "w": 2
+          },
+          "courseId": "uiuc:CS:411",
+          "delta": null,
+          "dfwRate": 0.063,
+          "gpa": 3.363,
+          "gradeRows": 1,
+          "graded": 46,
+          "isHeadline": false,
+          "number": "411",
+          "subject": "CS",
+          "title": "Database Systems",
+          "wRate": 0.042,
+          "withdrawn": 2
+        },
+        {
+          "aRate": 0.622,
+          "baselineGpa": null,
+          "baselineN": 0,
+          "buckets": {
+            "a": 17,
+            "aMinus": 5,
+            "aPlus": 6,
+            "b": 2,
+            "bMinus": 2,
+            "bPlus": 0,
+            "c": 4,
+            "cMinus": 0,
+            "cPlus": 0,
+            "d": 2,
+            "dMinus": 2,
+            "dPlus": 0,
+            "f": 5,
+            "w": 1
+          },
+          "courseId": "uiuc:CS:421",
+          "delta": null,
+          "dfwRate": 0.217,
+          "gpa": 2.956,
+          "gradeRows": 1,
+          "graded": 45,
+          "isHeadline": false,
+          "number": "421",
+          "subject": "CS",
+          "title": "Progrmg Languages & Compilers",
+          "wRate": 0.022,
+          "withdrawn": 1
+        },
+        {
+          "aRate": 0.429,
+          "baselineGpa": 3.338,
+          "baselineN": 78,
+          "buckets": {
+            "a": 8,
+            "aMinus": 10,
+            "aPlus": 0,
+            "b": 4,
+            "bMinus": 6,
+            "bPlus": 7,
+            "c": 1,
+            "cMinus": 2,
+            "cPlus": 3,
+            "d": 0,
+            "dMinus": 0,
+            "dPlus": 1,
+            "f": 0,
+            "w": 0
+          },
+          "courseId": "uiuc:CS:425",
+          "delta": -0.154,
+          "dfwRate": 0.024,
+          "gpa": 3.183,
+          "gradeRows": 1,
+          "graded": 42,
+          "isHeadline": false,
+          "number": "425",
+          "subject": "CS",
+          "title": "Distributed Systems",
+          "wRate": 0,
+          "withdrawn": 0
+        },
+        {
+          "aRate": 0.827,
+          "baselineGpa": 3.688,
+          "baselineN": 100,
+          "buckets": {
+            "a": 38,
+            "aMinus": 13,
+            "aPlus": 11,
+            "b": 4,
+            "bMinus": 0,
+            "bPlus": 2,
+            "c": 0,
+            "cMinus": 0,
+            "cPlus": 0,
+            "d": 2,
+            "dMinus": 0,
+            "dPlus": 2,
+            "f": 3,
+            "w": 3
+          },
+          "courseId": "uiuc:CS:441",
+          "delta": -0.127,
+          "dfwRate": 0.128,
+          "gpa": 3.56,
+          "gradeRows": 1,
+          "graded": 75,
+          "isHeadline": false,
+          "number": "441",
+          "subject": "CS",
+          "title": "Applied Machine Learning",
+          "wRate": 0.038,
+          "withdrawn": 3
+        }
+      ],
+      "distribution": {
+        "a": 0,
+        "aMinus": 0,
+        "aPlus": 0,
+        "b": 0,
+        "bMinus": 0,
+        "bPlus": 0,
+        "c": 0,
+        "cMinus": 0,
+        "cPlus": 0,
+        "d": 0,
+        "dMinus": 0,
+        "dPlus": 0,
+        "f": 0,
+        "w": 0
+      },
+      "gpaByYear": [],
+      "matchProvenance": [
+        {
+          "instructorRaw": "Yamaguchi, N",
+          "method": "unmatched",
+          "rows": 7,
+          "score": 0,
+          "source": "grades"
+        },
+        {
+          "instructorRaw": "Yamaguchi, N",
+          "method": "exact",
+          "rows": 1,
+          "score": 1,
+          "source": "schedule"
+        }
+      ],
+      "openSections": [],
+      "positiveReviews": [],
+      "professor": {
+        "courseIds": [
+          "uiuc:CS:100",
+          "uiuc:CS:173",
+          "uiuc:CS:357",
+          "uiuc:CS:411",
+          "uiuc:CS:421",
+          "uiuc:CS:425",
+          "uiuc:CS:441"
+        ],
+        "department": null,
+        "displayName": "N. Yamaguchi",
+        "firstName": "N",
+        "id": "uiuc:g:yamaguchi-n",
+        "isFictional": true,
+        "kind": "grades-only",
+        "lastName": "Yamaguchi",
+        "nameKey": {
+          "first": "n",
+          "firstCompact": "n",
+          "firstInitial": "n",
+          "firstToken": "n",
+          "firstTokens": [
+            "n"
+          ],
+          "last": "yamaguchi",
+          "lastCompact": "yamaguchi",
+          "lastTokens": [
+            "yamaguchi"
+          ],
+          "middleInitials": [],
+          "raw": "Yamaguchi, N"
+        },
+        "nameVariants": [
+          "Yamaguchi, N"
+        ],
+        "reviewSourceId": null,
+        "schoolId": "uiuc",
+        "slug": "yamaguchi-n",
+        "subjects": [
+          "CS"
+        ]
+      },
+      "rank": null,
+      "scores": {
+        "aRate": null,
+        "composite": null,
+        "confidence": "low",
+        "criticalCount": 0,
+        "deltaComparableN": 0,
+        "dfwRate": null,
+        "difficultyMean": null,
+        "gpaDelta": null,
+        "gpaMean": null,
+        "gradeRows": 0,
+        "positiveCount": 0,
+        "priorMean": 3.479,
+        "ratingRaw": null,
+        "ratingShrunk": null,
+        "reviewCount": 0,
+        "soleInstructor": false,
+        "studentsGraded": 0,
+        "wRate": null,
+        "withdrawn": 0,
+        "wouldTakeAgainPct": null,
+        "yearsActive": 0
+      },
+      "sectionsThisTerm": 1,
+      "summary": null,
+      "vibeTags": []
+    }
+  ],
+  "school": {
+    "currentTerm": "2026-fa",
+    "id": "uiuc",
+    "name": "University of Illinois Urbana-Champaign",
+    "seatStatusAvailable": true,
+    "shortName": "UIUC",
+    "sources": {
+      "grades": "demo-grades",
+      "reviews": "demo-reviews",
+      "schedule": "demo-schedule"
+    },
+    "timezone": "America/Chicago"
+  },
+  "scope": {
+    "kind": "subject"
+  },
+  "seatsFetchedAt": "2026-09-03T14:12:00Z",
+  "sparklineRange": [
+    2.5,
+    3.9
+  ],
+  "subject": {
+    "code": "CS",
+    "courseCount": 20,
+    "name": "Computer Science",
+    "openSectionCount": 19,
+    "professorCount": 19,
+    "schoolId": "uiuc"
+  },
+  "subjectGpaMean": 3.281,
+  "subjectWRate": 0.028,
+  "term": "2026-fa",
+  "termFallback": false
+}

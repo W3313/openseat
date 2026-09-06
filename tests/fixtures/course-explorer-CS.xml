@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:subject xmlns:ns2="http://rest.cis.illinois.edu" id="CS" href="https://courses.illinois.edu/cisapp/explorer/schedule/2026/fall/CS.xml">
+    <parents>
+        <calendarYear id="2026" href="https://courses.illinois.edu/cisapp/explorer/schedule/2026.xml">2026</calendarYear>
+        <term id="120268" href="https://courses.illinois.edu/cisapp/explorer/schedule/2026/fall.xml">Fall 2026</term>
+    </parents>
+    <label>Computer Science</label>
+    <collegeCode>KP</collegeCode>
+    <departmentCode>1434</departmentCode>
+    <unitName>Computer Science</unitName>
+    <contactName>Fictional Contact</contactName>
+    <courses>
+        <course id="100" href="https://courses.illinois.edu/cisapp/explorer/schedule/2026/fall/CS/100.xml">Computer Science Orientation</course>
+        <course id="124" href="https://courses.illinois.edu/cisapp/explorer/schedule/2026/fall/CS/124.xml">Introduction to Computer Science I</course>
+        <course id="173" href="https://courses.illinois.edu/cisapp/explorer/schedule/2026/fall/CS/173.xml">Discrete Structures</course>
+        <course id="225" href="https://courses.illinois.edu/cisapp/explorer/schedule/2026/fall/CS/225.xml">Data Structures</course>
+        <course id="233" href="https://courses.illinois.edu/cisapp/explorer/schedule/2026/fall/CS/233.xml">Computer Architecture</course>
+        <course id="374" href="https://courses.illinois.edu/cisapp/explorer/schedule/2026/fall/CS/374.xml">Intro to Algs &amp; Models of Comp</course>
+        <course id="598" href="https://courses.illinois.edu/cisapp/explorer/schedule/2026/fall/CS/598.xml">Special Topics</course>
+    </courses>
+</ns2:subject>

@@ -1,0 +1,22 @@
+{
+  "CHEM": [
+    "Chemistry"
+  ],
+  "CS": [
+    "Computer Science"
+  ],
+  "ECE": [
+    "Electrical and Computer Engineering",
+    "Electrical Engineering",
+    "Computer Engineering"
+  ],
+  "MATH": [
+    "Mathematics"
+  ],
+  "PHYS": [
+    "Physics"
+  ],
+  "STAT": [
+    "Statistics"
+  ]
+}

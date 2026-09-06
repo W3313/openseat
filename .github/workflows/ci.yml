@@ -1,0 +1,22 @@
+name: ci
+on: { push: { branches: [main] }, pull_request: {} }
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    env:
+      NEXT_TELEMETRY_DISABLED: 1
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 26, cache: npm }
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm run test -- --coverage
+      - run: npm run data:all                      # no key → extractive only for missing; committed Claude entries stay
+      - run: git diff --exit-code -- data          # committed demo data must equal the generator's output
+      - run: npm run build
+      - run: (npm run start & sleep 5; SMOKE_BASE_URL=http://localhost:3000 npx vitest run tests/smoke)
+      - uses: actions/upload-artifact@v4
+        with: { name: match-report, path: data/processed/uiuc/match-report.json }
+# No secrets are configured in CI; ANTHROPIC_API_KEY is never set here (SPEC 12.5).

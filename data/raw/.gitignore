@@ -1,0 +1,5 @@
+# Raw upstream data is not committed, except the deterministic fictional demo dataset.
+*
+!.gitignore
+!demo/
+!demo/**

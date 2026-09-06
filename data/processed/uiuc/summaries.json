@@ -1,0 +1,3608 @@
+{
+  "uiuc:p:aiko-vantreight": {
+    "bestFor": "Students who can manage a rigorous schedule and enjoy in-depth problem sets",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000610",
+      "uiuc:r:demo-r-000612",
+      "uiuc:r:demo-r-000615",
+      "uiuc:r:demo-r-000613",
+      "uiuc:r:demo-r-000608",
+      "uiuc:r:demo-r-000601",
+      "uiuc:r:demo-r-000603",
+      "uiuc:r:demo-r-000611",
+      "uiuc:r:demo-r-000602",
+      "uiuc:r:demo-r-000605",
+      "uiuc:r:demo-r-000598",
+      "uiuc:r:demo-r-000604"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:22:42.054Z",
+    "gradingNote": "In 4 course(s) over 6 year(s), GPA averaged 3.04 (+0.02 vs. the same courses taught by others); 2.7% withdrew.",
+    "inputHash": "3f0fbea4ec63bf4d",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:aiko-vantreight",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 19,
+    "source": "openai-compatible",
+    "strengths": [
+      "Engaging lectures",
+      "Clear textbook emphasis",
+      "Strong office hours"
+    ],
+    "teachingStyle": [
+      "lecture-heavy",
+      "discussion"
+    ],
+    "verdict": "Aiko Vantreight is a solid instructor with heavy workload; 19 reviews suggest she is engaging but demanding.",
+    "watchOuts": [
+      "Heavy homework load",
+      "Exam questions tough",
+      "Requires constant reading"
+    ],
+    "workload": "heavy"
+  },
+  "uiuc:p:alejandro-agyeman": {
+    "bestFor": "students who thrive on active participation and can manage a demanding schedule",
+    "confidence": "medium",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000326",
+      "uiuc:r:demo-r-000327",
+      "uiuc:r:demo-r-000328",
+      "uiuc:r:demo-r-000331",
+      "uiuc:r:demo-r-000335",
+      "uiuc:r:demo-r-000329",
+      "uiuc:r:demo-r-000334",
+      "uiuc:r:demo-r-000333",
+      "uiuc:r:demo-r-000332",
+      "uiuc:r:demo-r-000325",
+      "uiuc:r:demo-r-000330"
+    ],
+    "format": "discussion",
+    "generatedAt": "2026-09-06T22:22:42.611Z",
+    "gradingNote": "In 3 course(s) over 4 year(s), GPA averaged 3.20 (−0.18 vs. the same courses taught by others); 2.6% withdrew.",
+    "inputHash": "4a343932c3d1e4d3",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:alejandro-agyeman",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 11,
+    "source": "openai-compatible",
+    "strengths": [
+      "engaging discussions",
+      "supportive office hours",
+      "interactive demos"
+    ],
+    "teachingStyle": [
+      "discussion",
+      "interactive"
+    ],
+    "verdict": "Based on 11 reviews, this professor is engaging and supportive but has a heavy workload and strict attendance policy.",
+    "watchOuts": [
+      "heavy workload",
+      "strict attendance",
+      "long frequent assignments"
+    ],
+    "workload": "heavy"
+  },
+  "uiuc:p:alexander-ohalloran": {
+    "bestFor": "students who thrive in structured, high‑effort courses and value detailed feedback",
+    "confidence": "medium",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-001246",
+      "uiuc:r:demo-r-001251",
+      "uiuc:r:demo-r-001245",
+      "uiuc:r:demo-r-001244",
+      "uiuc:r:demo-r-001243",
+      "uiuc:r:demo-r-001250",
+      "uiuc:r:demo-r-001247",
+      "uiuc:r:demo-r-001242",
+      "uiuc:r:demo-r-001249",
+      "uiuc:r:demo-r-001248"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:22:43.290Z",
+    "gradingNote": "In 5 course(s) over 6 year(s), GPA averaged 3.40 (+0.08 vs. the same courses taught by others); 2.8% withdrew.",
+    "inputHash": "9f86fc0c432d94ae",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:alexander-ohalloran",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 10,
+    "source": "openai-compatible",
+    "strengths": [
+      "clear explanations",
+      "fair grading",
+      "good office hours",
+      "encourages participation"
+    ],
+    "teachingStyle": [
+      "clear",
+      "fair",
+      "strict attendance"
+    ],
+    "verdict": "Based on 10 reviews, this professor is clear and fair but has a heavy workload and strict attendance, so choose if you’re prepared for a demanding class.",
+    "watchOuts": [
+      "heavy workload",
+      "strict attendance",
+      "tight exam time"
+    ],
+    "workload": "heavy"
+  },
+  "uiuc:p:amara-boguslawski": {
+    "bestFor": "students who prefer structured, note-heavy learning and need clear guidance",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000177",
+      "uiuc:r:demo-r-000190",
+      "uiuc:r:demo-r-000193",
+      "uiuc:r:demo-r-000188"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:23:04.598Z",
+    "gradingNote": "In 5 course(s) over 3 year(s), GPA averaged 2.65 (−0.10 vs. the same courses taught by others); 2.7% withdrew.",
+    "inputHash": "0009084288a927b0",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:amara-boguslawski",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 27,
+    "source": "openai-compatible",
+    "strengths": [
+      "excellent lecture notes",
+      "approachable office hours",
+      "caring about student understanding"
+    ],
+    "teachingStyle": [
+      "engaging",
+      "caring",
+      "approachable"
+    ],
+    "verdict": "Amara Bogusławski is a caring, engaging instructor with excellent notes; expect a moderate workload and a lecture-heavy format.",
+    "watchOuts": [
+      "finals heavily weighted",
+      "pace can accelerate before final",
+      "practice problems mirror exams"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:amara-rowan-achebe": {
+    "bestFor": "Students who appreciate clear grading and supportive feedback but are prepared for a demanding workload.",
+    "confidence": "medium",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000377",
+      "uiuc:r:demo-r-000379",
+      "uiuc:r:demo-r-000376",
+      "uiuc:r:demo-r-000375",
+      "uiuc:r:demo-r-000378"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:23:05.060Z",
+    "gradingNote": "In 5 course(s) over 4 year(s), GPA averaged 3.44 (+0.06 vs. the same courses taught by others); 2.7% withdrew.",
+    "inputHash": "fdbf48afb1036d8f",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:amara-rowan-achebe",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 5,
+    "source": "openai-compatible",
+    "strengths": [
+      "Clear grading and expectations",
+      "Supportive and caring",
+      "Good notes and feedback",
+      "Engaging lectures"
+    ],
+    "teachingStyle": [
+      "clear expectations",
+      "fair grading",
+      "supportive",
+      "interactive"
+    ],
+    "verdict": "With 5 reviews, this instructor is generally well-liked for clear grading and supportive teaching, but the workload can be heavy for some students.",
+    "watchOuts": [
+      "Heavy final exam weight",
+      "Requires textbook reading before lectures",
+      "Course can be challenging for some learning styles"
+    ],
+    "workload": "heavy"
+  },
+  "uiuc:p:andrew-szymanski": {
+    "bestFor": "Students who prefer structured textbook learning and can manage a heavy workload.",
+    "confidence": "medium",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000112",
+      "uiuc:r:demo-r-000121",
+      "uiuc:r:demo-r-000118",
+      "uiuc:r:demo-r-000120",
+      "uiuc:r:demo-r-000115"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:23:17.146Z",
+    "gradingNote": "In 4 course(s) over 3 year(s), GPA averaged 2.79 (+0.06 vs. the same courses taught by others); 2.6% withdrew.",
+    "inputHash": "e514b59a0c02d419",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:andrew-szymanski",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 10,
+    "source": "openai-compatible",
+    "strengths": [
+      "Strong textbook focus",
+      "Helpful office hours",
+      "Clear exam material",
+      "Mentor-like support"
+    ],
+    "teachingStyle": [
+      "lecture-heavy",
+      "discussion"
+    ],
+    "verdict": "Based on 10 reviews, the professor is solid but disorganized, so choose if you can stay on top of the required textbook.",
+    "watchOuts": [
+      "Disorganized lectures",
+      "Inconsistent grading",
+      "Frequent deadline changes"
+    ],
+    "workload": "heavy"
+  },
+  "uiuc:p:andrew-varga": {
+    "bestFor": "Students who prefer structured discussion and can handle frequent, long assignments",
+    "confidence": "low",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000959",
+      "uiuc:r:demo-r-000956",
+      "uiuc:r:demo-r-000957",
+      "uiuc:r:demo-r-000958"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:23:26.857Z",
+    "gradingNote": "In 3 course(s) over 3 year(s), GPA averaged 3.15 (−0.03 vs. the same courses taught by others); 1.6% withdrew.",
+    "inputHash": "0d2d0c9e4b1439e4",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:andrew-varga",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 4,
+    "source": "openai-compatible",
+    "strengths": [
+      "Strong discussion sections with helpful TAs",
+      "Clear emphasis on staying on top of frequent assignments"
+    ],
+    "teachingStyle": [
+      "lecture-heavy",
+      "discussion"
+    ],
+    "verdict": "With 4 reviews, the class is disorganized but manageable for students who stay on top of heavy homework.",
+    "watchOuts": [
+      "Course is consistently disorganized and deadlines change",
+      "Heavy homework load"
+    ],
+    "workload": "heavy"
+  },
+  "uiuc:p:anjali-olafsdottir": {
+    "bestFor": "students who prefer structured lectures and appreciate generous grading curves",
+    "confidence": "medium",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-001193",
+      "uiuc:r:demo-r-001194",
+      "uiuc:r:demo-r-001196",
+      "uiuc:r:demo-r-001192",
+      "uiuc:r:demo-r-001195"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:23:47.591Z",
+    "gradingNote": "In 3 course(s) over 4 year(s), GPA averaged 3.28 (−0.23 vs. the same courses taught by others); 3.1% withdrew.",
+    "inputHash": "1b569b942e5afdeb",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:anjali-olafsdottir",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 5,
+    "source": "openai-compatible",
+    "strengths": [
+      "generous curve",
+      "practice exams",
+      "engaging lectures",
+      "positive student feedback"
+    ],
+    "teachingStyle": [
+      "lecture-heavy",
+      "discussion"
+    ],
+    "verdict": "Based on 5 reviews, this instructor is highly recommended for students who enjoy a well‑run, curve‑generous course with moderate difficulty.",
+    "watchOuts": [
+      "disorganized grading",
+      "inconsistent TA grading",
+      "exams harder than homework"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:ayse-kealoha": {
+    "bestFor": "students who appreciate a caring instructor and are prepared for a moderately heavy statistics course",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-001105",
+      "uiuc:r:demo-r-001108",
+      "uiuc:r:demo-r-001113",
+      "uiuc:r:demo-r-001119"
+    ],
+    "format": "mixed",
+    "generatedAt": "2026-09-06T22:23:49.790Z",
+    "gradingNote": "In 3 course(s) over 5 year(s), GPA averaged 3.11 (+0.04 vs. the same courses taught by others); 5.8% withdrew.",
+    "inputHash": "60b27e11b32a330c",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:ayse-kealoha",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 17,
+    "source": "openai-compatible",
+    "strengths": [
+      "generous curve and partial credit",
+      "clear grading expectations",
+      "office hours and email responsiveness"
+    ],
+    "teachingStyle": [
+      "engaging",
+      "caring",
+      "responsive"
+    ],
+    "verdict": "Based on 17 reviews, the instructor is engaging and caring but the course is moderately heavy and may require extra effort to keep up with the workload.",
+    "watchOuts": [
+      "heavy workload and long exams",
+      "difficulty in getting individual help in large class",
+      "practice exams may not match real ones"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:bolanle-haldane": {
+    "bestFor": "students who thrive in an engaging, curve-friendly environment and can handle a moderate to heavy workload",
+    "confidence": "medium",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-001123",
+      "uiuc:r:demo-r-001125",
+      "uiuc:r:demo-r-001122",
+      "uiuc:r:demo-r-001126",
+      "uiuc:r:demo-r-001120",
+      "uiuc:r:demo-r-001124"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:24:00.981Z",
+    "gradingNote": "In 4 course(s) over 3 year(s), GPA averaged 3.43 (+0.13 vs. the same courses taught by others); 3.6% withdrew.",
+    "inputHash": "4de35713ec585e78",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:bolanle-haldane",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 7,
+    "source": "openai-compatible",
+    "strengths": [
+      "generous grading and curves",
+      "engaging lectures",
+      "caring about student understanding"
+    ],
+    "teachingStyle": [
+      "engaging",
+      "curves-generously"
+    ],
+    "verdict": "Based on 7 reviews, this instructor is engaging and generous with curves, but workload can be heavy.",
+    "watchOuts": [
+      "heavy homework and exams",
+      "longer than advertised assignments"
+    ],
+    "workload": "heavy"
+  },
+  "uiuc:p:bolanle-van-der-berg": {
+    "bestFor": "students who thrive in a fast‑paced environment and can manage their own study schedule",
+    "confidence": "medium",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-001191",
+      "uiuc:r:demo-r-001187",
+      "uiuc:r:demo-r-001190",
+      "uiuc:r:demo-r-001183",
+      "uiuc:r:demo-r-001189",
+      "uiuc:r:demo-r-001188",
+      "uiuc:r:demo-r-001182",
+      "uiuc:r:demo-r-001186",
+      "uiuc:r:demo-r-001185",
+      "uiuc:r:demo-r-001184"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:24:14.067Z",
+    "gradingNote": "In 4 course(s) over 5 year(s), GPA averaged 3.60 (+0.02 vs. the same courses taught by others); 2.8% withdrew.",
+    "inputHash": "82c18a4538f1f6d0",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:bolanle-van-der-berg",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 10,
+    "source": "openai-compatible",
+    "strengths": [
+      "generous curve",
+      "quick coverage of material",
+      "engaging lectures",
+      "useful notes"
+    ],
+    "teachingStyle": [
+      "fast-paced",
+      "dense lectures",
+      "curved grading"
+    ],
+    "verdict": "Based on 10 reviews, this instructor is fast‑paced and generous with curves but often disorganized, so plan to stay on top of material and use study groups.",
+    "watchOuts": [
+      "disorganized schedule and website",
+      "late assignment postings",
+      "inconsistent grading"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:camille-thackeray": {
+    "bestFor": "Students who thrive with structured attendance and can manage a disorganized schedule",
+    "confidence": "medium",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000824",
+      "uiuc:r:demo-r-000821",
+      "uiuc:r:demo-r-000822",
+      "uiuc:r:demo-r-000825",
+      "uiuc:r:demo-r-000823",
+      "uiuc:r:demo-r-000819",
+      "uiuc:r:demo-r-000820"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:24:26.113Z",
+    "gradingNote": "In 5 course(s) over 4 year(s), GPA averaged 3.23 (+0.01 vs. the same courses taught by others); 2.7% withdrew.",
+    "inputHash": "a0aced9fba68abcf",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:camille-thackeray",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 7,
+    "source": "openai-compatible",
+    "strengths": [
+      "Strict attendance policy encourages engagement",
+      "Helpful office hours and mentorship",
+      "Clear emphasis on textbook reading"
+    ],
+    "teachingStyle": [
+      "lecture-heavy",
+      "discussion"
+    ],
+    "verdict": "Based on 7 reviews, the course is disorganized but offers strict attendance and helpful office hours; consider if the schedule fits you.",
+    "watchOuts": [
+      "Course material and announcements are often disorganized",
+      "Attendance is mandatory and heavily graded",
+      "Pop quizzes add pressure"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:chinedu-galloway": {
+    "bestFor": "Self-directed readers who can manage a heavy workload with minimal hand-holding and are willing to form study groups early.",
+    "confidence": "medium",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000141",
+      "uiuc:r:demo-r-000145",
+      "uiuc:r:demo-r-000135",
+      "uiuc:r:demo-r-000132",
+      "uiuc:r:demo-r-000144",
+      "uiuc:r:demo-r-000136",
+      "uiuc:r:demo-r-000138",
+      "uiuc:r:demo-r-000139",
+      "uiuc:r:demo-r-000142",
+      "uiuc:r:demo-r-000133"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:52:43.796Z",
+    "gradingNote": "In 3 course(s) over 3 year(s), GPA averaged 3.20 (+0.09 vs. the same courses taught by others); 2.3% withdrew.",
+    "inputHash": "e9bae7218e2ad933",
+    "model": "qwen/qwen3.8-27b",
+    "professorId": "uiuc:p:chinedu-galloway",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 14,
+    "source": "openai-compatible",
+    "strengths": [
+      "Practice exams are helpful for preparation",
+      "Professor is approachable after class",
+      "A few students found the course rewarding despite challenges"
+    ],
+    "teachingStyle": [
+      "Disorganized lectures that jump between",
+      "Textbook does most of the teaching",
+      "Exams test understanding, not",
+      "Large lecture format"
+    ],
+    "verdict": "Based on 14 reviews, most students advise choosing a different section if possible due to disorganized lectures and exams with minimal partial credit.",
+    "watchOuts": [
+      "Disorganized lectures and confusing course site/announcements",
+      "Hard exams with almost no partial credit",
+      "Heavy weekly homework; must read textbook before each lecture"
+    ],
+    "workload": "heavy"
+  },
+  "uiuc:p:christopher-achterberg": {
+    "bestFor": "Students who prefer structured, lecture-driven courses with ample support and a forgiving grading policy",
+    "confidence": "medium",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000049",
+      "uiuc:r:demo-r-000051",
+      "uiuc:r:demo-r-000047",
+      "uiuc:r:demo-r-000052",
+      "uiuc:r:demo-r-000046",
+      "uiuc:r:demo-r-000050",
+      "uiuc:r:demo-r-000044",
+      "uiuc:r:demo-r-000045",
+      "uiuc:r:demo-r-000048",
+      "uiuc:r:demo-r-000053"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:25:03.687Z",
+    "gradingNote": "In 3 course(s) over 5 year(s), GPA averaged 3.23 (+0.00 vs. the same courses taught by others); 1.8% withdrew.",
+    "inputHash": "291128ff85c7b8d7",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:christopher-achterberg",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 10,
+    "source": "openai-compatible",
+    "strengths": [
+      "Clear, thorough lectures",
+      "Generous grading curves",
+      "Strong TA support",
+      "Good use of examples"
+    ],
+    "teachingStyle": [
+      "clear-lectures",
+      "curves-generously"
+    ],
+    "verdict": "Based on 10 reviews, this professor is a solid choice for students who value clear lectures and generous grading curves.",
+    "watchOuts": [
+      "Regrade requests can be slow",
+      "Project instructions may be vague early on"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:christopher-ferreira-nakamura": {
+    "bestFor": "students who thrive in fast‑paced, lecture‑heavy courses and are comfortable with a heavy workload",
+    "confidence": "medium",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000156",
+      "uiuc:r:demo-r-000157",
+      "uiuc:r:demo-r-000152",
+      "uiuc:r:demo-r-000153"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:25:07.619Z",
+    "gradingNote": "In 3 course(s) over 3 year(s), GPA averaged 3.10 (−0.01 vs. the same courses taught by others); 4.9% withdrew.",
+    "inputHash": "ac4151beb3cdc552",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:christopher-ferreira-nakamura",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 6,
+    "source": "openai-compatible",
+    "strengths": [
+      "caring about students",
+      "well-run course",
+      "prepares for exams"
+    ],
+    "teachingStyle": [
+      "lecture-heavy",
+      "engaging"
+    ],
+    "verdict": "Based on 6 reviews, this professor offers engaging lectures with a heavy workload and challenging exams.",
+    "watchOuts": [
+      "heavy homework",
+      "hard exams with little partial credit"
+    ],
+    "workload": "heavy"
+  },
+  "uiuc:p:christopher-villanueva": {
+    "bestFor": "Students who thrive with supportive teaching and appreciate generous grading, especially in required math courses.",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000659",
+      "uiuc:r:demo-r-000648",
+      "uiuc:r:demo-r-000653",
+      "uiuc:r:demo-r-000651",
+      "uiuc:r:demo-r-000656",
+      "uiuc:r:demo-r-000660",
+      "uiuc:r:demo-r-000643",
+      "uiuc:r:demo-r-000639"
+    ],
+    "format": "mixed",
+    "generatedAt": "2026-09-06T22:25:27.771Z",
+    "gradingNote": "In 4 course(s) over 4 year(s), GPA averaged 3.15 (+0.18 vs. the same courses taught by others); 2.0% withdrew.",
+    "inputHash": "01bb03218b84ac09",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:christopher-villanueva",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 25,
+    "source": "openai-compatible",
+    "strengths": [
+      "Generous with curves and extra credit",
+      "Genuinely cares about student understanding",
+      "Engaging lectures and approachable",
+      "Encourages early office hour visits"
+    ],
+    "teachingStyle": [
+      "engaging",
+      "supportive",
+      "curved grading"
+    ],
+    "verdict": "Based on 25 reviews, this instructor is highly supportive, generous with curves, and engaging, but the course can be uneven and requires consistent effort.",
+    "watchOuts": [
+      "Course pacing can be uneven",
+      "Midterm and project deadlines may be tight",
+      "Expect to work consistently to keep up"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:daniel-salazar": {
+    "bestFor": "Students who prefer structured, textbook‑driven learning and are comfortable with heavy reading and rigorous exams",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000798",
+      "uiuc:r:demo-r-000791",
+      "uiuc:r:demo-r-000800",
+      "uiuc:r:demo-r-000803",
+      "uiuc:r:demo-r-000799",
+      "uiuc:r:demo-r-000794",
+      "uiuc:r:demo-r-000795",
+      "uiuc:r:demo-r-000792",
+      "uiuc:r:demo-r-000804",
+      "uiuc:r:demo-r-000802",
+      "uiuc:r:demo-r-000790",
+      "uiuc:r:demo-r-000797"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:25:48.015Z",
+    "gradingNote": "In 3 course(s) over 3 year(s), GPA averaged 2.93 (+0.17 vs. the same courses taught by others); 2.5% withdrew.",
+    "inputHash": "22a0ab91872fc3cd",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:daniel-salazar",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 16,
+    "source": "openai-compatible",
+    "strengths": [
+      "Requires textbook, which clarifies material",
+      "Practice exams help prepare for tough tests",
+      "TAs are helpful in discussion sections"
+    ],
+    "teachingStyle": [
+      "lecture-heavy",
+      "discussion"
+    ],
+    "verdict": "With 16 reviews, the course is demanding but manageable if you read the textbook and use practice exams; consider it if you need the credit.",
+    "watchOuts": [
+      "Lectures assume prior reading, causing confusion",
+      "Exams are harder than homework and have tight time limits",
+      "Assignments and announcements often released late"
+    ],
+    "workload": "heavy"
+  },
+  "uiuc:p:daniel-sidibe": {
+    "bestFor": "Students who prefer structured, textbook-driven courses and are comfortable with rigorous exams.",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000373",
+      "uiuc:r:demo-r-000364",
+      "uiuc:r:demo-r-000359",
+      "uiuc:r:demo-r-000370",
+      "uiuc:r:demo-r-000358",
+      "uiuc:r:demo-r-000362",
+      "uiuc:r:demo-r-000355",
+      "uiuc:r:demo-r-000372",
+      "uiuc:r:demo-r-000368",
+      "uiuc:r:demo-r-000357",
+      "uiuc:r:demo-r-000361",
+      "uiuc:r:demo-r-000365"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:26:08.392Z",
+    "gradingNote": "In 2 course(s) over 3 year(s), GPA averaged 2.96 (+0.20 vs. the same courses taught by others); 3.0% withdrew.",
+    "inputHash": "65867f1732cd24ff",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:daniel-sidibe",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 20,
+    "source": "openai-compatible",
+    "strengths": [
+      "Hard exams that reflect textbook content",
+      "Practice problems mirror exam style",
+      "Good office hours and mentorship",
+      "Clear emphasis on attendance"
+    ],
+    "teachingStyle": [
+      "strict attendance",
+      "clicker points",
+      "textbook-focused"
+    ],
+    "verdict": "Based on 20 reviews, this CS 241 instructor is demanding but helpful for students who attend regularly and study the textbook.",
+    "watchOuts": [
+      "Exams are very hard with little partial credit",
+      "Attendance is strictly enforced",
+      "Lectures sometimes run over time"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:dariusz-baptiste": {
+    "bestFor": "Students who want fair exams and engaging lectures and can commit to consistent attendance and daily homework.",
+    "confidence": "medium",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000163",
+      "uiuc:r:demo-r-000167",
+      "uiuc:r:demo-r-000162",
+      "uiuc:r:demo-r-000165",
+      "uiuc:r:demo-r-000164",
+      "uiuc:r:demo-r-000161",
+      "uiuc:r:demo-r-000166",
+      "uiuc:r:demo-r-000158",
+      "uiuc:r:demo-r-000160",
+      "uiuc:r:demo-r-000159"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:53:05.697Z",
+    "gradingNote": "In 5 course(s) over 5 year(s), GPA averaged 2.73 (−0.19 vs. the same courses taught by others); 2.9% withdrew.",
+    "inputHash": "2e2035955b182fa7",
+    "model": "qwen/qwen3.8-27b",
+    "professorId": "uiuc:p:dariusz-baptiste",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 10,
+    "source": "openai-compatible",
+    "strengths": [
+      "Exams are fair and reflect what was taught",
+      "Engaging lectures with demos keep attention",
+      "Useful feedback on every problem set",
+      "Genuinely cares whether students understand"
+    ],
+    "teachingStyle": [
+      "Engaging demos and live examples",
+      "Fair grading with clear expectations",
+      "Strict attendance with pop quizzes",
+      "Cares about student understanding"
+    ],
+    "verdict": "Across 10 reviews, consistently fair and engaging — take it if you can commit to strict attendance and steady homework.",
+    "watchOuts": [
+      "Attendance is mandatory and counts toward grade",
+      "Do not rely on the curve; earn the points",
+      "Office hours are packed and hard to get into"
+    ],
+    "workload": "heavy"
+  },
+  "uiuc:p:edward-reaumur": {
+    "bestFor": "Students who thrive on active participation and thorough notes, especially in CS 498 and CS 101.",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000285",
+      "uiuc:r:demo-r-000300",
+      "uiuc:r:demo-r-000296",
+      "uiuc:r:demo-r-000290"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:26:45.910Z",
+    "gradingNote": "In 4 course(s) over 4 year(s), GPA averaged 3.39 (−0.16 vs. the same courses taught by others); 2.3% withdrew.",
+    "inputHash": "48372d9216a338f6",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:edward-reaumur",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 18,
+    "source": "openai-compatible",
+    "strengths": [
+      "Excellent lecture notes",
+      "Fair grading",
+      "Clear rubric",
+      "Encourages questions"
+    ],
+    "teachingStyle": [
+      "engaging",
+      "interactive",
+      "note‑rich"
+    ],
+    "verdict": "Based on 18 reviews, this instructor is engaging and well‑organized, but the workload can be heavy and the textbook is essential.",
+    "watchOuts": [
+      "Heavy workload",
+      "Textbook required"
+    ],
+    "workload": "heavy"
+  },
+  "uiuc:p:eitan-tremblay": {
+    "bestFor": "students who can handle a heavy workload and appreciate detailed notes and generous grading",
+    "confidence": "medium",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-001042",
+      "uiuc:r:demo-r-001037",
+      "uiuc:r:demo-r-001041",
+      "uiuc:r:demo-r-001040",
+      "uiuc:r:demo-r-001036",
+      "uiuc:r:demo-r-001039",
+      "uiuc:r:demo-r-001035",
+      "uiuc:r:demo-r-001038"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:26:59.607Z",
+    "gradingNote": "In 4 course(s) over 5 year(s), GPA averaged 3.49 (−0.14 vs. the same courses taught by others); 2.9% withdrew.",
+    "inputHash": "055fda7363dd2d0a",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:eitan-tremblay",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 8,
+    "source": "openai-compatible",
+    "strengths": [
+      "excellent lecture notes",
+      "generous curves on exams",
+      "clear and kind",
+      "good practice problems"
+    ],
+    "teachingStyle": [
+      "engaging",
+      "generous grading",
+      "clear"
+    ],
+    "verdict": "Eitan Tremblay is a highly engaging instructor with excellent notes, but the workload is heavy and exams can be unpredictable, based on 8 reviews.",
+    "watchOuts": [
+      "heavy homework load",
+      "practice exams may not match real exams",
+      "late policy strict"
+    ],
+    "workload": "heavy"
+  },
+  "uiuc:p:elif-jankowski": {
+    "bestFor": "students who thrive on rigorous work and can manage a heavy workload",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-001162",
+      "uiuc:r:demo-r-001179",
+      "uiuc:r:demo-r-001170",
+      "uiuc:r:demo-r-001158",
+      "uiuc:r:demo-r-001172",
+      "uiuc:r:demo-r-001174",
+      "uiuc:r:demo-r-001161",
+      "uiuc:r:demo-r-001181",
+      "uiuc:r:demo-r-001155",
+      "uiuc:r:demo-r-001169",
+      "uiuc:r:demo-r-001166",
+      "uiuc:r:demo-r-001177"
+    ],
+    "format": "mixed",
+    "generatedAt": "2026-09-06T22:27:19.914Z",
+    "gradingNote": "In 3 course(s) over 6 year(s), GPA averaged 3.56 (+0.39 vs. the same courses taught by others); 2.4% withdrew.",
+    "inputHash": "1692b29313e11917",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:elif-jankowski",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 27,
+    "source": "openai-compatible",
+    "strengths": [
+      "heavy homework prepares you",
+      "tough exams test real understanding",
+      "excellent TAs",
+      "caring about student understanding"
+    ],
+    "teachingStyle": [
+      "engaging",
+      "disorganized"
+    ],
+    "verdict": "With 27 reviews, this instructor is solid but demanding, especially for heavy homework and tough exams.",
+    "watchOuts": [
+      "disorganized grading and schedule changes",
+      "heavy workload feels like part-time job",
+      "regrade requests take long"
+    ],
+    "workload": "heavy"
+  },
+  "uiuc:p:elif-takahashi": {
+    "bestFor": "Students who can commit to daily attendance and consistent study; benefits from thorough notes and fair grading.",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000019",
+      "uiuc:r:demo-r-000038",
+      "uiuc:r:demo-r-000039",
+      "uiuc:r:demo-r-000033",
+      "uiuc:r:demo-r-000037",
+      "uiuc:r:demo-r-000021",
+      "uiuc:r:demo-r-000034",
+      "uiuc:r:demo-r-000025",
+      "uiuc:r:demo-r-000035",
+      "uiuc:r:demo-r-000043"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:53:29.547Z",
+    "gradingNote": "In 2 course(s) over 3 year(s), GPA averaged 2.88 (+0.18 vs. the same courses taught by others); 3.0% withdrew.",
+    "inputHash": "8c2b0092b9e527db",
+    "model": "qwen/qwen3.8-27b",
+    "professorId": "uiuc:p:elif-takahashi",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 25,
+    "source": "openai-compatible",
+    "strengths": [
+      "Fair grading with clear feedback on where points were lost",
+      "Notes so thorough the textbook becomes optional",
+      "Supportive of struggling students; no judgment",
+      "Makes a notoriously tough subject feel doable"
+    ],
+    "teachingStyle": [
+      "Strict daily attendance",
+      "Thorough posted notes",
+      "Fair, consistent grading",
+      "Approachable office hours"
+    ],
+    "verdict": "Based on 25 reviews, a fair and caring instructor whose strict attendance policy and compounding material reward consistent daily effort over cramming.",
+    "watchOuts": [
+      "Attendance is mandatory; missing class costs points with no easy excused absences",
+      "Material compounds — cramming won't work; review the same day",
+      "Some homework problems unclear; autograder described as picky"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:elizabeth-ngata": {
+    "bestFor": "Students new to ECE who want a well-organized, supportive first course with excellent study materials",
+    "confidence": "medium",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000498",
+      "uiuc:r:demo-r-000496",
+      "uiuc:r:demo-r-000493",
+      "uiuc:r:demo-r-000491",
+      "uiuc:r:demo-r-000494",
+      "uiuc:r:demo-r-000492",
+      "uiuc:r:demo-r-000495",
+      "uiuc:r:demo-r-000490",
+      "uiuc:r:demo-r-000497"
+    ],
+    "format": "mixed",
+    "generatedAt": "2026-09-06T22:54:11.833Z",
+    "gradingNote": "In 4 course(s) over 4 year(s), GPA averaged 3.27 (+0.10 vs. the same courses taught by others); 2.4% withdrew.",
+    "inputHash": "e714fac74cb787e7",
+    "model": "qwen/qwen3.8-27b",
+    "professorId": "uiuc:p:elizabeth-ngata",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 9,
+    "source": "openai-compatible",
+    "strengths": [
+      "Caring and approachable — office hours highlighted by multiple students",
+      "Notes so thorough the textbook becomes optional",
+      "Breaks complex ideas into digestible pieces"
+    ],
+    "teachingStyle": [
+      "Clear, structured lectures",
+      "Thorough written notes",
+      "Approachable and supportive"
+    ],
+    "verdict": "Across 9 reviews, consistently praised for clear lectures and thorough notes; expect challenging exams and a demanding project.",
+    "watchOuts": [
+      "Exams longer and harder than homework suggests",
+      "Autograder picky; budget extra time for the project",
+      "Grading felt inconsistent between TAs"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:elizabeth-okonkwo-reyes": {
+    "bestFor": "Students who thrive with active participation and can manage a chaotic schedule",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000744",
+      "uiuc:r:demo-r-000755",
+      "uiuc:r:demo-r-000753",
+      "uiuc:r:demo-r-000761",
+      "uiuc:r:demo-r-000754",
+      "uiuc:r:demo-r-000756",
+      "uiuc:r:demo-r-000760"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:28:04.890Z",
+    "gradingNote": "In 2 course(s) over 6 year(s), GPA averaged 2.61 (−0.10 vs. the same courses taught by others); 2.9% withdrew.",
+    "inputHash": "5e5b7c45581624b0",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:elizabeth-okonkwo-reyes",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 19,
+    "source": "openai-compatible",
+    "strengths": [
+      "Highly engaging lectures",
+      "Strong enthusiasm",
+      "Good office hour support",
+      "Encourages study groups"
+    ],
+    "teachingStyle": [
+      "engaging",
+      "passionate",
+      "enthusiastic"
+    ],
+    "verdict": "Based on 19 reviews, this professor is engaging but disorganized, so plan to stay on top of material.",
+    "watchOuts": [
+      "Disorganized course structure",
+      "Late assignment postings",
+      "Confusing announcements"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:elodie-von-ahlefeld": {
+    "bestFor": "Self-directed readers who keep up with a fast pace and use office hours when stuck.",
+    "confidence": "medium",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000981",
+      "uiuc:r:demo-r-000986",
+      "uiuc:r:demo-r-000982",
+      "uiuc:r:demo-r-000974",
+      "uiuc:r:demo-r-000985",
+      "uiuc:r:demo-r-000975",
+      "uiuc:r:demo-r-000983",
+      "uiuc:r:demo-r-000984"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:54:44.630Z",
+    "gradingNote": "In 4 course(s) over 6 year(s), GPA averaged 3.04 (−0.06 vs. the same courses taught by others); 2.5% withdrew.",
+    "inputHash": "9e15e8539b40512a",
+    "model": "qwen/qwen3.8-27b",
+    "professorId": "uiuc:p:elodie-von-ahlefeld",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 14,
+    "source": "openai-compatible",
+    "strengths": [
+      "Fair grading with posted rubrics and generous partial credit",
+      "Genuinely caring mentor in office hours",
+      "Exams test understanding, not rote memory",
+      "Clear lecture goals that are actually reached"
+    ],
+    "teachingStyle": [
+      "Fast-paced, chapter a week",
+      "Assumes textbook reading",
+      "Clear, structured lectures",
+      "Strong office hours"
+    ],
+    "verdict": "Across 14 reviews, this is a consistently well-regarded, fast-paced instructor who rewards students who read the textbook and use office hours — 100% would",
+    "watchOuts": [
+      "Heavy weekly textbook reading is essential, not optional",
+      "Homework can be longer than advertised; start early",
+      "One review notes extra credit was promised but never given"
+    ],
+    "workload": "heavy"
+  },
+  "uiuc:p:emeka-calloway": {
+    "bestFor": "Students who can handle intensive problem sets and appreciate generous grading curves.",
+    "confidence": "medium",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000481",
+      "uiuc:r:demo-r-000479",
+      "uiuc:r:demo-r-000480",
+      "uiuc:r:demo-r-000483",
+      "uiuc:r:demo-r-000484",
+      "uiuc:r:demo-r-000486",
+      "uiuc:r:demo-r-000487",
+      "uiuc:r:demo-r-000489",
+      "uiuc:r:demo-r-000488",
+      "uiuc:r:demo-r-000482",
+      "uiuc:r:demo-r-000485"
+    ],
+    "format": "mixed",
+    "generatedAt": "2026-09-06T22:28:36.814Z",
+    "gradingNote": "In 3 course(s) over 5 year(s), GPA averaged 2.93 (−0.07 vs. the same courses taught by others); 1.9% withdrew.",
+    "inputHash": "0449d39df8b9da2f",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:emeka-calloway",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 11,
+    "source": "openai-compatible",
+    "strengths": [
+      "heavy-homework:8",
+      "curves-generously:3",
+      "engaging:3",
+      "caring:1"
+    ],
+    "teachingStyle": [
+      "engaging",
+      "enthusiastic",
+      "interactive"
+    ],
+    "verdict": "Based on 11 reviews, this professor is engaging but has a heavy workload.",
+    "watchOuts": [
+      "disorganized:2",
+      "late feedback",
+      "strict late policy"
+    ],
+    "workload": "heavy"
+  },
+  "uiuc:p:emeka-mahlangu": {
+    "bestFor": "Students who prefer a structured, discussion‑heavy physics course with active participation.",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-001027",
+      "uiuc:r:demo-r-001015",
+      "uiuc:r:demo-r-001019",
+      "uiuc:r:demo-r-001008",
+      "uiuc:r:demo-r-001016",
+      "uiuc:r:demo-r-001029",
+      "uiuc:r:demo-r-001031",
+      "uiuc:r:demo-r-001014",
+      "uiuc:r:demo-r-001018",
+      "uiuc:r:demo-r-001022",
+      "uiuc:r:demo-r-001028",
+      "uiuc:r:demo-r-001026"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:28:58.036Z",
+    "gradingNote": "In 5 course(s) over 6 year(s), GPA averaged 3.08 (−0.01 vs. the same courses taught by others); 2.3% withdrew.",
+    "inputHash": "098253204a88c723",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:emeka-mahlangu",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 28,
+    "source": "openai-compatible",
+    "strengths": [
+      "Engaging lectures that keep students awake",
+      "Fair grading with clear expectations",
+      "Strict attendance policy that encourages participation"
+    ],
+    "teachingStyle": [
+      "engaging",
+      "fair",
+      "strict attendance"
+    ],
+    "verdict": "Strongly recommended for students who value engaging lectures and fair grading; 28 reviews support this view.",
+    "watchOuts": [
+      "Exam room changes at the last minute",
+      "Late assignment releases in some sections"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:esperanza-radovanovic": {
+    "bestFor": "Students who are disciplined, enjoy self‑study, and can handle a rigorous workload.",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000691",
+      "uiuc:r:demo-r-000693",
+      "uiuc:r:demo-r-000703",
+      "uiuc:r:demo-r-000706",
+      "uiuc:r:demo-r-000692",
+      "uiuc:r:demo-r-000695",
+      "uiuc:r:demo-r-000698",
+      "uiuc:r:demo-r-000697",
+      "uiuc:r:demo-r-000701",
+      "uiuc:r:demo-r-000700",
+      "uiuc:r:demo-r-000702",
+      "uiuc:r:demo-r-000694"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:29:17.425Z",
+    "gradingNote": "In 3 course(s) over 3 year(s), GPA averaged 2.78 (+0.04 vs. the same courses taught by others); 2.1% withdrew.",
+    "inputHash": "e6ac5525a204d40c",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:esperanza-radovanovic",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 20,
+    "source": "openai-compatible",
+    "strengths": [
+      "Requires textbook reading to stay on track",
+      "Practice problems mirror exams",
+      "Clear emphasis on understanding over memorization"
+    ],
+    "teachingStyle": [
+      "lecture-heavy",
+      "project-based"
+    ],
+    "verdict": "With 20 reviews, students find the course demanding but manageable if you read the textbook and stay on top of assignments.",
+    "watchOuts": [
+      "Heavy weekly homework load",
+      "Hard exams with little partial credit",
+      "Office hours often full and hard to access"
+    ],
+    "workload": "heavy"
+  },
+  "uiuc:p:farida-venkataraghavan": {
+    "bestFor": "students who thrive on frequent assignments and need to stay on top of material",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000924",
+      "uiuc:r:demo-r-000928",
+      "uiuc:r:demo-r-000922",
+      "uiuc:r:demo-r-000914",
+      "uiuc:r:demo-r-000915"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:29:35.741Z",
+    "gradingNote": "In 4 course(s) over 4 year(s), GPA averaged 2.94 (+0.01 vs. the same courses taught by others); 3.0% withdrew.",
+    "inputHash": "1950de75cb400b1d",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:farida-venkataraghavan",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 22,
+    "source": "openai-compatible",
+    "strengths": [
+      "heavy homework",
+      "engaging lectures"
+    ],
+    "teachingStyle": [
+      "fast-paced",
+      "strict attendance"
+    ],
+    "verdict": "With 22 reviews, students find the class engaging but demanding; it’s best for those who can handle frequent assignments and strict attendance.",
+    "watchOuts": [
+      "heavy workload",
+      "strict attendance policy"
+    ],
+    "workload": "heavy"
+  },
+  "uiuc:p:fumiko-di-stefano": {
+    "bestFor": "Students who can commit to daily study and want a rigorous, understanding-focused physics course",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000946",
+      "uiuc:r:demo-r-000951",
+      "uiuc:r:demo-r-000936",
+      "uiuc:r:demo-r-000953",
+      "uiuc:r:demo-r-000943",
+      "uiuc:r:demo-r-000949",
+      "uiuc:r:demo-r-000940",
+      "uiuc:r:demo-r-000950"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T23:16:13.207Z",
+    "gradingNote": "In 6 course(s) over 6 year(s), GPA averaged 2.94 (−0.05 vs. the same courses taught by others); 3.1% withdrew.",
+    "inputHash": "3df90c18ffe6d777",
+    "model": "qwen/qwen3.8-27b",
+    "professorId": "uiuc:p:fumiko-di-stefano",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 21,
+    "source": "openai-compatible",
+    "strengths": [
+      "Exams test deep understanding, not memorization — builds real physics skills",
+      "Several students called it the best course of their semester when they stayed on top",
+      "Professor appears to genuinely enjoy teaching"
+    ],
+    "teachingStyle": [
+      "Fast-paced, dense lectures",
+      "Little review between topics",
+      "Material compounds quickly",
+      "Lecture-heavy format"
+    ],
+    "verdict": "Based on 21 reviews, this is a fast-paced, exam-heavy course that rewards daily effort but punishes falling behind — take it only if you can keep up.",
+    "watchOuts": [
+      "Exams consistently described as hard with tight time limits and little partial credit",
+      "Falling behind is very hard to recover from; material compounds week to week",
+      "Some reviews mention inconsistent TA grading and difficulty getting help"
+    ],
+    "workload": "heavy"
+  },
+  "uiuc:p:geoffrey-grimaldi": {
+    "bestFor": "Students who thrive with active learning and can self‑manage study schedules",
+    "confidence": "medium",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-001134",
+      "uiuc:r:demo-r-001135",
+      "uiuc:r:demo-r-001127",
+      "uiuc:r:demo-r-001131",
+      "uiuc:r:demo-r-001133",
+      "uiuc:r:demo-r-001128",
+      "uiuc:r:demo-r-001130",
+      "uiuc:r:demo-r-001129",
+      "uiuc:r:demo-r-001132"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:30:09.149Z",
+    "gradingNote": "In 2 course(s) over 3 year(s), GPA averaged 3.22 (−0.09 vs. the same courses taught by others); 3.5% withdrew.",
+    "inputHash": "e18c58d76a9e2008",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:geoffrey-grimaldi",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 9,
+    "source": "openai-compatible",
+    "strengths": [
+      "Engaging lectures",
+      "Cares about student understanding",
+      "Fair grading",
+      "Good office hours"
+    ],
+    "teachingStyle": [
+      "lecture-heavy",
+      "mixed"
+    ],
+    "verdict": "Based on 9 reviews, this professor is engaging but disorganized, so plan to review recordings and use the textbook heavily.",
+    "watchOuts": [
+      "Disorganized lectures",
+      "Late assignment postings",
+      "Unclear study guidance"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:gwendolyn-dimitriou": {
+    "bestFor": "Students who thrive with active learning and can manage a flexible schedule",
+    "confidence": "medium",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000853",
+      "uiuc:r:demo-r-000847",
+      "uiuc:r:demo-r-000850",
+      "uiuc:r:demo-r-000852",
+      "uiuc:r:demo-r-000849",
+      "uiuc:r:demo-r-000846",
+      "uiuc:r:demo-r-000848",
+      "uiuc:r:demo-r-000851"
+    ],
+    "format": "mixed",
+    "generatedAt": "2026-09-06T22:30:21.305Z",
+    "gradingNote": "In 4 course(s) over 4 year(s), GPA averaged 2.98 (+0.04 vs. the same courses taught by others); 2.6% withdrew.",
+    "inputHash": "0d302a81dcf260c0",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:gwendolyn-dimitriou",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 8,
+    "source": "openai-compatible",
+    "strengths": [
+      "Engaging lectures with live demos",
+      "Strong enthusiasm and humor",
+      "Good for learning fundamentals",
+      "Positive student feedback"
+    ],
+    "teachingStyle": [
+      "engaging",
+      "demo-based",
+      "interactive"
+    ],
+    "verdict": "Based on 8 reviews, the instructor is engaging but disorganized, so plan for extra organization effort.",
+    "watchOuts": [
+      "Course often disorganized and deadlines change",
+      "Assignments posted late",
+      "Exam expectations unclear"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:gwendolyn-lindgren": {
+    "bestFor": "Students who benefit from structured, step-by-step explanations and want a supportive instructor who checks understanding.",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000231",
+      "uiuc:r:demo-r-000233",
+      "uiuc:r:demo-r-000216",
+      "uiuc:r:demo-r-000220",
+      "uiuc:r:demo-r-000222",
+      "uiuc:r:demo-r-000224",
+      "uiuc:r:demo-r-000221",
+      "uiuc:r:demo-r-000229",
+      "uiuc:r:demo-r-000227"
+    ],
+    "format": "mixed",
+    "generatedAt": "2026-09-06T23:17:04.586Z",
+    "gradingNote": "In 3 course(s) over 5 year(s), GPA averaged 3.49 (−0.02 vs. the same courses taught by others); 2.4% withdrew.",
+    "inputHash": "8d26a9eb288386e2",
+    "model": "qwen/qwen3.8-27b",
+    "professorId": "uiuc:p:gwendolyn-lindgren",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 20,
+    "source": "openai-compatible",
+    "strengths": [
+      "Lectures are consistently clear with worked examples every session",
+      "Generous curve at end of semester per multiple reviews",
+      "Responsive in office hours and email; follows up on understanding"
+    ],
+    "teachingStyle": [
+      "Step-by-step with worked examples",
+      "Caring and approachable",
+      "Clear logical structure"
+    ],
+    "verdict": "A solid, caring instructor with clear lectures and a generally generous curve — 20 reviews rate her 3.8/5 with 70% willing to retake.",
+    "watchOuts": [
+      "Exams can be harder than homework suggests; limited partial credit",
+      "Pace is uneven week to week; some weeks drag",
+      "One review notes promised extra credit never materialized"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:halvard-sorensen": {
+    "bestFor": "Students who thrive in rigorous, exam‑heavy courses and can self‑manage study schedules.",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000550",
+      "uiuc:r:demo-r-000549",
+      "uiuc:r:demo-r-000538",
+      "uiuc:r:demo-r-000541",
+      "uiuc:r:demo-r-000551",
+      "uiuc:r:demo-r-000537",
+      "uiuc:r:demo-r-000556",
+      "uiuc:r:demo-r-000552",
+      "uiuc:r:demo-r-000544",
+      "uiuc:r:demo-r-000535",
+      "uiuc:r:demo-r-000536",
+      "uiuc:r:demo-r-000554"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:30:57.663Z",
+    "gradingNote": "In 5 course(s) over 3 year(s), GPA averaged 3.37 (−0.08 vs. the same courses taught by others); 2.7% withdrew.",
+    "inputHash": "1e4aaa62d75a0136",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:halvard-sorensen",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 22,
+    "source": "openai-compatible",
+    "strengths": [
+      "Hard exams that test real understanding",
+      "Strong emphasis on homework as practice",
+      "Clear feedback on assignments"
+    ],
+    "teachingStyle": [
+      "lecture-heavy",
+      "discussion"
+    ],
+    "verdict": "With 22 reviews, the instructor is generally considered challenging but manageable for students who stay on top of work.",
+    "watchOuts": [
+      "Frequent schedule changes and disorganization",
+      "Hard exams with little partial credit",
+      "Limited office hour availability"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:halvard-whitcombe": {
+    "bestFor": "Students who thrive on active participation and can manage a demanding workload",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000896",
+      "uiuc:r:demo-r-000910",
+      "uiuc:r:demo-r-000894",
+      "uiuc:r:demo-r-000895",
+      "uiuc:r:demo-r-000909",
+      "uiuc:r:demo-r-000912"
+    ],
+    "format": "mixed",
+    "generatedAt": "2026-09-06T22:31:16.863Z",
+    "gradingNote": "In 2 course(s) over 5 year(s), GPA averaged 3.29 (−0.11 vs. the same courses taught by others); 3.0% withdrew.",
+    "inputHash": "a921b7f784f6bcfd",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:halvard-whitcombe",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 20,
+    "source": "openai-compatible",
+    "strengths": [
+      "Engaging discussions and thorough notes",
+      "Strong office hour support",
+      "Clear feedback on assignments"
+    ],
+    "teachingStyle": [
+      "discussion",
+      "lecture-heavy"
+    ],
+    "verdict": "With 20 reviews, the instructor is engaging but heavy on homework, suitable for motivated students.",
+    "watchOuts": [
+      "Heavy workload and frequent assignments",
+      "Announcements often at odd hours",
+      "Regrade requests can be slow"
+    ],
+    "workload": "heavy"
+  },
+  "uiuc:p:hana-gunnarsson": {
+    "bestFor": "Students who want a supportive, low-judgment environment and will use the posted notes as their primary study resource.",
+    "confidence": "medium",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000811",
+      "uiuc:r:demo-r-000807",
+      "uiuc:r:demo-r-000818",
+      "uiuc:r:demo-r-000815",
+      "uiuc:r:demo-r-000813",
+      "uiuc:r:demo-r-000806",
+      "uiuc:r:demo-r-000808",
+      "uiuc:r:demo-r-000814",
+      "uiuc:r:demo-r-000816",
+      "uiuc:r:demo-r-000810",
+      "uiuc:r:demo-r-000817",
+      "uiuc:r:demo-r-000812"
+    ],
+    "format": "mixed",
+    "generatedAt": "2026-09-06T23:18:16.884Z",
+    "gradingNote": "In 4 course(s) over 5 year(s), GPA averaged 2.88 (+0.04 vs. the same courses taught by others); 2.3% withdrew.",
+    "inputHash": "a13118e4d38867be",
+    "model": "qwen/qwen3.8-27b",
+    "professorId": "uiuc:p:hana-gunnarsson",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 13,
+    "source": "openai-compatible",
+    "strengths": [
+      "Consistently described as caring and supportive; remembers names, no judgment",
+      "Notes repeatedly called the best resource in the class; textbook optional",
+      "Makes a notoriously tough subject feel doable",
+      "Quick to respond to email and helpful in office hours"
+    ],
+    "teachingStyle": [
+      "Thorough posted notes",
+      "Approachable and patient",
+      "Lecture with review sessions",
+      "Supportive of struggling students"
+    ],
+    "verdict": "A caring instructor with outstanding notes; 13 reviews average 3.8/5 and 77% would retake — a solid pick if you engage with the material.",
+    "watchOuts": [
+      "Final exam heavily weighted; one reviewer found it stressful",
+      "Grading felt inconsistent between TAs in one section",
+      "Limited pre-midterm review; teaching style described as hit or miss"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:ibrahim-eberhardt": {
+    "bestFor": "Students who stay on top of weekly work and want thorough notes to study from",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000993",
+      "uiuc:r:demo-r-001002",
+      "uiuc:r:demo-r-000990",
+      "uiuc:r:demo-r-000998",
+      "uiuc:r:demo-r-001000",
+      "uiuc:r:demo-r-000991",
+      "uiuc:r:demo-r-000987",
+      "uiuc:r:demo-r-000992",
+      "uiuc:r:demo-r-000995",
+      "uiuc:r:demo-r-001001"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:57:51.936Z",
+    "gradingNote": "In 3 course(s) over 3 year(s), GPA averaged 3.05 (+0.15 vs. the same courses taught by others); 2.8% withdrew.",
+    "inputHash": "b7fcb0d74a2e89a9",
+    "model": "qwen/qwen3.8-27b",
+    "professorId": "uiuc:p:ibrahim-eberhardt",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 16,
+    "source": "openai-compatible",
+    "strengths": [
+      "Excellent notes and slides that make exam prep straightforward",
+      "Fair grading with clear expectations and useful feedback",
+      "Engaging lectures that make tough material feel doable"
+    ],
+    "teachingStyle": [
+      "Engaging, fast-paced lectures",
+      "Detailed notes follow every lecture",
+      "Responsive in office hours"
+    ],
+    "verdict": "Based on 16 reviews, a strong pick if you can handle a heavy homework load and fast pace — the notes and fair grading make it very manageable.",
+    "watchOuts": [
+      "Heavy, relentless homework load — budget significant weekly time",
+      "Fast pace means falling behind is hard to recover from",
+      "One review notes a last-minute exam room change; another mentions slow grade return"
+    ],
+    "workload": "heavy"
+  },
+  "uiuc:p:ingrid-uzoma": {
+    "bestFor": "Students who want a supportive, well-organized lecture with excellent notes to study from",
+    "confidence": "medium",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000686",
+      "uiuc:r:demo-r-000680",
+      "uiuc:r:demo-r-000683",
+      "uiuc:r:demo-r-000681",
+      "uiuc:r:demo-r-000679",
+      "uiuc:r:demo-r-000682",
+      "uiuc:r:demo-r-000678",
+      "uiuc:r:demo-r-000684",
+      "uiuc:r:demo-r-000685"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:58:36.900Z",
+    "gradingNote": "In 2 course(s) over 3 year(s), GPA averaged 3.05 (+0.02 vs. the same courses taught by others); 2.5% withdrew.",
+    "inputHash": "689fbe69bb4e1b36",
+    "model": "qwen/qwen3.8-27b",
+    "professorId": "uiuc:p:ingrid-uzoma",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 9,
+    "source": "openai-compatible",
+    "strengths": [
+      "Excellent lecture notes described as 'basically a textbook' — top tag across reviews",
+      "Genuinely caring; multiple students note she supports struggling students without judgment",
+      "Makes notoriously tough material feel doable; engaging even at 8 AM",
+      "Great office hours and mentorship; worth going after class"
+    ],
+    "teachingStyle": [
+      "Engaging and clear",
+      "Supportive, no judgment",
+      "Detailed posted notes",
+      "Generous with office hours"
+    ],
+    "verdict": "Strong pick for MATH 241 — 9 reviews consistently praise her notes, engagement, and support; 89% would take again.",
+    "watchOuts": [
+      "Autograder described as picky and unforgiving in one review",
+      "Discussion sections noted as disorganized compared to lecture",
+      "One student found the class 'not bad, not great' — may not click for everyone"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:isabeau-reinholt": {
+    "bestFor": "Self-directed students who will read the textbook independently and form study groups early",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000100",
+      "uiuc:r:demo-r-000098",
+      "uiuc:r:demo-r-000097",
+      "uiuc:r:demo-r-000104",
+      "uiuc:r:demo-r-000102",
+      "uiuc:r:demo-r-000099",
+      "uiuc:r:demo-r-000103",
+      "uiuc:r:demo-r-000105",
+      "uiuc:r:demo-r-000111",
+      "uiuc:r:demo-r-000106"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T23:18:53.953Z",
+    "gradingNote": "In 4 course(s) over 3 year(s), GPA averaged 2.72 (−0.14 vs. the same courses taught by others); 2.4% withdrew.",
+    "inputHash": "4e0a55b45bd22673",
+    "model": "qwen/qwen3.8-27b",
+    "professorId": "uiuc:p:isabeau-reinholt",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 15,
+    "source": "openai-compatible",
+    "strengths": [
+      "Several students found the material engaging and the tough subject feel doable",
+      "Genuinely cares whether students understand the material",
+      "Some students loved the class from week one"
+    ],
+    "teachingStyle": [
+      "Disorganized, jumps around",
+      "Textbook-driven lectures",
+      "Engaging for some students",
+      "Cares about understanding"
+    ],
+    "verdict": "15 reviews paint a mixed picture: the textbook does the teaching and organization is poor, but students who read ahead and form study groups tend to succeed.",
+    "watchOuts": [
+      "Schedule and deadlines change constantly; syllabus is often useless",
+      "Lectures cover only half the material — textbook reading is mandatory",
+      "Grading feedback is late or missing; some assignments never returned"
+    ],
+    "workload": "heavy"
+  },
+  "uiuc:p:james-haruna": {
+    "bestFor": "Students who thrive under rigorous exams and appreciate detailed support",
+    "confidence": "medium",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-001211",
+      "uiuc:r:demo-r-001214",
+      "uiuc:r:demo-r-001215",
+      "uiuc:r:demo-r-001216",
+      "uiuc:r:demo-r-001210",
+      "uiuc:r:demo-r-001213",
+      "uiuc:r:demo-r-001212"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:32:32.369Z",
+    "gradingNote": "In 5 course(s) over 5 year(s), GPA averaged 3.39 (+0.10 vs. the same courses taught by others); 2.6% withdrew.",
+    "inputHash": "72a5095a0cc5c926",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:james-haruna",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 7,
+    "source": "openai-compatible",
+    "strengths": [
+      "Supportive and caring for students",
+      "Provides thorough solutions and office hours",
+      "Encourages learning throughout the course"
+    ],
+    "teachingStyle": [
+      "caring",
+      "hard-exams",
+      "curves-generously",
+      "disorganized"
+    ],
+    "verdict": "Based on 7 reviews, the professor is supportive but exams are consistently hard and low partial credit, so consider if you can handle the workload.",
+    "watchOuts": [
+      "Exams are brutal with little partial credit",
+      "Course can feel disorganized and hard to follow",
+      "Some students find the workload heavy"
+    ],
+    "workload": "heavy"
+  },
+  "uiuc:p:jaroslaw-delgadillo": {
+    "bestFor": "students who prefer structured lectures and can handle a demanding workload",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000095",
+      "uiuc:r:demo-r-000084",
+      "uiuc:r:demo-r-000078",
+      "uiuc:r:demo-r-000085",
+      "uiuc:r:demo-r-000072",
+      "uiuc:r:demo-r-000075",
+      "uiuc:r:demo-r-000092",
+      "uiuc:r:demo-r-000081",
+      "uiuc:r:demo-r-000096",
+      "uiuc:r:demo-r-000086",
+      "uiuc:r:demo-r-000088",
+      "uiuc:r:demo-r-000074"
+    ],
+    "format": "mixed",
+    "generatedAt": "2026-09-06T22:32:52.594Z",
+    "gradingNote": "In 3 course(s) over 3 year(s), GPA averaged 2.71 (+0.00 vs. the same courses taught by others); 3.1% withdrew.",
+    "inputHash": "b9ee6a43feedfaa3",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:jaroslaw-delgadillo",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 25,
+    "source": "openai-compatible",
+    "strengths": [
+      "generous curves and grading",
+      "clear, logical lectures",
+      "supportive office hours"
+    ],
+    "teachingStyle": [
+      "clear explanations",
+      "step-by-step",
+      "generous grading"
+    ],
+    "verdict": "Based on 25 reviews, this professor is generally supportive and clear but has a heavy workload and uneven pacing.",
+    "watchOuts": [
+      "heavy and relentless homework",
+      "inconsistent discussion sections",
+      "uneven pacing week to week"
+    ],
+    "workload": "heavy"
+  },
+  "uiuc:p:jennifer-arslan": {
+    "bestFor": "students who thrive on participation and can handle a demanding schedule",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000787",
+      "uiuc:r:demo-r-000789",
+      "uiuc:r:demo-r-000766",
+      "uiuc:r:demo-r-000767",
+      "uiuc:r:demo-r-000768",
+      "uiuc:r:demo-r-000776",
+      "uiuc:r:demo-r-000773",
+      "uiuc:r:demo-r-000788",
+      "uiuc:r:demo-r-000774",
+      "uiuc:r:demo-r-000781",
+      "uiuc:r:demo-r-000765",
+      "uiuc:r:demo-r-000784"
+    ],
+    "format": "mixed",
+    "generatedAt": "2026-09-06T22:33:13.804Z",
+    "gradingNote": "In 3 course(s) over 5 year(s), GPA averaged 2.81 (−0.11 vs. the same courses taught by others); 4.2% withdrew.",
+    "inputHash": "626bb0c9adaef29d",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:jennifer-arslan",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 27,
+    "source": "openai-compatible",
+    "strengths": [
+      "approachable office hours",
+      "caring about students",
+      "good for small classes"
+    ],
+    "teachingStyle": [
+      "caring",
+      "strict attendance",
+      "hit or miss"
+    ],
+    "verdict": "With 27 reviews, this instructor is approachable but the course is often disorganized; consider it if you can manage the workload and strict attendance.",
+    "watchOuts": [
+      "disorganized lectures",
+      "strict late policy",
+      "inconsistent grading"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:jonathan-thorvaldsen": {
+    "bestFor": "students who thrive with supportive guidance and can manage a demanding workload",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000352",
+      "uiuc:r:demo-r-000341",
+      "uiuc:r:demo-r-000345",
+      "uiuc:r:demo-r-000336",
+      "uiuc:r:demo-r-000348",
+      "uiuc:r:demo-r-000354"
+    ],
+    "format": "mixed",
+    "generatedAt": "2026-09-06T22:33:32.939Z",
+    "gradingNote": "In 2 course(s) over 5 year(s), GPA averaged 3.46 (+0.10 vs. the same courses taught by others); 3.8% withdrew.",
+    "inputHash": "ca6e396c3c75c499",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:jonathan-thorvaldsen",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 19,
+    "source": "openai-compatible",
+    "strengths": [
+      "generous grading and curves",
+      "supportive office hours",
+      "clear communication",
+      "student-centered approach"
+    ],
+    "teachingStyle": [
+      "engaging",
+      "caring",
+      "generous"
+    ],
+    "verdict": "With 19 reviews, this instructor is generally supportive and generous with curves, but the workload is heavy and pacing can be fast.",
+    "watchOuts": [
+      "heavy homework load",
+      "fast pacing before final"
+    ],
+    "workload": "heavy"
+  },
+  "uiuc:p:joseph-castellanos-berg": {
+    "bestFor": "Students who prefer a textbook-driven, lecture-focused course and are comfortable with self-directed study",
+    "confidence": "low",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000868",
+      "uiuc:r:demo-r-000869",
+      "uiuc:r:demo-r-000866",
+      "uiuc:r:demo-r-000867"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:33:42.179Z",
+    "gradingNote": "In 2 course(s) over 5 year(s), GPA averaged 2.90 (−0.05 vs. the same courses taught by others); 3.2% withdrew.",
+    "inputHash": "268fe17bafd168c3",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:joseph-castellanos-berg",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 4,
+    "source": "openai-compatible",
+    "strengths": [
+      "Clear explanations of complex topics",
+      "Strong connection between lectures and homework",
+      "Consistent structure from day one"
+    ],
+    "teachingStyle": [
+      "clear lectures",
+      "structured",
+      "textbook-focused"
+    ],
+    "verdict": "Based on 4 reviews, this instructor is clear and well-structured but relies heavily on the textbook.",
+    "watchOuts": [
+      "Exams can be harder than homework",
+      "Requires reading textbook before each lecture",
+      "Homework should be started immediately"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:jun-seo-petrakis": {
+    "bestFor": "Students who are disciplined, read ahead, and prefer a textbook‑driven, fast‑paced environment.",
+    "confidence": "medium",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000315",
+      "uiuc:r:demo-r-000314",
+      "uiuc:r:demo-r-000307",
+      "uiuc:r:demo-r-000310",
+      "uiuc:r:demo-r-000309",
+      "uiuc:r:demo-r-000313",
+      "uiuc:r:demo-r-000311",
+      "uiuc:r:demo-r-000308",
+      "uiuc:r:demo-r-000312"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:33:54.302Z",
+    "gradingNote": "In 5 course(s) over 5 year(s), GPA averaged 2.92 (+0.02 vs. the same courses taught by others); 2.3% withdrew.",
+    "inputHash": "41ad3fd82b94e30d",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:jun-seo-petrakis",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 9,
+    "source": "openai-compatible",
+    "strengths": [
+      "Clear step‑by‑step explanations",
+      "Fast‑paced lectures that assume prior reading",
+      "Strong emphasis on practice problems",
+      "Respectful of students’ time"
+    ],
+    "teachingStyle": [
+      "fast-paced",
+      "clear explanations",
+      "textbook-focused"
+    ],
+    "verdict": "Based on 9 reviews, this instructor is fast‑paced and clear but requires heavy textbook reading.",
+    "watchOuts": [
+      "Disorganized discussion sections",
+      "Heavy reading load",
+      "Requires early office‑hour visits"
+    ],
+    "workload": "heavy"
+  },
+  "uiuc:p:liesbeth-danforth": {
+    "bestFor": "Students who thrive in a fast‑paced environment and can keep up with dense material, especially those who appreciate generous grading.",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-001051",
+      "uiuc:r:demo-r-001052",
+      "uiuc:r:demo-r-001057",
+      "uiuc:r:demo-r-001058",
+      "uiuc:r:demo-r-001044",
+      "uiuc:r:demo-r-001049",
+      "uiuc:r:demo-r-001053",
+      "uiuc:r:demo-r-001048",
+      "uiuc:r:demo-r-001046",
+      "uiuc:r:demo-r-001055",
+      "uiuc:r:demo-r-001047",
+      "uiuc:r:demo-r-001045"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:34:13.583Z",
+    "gradingNote": "In 5 course(s) over 6 year(s), GPA averaged 3.63 (+0.07 vs. the same courses taught by others); 2.9% withdrew.",
+    "inputHash": "f3088ae3e270f6b2",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:liesbeth-danforth",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 17,
+    "source": "openai-compatible",
+    "strengths": [
+      "Clear, logical lectures",
+      "Generous grading and curves",
+      "Engaging and energetic",
+      "Strong office hour support"
+    ],
+    "teachingStyle": [
+      "fast-paced",
+      "clear-lectures",
+      "generous-curves"
+    ],
+    "verdict": "Based on 17 reviews, this instructor is fast‑paced, clear, and generous with curves, but the workload can be heavy and office hours are hard to access.",
+    "watchOuts": [
+      "Hard to get into office hours",
+      "Course website can be confusing",
+      "Heavy workload for some students"
+    ],
+    "workload": "heavy"
+  },
+  "uiuc:p:liesbeth-ibanez": {
+    "bestFor": "Students who thrive with supportive guidance and are comfortable managing a demanding course load",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-001061",
+      "uiuc:r:demo-r-001074",
+      "uiuc:r:demo-r-001065",
+      "uiuc:r:demo-r-001070",
+      "uiuc:r:demo-r-001069",
+      "uiuc:r:demo-r-001071",
+      "uiuc:r:demo-r-001073",
+      "uiuc:r:demo-r-001068",
+      "uiuc:r:demo-r-001075",
+      "uiuc:r:demo-r-001062",
+      "uiuc:r:demo-r-001064",
+      "uiuc:r:demo-r-001060"
+    ],
+    "format": "mixed",
+    "generatedAt": "2026-09-06T22:34:32.817Z",
+    "gradingNote": "In 2 course(s) over 4 year(s), GPA averaged 3.26 (+0.03 vs. the same courses taught by others); 2.7% withdrew.",
+    "inputHash": "a02bc537ab182e19",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:liesbeth-ibanez",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 18,
+    "source": "openai-compatible",
+    "strengths": [
+      "Clear grading and expectations",
+      "Helpful feedback on assignments",
+      "Strong support during office hours",
+      "Generous curve on exams"
+    ],
+    "teachingStyle": [
+      "caring",
+      "fair",
+      "supportive",
+      "office-hours"
+    ],
+    "verdict": "With 18 reviews, most students find her teaching fair, caring, and supportive, but some note disorganization and heavy workload.",
+    "watchOuts": [
+      "Disorganized lectures and course materials",
+      "Heavy workload and dense content",
+      "Inconsistent extra credit promises"
+    ],
+    "workload": "heavy"
+  },
+  "uiuc:p:liesbeth-shirazi": {
+    "bestFor": "Students who thrive on active participation and need clear, detailed notes",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000889",
+      "uiuc:r:demo-r-000872",
+      "uiuc:r:demo-r-000892",
+      "uiuc:r:demo-r-000880",
+      "uiuc:r:demo-r-000884",
+      "uiuc:r:demo-r-000871",
+      "uiuc:r:demo-r-000875",
+      "uiuc:r:demo-r-000888",
+      "uiuc:r:demo-r-000879",
+      "uiuc:r:demo-r-000886",
+      "uiuc:r:demo-r-000877",
+      "uiuc:r:demo-r-000885"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:34:51.129Z",
+    "gradingNote": "In 5 course(s) over 5 year(s), GPA averaged 3.13 (+0.07 vs. the same courses taught by others); 2.2% withdrew.",
+    "inputHash": "832c841a4994fb0d",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:liesbeth-shirazi",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 23,
+    "source": "openai-compatible",
+    "strengths": [
+      "Excellent notes that mirror lectures",
+      "Supportive office hours and quick email replies",
+      "Engaging demos and live examples",
+      "Strong emphasis on understanding over memorization"
+    ],
+    "teachingStyle": [
+      "engaging",
+      "interactive",
+      "lecture-heavy"
+    ],
+    "verdict": "Strongly recommend this professor; 23 reviews show engaging lectures, excellent notes, and supportive office hours.",
+    "watchOuts": [
+      "Final exams heavily weighted",
+      "Course material often requires reading textbook beyond slides",
+      "Quizzes and projects add up to workload"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:magnus-anand": {
+    "bestFor": "students who prefer structured support and are comfortable with attendance policies",
+    "confidence": "medium",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000740",
+      "uiuc:r:demo-r-000741",
+      "uiuc:r:demo-r-000738",
+      "uiuc:r:demo-r-000743",
+      "uiuc:r:demo-r-000742",
+      "uiuc:r:demo-r-000739"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:35:02.312Z",
+    "gradingNote": "In 1 course(s) over 5 year(s), GPA averaged 2.70 (−0.11 vs. the same courses taught by others); 3.2% withdrew.",
+    "inputHash": "e125192f7c7d0b7b",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:magnus-anand",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 6,
+    "source": "openai-compatible",
+    "strengths": [
+      "generous curve",
+      "supportive of struggling students",
+      "clear notes",
+      "early textbook advice"
+    ],
+    "teachingStyle": [
+      "supportive",
+      "attendance‑required"
+    ],
+    "verdict": "Based on 6 reviews, this professor is supportive, generous with curves, and requires attendance, making the course moderate in workload.",
+    "watchOuts": [
+      "mandatory attendance",
+      "pop quizzes",
+      "moderate difficulty"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:magnus-chaudhry": {
+    "bestFor": "students who value thorough notes, fair grading, and supportive office hours",
+    "confidence": "medium",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000470",
+      "uiuc:r:demo-r-000471",
+      "uiuc:r:demo-r-000473",
+      "uiuc:r:demo-r-000467",
+      "uiuc:r:demo-r-000475",
+      "uiuc:r:demo-r-000474",
+      "uiuc:r:demo-r-000472",
+      "uiuc:r:demo-r-000469",
+      "uiuc:r:demo-r-000468"
+    ],
+    "format": "mixed",
+    "generatedAt": "2026-09-06T22:35:14.794Z",
+    "gradingNote": "In 5 course(s) over 4 year(s), GPA averaged 3.24 (+0.12 vs. the same courses taught by others); 2.9% withdrew.",
+    "inputHash": "8797d1ce96b5df50",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:magnus-chaudhry",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 9,
+    "source": "openai-compatible",
+    "strengths": [
+      "excellent notes",
+      "fair grading",
+      "curves on exams",
+      "caring about learning"
+    ],
+    "teachingStyle": [
+      "engaging",
+      "fair",
+      "curves-generously"
+    ],
+    "verdict": "Based on 9 reviews, this instructor is engaging, fair, and provides great notes; consider taking a section if you want a supportive teacher.",
+    "watchOuts": [
+      "practice exams may not match real ones",
+      "pace uneven week to week",
+      "limited individual help in large class"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:magnus-sevilla": {
+    "bestFor": "Students who prefer structured, supportive learning and can keep up with a moderate workload",
+    "confidence": "medium",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000126",
+      "uiuc:r:demo-r-000127",
+      "uiuc:r:demo-r-000130",
+      "uiuc:r:demo-r-000123",
+      "uiuc:r:demo-r-000129",
+      "uiuc:r:demo-r-000128",
+      "uiuc:r:demo-r-000125",
+      "uiuc:r:demo-r-000131",
+      "uiuc:r:demo-r-000122",
+      "uiuc:r:demo-r-000124"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:35:29.970Z",
+    "gradingNote": "In 2 course(s) over 3 year(s), GPA averaged 3.22 (+0.20 vs. the same courses taught by others); 1.9% withdrew.",
+    "inputHash": "ec150efa17e54fc8",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:magnus-sevilla",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 10,
+    "source": "openai-compatible",
+    "strengths": [
+      "Clear, easy-to-follow lectures",
+      "Generous grading and curves",
+      "Supportive of students who fall behind"
+    ],
+    "teachingStyle": [
+      "clear",
+      "supportive",
+      "generous"
+    ],
+    "verdict": "Based on 10 reviews, this instructor is clear, supportive, and generous with grading, but the pace can be fast and the workload moderate.",
+    "watchOuts": [
+      "Fast pace, especially later in the semester",
+      "Requires consistent study and note-taking",
+      "Some reviews note rough edges in organization"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:marisol-ibarra-quintero": {
+    "bestFor": "Students who prefer structured lectures and can commit to reading the textbook before class.",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000397",
+      "uiuc:r:demo-r-000401",
+      "uiuc:r:demo-r-000405",
+      "uiuc:r:demo-r-000406"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:35:47.040Z",
+    "gradingNote": "In 6 course(s) over 5 year(s), GPA averaged 3.42 (+0.00 vs. the same courses taught by others); 2.5% withdrew.",
+    "inputHash": "aa47400ab77ab51c",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:marisol-ibarra-quintero",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 16,
+    "source": "openai-compatible",
+    "strengths": [
+      "Excellent, textbook‑like notes",
+      "Clear, complete posted notes",
+      "Strong emphasis on practice problems"
+    ],
+    "teachingStyle": [
+      "lecture-heavy",
+      "mixed"
+    ],
+    "verdict": "Based on 16 reviews, this instructor’s CS courses are solid but require diligent textbook reading and note review.",
+    "watchOuts": [
+      "Requires heavy textbook preparation",
+      "Exams often long and difficult",
+      "Attendance policy can feel strict"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:matthew-valdivia": {
+    "bestFor": "Students who want a supportive, low-stress environment and are willing to do the homework consistently",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000427",
+      "uiuc:r:demo-r-000421",
+      "uiuc:r:demo-r-000420",
+      "uiuc:r:demo-r-000411",
+      "uiuc:r:demo-r-000424",
+      "uiuc:r:demo-r-000431",
+      "uiuc:r:demo-r-000417",
+      "uiuc:r:demo-r-000409"
+    ],
+    "format": "mixed",
+    "generatedAt": "2026-09-06T23:00:01.742Z",
+    "gradingNote": "In 4 course(s) over 5 year(s), GPA averaged 2.84 (+0.08 vs. the same courses taught by others); 2.6% withdrew.",
+    "inputHash": "2296baeb2a95a898",
+    "model": "qwen/qwen3.8-27b",
+    "professorId": "uiuc:p:matthew-valdivia",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 25,
+    "source": "openai-compatible",
+    "strengths": [
+      "Generous curve on every exam; raw averages look scary but finals are fine",
+      "Cares about understanding, not just grades; follows up with struggling students",
+      "Helpful in office hours and quick to respond to email",
+      "Effort on homework really pays off for final grade"
+    ],
+    "teachingStyle": [
+      "Approachable, quick email replies",
+      "Follows up if you're struggling",
+      "Remembers student names",
+      "Teaching style hit or miss"
+    ],
+    "verdict": "A caring, generous-grading ECE instructor worth taking — 25 reviews confirm a supportive environment with a reliable curve.",
+    "watchOuts": [
+      "Extra credit promised but never materialized (2 reviews)",
+      "Autograder described as picky and unforgiving",
+      "Feedback on assignments sometimes weeks late; announcements at odd hours"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:michael-lachance": {
+    "bestFor": "Students who prefer structured, lecture‑heavy courses and are willing to study hard for tough exams",
+    "confidence": "medium",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000320",
+      "uiuc:r:demo-r-000321",
+      "uiuc:r:demo-r-000323",
+      "uiuc:r:demo-r-000316",
+      "uiuc:r:demo-r-000322",
+      "uiuc:r:demo-r-000319",
+      "uiuc:r:demo-r-000318",
+      "uiuc:r:demo-r-000317",
+      "uiuc:r:demo-r-000324"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:36:24.957Z",
+    "gradingNote": "No grade data linked yet.",
+    "inputHash": "b5e8d885a034858f",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:michael-lachance",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 9,
+    "source": "openai-compatible",
+    "strengths": [
+      "Clear, step‑by‑step explanations",
+      "Logical lecture flow",
+      "Engaging delivery",
+      "Practice exams helpful"
+    ],
+    "teachingStyle": [
+      "clear",
+      "digestible",
+      "logical"
+    ],
+    "verdict": "Based on 9 reviews, this instructor’s clear lectures and challenging exams make the course suitable for diligent students.",
+    "watchOuts": [
+      "Exams are difficult and long",
+      "Announcements sometimes late",
+      "Slides can be dense"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:mihail-lindgren": {
+    "bestFor": "Self-motivated students who can manage a heavy workload and are taking the course as a requirement.",
+    "confidence": "medium",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000244",
+      "uiuc:r:demo-r-000237",
+      "uiuc:r:demo-r-000235",
+      "uiuc:r:demo-r-000236",
+      "uiuc:r:demo-r-000241",
+      "uiuc:r:demo-r-000242",
+      "uiuc:r:demo-r-000243",
+      "uiuc:r:demo-r-000245",
+      "uiuc:r:demo-r-000239",
+      "uiuc:r:demo-r-000234"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T23:19:45.082Z",
+    "gradingNote": "In 5 course(s) over 4 year(s), GPA averaged 3.30 (+0.00 vs. the same courses taught by others); 3.3% withdrew.",
+    "inputHash": "3252589cfd0a22a5",
+    "model": "qwen/qwen3.8-27b",
+    "professorId": "uiuc:p:mihail-lindgren",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 13,
+    "source": "openai-compatible",
+    "strengths": [
+      "Several students report learning a lot despite the difficulty",
+      "Exams test real understanding rather than memorization",
+      "Some students found the course rewarding when they kept up"
+    ],
+    "teachingStyle": [
+      "Fast-paced lectures",
+      "Disorganized course flow",
+      "Assumes prior reading",
+      "Large lecture format"
+    ],
+    "verdict": "Based on 13 reviews, expect a heavy, fast-paced course with disorganized logistics; only take if required or highly self-motivated.",
+    "watchOuts": [
+      "Heavy weekly homework load; multiple reviews call it a part-time job",
+      "Inconsistent grading between TAs and late or missing feedback",
+      "Disorganized lectures and course site with contradictory announcements"
+    ],
+    "workload": "heavy"
+  },
+  "uiuc:p:mihail-vasquez-holm": {
+    "bestFor": "Students who prefer structured, textbook‑driven learning and can handle a rigorous workload.",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000207",
+      "uiuc:r:demo-r-000198",
+      "uiuc:r:demo-r-000211",
+      "uiuc:r:demo-r-000213",
+      "uiuc:r:demo-r-000203",
+      "uiuc:r:demo-r-000204",
+      "uiuc:r:demo-r-000205",
+      "uiuc:r:demo-r-000206",
+      "uiuc:r:demo-r-000195",
+      "uiuc:r:demo-r-000199",
+      "uiuc:r:demo-r-000208",
+      "uiuc:r:demo-r-000197"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:37:00.373Z",
+    "gradingNote": "In 6 course(s) over 5 year(s), GPA averaged 2.65 (+0.06 vs. the same courses taught by others); 2.8% withdrew.",
+    "inputHash": "4d001835dd09ae69",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:mihail-vasquez-holm",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 19,
+    "source": "openai-compatible",
+    "strengths": [
+      "Strong emphasis on textbook reading",
+      "Clear exam focus",
+      "Attendance tracking ensures engagement"
+    ],
+    "teachingStyle": [
+      "lecture-heavy",
+      "discussion"
+    ],
+    "verdict": "With 19 reviews, the course is demanding but manageable for students who stay organized and read the textbook thoroughly.",
+    "watchOuts": [
+      "Heavy homework load",
+      "Disorganized discussions",
+      "Strict attendance policy"
+    ],
+    "workload": "heavy"
+  },
+  "uiuc:p:mihail-zuniga": {
+    "bestFor": "Students who read ahead consistently and can sustain a heavy workload without cramming",
+    "confidence": "medium",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000438",
+      "uiuc:r:demo-r-000439",
+      "uiuc:r:demo-r-000435",
+      "uiuc:r:demo-r-000440",
+      "uiuc:r:demo-r-000437",
+      "uiuc:r:demo-r-000441",
+      "uiuc:r:demo-r-000442",
+      "uiuc:r:demo-r-000443",
+      "uiuc:r:demo-r-000446",
+      "uiuc:r:demo-r-000445",
+      "uiuc:r:demo-r-000436",
+      "uiuc:r:demo-r-000444"
+    ],
+    "format": "mixed",
+    "generatedAt": "2026-09-06T23:22:24.750Z",
+    "gradingNote": "In 4 course(s) over 5 year(s), GPA averaged 3.07; no comparison group in the window.",
+    "inputHash": "6520938910815614",
+    "model": "qwen/qwen3.8-27b",
+    "professorId": "uiuc:p:mihail-zuniga",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 12,
+    "source": "openai-compatible",
+    "strengths": [
+      "Material quality praised even when delivery varies",
+      "Genuinely cares about student understanding",
+      "Strong TAs and discussion sections",
+      "Several students found it rewarding and would retake"
+    ],
+    "teachingStyle": [
+      "Textbook-first approach",
+      "Exams test beyond lectures",
+      "Minimal partial credit",
+      "Consistent weekly load"
+    ],
+    "verdict": "Based on 12 reviews, this is a demanding but rewarding course if you read the textbook before every lecture and keep up with the heavy weekly workload.",
+    "watchOuts": [
+      "Heavy workload; multiple reviews say to plan your semester around it",
+      "Exams are hard with almost no partial credit",
+      "One review notes vague syllabus on grading; another says extra credit never materialized"
+    ],
+    "workload": "heavy"
+  },
+  "uiuc:p:naledi-de-la-cruz": {
+    "bestFor": "Most students in STAT — no strong pattern in the reviews",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-001137",
+      "uiuc:r:demo-r-001147",
+      "uiuc:r:demo-r-001152",
+      "uiuc:r:demo-r-001139",
+      "uiuc:r:demo-r-001145",
+      "uiuc:r:demo-r-001154",
+      "uiuc:r:demo-r-001141",
+      "uiuc:r:demo-r-001151",
+      "uiuc:r:demo-r-001143",
+      "uiuc:r:demo-r-001136",
+      "uiuc:r:demo-r-001140",
+      "uiuc:r:demo-r-001150"
+    ],
+    "format": "project-based",
+    "generatedAt": "2026-09-06T23:24:52.316Z",
+    "gradingNote": "In 4 course(s) over 6 year(s), GPA averaged 3.30 (−0.08 vs. the same courses taught by others); 2.1% withdrew.",
+    "inputHash": "e2dcd333e26bf452",
+    "model": null,
+    "professorId": "uiuc:p:naledi-de-la-cruz",
+    "promptVersion": 1,
+    "reviewCount": 19,
+    "source": "extractive",
+    "strengths": [
+      "Students call the lectures engaging and worth attending",
+      "Course notes and slides are called genuinely useful",
+      "“Clear, kind, and fair — everything you want in a professor.”",
+      "“Amazing notes, seriously the best resource in the class.”"
+    ],
+    "teachingStyle": [
+      "Engaging lecturer",
+      "Great notes and slides",
+      "Fast-paced"
+    ],
+    "verdict": "Rated 3.6/5 across 19 reviews; grades track the course average.",
+    "watchOuts": [
+      "The course moves fast; falling behind is costly",
+      "“Keeps things engaging with demos and live examples.”",
+      "“Hard to follow and harder to get help from.”"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:nkechi-egwu": {
+    "bestFor": "Students who want a supportive, clear instructor in a large physics course and are willing to read ahead and use office hours.",
+    "confidence": "medium",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000965",
+      "uiuc:r:demo-r-000964",
+      "uiuc:r:demo-r-000960",
+      "uiuc:r:demo-r-000963",
+      "uiuc:r:demo-r-000968",
+      "uiuc:r:demo-r-000970",
+      "uiuc:r:demo-r-000967",
+      "uiuc:r:demo-r-000972",
+      "uiuc:r:demo-r-000969"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T23:03:17.701Z",
+    "gradingNote": "In 6 course(s) over 5 year(s), GPA averaged 2.99 (−0.04 vs. the same courses taught by others); 2.9% withdrew.",
+    "inputHash": "3cab36757e5b9254",
+    "model": "qwen/qwen3.8-27b",
+    "professorId": "uiuc:p:nkechi-egwu",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 13,
+    "source": "openai-compatible",
+    "strengths": [
+      "Lectures are consistently clear and build logically on each other",
+      "Genuinely caring — remembers names, follows up, no judgment",
+      "Explains hard parts without skipping steps"
+    ],
+    "teachingStyle": [
+      "clear step-by-step lectures",
+      "approachable and supportive",
+      "logical build-up of topics"
+    ],
+    "verdict": "Strong pick across 13 reviews — clear, caring teaching with a few logistical rough edges worth knowing about.",
+    "watchOuts": [
+      "Discussion sections feel disorganized compared to lecture",
+      "Slides can be dense; some lectures repeat the reading closely",
+      "TA grading reported as inconsistent in one section"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:oluwaseun-fairweather": {
+    "bestFor": "Students who prefer interactive classes and value fair assessment",
+    "confidence": "low",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000478",
+      "uiuc:r:demo-r-000476",
+      "uiuc:r:demo-r-000477"
+    ],
+    "format": "mixed",
+    "generatedAt": "2026-09-06T22:37:58.345Z",
+    "gradingNote": "In 6 course(s) over 3 year(s), GPA averaged 3.03 (+0.11 vs. the same courses taught by others); 3.0% withdrew.",
+    "inputHash": "7ad95782473a548e",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:oluwaseun-fairweather",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 3,
+    "source": "openai-compatible",
+    "strengths": [
+      "Engaging discussions",
+      "Fair grading",
+      "Clear project rubric",
+      "Supportive office hours"
+    ],
+    "teachingStyle": [
+      "discussion",
+      "mixed"
+    ],
+    "verdict": "Based on 3 reviews, this instructor is engaging and fair, but exams may be challenging.",
+    "watchOuts": [
+      "Exams reflect material but can be tough",
+      "Project rubric posted after deadline"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:ondrej-ndlovu": {
+    "bestFor": "Students who thrive on active learning and can keep up with regular practice problems",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000716",
+      "uiuc:r:demo-r-000720",
+      "uiuc:r:demo-r-000717",
+      "uiuc:r:demo-r-000707",
+      "uiuc:r:demo-r-000715",
+      "uiuc:r:demo-r-000721",
+      "uiuc:r:demo-r-000710",
+      "uiuc:r:demo-r-000713",
+      "uiuc:r:demo-r-000711",
+      "uiuc:r:demo-r-000719",
+      "uiuc:r:demo-r-000722",
+      "uiuc:r:demo-r-000718"
+    ],
+    "format": "mixed",
+    "generatedAt": "2026-09-06T22:38:15.531Z",
+    "gradingNote": "In 1 course(s) over 5 year(s), GPA averaged 3.08 (+0.17 vs. the same courses taught by others); 2.5% withdrew.",
+    "inputHash": "f03b092873285727",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:ondrej-ndlovu",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 16,
+    "source": "openai-compatible",
+    "strengths": [
+      "Engaging lectures with demos and live examples",
+      "Fair grading with clear point explanations",
+      "Approachable office hours and supportive TA discussion sections"
+    ],
+    "teachingStyle": [
+      "engaging",
+      "fair-grading",
+      "caring"
+    ],
+    "verdict": "Based on 16 reviews, this instructor is highly engaging and fair, but exams can be challenging if you don’t keep up with practice problems.",
+    "watchOuts": [
+      "Exams test understanding, not memory; practice problems are essential",
+      "Lectures can be fast‑paced, especially early in the semester",
+      "Some students note missing lecture recordings"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:oriol-alcantara": {
+    "bestFor": "Self-motivated students who can manage a heavy workload independently and don't mind shifting logistics",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000071",
+      "uiuc:r:demo-r-000066",
+      "uiuc:r:demo-r-000055",
+      "uiuc:r:demo-r-000064",
+      "uiuc:r:demo-r-000062",
+      "uiuc:r:demo-r-000065",
+      "uiuc:r:demo-r-000058",
+      "uiuc:r:demo-r-000068",
+      "uiuc:r:demo-r-000070",
+      "uiuc:r:demo-r-000063",
+      "uiuc:r:demo-r-000057",
+      "uiuc:r:demo-r-000061"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T23:04:01.252Z",
+    "gradingNote": "In 4 course(s) over 5 year(s), GPA averaged 2.73 (−0.12 vs. the same courses taught by others); 2.6% withdrew.",
+    "inputHash": "0d36838ec32ac7ab",
+    "model": "qwen/qwen3.8-27b",
+    "professorId": "uiuc:p:oriol-alcantara",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 18,
+    "source": "openai-compatible",
+    "strengths": [
+      "Genuinely cares about student understanding",
+      "Practice exams are effective prep",
+      "Exams test deep understanding, not memorization",
+      "Engaging instructor who enjoys teaching"
+    ],
+    "teachingStyle": [
+      "Fast-paced, dense lectures",
+      "Assumes prior reading",
+      "Engaging and enthusiastic",
+      "Minimal pre-exam review"
+    ],
+    "verdict": "A challenging, fast-paced course backed by 18 reviews — take it if you can handle a heavy workload and shifting deadlines.",
+    "watchOuts": [
+      "Course is disorganized; deadlines and schedules change",
+      "Homework is heavy and relentless (10+ hrs/week)",
+      "Exams are difficult and sometimes go beyond lecture"
+    ],
+    "workload": "heavy"
+  },
+  "uiuc:p:oriol-delacroix-moreau": {
+    "bestFor": "Students who thrive on textbook study and can manage a demanding schedule",
+    "confidence": "medium",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000385",
+      "uiuc:r:demo-r-000383",
+      "uiuc:r:demo-r-000382",
+      "uiuc:r:demo-r-000387",
+      "uiuc:r:demo-r-000386",
+      "uiuc:r:demo-r-000390",
+      "uiuc:r:demo-r-000389",
+      "uiuc:r:demo-r-000380",
+      "uiuc:r:demo-r-000388",
+      "uiuc:r:demo-r-000384",
+      "uiuc:r:demo-r-000391",
+      "uiuc:r:demo-r-000381"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:38:48.043Z",
+    "gradingNote": "In 2 course(s) over 5 year(s), GPA averaged 3.25; no comparison group in the window.",
+    "inputHash": "0cc21b017007c201",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:oriol-delacroix-moreau",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 12,
+    "source": "openai-compatible",
+    "strengths": [
+      "Requires textbook for deep understanding",
+      "Encourages office hours",
+      "Good for students who can self‑direct"
+    ],
+    "teachingStyle": [
+      "caring",
+      "disorganized"
+    ],
+    "verdict": "Based on 12 reviews, the professor is caring but disorganized, so choose if you can handle heavy textbook work and unclear structure.",
+    "watchOuts": [
+      "Poorly organized lectures and assignments",
+      "Confusing instructions and late postings",
+      "Heavy reading load"
+    ],
+    "workload": "heavy"
+  },
+  "uiuc:p:oriol-sahinoglu": {
+    "bestFor": "students who value clear instruction and fair assessment in a moderately challenging physics course",
+    "confidence": "low",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-001005",
+      "uiuc:r:demo-r-001006",
+      "uiuc:r:demo-r-001003",
+      "uiuc:r:demo-r-001004"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:38:58.180Z",
+    "gradingNote": "In 5 course(s) over 5 year(s), GPA averaged 2.93 (−0.08 vs. the same courses taught by others); 3.5% withdrew.",
+    "inputHash": "30c9829d3e58c626",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:oriol-sahinoglu",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 4,
+    "source": "openai-compatible",
+    "strengths": [
+      "caring about student understanding",
+      "clear lecture goals",
+      "fair grading",
+      "approachable"
+    ],
+    "teachingStyle": [
+      "caring",
+      "clear-lectures"
+    ],
+    "verdict": "Based on 4 reviews, this professor is caring, clear, and fair but the course is moderately difficult.",
+    "watchOuts": [
+      "moderate difficulty",
+      "curve may be smaller than expected"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:priya-fennimore": {
+    "bestFor": "students who are disciplined, enjoy reading the textbook, and can handle a fast-paced, homework-intensive course",
+    "confidence": "medium",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000500",
+      "uiuc:r:demo-r-000502",
+      "uiuc:r:demo-r-000506",
+      "uiuc:r:demo-r-000508",
+      "uiuc:r:demo-r-000499",
+      "uiuc:r:demo-r-000501",
+      "uiuc:r:demo-r-000504",
+      "uiuc:r:demo-r-000505"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:39:11.301Z",
+    "gradingNote": "In 3 course(s) over 3 year(s), GPA averaged 3.08 (−0.13 vs. the same courses taught by others); 2.5% withdrew.",
+    "inputHash": "2174145ff866aae5",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:priya-fennimore",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 10,
+    "source": "openai-compatible",
+    "strengths": [
+      "approachable and helpful after class",
+      "caring about student learning",
+      "good use of optional problems"
+    ],
+    "teachingStyle": [
+      "fast-paced",
+      "supportive",
+      "textbook-focused"
+    ],
+    "verdict": "Based on 10 reviews, this instructor is approachable but requires heavy textbook reading and a fast pace.",
+    "watchOuts": [
+      "heavy workload and frequent homework",
+      "fast pace especially later in semester",
+      "project instructions sometimes vague"
+    ],
+    "workload": "heavy"
+  },
+  "uiuc:p:ravi-rosenqvist": {
+    "bestFor": "Students who can manage a heavy workload and seek detailed feedback",
+    "confidence": "medium",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000249",
+      "uiuc:r:demo-r-000248",
+      "uiuc:r:demo-r-000247",
+      "uiuc:r:demo-r-000254",
+      "uiuc:r:demo-r-000257",
+      "uiuc:r:demo-r-000256",
+      "uiuc:r:demo-r-000253",
+      "uiuc:r:demo-r-000258",
+      "uiuc:r:demo-r-000250",
+      "uiuc:r:demo-r-000255",
+      "uiuc:r:demo-r-000252",
+      "uiuc:r:demo-r-000251"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:39:26.505Z",
+    "gradingNote": "In 3 course(s) over 6 year(s), GPA averaged 3.21 (+0.10 vs. the same courses taught by others); 3.1% withdrew.",
+    "inputHash": "6114105218c7dc21",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:ravi-rosenqvist",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 12,
+    "source": "openai-compatible",
+    "strengths": [
+      "fair grading with clear rubric",
+      "strong office hour mentorship",
+      "good exam alignment",
+      "engaging lectures"
+    ],
+    "teachingStyle": [
+      "fair grading",
+      "office hour support"
+    ],
+    "verdict": "With 12 reviews, the instructor is generally fair but has a heavy workload and uneven pacing.",
+    "watchOuts": [
+      "heavy homework load",
+      "uneven pacing",
+      "late feedback on assignments"
+    ],
+    "workload": "heavy"
+  },
+  "uiuc:p:robert-pakhomov": {
+    "bestFor": "Students who prefer a rigorous, textbook‑driven environment and can keep up with a fast pace",
+    "confidence": "low",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000304",
+      "uiuc:r:demo-r-000303",
+      "uiuc:r:demo-r-000305",
+      "uiuc:r:demo-r-000306"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:39:36.767Z",
+    "gradingNote": "In 5 course(s) over 3 year(s), GPA averaged 3.32 (−0.07 vs. the same courses taught by others); 2.8% withdrew.",
+    "inputHash": "ce1d3b04caa8b705",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:robert-pakhomov",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 4,
+    "source": "openai-compatible",
+    "strengths": [
+      "Strong emphasis on textbook reading",
+      "Clear recommendation for students who prepare ahead",
+      "High recommendation rate from students who succeeded"
+    ],
+    "teachingStyle": [
+      "fast-paced",
+      "lecture-heavy"
+    ],
+    "verdict": "Based on 4 reviews, this professor runs fast‑paced courses that require consistent textbook reading and early preparation.",
+    "watchOuts": [
+      "Course website navigation can be confusing",
+      "Exam questions directly from textbook may be challenging",
+      "Requires early and consistent study"
+    ],
+    "workload": "heavy"
+  },
+  "uiuc:p:rohan-quintanilla": {
+    "bestFor": "Self-motivated readers who can keep up with a relentless pace and treat the textbook as the primary learning tool.",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-001226",
+      "uiuc:r:demo-r-001238",
+      "uiuc:r:demo-r-001241",
+      "uiuc:r:demo-r-001219",
+      "uiuc:r:demo-r-001229",
+      "uiuc:r:demo-r-001233",
+      "uiuc:r:demo-r-001234",
+      "uiuc:r:demo-r-001223",
+      "uiuc:r:demo-r-001239",
+      "uiuc:r:demo-r-001227"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T23:04:45.759Z",
+    "gradingNote": "In 4 course(s) over 5 year(s), GPA averaged 3.41 (+0.11 vs. the same courses taught by others); 2.8% withdrew.",
+    "inputHash": "4a228dfd8153c90b",
+    "model": "qwen/qwen3.8-27b",
+    "professorId": "uiuc:p:rohan-quintanilla",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 25,
+    "source": "openai-compatible",
+    "strengths": [
+      "Office hours and TAs are genuinely helpful when you get stuck",
+      "Respects students' time; material is well-organized",
+      "Exams test understanding, not just memorization"
+    ],
+    "teachingStyle": [
+      "fast-paced",
+      "textbook-driven",
+      "dense lectures",
+      "exam-focused"
+    ],
+    "verdict": "Fast-paced, textbook-driven course (25 reviews) that rewards daily preparation but punishes falling behind — take it if you can commit to consistent reading.",
+    "watchOuts": [
+      "Miss one lecture and you fall behind; pace never slows",
+      "Exams can be harder than homework suggests",
+      "Some homework problems were unclear and never clarified"
+    ],
+    "workload": "heavy"
+  },
+  "uiuc:p:rohan-rosenqvist": {
+    "bestFor": "students who prefer structured support and can stay on top of attendance",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000268",
+      "uiuc:r:demo-r-000271",
+      "uiuc:r:demo-r-000272",
+      "uiuc:r:demo-r-000270",
+      "uiuc:r:demo-r-000265"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:40:14.298Z",
+    "gradingNote": "No grade data linked yet.",
+    "inputHash": "f50b03ed7695eff7",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:rohan-rosenqvist",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 15,
+    "source": "openai-compatible",
+    "strengths": [
+      "fair grading",
+      "generous curves",
+      "good notes"
+    ],
+    "teachingStyle": [
+      "organized",
+      "note-heavy",
+      "practice-problem"
+    ],
+    "verdict": "With 15 reviews, this professor offers fair grading and generous curves but requires strict attendance and clear communication.",
+    "watchOuts": [
+      "attendance is tracked and graded",
+      "course website confusing",
+      "odd announcement timing"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:rohan-tanaka-whitfield": {
+    "bestFor": "students who can keep up with rigorous work and benefit from generous grading curves",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000590",
+      "uiuc:r:demo-r-000596",
+      "uiuc:r:demo-r-000595",
+      "uiuc:r:demo-r-000589"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:40:30.387Z",
+    "gradingNote": "In 3 course(s) over 5 year(s), GPA averaged 2.68 (+0.06 vs. the same courses taught by others); 3.3% withdrew.",
+    "inputHash": "6c5abb7eeccc8f94",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:rohan-tanaka-whitfield",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 16,
+    "source": "openai-compatible",
+    "strengths": [
+      "generous curve",
+      "engaging lectures",
+      "good office hours"
+    ],
+    "teachingStyle": [
+      "lecture-heavy",
+      "discussion"
+    ],
+    "verdict": "Based on 16 reviews, the instructor is generally helpful but the course is challenging and requires consistent effort.",
+    "watchOuts": [
+      "hard exams",
+      "strict late policy",
+      "limited individual help"
+    ],
+    "workload": "heavy"
+  },
+  "uiuc:p:runar-haddad-lindqvist": {
+    "bestFor": "Students who want an engaging, clear instructor and are willing to put in consistent effort for hard exams.",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000509",
+      "uiuc:r:demo-r-000520",
+      "uiuc:r:demo-r-000519",
+      "uiuc:r:demo-r-000517",
+      "uiuc:r:demo-r-000511",
+      "uiuc:r:demo-r-000522",
+      "uiuc:r:demo-r-000513",
+      "uiuc:r:demo-r-000516",
+      "uiuc:r:demo-r-000523",
+      "uiuc:r:demo-r-000510"
+    ],
+    "format": "mixed",
+    "generatedAt": "2026-09-06T23:05:43.410Z",
+    "gradingNote": "In 3 course(s) over 4 year(s), GPA averaged 2.94 (−0.06 vs. the same courses taught by others); 3.6% withdrew.",
+    "inputHash": "883178a4affad31b",
+    "model": "qwen/qwen3.8-27b",
+    "professorId": "uiuc:p:runar-haddad-lindqvist",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 17,
+    "source": "openai-compatible",
+    "strengths": [
+      "Makes material engaging even in early morning sections",
+      "TAs in discussion sections are consistently praised",
+      "Lectures build logically and reach their stated goals",
+      "Fair and kind — students report learning more than expected"
+    ],
+    "teachingStyle": [
+      "Engaging discussions over monologue",
+      "Step-by-step clear explanations",
+      "Simplifies complex ideas",
+      "Lectures occasionally run over time"
+    ],
+    "verdict": "Based on 17 reviews, this is one of the more engaging and clear instructors in ECE — expect hard exams that test understanding, not memorization.",
+    "watchOuts": [
+      "Exams are significantly harder than homework or lectures",
+      "Difficult to get individual help in large sections",
+      "Budget extra time for the project"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:runar-kirchner": {
+    "bestFor": "Students who can stay ahead and enjoy a rigorous, lecture‑heavy course",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000449",
+      "uiuc:r:demo-r-000455",
+      "uiuc:r:demo-r-000456",
+      "uiuc:r:demo-r-000453",
+      "uiuc:r:demo-r-000465"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:41:07.033Z",
+    "gradingNote": "In 5 course(s) over 3 year(s), GPA averaged 3.24 (+0.07 vs. the same courses taught by others); 2.3% withdrew.",
+    "inputHash": "1eb07ead157e3bf7",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:runar-kirchner",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 20,
+    "source": "openai-compatible",
+    "strengths": [
+      "covers material quickly",
+      "clear explanations even for tough topics",
+      "good office hours",
+      "project guidance"
+    ],
+    "teachingStyle": [
+      "fast-paced",
+      "clear explanations",
+      "step‑by‑step"
+    ],
+    "verdict": "Fast‑paced, clear lectures with heavy emphasis on preparation; 20 reviews suggest it’s worth it if you can keep up.",
+    "watchOuts": [
+      "requires early homework start",
+      "pace can overwhelm if you miss a lecture",
+      "grading sometimes feels arbitrary"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:samuel-damato": {
+    "bestFor": "students who prefer discussion‑heavy classes and can manage a flexible schedule",
+    "confidence": "medium",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000532",
+      "uiuc:r:demo-r-000526",
+      "uiuc:r:demo-r-000533",
+      "uiuc:r:demo-r-000534",
+      "uiuc:r:demo-r-000527",
+      "uiuc:r:demo-r-000530"
+    ],
+    "format": "discussion",
+    "generatedAt": "2026-09-06T22:41:20.242Z",
+    "gradingNote": "In 3 course(s) over 6 year(s), GPA averaged 2.83 (+0.10 vs. the same courses taught by others); 2.5% withdrew.",
+    "inputHash": "c9dc8e3813047c6c",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:samuel-damato",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 9,
+    "source": "openai-compatible",
+    "strengths": [
+      "generous curves",
+      "engaging discussions",
+      "careful about student understanding"
+    ],
+    "teachingStyle": [
+      "engaging",
+      "discussion"
+    ],
+    "verdict": "Based on 9 reviews, this professor is engaging and generous with curves but the course organization can be inconsistent.",
+    "watchOuts": [
+      "course disorganization",
+      "inconsistent deadlines",
+      "sometimes missing recordings"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:samuel-karimi": {
+    "bestFor": "Students who thrive on rigorous homework and can manage a demanding schedule",
+    "confidence": "medium",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000148",
+      "uiuc:r:demo-r-000151",
+      "uiuc:r:demo-r-000150",
+      "uiuc:r:demo-r-000147",
+      "uiuc:r:demo-r-000149",
+      "uiuc:r:demo-r-000146"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:41:30.279Z",
+    "gradingNote": "In 3 course(s) over 4 year(s), GPA averaged 3.05 (+0.00 vs. the same courses taught by others); 3.5% withdrew.",
+    "inputHash": "786cbb13bcdc9290",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:samuel-karimi",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 6,
+    "source": "openai-compatible",
+    "strengths": [
+      "Strong emphasis on homework and practice exams",
+      "Excellent TA support in discussion sections",
+      "Engaging teaching style"
+    ],
+    "teachingStyle": [
+      "lecture-heavy",
+      "discussion"
+    ],
+    "verdict": "With 6 reviews, the instructor is generally well-liked but the course is heavy and disorganized.",
+    "watchOuts": [
+      "Heavy workload and frequent assignments",
+      "Disorganized lectures and unclear exam expectations"
+    ],
+    "workload": "heavy"
+  },
+  "uiuc:p:samuel-mkhize": {
+    "bestFor": "students who prefer structured lectures and can handle a curve in grading",
+    "confidence": "medium",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000863",
+      "uiuc:r:demo-r-000857",
+      "uiuc:r:demo-r-000860",
+      "uiuc:r:demo-r-000854",
+      "uiuc:r:demo-r-000855",
+      "uiuc:r:demo-r-000865",
+      "uiuc:r:demo-r-000861",
+      "uiuc:r:demo-r-000858",
+      "uiuc:r:demo-r-000862",
+      "uiuc:r:demo-r-000864",
+      "uiuc:r:demo-r-000856",
+      "uiuc:r:demo-r-000859"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:41:45.579Z",
+    "gradingNote": "In 4 course(s) over 3 year(s), GPA averaged 3.00 (−0.24 vs. the same courses taught by others); 3.2% withdrew.",
+    "inputHash": "945a2f41a1528fa3",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:samuel-mkhize",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 12,
+    "source": "openai-compatible",
+    "strengths": [
+      "generous grading and curves",
+      "clear and structured lectures",
+      "good office hour availability"
+    ],
+    "teachingStyle": [
+      "clear lectures",
+      "step-by-step explanations",
+      "worked examples"
+    ],
+    "verdict": "Based on 12 reviews, this professor is clear and generous but exams can be harder than expected.",
+    "watchOuts": [
+      "exams harder than homework",
+      "odd announcement timing",
+      "project instructions sometimes vague"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:soren-ekwueme": {
+    "bestFor": "students who can manage a lot of assignments and prefer structured lectures",
+    "confidence": "medium",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000580",
+      "uiuc:r:demo-r-000576",
+      "uiuc:r:demo-r-000581",
+      "uiuc:r:demo-r-000578",
+      "uiuc:r:demo-r-000579",
+      "uiuc:r:demo-r-000577"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:41:57.656Z",
+    "gradingNote": "In 4 course(s) over 5 year(s), GPA averaged 3.10 (−0.10 vs. the same courses taught by others); 3.7% withdrew.",
+    "inputHash": "5c07ea3e1c543ddb",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:soren-ekwueme",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 6,
+    "source": "openai-compatible",
+    "strengths": [
+      "heavy-homework",
+      "clear-lectures",
+      "worked examples"
+    ],
+    "teachingStyle": [
+      "clear lectures",
+      "worked examples"
+    ],
+    "verdict": "Based on 6 reviews, the class is heavy on homework and clear in lectures, but office hours are hard to access.",
+    "watchOuts": [
+      "hard to get office hours",
+      "inconsistent grading",
+      "heavy workload"
+    ],
+    "workload": "heavy"
+  },
+  "uiuc:p:steven-brandvold": {
+    "bestFor": "Students who thrive in a lively lecture environment and can manage busy office hours",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000003",
+      "uiuc:r:demo-r-000006",
+      "uiuc:r:demo-r-000004",
+      "uiuc:r:demo-r-000008",
+      "uiuc:r:demo-r-000016",
+      "uiuc:r:demo-r-000011",
+      "uiuc:r:demo-r-000014"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:42:13.773Z",
+    "gradingNote": "In 6 course(s) over 4 year(s), GPA averaged 2.67 (+0.15 vs. the same courses taught by others); 3.0% withdrew.",
+    "inputHash": "b7cb87ed5f267e69",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:steven-brandvold",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 18,
+    "source": "openai-compatible",
+    "strengths": [
+      "Clear, well‑organized notes",
+      "Fair grading and transparent policies",
+      "Enthusiastic and entertaining lectures"
+    ],
+    "teachingStyle": [
+      "engaging",
+      "interactive",
+      "lecture-heavy"
+    ],
+    "verdict": "Based on 18 reviews, this professor is engaging and fair, but office hours can be hard to access.",
+    "watchOuts": [
+      "Office hours often full and hard to get into",
+      "Some reviews note uneven pacing",
+      "Syllabus sometimes vague on grading"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:teodora-wierzbicki": {
+    "bestFor": "Students who thrive with active lectures and appreciate generous grading, especially in heavy semesters.",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000563",
+      "uiuc:r:demo-r-000571",
+      "uiuc:r:demo-r-000574",
+      "uiuc:r:demo-r-000562",
+      "uiuc:r:demo-r-000568"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:42:32.989Z",
+    "gradingNote": "In 4 course(s) over 4 year(s), GPA averaged 2.87 (+0.12 vs. the same courses taught by others); 3.0% withdrew.",
+    "inputHash": "d6526ddd62c8c2e8",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:teodora-wierzbicki",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 18,
+    "source": "openai-compatible",
+    "strengths": [
+      "Passionate and engaging lectures",
+      "Generous grading curves",
+      "Clear, well‑organized notes",
+      "Good office hour support"
+    ],
+    "teachingStyle": [
+      "engaging",
+      "curves-generously"
+    ],
+    "verdict": "With 18 reviews, this professor is generally engaging and generous with curves, but some students note disorganization and inconsistent exam expectations.",
+    "watchOuts": [
+      "Course site and announcements can be confusing",
+      "Practice exams may not match real ones",
+      "Some topics rushed toward semester end"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:thandiwe-macallister": {
+    "bestFor": "Students who stay on top of weekly work and want a rigorous, well-structured course",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000633",
+      "uiuc:r:demo-r-000625",
+      "uiuc:r:demo-r-000619",
+      "uiuc:r:demo-r-000620",
+      "uiuc:r:demo-r-000622",
+      "uiuc:r:demo-r-000634",
+      "uiuc:r:demo-r-000623",
+      "uiuc:r:demo-r-000624",
+      "uiuc:r:demo-r-000627",
+      "uiuc:r:demo-r-000631",
+      "uiuc:r:demo-r-000618",
+      "uiuc:r:demo-r-000632"
+    ],
+    "format": "mixed",
+    "generatedAt": "2026-09-06T23:25:06.492Z",
+    "gradingNote": "In 5 course(s) over 5 year(s), GPA averaged 2.89 (+0.04 vs. the same courses taught by others); 2.7% withdrew.",
+    "inputHash": "02f981ef2ca6b3bc",
+    "model": "qwen/qwen3.8-27b",
+    "professorId": "uiuc:p:thandiwe-macallister",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 21,
+    "source": "openai-compatible",
+    "strengths": [
+      "Explains hard parts clearly without skipping",
+      "Homework genuinely prepares for exams",
+      "Practice exams mirror exam difficulty",
+      "Worth talking to after class"
+    ],
+    "teachingStyle": [
+      "Step-by-step with worked examples",
+      "Lectures build logically",
+      "Dense slides",
+      "Connects concepts to homework"
+    ],
+    "verdict": "Across 21 reviews, this is a clear but demanding instructor — expect heavy homework and hard exams that reward consistent effort over cramming.",
+    "watchOuts": [
+      "Exams are harder than homework with little partial credit",
+      "Some exam material goes beyond lecture coverage",
+      "Regrade requests and announcements can be slow"
+    ],
+    "workload": "heavy"
+  },
+  "uiuc:p:thomas-mbeki-sandoval": {
+    "bestFor": "Students who prefer structured, transparent instruction and are comfortable with rigorous grading",
+    "confidence": "medium",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000274",
+      "uiuc:r:demo-r-000275",
+      "uiuc:r:demo-r-000276",
+      "uiuc:r:demo-r-000281",
+      "uiuc:r:demo-r-000279",
+      "uiuc:r:demo-r-000283"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:43:10.619Z",
+    "gradingNote": "In 4 course(s) over 3 year(s), GPA averaged 3.01 (−0.12 vs. the same courses taught by others); 1.9% withdrew.",
+    "inputHash": "03b079553d909ef2",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:thomas-mbeki-sandoval",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 11,
+    "source": "openai-compatible",
+    "strengths": [
+      "Clear explanations even for tough topics",
+      "Fair exams with no trick questions",
+      "Consistent grading policy",
+      "Encourages study groups"
+    ],
+    "teachingStyle": [
+      "clear lectures",
+      "fair grading",
+      "office hour support"
+    ],
+    "verdict": "Based on 11 reviews, this professor is clear and fair, but the autograder can be unforgiving.",
+    "watchOuts": [
+      "Autograder is picky and unforgiving",
+      "Late policy strict with no exceptions",
+      "Course website confusing"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:william-oyelaran": {
+    "bestFor": "Students who value a generous curve and engaging lectures but can handle disorganization.",
+    "confidence": "medium",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-001207",
+      "uiuc:r:demo-r-001200",
+      "uiuc:r:demo-r-001208",
+      "uiuc:r:demo-r-001202",
+      "uiuc:r:demo-r-001205",
+      "uiuc:r:demo-r-001198",
+      "uiuc:r:demo-r-001206",
+      "uiuc:r:demo-r-001209",
+      "uiuc:r:demo-r-001197",
+      "uiuc:r:demo-r-001204",
+      "uiuc:r:demo-r-001199",
+      "uiuc:r:demo-r-001203"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T22:43:25.794Z",
+    "gradingNote": "In 4 course(s) over 6 year(s), GPA averaged 3.24 (−0.03 vs. the same courses taught by others); 2.6% withdrew.",
+    "inputHash": "afc6d2d9b0cef659",
+    "model": "openai/gpt-oss-20b",
+    "professorId": "uiuc:p:william-oyelaran",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 13,
+    "source": "openai-compatible",
+    "strengths": [
+      "generous curve and extra credit",
+      "good office hours",
+      "engaging lectures",
+      "useful practice problems"
+    ],
+    "teachingStyle": [
+      "engaging",
+      "generous curve"
+    ],
+    "verdict": "With 13 reviews, the instructor is generally liked but the course site and organization are frequently criticized.",
+    "watchOuts": [
+      "disorganized course site and announcements",
+      "late assignment postings",
+      "inconsistent grading between TAs"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:wiremu-ghosh": {
+    "bestFor": "Students who want comprehensive notes and will commit to daily attendance",
+    "confidence": "medium",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000673",
+      "uiuc:r:demo-r-000672",
+      "uiuc:r:demo-r-000664",
+      "uiuc:r:demo-r-000674",
+      "uiuc:r:demo-r-000667",
+      "uiuc:r:demo-r-000677",
+      "uiuc:r:demo-r-000676",
+      "uiuc:r:demo-r-000675",
+      "uiuc:r:demo-r-000669",
+      "uiuc:r:demo-r-000665",
+      "uiuc:r:demo-r-000666"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T23:25:27.809Z",
+    "gradingNote": "In 4 course(s) over 6 year(s), GPA averaged 2.83; no comparison group in the window.",
+    "inputHash": "0ba7a573782573fa",
+    "model": "qwen/qwen3.8-27b",
+    "professorId": "uiuc:p:wiremu-ghosh",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 14,
+    "source": "openai-compatible",
+    "strengths": [
+      "Thorough, well-organized notes that make studying easier",
+      "Makes difficult material feel approachable",
+      "Genuinely cares about student understanding"
+    ],
+    "teachingStyle": [
+      "Lecture with detailed notes",
+      "Strict attendance policy",
+      "Engaging and caring",
+      "Recorded lectures available"
+    ],
+    "verdict": "Based on 14 reviews, a strong pick if you'll show up daily and use the excellent posted notes — exams are tough but fair.",
+    "watchOuts": [
+      "Strict attendance — missing class costs points",
+      "Exams can go beyond what's covered in lecture",
+      "One review notes inconsistent TA grading"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:wiremu-lonsdale": {
+    "bestFor": "Students who want a supportive, fair instructor in a large lecture and will do the homework consistently.",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000733",
+      "uiuc:r:demo-r-000736",
+      "uiuc:r:demo-r-000728",
+      "uiuc:r:demo-r-000731",
+      "uiuc:r:demo-r-000724",
+      "uiuc:r:demo-r-000727",
+      "uiuc:r:demo-r-000734",
+      "uiuc:r:demo-r-000729",
+      "uiuc:r:demo-r-000737",
+      "uiuc:r:demo-r-000726",
+      "uiuc:r:demo-r-000725",
+      "uiuc:r:demo-r-000735"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T23:08:49.026Z",
+    "gradingNote": "In 5 course(s) over 6 year(s), GPA averaged 2.64 (−0.23 vs. the same courses taught by others); 2.2% withdrew.",
+    "inputHash": "ecca89d68935f13b",
+    "model": "qwen/qwen3.8-27b",
+    "professorId": "uiuc:p:wiremu-lonsdale",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 15,
+    "source": "openai-compatible",
+    "strengths": [
+      "Very generous curve on exams (9 reviews mention it)",
+      "Caring and approachable; follows up if you struggle",
+      "Fair, transparent grading with consistent partial credit",
+      "Responsive to email and helpful in office hours"
+    ],
+    "teachingStyle": [
+      "Large-lecture format",
+      "Active office hours",
+      "Posted notes and slides",
+      "Review sessions"
+    ],
+    "verdict": "Based on 15 reviews, a strong pick for large math lectures if you want generous grading and a caring instructor.",
+    "watchOuts": [
+      "Large class size (200+) makes individual help harder to get",
+      "Final exam heavily weighted; start studying two weeks out",
+      "Homework can be longer than advertised"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:zoltan-castellano": {
+    "bestFor": "Students in large sections who learn well from detailed written notes and benefit from a supportive, approachable instructor",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-001078",
+      "uiuc:r:demo-r-001095",
+      "uiuc:r:demo-r-001098",
+      "uiuc:r:demo-r-001089",
+      "uiuc:r:demo-r-001086",
+      "uiuc:r:demo-r-001083",
+      "uiuc:r:demo-r-001081",
+      "uiuc:r:demo-r-001090",
+      "uiuc:r:demo-r-001093",
+      "uiuc:r:demo-r-001079",
+      "uiuc:r:demo-r-001080",
+      "uiuc:r:demo-r-001100"
+    ],
+    "format": "lecture-heavy",
+    "generatedAt": "2026-09-06T23:31:05.983Z",
+    "gradingNote": "In 4 course(s) over 3 year(s), GPA averaged 3.29 (−0.24 vs. the same courses taught by others); 1.2% withdrew.",
+    "inputHash": "3bf39fef7f682101",
+    "model": "qwen/qwen3.8-27b",
+    "professorId": "uiuc:p:zoltan-castellano",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 25,
+    "source": "openai-compatible",
+    "strengths": [
+      "Notes are thorough enough to serve as a textbook",
+      "Consistently generous grading with curves on all exams",
+      "Genuinely caring and approachable in office hours"
+    ],
+    "teachingStyle": [
+      "Large lecture with detailed slides",
+      "Generous curves on every exam",
+      "Active and approachable office hours",
+      "Recorded lectures for review"
+    ],
+    "verdict": "Based on 25 reviews, a strong pick for large-section stats courses if you value thorough notes and generous curves.",
+    "watchOuts": [
+      "TA grading consistency can vary",
+      "Limited partial credit on some exams",
+      "Lecture recordings occasionally missing"
+    ],
+    "workload": "moderate"
+  },
+  "uiuc:p:zoltan-farahani": {
+    "bestFor": "Students who want a fair, well-organized course with clear expectations and an instructor who invests in their understanding.",
+    "confidence": "high",
+    "evidenceReviewIds": [
+      "uiuc:r:demo-r-000837",
+      "uiuc:r:demo-r-000828",
+      "uiuc:r:demo-r-000832",
+      "uiuc:r:demo-r-000844",
+      "uiuc:r:demo-r-000829",
+      "uiuc:r:demo-r-000843",
+      "uiuc:r:demo-r-000841",
+      "uiuc:r:demo-r-000831",
+      "uiuc:r:demo-r-000826",
+      "uiuc:r:demo-r-000830",
+      "uiuc:r:demo-r-000836",
+      "uiuc:r:demo-r-000839"
+    ],
+    "format": "mixed",
+    "generatedAt": "2026-09-06T23:10:44.543Z",
+    "gradingNote": "In 4 course(s) over 6 year(s), GPA averaged 3.00 (−0.01 vs. the same courses taught by others); 3.2% withdrew.",
+    "inputHash": "6e13bffb6a5dae12",
+    "model": "qwen/qwen3.8-27b",
+    "professorId": "uiuc:p:zoltan-farahani",
+    "promptVersion": 1,
+    "provider": "Groq",
+    "reviewCount": 20,
+    "source": "openai-compatible",
+    "strengths": [
+      "Fair, transparent grading with no trick questions (9 reviews)",
+      "Engaging lectures that keep the room awake (9 reviews)",
+      "Genuinely cares whether students understand the material",
+      "Exams reflect what was actually taught in class"
+    ],
+    "teachingStyle": [
+      "Engaging discussions and demos",
+      "Passionate, high-energy delivery",
+      "Mentoring in office hours",
+      "Clear rubrics posted upfront"
+    ],
+    "verdict": "Based on 20 reviews, a consistently fair and engaging instructor — take this section if you want clear expectations and supportive office hours.",
+    "watchOuts": [
+      "Autograder described as picky and unforgiving",
+      "Weekly quizzes added significant pressure",
+      "Office hours can be packed and hard to get into"
+    ],
+    "workload": "moderate"
+  }
+}

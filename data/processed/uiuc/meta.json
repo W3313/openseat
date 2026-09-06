@@ -1,0 +1,64 @@
+{
+  "builtAt": "2026-09-03T14:12:00Z",
+  "counts": {
+    "courses": 120,
+    "gradeRows": 1465,
+    "gradesOnlyProfessors": 18,
+    "openSections": 95,
+    "professors": 108,
+    "reviewedProfessors": 90,
+    "reviews": 1251,
+    "sections": 147,
+    "summariesClaude": 0,
+    "summariesExtractive": 1,
+    "summariesOpenAiCompatible": 85
+  },
+  "currentTerm": "2026-fa",
+  "datasetHash": "40ea318819ba2f4ca37f7fbc03324167d1ed59ed5cb626c480477debf6741ceb",
+  "edgeCases": [
+    "(a) Two CS professors share a surname with different first names",
+    "(b) Two CS professors share surname and first initial; one has grade rows only as \"Last, F\" (ambiguous → grades-only entity)",
+    "(c) Hyphenated surname written unhyphenated in some grade rows",
+    "(d) Diacritic surname stripped in some grade rows",
+    "(e) Nickname pair: review-source \"Robert\" vs grade rows \"Last, Bob\"",
+    "(f) One \"Last, First Jr\" suffix grade row",
+    "(g) Five grades-only instructors with no review record (one per subject except CHEM)",
+    "(h) One professor with reviews but zero grade rows (\"New — no grade data yet\")",
+    "(i) One \"Staff\" row and one empty-instructor row per subject",
+    "(j) One co-taught section (two instructors on one CRN)",
+    "(k) One cross-listed section (CS 4xx / ECE 4xx sharing a CRN)",
+    "(l) One course with zero open sections"
+  ],
+  "gradesThroughTerm": "2025-fa",
+  "mode": "demo",
+  "scheduleTerm": "2026-fa",
+  "seatsFetchedAt": "2026-09-03T14:12:00Z",
+  "seed": 20260903,
+  "sources": [
+    {
+      "fetchedAt": "2026-09-03T14:12:00Z",
+      "id": "demo-grades",
+      "label": "Fictional demo data (seed 20260903)",
+      "license": "MIT",
+      "recordCount": 1465,
+      "url": null
+    },
+    {
+      "fetchedAt": "2026-09-03T14:12:00Z",
+      "id": "demo-schedule",
+      "label": "Fictional demo data (seed 20260903)",
+      "license": "MIT",
+      "recordCount": 147,
+      "url": null
+    },
+    {
+      "fetchedAt": "2026-09-03T14:12:00Z",
+      "id": "demo-reviews",
+      "label": "Fictional demo data (seed 20260903)",
+      "license": "MIT",
+      "recordCount": 1251,
+      "url": null
+    }
+  ],
+  "termFallback": false
+}

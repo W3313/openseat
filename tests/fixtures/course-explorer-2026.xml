@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:calendarYear xmlns:ns2="http://rest.cis.illinois.edu" id="2026" href="https://courses.illinois.edu/cisapp/explorer/schedule/2026.xml">
+    <parents>
+        <schedule href="https://courses.illinois.edu/cisapp/explorer/schedule.xml"/>
+    </parents>
+    <label>2026</label>
+    <terms>
+        <term id="120261" href="https://courses.illinois.edu/cisapp/explorer/schedule/2026/spring.xml">Spring 2026</term>
+        <term id="120265" href="https://courses.illinois.edu/cisapp/explorer/schedule/2026/summer.xml">Summer 2026</term>
+        <term id="120268" href="https://courses.illinois.edu/cisapp/explorer/schedule/2026/fall.xml">Fall 2026</term>
+    </terms>
+</ns2:calendarYear>

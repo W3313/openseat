@@ -1,0 +1,13 @@
+{
+  "currentTerm": "2026-fa",
+  "id": "uiuc",
+  "name": "University of Illinois Urbana-Champaign",
+  "seatStatusAvailable": true,
+  "shortName": "UIUC",
+  "sources": {
+    "grades": "demo-grades",
+    "reviews": "demo-reviews",
+    "schedule": "demo-schedule"
+  },
+  "timezone": "America/Chicago"
+}

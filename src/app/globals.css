@@ -1,26 +1,219 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/*
+ * ProfPeek design tokens (SPEC 3.0, F24).
+ * Tailwind v4 is CSS-first: there is no tailwind.config. Every token below is
+ * exposed to utilities through `@theme inline` (e.g. `bg-surface`, `text-ink`,
+ * `fill-grade-aplus`). Light values live on :root; dark values override them
+ * under prefers-color-scheme so the built-in `dark:` variant and the raw
+ * variables agree with each other. There is deliberately no theme toggle.
+ */
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+:root {
+  color-scheme: light;
+
+  /* Surfaces */
+  --pp-surface: #ffffff;
+  --pp-surface-raised: #ffffff;
+  --pp-surface-sunken: #f4f5f8;
+  --pp-surface-overlay: #ffffff;
+  --pp-border: #dfe2ea;
+  --pp-border-strong: #b9bfcc;
+
+  /* Ink — contrast vs surface ≥ 4.5:1 for every value */
+  --pp-ink: #111827;
+  --pp-ink-muted: #4b5563;
+  --pp-ink-faint: #6b7280;
+  --pp-ink-inverse: #ffffff;
+
+  /* Brand */
+  --pp-brand: #2f4fd1;
+  --pp-brand-strong: #243fae;
+  --pp-brand-soft: #e8ecfb;
+  --pp-brand-ink: #ffffff;
+  --pp-link: #2f4fd1;
+
+  /* Semantic */
+  --pp-success: #047857;
+  --pp-success-soft: #d1fae5;
+  --pp-warning: #b45309;
+  --pp-warning-soft: #fef3c7;
+  --pp-danger: #b91c1c;
+  --pp-danger-soft: #fee2e2;
+  --pp-info: #1d4ed8;
+  --pp-info-soft: #dbeafe;
+
+  /* Focus ring */
+  --pp-focus: #2f4fd1;
+
+  /* Demo-mode badge */
+  --pp-demo: #92400e;
+  --pp-demo-soft: #fef3c7;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    color-scheme: dark;
+
+    --pp-surface: #0f1117;
+    --pp-surface-raised: #171a23;
+    --pp-surface-sunken: #0a0c12;
+    --pp-surface-overlay: #1e2230;
+    --pp-border: #2a2f3d;
+    --pp-border-strong: #454b5c;
+
+    --pp-ink: #e6e8ee;
+    --pp-ink-muted: #a3aab8;
+    --pp-ink-faint: #8a92a3;
+    --pp-ink-inverse: #0f1117;
+
+    --pp-brand: #8ea2ff;
+    --pp-brand-strong: #a9b8ff;
+    --pp-brand-soft: #1c2447;
+    --pp-brand-ink: #0f1117;
+    --pp-link: #9db0ff;
+
+    --pp-success: #6ee7b7;
+    --pp-success-soft: #053b2c;
+    --pp-warning: #fcd34d;
+    --pp-warning-soft: #3f2a06;
+    --pp-danger: #fca5a5;
+    --pp-danger-soft: #4c1414;
+    --pp-info: #93c5fd;
+    --pp-info-soft: #172554;
+
+    --pp-focus: #a9b8ff;
+
+    --pp-demo: #fcd34d;
+    --pp-demo-soft: #3f2a06;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@theme inline {
+  /* Fonts */
+  --font-sans:
+    var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --font-mono:
+    var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, "Liberation Mono", monospace;
+
+  /* Surfaces & ink */
+  --color-surface: var(--pp-surface);
+  --color-surface-raised: var(--pp-surface-raised);
+  --color-surface-sunken: var(--pp-surface-sunken);
+  --color-surface-overlay: var(--pp-surface-overlay);
+  --color-border: var(--pp-border);
+  --color-border-strong: var(--pp-border-strong);
+  --color-ink: var(--pp-ink);
+  --color-ink-muted: var(--pp-ink-muted);
+  --color-ink-faint: var(--pp-ink-faint);
+  --color-ink-inverse: var(--pp-ink-inverse);
+
+  /* Brand & semantic */
+  --color-brand: var(--pp-brand);
+  --color-brand-strong: var(--pp-brand-strong);
+  --color-brand-soft: var(--pp-brand-soft);
+  --color-brand-ink: var(--pp-brand-ink);
+  --color-link: var(--pp-link);
+  --color-success: var(--pp-success);
+  --color-success-soft: var(--pp-success-soft);
+  --color-warning: var(--pp-warning);
+  --color-warning-soft: var(--pp-warning-soft);
+  --color-danger: var(--pp-danger);
+  --color-danger-soft: var(--pp-danger-soft);
+  --color-info: var(--pp-info);
+  --color-info-soft: var(--pp-info-soft);
+  --color-focus: var(--pp-focus);
+  --color-demo: var(--pp-demo);
+  --color-demo-soft: var(--pp-demo-soft);
+
+  /* Radii & shadows */
+  --radius-card: 0.875rem;
+  --radius-chip: 9999px;
+  --shadow-card: 0 1px 2px rgb(15 23 42 / 0.06), 0 1px 3px rgb(15 23 42 / 0.1);
+  --shadow-overlay: 0 10px 30px rgb(15 23 42 / 0.18), 0 2px 6px rgb(15 23 42 / 0.12);
+}
+
+/*
+ * Okabe–Ito grade palette (SPEC 3.0) — identical in both themes.
+ * `static` (not `inline`) so the variables are always emitted on :root: chart
+ * SVGs can use `fill="var(--color-grade-aplus)"` directly, and utilities like
+ * `bg-grade-b` / `fill-grade-w` work as usual.
+ */
+@theme static {
+  --color-grade-aplus: #004c8c;
+  --color-grade-a: #0072b2;
+  --color-grade-aminus: #56b4e9;
+  --color-grade-b: #009e73;
+  --color-grade-c: #f0e442;
+  --color-grade-d: #e69f00;
+  --color-grade-f: #d55e00;
+  --color-grade-w: #8c8c8c;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--pp-surface);
+    color: var(--pp-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Visible focus ring on every interactive element (SPEC 3.0) */
+  :focus-visible {
+    outline: 2px solid var(--pp-focus);
+    outline-offset: 2px;
+    border-radius: 0.25rem;
+  }
+
+  a {
+    text-underline-offset: 0.15em;
+  }
+
+  ::selection {
+    background: var(--pp-brand-soft);
+    color: var(--pp-ink);
+  }
+
+  /* Native details marker: keep it but align it with our chevrons */
+  summary {
+    cursor: pointer;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer utilities {
+  /* Horizontal scrollers (CourseChips, compare table) hide the bar but stay scrollable */
+  .scrollbar-none {
+    scrollbar-width: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Text on the yellow / orange grade segments must stay readable */
+  .text-on-grade-light {
+    color: #111827;
+  }
+  .text-on-grade-dark {
+    color: #ffffff;
+  }
 }

@@ -1,0 +1,87 @@
+import Link from "next/link";
+import clsx from "clsx";
+import { ArrowLeft } from "lucide-react";
+import type { ProfessorDetail, School } from "@/lib/domain/types";
+import { buildRankingsHref } from "@/lib/utils/urlState";
+import { Breadcrumb } from "@/components/layout/Breadcrumb";
+import { ShareButton } from "@/components/rankings/ShareButton";
+import { ShortlistButton } from "@/components/shortlist/ShortlistButton";
+import { BadgeRow } from "./BadgeRow";
+import { RatingBlock } from "./RatingBlock";
+import { VibeTags } from "./VibeTags";
+
+export interface ProfileHeaderProps {
+  detail: Pick<ProfessorDetail, "professor" | "scores" | "badges" | "vibeTags" | "rankBySubject">;
+  school: Pick<School, "id" | "shortName" | "seatStatusAvailable">;
+  /** Subject code for "← Back to {CODE} rankings"; defaults to the professor's first subject. */
+  backSubject?: string;
+  className?: string;
+}
+
+/** "#3 in CS · #12 in ECE" (subjects where the professor is ranked). */
+export function rankLine(rankBySubject: ProfessorDetail["rankBySubject"]): string | null {
+  const parts = rankBySubject.filter((r) => r.rank != null).map((r) => `#${r.rank} in ${r.subject}`);
+  return parts.length ? parts.join(" · ") : null;
+}
+
+/** Page title: "{displayName} — {subjects.join('/')} · ProfPeek" (+ " · DEMO"). */
+export function profileTitle(detail: Pick<ProfessorDetail, "professor">, demo: boolean): string {
+  const base = `${detail.professor.displayName} — ${detail.professor.subjects.join("/")} · ProfPeek`;
+  return demo ? `${base} · DEMO` : base;
+}
+
+/** Detail-page header (SPEC 3.4 item 1). */
+export function ProfileHeader({ detail, school, backSubject, className }: ProfileHeaderProps) {
+  const { professor, scores } = detail;
+  const code = backSubject ?? professor.subjects[0];
+  const ranks = rankLine(detail.rankBySubject);
+
+  return (
+    <header className={clsx("flex flex-col gap-3", className)}>
+      <Breadcrumb
+        items={[
+          { label: school.shortName, href: "/" },
+          ...(code ? [{ label: code, href: buildRankingsHref(school.id, code) }] : []),
+          { label: professor.displayName },
+        ]}
+      />
+
+      <div className="flex flex-wrap items-start justify-between gap-3">
+        <div className="flex min-w-0 flex-col gap-1">
+          <h1 className="m-0 text-2xl font-semibold tracking-tight text-ink sm:text-3xl">{professor.displayName}</h1>
+          <p className="m-0 flex flex-wrap items-center gap-x-2 text-sm text-ink-muted">
+            {professor.department ? <span>{professor.department}</span> : null}
+            {professor.kind === "grades-only" ? <span>Grade records only — no reviews linked</span> : null}
+            {ranks ? <span className="tabular-nums">{ranks}</span> : null}
+            {professor.isFictional ? (
+              <span className="text-[0.7rem] font-medium uppercase tracking-wide text-demo">fictional demo instructor</span>
+            ) : null}
+          </p>
+        </div>
+        <div className="flex shrink-0 flex-wrap items-center gap-2">
+          <ShortlistButton professor={professor} variant="labeled" />
+          <ShareButton />
+        </div>
+      </div>
+
+      <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
+        <RatingBlock scores={scores} size="large" />
+        <div className="flex flex-col gap-2">
+          <BadgeRow badges={detail.badges} seatStatusAvailable={school.seatStatusAvailable} size="md" />
+          <VibeTags tags={detail.vibeTags} max={Infinity} size="md" />
+        </div>
+      </div>
+
+      {code ? (
+        <p className="m-0 text-sm">
+          <Link href={buildRankingsHref(school.id, code)} className="inline-flex items-center gap-1 font-medium text-link hover:underline">
+            <ArrowLeft aria-hidden="true" className="h-3.5 w-3.5" />
+            Back to {code} rankings
+          </Link>
+        </p>
+      ) : null}
+    </header>
+  );
+}
+
+export default ProfileHeader;
