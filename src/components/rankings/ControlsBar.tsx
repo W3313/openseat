@@ -11,6 +11,8 @@ export interface ControlsBarProps {
   onChange: (next: RankingsQuery) => void;
   courses: readonly CourseRef[];
   seatStatusAvailable: boolean;
+  /** Grades-only schools (design §5): only the Grades sort is offered. Default true. */
+  reviewsAvailable?: boolean;
   /** Course page reuses the bar without chips (SPEC 3.3). */
   showCourseChips?: boolean;
   className?: string;
@@ -20,7 +22,7 @@ export interface ControlsBarProps {
  * Sticky control strip under the site header (SPEC 3.2 item 3): sort, open
  * toggle, course chips. Pure w.r.t. URL state — the parent owns the query.
  */
-export function ControlsBar({ query, onChange, courses, seatStatusAvailable, showCourseChips = true, className }: ControlsBarProps) {
+export function ControlsBar({ query, onChange, courses, seatStatusAvailable, reviewsAvailable = true, showCourseChips = true, className }: ControlsBarProps) {
   function setSort(sort: SortKey) {
     onChange({ ...query, sort });
   }
@@ -41,7 +43,7 @@ export function ControlsBar({ query, onChange, courses, seatStatusAvailable, sho
       )}
     >
       <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
-        <SortSegmented value={query.sort} onChange={setSort} />
+        <SortSegmented value={query.sort} onChange={setSort} reviewsAvailable={reviewsAvailable} />
         <OpenOnlyToggle checked={query.openOnly} onChange={setOpenOnly} seatStatusAvailable={seatStatusAvailable} />
       </div>
       {showCourseChips && courses.length > 0 ? <CourseChips courses={courses} value={query.course} onChange={setCourse} /> : null}

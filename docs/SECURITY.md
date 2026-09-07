@@ -16,7 +16,7 @@ ProfPeek is a statically generated Next.js 16 site plus nine read-only JSON API 
 | **Prototype-pollution-style lookups** | Slugs like `constructor` passed the slug regex and reached `Object.prototype` via bracket lookups | Empty 200 cached for 24 h; 500s on `/compare` and the 404 page | **Closed** — `Object.hasOwn` guards, 128-char key cap, tests |
 | **Cache poisoning / input echo** | 4xx responses echoed raw path input and were CDN-cached for a day | Each bogus URL filled the cache; reflected content in JSON (not exploitable in browsers, but noisy) | **Closed** — fixed error messages, 4xx cached ≤ 5 min, nosniff on every JSON response |
 | **Abuse of compare / shortlist** | Shortlist lives in `localStorage`; share links carry slugs in the URL | No server state to abuse; junk slugs render an EmptyState (200, not 404) | **Accepted** — see deferred item 2 |
-| **Ship real data by accident** | A local `DATA_MODE=live` build traced `data/processed/**` into the serverless bundle | Real instructor data (and possibly RMP output) in a public deployment | **Closed** — tracing narrowed to `./data/processed/uiuc/**`; live outputs gitignored |
+| **Ship real data by accident** | A local `DATA_MODE=live` build traced `data/processed/**` into the serverless bundle | Real instructor data (and possibly RMP output) in a public deployment | **Closed** — only reviewed, committed `data/processed/<school>` directories exist (the `uiuc-live` split is gone); raw downloads live under `data/raw/` (gitignored, never traced) and the RMP adapter is wired to no school |
 | **Credential leakage** | RMP frontend token hard-coded in source, `.env.example` and docs; CI secrets; git author metadata | Shipping a third party's credential; supply-chain exposure | **Closed** for the token (removed; `RMP_AUTH_HEADER` required when enabled); CI has no secrets; author-email rewrite deferred |
 | **Supply chain** | Floating action tags, default `GITHUB_TOKEN` permissions, caret ranges, postinstall scripts | Compromised action or dependency runs in CI | **Mitigated** — SHA-pinned actions, `permissions: contents: read`, Dependabot, `save-exact`; `ignore-scripts` deferred |
 | **Reputational: fictional demo indexed as fact** | Demo professor pages had real-sounding names, indexable, with no "fictional" marker in meta description or sitemap | Search snippets attributing fabricated ratings to a name that matches a real person elsewhere | **Closed** — "Fictional demo instructor —" description prefix, `noindex, follow` in demo mode, professor pages omitted from sitemap |
@@ -56,7 +56,7 @@ All items below were implemented and verified in the 2026-09-06 fix pass; tests 
 
 ### 2.5 Data-boundary controls
 - `next.config.ts` `outputFileTracingIncludes` narrowed to `./data/processed/uiuc/**` — a local live build cannot ship real data.
-- `src/lib/sources/registry.ts` refuses `DATA_MODE=live` + `REVIEW_SOURCE=demo`; `data/processed/uiuc-live/` and `data/raw/uiuc/` are gitignored (verified with `git check-ignore`).
+- `src/lib/sources/registry.ts` refuses a `live` (real) school configured with any `demo-*` adapter; `data/raw/<school>/` is gitignored (verified with `git check-ignore`) and no real school has a review source.
 - `src/lib/sources/rmp/queries.ts` / `RmpReviewSource.ts`: no default credential; `RMP_AUTH_HEADER` is required when `RMP_ENABLED=1` (zod `superRefine`). The base64 literal is gone from the repo (grep returns 0).
 - `src/app/robots.ts` disallows `/api/` and `/compare/`; `src/app/sitemap.ts` omits professor pages in demo mode; `src/app/p/[school]/[slug]/page.tsx` sets `robots: { index: false, follow: true }` and a "Fictional demo instructor — " description prefix for fictional professors.
 
@@ -91,7 +91,7 @@ All items below were implemented and verified in the 2026-09-06 fix pass; tests 
 Dashboard settings — none of these live in the repo.
 
 - [ ] **Environment-variable scope.** `GROQ_API_KEY`, `ANTHROPIC_API_KEY`, `SUMMARY_ON_DEMAND`, `SUMMARY_ON_DEMAND_TOKEN`: **Production only**, marked *Sensitive*. Never Preview or Development — every branch push produces a public Preview URL that would otherwise inherit them.
-- [ ] **`DATA_MODE` unset (demo) in every environment** until the live-data publish path and licensing are resolved ([GO_LIVE.md](GO_LIVE.md)). `RMP_ENABLED` never set anywhere on Vercel or in CI.
+- [ ] **`RMP_AUTH_HEADER` / `RMP_SCHOOL_ID` never set anywhere on Vercel or in CI**; real schools stay grades-only until the review-collection path in [GO_LIVE.md](GO_LIVE.md) is resolved. Use `SCHOOLS=` to restrict a deployment to a subset of the registry.
 - [ ] **`NEXT_PUBLIC_SITE_URL`** set per environment (canonical URLs, sitemap, OG images).
 - [ ] **Deployment Protection** → Vercel Authentication (or Password Protection on Pro) for Preview deployments.
 - [ ] **Firewall.** On Hobby: keep Attack Challenge Mode ready as an emergency switch. On Pro: add a rate-limit rule on `/api/*` (e.g. 60 req/min per IP) and a rule blocking known scraper user agents if abuse appears.

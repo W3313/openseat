@@ -4,7 +4,7 @@ import type { RawGradeRow } from '@/lib/sources/types';
 import { courseLevel, makeCourseId, parseCourseId } from '@/lib/utils/ids';
 import { isTermCode, termOrdinal } from '@/lib/utils/term';
 import { EMPTY_BUCKETS, addBuckets, rowStats } from '@/lib/scoring/gpa';
-import { MIN_GRADED_N } from '@/lib/domain/constants';
+import { hasEnoughRows } from '@/lib/scoring/aggregate';
 
 /**
  * Distinct (subject, number) → Course with the title of the most recent term (ties: last seen).
@@ -81,18 +81,21 @@ export function ensureCoursesExist(
 
 /**
  * Course.gpaMean/graded/withdrawn/wRate/instructorCount/buckets over ALL headline, in-window,
- * non-suppressed rows (incl. empty-instructor rows). Returns new Course objects.
+ * non-suppressed rows (incl. empty-instructor rows). Returns new Course objects. gpaMean/wRate are
+ * published only with enough data: ≥ MIN_GRADED_N students, or ≥ MIN_SECTIONS_N sections for percent-only
+ * rows (MULTI_SCHOOL_DESIGN §4.1 — the same gate professors get).
  */
 export function computeCourseStats(courses: readonly Course[], rows: readonly GradeRow[]): Course[] {
-  const byCourse = new Map<string, { buckets: GradeBuckets[]; professors: Set<string> }>();
+  const byCourse = new Map<string, { buckets: GradeBuckets[]; rows: GradeRow[]; professors: Set<string> }>();
   for (const row of rows) {
     if (!row.isHeadline || row.suppressed) continue;
     let entry = byCourse.get(row.courseId);
     if (!entry) {
-      entry = { buckets: [], professors: new Set() };
+      entry = { buckets: [], rows: [], professors: new Set() };
       byCourse.set(row.courseId, entry);
     }
     entry.buckets.push(row.buckets);
+    entry.rows.push(row);
     if (row.professorId) entry.professors.add(row.professorId);
   }
   return courses.map((course) => {
@@ -102,13 +105,14 @@ export function computeCourseStats(courses: readonly Course[], rows: readonly Gr
     }
     const buckets = addBuckets(...entry.buckets);
     const stats = rowStats(buckets);
+    const enough = hasEnoughRows(entry.rows, stats.graded);
     return {
       ...course,
       buckets,
       graded: stats.graded,
       withdrawn: stats.withdrawn,
-      gpaMean: stats.graded >= MIN_GRADED_N ? stats.gpa : null,
-      wRate: stats.graded >= MIN_GRADED_N ? stats.wRate : null,
+      gpaMean: enough ? stats.gpa : null,
+      wRate: enough ? stats.wRate : null,
       instructorCount: entry.professors.size,
     };
   });

@@ -1,0 +1,417 @@
+{
+  "AAE": [
+    "Aero & Astro Engineering"
+  ],
+  "AAS": [
+    "African American Studies"
+  ],
+  "ABE": [
+    "Agri & Biol Engineering"
+  ],
+  "AD": [
+    "Art & Design"
+  ],
+  "AFT": [
+    "Aerospace Studies"
+  ],
+  "AGEC": [
+    "Agricultural Economics"
+  ],
+  "AGR": [
+    "Agriculture"
+  ],
+  "AGRY": [
+    "Agronomy"
+  ],
+  "AMST": [
+    "American Studies"
+  ],
+  "ANSC": [
+    "Animal Sciences"
+  ],
+  "ANTH": [
+    "Anthropology"
+  ],
+  "ARAB": [
+    "Arabic"
+  ],
+  "ASAM": [
+    "Asian American Studies"
+  ],
+  "ASEC": [
+    "Agric Sciences Educ &Comm"
+  ],
+  "ASL": [
+    "American Sign Language"
+  ],
+  "ASM": [
+    "Agricultural Systems Mgmt"
+  ],
+  "ASTR": [
+    "Astronomy"
+  ],
+  "AT": [
+    "Aviation Technology"
+  ],
+  "BAND": [
+    "Bands"
+  ],
+  "BCHM": [
+    "Biochemistry"
+  ],
+  "BIOL": [
+    "Biological Sciences"
+  ],
+  "BME": [
+    "Biomedical Engineering"
+  ],
+  "BMS": [
+    "Basic Medical Sciences"
+  ],
+  "BTNY": [
+    "Botany & Plant Pathology"
+  ],
+  "CDIS": [
+    "Critical Disability Std"
+  ],
+  "CE": [
+    "Civil Engineering"
+  ],
+  "CEM": [
+    "Construction Engr & Mgmt"
+  ],
+  "CGT": [
+    "Computer Graphics Tech"
+  ],
+  "CHE": [
+    "Chemical Engineering"
+  ],
+  "CHM": [
+    "Chemistry"
+  ],
+  "CHNS": [
+    "Chinese"
+  ],
+  "CLCS": [
+    "Classics"
+  ],
+  "CLPH": [
+    "Clinical Pharmacy"
+  ],
+  "CM": [
+    "Construction Management"
+  ],
+  "CNIT": [
+    "Computer & Info Tech"
+  ],
+  "COM": [
+    "Communication"
+  ],
+  "CPB": [
+    "Comparative Pathobiology"
+  ],
+  "CS": [
+    "Computer Sciences"
+  ],
+  "CSR": [
+    "Consumer Science"
+  ],
+  "DANC": [
+    "Dance"
+  ],
+  "DCTC": [
+    "Defense Civiln Trng Corps"
+  ],
+  "EAPS": [
+    "Earth Atmos Planetary Sci"
+  ],
+  "ECE": [
+    "Electrical & Computer Engr"
+  ],
+  "ECET": [
+    "Electrical&Comp Engr Tech"
+  ],
+  "ECON": [
+    "Economics"
+  ],
+  "EDCI": [
+    "Educ-Curric & Instruction"
+  ],
+  "EDPS": [
+    "Educ-Ed'l and Psy Studies"
+  ],
+  "EDST": [
+    "Ed Leadrship&Cultrl Fnd"
+  ],
+  "EEE": [
+    "Environ & Ecological Engr"
+  ],
+  "ENE": [
+    "Engineering Education"
+  ],
+  "ENGL": [
+    "English"
+  ],
+  "ENGR": [
+    "Engineering"
+  ],
+  "ENGT": [
+    "Engineering Technology"
+  ],
+  "ENTM": [
+    "Entomology"
+  ],
+  "ENTR": [
+    "Entrepreneurship"
+  ],
+  "EPCS": [
+    "Engr Proj Cmity Service"
+  ],
+  "EXPL": [
+    "Exploratory Studies"
+  ],
+  "FLM": [
+    "Film & Video"
+  ],
+  "FNR": [
+    "Forestry&Natural Resources"
+  ],
+  "FR": [
+    "French"
+  ],
+  "FS": [
+    "Food Science"
+  ],
+  "FVS": [
+    "Film And Video Studies"
+  ],
+  "GER": [
+    "German"
+  ],
+  "GRAD": [
+    "Graduate Studies"
+  ],
+  "GREK": [
+    "Greek"
+  ],
+  "GS": [
+    "General Studies"
+  ],
+  "GSLA": [
+    "Global Studies Lib Arts"
+  ],
+  "HDFS": [
+    "Human Dev & Family Sci",
+    "Human Dev &Family Studies"
+  ],
+  "HEBR": [
+    "Hebrew"
+  ],
+  "HHS": [
+    "College Health & Human Sci"
+  ],
+  "HIST": [
+    "History"
+  ],
+  "HK": [
+    "Health And Kinesiology"
+  ],
+  "HONR": [
+    "Honors"
+  ],
+  "HORT": [
+    "Horticulture"
+  ],
+  "HSCI": [
+    "Health Sciences"
+  ],
+  "HSOP": [
+    "Hlth,Srvcs,Outcomes&Polic"
+  ],
+  "HTM": [
+    "Hospitality & Tourism Mgmt"
+  ],
+  "IDE": [
+    "Interdisciplinary Engr"
+  ],
+  "IE": [
+    "Industrial Engineering"
+  ],
+  "IET": [
+    "Industrial Engr Technology"
+  ],
+  "ILS": [
+    "Information & Library Sci"
+  ],
+  "IMPH": [
+    "Indstrl & Mlculr Phrmcutc"
+  ],
+  "IPPH": [
+    "Industrial & Phys Pharm"
+  ],
+  "ITAL": [
+    "Italian"
+  ],
+  "JPNS": [
+    "Japanese"
+  ],
+  "JWST": [
+    "Jewish Studies"
+  ],
+  "KOR": [
+    "Korean"
+  ],
+  "LA": [
+    "Landscape Architecture"
+  ],
+  "LALS": [
+    "Latina Am&Latino Studies"
+  ],
+  "LATN": [
+    "Latin"
+  ],
+  "LC": [
+    "Languages and Cultures"
+  ],
+  "LING": [
+    "Linguistics"
+  ],
+  "MA": [
+    "Mathematics"
+  ],
+  "MCMP": [
+    "Med Chem &Molecular Pharm"
+  ],
+  "ME": [
+    "Mechanical Engineering"
+  ],
+  "MET": [
+    "Mechanical Engr Tech"
+  ],
+  "MFET": [
+    "Manufacturing Engr Tech"
+  ],
+  "MGMT": [
+    "Management"
+  ],
+  "MSE": [
+    "Materials Engineering"
+  ],
+  "MSL": [
+    "Military Science & Ldrshp"
+  ],
+  "MUS": [
+    "Music History & Theory"
+  ],
+  "NRES": [
+    "Natural Res & Environ Sci"
+  ],
+  "NS": [
+    "Naval Science"
+  ],
+  "NUCL": [
+    "Nuclear Engineering"
+  ],
+  "NUPH": [
+    "Nuclear Pharmacy"
+  ],
+  "NUR": [
+    "Nursing"
+  ],
+  "NUTR": [
+    "Nutrition Science"
+  ],
+  "OBHR": [
+    "Orgnztnl Bhvr &Hum Resrce"
+  ],
+  "OLS": [
+    "Organiz Ldrshp&Supervision"
+  ],
+  "PES": [
+    "Physical Education Skills"
+  ],
+  "PHIL": [
+    "Philosophy"
+  ],
+  "PHPR": [
+    "Pharmacy Practice"
+  ],
+  "PHRM": [
+    "Pharmacy"
+  ],
+  "PHSC": [
+    "Pharmaceutical Science"
+  ],
+  "PHYS": [
+    "Physics"
+  ],
+  "POL": [
+    "Political Science"
+  ],
+  "PSY": [
+    "Psychological Sciences"
+  ],
+  "PTGS": [
+    "Portuguese"
+  ],
+  "PUBH": [
+    "Public Health"
+  ],
+  "REL": [
+    "Religious Studies"
+  ],
+  "RPMP": [
+    "Radio Pharm Mfg"
+  ],
+  "RUSS": [
+    "Russian"
+  ],
+  "SCI": [
+    "General Science"
+  ],
+  "SCLA": [
+    "Studies Coll Liberal Arts"
+  ],
+  "SFS": [
+    "Sustainable Food&Farm Sys"
+  ],
+  "SLHS": [
+    "Speech, Lang&Hear Science"
+  ],
+  "SOC": [
+    "Sociology"
+  ],
+  "SPAN": [
+    "Spanish"
+  ],
+  "STAT": [
+    "Statistics"
+  ],
+  "SYS": [
+    "Purdue Sys Collaboratory"
+  ],
+  "TDM": [
+    "The Data Mine"
+  ],
+  "TECH": [
+    "Technology"
+  ],
+  "THTR": [
+    "Theatre"
+  ],
+  "TLI": [
+    "Technology Ldrshp Innovatn"
+  ],
+  "VCS": [
+    "Veterinary Clinical Sci"
+  ],
+  "VIP": [
+    "Vertically Integrated Proj"
+  ],
+  "VM": [
+    "Veterinary Medicine"
+  ],
+  "WGSS": [
+    "Women Gend&Sexuality Std"
+  ]
+}

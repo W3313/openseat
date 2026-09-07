@@ -2,9 +2,12 @@ import { describe, expect, it } from 'vitest';
 import type { Course, GradeBuckets, GradeRow, Review, TermCode } from '@/lib/domain/types';
 import { GPA_POINTS, LETTER_BUCKET_KEYS } from '@/lib/domain/constants';
 import { inGradeWindow, termOrdinal } from '@/lib/utils/term';
-import { EMPTY_BUCKETS, gpaFromBuckets, isHeadlineSchedType, isSuppressed, normalizeSchedType, rowStats } from '@/lib/scoring/gpa';
 import {
-  aggregateProfessorGrades, courseBreakdowns, gpaByYear, leaveOneOutBaseline, subjectGpaMean, subjectWRate,
+  EMPTY_BUCKETS, gpaFromBuckets, isHeadlineSchedType, isPercentOnly, isSuppressed, normalizeSchedType, rowStats, rowWeight, scaleBuckets,
+  sumWeightedBuckets,
+} from '@/lib/scoring/gpa';
+import {
+  aggregateProfessorGrades, courseBreakdowns, gpaByYear, hasEnoughRows, leaveOneOutBaseline, subjectGpaMean, subjectWRate,
 } from '@/lib/scoring/aggregate';
 import { confidenceLabel, priorMean, ratingRaw, reviewScores, shrinkRating } from '@/lib/scoring/rating';
 import { composite, round1 } from '@/lib/scoring/composite';
@@ -17,12 +20,14 @@ function buckets(partial: Partial<GradeBuckets>): GradeBuckets {
 let rowSeq = 0;
 function row(opts: {
   courseId: string; professorId: string | null; b: Partial<GradeBuckets>;
-  year?: number; term?: TermCode; schedType?: string; suppressed?: boolean;
+  year?: number; term?: TermCode; schedType?: string; suppressed?: boolean; percentOnly?: boolean; weight?: number;
 }): GradeRow {
   const bk = buckets(opts.b);
   const st = rowStats(bk);
   const schedType = opts.schedType ?? 'LEC';
   return {
+    ...(opts.percentOnly ? { percentOnly: true } : {}),
+    ...(opts.weight !== undefined ? { weight: opts.weight } : {}),
     id: `row-${++rowSeq}`, schoolId: 'uiuc', courseId: opts.courseId,
     term: opts.term ?? (`${opts.year ?? 2024}-fa` as TermCode), year: opts.year ?? 2024,
     schedType, isHeadline: isHeadlineSchedType(schedType),
@@ -241,5 +246,77 @@ describe('composite.ts', () => {
   it('round1', () => {
     expect(round1(67.86)).toBe(67.9);
     expect(round1(1.04)).toBe(1);
+  });
+});
+
+// ---- MULTI_SCHOOL_DESIGN §4.1 percent-only sources and row weights ----
+describe('aggregate.ts percent-only rows (§4.1)', () => {
+  const P = 'purdue:g:one';
+  const Q = 'purdue:g:two';
+  const C1 = 'purdue:CS:180';
+  // Every section: buckets sum to 100, graded = 100, weight 1 → sections weigh equally.
+  const sec = (professorId: string | null, b: Partial<GradeBuckets>, year = 2024, courseId = C1) =>
+    row({ courseId, professorId, b, year, percentOnly: true });
+  const rows: GradeRow[] = [
+    sec(P, { a: 100 }, 2024),                       // 4.0
+    sec(P, { c: 100 }, 2025),                       // 2.0
+    sec(Q, { b: 100 }, 2024),
+    sec(Q, { b: 100 }, 2025),
+    sec(null, { a: 50, b: 50 }, 2025),              // empty-instructor section → baseline
+  ];
+  const ctx = { allRows: rows, courses: [], scope: { kind: 'subject' } as const, subject: 'CS' };
+
+  it('helpers: weights, scaling and the percent-only predicate', () => {
+    expect(rowWeight({ weight: undefined })).toBe(1);
+    expect(rowWeight({ weight: 2.5 })).toBe(2.5);
+    expect(rowWeight({ weight: -1 })).toBe(1);
+    expect(scaleBuckets(buckets({ a: 3, w: 1 }), 2)).toEqual(buckets({ a: 6, w: 2 }));
+    expect(sumWeightedBuckets([{ buckets: buckets({ a: 10 }), weight: 2 }, { buckets: buckets({ b: 5 }) }])).toEqual(buckets({ a: 20, b: 5 }));
+    expect(isPercentOnly(rows)).toBe(true);
+    expect(isPercentOnly([...rows, row({ courseId: C1, professorId: P, b: { a: 10 } })])).toBe(false);
+    expect(isPercentOnly([])).toBe(false);
+    expect(hasEnoughRows([rows[0]], 100)).toBe(false);      // one section is not enough …
+    expect(hasEnoughRows([rows[0], rows[1]], 200)).toBe(true); // … two are (MIN_SECTIONS_N)
+    expect(hasEnoughRows([row({ courseId: C1, professorId: P, b: { a: 9 } })], 9)).toBe(false); // counts keep MIN_GRADED_N
+  });
+
+  it('weights every section equally, flags countsAreEstimates and gates on MIN_SECTIONS_N', () => {
+    const agg = aggregateProfessorGrades(P, ctx);
+    expect(agg.countsAreEstimates).toBe(true);
+    expect(agg.gradeRows).toBe(2);
+    expect(agg.studentsGraded).toBe(200);                    // 100 per section, not real students
+    expect(agg.gpaMean).toBeCloseTo(3.0, 10);                // (4.0 + 2.0) / 2 regardless of class size
+    expect(agg.gpaByYear).toEqual([]);                       // one section per year < MIN_SECTIONS_N
+    const baseline = leaveOneOutBaseline(P, C1, rows);
+    expect(baseline.baselineRows).toBe(3);
+    expect(baseline.baselineGpa).toBeCloseTo((3 + 3 + 3.5) / 3, 10);
+    expect(agg.gpaDelta).toBeCloseTo(3.0 - (3 + 3 + 3.5) / 3, 10);
+    expect(agg.deltaComparableN).toBe(200);
+    // A single section is not enough evidence for a professor-level GPA or delta.
+    const one = aggregateProfessorGrades(P, { ...ctx, allRows: rows.filter((r) => r.professorId !== P || r.year === 2024) });
+    expect(one.gpaMean).toBeNull();
+    expect(one.gpaDelta).toBeNull();
+    expect(one.countsAreEstimates).toBe(true);
+  });
+
+  it('per-course baselines need MIN_SECTIONS_N other sections; a thin baseline marks the sole instructor', () => {
+    const thin: GradeRow[] = [sec(P, { a: 100 }, 2024, 'purdue:CS:250'), sec(P, { b: 100 }, 2025, 'purdue:CS:250'), sec(Q, { c: 100 }, 2025, 'purdue:CS:250')];
+    const agg = aggregateProfessorGrades(P, { ...ctx, allRows: thin });
+    expect(agg.gpaMean).toBeCloseTo(3.5, 10);
+    expect(agg.gpaDelta).toBeNull();
+    expect(agg.soleInstructor).toBe(true);
+    expect(courseBreakdowns(P, { ...ctx, allRows: thin })[0].delta).toBeNull();
+  });
+
+  it('row weights scale count rows in every aggregate', () => {
+    const weighted: GradeRow[] = [
+      row({ courseId: CS225, professorId: P1, b: { a: 10 }, weight: 3 }),   // counts as 30 A's
+      row({ courseId: CS225, professorId: P1, b: { b: 10 } }),
+    ];
+    const agg = aggregateProfessorGrades(P1, { allRows: weighted, courses, scope: { kind: 'school' } });
+    expect(agg.countsAreEstimates).toBe(false);
+    expect(agg.studentsGraded).toBe(40);
+    expect(agg.gpaMean).toBeCloseTo((30 * 4 + 10 * 3) / 40, 10);
+    expect(agg.distribution.a).toBe(30);
   });
 });

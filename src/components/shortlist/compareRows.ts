@@ -22,6 +22,14 @@ export const NUMERIC_ROWS: readonly NumericRowDef[] = [
   { key: "openSections", label: "Open sections", direction: "high", value: (d) => openSectionCount(d) },
 ];
 
+/** Rows that only exist when a school has reviews (design §5: hidden on grades-only schools). */
+export const REVIEW_ROW_KEYS: ReadonlySet<NumericRowDef["key"]> = new Set(["rating", "reviews", "wouldTakeAgain", "difficulty"]);
+
+/** The numeric rows to render for a school. */
+export function numericRowsFor(reviewsAvailable: boolean): NumericRowDef[] {
+  return reviewsAvailable ? [...NUMERIC_ROWS] : NUMERIC_ROWS.filter((r) => !REVIEW_ROW_KEYS.has(r.key));
+}
+
 export function openSectionCount(detail: Pick<ProfessorDetail, "sections">): number {
   return detail.sections.filter((s) => s.isOpen).length;
 }

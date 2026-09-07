@@ -137,11 +137,11 @@ describe('UiucGpaCsvSource', () => {
 });
 
 describe('DemoGradeSource (same parser, fictional CSV)', () => {
-  it('parses data/raw/demo/uiuc/gpa.csv through parseGpaCsv and labels the seed', async () => {
+  it('parses data/raw/demo/demo/gpa.csv through parseGpaCsv and labels the seed', async () => {
     const { DemoGradeSource } = await import('@/lib/sources/demo/DemoGradeSource');
     const src = new DemoGradeSource({ seed: 20260903, log: { info: () => {}, warn: () => {} } });
     expect(src.info).toEqual({ id: 'demo-grades', label: 'Fictional demo data (seed 20260903)', url: null, license: 'MIT' });
-    const out = await src.fetch({ schoolId: 'uiuc' });
+    const out = await src.fetch({ schoolId: 'demo' });
     expect(out.rows.length).toBeGreaterThan(100);
     for (const row of out.rows.slice(0, 50)) {
       expect(row.students).toBe(Object.values(row.buckets).reduce((a, b) => a + b, 0));
@@ -154,10 +154,10 @@ describe('DemoGradeSource (same parser, fictional CSV)', () => {
     const os = await import('node:os');
     const { DemoGradeSource } = await import('@/lib/sources/demo/DemoGradeSource');
     const dir = await mkdtemp(path.join(os.tmpdir(), 'profpeek-demo-'));
-    await mkdir(path.join(dir, 'uiuc'), { recursive: true });
-    await copyFile(FIXTURE, path.join(dir, 'uiuc', 'gpa.csv'));
+    await mkdir(path.join(dir, 'demo'), { recursive: true });
+    await copyFile(FIXTURE, path.join(dir, 'demo', 'gpa.csv'));
     const src = new DemoGradeSource({ seed: 1, dir, currentTerm: '2026-fa', yearsBack: 2, log: { info: () => {}, warn: () => {} } });
-    const out = await src.fetch({ schoolId: 'uiuc' });
+    const out = await src.fetch({ schoolId: 'demo' });
     expect(out.rows.length).toBeGreaterThan(0);
     expect(out.rows.length).toBeLessThan(200);
   });
@@ -167,7 +167,7 @@ describe('demo schedule/review adapters and registry', () => {
   it('DemoScheduleSource returns seat-known sections for a subject', async () => {
     const { DemoScheduleSource, DEMO_FETCHED_AT } = await import('@/lib/sources/demo/DemoScheduleSource');
     const src = new DemoScheduleSource({ seed: 20260903 });
-    const out = await src.fetchSections({ schoolId: 'uiuc', term: '2026-fa', subject: 'CS' });
+    const out = await src.fetchSections({ schoolId: 'demo', term: '2026-fa', subject: 'CS' });
     expect(out.term).toBe('2026-fa');
     expect(out.fetchedAt).toBe(DEMO_FETCHED_AT);
     expect(out.sections.length).toBeGreaterThan(0);
@@ -181,7 +181,7 @@ describe('demo schedule/review adapters and registry', () => {
   it('DemoReviewSource marks every professor fictional and serves their reviews', async () => {
     const { DemoReviewSource } = await import('@/lib/sources/demo/DemoReviewSource');
     const src = new DemoReviewSource({ seed: 20260903, log: { info: () => {}, warn: () => {} } });
-    const profs = await src.fetchProfessors({ schoolId: 'uiuc', subjects: ['CS'] });
+    const profs = await src.fetchProfessors({ schoolId: 'demo', subjects: ['CS'] });
     expect(profs.length).toBeGreaterThan(0);
     expect(profs.every((p) => p.isFictional)).toBe(true);
     const reviews = await src.fetchReviews(profs[0].sourceId);
@@ -189,19 +189,17 @@ describe('demo schedule/review adapters and registry', () => {
     expect(await src.fetchReviews('no-such-professor')).toEqual([]);
   });
 
-  it('registry picks adapters by DATA_MODE and refuses live + demo reviews', async () => {
+  it('registry resolves adapters per school from its SchoolConfig (MULTI_SCHOOL_DESIGN §2)', async () => {
     const { loadEnv } = await import('@/lib/config/env');
-    const { getSources, getReviewSource, REFUSE_MIXED_SOURCES_MESSAGE } = await import('@/lib/sources/registry');
-    const envOf = (vars: Record<string, string>) => loadEnv(vars as NodeJS.ProcessEnv);
-    const demo = getSources('uiuc', envOf({ DATA_MODE: 'demo' }));
+    const { getSources, NullReviewSource, registeredAdapterKinds } = await import('@/lib/sources/registry');
+    const env = loadEnv({} as NodeJS.ProcessEnv);
+    const demo = getSources('demo', env);
     expect([demo.grades.info.id, demo.schedule.info.id, demo.reviews.info.id]).toEqual(['demo-grades', 'demo-schedule', 'demo-reviews']);
-    expect(() => getSources('uiuc', envOf({ DATA_MODE: 'live' }))).toThrowError(REFUSE_MIXED_SOURCES_MESSAGE);
-    const live = getSources('uiuc', envOf({ DATA_MODE: 'live', REVIEW_SOURCE: 'none' }));
-    expect([live.grades.info.id, live.schedule.info.id, live.reviews.info.id]).toEqual(['uiuc-gpa-csv', 'uiuc-course-explorer', 'none']);
-    const rmp = getSources('uiuc', envOf({ DATA_MODE: 'live', REVIEW_SOURCE: 'rmp', RMP_ENABLED: '1', RMP_AUTH_HEADER: 'Basic test' }));
-    expect(() => envOf({ DATA_MODE: 'live', REVIEW_SOURCE: 'rmp', RMP_ENABLED: '1' })).toThrowError(/RMP_AUTH_HEADER/); // no default credential ships
-    expect(rmp.reviews.info.id).toBe('rmp-graphql');
-    expect(() => getReviewSource('uiuc', envOf({ DATA_MODE: 'live', REVIEW_SOURCE: 'rmp' }))).toThrowError(/RMP_ENABLED/);
-    expect(() => getReviewSource('uiuc', envOf({ DATA_MODE: 'demo', REVIEW_SOURCE: 'rmp' }))).toThrowError(/DATA_MODE=live/);
+    const uiuc = getSources('uiuc', env);
+    expect([uiuc.grades.info.id, uiuc.schedule.info.id, uiuc.reviews.info.id]).toEqual(['uiuc-gpa-csv', 'uiuc-course-explorer', 'none']);
+    expect(uiuc.reviews).toBeInstanceOf(NullReviewSource);
+    expect(registeredAdapterKinds().grades).toEqual(expect.arrayContaining(['demo-grades', 'uiuc-gpa-csv']));
+    expect(registeredAdapterKinds().reviews).toContain('rmp-graphql'); // registered, wired by no school
+    expect(() => getSources('nope', env)).toThrowError(/Unknown school/);
   });
 });

@@ -1,25 +1,35 @@
 "use client";
 
-import { useState, useSyncExternalStore, type FormEvent, type KeyboardEvent } from "react";
+import { useEffect, useState, useSyncExternalStore, type FormEvent, type KeyboardEvent } from "react";
 import { useRouter } from "next/navigation";
+import { setLandingSchool } from "@/components/layout/landingSchool";
 import { Button } from "@/components/ui/Button";
-import type { School, SchoolId } from "@/lib/domain/types";
-import { SchoolSelect } from "./SchoolSelect";
+import { SchoolSelect, type SchoolOption } from "./SchoolSelect";
 import { SubjectCombobox, resolveSubjectText, type SubjectOption } from "./SubjectCombobox";
 import { CourseNumberInput, isCompleteCourseNumber } from "./CourseNumberInput";
+import { PopularSubjectChips } from "./PopularSubjectChips";
 
 export const LAST_SCHOOL_KEY = "profpeek:v1:school";
 
 export interface HeroFormProps {
-  schools: readonly Pick<School, "id" | "name" | "shortName">[];
-  subjects: readonly SubjectOption[];
-  defaultSchoolId?: SchoolId;
+  schools: readonly SchoolOption[];
+  /** Subjects with data per school id; the combobox follows the chosen school. */
+  subjectsBySchool: Readonly<Record<string, readonly SubjectOption[]>>;
+  defaultSchoolId?: string;
 }
 
 /** `/s/uiuc/CS` or `/s/uiuc/CS?course=225`. */
-export function rankingsHref(schoolId: SchoolId, subjectCode: string, course?: string): string {
-  const base = `/s/${schoolId}/${encodeURIComponent(subjectCode)}`;
+export function rankingsHref(schoolId: string, subjectCode: string, course?: string): string {
+  const base = `/s/${encodeURIComponent(schoolId)}/${encodeURIComponent(subjectCode)}`;
   return course && isCompleteCourseNumber(course) ? `${base}?course=${course}` : base;
+}
+
+/** Hero subtitle by school: reviews or grades-only wording. */
+export function heroTagline(school: SchoolOption | undefined): string {
+  if (school && school.reviewsAvailable === false) {
+    return "Official grade curves, professor by professor, filtered to the sections offered this term.";
+  }
+  return "Official grade curves + student reviews, filtered to sections you can still get into this term.";
 }
 
 function readLastSchool(): string | null {
@@ -30,7 +40,7 @@ function readLastSchool(): string | null {
   }
 }
 
-function writeLastSchool(id: SchoolId): void {
+function writeLastSchool(id: string): void {
   try {
     window.localStorage.setItem(LAST_SCHOOL_KEY, id);
   } catch {
@@ -47,18 +57,30 @@ function subscribeStorage(onChange: () => void): () => void {
 }
 const getServerSnapshot = (): string | null => null;
 
+/** Own-property lookup so a stored id like `constructor` never reaches Object.prototype. */
+function subjectsFor(map: HeroFormProps["subjectsBySchool"], id: string): readonly SubjectOption[] {
+  return Object.hasOwn(map, id) ? map[id] : [];
+}
+
 /**
- * Landing hero (F1, SPEC 3.1): school select, subject typeahead, optional
- * course number, "Show rankings". Enter submits; the last chosen school is
- * remembered in localStorage.
+ * Landing hero (F1, SPEC 3.1, design §8): school select (every registry school with counts), subject
+ * typeahead for that school, optional course number, "Show rankings". Enter submits; the last chosen
+ * school is remembered per browser in localStorage.
  */
-export function HeroForm({ schools, subjects, defaultSchoolId = "uiuc" }: HeroFormProps) {
+export function HeroForm({ schools, subjectsBySchool, defaultSchoolId }: HeroFormProps) {
   const router = useRouter();
   const savedSchool = useSyncExternalStore(subscribeStorage, readLastSchool, getServerSnapshot);
-  const [schoolOverride, setSchoolOverride] = useState<SchoolId | null>(null);
-  const schoolId: SchoolId =
-    schoolOverride ??
-    (savedSchool && schools.some((s) => s.id === savedSchool) ? (savedSchool as SchoolId) : defaultSchoolId);
+  const [schoolOverride, setSchoolOverride] = useState<string | null>(null);
+  const fallbackId = defaultSchoolId && schools.some((s) => s.id === defaultSchoolId) ? defaultSchoolId : (schools[0]?.id ?? "uiuc");
+  const schoolId: string =
+    schoolOverride ?? (savedSchool && schools.some((s) => s.id === savedSchool) ? savedSchool : fallbackId);
+  const school = schools.find((s) => s.id === schoolId);
+  const subjects = subjectsFor(subjectsBySchool, schoolId);
+  // Header badge and footer provenance follow the chosen school while on the landing page (design §8).
+  useEffect(() => {
+    setLandingSchool(schoolId);
+    return () => setLandingSchool(null);
+  }, [schoolId]);
   const [subject, setSubject] = useState<SubjectOption | null>(null);
   const [subjectText, setSubjectText] = useState("");
   const [course, setCourse] = useState("");
@@ -100,8 +122,8 @@ export function HeroForm({ schools, subjects, defaultSchoolId = "uiuc" }: HeroFo
       <h1 id="hero-heading" className="text-3xl font-semibold tracking-tight text-ink sm:text-5xl">
         Find the professor, not just the course.
       </h1>
-      <p className="mt-3 max-w-2xl text-base text-ink-muted sm:text-lg">
-        Official grade curves + student reviews, filtered to sections you can still get into this term.
+      <p className="mt-3 max-w-2xl text-base text-ink-muted sm:text-lg" data-testid="hero-tagline">
+        {heroTagline(school)}
       </p>
 
       <form
@@ -116,11 +138,15 @@ export function HeroForm({ schools, subjects, defaultSchoolId = "uiuc" }: HeroFo
           value={schoolId}
           onChange={(id) => {
             setSchoolOverride(id);
+            setSubject(null);
+            setSubjectText("");
+            setError(null);
             writeLastSchool(id);
           }}
           className="sm:col-span-6"
         />
         <SubjectCombobox
+          key={schoolId}
           subjects={subjects}
           value={subject}
           onChange={(s) => {
@@ -146,6 +172,8 @@ export function HeroForm({ schools, subjects, defaultSchoolId = "uiuc" }: HeroFo
           )}
         </div>
       </form>
+
+      <PopularSubjectChips schoolId={schoolId} subjects={subjects} className="-mx-4 mt-4 sm:-mx-6" />
     </section>
   );
 }

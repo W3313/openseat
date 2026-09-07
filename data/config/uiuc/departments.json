@@ -1,6 +1,30 @@
 {
+  "ACCY": [
+    "Accountancy"
+  ],
+  "ACE": [
+    "Agricultural and Consumer Economics"
+  ],
+  "ADV": [
+    "Advertising"
+  ],
+  "ANSC": [
+    "Animal Sciences"
+  ],
+  "ANTH": [
+    "Anthropology"
+  ],
+  "BADM": [
+    "Business Administration"
+  ],
   "CHEM": [
     "Chemistry"
+  ],
+  "CHLH": [
+    "Community Health"
+  ],
+  "CMN": [
+    "Communication"
   ],
   "CS": [
     "Computer Science"
@@ -10,11 +34,44 @@
     "Electrical Engineering",
     "Computer Engineering"
   ],
+  "ECON": [
+    "Economics"
+  ],
+  "FIN": [
+    "Finance"
+  ],
+  "HK": [
+    "Health and Kinesiology"
+  ],
+  "IB": [
+    "Integrative Biology"
+  ],
+  "IS": [
+    "Information Sciences"
+  ],
+  "KIN": [
+    "Kinesiology"
+  ],
   "MATH": [
     "Mathematics"
   ],
+  "MBA": [
+    "Master of Business Administration"
+  ],
+  "MCB": [
+    "Molecular and Cellular Biology"
+  ],
+  "ME": [
+    "Mechanical Engineering"
+  ],
   "PHYS": [
     "Physics"
+  ],
+  "PSYC": [
+    "Psychology"
+  ],
+  "RST": [
+    "Recreation, Sport and Tourism"
   ],
   "STAT": [
     "Statistics"

@@ -1,5 +1,6 @@
-// Reads the ingest output of data/processed/<dir>/ into memory for build-rankings.
-import { readFile } from 'node:fs/promises';
+// Reads the ingest output of data/processed/<dir>/ into memory for build-rankings (MULTI_SCHOOL_DESIGN §3:
+// grade rows are split per subject under grades/<SUBJECT>.json and concatenated here).
+import { readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
 import type {
   Course, GradeRow, MatchReport, Meta, Professor, ProfessorSummary, Review, School, Section, Subject,
@@ -11,6 +12,7 @@ export interface ProcessedData {
   subjects: Subject[];
   courses: Course[];
   professors: Professor[];
+  /** Every grade row of every subject file, in subject order. */
   grades: GradeRow[];
   sections: Section[];
   reviews: Review[];
@@ -40,9 +42,23 @@ export class ProcessedDataError extends Error {
   }
 }
 
+/** grades/<SUBJECT>.json for every subject file present (sorted by subject). */
+export async function loadGradeRows(dir: string): Promise<GradeRow[]> {
+  const gradesDir = path.join(dir, 'grades');
+  let files: string[];
+  try {
+    files = (await readdir(gradesDir)).filter((f) => f.endsWith('.json')).sort();
+  } catch {
+    throw new ProcessedDataError(`missing ${gradesDir}/ — run data:ingest first`);
+  }
+  const out: GradeRow[] = [];
+  for (const file of files) out.push(...(await readJson<GradeRow[]>(gradesDir, file)));
+  return out;
+}
+
 /** Loads every ingest file; throws ProcessedDataError naming the first missing/unreadable required file. */
 export async function loadProcessed(dir: string): Promise<ProcessedData> {
-  const required = ['school.json', 'subjects.json', 'courses.json', 'professors.json', 'grades.json', 'sections.json', 'reviews.json', 'match-report.json', 'meta.json'];
+  const required = ['school.json', 'subjects.json', 'courses.json', 'professors.json', 'sections.json', 'reviews.json', 'match-report.json', 'meta.json'];
   for (const file of required) {
     try {
       await readFile(path.join(dir, file), 'utf8');
@@ -56,7 +72,7 @@ export async function loadProcessed(dir: string): Promise<ProcessedData> {
     subjects: await readJson<Subject[]>(dir, 'subjects.json'),
     courses: await readJson<Course[]>(dir, 'courses.json'),
     professors: await readJson<Professor[]>(dir, 'professors.json'),
-    grades: await readJson<GradeRow[]>(dir, 'grades.json'),
+    grades: await loadGradeRows(dir),
     sections: await readJson<Section[]>(dir, 'sections.json'),
     reviews: await readJson<Review[]>(dir, 'reviews.json'),
     matchReport: await readJson<MatchReport>(dir, 'match-report.json'),

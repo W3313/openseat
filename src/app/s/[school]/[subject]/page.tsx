@@ -6,7 +6,7 @@ import { getRepository } from "@/lib/repo";
 import { env, siteUrl } from "@/lib/config/env";
 import { SCHOOL_IDS, toSchoolId } from "@/lib/config/schools";
 import { normalizeSubjectCode, buildRankingsHref } from "@/lib/utils/urlState";
-import { RankingsHeader, rankingsTitle } from "@/components/rankings/RankingsHeader";
+import { RankingsHeader, rankingsDescription, rankingsTitle } from "@/components/rankings/RankingsHeader";
 import { RankedList } from "@/components/rankings/RankedList";
 import { CardSkeletonList } from "@/components/rankings/CardSkeleton";
 
@@ -50,7 +50,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!loaded?.payload) return { title: "Subject not found · ProfPeek", robots: { index: false } };
   const { payload, schoolId, code } = loaded;
   const title = rankingsTitle(payload);
-  const description = `${payload.subject.name} professors at ${payload.school.shortName} ranked by student rating, with official grade curves and sections you can still get into this term.`.slice(0, 155);
+  const description = rankingsDescription(payload);
   const canonical = new URL(buildRankingsHref(schoolId, code), SITE_URL).toString();
   return {
     title,
@@ -78,6 +78,7 @@ export default async function RankingsPage({ params }: PageProps) {
         school={payload.school}
         subject={payload.subject}
         term={payload.term}
+        mode={payload.mode}
         seatsFetchedAt={payload.seatsFetchedAt}
         gradesThroughTerm={payload.gradesThroughTerm}
         termFallback={payload.termFallback}

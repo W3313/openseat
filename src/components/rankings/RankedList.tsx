@@ -4,8 +4,9 @@ import { useCallback, useMemo } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import clsx from "clsx";
 import type { RankingsPayload, RankingsQuery, RankingsResponse } from "@/lib/domain/types";
-import { applyRankingsQuery } from "@/lib/scoring/rank";
+import { applyRankingsQuery, effectiveQuery } from "@/lib/scoring/rank";
 import { parseRankingsQuery, withRankingsQuery } from "@/lib/utils/urlState";
+import { resolveSchoolFlags } from "@/components/layout/schoolFlags";
 import { SubjectStatStrip } from "./SubjectStatStrip";
 import { ControlsBar } from "./ControlsBar";
 import { ProfessorCard } from "./ProfessorCard";
@@ -28,6 +29,9 @@ export function professorNameMap(payload: Pick<RankingsPayload, "professors">): 
   return out;
 }
 
+// effectiveQuery lives in @/lib/scoring/rank (server-safe); re-exported here for existing importers.
+export { effectiveQuery };
+
 /**
  * Client island for the rankings page (SPEC 3.0 / 3.2 items 2–6). Reads
  * sort/open/course from the URL with `useSearchParams` (the parent wraps it in
@@ -40,8 +44,12 @@ export function RankedList({ payload, yearsBack, showCourseChips = true, classNa
   const router = useRouter();
   const pathname = usePathname();
 
+  const { school, subject } = payload;
+  const flags = useMemo(() => resolveSchoolFlags(school, { mode: payload.mode }), [school, payload.mode]);
+  const { reviewsAvailable } = flags;
+
   const searchString = searchParams.toString();
-  const query = useMemo(() => parseRankingsQuery(searchString), [searchString]);
+  const query = useMemo(() => effectiveQuery(parseRankingsQuery(searchString), reviewsAvailable), [searchString, reviewsAvailable]);
   const response: RankingsResponse = useMemo(() => applyRankingsQuery(payload, query), [payload, query]);
   const names = useMemo(() => professorNameMap(payload), [payload]);
 
@@ -54,18 +62,23 @@ export function RankedList({ payload, yearsBack, showCourseChips = true, classNa
     [router, pathname, searchString],
   );
 
-  const { school, subject } = payload;
   const seatStatusAvailable = school.seatStatusAvailable;
 
   return (
-    <div className={clsx("flex flex-col gap-4", className)}>
-      <SubjectStatStrip subjectGpaMean={payload.subjectGpaMean} totals={response.totals} seatStatusAvailable={seatStatusAvailable} />
+    <div className={clsx("flex flex-col gap-4", className)} data-variant={reviewsAvailable ? "reviews" : "grades-only"}>
+      <SubjectStatStrip
+        subjectGpaMean={payload.subjectGpaMean}
+        totals={response.totals}
+        seatStatusAvailable={seatStatusAvailable}
+        reviewsAvailable={reviewsAvailable}
+      />
 
       <ControlsBar
         query={query}
         onChange={setQuery}
         courses={payload.courses}
         seatStatusAvailable={seatStatusAvailable}
+        reviewsAvailable={reviewsAvailable}
         showCourseChips={showCourseChips}
       />
 
@@ -76,13 +89,17 @@ export function RankedList({ payload, yearsBack, showCourseChips = true, classNa
               ? emptyRankingsTitle(subject.code, seatStatusAvailable)
               : query.course
                 ? `No ranked professors for ${subject.code} ${query.course}`
-                : `No ranked professors in ${subject.code} yet`
+                : reviewsAvailable
+                  ? `No ranked professors in ${subject.code} yet`
+                  : `No professors with grade data in ${subject.code} yet`
           }
           description={
             query.openOnly
-              ? "Professors without an open section this term are hidden. Turning the filter off shows everyone with grade data or reviews."
+              ? `Professors without an ${seatStatusAvailable ? "open" : "offered"} section this term are hidden. Turning the filter off shows everyone with ${reviewsAvailable ? "grade data or reviews" : "grade data"}.`
               : response.lowData.length > 0
-                ? "Everyone here has fewer than 3 reviews — see the group below."
+                ? reviewsAvailable
+                  ? "Everyone here has fewer than 3 reviews — see the group below."
+                  : "Everyone here is missing grade rows in the window — see the group below."
                 : undefined
           }
           actionLabel={query.openOnly ? (seatStatusAvailable ? "Include closed sections" : "Include all sections") : undefined}
@@ -100,6 +117,9 @@ export function RankedList({ payload, yearsBack, showCourseChips = true, classNa
                 subject={subject.code}
                 timezone={school.timezone}
                 seatStatusAvailable={seatStatusAvailable}
+                reviewsAvailable={reviewsAvailable}
+                gradeValueKind={flags.gradeValueKind}
+                bucketKind={flags.gradeBuckets}
                 sparklineRange={payload.sparklineRange}
                 professorNames={names}
                 onCourseSelect={(number) => setQuery({ sort: query.sort, openOnly: query.openOnly, course: number })}
@@ -111,7 +131,7 @@ export function RankedList({ payload, yearsBack, showCourseChips = true, classNa
         </ol>
       )}
 
-      <LowDataGroup items={response.lowData} schoolId={school.id} seatStatusAvailable={seatStatusAvailable} />
+      <LowDataGroup items={response.lowData} schoolId={school.id} seatStatusAvailable={seatStatusAvailable} reviewsAvailable={reviewsAvailable} />
 
       {/* SLOT: <ShortlistDrawer schoolId={school.id} /> — F16 FAB, added by the shortlist agent (src/components/shortlist/ShortlistDrawer.tsx) */}
     </div>

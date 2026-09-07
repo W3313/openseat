@@ -1,8 +1,9 @@
 // @vitest-environment jsdom
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { cleanup, fireEvent, render, screen, within } from "@testing-library/react";
-import { HeroForm, LAST_SCHOOL_KEY, rankingsHref } from "@/components/landing/HeroForm";
+import { HeroForm, LAST_SCHOOL_KEY, heroTagline, rankingsHref } from "@/components/landing/HeroForm";
 import { resolveSubjectText } from "@/components/landing/SubjectCombobox";
+import type { SchoolOption } from "@/components/landing/SchoolSelect";
 
 const push = vi.fn();
 vi.mock("next/navigation", () => ({
@@ -11,7 +12,7 @@ vi.mock("next/navigation", () => ({
   useSearchParams: () => new URLSearchParams(),
 }));
 
-const SCHOOLS = [{ id: "uiuc" as const, name: "University of Illinois Urbana-Champaign", shortName: "UIUC" }];
+const SCHOOLS: SchoolOption[] = [{ id: "uiuc", name: "University of Illinois Urbana-Champaign", shortName: "UIUC" }];
 const SUBJECTS = [
   { code: "CHEM", name: "Chemistry", professorCount: 4 },
   { code: "CS", name: "Computer Science", professorCount: 15 },
@@ -19,9 +20,17 @@ const SUBJECTS = [
   { code: "MATH", name: "Mathematics", professorCount: 12 },
   { code: "STAT", name: "Statistics", professorCount: 5 },
 ];
+const TWO_SCHOOLS: SchoolOption[] = [
+  { id: "uiuc", name: "University of Illinois Urbana-Champaign", shortName: "UIUC", professorCount: 1204, subjectCount: 25, reviewsAvailable: false },
+  { id: "demo", name: "Demo University", shortName: "DEMO", professorCount: 108, subjectCount: 6, reviewsAvailable: true, isDemo: true },
+];
+const DEMO_SUBJECTS = [
+  { code: "CS", name: "Computer Science", professorCount: 4 },
+  { code: "PHYS", name: "Physics", professorCount: 3 },
+];
 
 function setup() {
-  render(<HeroForm schools={SCHOOLS} subjects={SUBJECTS} />);
+  render(<HeroForm schools={SCHOOLS} subjectsBySchool={{ uiuc: SUBJECTS }} />);
   const input = screen.getByRole("combobox", { name: "Subject" }) as HTMLInputElement;
   const listbox = document.getElementById(input.getAttribute("aria-controls")!) as HTMLUListElement;
   return { input, listbox };
@@ -99,6 +108,56 @@ describe("HeroForm", () => {
     fireEvent.keyDown(input, { key: "Enter" });
     expect(push).not.toHaveBeenCalled();
     expect(screen.getByRole("alert").textContent).toContain("zzz");
+  });
+});
+
+describe("HeroForm with several schools (design §8)", () => {
+  function setupTwo() {
+    render(<HeroForm schools={TWO_SCHOOLS} subjectsBySchool={{ uiuc: SUBJECTS, demo: DEMO_SUBJECTS }} defaultSchoolId="uiuc" />);
+    return screen.getByRole("combobox", { name: "School" }) as HTMLSelectElement;
+  }
+
+  it("lists every school with its counts and a grades-only hint", () => {
+    const select = setupTwo();
+    const labels = within(select).getAllByRole("option").map((o) => o.textContent);
+    expect(labels).toEqual([
+      "UIUC — University of Illinois Urbana-Champaign · 1,204 professors · 25 subjects",
+      "DEMO — Demo University · 108 professors · 6 subjects",
+    ]);
+    expect(select.value).toBe("uiuc");
+    expect(screen.getByTestId("school-hint").textContent).toContain("no student reviews yet");
+    expect(screen.getByTestId("hero-tagline").textContent).toBe(heroTagline(TWO_SCHOOLS[0]));
+    expect(heroTagline(TWO_SCHOOLS[0])).not.toContain("reviews");
+    expect(heroTagline(TWO_SCHOOLS[1])).toContain("student reviews");
+  });
+
+  it("switching school swaps the subject list, popular chips and the route", () => {
+    const select = setupTwo();
+    expect(screen.getByRole("link", { name: /^ECE/ })).toBeInTheDocument();
+    fireEvent.change(select, { target: { value: "demo" } });
+    expect(select.value).toBe("demo");
+    expect(screen.getByTestId("school-hint").textContent).toContain("Fictional demo dataset");
+    expect(screen.queryByRole("link", { name: /^ECE/ })).toBeNull();
+    expect(screen.getByRole("link", { name: /^PHYS/ }).getAttribute("href")).toBe("/s/demo/PHYS");
+    expect(window.localStorage.getItem(LAST_SCHOOL_KEY)).toBe("demo");
+
+    const input = screen.getByRole("combobox", { name: "Subject" }) as HTMLInputElement;
+    fireEvent.change(input, { target: { value: "ece" } }); // ECE is not a demo subject
+    fireEvent.keyDown(input, { key: "Enter" });
+    expect(push).not.toHaveBeenCalled();
+    fireEvent.change(input, { target: { value: "phys" } });
+    fireEvent.keyDown(input, { key: "Enter" });
+    fireEvent.keyDown(input, { key: "Enter" });
+    expect(push).toHaveBeenCalledWith("/s/demo/PHYS");
+  });
+
+  it("remembers the last chosen school per browser", () => {
+    window.localStorage.setItem(LAST_SCHOOL_KEY, "demo");
+    const select = setupTwo();
+    expect(select.value).toBe("demo");
+    cleanup();
+    window.localStorage.setItem(LAST_SCHOOL_KEY, "nope"); // unknown → default
+    expect(setupTwo().value).toBe("uiuc");
   });
 });
 

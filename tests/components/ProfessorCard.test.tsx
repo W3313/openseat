@@ -5,8 +5,10 @@ import { ProfessorCard } from "@/components/rankings/ProfessorCard";
 import { deltaChipText } from "@/components/professor/DeltaChip";
 import type { RankedProfessor, RankingsPayload } from "@/lib/domain/types";
 import fixture from "../fixtures/rankings.CS.fixture.json";
+import gradesOnlyFixture from "../fixtures/rankings.grades-only.fixture.json";
 
 const payload = fixture as unknown as RankingsPayload;
+const gradesOnlyPayload = gradesOnlyFixture as unknown as RankingsPayload;
 const okonkwo = payload.professors.find((p) => p.professor.slug === "adaeze-okonkwo")!;
 
 /** Give the fixture professor the SPEC 12.3 numbers and a full badge row. */
@@ -92,3 +94,57 @@ describe("ProfessorCard", () => {
     expect(screen.getByText("New — no grade data yet")).toBeInTheDocument();
   });
 });
+
+describe("ProfessorCard — grades-only school (design §5)", () => {
+  const gradesItem: RankedProfessor = {
+    ...gradesOnlyPayload.professors.find((p) => p.professor.slug === "adaeze-okonkwo")!,
+    rank: 1,
+    badges: ["open-now", "tough-but-loved", "hidden-gem", "easy-a", "low-withdrawal"],
+  };
+
+  function renderGradesOnly(extra: Partial<React.ComponentProps<typeof ProfessorCard>> = {}) {
+    return render(
+      <ProfessorCard
+        item={gradesItem}
+        schoolId="uiuc"
+        subject="CS"
+        timezone="America/Chicago"
+        seatStatusAvailable={false}
+        reviewsAvailable={false}
+        sparklineRange={gradesOnlyPayload.sparklineRange}
+        {...extra}
+      />,
+    );
+  }
+
+  it("shows the grade bar, delta, W rate and a students-graded count — no rating, vibe tags or review badges", () => {
+    renderGradesOnly();
+    const card = screen.getByText("Adaeze Okonkwo").closest("details")!;
+    expect(card.getAttribute("data-variant")).toBe("grades-only");
+    expect(screen.getByRole("img", { name: /^Grade distribution/ })).toBeInTheDocument();
+    expect(screen.getByText(deltaChipText(gradesItem.scores))).toBeInTheDocument();
+    expect(screen.getByText(/^W \d+\.\d%$/)).toBeInTheDocument(); // GpaBlock "W 3.2%" (the bar's hover label is "W 1%")
+    expect(screen.getByTestId("graded-count").textContent).toContain("1,280 students graded");
+    expect(screen.getByTestId("graded-count").textContent).toMatch(/offered sections?/);
+    expect(screen.queryByText(/reviews$/)).toBeNull();
+    expect(screen.queryByText("out of 5")).toBeNull();
+    expect(screen.queryByRole("list", { name: "Vibe tags" })).toBeNull();
+    const badges = within(screen.getByRole("list", { name: "Badges" })).getAllByRole("listitem");
+    expect(badges.map((b) => within(b).getByRole("button").textContent)).toEqual(["Offered now", "Easy A", "Low withdrawal"]);
+  });
+
+  it("says 'N sections graded' for a percent-only source", () => {
+    renderGradesOnly({ gradeValueKind: "percent" });
+    expect(screen.getByTestId("graded-count").textContent).toContain(`${gradesItem.scores.gradeRows} sections graded`);
+  });
+
+  it("expands to the sections table and profile link only — no quotes, no AI summary", () => {
+    renderGradesOnly({ defaultOpen: true });
+    expect(screen.getByRole("table", { name: /Offered sections/ })).toBeInTheDocument();
+    expect(screen.queryAllByRole("blockquote")).toHaveLength(0);
+    expect(screen.queryByTestId("summary-source")).toBeNull();
+    expect(screen.queryByText("No positive reviews yet")).toBeNull();
+    expect(screen.getByRole("link", { name: "View profile →" }).getAttribute("href")).toBe("/p/uiuc/adaeze-okonkwo");
+  });
+});
+

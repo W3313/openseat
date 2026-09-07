@@ -1,6 +1,16 @@
 // RawGradeRow → GradeRow (SPEC 5 GradeRow, 8.1 row-level formulas). Matching fields are filled later.
 import type { GradeRow, SchoolId, TermCode } from '@/lib/domain/types';
 import type { RawGradeRow } from '@/lib/sources/types';
+
+/** Optional §4/§4.1 fields an adapter may put on a raw row (typed here until sources/types.ts carries them). */
+export type RawGradeRowExtras = {
+  percentOnly?: boolean;
+  /** Adapter-decided suppression for percent-only rows (e.g. Purdue rows implying a ≤ 4-student cohort). */
+  suppressed?: boolean;
+  weight?: number;
+  sourceGpa?: number | null;
+  bucketPrecision?: 'exact' | 'coarse';
+};
 import { gradeRowId } from '@/lib/utils/hash';
 import { makeCourseId } from '@/lib/utils/ids';
 import { isTermCode, inGradeWindow, maxTerm, termFromCsv, termYear } from '@/lib/utils/term';
@@ -65,6 +75,8 @@ export function buildGradeRows(raw: readonly RawGradeRow[], opts: BuildGradeRows
     else if (nameKey === null) blocked++;
 
     const stats = rowStats(r.buckets);
+    const extras = r as RawGradeRow & RawGradeRowExtras;
+    const percentOnly = extras.percentOnly === true;
     let id = gradeRowId(opts.schoolId, courseId, term, schedType, instructorRaw);
     // The id key is (course, term, schedType, instructor); a duplicate aggregate in the source gets a suffix
     // so provenance is never silently lost.
@@ -93,7 +105,13 @@ export function buildGradeRows(raw: readonly RawGradeRow[], opts: BuildGradeRows
       withdrawn: stats.withdrawn,
       students: stats.students,
       gpa: stats.gpa,
-      suppressed: isSuppressed(stats.graded),
+      // §4.1: percent-only rows are one section each and are not suppressed by student count — only when the
+      // adapter says the published percentages imply a tiny cohort (Purdue "A 100%" / "50/50" rows).
+      suppressed: percentOnly ? extras.suppressed === true : isSuppressed(stats.graded),
+      ...(percentOnly ? { percentOnly: true } : {}),
+      ...(typeof extras.weight === 'number' && Number.isFinite(extras.weight) && extras.weight !== 1 ? { weight: extras.weight } : {}),
+      ...(typeof extras.sourceGpa === 'number' && Number.isFinite(extras.sourceGpa) ? { sourceGpa: extras.sourceGpa } : {}),
+      ...(extras.bucketPrecision === 'coarse' ? { bucketPrecision: 'coarse' as const } : {}),
     });
   }
 

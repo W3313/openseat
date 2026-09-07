@@ -25,7 +25,7 @@ flowchart LR
   RMP --> A3
   SEED -->|data/raw/demo/uiuc| A4
 
-  REG["registry.ts<br/>DATA_MODE guard: never real people + fictional reviews"]
+  REG["registry.ts<br/>per-school adapter kinds; guard: never real people + fictional reviews"]
   A1 & A2 & A3 & A4 --> REG
 
   ING["scripts/ingest.ts<br/>catalog → sections dedupe → professors → <b>name matching</b> → sentiment & tags"]
@@ -112,7 +112,7 @@ flowchart TD
 |---|---|---|
 | Contracts | `src/lib/domain/types.ts`, `src/lib/sources/types.ts`, `src/lib/repo/Repository.ts` | Verbatim from the spec; every other module codes against these. |
 | Config | `src/lib/config/{env,schools,serverOnly}.ts` | zod-validated env; `SCHOOL_REGISTRY` for multi-school. |
-| Adapters | `src/lib/sources/{uiuc,rmp,demo}/`, `registry.ts` | One class per upstream; the registry picks by `DATA_MODE`. |
+| Adapters | `src/lib/sources/{uiuc,purdue,ucsb,uh,utd,rmp,demo}/`, `registry.ts`, `adapters.ts` | One class per upstream, registered by kind; the registry resolves each school's `SchoolConfig.sources` (see `MULTI_SCHOOL_DESIGN.md`). |
 | Matching | `src/lib/matching/` | Pure, memoized, deterministic; tested against the 29-row spec table. |
 | Scoring | `src/lib/scoring/` | Row stats, aggregates, shrinkage, composite, badges, sentiment, vibe tags, sort/filter. |
 | AI | `src/lib/ai/` | Prompt, schema, review selection, Claude call, extractive fallback, hash cache. |

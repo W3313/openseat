@@ -5,6 +5,7 @@ import { z } from 'zod';
 import { existsSync } from 'node:fs';
 import nodePath from 'node:path';
 import type { TermCode } from '@/lib/domain/types';
+import { REGISTERED_SCHOOL_IDS, parseSchoolsAllowlist } from './schools';
 import { assertServerOnly } from './serverOnly';
 
 assertServerOnly('src/lib/config/env.ts');
@@ -33,9 +34,30 @@ const SubjectsSchema = z
       .filter(Boolean),
   );
 
+/**
+ * Comma list of registered school ids to ingest, statically generate and list on the landing page
+ * (MULTI_SCHOOL_DESIGN §2). Unknown ids are rejected; empty = every registered school (incl. `demo`).
+ */
+const SchoolsSchema = z
+  .string()
+  .default('')
+  .superRefine((raw, ctx) => {
+    const unknown = raw
+      .split(',')
+      .map((x) => x.trim().toLowerCase())
+      .filter((x) => x !== '' && !(REGISTERED_SCHOOL_IDS as readonly string[]).includes(x));
+    if (unknown.length > 0) {
+      ctx.addIssue({ code: 'custom', message: `unknown school id(s) ${unknown.join(', ')} (registered: ${REGISTERED_SCHOOL_IDS.join(', ')})` });
+    }
+  })
+  .transform((raw) => parseSchoolsAllowlist(raw));
+
 export const EnvSchema = z.object({
-  DATA_MODE: z.enum(['demo', 'live']).default('demo'),
+  /** Enabled schools (see SchoolsSchema). Per-school data mode lives in the registry, not here. */
+  SCHOOLS: SchoolsSchema,
+  /** Fallback term for scripts that predate the registry (seed, fetch); ingest uses SchoolConfig.currentTerm. */
   CURRENT_TERM: TermCodeSchema.default('2026-fa'),
+  /** Seed/fetch subject list; ingest uses SchoolConfig.subjects (override with --subjects). */
   SUBJECTS: SubjectsSchema,
   GRADE_YEARS_BACK: z.coerce.number().int().min(1).max(30).default(6),
   DEMO_SEED: z.coerce.number().int().default(20260903),
@@ -56,11 +78,12 @@ export const EnvSchema = z.object({
   SUMMARY_ON_DEMAND: flag('0'),
   /** Shared secret (>= 16 chars) a trusted warmer sends as `x-profpeek-key`; anonymous visitors never reach a model. */
   SUMMARY_ON_DEMAND_TOKEN: z.string().min(16).optional(),
-  REVIEW_SOURCE: z.enum(['demo', 'rmp', 'none']).default('demo'),
-  RMP_ENABLED: flag('0'),
+  /** RMP adapter (kept in the repo, wired only by an explicit `sources.reviews: { kind: 'rmp-graphql' }` that no registered school uses). */
   RMP_SCHOOL_ID: z.string().min(1).optional(),
-  /** Authorization header value for the RMP adapter. No default is shipped; required when RMP_ENABLED=1. */
+  /** Authorization header value for the RMP adapter. No default is shipped; required only if someone wires the adapter locally. */
   RMP_AUTH_HEADER: z.string().min(1).optional(),
+  /** Free UCSB developer key (api.ucsb.edu) for the UCSB schedule adapter; grades-only when absent (MULTI_SCHOOL_DESIGN §4.2). */
+  UCSB_API_KEY: z.string().min(1).optional(),
   UIUC_GPA_CSV_URL: z
     .url()
     .default('https://raw.githubusercontent.com/wadefagen/datasets/main/gpa/uiuc-gpa-dataset.csv'),
@@ -74,12 +97,9 @@ export const EnvSchema = z.object({
   if (e.SUMMARY_ON_DEMAND && !e.SUMMARY_ON_DEMAND_TOKEN) {
     ctx.addIssue({ code: 'custom', path: ['SUMMARY_ON_DEMAND_TOKEN'], message: 'required when SUMMARY_ON_DEMAND=1 (a shared secret of at least 16 characters)' });
   }
-  if (e.RMP_ENABLED && !e.RMP_AUTH_HEADER) {
-    ctx.addIssue({ code: 'custom', path: ['RMP_AUTH_HEADER'], message: 'required when RMP_ENABLED=1 (no default token is shipped)' });
-  }
 });
 
-/** Parsed, defaulted environment. `SUBJECTS` is already split into an upper-cased array. */
+/** Parsed, defaulted environment. `SUBJECTS` is split into an upper-cased array; `SCHOOLS` into enabled school ids. */
 export type Env = z.infer<typeof EnvSchema>;
 
 /** Names of every variable the app reads — used by .env.example and the /about page. */
@@ -130,11 +150,6 @@ function loadDotEnvFiles(): void {
 loadDotEnvFiles();
 
 export const env: Env = loadEnv();
-
-/** True when the fictional committed dataset is in use. */
-export function isDemoMode(e: Env = env): boolean {
-  return e.DATA_MODE === 'demo';
-}
 
 /** Absolute site origin with no trailing slash — the one place pages build canonical/share URLs from. */
 export const siteUrl: string = env.NEXT_PUBLIC_SITE_URL.replace(/\/$/, '');

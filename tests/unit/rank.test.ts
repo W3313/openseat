@@ -2,7 +2,9 @@ import { describe, expect, it } from 'vitest';
 import type {
   CourseBreakdown, Professor, ProfessorScores, RankedProfessor, RankingsPayload, Section,
 } from '@/lib/domain/types';
-import { applyRankingsQuery, computeTotals, sectionInScope, sortLowData, sortRanked } from '@/lib/scoring/rank';
+import {
+  applyRankingsQuery, availableSorts, computeTotals, defaultSortFor, effectiveSort, sectionInScope, sortLowData, sortRanked,
+} from '@/lib/scoring/rank';
 
 // ---------- fixture helpers ----------
 const EMPTY = { aPlus: 0, a: 0, aMinus: 0, bPlus: 0, b: 0, bMinus: 0, cPlus: 0, c: 0, cMinus: 0, dPlus: 0, d: 0, dMinus: 0, f: 0, w: 0 };
@@ -25,7 +27,7 @@ function course(courseId: string): CourseBreakdown {
 
 function prof(opts: {
   last: string; first?: string; rating?: number | null; reviews: number; delta?: number | null; composite?: number | null;
-  gpaMean?: number | null; students?: number; open?: Section[]; courses?: string[];
+  gpaMean?: number | null; students?: number; open?: Section[]; courses?: string[]; gradeRows?: number;
 }): RankedProfessor {
   const professor: Professor = {
     id: `uiuc:p:${opts.last.toLowerCase()}`, schoolId: 'uiuc', slug: opts.last.toLowerCase(), kind: opts.reviews > 0 ? 'reviewed' : 'grades-only',
@@ -35,9 +37,10 @@ function prof(opts: {
   };
   const scores: ProfessorScores = {
     reviewCount: opts.reviews, ratingRaw: opts.rating ?? null, ratingShrunk: opts.rating ?? null, priorMean: 3.7, confidence: 'low',
-    difficultyMean: null, wouldTakeAgainPct: null, positiveCount: 0, criticalCount: 0, gradeRows: 1,
+    difficultyMean: null, wouldTakeAgainPct: null, positiveCount: 0, criticalCount: 0, gradeRows: opts.gradeRows ?? 1,
     studentsGraded: opts.students ?? 50, withdrawn: 0, gpaMean: opts.gpaMean ?? null, aRate: null, wRate: null, dfwRate: null,
     gpaDelta: opts.delta ?? null, deltaComparableN: 100, soleInstructor: false, composite: opts.composite ?? null, yearsActive: 1,
+    countsAreEstimates: false,
   };
   return {
     rank: null, professor, scores, badges: [], vibeTags: [], distribution: EMPTY, gpaByYear: [],
@@ -61,8 +64,9 @@ const G = prof({ last: 'Golf', reviews: 1, delta: null, students: 300 });
 
 const payload: RankingsPayload = {
   school: {
-    id: 'uiuc', name: 'University of Illinois Urbana-Champaign', shortName: 'UIUC', currentTerm: '2026-fa', timezone: 'America/Chicago',
-    seatStatusAvailable: true, sources: { grades: 'demo-grades', schedule: 'demo-schedule', reviews: 'demo-reviews' },
+    id: 'uiuc', name: 'University of Illinois Urbana-Champaign', shortName: 'UIUC', mode: 'demo', currentTerm: '2026-fa', timezone: 'America/Chicago',
+    seatStatusAvailable: true, reviewsAvailable: true, gradeBuckets: 'plus-minus', gradeValueKind: 'counts',
+    attribution: { grades: 'fixture' }, sources: { grades: 'demo-grades', schedule: 'demo-schedule', reviews: 'demo-reviews' },
   },
   subject: { schoolId: 'uiuc', code: 'CS', name: 'Computer Science', courseCount: 4, professorCount: 7, openSectionCount: 3 },
   term: '2026-fa', scope: { kind: 'subject' }, mode: 'demo', generatedAt: '2026-08-20T00:00:00Z', seatsFetchedAt: '2026-08-20T00:00:00Z',
@@ -173,5 +177,48 @@ describe('rank.ts applyRankingsQuery', () => {
     expect(names(applyRankingsQuery(payload, { sort: 'overall', openOnly: false }).ranked)).toEqual(['Charlie', 'Alpha', 'Foxtrot', 'Bravo']);
     expect(names(applyRankingsQuery(payload, { sort: 'gpa', openOnly: false }).ranked)).toEqual(['Charlie', 'Foxtrot', 'Alpha', 'Bravo']);
     expect(names(applyRankingsQuery(payload, { sort: 'reviews', openOnly: false }).ranked)).toEqual(['Charlie', 'Bravo', 'Alpha', 'Foxtrot']);
+  });
+});
+
+describe('rank.ts grades-only mode (MULTI_SCHOOL_DESIGN §5)', () => {
+  const gradesOnly: RankingsPayload = {
+    ...payload,
+    school: { ...payload.school, id: 'uiuc', mode: 'live', reviewsAvailable: false, sources: { grades: 'uiuc-gpa-csv', schedule: 'uiuc-course-explorer', reviews: 'none' } },
+    professors: [
+      prof({ last: 'Alpha', reviews: 0, delta: 0.2, gpaMean: 3.5, courses: [CS225] }),
+      prof({ last: 'Bravo', reviews: 0, delta: 0.5, gpaMean: 3.8, courses: [CS241] }),
+      prof({ last: 'Charlie', reviews: 0, delta: null, gpaMean: 3.1, students: 40 }),
+      prof({ last: 'Delta', reviews: 0, delta: null, gpaMean: null, gradeRows: 0, students: 0, open: [s3] }),   // sections only → lowData
+    ],
+  };
+
+  it('defaults to gpa, treats every other sort as gpa and only offers gpa', () => {
+    expect(defaultSortFor(gradesOnly.school)).toBe('gpa');
+    expect(defaultSortFor(payload.school)).toBe('rating');
+    expect(defaultSortFor(undefined)).toBe('rating');
+    expect(effectiveSort('rating', gradesOnly.school)).toBe('gpa');
+    expect(effectiveSort('overall', payload.school)).toBe('overall');
+    expect(availableSorts(gradesOnly.school)).toEqual(['gpa']);
+    expect(availableSorts(payload.school)).toEqual(['rating', 'overall', 'gpa', 'reviews']);
+  });
+
+  it('ranks every professor with grade rows (no MIN_REVIEWS_RANKED split) in gpa order', () => {
+    const res = applyRankingsQuery(gradesOnly, { sort: 'rating', openOnly: false });
+    expect(names(res.ranked)).toEqual(['Bravo', 'Alpha', 'Charlie']);
+    expect(res.ranked.map((p) => p.rank)).toEqual([1, 2, 3]);
+    expect(names(res.lowData)).toEqual(['Delta']);
+    expect(res.query).toEqual({ sort: 'gpa', openOnly: false });
+    expect(res.totals).toEqual({ ranked: 3, lowData: 1, openSections: 1, reviews: 0 });
+    for (const key of ['overall', 'reviews', 'gpa'] as const) {
+      expect(names(applyRankingsQuery(gradesOnly, { sort: key, openOnly: false }).ranked)).toEqual(['Bravo', 'Alpha', 'Charlie']);
+    }
+  });
+
+  it('keeps the review split for schools with reviews (older payloads without the flag count as reviewed)', () => {
+    const legacy = { ...payload, school: { ...payload.school } } as RankingsPayload;
+    delete (legacy.school as Partial<typeof legacy.school>).reviewsAvailable;
+    const res = applyRankingsQuery(legacy, { sort: 'rating', openOnly: false });
+    expect(names(res.ranked)).toEqual(['Bravo', 'Alpha', 'Foxtrot', 'Charlie']);
+    expect(res.query.sort).toBe('rating');
   });
 });

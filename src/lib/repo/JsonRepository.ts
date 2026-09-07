@@ -1,13 +1,15 @@
-// Repository over data/processed/<school>/*.json (SPEC 5, 6.6, 6.7). Reads with fs relative to
-// process.cwd() (Vercel traces data/processed/** via next.config.ts), parses once, and keeps a
-// module-level cache keyed by absolute path. Unknown school / subject / slug / professor → null.
+// Repository over data/processed/<school>/ (SPEC 5, 6.6, 6.7; MULTI_SCHOOL_DESIGN §3). Reads with fs
+// relative to process.cwd() (Vercel traces data/processed/** via next.config.ts), parses once, and keeps a
+// module-level cache keyed by absolute path. Per-subject files are loaded lazily on first use.
+// Unknown school / subject / slug / professor → null.
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import type {
-  Course, DataMode, MatchReport, Meta, Professor, ProfessorDetail, ProfessorSummary, RankingsPayload, School,
+  Course, GradeRow, MatchReport, Meta, Professor, ProfessorDetail, ProfessorSummary, RankingsPayload, School,
   SchoolId, Section, Subject,
 } from '@/lib/domain/types';
-import { SCHOOL_IDS, processedDirName, toSchoolId } from '@/lib/config/schools';
+import { env } from '@/lib/config/env';
+import { toSchoolId } from '@/lib/config/schools';
 import { assertServerOnly } from '@/lib/config/serverOnly';
 import { courseIdSubject } from '@/lib/utils/ids';
 import type { Repository } from './Repository';
@@ -17,8 +19,8 @@ assertServerOnly('src/lib/repo/JsonRepository.ts');
 export interface JsonRepositoryOptions {
   /** Root holding one directory per school. Default: `${process.cwd()}/data/processed`. */
   dataDir?: string;
-  /** demo → `<dataDir>/<school>`; live → `<dataDir>/<school>-live` (gitignored). Default demo. */
-  mode?: DataMode;
+  /** Schools `getSchools()` enumerates (default: the SCHOOLS env allowlist). */
+  schoolIds?: readonly SchoolId[];
 }
 
 /** A processed file exists but cannot be read or parsed — a build problem, never swallowed. */
@@ -100,19 +102,29 @@ async function readJsonFile<T>(absPath: string): Promise<T | null> {
   }
 }
 
+/** Derived index cached under a synthetic key next to its source file (cleared with the file cache). */
+function derived<T>(key: string, build: () => Promise<T>): Promise<T> {
+  const hit = cache.get(key);
+  if (hit) return hit as Promise<T>;
+  const pending = build();
+  cache.set(key, pending);
+  pending.catch(() => cache.delete(key));
+  return pending;
+}
+
 // ── repository ───────────────────────────────────────────────────────────────────────────────────────
 export class JsonRepository implements Repository {
   readonly dataDir: string;
-  readonly mode: DataMode;
+  readonly schoolIds: readonly SchoolId[];
 
   constructor(options: JsonRepositoryOptions = {}) {
     this.dataDir = options.dataDir ?? path.join(process.cwd(), 'data', 'processed');
-    this.mode = options.mode ?? 'demo';
+    this.schoolIds = options.schoolIds ?? env.SCHOOLS;
   }
 
-  /** Absolute path of a school's processed directory (`data/processed/uiuc` or `…/uiuc-live`). */
+  /** Absolute path of a school's processed directory (`data/processed/<school>`). */
   schoolDir(schoolId: SchoolId): string {
-    return path.join(this.dataDir, processedDirName(schoolId, this.mode));
+    return path.join(this.dataDir, schoolId);
   }
 
   private file(schoolId: SchoolId, ...segments: string[]): string {
@@ -124,7 +136,7 @@ export class JsonRepository implements Repository {
   }
 
   async getSchools(): Promise<School[]> {
-    const schools = await Promise.all(SCHOOL_IDS.map((id) => this.read<School>(id, 'school.json')));
+    const schools = await Promise.all(this.schoolIds.map((id) => this.read<School>(id, 'school.json')));
     return schools.filter((s): s is School => s !== null);
   }
 
@@ -144,17 +156,40 @@ export class JsonRepository implements Repository {
     return courses.filter((c) => c.subject === code);
   }
 
+  async getGradeRows(schoolId: SchoolId, subject: string): Promise<GradeRow[]> {
+    const code = subject.trim().toUpperCase();
+    if (!SUBJECT_RE.test(code)) return [];
+    return (await this.read<GradeRow[]>(schoolId, 'grades', `${code}.json`)) ?? [];
+  }
+
   async getRankingsPayload(schoolId: SchoolId, subject: string): Promise<RankingsPayload | null> {
     const code = subject.trim().toUpperCase();
     if (!SUBJECT_RE.test(code)) return null; // the only user-derived path segment; anything else is a fixed file name
     return this.read<RankingsPayload>(schoolId, 'rankings', `${code}.json`);
   }
 
+  /** slug → Professor over professors.json, built once per school. */
+  private professorsBySlug(schoolId: SchoolId): Promise<Map<string, Professor>> {
+    return derived(`${this.file(schoolId, 'professors.json')}#bySlug`, async () => {
+      const map = new Map<string, Professor>();
+      for (const p of await this.getProfessors(schoolId)) map.set(p.slug, p);
+      return map;
+    });
+  }
+
   async getProfessorBySlug(schoolId: SchoolId, slug: string): Promise<ProfessorDetail | null> {
     const key = slug.trim().toLowerCase();
     if (key.length > MAX_KEY_LENGTH || !SLUG_RE.test(key)) return null;
-    const map = await this.read<Record<string, ProfessorDetail>>(schoolId, 'professors-detail.json');
-    return ownEntry(map, key);
+    const professor = (await this.professorsBySlug(schoolId)).get(key);
+    if (!professor) return null;
+    // The detail is school-wide, so it is identical in every subject file the professor appears in.
+    for (const subject of professor.subjects) {
+      if (!SUBJECT_RE.test(subject)) continue;
+      const map = await this.read<Record<string, ProfessorDetail>>(schoolId, 'professors-detail', `${subject}.json`);
+      const hit = ownEntry(map, key);
+      if (hit) return hit;
+    }
+    return null;
   }
 
   async getProfessors(schoolId: SchoolId): Promise<Professor[]> {

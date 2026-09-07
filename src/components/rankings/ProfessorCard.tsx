@@ -8,8 +8,11 @@ import type { RankedProfessor } from "@/lib/domain/types";
 import { POSITIVE_PREVIEW_SHOWN } from "@/lib/domain/constants";
 import { buildProfessorHref } from "@/lib/utils/urlState";
 import { pluralize } from "@/lib/utils/format";
+import { gradedCountText, gradedCountTooltip } from "@/lib/copy/tooltips";
+import type { GradeBucketKind, GradeValueKind } from "@/components/layout/schoolFlags";
 import { GradeBar } from "@/components/charts/GradeBar";
 import { Sparkline } from "@/components/charts/Sparkline";
+import { StatTooltip } from "@/components/ui/StatTooltip";
 import { RatingBlock } from "@/components/professor/RatingBlock";
 import { GpaBlock } from "@/components/professor/GpaBlock";
 import { BadgeRow } from "@/components/professor/BadgeRow";
@@ -27,6 +30,15 @@ export interface ProfessorCardProps {
   subject: string;
   timezone: string;
   seatStatusAvailable: boolean;
+  /**
+   * Grades-only variant (design §5) when false: no rating, confidence dots, vibe tags, quotes or AI
+   * summary — GradeBar, DeltaChip, W rate, sparkline, open sections and a graded count instead. Default true.
+   */
+  reviewsAvailable?: boolean;
+  /** "percent" sources have no head counts: the graded count reads "N sections" (design §4.1). */
+  gradeValueKind?: GradeValueKind;
+  /** `School.gradeBuckets`, for the GradeBar. */
+  bucketKind?: GradeBucketKind;
   /** Shared y-range for the sparkline (payload.sparklineRange). */
   sparklineRange?: readonly [number, number];
   /** professorId → displayName for co-taught captions. */
@@ -51,6 +63,9 @@ export function ProfessorCard({
   subject,
   timezone,
   seatStatusAvailable,
+  reviewsAvailable = true,
+  gradeValueKind = "counts",
+  bucketKind = "plus-minus",
   sparklineRange,
   professorNames,
   onCourseSelect,
@@ -64,6 +79,7 @@ export function ProfessorCard({
   const detailHref = buildProfessorHref(schoolId, professor.slug);
   const quotes = item.positiveReviews.slice(0, POSITIVE_PREVIEW_SHOWN);
   const headingId = `prof-${professor.slug}-name`;
+  const sectionsWord = seatStatusAvailable ? "open section" : "offered section";
 
   function onToggle(e: SyntheticEvent<HTMLDetailsElement>) {
     setOpen(e.currentTarget.open);
@@ -75,6 +91,7 @@ export function ProfessorCard({
       open={defaultOpen || undefined}
       onToggle={onToggle}
       data-professor-id={professor.id}
+      data-variant={reviewsAvailable ? "reviews" : "grades-only"}
     >
       <summary
         aria-labelledby={headingId}
@@ -94,8 +111,8 @@ export function ProfessorCard({
               {professor.displayName}
             </span>
             {professor.isFictional ? <span className="text-[0.65rem] uppercase tracking-wide text-demo">fictional</span> : null}
-            <VibeTags tags={item.vibeTags} />
-            <BadgeRow badges={item.badges} seatStatusAvailable={seatStatusAvailable} />
+            {reviewsAvailable ? <VibeTags tags={item.vibeTags} /> : null}
+            <BadgeRow badges={item.badges} seatStatusAvailable={seatStatusAvailable} reviewsAvailable={reviewsAvailable} gradeValueKind={gradeValueKind} />
             <span className="ml-auto inline-flex items-center gap-1">
               <MatchProvenanceIcon provenance={item.matchProvenance} />
               <ShortlistButton professor={professor} />
@@ -104,14 +121,30 @@ export function ProfessorCard({
           </span>
 
           {/* Stats cluster */}
-          <span className="grid gap-3 sm:grid-cols-[7.5rem_11rem_minmax(0,1fr)] sm:items-center">
-            <RatingBlock scores={scores} />
+          <span
+            className={clsx(
+              "grid gap-3 sm:items-center",
+              reviewsAvailable ? "sm:grid-cols-[7.5rem_11rem_minmax(0,1fr)]" : "sm:grid-cols-[11rem_minmax(0,1fr)]",
+            )}
+          >
+            {reviewsAvailable ? <RatingBlock scores={scores} /> : null}
             <GpaBlock scores={scores} yearsBack={yearsBack} />
             <span className="flex items-center gap-3">
-              <GradeBar buckets={item.distribution} subject={professor.displayName} className="min-w-0 flex-1" />
+              <GradeBar buckets={item.distribution} subject={professor.displayName} bucketKind={bucketKind} valueKind={gradeValueKind} className="min-w-0 flex-1" />
               <Sparkline points={item.gpaByYear} range={sparklineRange} subject={professor.displayName} className="shrink-0" />
             </span>
           </span>
+
+          {!reviewsAvailable ? (
+            <span className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-ink-muted" data-testid="graded-count">
+              {scores.studentsGraded > 0 || scores.gradeRows > 0 ? (
+                <StatTooltip label="What does this count mean?" content={gradedCountTooltip(gradeValueKind)}>
+                  <span className="tabular-nums">{gradedCountText(scores, gradeValueKind)}</span>
+                </StatTooltip>
+              ) : null}
+              <span className="tabular-nums">{pluralize(item.openSections.length, sectionsWord)}</span>
+            </span>
+          ) : null}
 
           {/* Courses */}
           <CoursePills
@@ -135,24 +168,28 @@ export function ProfessorCard({
             title={seatStatusAvailable ? "Open sections" : "Offered sections"}
           />
 
-          <section aria-label="Positive reviews" className="flex flex-col gap-2">
-            {quotes.length === 0 ? (
-              <p className="m-0 text-sm text-ink-muted">No positive reviews yet</p>
-            ) : (
-              <div className="grid gap-2 sm:grid-cols-2">
-                {quotes.map((r) => (
-                  <ReviewQuote key={r.id} review={r} />
-                ))}
-              </div>
-            )}
-            {scores.reviewCount > 0 ? (
-              <Link href={`${detailHref}#reviews`} className="text-xs font-medium text-link hover:underline">
-                See all {pluralize(scores.reviewCount, "review")} ({scores.criticalCount} critical)
-              </Link>
-            ) : null}
-          </section>
+          {reviewsAvailable ? (
+            <>
+              <section aria-label="Positive reviews" className="flex flex-col gap-2">
+                {quotes.length === 0 ? (
+                  <p className="m-0 text-sm text-ink-muted">No positive reviews yet</p>
+                ) : (
+                  <div className="grid gap-2 sm:grid-cols-2">
+                    {quotes.map((r) => (
+                      <ReviewQuote key={r.id} review={r} />
+                    ))}
+                  </div>
+                )}
+                {scores.reviewCount > 0 ? (
+                  <Link href={`${detailHref}#reviews`} className="text-xs font-medium text-link hover:underline">
+                    See all {pluralize(scores.reviewCount, "review")} ({scores.criticalCount} critical)
+                  </Link>
+                ) : null}
+              </section>
 
-          <AISummaryPanel summary={item.summary} variant="compact" detailHref={`${detailHref}#summary`} />
+              <AISummaryPanel summary={item.summary} variant="compact" detailHref={`${detailHref}#summary`} />
+            </>
+          ) : null}
 
           <div>
             <Link href={detailHref} className="text-sm font-medium text-link hover:underline">

@@ -12,6 +12,7 @@ import { ShareButton } from "@/components/rankings/ShareButton";
 import { CompareTable } from "@/components/shortlist/CompareTable";
 import { MAX_PICKS, MIN_COMPARE_PICKS } from "@/components/shortlist/storage";
 import { orderBySlugs } from "@/components/shortlist/compareRows";
+import { resolveSchoolFlags } from "@/components/layout/schoolFlags";
 
 type Params = { school: string };
 interface PageProps {
@@ -29,12 +30,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { school } = await params;
   const schoolId = toSchoolId(school);
   const repo = getRepository();
-  const meta = schoolId ? await repo.getMeta(schoolId).catch(() => null) : null;
+  const [meta, schoolRecord] = schoolId
+    ? await Promise.all([repo.getMeta(schoolId).catch(() => null), repo.getSchool(schoolId).catch(() => null)])
+    : [null, null];
   const title = meta?.mode === "demo" ? "Compare professors · ProfPeek · DEMO" : "Compare professors · ProfPeek";
+  const reviewsAvailable = schoolRecord ? resolveSchoolFlags(schoolRecord, meta ? { mode: meta.mode } : {}).reviewsAvailable : true;
   const canonical = new URL(buildCompareHref(schoolId ?? school, []), SITE_URL).toString();
   return {
     title,
-    description: "Two or three professors side by side: shrunk rating, grades vs. course, withdrawal rate, badges, open sections and AI verdicts.",
+    description: reviewsAvailable
+      ? "Two or three professors side by side: shrunk rating, grades vs. course, withdrawal rate, badges, open sections and AI verdicts."
+      : "Two or three professors side by side: GPA, grades vs. course, withdrawal rate, badges and this term's sections.",
     alternates: { canonical },
     robots: { index: false }, // query-driven page
   };

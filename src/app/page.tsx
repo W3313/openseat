@@ -1,44 +1,66 @@
 import type { Metadata } from "next";
 import { siteUrl } from "@/lib/config/env";
 import { HeroForm } from "@/components/landing/HeroForm";
-import { PopularSubjectChips } from "@/components/landing/PopularSubjectChips";
-import { StatsStrip } from "@/components/landing/StatsStrip";
+import type { SchoolOption } from "@/components/landing/SchoolSelect";
+import type { SubjectOption } from "@/components/landing/SubjectCombobox";
+import { StatsStrip, sumCounts } from "@/components/landing/StatsStrip";
 import { HowItWorks } from "@/components/landing/HowItWorks";
+import { resolveSchoolFlags } from "@/components/layout/schoolFlags";
 import { getRepository } from "@/lib/repo";
-import type { Meta, School, SchoolId, Subject } from "@/lib/domain/types";
+import { DEFAULT_SCHOOL_ID, SCHOOL_IDS, findSchoolConfig, getSchoolConfig } from "@/lib/config/schools";
+import type { Meta, School, Subject } from "@/lib/domain/types";
 
-/** Only school in this build; the landing form still renders a select over `getSchools()`. */
-const DEFAULT_SCHOOL: SchoolId = "uiuc";
 const SITE_URL = siteUrl;
 const TITLE = "ProfPeek — Find the professor, not just the course";
 const DESCRIPTION =
-  "Official grade curves + student reviews, filtered to sections you can still get into this term.";
+  "Official grade curves — and student reviews where available — filtered to sections you can still get into this term.";
 
-interface LandingData {
-  schools: School[];
+interface LandingSchool {
+  id: string;
+  school: School | null;
   subjects: Subject[];
   meta: Meta | null;
-  school: School | null;
 }
 
-async function loadLanding(): Promise<LandingData> {
+/** school.json + subjects.json + meta.json for every registered school; a missing dataset yields empty parts. */
+async function loadLanding(): Promise<LandingSchool[]> {
   const repo = getRepository();
-  const [schools, subjects, meta, school] = await Promise.all([
-    repo.getSchools().catch(() => [] as School[]),
-    repo.getSubjects(DEFAULT_SCHOOL).catch(() => [] as Subject[]),
-    repo.getMeta(DEFAULT_SCHOOL).catch(() => null),
-    repo.getSchool(DEFAULT_SCHOOL).catch(() => null),
-  ]);
-  return { schools, subjects, meta, school };
+  return Promise.all(
+    SCHOOL_IDS.map(async (id) => {
+      const [school, subjects, meta] = await Promise.all([
+        repo.getSchool(id).catch(() => null),
+        repo.getSubjects(id).catch(() => [] as Subject[]),
+        repo.getMeta(id).catch(() => null),
+      ]);
+      return { id, school, subjects, meta };
+    }),
+  );
+}
+
+/** Only schools whose dataset exists are listed (design §8); registry names fill in when school.json is absent but subjects exist. */
+export function toSchoolOptions(loaded: readonly LandingSchool[]): SchoolOption[] {
+  const out: SchoolOption[] = [];
+  for (const { id, school, subjects, meta } of loaded) {
+    if (subjects.length === 0 && !meta) continue;
+    const base = findSchoolConfig(id);
+    const flags = resolveSchoolFlags(school ?? { id, shortName: base?.shortName, sources: null }, meta ? { mode: meta.mode } : {});
+    out.push({
+      id,
+      name: school?.name ?? base?.name ?? id,
+      shortName: school?.shortName ?? base?.shortName ?? id.toUpperCase(),
+      professorCount: meta?.counts.professors,
+      subjectCount: subjects.length,
+      reviewsAvailable: flags.reviewsAvailable,
+      isDemo: flags.mode === "demo",
+    });
+  }
+  return out;
 }
 
 export async function generateMetadata(): Promise<Metadata> {
-  let demo = true;
-  try {
-    demo = (await getRepository().getMeta(DEFAULT_SCHOOL)).mode === "demo";
-  } catch {
-    /* default to demo suffix */
-  }
+  const loaded = await loadLanding();
+  const modes = loaded.map((l) => l.meta?.mode).filter((m): m is Meta["mode"] => m != null);
+  const demo = modes.length > 0 && modes.every((m) => m === "demo");
   const title = demo ? `${TITLE} · DEMO` : TITLE;
   return {
     title,
@@ -49,21 +71,29 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function LandingPage() {
-  const { schools, subjects, meta, school } = await loadLanding();
-  const schoolOptions =
-    schools.length > 0
-      ? schools
-      : [{ id: DEFAULT_SCHOOL, name: "University of Illinois Urbana-Champaign", shortName: "UIUC" }];
-  const subjectOptions = subjects.map(({ code, name, professorCount }) => ({ code, name, professorCount }));
+  const loaded = await loadLanding();
+  const options = toSchoolOptions(loaded);
+  const fallbackConfig = getSchoolConfig(DEFAULT_SCHOOL_ID);
+  const schoolOptions: SchoolOption[] =
+    options.length > 0 ? options : [{ id: fallbackConfig.id, name: fallbackConfig.name, shortName: fallbackConfig.shortName }];
+  const subjectsBySchool: Record<string, SubjectOption[]> = {};
+  for (const l of loaded) subjectsBySchool[l.id] = l.subjects.map(({ code, name, professorCount }) => ({ code, name, professorCount }));
+  const defaultSchoolId = schoolOptions.some((s) => s.id === DEFAULT_SCHOOL_ID) ? DEFAULT_SCHOOL_ID : schoolOptions[0].id;
+
+  const withData = loaded.filter((l) => l.meta);
+  const counts = sumCounts(withData.map((l) => l.meta?.counts));
+  const seatStatusAvailable = withData.every((l) => l.school?.seatStatusAvailable ?? true);
+  const reviewsAvailable = options.some((s) => s.reviewsAvailable !== false);
 
   return (
     <div className="flex flex-1 flex-col gap-10 pb-16">
-      <HeroForm schools={schoolOptions} subjects={subjectOptions} defaultSchoolId={DEFAULT_SCHOOL} />
-      <PopularSubjectChips schoolId={DEFAULT_SCHOOL} subjects={subjectOptions} className="-mt-4" />
-      {meta ? (
+      <HeroForm schools={schoolOptions} subjectsBySchool={subjectsBySchool} defaultSchoolId={defaultSchoolId} />
+      {counts ? (
         <StatsStrip
-          counts={meta.counts}
-          seatStatusAvailable={school?.seatStatusAvailable ?? true}
+          counts={counts}
+          seatStatusAvailable={seatStatusAvailable}
+          reviewsAvailable={reviewsAvailable}
+          schoolCount={withData.length}
           className="px-4 sm:px-6"
         />
       ) : null}

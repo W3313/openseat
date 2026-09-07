@@ -1,0 +1,62 @@
+{
+  "ANTH": [
+    "Anthropology"
+  ],
+  "CHEM": [
+    "Chemistry and Biochemistry"
+  ],
+  "CMPSC": [
+    "Computer Science"
+  ],
+  "COMM": [
+    "Communication"
+  ],
+  "EARTH": [
+    "Earth Science"
+  ],
+  "ECE": [
+    "Electrical and Computer Engineering"
+  ],
+  "ECON": [
+    "Economics"
+  ],
+  "EEMB": [
+    "Ecology, Evolution and Marine Biology"
+  ],
+  "ENGL": [
+    "English"
+  ],
+  "ENVS": [
+    "Environmental Studies"
+  ],
+  "HIST": [
+    "History"
+  ],
+  "MATH": [
+    "Mathematics"
+  ],
+  "MCDB": [
+    "Molecular, Cellular and Developmental Biology"
+  ],
+  "PHIL": [
+    "Philosophy"
+  ],
+  "PHYS": [
+    "Physics"
+  ],
+  "POLS": [
+    "Political Science"
+  ],
+  "PSTAT": [
+    "Statistics and Applied Probability"
+  ],
+  "PSY": [
+    "Psychological and Brain Sciences"
+  ],
+  "SOC": [
+    "Sociology"
+  ],
+  "WRIT": [
+    "Writing"
+  ]
+}

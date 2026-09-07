@@ -7,7 +7,7 @@ import { buildProfessorHref } from '@/lib/utils/urlState';
 import { formatNumber } from '@/lib/utils/format';
 
 export const REPORT_METHODS: readonly MatchMethod[] = [
-  'alias', 'exact', 'first-token', 'initial', 'nickname', 'compound-last', 'fuzzy', 'ambiguous', 'unmatched', 'blocked',
+  'alias', 'exact', 'first-token', 'initial', 'nickname', 'compound-last', 'fuzzy', 'ambiguous', 'unmatched', 'blocked', 'grades-only',
 ];
 export type SourceFilter = 'all' | 'grades' | 'schedule';
 export type MethodFilter = 'all' | MatchMethod;
@@ -26,7 +26,7 @@ export function filterEntries(entries: readonly MatchReportEntry[], f: MatchRepo
   return entries.filter((e) => {
     if (f.method !== 'all' && e.method !== f.method) return false;
     if (f.source !== 'all' && e.source !== f.source) return false;
-    if (needle && !`${e.instructorRaw} ${e.subject} ${e.professorId ?? ''}`.toLowerCase().includes(needle)) return false;
+    if (needle && !`${e.instructorRaw} ${e.subjects.join(' ')} ${e.professorId ?? ''}`.toLowerCase().includes(needle)) return false;
     return true;
   });
 }
@@ -105,7 +105,7 @@ export function MatchReportTable({ entries, professors = {}, schoolId = 'uiuc', 
             <tr>
               <th scope="col" className="px-3 py-2">Raw string</th>
               <th scope="col" className="px-3 py-2">Source</th>
-              <th scope="col" className="px-3 py-2">Subject</th>
+              <th scope="col" className="px-3 py-2">Subjects</th>
               <th scope="col" className="px-3 py-2">Method</th>
               <th scope="col" className="px-3 py-2 text-right">Score</th>
               <th scope="col" className="px-3 py-2 text-right">Rows</th>
@@ -123,10 +123,10 @@ export function MatchReportTable({ entries, professors = {}, schoolId = 'uiuc', 
                 const ref = e.professorId ? professors[e.professorId] : undefined;
                 const runnersUp = e.candidates.filter((c) => c.professorId !== e.professorId).slice(0, 2);
                 return (
-                  <tr key={`${e.source}|${e.subject}|${e.instructorRaw}`} className="border-t border-border align-top">
+                  <tr key={`${e.source}|${e.method}|${e.professorId ?? ''}|${e.instructorRaw}`} className="border-t border-border align-top">
                     <td className="px-3 py-1.5 font-mono text-xs text-ink">&quot;{e.instructorRaw}&quot;</td>
                     <td className="px-3 py-1.5 text-ink-muted">{e.source}</td>
-                    <td className="px-3 py-1.5 text-ink-muted">{e.subject}</td>
+                    <td className="px-3 py-1.5 text-ink-muted">{e.subjects.join(', ')}</td>
                     <td className="px-3 py-1.5 font-mono text-xs text-ink">{e.method}</td>
                     <td className="px-3 py-1.5 text-right tabular-nums text-ink-muted">{e.score.toFixed(2)}</td>
                     <td className="px-3 py-1.5 text-right tabular-nums text-ink-muted">{formatNumber(e.rows)}</td>

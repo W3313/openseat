@@ -1,11 +1,14 @@
 import { describe, expect, it } from 'vitest';
-import type { GradeBuckets, GradeRow, Meeting } from '@/lib/domain/types';
+import type { GradeBuckets, GradeRow, Meeting, Section } from '@/lib/domain/types';
+import { parseName } from '@/lib/matching';
+import { coverageItems, coverageLine } from '@/components/about/CoverageStats';
 import type { RawGradeRow, RawSection } from '@/lib/sources/types';
 import { datasetHash } from '@/lib/utils/hash';
 import { buildCourseCatalog, computeCourseStats, courseIdFromLabel, ensureCoursesExist } from '../../scripts/ingest/catalog';
 import { dedupeCrossListed, mapSectionStatus } from '../../scripts/ingest/sections';
+import { buildMatchReport, runMatching } from '../../scripts/ingest/match';
 import { gradesOnlyNames, buildDepartmentIndex } from '../../scripts/ingest/professors';
-import { buildSubjects, serialize } from '../../scripts/ingest/write';
+import { HASHED_FILES, buildSubjects, hashedFileOrder, persistedGradeRow, serialize, splitGradesBySubject } from '../../scripts/ingest/write';
 import { sparklineRange } from '../../scripts/rankings/scores';
 
 const buckets = (over: Partial<GradeBuckets> = {}): GradeBuckets => ({
@@ -155,5 +158,87 @@ describe('sparklineRange', () => {
     expect(sparklineRange([{ year: 2024, gpa: 3.27, n: 50 }, { year: 2025, gpa: 3.51, n: 40 }])).toEqual([3.1, 3.7]);
     expect(sparklineRange([{ year: 2024, gpa: 3.95, n: 50 }])).toEqual([3.8, 4]);
     expect(sparklineRange([])).toEqual([0, 4]);
+  });
+});
+
+describe('per-subject output (MULTI_SCHOOL_DESIGN §3)', () => {
+  const row = (id: string, courseId: string): GradeRow => ({
+    id, schoolId: 'uiuc', courseId, term: '2025-fa', year: 2025, schedType: 'LEC', isHeadline: true,
+    instructorRaw: 'Okonkwo, Adaeze', nameKey: { raw: 'Okonkwo, Adaeze', last: 'okonkwo', lastTokens: ['okonkwo'], lastCompact: 'okonkwo', first: 'adaeze', firstTokens: ['adaeze'], firstCompact: 'adaeze', firstToken: 'adaeze', firstInitial: 'a', middleInitials: [] },
+    professorId: 'uiuc:p:adaeze-okonkwo', matchMethod: 'exact', matchScore: 1,
+    buckets: buckets({ a: 20 }), graded: 20, withdrawn: 0, students: 20, gpa: 4, suppressed: false,
+  });
+
+  it('hashes the fixed files with grades/<SUBJECT>.json in sorted order between professors and sections', () => {
+    expect(HASHED_FILES).toEqual(['school.json', 'subjects.json', 'courses.json', 'professors.json', 'sections.json', 'reviews.json', 'match-report.json']);
+    expect(hashedFileOrder(['MATH', 'CS'])).toEqual([
+      'school.json', 'subjects.json', 'courses.json', 'professors.json', 'grades/CS.json', 'grades/MATH.json', 'sections.json', 'reviews.json', 'match-report.json',
+    ]);
+  });
+
+  it('splits rows by subject, keeps empty files for requested subjects and drops the derivable nameKey', () => {
+    const split = splitGradesBySubject([row('a', 'uiuc:CS:225'), row('b', 'uiuc:ECE:120'), row('c', 'uiuc:CS:374')], ['CS', 'ECE', 'MATH']);
+    expect(Object.keys(split).sort()).toEqual(['CS', 'ECE', 'MATH']);
+    expect(split.CS.map((r) => r.id)).toEqual(['a', 'c']);
+    expect(split.MATH).toEqual([]);
+    expect('nameKey' in split.CS[0]).toBe(false);
+    expect(split.CS[0].instructorRaw).toBe('Okonkwo, Adaeze');
+    expect(persistedGradeRow(row('z', 'uiuc:CS:1'))).not.toHaveProperty('nameKey');
+  });
+
+  it('buildSubjects can be restricted to the requested allowlist', () => {
+    const courses = buildCourseCatalog([rawRow({}), rawRow({ subject: 'LING', number: '100' })], 'uiuc');
+    const all = buildSubjects('uiuc', {}, courses, [], [], ['CS']);
+    expect(all.map((s) => s.code)).toEqual(['CS', 'LING']);
+    const restricted = buildSubjects('uiuc', {}, courses, [], [], ['CS'], { restrictToRequested: true });
+    expect(restricted.map((s) => s.code)).toEqual(['CS']);
+  });
+});
+
+describe('match report (SPEC 7.4 step 6, grades-only semantics)', () => {
+  const gradeRow = (id: string, instructorRaw: string, courseId: string): GradeRow => ({
+    id, schoolId: 'purdue', courseId, term: '2025-fa', year: 2025, schedType: 'UNKNOWN', isHeadline: true,
+    instructorRaw, nameKey: parseName(instructorRaw), professorId: null, matchMethod: 'unmatched', matchScore: 0,
+    buckets: buckets({ a: 20 }), graded: 20, withdrawn: 0, students: 20, gpa: 4, suppressed: false,
+  });
+  const section = (crn: string, courseId: string, instructorsRaw: string[]): Section => ({
+    id: `purdue:s:2025-fa:${crn}`, schoolId: 'purdue', term: '2025-fa', courseId, crossListedCourseIds: [], crn, sectionCode: '001', type: 'LEC',
+    status: 'offered', seatsKnown: false, isOpen: true, instructorsRaw, professorIds: [], meetings: [], fetchedAt: '2026-09-06T00:00:00.000Z',
+  });
+
+  it('labels grade strings that became their own professor as grades-only, merges per-subject entries and balances coverage', () => {
+    const rows = [
+      gradeRow('a', 'Okonkwo, Adaeze A.', 'purdue:CS:18000'),
+      gradeRow('b', 'Okonkwo, Adaeze A.', 'purdue:MA:16500'),   // same string in a second subject → one entry, two subjects
+      gradeRow('c', 'Vantongeren, Ilse', 'purdue:CS:24000'),
+    ];
+    const sections = [
+      section('10001', 'purdue:CS:18000', ['Okonkwo, Adaeze A.']),
+      section('10002', 'purdue:CS:24000', ['Nakashima, Ravi']),  // nobody with grade rows → unmatched
+      section('10003', 'purdue:CS:25000', ['Staff']),            // blocked
+    ];
+    const out = runMatching({ schoolId: 'purdue', rows, sections, reviewed: [], reviews: [], aliases: {}, takenSlugs: new Set(), isFictional: false });
+    expect(out.professors).toHaveLength(2);
+    expect(rows.every((r) => r.professorId !== null && r.matchMethod === 'grades-only')).toBe(true);
+    const okonkwo = out.entries.find((e) => e.source === 'grades' && e.instructorRaw === 'Okonkwo, Adaeze A.')!;
+    expect(okonkwo).toMatchObject({ method: 'grades-only', subjects: ['CS', 'MA'], rows: 2 });
+    expect(out.entries.filter((e) => e.source === 'grades')).toHaveLength(2);
+    expect(sections[0].professorIds).toEqual([okonkwo.professorId]);
+
+    const report = buildMatchReport(out.entries, out.blockedStrings, sections, '2026-09-06T00:00:00.000Z', false);
+    const c = report.coverage;
+    expect(c.distinctStrings).toBe(report.entries.length);
+    expect(c.matched + c.gradesOnly + c.ambiguous + c.unmatched).toBe(c.distinctStrings);
+    expect(c).toMatchObject({ gradesOnly: 2, matched: 1, unmatched: 1, blocked: 1, sectionsLinked: 1, sectionsTotal: 3 });
+    expect(c.byMethod['grades-only']).toBe(2);
+    // Grades-only school: the rate is schedule linkage, not a grade-string match rate.
+    expect(c.matchRate).toBeCloseTo(1 / 3);
+    expect(coverageLine(c, false)).toContain('schedule strings linked 1');
+    expect(coverageItems(c, false).map((i) => i.label)).toContain('Schedule strings linked');
+    expect(coverageItems(c, false).some((i) => /match rate/.test(i.hint ?? ''))).toBe(false);
+
+    // With a review source the classic rate applies; no schedule → null instead of a fake 100 %.
+    expect(buildMatchReport(out.entries, 0, sections, 'x', true).coverage.matchRate).toBeCloseTo(1 / 4);
+    expect(buildMatchReport(out.entries.filter((e) => e.source === 'grades'), 0, [], 'x', false).coverage.matchRate).toBeNull();
   });
 });

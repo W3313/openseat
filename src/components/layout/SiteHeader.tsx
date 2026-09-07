@@ -1,23 +1,24 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
-import type { DataMode } from "@/lib/domain/types";
-import { ModeBadge } from "./ModeBadge";
+import type { SchoolChrome } from "./schoolChrome";
+import { SchoolChromeBadge } from "./SchoolChromeSwitch";
 
 /** Placeholder until the repository is published; README fills in the real URL. */
 export const GITHUB_URL = process.env.NEXT_PUBLIC_REPO_URL ?? "https://github.com/W3313/profpeek";
 
 export interface SiteHeaderProps {
-  mode: DataMode;
-  shortName: string;
-  /** Optional replacement for the default `ModeBadge` (e.g. tests). */
+  /** Per-school chrome (design §8); the badge follows the school in the pathname. */
+  chromeBySchool: Readonly<Record<string, SchoolChrome>>;
+  defaultSchoolId: string;
+  /** Optional replacement for the default badge switch (e.g. tests). */
   badge?: ReactNode;
 }
 
 /**
  * Sticky top bar shown on every page (SPEC 3.0): wordmark, About, GitHub, and
- * the mode badge. Server component — no state.
+ * the per-school badge (`ModeBadge` on demo, `DataBadge` for real schools).
  */
-export function SiteHeader({ mode, shortName, badge }: SiteHeaderProps) {
+export function SiteHeader({ chromeBySchool, defaultSchoolId, badge }: SiteHeaderProps) {
   return (
     <header className="sticky top-0 z-30 border-b border-border bg-surface/90 backdrop-blur supports-[backdrop-filter]:bg-surface/75">
       <div className="mx-auto flex h-14 w-full max-w-6xl items-center gap-3 px-4 sm:px-6">
@@ -58,7 +59,7 @@ export function SiteHeader({ mode, shortName, badge }: SiteHeaderProps) {
             <span>GitHub</span>
             <span className="sr-only"> (opens in a new tab)</span>
           </a>
-          {badge ?? <ModeBadge mode={mode} shortName={shortName} />}
+          {badge ?? <SchoolChromeBadge chromeBySchool={chromeBySchool} defaultSchoolId={defaultSchoolId} />}
         </nav>
       </div>
     </header>

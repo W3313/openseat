@@ -20,6 +20,7 @@ const METHOD_ORDER: readonly MatchMethod[] = [
   "ambiguous",
   "unmatched",
   "blocked",
+  "grades-only",
 ];
 
 const LINKING: ReadonlySet<MatchMethod> = new Set(["alias", "exact", "first-token", "initial", "nickname", "compound-last", "fuzzy"]);

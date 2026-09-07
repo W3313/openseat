@@ -1,0 +1,21 @@
+Subject,Catalog Number,Section,A+,A,A-,B+,B,B-,C+,C,C-,D+,D,D-,F,P,CR,NC,I,W,Instructor 1,Instructor 2,Instructor 3,Instructor 4,Instructor 5,Instructor 6,instructor_id,instructor_name_normalized,title
+CS,1134,101,35,8,,2,3,,,1,,,,,1,,,,,1,"Trevelyan, Hsin-Jung","Ormerod, Florentina M",,,,,sxw135085,seraphina wexford,Computer Science Laboratory 
+CS,1134,601,39,5,,2,,,,2,,,,,6,,,,,0,"Wexford, Seraphina J","Ormerod, Florentina M",,,,,sxw194933,seraphina wexford,Computer Science Laboratory 
+CS,1134,602,13,8,2,2,4,1,1,2,1,,1,,8,,,,,1,"Wexford, Seraphina J","Ormerod, Florentina M",,,,,sxw188074,seraphina wexford,Computer Science Laboratory 
+CS,1136,101,42,3,7,1,6,1,,1,2,,4,,4,,,,,2,"Wexford, Seraphina J","Ormerod, Florentina M",,,,,sxw146254,seraphina wexford,Computer Science Laboratory 
+CS,1136,102,25,5,2,3,,,2,1,1,,2,,7,,,,,4,"Wexford, Seraphina J","Ormerod, Florentina M",,,,,sxw227350,seraphina wexford,Computer Science Laboratory 
+CS,1136,103,38,,1,3,1,2,1,1,,,,,2,,,,,0,"Wexford, Seraphina J","Ormerod, Florentina M",,,,,sxw171641,seraphina wexford,Computer Science Laboratory 
+CS,1136,104,29,5,3,3,2,,,,1,,3,,8,,,,,0,"Wexford, Seraphina J","Ormerod, Florentina M",,,,,sxw156838,seraphina wexford,Computer Science Laboratory 
+CS,1136,105,38,5,6,2,,1,3,1,1,,3,,10,,,,,3,"Wexford, Seraphina J","Ormerod, Florentina M",,,,,sxw256151,seraphina wexford,Computer Science Laboratory 
+CS,1136,106,38,3,2,1,,1,,,,,3,,2,,,,,2,"Wexford, Seraphina J","Ormerod, Florentina M",,,,,sxw155204,seraphina wexford,Computer Science Laboratory 
+CS,1136,107,23,5,1,2,1,5,1,,1,,4,,2,,,,,3,"Wexford, Seraphina J","Ormerod, Florentina M",,,,,sxw136697,seraphina wexford,Computer Science Laboratory 
+CHEM,1111,101,12,4,5,4,3,1,,,,,,,1,,,,,0,"Quillfeather, Nerissa L","Northcote, Rafferty R",,,,,nxq158604,nerissa quillfeather,General Chemistry Laboratory I 
+CHEM,1111,102,12,3,5,5,,1,,2,,,,2,,,,,,0,"Quillfeather, Nerissa L","Fairweather, Calliope",,,,,nxq140478,nerissa quillfeather,General Chemistry Laboratory I 
+CHEM,1111,103,9,6,3,3,2,1,,1,1,,,,1,,,,,1,"Jessop, Adaeze","Northcote, Gideon",,,,,axj238025,adaeze jessop,General Chemistry Laboratory I 
+CHEM,1111,104,11,9,3,3,,1,1,1,,,,,1,,,,,0,"Trevelyan, Gideon K","Delacroix, Jarvis L",,,,,gxt117799,gideon trevelyan,General Chemistry Laboratory I 
+CHEM,1111,105,3,9,2,3,6,4,1,,,,1,,1,,,,,0,"Trevelyan, Gideon K","Quillfeather, Kalinda M",,,,,gxt252840,gideon trevelyan,General Chemistry Laboratory I 
+CHEM,1111,106,12,4,4,1,3,1,,1,1,1,,,1,,,,,1,"Pettigrew, Montgomery L","Jessop, Calliope J",,,,,mxp184088,montgomery pettigrew,General Chemistry Laboratory I 
+CHEM,1111,107,8,8,2,3,4,,,,,,,,4,,,,,1,"Pettigrew, Isolde R","Ferreira-Lund, Jocasta",,,,,ixp229293,isolde pettigrew,General Chemistry Laboratory I 
+CHEM,1111,108,3,7,6,1,5,1,1,1,1,,1,,2,,,,,1,"Pettigrew, Isolde R","Northcote, Gideon",,,,,ixp158765,isolde pettigrew,General Chemistry Laboratory I 
+CHEM,1111,109,1,4,3,4,4,2,1,2,2,,2,2,3,,,,,0,"Wexford, Zephyrine J","Castellanos, Wilhelmina",,,,,zxw202800,,General Chemistry Laboratory I 
+CHEM,1111,110,1,4,7,,3,4,1,,1,,,1,6,,,,,2,"Wexford, Zephyrine J","Lockhart, Jarvis",,,,,zxw166055,,General Chemistry Laboratory I 

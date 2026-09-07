@@ -1,0 +1,1036 @@
+{
+ "courses": [
+  {
+   "courseId": "uiuc:CS:225",
+   "number": "225",
+   "professorCount": 2,
+   "title": "Data Structures"
+  },
+  {
+   "courseId": "uiuc:CS:233",
+   "number": "233",
+   "professorCount": 1,
+   "title": "Computer Architecture"
+  },
+  {
+   "courseId": "uiuc:CS:374",
+   "number": "374",
+   "professorCount": 1,
+   "title": "Intro to Algs & Models of Comp"
+  },
+  {
+   "courseId": "uiuc:CS:411",
+   "number": "411",
+   "professorCount": 2,
+   "title": "Database Systems"
+  },
+  {
+   "courseId": "uiuc:CS:498",
+   "number": "498",
+   "professorCount": 1,
+   "title": "Cloud Computing Applications"
+  }
+ ],
+ "generatedAt": "2026-09-04T00:00:00Z",
+ "gradesThroughTerm": "2026-sp",
+ "mode": "live",
+ "priorMean": 3.7,
+ "professors": [
+  {
+   "badges": [],
+   "courses": [
+    {
+     "aRate": 0.678,
+     "baselineGpa": 3.337,
+     "baselineN": 960,
+     "buckets": {
+      "a": 294,
+      "aMinus": 52,
+      "aPlus": 81,
+      "b": 58,
+      "bMinus": 11,
+      "bPlus": 16,
+      "c": 48,
+      "cMinus": 10,
+      "cPlus": 13,
+      "d": 16,
+      "dMinus": 2,
+      "dPlus": 2,
+      "f": 27,
+      "w": 33
+     },
+     "courseId": "uiuc:CS:233",
+     "delta": 0.013,
+     "dfwRate": 0.121,
+     "gpa": 3.35,
+     "gradeRows": 3,
+     "graded": 630,
+     "isHeadline": true,
+     "number": "233",
+     "subject": "CS",
+     "title": "Computer Architecture",
+     "wRate": 0.05,
+     "withdrawn": 33,
+     "sourceGpa": 3.36
+    }
+   ],
+   "distribution": {
+    "a": 294,
+    "aMinus": 52,
+    "aPlus": 81,
+    "b": 58,
+    "bMinus": 11,
+    "bPlus": 16,
+    "c": 48,
+    "cMinus": 10,
+    "cPlus": 13,
+    "d": 16,
+    "dMinus": 2,
+    "dPlus": 2,
+    "f": 27,
+    "w": 33
+   },
+   "gpaByYear": [
+    {
+     "gpa": 3.345,
+     "n": 210,
+     "year": 2022
+    },
+    {
+     "gpa": 3.281,
+     "n": 210,
+     "year": 2023
+    },
+    {
+     "gpa": 3.424,
+     "n": 210,
+     "year": 2024
+    }
+   ],
+   "matchProvenance": [
+    {
+     "instructorRaw": "Achterberg, N",
+     "method": "unmatched",
+     "rows": 3,
+     "score": 0,
+     "source": "grades"
+    },
+    {
+     "instructorRaw": "Achterberg, N",
+     "method": "initial",
+     "rows": 1,
+     "score": 0.85,
+     "source": "schedule"
+    }
+   ],
+   "openSections": [],
+   "positiveReviews": [],
+   "professor": {
+    "courseIds": [
+     "uiuc:CS:233"
+    ],
+    "department": null,
+    "displayName": "N. Achterberg",
+    "firstName": "N.",
+    "id": "uiuc:g:achterberg-n",
+    "isFictional": false,
+    "kind": "grades-only",
+    "lastName": "Achterberg",
+    "nameKey": {
+     "first": "n",
+     "firstCompact": "n",
+     "firstInitial": "n",
+     "firstToken": "n",
+     "firstTokens": [
+      "n"
+     ],
+     "last": "achterberg",
+     "lastCompact": "achterberg",
+     "lastTokens": [
+      "achterberg"
+     ],
+     "middleInitials": [],
+     "raw": "Achterberg, N"
+    },
+    "nameVariants": [
+     "Achterberg, N"
+    ],
+    "reviewSourceId": null,
+    "schoolId": "uiuc",
+    "slug": "achterberg-n",
+    "subjects": [
+     "CS"
+    ]
+   },
+   "rank": null,
+   "scores": {
+    "aRate": 0.678,
+    "composite": null,
+    "confidence": "low",
+    "criticalCount": 0,
+    "deltaComparableN": 630,
+    "dfwRate": 0.121,
+    "difficultyMean": null,
+    "gpaDelta": 0.013,
+    "gpaMean": 3.35,
+    "gradeRows": 3,
+    "positiveCount": 0,
+    "priorMean": 3.7,
+    "ratingRaw": null,
+    "ratingShrunk": null,
+    "reviewCount": 0,
+    "soleInstructor": false,
+    "studentsGraded": 630,
+    "wRate": 0.05,
+    "withdrawn": 33,
+    "wouldTakeAgainPct": null,
+    "yearsActive": 3,
+    "countsAreEstimates": false
+   },
+   "sectionsThisTerm": 1,
+   "summary": null,
+   "vibeTags": []
+  },
+  {
+   "badges": [
+    "open-now",
+    "low-withdrawal"
+   ],
+   "courses": [
+    {
+     "aRate": 0.598,
+     "baselineGpa": 3.254,
+     "baselineN": 1760,
+     "buckets": {
+      "a": 309,
+      "aMinus": 249,
+      "aPlus": 28,
+      "b": 74,
+      "bMinus": 63,
+      "bPlus": 73,
+      "c": 41,
+      "cMinus": 30,
+      "cPlus": 27,
+      "d": 18,
+      "dMinus": 13,
+      "dPlus": 12,
+      "f": 43,
+      "w": 10
+     },
+     "courseId": "uiuc:CS:225",
+     "delta": -0.058,
+     "dfwRate": 0.097,
+     "gpa": 3.197,
+     "gradeRows": 5,
+     "graded": 980,
+     "isHeadline": true,
+     "number": "225",
+     "subject": "CS",
+     "title": "Data Structures",
+     "wRate": 0.01,
+     "withdrawn": 10,
+     "sourceGpa": 3.21
+    },
+    {
+     "aRate": 0.29,
+     "baselineGpa": 2.872,
+     "baselineN": 540,
+     "buckets": {
+      "a": 31,
+      "aMinus": 45,
+      "aPlus": 11,
+      "b": 39,
+      "bMinus": 22,
+      "bPlus": 38,
+      "c": 38,
+      "cMinus": 22,
+      "cPlus": 17,
+      "d": 6,
+      "dMinus": 5,
+      "dPlus": 9,
+      "f": 17,
+      "w": 4
+     },
+     "courseId": "uiuc:CS:374",
+     "delta": -0.175,
+     "dfwRate": 0.135,
+     "gpa": 2.697,
+     "gradeRows": 2,
+     "graded": 300,
+     "isHeadline": true,
+     "number": "374",
+     "subject": "CS",
+     "title": "Intro to Algs & Models of Comp",
+     "wRate": 0.013,
+     "withdrawn": 4,
+     "sourceGpa": 2.71
+    },
+    {
+     "aRate": 0.65,
+     "baselineGpa": null,
+     "baselineN": 0,
+     "buckets": {
+      "a": 21,
+      "aMinus": 16,
+      "aPlus": 2,
+      "b": 2,
+      "bMinus": 1,
+      "bPlus": 6,
+      "c": 4,
+      "cMinus": 1,
+      "cPlus": 3,
+      "d": 2,
+      "dMinus": 1,
+      "dPlus": 1,
+      "f": 0,
+      "w": 1
+     },
+     "courseId": "uiuc:CS:225",
+     "delta": null,
+     "dfwRate": 0.082,
+     "gpa": 3.334,
+     "gradeRows": 1,
+     "graded": 60,
+     "isHeadline": false,
+     "number": "225",
+     "subject": "CS",
+     "title": "Data Structures",
+     "wRate": 0.016,
+     "withdrawn": 1,
+     "sourceGpa": 3.34
+    }
+   ],
+   "distribution": {
+    "a": 340,
+    "aMinus": 294,
+    "aPlus": 39,
+    "b": 113,
+    "bMinus": 85,
+    "bPlus": 111,
+    "c": 79,
+    "cMinus": 52,
+    "cPlus": 44,
+    "d": 24,
+    "dMinus": 18,
+    "dPlus": 21,
+    "f": 60,
+    "w": 14
+   },
+   "gpaByYear": [
+    {
+     "gpa": 3.143,
+     "n": 190,
+     "year": 2021
+    },
+    {
+     "gpa": 3,
+     "n": 340,
+     "year": 2022
+    },
+    {
+     "gpa": 3.185,
+     "n": 190,
+     "year": 2023
+    },
+    {
+     "gpa": 2.986,
+     "n": 355,
+     "year": 2024
+    },
+    {
+     "gpa": 3.219,
+     "n": 205,
+     "year": 2025
+    }
+   ],
+   "matchProvenance": [
+    {
+     "instructorRaw": "Okonkwo, A",
+     "method": "initial",
+     "rows": 2,
+     "score": 0.85,
+     "source": "grades"
+    },
+    {
+     "instructorRaw": "Okonkwo, Adaeze",
+     "method": "exact",
+     "rows": 6,
+     "score": 1,
+     "source": "grades"
+    },
+    {
+     "instructorRaw": "Okonkwo, A",
+     "method": "initial",
+     "rows": 3,
+     "score": 0.85,
+     "source": "schedule"
+    }
+   ],
+   "openSections": [
+    {
+     "courseId": "uiuc:CS:225",
+     "crn": "30101",
+     "crossListedCourseIds": [],
+     "fetchedAt": "2026-09-03T14:12:00Z",
+     "id": "uiuc:s:2026-fa:30101",
+     "instructorsRaw": [
+      "Okonkwo, A"
+     ],
+     "isOpen": true,
+     "meetings": [
+      {
+       "building": "Harrow Hall",
+       "days": [
+        "M",
+        "W",
+        "F"
+       ],
+       "end": "11:50",
+       "room": "210",
+       "start": "11:00",
+       "type": "LEC"
+      }
+     ],
+     "professorIds": [
+      "uiuc:p:adaeze-okonkwo"
+     ],
+     "schoolId": "uiuc",
+     "seatsKnown": false,
+     "sectionCode": "AL1",
+     "status": "offered",
+     "term": "2026-fa",
+     "type": "LEC"
+    }
+   ],
+   "positiveReviews": [],
+   "professor": {
+    "courseIds": [
+     "uiuc:CS:225",
+     "uiuc:CS:374"
+    ],
+    "department": null,
+    "displayName": "Adaeze Okonkwo",
+    "firstName": "Adaeze",
+    "id": "uiuc:g:adaeze-okonkwo",
+    "isFictional": false,
+    "kind": "grades-only",
+    "lastName": "Okonkwo",
+    "nameKey": {
+     "first": "adaeze",
+     "firstCompact": "adaeze",
+     "firstInitial": "a",
+     "firstToken": "adaeze",
+     "firstTokens": [
+      "adaeze"
+     ],
+     "last": "okonkwo",
+     "lastCompact": "okonkwo",
+     "lastTokens": [
+      "okonkwo"
+     ],
+     "middleInitials": [],
+     "raw": "Okonkwo, Adaeze"
+    },
+    "nameVariants": [
+     "Okonkwo, A",
+     "Okonkwo, Adaeze"
+    ],
+    "reviewSourceId": null,
+    "schoolId": "uiuc",
+    "slug": "adaeze-okonkwo",
+    "subjects": [
+     "CS"
+    ]
+   },
+   "rank": null,
+   "scores": {
+    "aRate": 0.526,
+    "composite": null,
+    "confidence": "low",
+    "criticalCount": 0,
+    "deltaComparableN": 1280,
+    "dfwRate": 0.106,
+    "difficultyMean": null,
+    "gpaDelta": -0.085,
+    "gpaMean": 3.08,
+    "gradeRows": 7,
+    "positiveCount": 0,
+    "priorMean": 3.7,
+    "ratingRaw": null,
+    "ratingShrunk": null,
+    "reviewCount": 0,
+    "soleInstructor": false,
+    "studentsGraded": 1280,
+    "wRate": 0.011,
+    "withdrawn": 14,
+    "wouldTakeAgainPct": null,
+    "yearsActive": 5,
+    "countsAreEstimates": false
+   },
+   "sectionsThisTerm": 3,
+   "summary": null,
+   "vibeTags": []
+  },
+  {
+   "badges": [
+    "open-now"
+   ],
+   "courses": [
+    {
+     "aRate": 0.769,
+     "baselineGpa": null,
+     "baselineN": 0,
+     "buckets": {
+      "a": 82,
+      "aMinus": 20,
+      "aPlus": 41,
+      "b": 11,
+      "bMinus": 11,
+      "bPlus": 8,
+      "c": 3,
+      "cMinus": 5,
+      "cPlus": 2,
+      "d": 0,
+      "dMinus": 0,
+      "dPlus": 1,
+      "f": 2,
+      "w": 9
+     },
+     "courseId": "uiuc:CS:498",
+     "delta": null,
+     "dfwRate": 0.062,
+     "gpa": 3.628,
+     "gradeRows": 3,
+     "graded": 186,
+     "isHeadline": true,
+     "number": "498",
+     "subject": "CS",
+     "title": "Cloud Computing Applications",
+     "wRate": 0.046,
+     "withdrawn": 9,
+     "sourceGpa": 3.64
+    }
+   ],
+   "distribution": {
+    "a": 82,
+    "aMinus": 20,
+    "aPlus": 41,
+    "b": 11,
+    "bMinus": 11,
+    "bPlus": 8,
+    "c": 3,
+    "cMinus": 5,
+    "cPlus": 2,
+    "d": 0,
+    "dMinus": 0,
+    "dPlus": 1,
+    "f": 2,
+    "w": 9
+   },
+   "gpaByYear": [
+    {
+     "gpa": 3.64,
+     "n": 62,
+     "year": 2023
+    },
+    {
+     "gpa": 3.501,
+     "n": 62,
+     "year": 2024
+    },
+    {
+     "gpa": 3.742,
+     "n": 62,
+     "year": 2025
+    }
+   ],
+   "matchProvenance": [
+    {
+     "instructorRaw": "Sorensen, Halvard",
+     "method": "exact",
+     "rows": 3,
+     "score": 1,
+     "source": "grades"
+    },
+    {
+     "instructorRaw": "Sorensen, H",
+     "method": "initial",
+     "rows": 1,
+     "score": 0.85,
+     "source": "schedule"
+    }
+   ],
+   "openSections": [
+    {
+     "courseId": "uiuc:CS:411",
+     "crn": "30301",
+     "crossListedCourseIds": [],
+     "fetchedAt": "2026-09-03T14:12:00Z",
+     "id": "uiuc:s:2026-fa:30301",
+     "instructorsRaw": [
+      "Ibarra-Quintero, R",
+      "Sorensen, H"
+     ],
+     "isOpen": true,
+     "meetings": [
+      {
+       "building": "Marlowe Hall",
+       "days": [
+        "T",
+        "R"
+       ],
+       "end": "13:50",
+       "room": "1002",
+       "start": "12:30",
+       "type": "LEC"
+      }
+     ],
+     "professorIds": [
+      "uiuc:p:rafael-ibarra-quintero",
+      "uiuc:p:halvard-sorensen"
+     ],
+     "schoolId": "uiuc",
+     "seatsKnown": false,
+     "sectionCode": "CL1",
+     "status": "offered",
+     "term": "2026-fa",
+     "type": "LEC"
+    }
+   ],
+   "positiveReviews": [],
+   "professor": {
+    "courseIds": [
+     "uiuc:CS:411",
+     "uiuc:CS:498"
+    ],
+    "department": null,
+    "displayName": "Halvard Sørensen",
+    "firstName": "Halvard",
+    "id": "uiuc:g:halvard-sorensen",
+    "isFictional": false,
+    "kind": "grades-only",
+    "lastName": "Sørensen",
+    "nameKey": {
+     "first": "halvard",
+     "firstCompact": "halvard",
+     "firstInitial": "h",
+     "firstToken": "halvard",
+     "firstTokens": [
+      "halvard"
+     ],
+     "last": "sorensen",
+     "lastCompact": "sorensen",
+     "lastTokens": [
+      "sorensen"
+     ],
+     "middleInitials": [],
+     "raw": "Sørensen, Halvard"
+    },
+    "nameVariants": [
+     "Sorensen, H",
+     "Sorensen, Halvard"
+    ],
+    "reviewSourceId": null,
+    "schoolId": "uiuc",
+    "slug": "halvard-sorensen",
+    "subjects": [
+     "CS"
+    ]
+   },
+   "rank": null,
+   "scores": {
+    "aRate": 0.769,
+    "composite": null,
+    "confidence": "low",
+    "criticalCount": 0,
+    "deltaComparableN": 0,
+    "dfwRate": 0.062,
+    "difficultyMean": null,
+    "gpaDelta": null,
+    "gpaMean": 3.628,
+    "gradeRows": 3,
+    "positiveCount": 0,
+    "priorMean": 3.7,
+    "ratingRaw": null,
+    "ratingShrunk": null,
+    "reviewCount": 0,
+    "soleInstructor": true,
+    "studentsGraded": 186,
+    "wRate": 0.046,
+    "withdrawn": 9,
+    "wouldTakeAgainPct": null,
+    "yearsActive": 3,
+    "countsAreEstimates": false
+   },
+   "sectionsThisTerm": 1,
+   "summary": null,
+   "vibeTags": []
+  },
+  {
+   "badges": [
+    "open-now"
+   ],
+   "courses": [
+    {
+     "aRate": 0.694,
+     "baselineGpa": 3.215,
+     "baselineN": 2580,
+     "buckets": {
+      "a": 56,
+      "aMinus": 7,
+      "aPlus": 48,
+      "b": 8,
+      "bMinus": 6,
+      "bPlus": 15,
+      "c": 5,
+      "cMinus": 2,
+      "cPlus": 9,
+      "d": 0,
+      "dMinus": 1,
+      "dPlus": 0,
+      "f": 3,
+      "w": 5
+     },
+     "courseId": "uiuc:CS:225",
+     "delta": 0.327,
+     "dfwRate": 0.055,
+     "gpa": 3.542,
+     "gradeRows": 1,
+     "graded": 160,
+     "isHeadline": true,
+     "number": "225",
+     "subject": "CS",
+     "title": "Data Structures",
+     "wRate": 0.03,
+     "withdrawn": 5,
+     "sourceGpa": 3.55
+    },
+    {
+     "aRate": 0.738,
+     "baselineGpa": 3.644,
+     "baselineN": 570,
+     "buckets": {
+      "a": 243,
+      "aMinus": 88,
+      "aPlus": 311,
+      "b": 57,
+      "bMinus": 22,
+      "bPlus": 68,
+      "c": 21,
+      "cMinus": 13,
+      "cPlus": 19,
+      "d": 14,
+      "dMinus": 3,
+      "dPlus": 4,
+      "f": 7,
+      "w": 25
+     },
+     "courseId": "uiuc:CS:411",
+     "delta": -0.053,
+     "dfwRate": 0.059,
+     "gpa": 3.591,
+     "gradeRows": 5,
+     "graded": 870,
+     "isHeadline": true,
+     "number": "411",
+     "subject": "CS",
+     "title": "Database Systems",
+     "wRate": 0.028,
+     "withdrawn": 25,
+     "sourceGpa": 3.6
+    }
+   ],
+   "distribution": {
+    "a": 299,
+    "aMinus": 95,
+    "aPlus": 359,
+    "b": 65,
+    "bMinus": 28,
+    "bPlus": 83,
+    "c": 26,
+    "cMinus": 15,
+    "cPlus": 28,
+    "d": 14,
+    "dMinus": 4,
+    "dPlus": 4,
+    "f": 10,
+    "w": 30
+   },
+   "gpaByYear": [
+    {
+     "gpa": 3.601,
+     "n": 350,
+     "year": 2023
+    },
+    {
+     "gpa": 3.63,
+     "n": 350,
+     "year": 2024
+    },
+    {
+     "gpa": 3.516,
+     "n": 330,
+     "year": 2025
+    }
+   ],
+   "matchProvenance": [
+    {
+     "instructorRaw": "Ibarra Quintero, Rafael",
+     "method": "exact",
+     "rows": 2,
+     "score": 1,
+     "source": "grades"
+    },
+    {
+     "instructorRaw": "Ibarra-Quintero, Rafael",
+     "method": "exact",
+     "rows": 5,
+     "score": 1,
+     "source": "grades"
+    },
+    {
+     "instructorRaw": "Ibarra-Quintero, R",
+     "method": "initial",
+     "rows": 1,
+     "score": 0.85,
+     "source": "schedule"
+    }
+   ],
+   "openSections": [
+    {
+     "courseId": "uiuc:CS:411",
+     "crn": "30301",
+     "crossListedCourseIds": [],
+     "fetchedAt": "2026-09-03T14:12:00Z",
+     "id": "uiuc:s:2026-fa:30301",
+     "instructorsRaw": [
+      "Ibarra-Quintero, R",
+      "Sorensen, H"
+     ],
+     "isOpen": true,
+     "meetings": [
+      {
+       "building": "Marlowe Hall",
+       "days": [
+        "T",
+        "R"
+       ],
+       "end": "13:50",
+       "room": "1002",
+       "start": "12:30",
+       "type": "LEC"
+      }
+     ],
+     "professorIds": [
+      "uiuc:p:rafael-ibarra-quintero",
+      "uiuc:p:halvard-sorensen"
+     ],
+     "schoolId": "uiuc",
+     "seatsKnown": false,
+     "sectionCode": "CL1",
+     "status": "offered",
+     "term": "2026-fa",
+     "type": "LEC"
+    }
+   ],
+   "positiveReviews": [],
+   "professor": {
+    "courseIds": [
+     "uiuc:CS:225",
+     "uiuc:CS:411"
+    ],
+    "department": null,
+    "displayName": "Rafael Ibarra-Quintero",
+    "firstName": "Rafael",
+    "id": "uiuc:g:rafael-ibarra-quintero",
+    "isFictional": false,
+    "kind": "grades-only",
+    "lastName": "Ibarra-Quintero",
+    "nameKey": {
+     "first": "rafael",
+     "firstCompact": "rafael",
+     "firstInitial": "r",
+     "firstToken": "rafael",
+     "firstTokens": [
+      "rafael"
+     ],
+     "last": "ibarra quintero",
+     "lastCompact": "ibarraquintero",
+     "lastTokens": [
+      "ibarra",
+      "quintero"
+     ],
+     "middleInitials": [],
+     "raw": "Ibarra-Quintero, Rafael"
+    },
+    "nameVariants": [
+     "Ibarra Quintero, Rafael",
+     "Ibarra-Quintero, R",
+     "Ibarra-Quintero, Rafael"
+    ],
+    "reviewSourceId": null,
+    "schoolId": "uiuc",
+    "slug": "rafael-ibarra-quintero",
+    "subjects": [
+     "CS"
+    ]
+   },
+   "rank": null,
+   "scores": {
+    "aRate": 0.731,
+    "composite": null,
+    "confidence": "low",
+    "criticalCount": 0,
+    "deltaComparableN": 1030,
+    "dfwRate": 0.058,
+    "difficultyMean": null,
+    "gpaDelta": 0.006,
+    "gpaMean": 3.584,
+    "gradeRows": 6,
+    "positiveCount": 0,
+    "priorMean": 3.7,
+    "ratingRaw": null,
+    "ratingShrunk": null,
+    "reviewCount": 0,
+    "soleInstructor": false,
+    "studentsGraded": 1030,
+    "wRate": 0.028,
+    "withdrawn": 30,
+    "wouldTakeAgainPct": null,
+    "yearsActive": 3,
+    "countsAreEstimates": false
+   },
+   "sectionsThisTerm": 1,
+   "summary": null,
+   "vibeTags": []
+  },
+  {
+   "badges": [],
+   "courses": [],
+   "distribution": {
+    "a": 0,
+    "aMinus": 0,
+    "aPlus": 0,
+    "b": 0,
+    "bMinus": 0,
+    "bPlus": 0,
+    "c": 0,
+    "cMinus": 0,
+    "cPlus": 0,
+    "d": 0,
+    "dMinus": 0,
+    "dPlus": 0,
+    "f": 0,
+    "w": 0
+   },
+   "gpaByYear": [],
+   "matchProvenance": [],
+   "openSections": [],
+   "positiveReviews": [],
+   "professor": {
+    "courseIds": [],
+    "department": null,
+    "displayName": "P. Vantongeren",
+    "firstName": "P",
+    "id": "uiuc:g:vantongeren-p",
+    "isFictional": false,
+    "kind": "grades-only",
+    "lastName": "Vantongeren",
+    "nameKey": {
+     "first": "n",
+     "firstCompact": "n",
+     "firstInitial": "n",
+     "firstToken": "n",
+     "firstTokens": [
+      "n"
+     ],
+     "last": "achterberg",
+     "lastCompact": "achterberg",
+     "lastTokens": [
+      "achterberg"
+     ],
+     "middleInitials": [],
+     "raw": "Achterberg, N"
+    },
+    "nameVariants": [
+     "Vantongeren, P"
+    ],
+    "reviewSourceId": null,
+    "schoolId": "uiuc",
+    "slug": "vantongeren-p",
+    "subjects": [
+     "CS"
+    ]
+   },
+   "rank": null,
+   "scores": {
+    "aRate": null,
+    "composite": null,
+    "confidence": "low",
+    "criticalCount": 0,
+    "deltaComparableN": 0,
+    "dfwRate": null,
+    "difficultyMean": null,
+    "gpaDelta": null,
+    "gpaMean": null,
+    "gradeRows": 0,
+    "positiveCount": 0,
+    "priorMean": 3.7,
+    "ratingRaw": null,
+    "ratingShrunk": null,
+    "reviewCount": 0,
+    "soleInstructor": false,
+    "studentsGraded": 0,
+    "wRate": null,
+    "withdrawn": 0,
+    "wouldTakeAgainPct": null,
+    "yearsActive": 0,
+    "countsAreEstimates": false
+   },
+   "sectionsThisTerm": 0,
+   "summary": null,
+   "vibeTags": []
+  }
+ ],
+ "school": {
+  "id": "uiuc",
+  "name": "University of Illinois Urbana-Champaign",
+  "shortName": "UIUC",
+  "mode": "live",
+  "currentTerm": "2026-fa",
+  "timezone": "America/Chicago",
+  "seatStatusAvailable": false,
+  "reviewsAvailable": false,
+  "gradeBuckets": "plus-minus",
+  "gradeValueKind": "counts",
+  "attribution": {
+   "grades": "Official grade distributions from the University of Illinois GPA dataset (wadefagen/datasets), compiled from Illinois public records.",
+   "schedule": "Course schedule from the UIUC Course Explorer public API (courses.illinois.edu); seat availability is not exposed."
+  },
+  "sources": {
+   "grades": "uiuc-gpa-csv",
+   "schedule": "uiuc-course-explorer",
+   "reviews": "none"
+  }
+ },
+ "scope": {
+  "kind": "subject"
+ },
+ "seatsFetchedAt": "2026-09-03T14:12:00Z",
+ "sparklineRange": [
+  2.8,
+  3.9
+ ],
+ "subject": {
+  "code": "CS",
+  "courseCount": 5,
+  "name": "Computer Science",
+  "openSectionCount": 3,
+  "professorCount": 4,
+  "schoolId": "uiuc"
+ },
+ "subjectGpaMean": 3.298,
+ "subjectWRate": 0.036,
+ "term": "2026-fa",
+ "termFallback": false
+}

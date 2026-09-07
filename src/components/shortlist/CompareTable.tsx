@@ -12,11 +12,12 @@ import { BadgeRow } from "@/components/professor/BadgeRow";
 import { VibeTags } from "@/components/professor/VibeTags";
 import { StatusChip } from "@/components/professor/StatusChip";
 import { sortSections } from "@/components/professor/OpenSectionsTable";
-import { NUMERIC_ROWS, bestIndexes, openSectionCount, type NumericRowDef } from "./compareRows";
+import { bestIndexes, numericRowsFor, openSectionCount, type NumericRowDef } from "./compareRows";
+import { resolveSchoolFlags, type SchoolLike } from "@/components/layout/schoolFlags";
 
 export interface CompareTableProps {
   details: readonly ProfessorDetail[];
-  school: Pick<School, "id" | "seatStatusAvailable">;
+  school: Pick<School, "id" | "seatStatusAvailable"> & SchoolLike;
   className?: string;
 }
 
@@ -67,6 +68,8 @@ function tooltipText(row: NumericRowDef): string {
  */
 export function CompareTable({ details, school, className }: CompareTableProps) {
   const n = details.length;
+  const { reviewsAvailable } = resolveSchoolFlags(school);
+  const rows = numericRowsFor(reviewsAvailable);
   return (
     <div className={clsx("overflow-x-auto rounded-card border border-border bg-surface-raised shadow-card", className)}>
       <table className="w-full min-w-[40rem] border-collapse text-sm" aria-label="Professor comparison">
@@ -89,7 +92,7 @@ export function CompareTable({ details, school, className }: CompareTableProps) 
           </tr>
         </thead>
         <tbody>
-          {NUMERIC_ROWS.map((row) => {
+          {rows.map((row) => {
             const values = details.map((d) => row.value(d));
             const best = new Set(bestIndexes(values, row.direction));
             return (
@@ -122,11 +125,16 @@ export function CompareTable({ details, school, className }: CompareTableProps) 
             </th>
             {details.map((d) => (
               <td key={d.professor.id} className="px-3 py-2 align-top">
-                {d.badges.length ? <BadgeRow badges={d.badges} seatStatusAvailable={school.seatStatusAvailable} /> : <span className="text-ink-faint">—</span>}
+                {d.badges.length ? (
+                  <BadgeRow badges={d.badges} seatStatusAvailable={school.seatStatusAvailable} reviewsAvailable={reviewsAvailable} gradeValueKind={school.gradeValueKind ?? "counts"} />
+                ) : (
+                  <span className="text-ink-faint">—</span>
+                )}
               </td>
             ))}
           </tr>
 
+          {reviewsAvailable ? (
           <tr className="border-b border-border/60">
             <th scope="row" className="sticky left-0 z-10 bg-surface-raised px-3 py-2 text-left font-medium text-ink">
               Vibe tags
@@ -137,7 +145,9 @@ export function CompareTable({ details, school, className }: CompareTableProps) 
               </td>
             ))}
           </tr>
+          ) : null}
 
+          {reviewsAvailable ? (
           <tr>
             <th scope="row" className="sticky left-0 z-10 bg-surface-raised px-3 py-2 text-left align-top font-medium text-ink">
               AI verdict
@@ -157,6 +167,7 @@ export function CompareTable({ details, school, className }: CompareTableProps) 
               </td>
             ))}
           </tr>
+          ) : null}
         </tbody>
       </table>
       {n < 2 ? <p className="m-0 px-3 py-2 text-xs text-ink-faint">Add another professor to compare.</p> : null}

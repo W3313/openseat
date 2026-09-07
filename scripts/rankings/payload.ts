@@ -3,7 +3,7 @@ import type { CourseRef, RankedProfessor, RankingsPayload, RankingsScope, Review
 import { courseIdSubject } from '@/lib/utils/ids';
 import { eligibleRows, subjectGpaMean, subjectWRate, type AggregateContext } from '@/lib/scoring/aggregate';
 import { priorMean } from '@/lib/scoring/rating';
-import { sectionInScope, sortRanked } from '@/lib/scoring/rank';
+import { defaultSortFor, sectionInScope, sortRanked } from '@/lib/scoring/rank';
 import type { DataIndex, ProcessedData } from './load';
 import { buildRankedProfessor, sparklineRange } from './scores';
 
@@ -46,7 +46,7 @@ export interface BuildPayloadOptions {
   generatedAt: string;
 }
 
-/** Full, unfiltered payload for one subject; `professors` sorted by the default rating order with rank null. */
+/** Full, unfiltered payload for one subject; `professors` sorted by the school's default sort (rating, or gpa in grades-only mode) with rank null. */
 export function buildSubjectPayload(data: ProcessedData, index: DataIndex, subjectCode: string, opts: BuildPayloadOptions): RankingsPayload {
   const scope: RankingsScope = { kind: 'subject' };
   const ctx: AggregateContext = { allRows: data.grades, courses: data.courses, scope, subject: subjectCode };
@@ -62,7 +62,7 @@ export function buildSubjectPayload(data: ProcessedData, index: DataIndex, subje
     const sections: Section[] = (index.sectionsByProfessor.get(pid) ?? []).filter((s) => sectionInScope(s, scope, subjectCode));
     return buildRankedProfessor({ data, index, professorId: pid, ctx, sections, prior, subjectWRate: wRate });
   });
-  const ordered = sortRanked(professors, 'rating');
+  const ordered = sortRanked(professors, defaultSortFor(data.school));
 
   const subject: Subject = data.subjects.find((s) => s.code === subjectCode) ?? {
     schoolId: data.school.id,

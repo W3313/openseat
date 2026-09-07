@@ -6,18 +6,21 @@ export interface SubjectStatStripProps {
   subjectGpaMean: number | null;
   totals: RankingsTotals;
   seatStatusAvailable?: boolean;
+  /** Grades-only schools have no review count to show. Default true. */
+  reviewsAvailable?: boolean;
   className?: string;
 }
 
-/** "avg GPA 3.30 · 3 ranked · 3 open sections · 31 reviews" (pure; SPEC 3.2 item 2). */
+/** "avg GPA 3.30 · 3 ranked · 3 open sections · 31 reviews" (pure; SPEC 3.2 item 2). Grades-only drops the reviews item. */
 export function subjectStatItems(props: Omit<SubjectStatStripProps, "className">): string[] {
   const sectionsWord = props.seatStatusAvailable === false ? "offered section" : "open section";
-  return [
+  const items = [
     `avg GPA ${formatGpa(props.subjectGpaMean)}`,
     `${formatNumber(props.totals.ranked)} ranked`,
     pluralize(props.totals.openSections, sectionsWord),
-    pluralize(props.totals.reviews, "review"),
   ];
+  if (props.reviewsAvailable !== false) items.push(pluralize(props.totals.reviews, "review"));
+  return items;
 }
 
 export function SubjectStatStrip({ className, ...rest }: SubjectStatStripProps) {

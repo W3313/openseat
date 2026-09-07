@@ -1,8 +1,9 @@
-// Deterministic JSON for every file under data/processed/ (SPEC 5, 6.5, risk #17):
-// sorted object keys, 2-space indent, non-integer numbers rounded to 3 decimals, non-finite → null.
+// Deterministic JSON for every file under data/processed/ (SPEC 5, 6.5, risk #17; MULTI_SCHOOL_DESIGN §3):
+// sorted object keys, COMPACT by default (indent 0 — processed output is committed and size-budgeted),
+// non-integer numbers rounded to 3 decimals, non-finite → null. Pass { indent: 2 } for human-facing files.
 
 export interface StableStringifyOptions {
-  /** Indentation passed to JSON.stringify (default 2). */
+  /** Indentation passed to JSON.stringify (default 0 = compact). */
   indent?: number;
   /** Decimal places non-integer numbers are rounded to (default 3). */
   decimals?: number;
@@ -64,11 +65,11 @@ function normalizeValue(value: unknown, decimals: number, seen: WeakSet<object>)
 }
 
 /**
- * JSON.stringify with sorted keys, 2-space indent and floats rounded to 3 dp. No trailing newline —
- * writers append one so committed files end with "\n".
+ * JSON.stringify with sorted keys, compact output (indent 0) and floats rounded to 3 dp. No trailing
+ * newline — writers append one so committed files end with "\n".
  */
 export function stableStringify(value: unknown, options: StableStringifyOptions = {}): string {
-  const { indent = 2, decimals = 3 } = options;
+  const { indent = 0, decimals = 3 } = options;
   const normalized = normalizeValue(value, decimals, new WeakSet());
   return JSON.stringify(normalized === undefined ? null : normalized, null, indent);
 }

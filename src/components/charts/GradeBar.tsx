@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import type { GradeBuckets } from "@/lib/domain/types";
 import { formatNumber } from "@/lib/utils/format";
+import type { GradeBucketKind, GradeValueKind } from "@/components/layout/schoolFlags";
 
 /**
  * Stacked grade-distribution bar (SPEC F4, 3.0). Hand-rolled SVG, SSR-safe, no
@@ -10,6 +11,9 @@ import { formatNumber } from "@/lib/utils/format";
  * Okabe–Ito palette from globals.css (`--color-grade-*`). The SVG carries
  * `role="img"` + `aria-label`; a visually-hidden `<table>` lists the counts.
  * Each segment has a native `<title>` and a text label revealed on hover/focus.
+ *
+ * `bucketKind` (design §4, `School.gradeBuckets`): a letter-only source never
+ * shows empty +/- (or W) entries in the legend and the sr-only table.
  */
 
 export type GradeSegmentId = "aPlus" | "a" | "aMinus" | "b" | "c" | "d" | "f" | "w";
@@ -43,6 +47,13 @@ const SEGMENT_DEFS: readonly {
   { id: "w", label: "W", keys: ["w"], color: "var(--color-grade-w)", lightFill: false },
 ];
 
+/** Segments a source without +/- (or without W) never fills; hidden from the legend when they are empty. */
+const HIDDEN_WHEN_EMPTY: Record<GradeBucketKind, readonly GradeSegmentId[]> = {
+  "plus-minus": [],
+  "letter-with-w": ["aPlus", "aMinus"],
+  "letter-only": ["aPlus", "aMinus", "w"],
+};
+
 /** Collapse the 14 raw buckets into the 8 displayed segments (pure; exported for the OG image / tests). */
 export function gradeSegments(buckets: GradeBuckets): GradeSegment[] {
   const total = Object.values(buckets).reduce((s, n) => s + (Number.isFinite(n) ? n : 0), 0);
@@ -59,15 +70,33 @@ export function gradeSegments(buckets: GradeBuckets): GradeSegment[] {
   });
 }
 
+/** Legend/table rows for a bucket kind: +/- (and W for letter-only) drop out when the source never fills them. */
+export function visibleSegments(segments: readonly GradeSegment[], bucketKind: GradeBucketKind = "plus-minus"): GradeSegment[] {
+  const hidden = new Set<GradeSegmentId>(HIDDEN_WHEN_EMPTY[bucketKind] ?? []);
+  return segments.filter((s) => !(hidden.has(s.id) && s.count === 0));
+}
+
 function pct(share: number, dp = 0): string {
   return `${(share * 100).toFixed(dp)}%`;
 }
 
-/** "Grade distribution for 1,313 students: A+ 6%, A 22%, …" */
-export function gradeBarAriaLabel(segments: readonly GradeSegment[], total: number, subject?: string): string {
+/**
+ * Percent-only rows (design §4.1) are scaled to 100 per section, so a summed distribution's total is
+ * 100 × sections; the head count is unknown and must never be quoted.
+ */
+export function sectionsFromTotal(total: number): number {
+  return Math.max(1, Math.round(total / 100));
+}
+
+/** "Grade distribution for 1,313 students: A+ 6%, A 22%, …" — or "…, 12 sections: …" for percent-only sources. */
+export function gradeBarAriaLabel(segments: readonly GradeSegment[], total: number, subject?: string, valueKind: GradeValueKind = "counts"): string {
   const parts = segments.filter((s) => s.count > 0).map((s) => `${s.label} ${pct(s.share)}`);
   const who = subject ? ` for ${subject}` : "";
-  if (total === 0) return `Grade distribution${who}: no graded students`;
+  if (total === 0) return `Grade distribution${who}: no graded ${valueKind === "percent" ? "sections" : "students"}`;
+  if (valueKind === "percent") {
+    const n = sectionsFromTotal(total);
+    return `Grade distribution${who}, ${formatNumber(n)} ${n === 1 ? "section" : "sections"}: ${parts.join(", ")}`;
+  }
   return `Grade distribution${who}, ${formatNumber(total)} students: ${parts.join(", ")}`;
 }
 
@@ -77,17 +106,23 @@ export interface GradeBarProps {
   height?: number;
   /** Names the subject of the bar in the aria-label, e.g. the professor's name. */
   subject?: string;
-  /** Render the 8-item colour legend under the bar. Default false. */
+  /** Render the colour legend under the bar. Default false. */
   legend?: boolean;
+  /** `School.gradeBuckets`: which segments the source can fill (design §4). Default "plus-minus". */
+  bucketKind?: GradeBucketKind;
   /** Segments become keyboard-focusable so the hover label can be reached by keyboard. Default false (the sr-only table already exposes every count); opt in where one bar is the subject of the page. */
   focusable?: boolean;
+  /** `School.gradeValueKind` (design §4.1): "percent" → the label says sections and segment titles/sr table show shares only. Default "counts". */
+  valueKind?: GradeValueKind;
   className?: string;
 }
 
-export function GradeBar({ buckets, height = 14, subject, legend = false, focusable = false, className }: GradeBarProps) {
+export function GradeBar({ buckets, height = 14, subject, legend = false, bucketKind = "plus-minus", focusable = false, valueKind = "counts", className }: GradeBarProps) {
   const segments = gradeSegments(buckets);
+  const listed = visibleSegments(segments, bucketKind);
   const total = segments.reduce((s, x) => s + x.count, 0);
-  const ariaLabel = gradeBarAriaLabel(segments, total, subject);
+  const percent = valueKind === "percent";
+  const ariaLabel = gradeBarAriaLabel(segments, total, subject, valueKind);
   const labelHeight = 16;
   const svgHeight = height + labelHeight;
 
@@ -124,7 +159,7 @@ export function GradeBar({ buckets, height = 14, subject, legend = false, focusa
           if (seg.count === 0) return null;
           const x = offsets[i];
           const mid = x + seg.share / 2;
-          const title = `${seg.label}: ${formatNumber(seg.count)} students (${pct(seg.share, 1)})`;
+          const title = percent ? `${seg.label}: ${pct(seg.share, 1)} of sections' grades` : `${seg.label}: ${formatNumber(seg.count)} students (${pct(seg.share, 1)})`;
           return (
             <g
               key={seg.id}
@@ -157,8 +192,8 @@ export function GradeBar({ buckets, height = 14, subject, legend = false, focusa
         })}
       </svg>
       {legend ? (
-        <ul aria-hidden="true" className="flex flex-wrap gap-x-3 gap-y-1 text-[0.7rem] text-ink-muted">
-          {segments.map((seg) => (
+        <ul aria-hidden="true" data-testid="grade-legend" className="flex flex-wrap gap-x-3 gap-y-1 text-[0.7rem] text-ink-muted">
+          {listed.map((seg) => (
             <li key={seg.id} className="inline-flex items-center gap-1">
               <span className="inline-block h-2.5 w-2.5 rounded-sm" style={{ background: seg.color }} />
               {seg.label} {pct(seg.share)}
@@ -171,15 +206,15 @@ export function GradeBar({ buckets, height = 14, subject, legend = false, focusa
         <thead>
           <tr>
             <th scope="col">Grade</th>
-            <th scope="col">Students</th>
-            <th scope="col">Share</th>
+            {percent ? null : <th scope="col">Students</th>}
+            <th scope="col">{percent ? "Share of sections' grades" : "Share"}</th>
           </tr>
         </thead>
         <tbody>
-          {segments.map((seg) => (
+          {listed.map((seg) => (
             <tr key={seg.id}>
               <th scope="row">{seg.label}</th>
-              <td>{formatNumber(seg.count)}</td>
+              {percent ? null : <td>{formatNumber(seg.count)}</td>}
               <td>{pct(seg.share, 1)}</td>
             </tr>
           ))}

@@ -1,18 +1,29 @@
-export type SchoolId = 'uiuc';                       // widen when a second school ships
+/** Any registered school id (MULTI_SCHOOL_DESIGN §2); validated at runtime by `toSchoolId()` in src/lib/config/schools. */
+export type SchoolId = string;
 export type Season = 'wi' | 'sp' | 'su' | 'fa';
 export type TermCode = `${number}-${Season}`;        // "2026-fa" — same as the CSV YearTerm column
 export type DataMode = 'demo' | 'live';
 export type SortKey = 'rating' | 'overall' | 'gpa' | 'reviews';
 export type Day = 'M' | 'T' | 'W' | 'R' | 'F' | 'S' | 'U';
 
+/** What the grade source publishes; drives the GradeBar legend (MULTI_SCHOOL_DESIGN §4). */
+export type GradeBucketKind = 'plus-minus' | 'letter-only' | 'letter-with-w';
+/** counts = real student counts; percent = per-section percentages (§4.1: "N sections", never "N students"). */
+export type GradeValueKind = 'counts' | 'percent';
+
 export interface School {
   id: SchoolId;
   name: string;                                      // "University of Illinois Urbana-Champaign"
   shortName: string;                                 // "UIUC"
+  mode: DataMode;                                    // per school (MULTI_SCHOOL_DESIGN §2); 'demo' only for the fictional school
   currentTerm: TermCode;                             // the term rankings are built for
   timezone: string;                                  // "America/Chicago" — all meeting times & stamps display in this zone
   seatStatusAvailable: boolean;                      // demo: true; real Course Explorer: false (no seat data in the API)
-  sources: { grades: string; schedule: string; reviews: string };   // adapter ids, e.g. "uiuc-gpa-csv" | "demo-grades"
+  reviewsAvailable: boolean;                         // false for every real school → grades-only mode (MULTI_SCHOOL_DESIGN §5)
+  gradeBuckets: GradeBucketKind;                     // legend shape (§4)
+  gradeValueKind: GradeValueKind;                    // wording: students vs sections (§4.1)
+  attribution: { grades: string; schedule?: string };   // footer / about text (§2)
+  sources: { grades: string; schedule: string; reviews: string };   // adapter ids, e.g. "uiuc-gpa-csv" | "demo-grades"; 'none' when absent
 }
 
 export interface Subject {
@@ -40,7 +51,8 @@ export const TA_SCHED_TYPES: ReadonlySet<string> = new Set(['DIS', 'LAB', 'LBD',
 
 export type MatchMethod =
   | 'alias' | 'exact' | 'first-token' | 'initial' | 'nickname' | 'compound-last' | 'fuzzy'
-  | 'ambiguous' | 'unmatched' | 'blocked';
+  | 'ambiguous' | 'unmatched' | 'blocked'
+  | 'grades-only';                                   // a grade string with no reviewed match became (or merged into) its own grades-only professor
 
 export interface NameKey {
   raw: string;                                       // trimmed original, e.g. "Okonkwo, Adaeze M"
@@ -61,7 +73,7 @@ export interface GradeRow {                          // one CSV row = one (term,
   schedType: string;                                 // upper-cased; '' → 'UNKNOWN'
   isHeadline: boolean;                               // !TA_SCHED_TYPES.has(schedType)
   instructorRaw: string;                             // exactly as in source (trimmed); '' when the CSV cell is empty
-  nameKey: NameKey | null;                           // null when instructorRaw is '' or blocked
+  nameKey?: NameKey | null;                          // null when instructorRaw is '' or blocked; OMITTED in grades/<SUBJECT>.json (derivable: parseName(instructorRaw)) to stay in the §6 size budget
   professorId: string | null;                        // null when unmatched/ambiguous/blocked/empty
   matchMethod: MatchMethod; matchScore: number;      // 0 when no match
   buckets: GradeBuckets;
@@ -70,6 +82,10 @@ export interface GradeRow {                          // one CSV row = one (term,
   students: number;                                  // graded + withdrawn (= CSV Students)
   gpa: number | null;                                // null when graded === 0
   suppressed: boolean;                               // graded < MIN_GRADED_N → excluded from every aggregate, kept for provenance
+  percentOnly?: boolean;                             // §4.1: buckets are percentages scaled to 100; graded = 100; counts are not students
+  weight?: number;                                   // §4.1: aggregation weight (default 1); percent-only sections weigh 1 each
+  sourceGpa?: number | null;                         // §4.1: avgGPA column as published by the source (display only; GPA is recomputed)
+  bucketPrecision?: 'exact' | 'coarse';              // §4: 'coarse' when AB/BC-style letters were split across adjacent buckets
 }
 
 export type SectionStatus =
@@ -148,6 +164,7 @@ export interface ProfessorScores {
   gpaDelta: number | null; deltaComparableN: number; soleInstructor: boolean;   // Section 8.3
   composite: number | null;                          // 0..100, null when ratingShrunk is null
   yearsActive: number;                               // distinct years with headline rows
+  countsAreEstimates: boolean;                       // §4.1: true when every row is percent-only → studentsGraded/withdrawn are not real counts; gradeRows = sections
 }
 
 export interface GpaPoint { year: number; gpa: number; n: number; }
@@ -160,6 +177,7 @@ export interface CourseBreakdown {
   delta: number | null;                              // gpa − baselineGpa; null when baselineN < MIN_BASELINE_N or gpa null
   buckets: GradeBuckets;
   isHeadline: boolean;                               // false → TA sched types only (detail toggle)
+  sourceGpa?: number | null;                         // §4.1: graded-weighted mean of the rows' published avgGPA (UH, UCSB); absent when no row carries one
 }
 
 export interface MatchProvenance {
@@ -234,15 +252,23 @@ export interface ProfessorDetail {
 }
 
 export interface MatchReportEntry {
-  instructorRaw: string; source: 'grades' | 'schedule'; subject: string;
-  method: MatchMethod; score: number; professorId: string | null; rows: number;
+  instructorRaw: string; source: 'grades' | 'schedule';
+  subjects: string[];                                // every subject the string was resolved in (sorted); the same outcome in each
+  method: MatchMethod; score: number; professorId: string | null; rows: number;   // rows summed over subjects
   candidates: { professorId: string; score: number; method: MatchMethod }[];   // top ≤ 3
 }
 export interface MatchReport {
   generatedAt: string;
-  coverage: { distinctStrings: number; matched: number; ambiguous: number; unmatched: number; blocked: number;
-              byMethod: Record<MatchMethod, number>; sectionsLinked: number; sectionsTotal: number; matchRate: number };
-  entries: MatchReportEntry[];                       // every distinct (source, instructorRaw)
+  coverage: {
+    distinctStrings: number;                         // = entries.length = matched + gradesOnly + ambiguous + unmatched (blocked strings are not entries)
+    matched: number;                                 // linked to a reviewed professor (grades) or to any professor (schedule)
+    gradesOnly: number;                              // grade strings that became their own grades-only professor
+    ambiguous: number; unmatched: number; blocked: number;
+    byMethod: Record<MatchMethod, number>; sectionsLinked: number; sectionsTotal: number;
+    /** With reviews: matched / distinctStrings. Grades-only school: sectionsLinked / sectionsTotal (null when no schedule). */
+    matchRate: number | null;
+  };
+  entries: MatchReportEntry[];                       // one per distinct (source, instructorRaw, outcome); a string resolving differently per subject appears once per outcome
 }
 
 export interface MetaCounts {
@@ -258,4 +284,7 @@ export interface Meta {
   counts: MetaCounts;
   sources: { id: string; label: string; url: string | null; license: string | null; fetchedAt: string; recordCount: number }[];
   edgeCases: string[];                               // demo only: labels of the deliberate edge cases planted by the seed (Section 6.5); [] in live mode
+  subjects?: string[];                               // MULTI_SCHOOL_DESIGN §6: the subject allowlist this dataset was ingested with
+  excludedGradeCodes?: Record<string, number>;       // §4: source grade codes excluded from `graded` (I, S/U, P/NP, AU …) with row counts
+  droppedRows?: number;                              // §4: source rows dropped (e.g. percentages without enrollment)
 }

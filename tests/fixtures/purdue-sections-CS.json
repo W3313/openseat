@@ -1,0 +1,699 @@
+{
+ "@odata.context": "http://api.purdue.io/odata/$metadata#Sections",
+ "value": [
+  {
+   "Id": "007ed968-4abb-4967-9c2f-0da4240e3ad7",
+   "Crn": "30809",
+   "ClassId": "1119af2a-9d48-4510-91db-fc44be72f5fb",
+   "Type": "Practice Study Observation",
+   "StartDate": "2026-08-24",
+   "EndDate": "2026-12-12",
+   "Class": {
+    "Id": "1119af2a-9d48-4510-91db-fc44be72f5fb",
+    "CourseId": "70e36f93-1547-4d97-a288-626a64e5f011",
+    "TermId": "5e537142-c1dc-460a-b432-f37e4b4d5e46",
+    "CampusId": "eb70e97b-3583-4ac9-86e5-468ad3869de8",
+    "Course": {
+     "Id": "70e36f93-1547-4d97-a288-626a64e5f011",
+     "Number": "19300",
+     "SubjectId": "86ad8a59-6ddc-4067-9f6b-169c8eec86a6",
+     "Title": "Tools",
+     "CreditHours": 1.0,
+     "Description": "",
+     "Subject": {
+      "Id": "86ad8a59-6ddc-4067-9f6b-169c8eec86a6",
+      "Name": "Computer Sciences",
+      "Abbreviation": "CS"
+     }
+    }
+   },
+   "Meetings": [
+    {
+     "Id": "080018b8-525b-4f1f-b90d-1b2e999e8d9a",
+     "SectionId": "007ed968-4abb-4967-9c2f-0da4240e3ad7",
+     "Type": "Practice Study Observation",
+     "StartDate": "2026-08-24",
+     "EndDate": "2026-12-12",
+     "DaysOfWeek": "Tuesday",
+     "StartTime": "14:30:00.0000000",
+     "Duration": "PT50M",
+     "RoomId": null,
+     "Instructors": [
+      {
+       "Id": "2a730261-0ddd-4261-bc03-2acd67e575b3",
+       "Name": "Mei-Lin R. Petrescu",
+       "Email": "meilinrp@example.edu"
+      },
+      {
+       "Id": "c3225085-600b-4a4a-bffd-f63ed115efa0",
+       "Name": "Hakim Tsao",
+       "Email": "hakimtsa@example.edu"
+      },
+      {
+       "Id": "d108f877-0a58-4106-8497-50d46f58722b",
+       "Name": "Ingrid Lindqvist",
+       "Email": "ingridli@example.edu"
+      }
+     ],
+     "Room": {
+      "Id": null,
+      "Number": "B155",
+      "BuildingId": null,
+      "Building": {
+       "Id": null,
+       "Name": "Lawson Computer Science Bldg",
+       "ShortCode": "LWSN"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "Id": "00dee69a-74ba-4faf-8eb5-4f6e3f87e577",
+   "Crn": "34199",
+   "ClassId": "15c5ac4b-b98a-49ee-b4b0-fc461ca4662f",
+   "Type": "Individual Study",
+   "StartDate": "2026-08-24",
+   "EndDate": "2026-12-12",
+   "Class": {
+    "Id": "15c5ac4b-b98a-49ee-b4b0-fc461ca4662f",
+    "CourseId": "46195cf6-46e5-4089-97d2-27f67ae4ce91",
+    "TermId": "5e537142-c1dc-460a-b432-f37e4b4d5e46",
+    "CampusId": "eb70e97b-3583-4ac9-86e5-468ad3869de8",
+    "Course": {
+     "Id": "46195cf6-46e5-4089-97d2-27f67ae4ce91",
+     "Number": "49000",
+     "SubjectId": "86ad8a59-6ddc-4067-9f6b-169c8eec86a6",
+     "Title": "Spatial Omics Deep Learning",
+     "CreditHours": 0.0,
+     "Description": "",
+     "Subject": {
+      "Id": "86ad8a59-6ddc-4067-9f6b-169c8eec86a6",
+      "Name": "Computer Sciences",
+      "Abbreviation": "CS"
+     }
+    }
+   },
+   "Meetings": [
+    {
+     "Id": "1b923354-01d3-4c29-b323-a7fe725353b2",
+     "SectionId": "00dee69a-74ba-4faf-8eb5-4f6e3f87e577",
+     "Type": "Individual Study",
+     "StartDate": "2026-08-24",
+     "EndDate": "2026-12-12",
+     "DaysOfWeek": "None",
+     "StartTime": null,
+     "Duration": "PT0S",
+     "RoomId": null,
+     "Instructors": [
+      {
+       "Id": "3a787688-7d46-46d3-956c-1301c5e3d246",
+       "Name": "Rafael A. Brandt",
+       "Email": "rafaelab@example.edu"
+      }
+     ],
+     "Room": {
+      "Id": null,
+      "Number": "TBA",
+      "BuildingId": null,
+      "Building": {
+       "Id": null,
+       "Name": "TBA",
+       "ShortCode": "TBA"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "Id": "00ec3a1d-5a3a-4b8f-a719-0c0f6d0284a7",
+   "Crn": "13146",
+   "ClassId": "86013334-9557-41f8-b3ea-42ac16cbaa77",
+   "Type": "Lecture",
+   "StartDate": "2026-08-24",
+   "EndDate": "2026-12-12",
+   "Class": {
+    "Id": "86013334-9557-41f8-b3ea-42ac16cbaa77",
+    "CourseId": "69dd67ff-3bca-459c-9411-310b95a90568",
+    "TermId": "5e537142-c1dc-460a-b432-f37e4b4d5e46",
+    "CampusId": "eb70e97b-3583-4ac9-86e5-468ad3869de8",
+    "Course": {
+     "Id": "69dd67ff-3bca-459c-9411-310b95a90568",
+     "Number": "18200",
+     "SubjectId": "86ad8a59-6ddc-4067-9f6b-169c8eec86a6",
+     "Title": "Foundations Of Computer Science",
+     "CreditHours": 3.0,
+     "Description": "",
+     "Subject": {
+      "Id": "86ad8a59-6ddc-4067-9f6b-169c8eec86a6",
+      "Name": "Computer Sciences",
+      "Abbreviation": "CS"
+     }
+    }
+   },
+   "Meetings": [
+    {
+     "Id": "d16525f6-a87a-4684-aace-abf34fb5bba1",
+     "SectionId": "00ec3a1d-5a3a-4b8f-a719-0c0f6d0284a7",
+     "Type": "Lecture",
+     "StartDate": "2026-08-24",
+     "EndDate": "2026-12-12",
+     "DaysOfWeek": "Monday, Wednesday, Friday",
+     "StartTime": "13:30:00.0000000",
+     "Duration": "PT50M",
+     "RoomId": null,
+     "Instructors": [
+      {
+       "Id": "a3c303ba-2599-4def-a4fe-bbc9f667bde1",
+       "Name": "Yuki Asante",
+       "Email": "yukiasan@example.edu"
+      }
+     ],
+     "Room": {
+      "Id": null,
+      "Number": "B155",
+      "BuildingId": null,
+      "Building": {
+       "Id": null,
+       "Name": "Lawson Computer Science Bldg",
+       "ShortCode": "LWSN"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "Id": "010d7a9c-c5a1-463d-9201-0237df1b0914",
+   "Crn": "15069",
+   "ClassId": "eee65490-510d-465d-8a02-8e7e6310bc0e",
+   "Type": "Lecture",
+   "StartDate": "2026-08-24",
+   "EndDate": "2026-12-12",
+   "Class": {
+    "Id": "eee65490-510d-465d-8a02-8e7e6310bc0e",
+    "CourseId": "62f8d853-d9b5-40d2-8722-fed417ea9ad9",
+    "TermId": "5e537142-c1dc-460a-b432-f37e4b4d5e46",
+    "CampusId": "eb70e97b-3583-4ac9-86e5-468ad3869de8",
+    "Course": {
+     "Id": "62f8d853-d9b5-40d2-8722-fed417ea9ad9",
+     "Number": "47800",
+     "SubjectId": "86ad8a59-6ddc-4067-9f6b-169c8eec86a6",
+     "Title": "Introduction To Bioinformatics",
+     "CreditHours": 3.0,
+     "Description": "",
+     "Subject": {
+      "Id": "86ad8a59-6ddc-4067-9f6b-169c8eec86a6",
+      "Name": "Computer Sciences",
+      "Abbreviation": "CS"
+     }
+    }
+   },
+   "Meetings": [
+    {
+     "Id": "d6e73653-8baa-4eae-be81-826de2d3f86e",
+     "SectionId": "010d7a9c-c5a1-463d-9201-0237df1b0914",
+     "Type": "Lecture",
+     "StartDate": "2026-08-24",
+     "EndDate": "2026-12-12",
+     "DaysOfWeek": "Monday, Wednesday, Friday",
+     "StartTime": "12:30:00.0000000",
+     "Duration": "PT50M",
+     "RoomId": null,
+     "Instructors": [
+      {
+       "Id": "7c4dbd62-dc0b-4f44-9943-069c8b6399ab",
+       "Name": "Bartholomew Wierzbicki",
+       "Email": "bartholo@example.edu"
+      }
+     ],
+     "Room": {
+      "Id": null,
+      "Number": "B155",
+      "BuildingId": null,
+      "Building": {
+       "Id": null,
+       "Name": "Lawson Computer Science Bldg",
+       "ShortCode": "LWSN"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "Id": "01685d88-e261-46ad-b386-e01b0608ad6d",
+   "Crn": "10556",
+   "ClassId": "a4c9abae-9f9d-4884-855c-9e71287a6b63",
+   "Type": "Lecture",
+   "StartDate": "2026-08-24",
+   "EndDate": "2026-12-12",
+   "Class": {
+    "Id": "a4c9abae-9f9d-4884-855c-9e71287a6b63",
+    "CourseId": "d834f136-4366-4d65-b34d-3fefdc51a684",
+    "TermId": "5e537142-c1dc-460a-b432-f37e4b4d5e46",
+    "CampusId": "510966f3-1e45-47f8-b5fa-afbd3abcc23d",
+    "Course": {
+     "Id": "d834f136-4366-4d65-b34d-3fefdc51a684",
+     "Number": "38100",
+     "SubjectId": "86ad8a59-6ddc-4067-9f6b-169c8eec86a6",
+     "Title": "Introduction To The Analysis Of Algorithms",
+     "CreditHours": 3.0,
+     "Description": "",
+     "Subject": {
+      "Id": "86ad8a59-6ddc-4067-9f6b-169c8eec86a6",
+      "Name": "Computer Sciences",
+      "Abbreviation": "CS"
+     }
+    }
+   },
+   "Meetings": [
+    {
+     "Id": "233f39a1-0bca-4868-90db-ef4a13e7484b",
+     "SectionId": "01685d88-e261-46ad-b386-e01b0608ad6d",
+     "Type": "Lecture",
+     "StartDate": "2026-08-24",
+     "EndDate": "2026-12-12",
+     "DaysOfWeek": "Monday, Wednesday",
+     "StartTime": "16:30:00.0000000",
+     "Duration": "PT1H15M",
+     "RoomId": null,
+     "Instructors": [
+      {
+       "Id": "9c0ae171-10db-474b-99c4-4f6e389c7069",
+       "Name": "Nkechi J. Quennell",
+       "Email": "nkechijq@example.edu"
+      }
+     ],
+     "Room": {
+      "Id": null,
+      "Number": "B155",
+      "BuildingId": null,
+      "Building": {
+       "Id": null,
+       "Name": "Lawson Computer Science Bldg",
+       "ShortCode": "LWSN"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "Id": "03fe9088-fdeb-437f-ab08-b7a0f8340b4a",
+   "Crn": "12667",
+   "ClassId": "2d18f028-18ac-43ac-bab6-09f898853b10",
+   "Type": "Lecture",
+   "StartDate": "2026-08-24",
+   "EndDate": "2026-12-12",
+   "Class": {
+    "Id": "2d18f028-18ac-43ac-bab6-09f898853b10",
+    "CourseId": "12135e7b-5f67-4342-abe8-3a043234dd82",
+    "TermId": "5e537142-c1dc-460a-b432-f37e4b4d5e46",
+    "CampusId": "eb70e97b-3583-4ac9-86e5-468ad3869de8",
+    "Course": {
+     "Id": "12135e7b-5f67-4342-abe8-3a043234dd82",
+     "Number": "50500",
+     "SubjectId": "86ad8a59-6ddc-4067-9f6b-169c8eec86a6",
+     "Title": "Distributed Systems",
+     "CreditHours": 3.0,
+     "Description": "Non-CS students will not be able to register until Jan 1st. DO NOT contact the instructor. Students should submit their course request via Scheduling Assistant in their MyPurdue after Jan 1st. All requests are subject to space availability.",
+     "Subject": {
+      "Id": "86ad8a59-6ddc-4067-9f6b-169c8eec86a6",
+      "Name": "Computer Sciences",
+      "Abbreviation": "CS"
+     }
+    }
+   },
+   "Meetings": [
+    {
+     "Id": "3c1b2ab3-676e-4513-bfb5-98500cb53b99",
+     "SectionId": "03fe9088-fdeb-437f-ab08-b7a0f8340b4a",
+     "Type": "Lecture",
+     "StartDate": "2026-08-24",
+     "EndDate": "2026-12-12",
+     "DaysOfWeek": "Tuesday, Thursday",
+     "StartTime": "13:30:00.0000000",
+     "Duration": "PT1H15M",
+     "RoomId": null,
+     "Instructors": [
+      {
+       "Id": "0b059353-d933-4865-8f45-0543bf500b9c",
+       "Name": "Soren de la Cruz",
+       "Email": "sorendel@example.edu"
+      }
+     ],
+     "Room": {
+      "Id": null,
+      "Number": "B155",
+      "BuildingId": null,
+      "Building": {
+       "Id": null,
+       "Name": "Lawson Computer Science Bldg",
+       "ShortCode": "LWSN"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "Id": "05c5b968-50b7-4ce0-8b69-4172ec8e3dff",
+   "Crn": "13209",
+   "ClassId": "195cfccd-5632-428a-b6bf-d08cecd645b5",
+   "Type": "Lecture",
+   "StartDate": "2026-08-24",
+   "EndDate": "2026-12-12",
+   "Class": {
+    "Id": "195cfccd-5632-428a-b6bf-d08cecd645b5",
+    "CourseId": "7c87d734-e56b-4858-ae96-46e8f4459dfc",
+    "TermId": "5e537142-c1dc-460a-b432-f37e4b4d5e46",
+    "CampusId": "eb70e97b-3583-4ac9-86e5-468ad3869de8",
+    "Course": {
+     "Id": "7c87d734-e56b-4858-ae96-46e8f4459dfc",
+     "Number": "25000",
+     "SubjectId": "86ad8a59-6ddc-4067-9f6b-169c8eec86a6",
+     "Title": "Computer Architecture",
+     "CreditHours": 4.0,
+     "Description": "",
+     "Subject": {
+      "Id": "86ad8a59-6ddc-4067-9f6b-169c8eec86a6",
+      "Name": "Computer Sciences",
+      "Abbreviation": "CS"
+     }
+    }
+   },
+   "Meetings": [
+    {
+     "Id": "13685f45-26e7-4dc8-b99b-556399077147",
+     "SectionId": "05c5b968-50b7-4ce0-8b69-4172ec8e3dff",
+     "Type": "Lecture",
+     "StartDate": "2026-08-24",
+     "EndDate": "2026-12-12",
+     "DaysOfWeek": "Monday, Wednesday, Friday",
+     "StartTime": "09:30:00.0000000",
+     "Duration": "PT50M",
+     "RoomId": null,
+     "Instructors": [
+      {
+       "Id": "1a5b7976-91f1-44e4-854c-c75577e0c42e",
+       "Name": "Priya Iyer",
+       "Email": "priyaiye@example.edu"
+      }
+     ],
+     "Room": {
+      "Id": null,
+      "Number": "B155",
+      "BuildingId": null,
+      "Building": {
+       "Id": null,
+       "Name": "Lawson Computer Science Bldg",
+       "ShortCode": "LWSN"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "Id": "07e9a487-cb76-4636-82b9-05f5ccd1d750",
+   "Crn": "17268",
+   "ClassId": "b5447900-df09-4ed1-bc2f-f58d8e403894",
+   "Type": "Lecture",
+   "StartDate": "2026-10-21",
+   "EndDate": "2026-12-12",
+   "Class": {
+    "Id": "b5447900-df09-4ed1-bc2f-f58d8e403894",
+    "CourseId": "d56239aa-57ac-4df9-8750-c03b992e8c67",
+    "TermId": "5e537142-c1dc-460a-b432-f37e4b4d5e46",
+    "CampusId": "eb70e97b-3583-4ac9-86e5-468ad3869de8",
+    "Course": {
+     "Id": "d56239aa-57ac-4df9-8750-c03b992e8c67",
+     "Number": "59100",
+     "SubjectId": "86ad8a59-6ddc-4067-9f6b-169c8eec86a6",
+     "Title": "Res Sem First Yr Gr Student",
+     "CreditHours": 1.0,
+     "Description": "",
+     "Subject": {
+      "Id": "86ad8a59-6ddc-4067-9f6b-169c8eec86a6",
+      "Name": "Computer Sciences",
+      "Abbreviation": "CS"
+     }
+    }
+   },
+   "Meetings": [
+    {
+     "Id": "5306adeb-848b-4e02-a211-6f979a6b0dc8",
+     "SectionId": "07e9a487-cb76-4636-82b9-05f5ccd1d750",
+     "Type": "Lecture",
+     "StartDate": "2026-10-21",
+     "EndDate": "2026-12-12",
+     "DaysOfWeek": "Monday, Wednesday",
+     "StartTime": "15:30:00.0000000",
+     "Duration": "PT50M",
+     "RoomId": null,
+     "Instructors": [
+      {
+       "Id": "27ac2702-a127-4b0d-9564-126dc0775040",
+       "Name": "Dmitri S. Dahl",
+       "Email": "dmitrisd@example.edu"
+      }
+     ],
+     "Room": {
+      "Id": null,
+      "Number": "B155",
+      "BuildingId": null,
+      "Building": {
+       "Id": null,
+       "Name": "Lawson Computer Science Bldg",
+       "ShortCode": "LWSN"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "Id": "084a660f-6b0a-4f2f-8af1-8a9668847bd3",
+   "Crn": "23899",
+   "ClassId": "325c592b-7aaa-4400-8d54-36ed1c58675b",
+   "Type": "Lecture",
+   "StartDate": "2026-08-24",
+   "EndDate": "2026-12-12",
+   "Class": {
+    "Id": "325c592b-7aaa-4400-8d54-36ed1c58675b",
+    "CourseId": "9a2ffab0-3616-46fe-994e-24a935ba6d9a",
+    "TermId": "5e537142-c1dc-460a-b432-f37e4b4d5e46",
+    "CampusId": "eb70e97b-3583-4ac9-86e5-468ad3869de8",
+    "Course": {
+     "Id": "9a2ffab0-3616-46fe-994e-24a935ba6d9a",
+     "Number": "15900",
+     "SubjectId": "86ad8a59-6ddc-4067-9f6b-169c8eec86a6",
+     "Title": "C Programming",
+     "CreditHours": 3.0,
+     "Description": "Supplemental Instruction (SI) study sessions are available for students in this course. Evening Exams Required.",
+     "Subject": {
+      "Id": "86ad8a59-6ddc-4067-9f6b-169c8eec86a6",
+      "Name": "Computer Sciences",
+      "Abbreviation": "CS"
+     }
+    }
+   },
+   "Meetings": [
+    {
+     "Id": "112b4f6d-a4cf-4a70-901e-eadf0d2f2d86",
+     "SectionId": "084a660f-6b0a-4f2f-8af1-8a9668847bd3",
+     "Type": "Lecture",
+     "StartDate": "2026-08-24",
+     "EndDate": "2026-12-12",
+     "DaysOfWeek": "Tuesday, Thursday",
+     "StartTime": "12:30:00.0000000",
+     "Duration": "PT50M",
+     "RoomId": null,
+     "Instructors": [
+      {
+       "Id": "0c36a248-0c1e-481a-83fd-f3ce626bf425",
+       "Name": "Leilani Villanueva",
+       "Email": "leilaniv@example.edu"
+      }
+     ],
+     "Room": {
+      "Id": null,
+      "Number": "B155",
+      "BuildingId": null,
+      "Building": {
+       "Id": null,
+       "Name": "Lawson Computer Science Bldg",
+       "ShortCode": "LWSN"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "Id": "0c465adc-6c06-4387-9fa3-1d7f68c16c0d",
+   "Crn": "51076",
+   "ClassId": "b5b9aa60-e9d3-498d-be63-5e7b6e057c60",
+   "Type": "Lecture",
+   "StartDate": "2026-08-24",
+   "EndDate": "2026-12-12",
+   "Class": {
+    "Id": "b5b9aa60-e9d3-498d-be63-5e7b6e057c60",
+    "CourseId": "5f5bca19-ae4b-469b-8a75-63755d99c369",
+    "TermId": "5e537142-c1dc-460a-b432-f37e4b4d5e46",
+    "CampusId": "eb70e97b-3583-4ac9-86e5-468ad3869de8",
+    "Course": {
+     "Id": "5f5bca19-ae4b-469b-8a75-63755d99c369",
+     "Number": "24000",
+     "SubjectId": "86ad8a59-6ddc-4067-9f6b-169c8eec86a6",
+     "Title": "Programming In C",
+     "CreditHours": 3.0,
+     "Description": "Supplemental Instruction (SI) study sessions are available for students in this course. Evening Exams Required.",
+     "Subject": {
+      "Id": "86ad8a59-6ddc-4067-9f6b-169c8eec86a6",
+      "Name": "Computer Sciences",
+      "Abbreviation": "CS"
+     }
+    }
+   },
+   "Meetings": [
+    {
+     "Id": "fd5a8f5d-250e-4964-9f3f-05d176fcd1c1",
+     "SectionId": "0c465adc-6c06-4387-9fa3-1d7f68c16c0d",
+     "Type": "Lecture",
+     "StartDate": "2026-08-24",
+     "EndDate": "2026-12-12",
+     "DaysOfWeek": "Monday, Wednesday",
+     "StartTime": "16:30:00.0000000",
+     "Duration": "PT50M",
+     "RoomId": null,
+     "Instructors": [
+      {
+       "Id": "d108f877-0a58-4106-8497-50d46f58722b",
+       "Name": "Ingrid Lindqvist",
+       "Email": "ingridli@example.edu"
+      }
+     ],
+     "Room": {
+      "Id": null,
+      "Number": "B155",
+      "BuildingId": null,
+      "Building": {
+       "Id": null,
+       "Name": "Lawson Computer Science Bldg",
+       "ShortCode": "LWSN"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "Id": "0d1528f3-b691-45ab-b84a-60f709331456",
+   "Crn": "11755",
+   "ClassId": "26baffd4-bb1e-4731-a9e6-c114843eb54f",
+   "Type": "Lecture",
+   "StartDate": "2026-08-24",
+   "EndDate": "2026-12-12",
+   "Class": {
+    "Id": "26baffd4-bb1e-4731-a9e6-c114843eb54f",
+    "CourseId": "5653a2d8-fcd8-4328-b127-88a1cdd7117b",
+    "TermId": "5e537142-c1dc-460a-b432-f37e4b4d5e46",
+    "CampusId": "510966f3-1e45-47f8-b5fa-afbd3abcc23d",
+    "Course": {
+     "Id": "5653a2d8-fcd8-4328-b127-88a1cdd7117b",
+     "Number": "24200",
+     "SubjectId": "86ad8a59-6ddc-4067-9f6b-169c8eec86a6",
+     "Title": "Introduction To Data Science",
+     "CreditHours": 3.0,
+     "Description": "",
+     "Subject": {
+      "Id": "86ad8a59-6ddc-4067-9f6b-169c8eec86a6",
+      "Name": "Computer Sciences",
+      "Abbreviation": "CS"
+     }
+    }
+   },
+   "Meetings": [
+    {
+     "Id": "72aaa312-ea80-45f3-92c3-cfaaa2c3e290",
+     "SectionId": "0d1528f3-b691-45ab-b84a-60f709331456",
+     "Type": "Lecture",
+     "StartDate": "2026-08-24",
+     "EndDate": "2026-12-12",
+     "DaysOfWeek": "Monday, Wednesday",
+     "StartTime": "11:30:00.0000000",
+     "Duration": "PT50M",
+     "RoomId": null,
+     "Instructors": [
+      {
+       "Id": "30735054-aaa1-416a-861e-8c749995d932",
+       "Name": "Oluwaseun Kealoha",
+       "Email": "oluwaseu@example.edu"
+      }
+     ],
+     "Room": {
+      "Id": null,
+      "Number": "B155",
+      "BuildingId": null,
+      "Building": {
+       "Id": null,
+       "Name": "Lawson Computer Science Bldg",
+       "ShortCode": "LWSN"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "Id": "0dd37a5d-69e9-4d83-a8dd-ff34f7cf2fb1",
+   "Crn": "29201",
+   "ClassId": "f16fda7f-763b-488e-8a7d-9f36bd865a93",
+   "Type": "Lecture",
+   "StartDate": "2026-08-24",
+   "EndDate": "2026-12-12",
+   "Class": {
+    "Id": "f16fda7f-763b-488e-8a7d-9f36bd865a93",
+    "CourseId": "035c6e6f-ee61-457a-a443-439b12f896e2",
+    "TermId": "5e537142-c1dc-460a-b432-f37e4b4d5e46",
+    "CampusId": "eb70e97b-3583-4ac9-86e5-468ad3869de8",
+    "Course": {
+     "Id": "035c6e6f-ee61-457a-a443-439b12f896e2",
+     "Number": "59300",
+     "SubjectId": "86ad8a59-6ddc-4067-9f6b-169c8eec86a6",
+     "Title": "Imitation Learning/Robotics",
+     "CreditHours": 3.0,
+     "Description": "",
+     "Subject": {
+      "Id": "86ad8a59-6ddc-4067-9f6b-169c8eec86a6",
+      "Name": "Computer Sciences",
+      "Abbreviation": "CS"
+     }
+    }
+   },
+   "Meetings": [
+    {
+     "Id": "9ed32133-0559-46ad-9d61-b6442e37b62f",
+     "SectionId": "0dd37a5d-69e9-4d83-a8dd-ff34f7cf2fb1",
+     "Type": "Lecture",
+     "StartDate": "2026-08-24",
+     "EndDate": "2026-12-12",
+     "DaysOfWeek": "Tuesday, Thursday",
+     "StartTime": "15:00:00.0000000",
+     "Duration": "PT1H15M",
+     "RoomId": null,
+     "Instructors": [
+      {
+       "Id": "a63eb7a9-6533-4d94-b7b0-95f030450b97",
+       "Name": "Ximena B. Halvorsen",
+       "Email": "ximenabh@example.edu"
+      }
+     ],
+     "Room": {
+      "Id": null,
+      "Number": "B155",
+      "BuildingId": null,
+      "Building": {
+       "Id": null,
+       "Name": "Lawson Computer Science Bldg",
+       "ShortCode": "LWSN"
+      }
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -50,7 +50,7 @@ export class DemoReviewSource implements ReviewSource {
   private readonly log: NonNullable<DemoReviewSourceOptions['log']>;
   private professors = new Map<SchoolId, Promise<SeedProfessor[]>>();
   private reviews = new Map<SchoolId, Promise<Map<string, RawReview[]>>>();
-  private lastSchool: SchoolId = 'uiuc';
+  private lastSchool: SchoolId = 'demo';
 
   constructor(opts: DemoReviewSourceOptions) {
     this.info = { id: 'demo-reviews', label: demoSourceLabel(opts.seed), url: null, license: 'MIT' };

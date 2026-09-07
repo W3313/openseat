@@ -21,6 +21,5 @@ export default async function RootNotFound() {
     const subjects = await repo.getSubjects(school).catch(() => []);
     subjectsBySchool[school] = subjects.map(({ code, name, professorCount }) => ({ code, name, professorCount }));
   }
-  const topSubjects = [...(subjectsBySchool[DEFAULT_SCHOOL_ID] ?? [])].sort((a, b) => b.professorCount - a.professorCount).slice(0, 6);
-  return <NotFoundSwitch subjectsBySchool={subjectsBySchool} defaultSchoolId={DEFAULT_SCHOOL_ID} topSubjects={topSubjects} />;
+  return <NotFoundSwitch subjectsBySchool={subjectsBySchool} defaultSchoolId={DEFAULT_SCHOOL_ID} />;
 }

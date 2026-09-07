@@ -1,4 +1,4 @@
-// `npm run data:seed` → tsx scripts/seed-demo.ts [--seed 20260903] [--term 2026-fa] [--subjects CS,ECE,...] [--out data/raw/demo/uiuc]
+// `npm run data:seed` → tsx scripts/seed-demo.ts [--seed 20260903] [--term 2026-fa] [--subjects CS,ECE,...] [--out data/raw/demo/demo]
 // Writes the deterministic fictional raw dataset (SPEC 6.5): gpa.csv, sections.json, professors.json,
 // reviews.json, meta.json and seed-hash.txt. Re-running with the same inputs produces identical bytes.
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
@@ -9,7 +9,9 @@ import { buildDemoSeed, SEED_FILE_ORDER, SEED_HASH_FILE } from '@/lib/sources/de
 import { fail, log } from './lib/log';
 import { flagList, flagString, readArgs } from './lib/args';
 
-export const DEFAULT_OUT_DIR = path.join('data', 'raw', 'demo', 'uiuc');
+/** The fictional dataset is its own school id `demo` (MULTI_SCHOOL_DESIGN §1): data/raw/demo/<schoolId>. */
+export const DEMO_SCHOOL_ID = 'demo';
+export const DEFAULT_OUT_DIR = path.join('data', 'raw', 'demo', DEMO_SCHOOL_ID);
 
 async function main(): Promise<void> {
   const args = readArgs();

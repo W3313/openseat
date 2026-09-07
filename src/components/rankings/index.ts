@@ -1,5 +1,5 @@
 // Rankings page components (SPEC 3.2). Import from "@/components/rankings".
-export { RankingsHeader, rankingsHeading, rankingsTitle } from "./RankingsHeader";
+export { RankingsHeader, rankingsHeading, rankingsTitle, rankingsDescription } from "./RankingsHeader";
 export type { RankingsHeaderProps } from "./RankingsHeader";
 export { TermPill, termPillText } from "./TermPill";
 export type { TermPillProps, TermPillText } from "./TermPill";
@@ -17,11 +17,11 @@ export { OpenOnlyToggle } from "./OpenOnlyToggle";
 export type { OpenOnlyToggleProps } from "./OpenOnlyToggle";
 export { CourseChips, sortCourseRefs } from "./CourseChips";
 export type { CourseChipsProps } from "./CourseChips";
-export { RankedList, professorNameMap } from "./RankedList";
+export { RankedList, professorNameMap, effectiveQuery } from "./RankedList";
 export type { RankedListProps } from "./RankedList";
 export { ProfessorCard } from "./ProfessorCard";
 export type { ProfessorCardProps } from "./ProfessorCard";
-export { LowDataGroup } from "./LowDataGroup";
+export { LowDataGroup, lowDataHeading } from "./LowDataGroup";
 export type { LowDataGroupProps } from "./LowDataGroup";
 export { EmptyState, emptyRankingsTitle } from "./EmptyState";
 export type { EmptyStateProps } from "./EmptyState";

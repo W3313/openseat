@@ -1,5 +1,5 @@
 // SPEC 12.3 — seedDeterminism: two in-memory runs give identical bytes; hash equals
-// data/raw/demo/uiuc/seed-hash.txt; every deliberate edge case in meta.edgeCases exists in the output.
+// data/raw/demo/demo/seed-hash.txt; every deliberate edge case in meta.edgeCases exists in the output.
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -16,7 +16,7 @@ import { FRAGMENT_COUNT, REVIEW_MAX_CHARS, REVIEW_MIN_CHARS } from '@/lib/source
 import { GPA_CSV_HEADER } from '@/lib/sources/demo/generator-types';
 
 const ROOT = fileURLToPath(new URL('../..', import.meta.url));
-const OUT_DIR = path.join(ROOT, 'data', 'raw', 'demo', 'uiuc');
+const OUT_DIR = path.join(ROOT, 'data', 'raw', 'demo', 'demo');
 
 type CsvRow = Record<string, string>;
 
@@ -69,7 +69,7 @@ describe('seed determinism (SPEC 6.5 / 12.3)', () => {
     expect(seedHash(again)).toBe(hash);
   });
 
-  it('matches the committed data/raw/demo/uiuc output and seed-hash.txt', async () => {
+  it('matches the committed data/raw/demo/demo output and seed-hash.txt', async () => {
     const { files, hash } = await load();
     const committedHash = (await readFile(path.join(OUT_DIR, SEED_HASH_FILE), 'utf8')).trim();
     expect(hash).toBe(committedHash);

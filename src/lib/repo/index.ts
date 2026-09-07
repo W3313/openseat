@@ -1,14 +1,13 @@
 // getRepository(): the process-wide Repository singleton (SPEC 3.0, 5). Pages, route handlers and
 // scripts all go through this so a DB-backed Repository can be swapped in later without touching them.
-import { env } from '@/lib/config/env';
 import type { Repository } from './Repository';
 import { JsonRepository } from './JsonRepository';
 
 let singleton: Repository | null = null;
 
-/** JsonRepository over data/processed/<school> (or <school>-live when DATA_MODE=live). */
+/** JsonRepository over data/processed/<school> for every school in the SCHOOLS allowlist. */
 export function getRepository(): Repository {
-  if (!singleton) singleton = new JsonRepository({ mode: env.DATA_MODE });
+  if (!singleton) singleton = new JsonRepository();
   return singleton;
 }
 

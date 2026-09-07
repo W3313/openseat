@@ -6,13 +6,19 @@ import type { SchoolId } from "@/lib/domain/types";
 import { buildRankingsHref } from "@/lib/utils/urlState";
 import { Button } from "@/components/ui/Button";
 import { SubjectNotFound, parseRankingsPath } from "@/components/rankings/SubjectNotFound";
+import { schoolFromPathname } from "./schoolFromPath";
 import type { SubjectOption } from "@/components/landing/SubjectCombobox";
 
 export interface NotFoundSwitchProps {
   subjectsBySchool: Readonly<Record<string, readonly SubjectOption[]>>;
   defaultSchoolId: SchoolId;
-  /** Most-populated subjects of the default school, for the professor/course fallbacks. */
-  topSubjects: readonly SubjectOption[];
+  /** Legacy: most-populated subjects of the default school. Ignored — the professor 404 now derives them for the pathname's school. */
+  topSubjects?: readonly SubjectOption[];
+}
+
+/** The six most-populated subjects of a school's option list (pure; exported for tests). */
+export function topSubjectsOf(subjects: readonly SubjectOption[], n = 6): SubjectOption[] {
+  return [...subjects].sort((a, b) => (b.professorCount ?? 0) - (a.professorCount ?? 0)).slice(0, n);
 }
 
 /** "/s/uiuc/CS/999" → "999"; null when the path has no course segment. */
@@ -31,13 +37,16 @@ export function parseCourseNumber(pathname: string | null): string | null {
  * (`dynamicParams = false`), so unknown ones land here with a real 404 status; the pathname says
  * which flavour of "not found" to show.
  */
-export function NotFoundSwitch({ subjectsBySchool, defaultSchoolId, topSubjects }: NotFoundSwitchProps) {
+export function NotFoundSwitch({ subjectsBySchool, defaultSchoolId }: NotFoundSwitchProps) {
   const pathname = usePathname();
   const { school, subject } = parseRankingsPath(pathname);
   const number = parseCourseNumber(pathname);
   // Own-property checks: a pathname segment like `constructor` must not reach Object.prototype.
-  const schoolId = school && Object.hasOwn(subjectsBySchool, school) ? school : defaultSchoolId;
+  // `/p/<school>/…` has no subject segment, so the school comes from schoolFromPathname there (design §8).
+  const pathSchool = school ?? schoolFromPathname(pathname);
+  const schoolId = pathSchool && Object.hasOwn(subjectsBySchool, pathSchool) ? pathSchool : defaultSchoolId;
   const knownSubjects = Object.hasOwn(subjectsBySchool, schoolId) ? subjectsBySchool[schoolId] : [];
+  const topSubjects = topSubjectsOf(knownSubjects);
   const subjectKnown = subject != null && knownSubjects.some((s) => s.code === subject);
 
   if (subject && number && subjectKnown) {
@@ -57,8 +66,8 @@ export function NotFoundSwitch({ subjectsBySchool, defaultSchoolId, topSubjects 
     return (
       <Shell title="No professor at this address" note="The link may be out of date, or the instructor has no grade rows, reviews or sections in the current dataset. Start from a subject list instead.">
         {topSubjects.map((s) => (
-          <Link key={s.code} href={buildRankingsHref(defaultSchoolId, s.code)} className="rounded-chip border border-border px-2.5 py-1 text-sm text-link hover:underline">
-            {s.code} · {s.name}
+          <Link key={s.code} href={buildRankingsHref(schoolId, s.code)} className="rounded-chip border border-border px-2.5 py-1 text-sm text-link hover:underline">
+            {s.code}{s.name && s.name !== s.code ? ` · ${s.name}` : ''}
           </Link>
         ))}
       </Shell>

@@ -4,6 +4,7 @@ import type {
 } from '@/lib/domain/types';
 import { MIN_REVIEWS_RANKED, QUOTE_MAX_CHARS } from '@/lib/domain/constants';
 import { aggregateProfessorGrades, type AggregateContext, type GradeAggregate } from '@/lib/scoring/aggregate';
+import { reviewsAvailable } from '@/lib/scoring/rank';
 import { reviewScores, type ReviewScores } from '@/lib/scoring/rating';
 import { composite } from '@/lib/scoring/composite';
 import { computeBadges } from '@/lib/scoring/badges';
@@ -35,6 +36,7 @@ export function assembleScores(rs: ReviewScores, agg: GradeAggregate): Professor
     soleInstructor: agg.soleInstructor,
     composite: composite(rs.ratingShrunk, agg.gpaDelta, rs.wouldTakeAgainPct),
     yearsActive: agg.yearsActive,
+    countsAreEstimates: agg.countsAreEstimates,
   };
 }
 
@@ -101,7 +103,7 @@ export function buildRankedProfessor(input: RankedInputs): RankedProfessor {
     rank: null,
     professor,
     scores,
-    badges: computeBadges({ scores, openSectionCount: openSections.length, subjectWRate }),
+    badges: computeBadges({ scores, openSectionCount: openSections.length, subjectWRate, reviewsAvailable: reviewsAvailable(data.school) }),
     vibeTags: professorVibeTags(reviews),
     distribution: agg.distribution,
     gpaByYear: agg.gpaByYear,

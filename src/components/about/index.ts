@@ -17,7 +17,9 @@ export type { ScoringSectionProps } from './ScoringSection';
 export { AiSection } from './AiSection';
 export type { AiSectionProps } from './AiSection';
 export { SourcesSection, GPA_DATASET_URL, GPA_DATASET_CSV_URL, COURSE_EXPLORER_URL } from './SourcesSection';
+export { SchoolsTable, reviewsCell, datasetCell, BUCKET_LABELS, VALUE_KIND_LABELS } from './SchoolsTable';
+export type { SchoolsTableProps, SchoolsTableRow } from './SchoolsTable';
 export type { SourcesSectionProps } from './SourcesSection';
 export {
-  WhatSection, DemoSection, LimitationsSection, PrivacySection, LicensingSection, FICTIONAL_DATA_STATEMENT,
+  WhatSection, DemoSection, GradesOnlySection, LimitationsSection, PrivacySection, LicensingSection, FICTIONAL_DATA_STATEMENT,
 } from './StaticSections';

@@ -8,7 +8,9 @@ import { Segmented } from "@/components/ui/Segmented";
 import { Toggle } from "@/components/ui/Toggle";
 import { Toaster, clearToasts, toast } from "@/components/ui/Toast";
 import { ModeBadge, modeBadgeText } from "@/components/layout/ModeBadge";
-import { DataProvenance, formatStamp } from "@/components/layout/DataProvenance";
+import { DataBadge, dataBadgeText } from "@/components/layout/DataBadge";
+import { DataProvenance, formatCounts, formatStamp, reviewsClause } from "@/components/layout/DataProvenance";
+import { pickBySchool, schoolFromPathname } from "@/components/layout/schoolFromPath";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 
 afterEach(() => {
@@ -226,25 +228,53 @@ describe("layout pieces", () => {
     expect(formatStamp("2026-09-03T14:12:00Z", "America/Chicago")).toBe("Sep 3, 2026, 9:12 AM CT");
   });
 
-  it("DataProvenance prints the footer line", () => {
+  it("DataBadge reads 'Official grade data · <attribution>' and links to the sources table", () => {
+    expect(dataBadgeText({ grades: "UIUC GPA dataset" })).toBe("Official grade data · UIUC GPA dataset");
+    render(<DataBadge attribution={{ grades: "UIUC GPA dataset" }} shortName="UIUC" />);
+    const link = screen.getByTestId("data-badge");
+    expect(link.getAttribute("href")).toBe("/about#sources");
+    expect(link.textContent).toBe("Official grade data· UIUC");
+    expect(link.getAttribute("title")).toBe("Official grade data · UIUC GPA dataset");
+    expect(link.getAttribute("aria-label")).toContain("UIUC GPA dataset");
+  });
+
+  it("schoolFromPathname reads the school segment of rankings, professor and compare routes", () => {
+    expect(schoolFromPathname("/s/uiuc/CS?sort=gpa")).toBe("uiuc");
+    expect(schoolFromPathname("/p/Demo/adaeze-okonkwo")).toBe("demo");
+    expect(schoolFromPathname("/compare/uiuc?p=a,b")).toBe("uiuc");
+    expect(schoolFromPathname("/about")).toBeNull();
+    expect(schoolFromPathname("/")).toBeNull();
+    expect(schoolFromPathname(null)).toBeNull();
+    const byId = { uiuc: "U", demo: "D" };
+    expect(pickBySchool(byId, "/s/demo/CS", "uiuc")).toBe("D");
+    expect(pickBySchool(byId, "/about", "uiuc")).toBe("U");
+    expect(pickBySchool(byId, "/s/constructor/CS", "uiuc")).toBe("U");
+    expect(pickBySchool(byId, "/s/nope/CS", "missing")).toBeNull();
+  });
+
+  const COUNTS = {
+    professors: 92,
+    reviewedProfessors: 86,
+    gradesOnlyProfessors: 6,
+    gradeRows: 1812,
+    courses: 120,
+    sections: 214,
+    openSections: 118,
+    reviews: 1304,
+    summariesClaude: 0,
+    summariesExtractive: 86,
+  };
+
+  it("DataProvenance prints the demo footer line", () => {
     render(
       <DataProvenance
         mode="demo"
+        attribution={{ grades: "UIUC GPA dataset (MIT)", schedule: "UIUC Course Explorer" }}
+        sourceUrls={{ grades: "https://github.com/wadefagen/datasets", schedule: null }}
         builtAt="2026-09-03T14:12:00Z"
         timezone="America/Chicago"
         seed={20260903}
-        counts={{
-          professors: 92,
-          reviewedProfessors: 86,
-          gradesOnlyProfessors: 6,
-          gradeRows: 1812,
-          courses: 120,
-          sections: 214,
-          openSections: 118,
-          reviews: 1304,
-          summariesClaude: 0,
-          summariesExtractive: 86,
-        }}
+        counts={COUNTS}
       />,
     );
     const text = screen.getByTestId("data-provenance").textContent ?? "";
@@ -253,6 +283,28 @@ describe("layout pieces", () => {
     expect(text).toContain("Reviews: fictional demo data (seed 20260903)");
     expect(text).toContain("Built Sep 3, 2026, 9:12 AM CT");
     expect(text).toContain("1,812 grade rows · 92 professors · 118 open sections · 1,304 reviews");
+    expect(screen.getByRole("link", { name: "UIUC GPA dataset (MIT)" }).getAttribute("href")).toBe("https://github.com/wadefagen/datasets");
+  });
+
+  it("DataProvenance on a grades-only school says so and drops the review count", () => {
+    render(
+      <DataProvenance
+        mode="live"
+        reviewsAvailable={false}
+        attribution={{ grades: "Official grade distributions from the UIUC GPA dataset" }}
+        builtAt="2026-09-03T14:12:00Z"
+        timezone="America/Chicago"
+        counts={COUNTS}
+      />,
+    );
+    const text = screen.getByTestId("data-provenance").textContent ?? "";
+    expect(text).toContain("Grades: Official grade distributions from the UIUC GPA dataset");
+    expect(text).not.toContain("Schedule:");
+    expect(text).toContain("Reviews: none (official grade data only)");
+    expect(text).toContain("1,812 grade rows · 92 professors · 118 open sections");
+    expect(text).not.toContain("1,304 reviews");
+    expect(reviewsClause("live", true, null, "RateMyProfessors (unofficial)")).toBe("RateMyProfessors (unofficial)");
+    expect(formatCounts(COUNTS, false)).not.toContain("reviews");
   });
 
   it("Breadcrumb marks the current page", () => {

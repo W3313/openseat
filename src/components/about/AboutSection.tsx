@@ -5,6 +5,7 @@ import clsx from 'clsx';
 export const ABOUT_SECTIONS = [
   { id: 'what', title: 'What this is' },
   { id: 'sources', title: 'Data sources' },
+  { id: 'reviews', title: 'Why there are no reviews' },
   { id: 'demo', title: 'Demo data is fictional' },
   { id: 'scoring', title: 'How the numbers work' },
   { id: 'badges', title: 'Badges' },

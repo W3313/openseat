@@ -1,6 +1,6 @@
 // GradeSource over the fictional dataset written by scripts/seed-demo.ts (SPEC 6.2, 6.5). Reuses the
-// real CSV parser on data/raw/demo/uiuc/gpa.csv (same 23 columns) so the parser is exercised end-to-end
-// in demo mode.
+// real CSV parser on data/raw/demo/<school>/gpa.csv (same 23 columns; the fictional school id is `demo`)
+// so the parser is exercised end-to-end for the demo school.
 import { readFile } from 'node:fs/promises';
 import { DEMO_FETCHED_AT } from './generator-types';
 import path from 'node:path';

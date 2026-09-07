@@ -1,0 +1,54 @@
+{
+ "@odata.context": "http://api.purdue.io/odata/$metadata#Terms",
+ "value": [
+  {
+   "Id": "dd32ab31-06b6-48b2-96ad-aa038d9d5c17",
+   "Code": "202610",
+   "Name": "Fall 2025",
+   "StartDate": "2025-07-28",
+   "EndDate": "2025-12-21"
+  },
+  {
+   "Id": "3e11b35f-28e4-4727-a205-6bdccb6b1806",
+   "Code": "999999",
+   "Name": "The End of Time",
+   "StartDate": null,
+   "EndDate": null
+  },
+  {
+   "Id": "61692834-569f-4b24-b786-bd48eb57518b",
+   "Code": "202630",
+   "Name": "Summer 2026",
+   "StartDate": "2026-05-10",
+   "EndDate": "2026-08-22"
+  },
+  {
+   "Id": "303eb615-930e-4887-9b14-473f78f17cda",
+   "Code": "202613",
+   "Name": "Winter 2025",
+   "StartDate": "2025-12-22",
+   "EndDate": "2026-01-09"
+  },
+  {
+   "Id": "6ffe05f1-3f97-4141-9e24-834eebe34efc",
+   "Code": "202620",
+   "Name": "Spring 2026",
+   "StartDate": "2026-01-05",
+   "EndDate": "2026-05-29"
+  },
+  {
+   "Id": "605ac0f2-5f83-42c1-bba0-6fc5127d6d7c",
+   "Code": "202713",
+   "Name": "Winter 2026",
+   "StartDate": "2026-12-21",
+   "EndDate": "2027-01-08"
+  },
+  {
+   "Id": "5e537142-c1dc-460a-b432-f37e4b4d5e46",
+   "Code": "202710",
+   "Name": "Fall 2026",
+   "StartDate": "2026-07-06",
+   "EndDate": "2026-12-20"
+  }
+ ]
+}

@@ -20,9 +20,10 @@ export function WhatSection({ schoolShortName }: { schoolShortName: string }) {
     <>
       <p>
         ProfPeek answers one registration-week question: <strong>which professor should I actually take?</strong> It joins
-        three things that normally live on three different tabs — the official grade distribution each instructor gave,
-        what students said about them, and which of their sections are still open this term — and ranks the professors
-        in a subject with the rules described on this page.
+        the things that normally live on different tabs — the official grade distribution each instructor gave, which of
+        their sections are offered this term and, where a school has them, what students said — and ranks the professors
+        in a subject with the rules described on this page. Real schools ship <strong>official grade data only</strong>;
+        the demo school shows the full review-backed experience on fictional professors.
       </p>
       <p>
         It is a portfolio project, not a {schoolShortName} service. Nothing here is endorsed by the university. Rankings
@@ -67,7 +68,42 @@ export function DemoSection({ mode, edgeCases }: { mode: 'demo' | 'live'; edgeCa
   );
 }
 
-export function LimitationsSection({ seatStatusAvailable }: { seatStatusAvailable: boolean }) {
+/** Design §5: why real schools have no reviews, what changes in the UI, and how first-party reviews come later. */
+export function GradesOnlySection({ realSchools, demoEnabled }: { realSchools: readonly string[]; demoEnabled: boolean }) {
+  const list = realSchools.length ? realSchools.join(', ') : 'every real school';
+  return (
+    <>
+      <p>
+        <strong>No scraped reviews.</strong> Review sites forbid reuse of their content in their terms of service, and a
+        name-based join between grade rows and third-party opinions risks attributing someone else’s words to a real
+        instructor. So {list} ship with <strong>official grade data and the public schedule only</strong>; nothing on those
+        pages was written by a student.
+      </p>
+      <p>
+        <strong>What changes on a grades-only school.</strong> Every professor with grade rows is ranked (there is no
+        “not enough reviews” group), the default and only sort is the grade curve — leave-one-out Δ vs course, then GPA,
+        then how many students were graded — and cards show the grade bar, the Δ chip, the W rate, the GPA trend and this
+        term’s sections. Badges that need reviews (<em>Tough but loved</em>, <em>Hidden gem</em>) are never awarded; AI
+        summaries and quotes are not rendered. Titles say “ranked by grade curve”.
+      </p>
+      <p>
+        <strong>First-party reviews are the planned next step.</strong> The <code>sources.reviews</code> slot in the school
+        registry is <code>null</code> for real schools today; a consent-based, first-party review source that fills it
+        would switch the full UI back on for that school without any other change.
+        {demoEnabled ? ' The demo school keeps the full review UI so the complete experience can be seen on fictional data.' : ''}
+      </p>
+    </>
+  );
+}
+
+export function LimitationsSection({
+  seatStatusAvailable,
+  schoolNames = ['UIUC'],
+}: {
+  seatStatusAvailable: boolean;
+  /** Short names of the real schools in this build. */
+  schoolNames?: readonly string[];
+}) {
   return (
     <ul className="list-disc space-y-2 pl-5">
       <li>
@@ -80,8 +116,8 @@ export function LimitationsSection({ seatStatusAvailable }: { seatStatusAvailabl
         term you are registering for; new instructors show “New — no grade data yet” and rank on reviews alone.
       </li>
       <li>
-        <strong>Reviews are self-selected.</strong> Students who feel strongly write more; shrinkage and the{' '}
-        {MIN_REVIEWS_RANKED}-review floor soften this but cannot remove it. Read the critical count next to every quote.
+        <strong>Reviews (where present) are self-selected.</strong> Students who feel strongly write more; shrinkage and
+        the {MIN_REVIEWS_RANKED}-review floor soften this but cannot remove it. Read the critical count next to every quote.
       </li>
       <li>
         <strong>Name matching is conservative, not perfect.</strong> Ambiguous strings become separate grades-only entries
@@ -95,8 +131,14 @@ export function LimitationsSection({ seatStatusAvailable }: { seatStatusAvailabl
           : 'The public schedule API says whether a section is offered, not whether it has seats.'}
       </li>
       <li>
-        <strong>One school.</strong> Only UIUC ships today. The repository and adapter interfaces are multi-school by
-        design, but every threshold on this page was tuned on one dataset.
+        <strong>{schoolNames.length <= 1 ? 'One school.' : `${schoolNames.length} schools.`}</strong>{' '}
+        {schoolNames.length ? `${schoolNames.join(', ')} ship${schoolNames.length === 1 ? 's' : ''} today.` : 'No real school ships yet.'}{' '}
+        The repository and adapter interfaces are multi-school by design, but every threshold on this page was tuned on
+        the UIUC dataset; a school’s grade buckets are normalised into one shape (see the sources table).
+      </li>
+      <li>
+        <strong>Reviews are absent on real schools.</strong> Rankings there are grade curves only; a good teacher of a hard
+        course can sit low on the list. Read the Δ chip as “grades vs. the same course taught by others”, not as quality.
       </li>
       <li>
         <strong>AI summaries are summaries.</strong> They paraphrase the selected reviews under a strict schema with

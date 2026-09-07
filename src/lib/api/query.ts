@@ -31,7 +31,7 @@ export const OpenFlagSchema = z
   .transform((v) => v === '1');
 
 export const MatchMethodSchema = z.enum([
-  'alias', 'exact', 'first-token', 'initial', 'nickname', 'compound-last', 'fuzzy', 'ambiguous', 'unmatched', 'blocked',
+  'alias', 'exact', 'first-token', 'initial', 'nickname', 'compound-last', 'fuzzy', 'ambiguous', 'unmatched', 'blocked', 'grades-only',
 ] satisfies readonly MatchMethod[]);
 
 /** /api/schools/[school]/rankings?subject=CS&sort=rating&open=1&course=225 */

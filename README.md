@@ -47,7 +47,7 @@ So the demo fabricates the people too.
 
 - **Real:** the UIUC subject and course catalogue, course titles, course-level GPA shapes and typical section sizes (all derived from the public dataset), and the whole pipeline — the demo grade file is written in the dataset's exact 23-column CSV shape so the real parser runs end to end.
 - **Fictional:** every professor name, every review, every per-instructor grade row, every section, CRN, room and seat state. Generated names are hashed and checked against a list of hashed real-instructor keys and re-rolled on collision; no real name is stored in the repository.
-- **Guarded:** `DATA_MODE=live` with the demo review source is a hard error in `src/lib/sources/registry.ts` ("Refusing to join real instructors with fictional reviews"). Live outputs are gitignored.
+- **Guarded:** a `live` (real) school configured with any `demo-*` adapter is a hard error in `src/lib/sources/registry.ts` ("Refusing to join real instructors with fictional reviews"); the real schools carry no review source at all.
 - **Badged:** every demo page shows "DEMO DATA — fictional professors & reviews" in the header, every fictional professor is captioned, and `/about#demo` carries the full statement.
 
 ## Architecture
@@ -120,7 +120,7 @@ ratingShrunk 4.2, delta +0.15, would-take-again 80 % → 100 × (0.48 + 0.15 + 0
 
 Differing middle initials halve the score. Within a scope (grades: subject → school; schedule: course → subject → school) the best candidate must clear 0.75 (0.85 school-wide) **and** beat the runner-up by 0.10; an ambiguity stops the search and the string becomes a separate grades-only entry rather than a guess.
 
-Ingest prints a coverage line, for example `matched 19/20 instructor strings (95.0%) · 0 ambiguous · 1 unmatched · 1 blocked · sections linked 11/12`, fails in demo mode below 60 %, and writes `data/processed/uiuc/match-report.json`, rendered at `/about#matching` and uploaded as a CI artifact.
+Ingest prints a coverage line — with a review source `matched 19/20 instructor strings (95.0%) · 0 ambiguous · 1 unmatched · 1 blocked · sections linked 11/12`; for a grades-only school every grade string becomes its own professor (method `grades-only`), so the line reports schedule linkage instead: `2,329 grade strings → grades-only professors · schedule strings linked 1,051 (sections linked 4,096/5,100, 80.3%) · … unmatched · … blocked` — fails in demo mode below 60 %, and writes `data/processed/<school>/match-report.json`, summarised at `/about#matching` with the full table at `/about/coverage/<school>` and uploaded as a CI artifact.
 
 ## AI summaries
 
@@ -147,12 +147,17 @@ Provider resolution (`SUMMARY_PROVIDER=auto`): Claude if `ANTHROPIC_API_KEY` is 
 
 The deployed site keeps serving the committed summaries with no key at all. If you also want it to generate summaries for professors that have none (live mode), set `GROQ_API_KEY`, `SUMMARY_ON_DEMAND=1` **and** `SUMMARY_ON_DEMAND_TOKEN=<random secret, 16+ chars>` in the host's environment (Production scope only). The summary route then calls the model **only** for requests that send that secret in an `x-profpeek-key` header — i.e. a warmer/cron you run, never an anonymous visitor — with zero 429 retries, an 8 s provider timeout, one shared in-flight call per professor and a per-instance budget of 5 generations/min and 100/day, after which it serves the extractive summary. Results are returned but never written (read-only filesystem). The app refuses to start with `SUMMARY_ON_DEMAND=1` and no token.
 
-## Live mode
+## Real schools
+
+Every school is a registry entry in `src/lib/config/schools/` (id, mode, subject allowlist, adapter kinds, grade-bucket
+shape, attribution) and every adapter registers its kind from `src/lib/sources/<school>/register.ts`
+(`docs/MULTI_SCHOOL_DESIGN.md`). Five real, grades-only schools ship today — UIUC, Purdue, UCSB, UH and UTD — next to the
+fictional `demo` school, each in its own `data/processed/<school>/` directory:
 
 ```bash
-cp .env.example .env.local
-# set DATA_MODE=live, REVIEW_SOURCE=none (or rmp + RMP_ENABLED=1), CURRENT_TERM=2026-fa, SUBJECTS=CS,ECE
-npm run data:live     # fetch GPA CSV → fetch schedule → ingest → rankings, into data/processed/uiuc-live (gitignored)
+npm run data:uiuc      # fetch-uiuc-gpa → ingest --school uiuc → build-rankings --school uiuc
+npm run data:real      # all five real schools
+SCHOOLS=uiuc,demo npm run build   # serve/build a subset
 ```
 
 - **Course Explorer request topology** per subject: `GET /{year}.xml` (term list) → `GET /{year}/{season}/{SUBJECT}.xml` (course list) → one `?mode=cascade` request per course (≈150 for CS). Concurrency `SCHEDULE_FETCH_CONCURRENCY=4`, `SCHEDULE_FETCH_DELAY_MS=100`, 8 s timeout, 3 retries, on-disk cache under `data/raw/uiuc/{year}-{season}/{SUBJECT}/` (gitignored). A 404 course means "not offered". If the requested term is not published yet the adapter falls back to the latest published term and the UI says so.
@@ -186,9 +191,9 @@ cp .env.example .env.local     # every variable is documented there; defaults wo
 
 | Variable | Default | Purpose |
 |---|---|---|
-| `DATA_MODE` | `demo` | `demo` reads the committed dataset; `live` runs the real adapters into `data/processed/uiuc-live`. |
+| `SCHOOLS` | all registered | Comma-separated allowlist of school ids to serve and build (`uiuc,purdue,ucsb,uh,utd,demo`); mode, subjects and sources come from the registry in `src/lib/config/schools`. |
 | `CURRENT_TERM` | `2026-fa` | Term the rankings are built for. |
-| `SUBJECTS` | `CS,ECE,MATH,PHYS,STAT,CHEM` | Subjects to seed / ingest. |
+| `SUBJECTS` | `CS,ECE,MATH,PHYS,STAT,CHEM` | Subjects for the demo seed (real schools use their registry allowlist). |
 | `GRADE_YEARS_BACK` | `6` | Grade window. |
 | `DEMO_SEED` | `20260903` | PRNG seed; changing it changes the committed dataset. |
 | `ANTHROPIC_API_KEY` | unset | Only read by `data:summaries`; absent → extractive summaries. |
@@ -201,7 +206,8 @@ cp .env.example .env.local     # every variable is documented there; defaults wo
 | `SUMMARY_ON_DEMAND` | `0` | `1` lets the summary route call the model when nothing valid is cached — only for requests carrying `SUMMARY_ON_DEMAND_TOKEN` |
 | `SUMMARY_ON_DEMAND_TOKEN` | unset | Shared secret (16+ chars) sent as `x-profpeek-key`; required when `SUMMARY_ON_DEMAND=1` |
 | `SUMMARY_SERVER_FALLBACKS`, `MAX_SUMMARIES` | `0`, `500` | Optional refusal-fallback beta; run-size guard. |
-| `REVIEW_SOURCE`, `RMP_ENABLED`, `RMP_SCHOOL_ID`, `RMP_AUTH_HEADER` | `demo`, `0`, unset, unset | Review adapter selection (live only). No RMP credential ships with the repo; `RMP_AUTH_HEADER` is required when `RMP_ENABLED=1`. |
+| `RMP_SCHOOL_ID`, `RMP_AUTH_HEADER` | unset | Only for a school that opts into the unofficial RateMyProfessors adapter; no school in the registry does and no credential ships with the repo. |
+| `UCSB_API_KEY` | unset | Free UCSB Curriculums developer key; absent → UCSB is grades-only (no schedule request). |
 | `UIUC_GPA_CSV_URL`, `UIUC_COURSE_EXPLORER_BASE` | upstream URLs | Override for mirrors / fixtures. |
 | `SCHEDULE_FETCH_CONCURRENCY`, `SCHEDULE_FETCH_DELAY_MS` | `4`, `100` | Politeness settings for the schedule fetch. |
 | `NEXT_PUBLIC_SITE_URL` | `http://localhost:3000` | Canonical URLs, sitemap, OG images. |
@@ -211,12 +217,13 @@ Pipeline commands:
 
 | Command | Does |
 |---|---|
-| `npm run data:seed` | Generate the fictional raw dataset into `data/raw/demo/uiuc` (deterministic; writes `seed-hash.txt`). |
-| `npm run data:ingest` | Parse, dedupe, **match names**, compute sentiment/tags → `data/processed/uiuc/*.json` + `match-report.json`. |
-| `npm run data:rankings` | Score every subject → `rankings/<SUBJECT>.json`, `professors-detail.json`. |
-| `npm run data:summaries -- [--only-missing\|--force\|--extractive]` | Precompute AI summaries → `summaries.json`. |
-| `npm run data:all` | seed → ingest → rankings → summaries `--only-missing` (what CI runs). |
-| `npm run data:fetch` / `data:schedule` / `data:live` | Live-mode downloads and the full live pipeline. |
+| `npm run data:seed` | Generate the fictional raw dataset into `data/raw/demo/demo` (deterministic; writes `seed-hash.txt`). |
+| `npm run data:ingest` | Parse, dedupe, **match names**, compute sentiment/tags → `data/processed/demo/*.json` + `grades/<SUBJECT>.json` + `match-report.json`. |
+| `npm run data:rankings` | Score every subject → `rankings/<SUBJECT>.json`, `professors-detail/<SUBJECT>.json`. |
+| `npm run data:summaries -- [--only-missing\|--force\|--extractive]` | Precompute AI summaries → `summaries.json` (demo only; the real schools have no reviews). |
+| `npm run data:all` | seed → ingest → rankings → summaries `--only-missing` for the demo school (what CI runs and diffs). |
+| `npm run data:<school>` (`uiuc`, `purdue`, `ucsb`, `uh`, `utd`) / `data:real` | Fetch the public upstream files (cached under `data/raw/<school>/`, gitignored) → ingest → rankings for one real school / all five. `data:fetch` only downloads. Real datasets carry wall-clock `builtAt`/`fetchedAt` stamps, so they are refreshed deliberately and committed, not regenerated in CI. |
+| `npx tsx scripts/ingest.ts --school <id> [--subjects A,B] [--refresh]` | Any registered school, optionally a subject subset. |
 
 ## API
 
@@ -266,10 +273,11 @@ SMOKE_BASE_URL=http://localhost:3000 npx vitest run tests/smoke
 ## Deploying to Vercel
 
 - Import the repo; no environment variables are required for the demo (set `NEXT_PUBLIC_SITE_URL` to the deployed origin for correct canonical URLs and OG images).
-- `next.config.ts` sets `outputFileTracingIncludes` for `data/processed/uiuc/**` so the API route handlers can `fs.readFile` the JSON in the serverless bundle; pages are fully static and read at build time. The filesystem is never written to at runtime. The live-mode directory (`data/processed/uiuc-live`, gitignored) is deliberately not traced.
-- Keep `data/processed/uiuc` under 8 MB (enforced by `tests/unit/dataSize.test.ts`).
+- `next.config.ts` sets `outputFileTracingIncludes` for `data/processed/**` so the API route handlers and ISR-rendered professor pages can `fs.readFile` the JSON in the serverless bundle. The filesystem is never written to at runtime.
+- **Professor pages use ISR** (design §6 cap): six schools hold ≈ 9,000 professors, so `/p/[school]/[slug]` prerenders an even per-school share of 3,000 and renders the rest on first request, cached for a day (`dynamicParams = true`, `revalidate = 86400`); unknown slugs still 404. Subject and course pages remain fully static.
+- Size budgets per school are enforced by `tests/unit/dataSize.test.ts` / `scripts/build-rankings.ts` (`MAX_SCHOOL_BYTES`, `MAX_RANKINGS_FILE_BYTES`, `MAX_DETAIL_FILE_BYTES`).
 - **Secrets scope:** add `GROQ_API_KEY` / `ANTHROPIC_API_KEY` / `SUMMARY_ON_DEMAND` / `SUMMARY_ON_DEMAND_TOKEN` to the **Production** environment only and mark them Sensitive — every branch push produces a public Preview URL that would otherwise inherit them. Enable Deployment Protection (Vercel Authentication) for Preview deployments.
-- Keep `DATA_MODE` unset (demo) in every Vercel environment until live-mode licensing is resolved. The Hobby plan is for personal, non-commercial use; upgrade to Pro before monetising.
+- The Hobby plan is for personal, non-commercial use; upgrade to Pro before monetising.
 
 ## Security
 

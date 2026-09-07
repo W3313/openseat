@@ -3,7 +3,7 @@ import type { MatchMethod, MatchReport, MatchReportEntry } from '@/lib/domain/ty
 import type { MatchSource, Resolution } from './types';
 
 export const MATCH_METHODS: readonly MatchMethod[] = [
-  'alias', 'exact', 'first-token', 'initial', 'nickname', 'compound-last', 'fuzzy', 'ambiguous', 'unmatched', 'blocked',
+  'alias', 'exact', 'first-token', 'initial', 'nickname', 'compound-last', 'fuzzy', 'ambiguous', 'unmatched', 'blocked', 'grades-only',
 ];
 
 export const LINKING_METHODS: ReadonlySet<MatchMethod> = new Set<MatchMethod>([
@@ -14,14 +14,14 @@ export const LINKING_METHODS: ReadonlySet<MatchMethod> = new Set<MatchMethod>([
 export function toReportEntry(
   instructorRaw: string,
   source: MatchSource,
-  subject: string,
+  subject: string | readonly string[],
   resolution: Resolution,
   rows: number,
 ): MatchReportEntry {
   return {
     instructorRaw,
     source,
-    subject,
+    subjects: typeof subject === 'string' ? [subject] : [...subject].sort(),
     method: resolution.method,
     score: resolution.score,
     professorId: resolution.professorId,
@@ -40,10 +40,10 @@ export interface BuildMatchReportInput {
   generatedAt?: string;
 }
 
-/** Stable order for the report: source, then subject, then raw string. */
+/** Stable order for the report: source, then first subject, then raw string. */
 export function sortReportEntries(entries: readonly MatchReportEntry[]): MatchReportEntry[] {
   return [...entries].sort(
-    (a, b) => cmp(a.source, b.source) || cmp(a.subject, b.subject) || cmp(a.instructorRaw, b.instructorRaw),
+    (a, b) => cmp(a.source, b.source) || cmp(a.subjects[0] ?? '', b.subjects[0] ?? '') || cmp(a.instructorRaw, b.instructorRaw),
   );
 }
 
@@ -55,6 +55,7 @@ function cmp(a: string, b: string): number {
 export function buildMatchReport(input: BuildMatchReportInput): MatchReport {
   const byMethod = Object.fromEntries(MATCH_METHODS.map((m) => [m, 0])) as Record<MatchMethod, number>;
   let matched = 0;
+  let gradesOnly = 0;
   let ambiguous = 0;
   let unmatched = 0;
   const entries = sortReportEntries(input.entries.filter((e) => e.method !== 'blocked'));
@@ -62,6 +63,7 @@ export function buildMatchReport(input: BuildMatchReportInput): MatchReport {
     byMethod[e.method] += 1;
     if (e.method === 'ambiguous') ambiguous += 1;
     else if (e.method === 'unmatched') unmatched += 1;
+    else if (e.method === 'grades-only') gradesOnly += 1;
     else if (LINKING_METHODS.has(e.method) && e.professorId !== null) matched += 1;
   }
   const blocked = input.blockedCount ?? 0;
@@ -72,6 +74,7 @@ export function buildMatchReport(input: BuildMatchReportInput): MatchReport {
     coverage: {
       distinctStrings,
       matched,
+      gradesOnly,
       ambiguous,
       unmatched,
       blocked,

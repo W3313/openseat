@@ -6,17 +6,40 @@ import type { Day, Meeting } from '@/lib/domain/types';
 export const DAY_ORDER: readonly Day[] = ['M', 'T', 'W', 'R', 'F', 'S', 'U'];
 export const DAY_LABELS: Record<Day, string> = { M: 'Mon', T: 'Tue', W: 'Wed', R: 'Thu', F: 'Fri', S: 'Sat', U: 'Sun' };
 
+/** Hand-kept fallbacks for runtimes without ICU zone names; Intl is asked first. */
 const TZ_ABBREV: Record<string, string> = {
   'America/Chicago': 'CT',
   'America/New_York': 'ET',
+  'America/Indiana/Indianapolis': 'ET',
   'America/Denver': 'MT',
   'America/Phoenix': 'MT',
   'America/Los_Angeles': 'PT',
 };
 
-/** Marketing-style zone label used next to wall-clock times: America/Chicago → "CT". */
+const tzAbbrevCache = new Map<string, string>();
+
+/**
+ * Marketing-style zone label used next to wall-clock times: America/Chicago → "CT",
+ * America/Indiana/Indianapolis → "ET". Derived from Intl's short zone name ("CDT"/"CST" → "CT", "EST" → "ET",
+ * "PDT" → "PT" …); zones Intl only names by offset ("GMT+2") fall back to the table, then to the IANA id.
+ */
 export function tzAbbrev(timezone: string): string {
-  return TZ_ABBREV[timezone] ?? timezone;
+  const cached = tzAbbrevCache.get(timezone);
+  if (cached) return cached;
+  let out = TZ_ABBREV[timezone];
+  try {
+    const zone = new Intl.DateTimeFormat('en-US', { timeZone: timezone, timeZoneName: 'short' })
+      .formatToParts(new Date(Date.UTC(2026, 0, 15, 12)))
+      .find((p) => p.type === 'timeZoneName')?.value;
+    const m = zone ? /^([A-Z])[SD]T$/.exec(zone) : null;
+    if (m) out = `${m[1]}T`;
+    else if (zone && /^[A-Z]{2,5}$/.test(zone) && !out) out = zone;
+  } catch {
+    /* unknown zone id → table / IANA id */
+  }
+  out ??= timezone;
+  tzAbbrevCache.set(timezone, out);
+  return out;
 }
 
 /** ['W','M','F'] → "MWF" (canonical order, deduped). */

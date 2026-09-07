@@ -1,0 +1,201 @@
+Subject,Catalog Nbr,Section,A+,A,A-,B+,B,B-,C+,C,C-,D+,D,D-,F,CR,I,NC,W,P,Instructor 1,Instructor 2,Instructor 3,Instructor 4,Instructor 5,Instructor 6,instructor_id,instructor_name_normalized,title
+ACCT,2301,001,10,9,5,,3,5,4,2,2,2,1,8,6,,,,2,,"Ashdown, Thaddeus L","Ormerod, Gwendolyn",,,,,txa254192,thaddeus ashdown,Introductory Financial Accounting 
+ACCT,2301,002,12,5,11,2,,,2,,1,2,,,3,,,,1,,"Jessop, Quintessa",,,,,,qxj113944,quintessa jessop,Introductory Financial Accounting 
+ACCT,2301,003,16,7,4,4,5,,2,1,,,,1,,,,,,,"Jessop, Quintessa",,,,,,qxj152072,quintessa jessop,Introductory Financial Accounting 
+ACCT,2301,004,5,6,4,6,2.0,3,2,1,,,2,1,1,,,,3,,"Szymanski, Thaddeus A",,,,,,txs131038,thaddeus szymanski,Introductory Financial Accounting 
+ACCT,2301,005,3,1.0,8,11,7,10,,11,,,3,,1,,,,1,,"Marchetti, Dmitri J","Rasmussen, Anselm K",,,,,dxm144362,dmitri marchetti,Introductory Financial Accounting 
+ACCT,2301,006,15,8,6,11,5,6,6,4,,4,1,1,,,,,,,"Marisol Quintanar, .","Oyelaran, Florentina M",,,,,wxo114873,,Introductory Financial Accounting 
+ACCT,2301,007,3,4,4,17,7,8,,11,,,2,,1,,,,3,,"Quillfeather, Adaeze   (Ada)","Rasmussen, Anselm K",,,,,dxm238627,dmitri marchetti,Introductory Financial Accounting 
+ACCT,2301,008,15,12,6,14,4,3,5,1,,4,,1,1,,,,2,,,,,,,,,,Introductory Financial Accounting 
+ACCT,2301,009,,,,,,,,,,,,,,14,,,,3,"Ellsworth, Leopold R","Rasmussen, Leopold J",,,,,lxe112348,leopold ellsworth,Introductory Financial Accounting 
+ACCT,2301,010,,,,,,,,,,,,,,,,,2,,"Marchetti, Dmitri J","Rasmussen, Anselm K",,,,,dxm110566,dmitri marchetti,Introductory Financial Accounting 
+ACCT,2301,011,6,3,9,12,7,11,7,2,4,1,1,,3,1,2,3,2,4,"Ellsworth, Leopold R","Rasmussen, Leopold J",,,,,lxe100488,leopold ellsworth,Introductory Financial Accounting 
+ACCT,2301,012,14,2,4,14,10,3,5,2,3,2,2,,4,,,,2,,"Oyelaran, Wilhelmina L","Coventry, Seraphina L","Yamazaki, Cassius R","Marchetti, Evander","Szymanski, Adaeze K","Pemberton, Ignatius R",wxo244404,wilhelmina oyelaran,Introductory Financial Accounting 
+ACCT,2301,013,15,2,5,10,5,6,7,5,3,1,1,2,3,,,,3,,"Ashdown, Thaddeus L","Ashdown, Thaddeus L",,,,,txa241493,thaddeus ashdown,Introductory Financial Accounting 
+ACCT,4V95,014,6,9,12,8,4,4,5,5,2,1,2,3,2,,,,4,,"Ellsworth, Leopold R","Rasmussen, Leopold J",,,,,lxe200190,leopold ellsworth,Introductory Financial Accounting 
+ACCT,2301,016,19,6,3,3,4,6,5,4,1,3,5,,,,,,,,Nerissa,,,,,,gxh226821,nerissa,Introductory Financial Accounting 
+ACCT,2301,501,11,,6,6,6,3,9,7,4,2,2,1,2,,,,2,,"Draycott, Thaddeus A","Bhattacharya, Dmitri J",,,,,txd204372,,Introductory Financial Accounting 
+ACCT,2301,502,2,5,6,9,6,6,4,3,1,,1,,1,,,,,,"Kingsley, Kasimir M","Ellsworth, Lucinda A",,,,,kxk122429,kasimir kingsley,Introductory Financial Accounting 
+ACCT,2302,001,3,11,,,13,,1,6,,2,1,,4,,,,6,,"Marchetti, Jarvis L","Jessop, Nerissa",,,,,jxm232409,jarvis marchetti,Introductory Management Accounting 
+ACCT,2302,002,9,21,,,9,,1,12,,1,1,,2,,,,1,,"Marchetti, Jarvis L","Jessop, Nerissa",,,,,jxm232419,jarvis marchetti,Introductory Management Accounting 
+ACCT,2302,003,12,17,4,6,9,1,2,3,1,1,1,,1,,,,2,,"Szymanski, Hakeem J","Szymanski, Kalinda",,,,,hxs122268,hakeem szymanski,Introductory Management Accounting 
+ACCT,2302,004,13,11,11,5,6,2,,2,3,1,1,3,,,,,2,,"Szymanski, Hakeem J","Szymanski, Kalinda",,,,,hxs221187,hakeem szymanski,Introductory Management Accounting 
+ACCT,2302,005,2,14,,4,10,5,2,5,4,,,,2,,,,1,,"Quillfeather, Yevgeni R","Jessop, Nerissa",,,,,yxq150366,yevgeni quillfeather,Introductory Management Accounting 
+ACCT,2302,006,7,10,5,4,8,4,5,6,2,3,3,1,,,,,1,,"Szymanski, Hakeem J","Szymanski, Kalinda",,,,,hxs139793,hakeem szymanski,Introductory Management Accounting 
+ACCT,2302,007,6,9,2,5,14,4,2,10,3,,2,,1,,,,2,,"Quillfeather, Yevgeni R","Jessop, Nerissa",,,,,yxq208601,yevgeni quillfeather,Introductory Management Accounting 
+ACCT,2302,501,4,6,7,3,5,6,3,3,2,6,,,2,,,,6,,"Radcliffe, Delphine","Yamazaki, Wilhelmina A",,,,,dxr105431,delphine radcliffe,Introductory Management Accounting 
+ACCT,2302,502,2,2,11,8,4,7,3,2,1,,,3,8,,,,4,,"Radcliffe, Delphine","Yamazaki, Wilhelmina A",,,,,dxr111471,delphine radcliffe,Introductory Management Accounting 
+ACCT,3101,PSA,,,,,,,,,,,,,,100,,,,,"Holloway, Adaeze J","Ironside, Brigitta A",,,,,axh144850,adaeze holloway,
+ACCT,3312,001,16,16,8,5,10,,1,5,1,,,,,,,,,,"Ironside, Wilhelmina L","Ironside, Esperanza",,,,,wxi216731,wilhelmina ironside,Fundamentals of Accounting Analytics 
+ACCT,3322,001,3,6,5,1,11,1,5,7,1,,1,,4,,,,1,,"Ironside, Wilhelmina L","Ironside, Esperanza",,,,,wxi116581,wilhelmina ironside,Accounting Transaction Processing and Control 
+ACCT,3331,001,8,4,3,9,6,9,6,10,,,,1,1,,,,1,,"Greenhalgh, Ophelia M","Delacroix, Dmitri",,,,,oxg243295,ophelia greenhalgh,Intermediate Financial Accounting I 
+ACCT,3331,002,10,9,4,9,8,3,5,4,1,,,,2,,1,,3,,"Greenhalgh, Ophelia M","Delacroix, Dmitri",,,,,oxg116196,ophelia greenhalgh,Intermediate Financial Accounting I 
+ACCT,3331,003,6,4,7,8,4,8,6,4,5,3,3,,,,,,2,,"Greenhalgh, Ophelia M","Delacroix, Dmitri",,,,,oxg247593,ophelia greenhalgh,Intermediate Financial Accounting I 
+ACCT,3331,501,2,2,7,4,6,8,3,9,2,,2,,1,,,,4,,"Kingsley, Kasimir M","Ellsworth, Lucinda A",,,,,kxk212785,kasimir kingsley,Intermediate Financial Accounting I 
+ACCT,3332,001,2,5,2,2,12,3,8,11,1,4,9,4,2,,,,5,,"Holloway, Adaeze J","Ironside, Brigitta A",,,,,axh230353,adaeze holloway,Intermediate Financial Accounting II 
+ACCT,3332,501,,2,,2,2,6,1,2,8,,6,3,4,,,,3,,"Radcliffe, Delphine","Yamazaki, Wilhelmina A",,,,,dxr123076,delphine radcliffe,Intermediate Financial Accounting II 
+ACCT,3332,PPA,7,18,6,6,11,4,1,8,1,1,6,3,1,,,,,,"Holloway, Adaeze J","Ironside, Brigitta A",,,,,axh101514,adaeze holloway,
+ACCT,3341,001,3,9,5,8,8,9,2,1,,3,,,1,,,,2,,"Quillfeather, Yevgeni R","Jessop, Nerissa",,,,,yxq128405,yevgeni quillfeather,Cost Management Systems 
+ACCT,3341,501,2,2,3,2,1,6,1,3,1,,3,,4,,,,3,,"Ironside, Wilhelmina L","Ironside, Esperanza",,,,,wxi205248,wilhelmina ironside,Cost Management Systems 
+ACCT,3350,001,3,5,14,11,8,3,,2,1,,,,,,,,,,"Kingsley, Kasimir M","Ellsworth, Lucinda A",,,,,kxk167856,kasimir kingsley,Fundamentals of Taxation 
+ACCT,3350,501,,6,8,16,9,6,5,4,,,,,2,,,,,,"Ashdown, Ignatius R","Ellsworth, Lucinda A",,,,,ixa237942,ignatius ashdown,Fundamentals of Taxation 
+CS,1200,001,36,62,14,6,7,7,1,1,2,1,,1,4,,,,2,,"Szymanski, Dmitri",,,,,,dxs156134,dmitri szymanski,
+CS,1200,002,,92,15,,10,2,,3,,,,,3,,,,,,"Bhattacharya, Seraphina",,,,,,sxb142480,seraphina bhattacharya,Introduction to Computer Science and Software Engineering 
+CS,1200,003,,109,19,,7,2,,6,2,,,,3,,,,,,"Bhattacharya, Seraphina",,,,,,sxb140369,seraphina bhattacharya,Introduction to Computer Science and Software Engineering 
+CS,1200,004,31,59,18,9,7,2,2,1,1,1,1,,3,,,,,,"Szymanski, Dmitri",,,,,,dxs185532,dmitri szymanski,Introduction to Computer Science and Software Engineering 
+CS,1200,0L1,,40,5,,2,1,,,1,,,,1,,,,,,"Bhattacharya, Seraphina",,,,,,sxb162646,seraphina bhattacharya,Introduction to Computer Science and Software Engineering 
+CS,1200,501,25,48,12,6,4,3,3,3,,1,,1,2,,,,,,"Szymanski, Dmitri",,,,,,dxs231423,dmitri szymanski,Introduction to Computer Science and Software Engineering 
+CS,1200,HON,1,12,12,5,4,2,,,,,,,1,,,,,,"Trevelyan, Seraphina K",,,,,,sxt205854,seraphina trevelyan,Introduction to Computer Science and Software Engineering 
+CS,1325,001,4,58,21,19,29,10,5,8,1,,1,,9,,,,2,,"Trevelyan, Nerissa L",,,,,,nxt121745,nerissa trevelyan,Introduction to Programming 
+CS,1325,002,6,62,16,23,40,5,5,11,1,2,1,,3,,,,,,"Trevelyan, Nerissa L",,,,,,nxt109690,nerissa trevelyan,Introduction to Programming 
+CS,1337,001,2,2,4,,5,3,1,4,2,1,1,1,16,,,,4,,"Bhattacharya, Seraphina",,,,,,sxb255579,seraphina bhattacharya,Computer Science I 
+CS,1337,002,7,2,1,,3,4,1,,1,,2,,8,,,,,,"Moncrieff, Valentin M",,,,,,vxm114026,valentin moncrieff,Computer Science I 
+CS,1337,003,2,3,5,5,6,5,3,,,5,,,7,,1,,3,,"Pemberton, Gideon L",,,,,,gxp186261,,Computer Science I 
+CS,1337,004,11,4,4,3,2,3,,6,3,,,3,3,,,,5,,"Moncrieff, Valentin M",,,,,,vxm195637,valentin moncrieff,Computer Science I 
+CS,1436,001,,8,8,3,5,7,4,4,2,6,4,,8,,,,1,,"Brannigan, Adaeze J",,,,,,axb247230,adaeze brannigan,Programming Fundamentals 
+CS,1436,002,9,4,3,4,3,2,1,1,1,,3,2,4,,,,5,,"Kingsley, Valentin L",,,,,,vxk216606,valentin kingsley,Programming Fundamentals 
+CS,1436,003,6,13,9,9,10,4,5,3,2,1,1,,1,,,,,,"Ironside, Isolde J",,,,,,ixi218925,isolde ironside,Programming Fundamentals 
+CS,1436,004,,5,8,4,10,4,5,7,,6,1,1,7,,,,7,,"Nakashima, Montgomery L",,,,,,mxn144702,montgomery nakashima,Programming Fundamentals 
+CS,1436,005,7,4,6,5,9,6,3,6,3,2,,3,7,,,,3,,"Kingsley, Valentin L",,,,,,vxk216727,valentin kingsley,Programming Fundamentals 
+CS,1436,006,,9,4,8,16,7,2,5,3,5,2,,2,,,,2,,"Brannigan, Adaeze J",,,,,,axb135995,adaeze brannigan,Programming Fundamentals 
+CS,1436,007,4,5,4,2,5,8,6,3,7,1,2,4,9,,,,,,"Kingsley, Valentin L",,,,,,vxk190395,valentin kingsley,Programming Fundamentals 
+CS,1436,008,3,12,5,6,8,5,7,7,1,,4,,4,,,,2,,"Brannigan, Adaeze J",,,,,,axb183881,adaeze brannigan,Programming Fundamentals 
+CS,1436,009,5,16,7,9,6,9,3,4,2,,1,,1,,,,1,,"Ironside, Isolde J",,,,,,ixi148992,isolde ironside,Programming Fundamentals 
+CS,1436,010,2,11,,9,7,,13,8,,3,3,,6,,,,2,,"Greenhalgh, Dmitri L",,,,,,dxg123373,dmitri greenhalgh,Programming Fundamentals 
+CS,1436,012,,2,3,,1,,1,2,1,1,1,,4,,,,4,,"Ormerod, Florentina M",,,,,,fxo165757,florentina ormerod,Programming Fundamentals 
+CS,1436,013,,2,8,4,7,4,5,7,4,3,2,1,8,,,,4,,"Ormerod, Florentina M",,,,,,fxo144841,florentina ormerod,Programming Fundamentals 
+CS,1436,014,,7,11,2,7,9,5,9,2,,1,2,5,,,,2,,"Nakashima, Montgomery L",,,,,,mxn121383,montgomery nakashima,Programming Fundamentals 
+CS,1436,5L1,2,12,,8,5,,6,4,,3,4,,2,,,,,,"Greenhalgh, Dmitri L",,,,,,dxg146193,dmitri greenhalgh,Programming Fundamentals 
+CS,1436,5L2,3,8,3,1,4,1,,4,,2,4,,17,,,,,,"Ferreira-Lund, Quintessa K",,,,,,qxf135459,quintessa ferreira-lund,Programming Fundamentals 
+CS,2305,001,11,30,14,19,30,7,2,4,1,1,,,4,,,,1,,"Coventry, Wilhelmina J",,,,,,wxc107007,wilhelmina coventry,Discrete Mathematics for Computing I 
+CS,2305,003,4,23,5,9,25,8,4,3,,,1,1,,,,,3,,"Marchetti, Cassius",,,,,,cxm232311,cassius marchetti,Discrete Mathematics for Computing I 
+CS,2305,004,5,40,22,10,26,3,3,3,1,1,,,1,,,,3,,"Greenhalgh, Florentina L",,,,,,fxg141570,florentina greenhalgh,Discrete Mathematics for Computing I 
+CS,2305,HN1,9,26,,,,,,,,,,,1,,,,,,"Greenhalgh, Florentina L",,,,,,fxg206767,florentina greenhalgh,Discrete Mathematics for Computing I 
+CS,2336,001,6,8,4,3,,,3,2,1,,,,6,,1,,1,,"Pettigrew, Jocasta K",,,,,,jxp242352,jocasta pettigrew,Computer Science II 
+CS,2336,002,4,10,7,17,8,1,,3,2,,,,,,,,,,"Trevelyan, Bartholomew R",,,,,,bxt175200,bartholomew trevelyan,Computer Science II 
+CS,2336,003,3,4,3,8,5,2,2,1,1,2,4,,6,,,,2,,"Rasmussen, Esperanza",,,,,,exr220751,esperanza rasmussen,Computer Science II 
+CS,2336,004,5,14,4,25,5,1,5,2,,,,,,,,,,,"Trevelyan, Bartholomew R",,,,,,bxt131718,bartholomew trevelyan,Computer Science II 
+CS,2336,005,5,7,11,4,8,4,5,4,,,,2,1,,,,1,,"Rasmussen, Esperanza",,,,,,exr186790,esperanza rasmussen,Computer Science II 
+CS,2336,006,3,17,15,5,5,10,1,5,,2,,2,,,,,,,"Bhattacharya, Dmitri",,,,,,dxb201827,dmitri bhattacharya,Computer Science II 
+CS,2336,007,1,6,2,5,4,4,2,8,2,2,2,,4,,,,4,,"Draycott, Evander M",,,,,,exd230171,evander draycott,Computer Science II 
+CS,2336,008,4,8,15,5,10,8,,1,,5,3,,,,,,2,,"Bhattacharya, Florentina A",,,,,,fxb240419,florentina bhattacharya,Computer Science II 
+MATH,1306,001,1,1,4,6,5,1,2,,,,,3,1,,,,2,,"Rasmussen, Evander","Ostrowski, Henrietta L","Sundqvist, Calliope R","Abernathy, Seraphina M",,,exr223704,evander rasmussen,College Algebra for the Non-Scientist 
+MATH,1306,002,5,5,6,3,2,4,,6,,,,,,,,,2,,"Rasmussen, Evander","Sundqvist, Calliope R","Ostrowski, Henrietta L","Abernathy, Seraphina M",,,exr149433,evander rasmussen,College Algebra for the Non-Scientist 
+MATH,1314,001,3,4,4,4,9,2,3,2,1,1,1,,5,,,,,,"Marchetti, Ulyana M",,,,,,uxm202568,ulyana marchetti,College Algebra 
+MATH,1314,002,5,8,5,6,6,5,1,,2,,2,1,3,,,,5,,"Northcote, Cassius L",,,,,,cxn154724,,College Algebra 
+MATH,1314,003,5,4,7,6,4,5,3,3,,1,,2,2,,,,6,,"Rasmussen, Quintessa J",,,,,,qxr182777,quintessa rasmussen,College Algebra 
+MATH,1314,005,1,10,5,4,7,3,1,5,3,3,1,,,,,,7,,"Rasmussen, Quintessa J",,,,,,qxr256861,quintessa rasmussen,College Algebra 
+MATH,1314,006,,3,2,3,5,3,5,2,1,2,1,,5,,1,,1,,"Ormerod, Percival",,,,,,pxo114527,percival ormerod,College Algebra 
+MATH,1314,007,4,7,11,2,3,3,3,3,1,,2,,4,,,,4,,"Rasmussen, Quintessa J",,,,,,qxr187680,quintessa rasmussen,College Algebra 
+MATH,1314,008,1,5,7,5,6,2,6,,2,2,,,5,,,,2,,"Ormerod, Percival",,,,,,pxo248754,percival ormerod,College Algebra 
+MATH,1316,001,2,,3,4,6,3,1,4,1,5,,5,5,,,,9,,"Whitcombe, Isolde K","Umbridge, Kasimir",,,,,ixw153718,isolde whitcombe,Trigonometry 
+MATH,1316,002,,1,,3,5,1,3,3,5,1,1,3,12,,,,2,,"Fairweather, Valentin",,,,,,vxf169280,valentin fairweather,Trigonometry 
+MATH,1316,003,1,,1,,3,2,5,4,,1,,,7,,,,1,,"Fairweather, Valentin",,,,,,vxf161925,valentin fairweather,Trigonometry 
+MATH,1316,004,1,3,4,3,4,3,6,5,2,1,,6,3,,,,6,,"Rasmussen, Evander","Abernathy, Seraphina M",,,,,exr161620,evander rasmussen,Trigonometry 
+MATH,1325,001,5,7,5,6,7,5,6,3,6,3,4,1,4,,,,3,,"Jessop, Evander L",,,,,,exj113809,evander jessop,Applied Calculus I 
+MATH,1325,002,1,7,3,1,1,3,5,11,6,1,2,,3,,,,4,,"Ellsworth, Jocasta R",,,,,,jxe112607,jocasta ellsworth,Applied Calculus I 
+MATH,1325,003,6,6,4,5,7,6,3,2,3,,2,2,1,,,,2,,"Wexford, Dmitri J",,,,,,dxw207338,dmitri wexford,Applied Calculus I 
+MATH,1325,004,3,5,13,5,4,7,7,10,4,1,4,1,1,,,,5,,"Lockhart, Kalinda L",,,,,,kxl172981,kalinda lockhart,Applied Calculus I 
+MATH,1325,005,7,3,7,3,4,9,3,4,6,1,,,,,,,1,,"Wexford, Dmitri J",,,,,,dxw223157,dmitri wexford,Applied Calculus I 
+MATH,1325,006,5,6,5,4,4,4,2,9,5,,1,,1,,,,,,"Lockhart, Zephyrine K",,,,,,zxl113891,zephyrine lockhart,Applied Calculus I 
+MATH,1325,007,1,5,7,4,4,4,6,9,10,4,2,1,6,,,,4,,"Wexford, Brigitta L","Greenhalgh, Quintessa",,,,,bxw239840,brigitta wexford,Applied Calculus I 
+MATH,1325,008,8,17,14,5,7,5,5,,5,1,1,1,,,,,,,"Delacroix, Leopold",,,,,,lxd250455,leopold delacroix,Applied Calculus I 
+MATH,1325,009,,11,5,3,5,7,2,7,4,1,1,,3,,,,1,,"Okonkwo, Gideon J",,,,,,gxo209815,gideon okonkwo,Applied Calculus I 
+MATH,1325,010,1,4,7,6,4,5,1,7,5,2,,1,3,,,,3,,"Okonkwo, Gideon J",,,,,,gxo105514,gideon okonkwo,Applied Calculus I 
+MATH,1325,011,5,10,8,5,6,2,1,4,2,,,,,,1,,4,,"Delacroix, Leopold",,,,,,lxd228557,leopold delacroix,Applied Calculus I 
+MATH,1325,012,5,8,5,3,4,5,,3,4,,2,,1,,,,3,,"Lockhart, Zephyrine K",,,,,,zxl134423,zephyrine lockhart,Applied Calculus I 
+MATH,1325,013,5,13,9,7,5,5,1,2,3,3,2,1,1,,,,3,,"Jessop, Evander L",,,,,,exj149749,evander jessop,Applied Calculus I 
+MATH,1325,014,4,11,8,3,4,5,3,2,6,1,,,1,,,,2,,"Delacroix, Leopold",,,,,,lxd122251,leopold delacroix,Applied Calculus I 
+MATH,1325,015,,6,7,6,1,8,4,7,3,,2,2,1,,,,3,,"Lockhart, Kalinda L",,,,,,kxl236872,kalinda lockhart,Applied Calculus I 
+MATH,1325,016,1,13,5,4,3,6,6,4,1,2,,1,1,,,,2,,"Lockhart, Kalinda L",,,,,,kxl155358,kalinda lockhart,Applied Calculus I 
+MATH,1325,017,2,9,5,4,5,7,6,,3,1,1,,2,,,,2,,"Coventry, Gwendolyn M",,,,,,gxc197551,,Applied Calculus I 
+MATH,1325,018,3,3,3,,4,4,4,4,8,5,1,2,1,,,,5,,"Wexford, Brigitta L","Lockhart, Zephyrine K",,,,,bxw165213,brigitta wexford,Applied Calculus I 
+MATH,1325,501,4,7,12,6,6,9,7,1,6,3,1,1,1,,,,5,,"Okonkwo, Gideon J",,,,,,gxo197273,gideon okonkwo,Applied Calculus I 
+MATH,1326,002,11,3,7,4,5,1,3,4,1,,2,4,2,,,,11,,"Wexford, Dmitri J","Delacroix, Delphine M","Draycott, Yevgeni",,,,dxw113783,dmitri wexford,Applied Calculus II 
+MATH,1326,003,8,,,2,2,1,3,5,3,,,4,6,,,,8,,"Wexford, Dmitri J","Draycott, Yevgeni","Delacroix, Delphine M",,,,dxw223551,dmitri wexford,Applied Calculus II 
+MATH,2312,001,3,,2,10,6,1,3,5,4,,3,1,4,,,,1,,"Marchetti, Ulyana M",,,,,,uxm245829,ulyana marchetti,Precalculus 
+MATH,2312,002,1,2,,,2,3,,2,1,1,,2,6,,,,1,,"Marchetti, Ulyana M",,,,,,uxm226416,ulyana marchetti,Precalculus 
+MATH,2312,003,,1,,8,4,2,4,4,1,1,2,8,5,,,,2,,"Marchetti, Ulyana M",,,,,,uxm235648,ulyana marchetti,Precalculus 
+MATH,2312,004,3,4,1,10,5,2,4,,3,1,2,2,9,,,,,,"Sundqvist, Jocasta",,,,,,jxs193189,,Precalculus 
+MATH,2312,005,3,4,1,3,2,1,6,,2,2,,2,2,,,,,,"Sundqvist, Jocasta",,,,,,jxs182382,,Precalculus 
+MATH,2312,006,3,,2,3,,1,1,,3,1,,1,,,,,4,,"Ashdown, Kasimir A",,,,,,kxa189526,,Precalculus 
+PHYS,1100,001,,,,,,,,,,,,,,40,,3,,,"Draycott, Florentina R",,,,,,fxd144033,florentina draycott,The Fun of Physics 
+PHYS,1101,101,2,22,2,,1,,1,,1,,,,,,,,,,"Draycott, Zephyrine K","Trevelyan, Thaddeus","Coventry, Nerissa J",,,,zxd185716,zephyrine draycott,College Physics Laboratory I 
+PHYS,1101,102,2,21,3,,2,,,,,,,,1,,,,,,"Draycott, Zephyrine K","Trevelyan, Thaddeus","Sundqvist, Kalinda K",,,,zxd176958,zephyrine draycott,College Physics Laboratory I 
+PHYS,1101,103,18,10,,,,1,,1,,,,,,,,,,,"Draycott, Zephyrine K","Trevelyan, Thaddeus","Villanueva, Gwendolyn L",,,,zxd221181,zephyrine draycott,College Physics Laboratory I 
+PHYS,1101,104,,26,,,,1,,,,,,,1,,,,,,"Draycott, Zephyrine K","Trevelyan, Thaddeus","Ironside, Wilhelmina K",,,,zxd140835,zephyrine draycott,College Physics Laboratory I 
+PHYS,1101,105,18,9,,,,,,1,,,,,,,,,,,"Draycott, Zephyrine K","Trevelyan, Thaddeus","Villanueva, Gwendolyn L",,,,zxd145166,zephyrine draycott,College Physics Laboratory I 
+PHYS,1101,106,3,24,1,1,,,,,,,,,1,,,,,,"Draycott, Zephyrine K","Trevelyan, Thaddeus","Sundqvist, Jarvis A",,,,zxd188910,zephyrine draycott,College Physics Laboratory I 
+PHYS,1101,107,8,20,,,1,,,,,,,,1,,,,,,"Draycott, Zephyrine K","Trevelyan, Thaddeus","Nakashima, Delphine",,,,zxd105083,zephyrine draycott,College Physics Laboratory I 
+PHYS,1101,601,11,15,1,,,,,,,,,,1,,,,,,"Draycott, Zephyrine K","Trevelyan, Thaddeus","Fairweather, Ignatius L",,,,zxd258571,zephyrine draycott,College Physics Laboratory I 
+PHYS,1102,101,5,17,3,1,,,,,,,,,,,,,,,"Marchetti, Fenwick K","Okonkwo, Hakeem R","Brannigan, Jarvis R",,,,fxm115055,fenwick marchetti,College Physics Laboratory II 
+PHYS,1102,102,4,22,,,,,,,,1,,,,,,,,,"Marchetti, Fenwick K","Okonkwo, Hakeem R","Ormerod, Gideon A",,,,fxm204023,fenwick marchetti,College Physics Laboratory II 
+PHYS,1102,103,11,17,,,1,,,,,,,,,,,,,,"Marchetti, Fenwick K","Okonkwo, Hakeem R","Quillfeather, Kalinda J",,,,fxm120655,fenwick marchetti,College Physics Laboratory II 
+PHYS,1102,104,9,17,,,1,,,,,,,,,,,,,,"Marchetti, Fenwick K","Okonkwo, Hakeem R","Ostrowski, Hakeem",,,,fxm221192,fenwick marchetti,College Physics Laboratory II 
+PHYS,1102,105,5,17,5,,,1,,,,,,,,,,,,,"Marchetti, Fenwick K","Okonkwo, Hakeem R","Brannigan, Jarvis R",,,,fxm244398,fenwick marchetti,College Physics Laboratory II 
+PHYS,1102,106,21,5,,,,,,,,,,,,,,,,,"Marchetti, Fenwick K","Okonkwo, Hakeem R","Northcote, Zephyrine M",,,,fxm244055,fenwick marchetti,College Physics Laboratory II 
+PHYS,1102,107,17,8,1,,,,,,1,,1,,,,,,,,"Marchetti, Fenwick K","Okonkwo, Hakeem R","Radcliffe, Adaeze R",,,,fxm244416,fenwick marchetti,College Physics Laboratory II 
+PHYS,1102,108,3,23,,,,,,,,,,,,,,,,,"Marchetti, Fenwick K","Okonkwo, Hakeem R","Ormerod, Gideon A",,,,fxm139621,fenwick marchetti,College Physics Laboratory II 
+PHYS,1102,601,4,15,,,,,,,,,,,,,,,,,"Marchetti, Fenwick K","Okonkwo, Hakeem R","Draycott, Leopold K",,,,fxm175466,fenwick marchetti,College Physics Laboratory II 
+PHYS,1102,602,9,5,,,,,,,,,,,,,,,,,"Marchetti, Fenwick K","Okonkwo, Hakeem R","Jessop, Cassius K",,,,fxm233342,fenwick marchetti,College Physics Laboratory II 
+PHYS,1301,001,16,16,16,11,13,10,12,6,7,4,2,4,3,,,,2,,"Wexford, Isolde L","Brannigan, Bartholomew","Oyelaran, Gideon A",,,,ixw108226,isolde wexford,College Physics I 
+PHYS,1301,501,57,64,4,2,1,,,1,,,,,,,,,1,,"Draycott, Florentina R","Ashdown, Isolde L",,,,,fxd102226,florentina draycott,College Physics I 
+PHYS,1302,001,28,26,17,6,19,9,7,8,,,,1,2,,,,6,,"Vandersloot, Gwendolyn R","Ferreira-Lund, Bartholomew J",,,,,gxv170390,gwendolyn vandersloot,College Physics II 
+PHYS,1302,002,55,36,4,5,10,5,,2,,3,1,1,,,,,6,,"Trevelyan, Thaddeus","Lockhart, Valentin J",,,,,txt239689,thaddeus trevelyan,College Physics II 
+PHYS,2125,101,,25,,3,,,,2,,,,,,,,,,,"Draycott, Zephyrine K","Trevelyan, Thaddeus","Oyelaran, Gwendolyn L",,,,zxd245485,zephyrine draycott,Physics Laboratory I 
+PHYS,2125,102,12,14,1,,,,,1,,,,,,,,,,,"Draycott, Zephyrine K","Trevelyan, Thaddeus","Coventry, Nerissa J",,,,zxd183695,zephyrine draycott,Physics Laboratory I 
+PHYS,2125,103,7,20,,1,1,,,,,,,,,,,,,,"Draycott, Zephyrine K","Trevelyan, Thaddeus","Northcote, Brigitta J",,,,zxd171855,zephyrine draycott,Physics Laboratory I 
+PHYS,2125,104,6,13,3,1,,,,,,,1,,,,,,,,"Draycott, Zephyrine K","Trevelyan, Thaddeus","Villanueva, Brigitta","Quillfeather, Kalinda J",,,zxd127109,zephyrine draycott,Physics Laboratory I 
+PHYS,2125,105,5,18,3,2,,2,,,,,,,,,,,,,"Draycott, Zephyrine K","Trevelyan, Thaddeus","Northcote, Brigitta J",,,,zxd141191,zephyrine draycott,Physics Laboratory I 
+PHYS,2125,106,1,21,6,1,,,,,,,,,,,,,,,"Draycott, Zephyrine K","Trevelyan, Thaddeus","Ellsworth, Gwendolyn R",,,,zxd255397,zephyrine draycott,Physics Laboratory I 
+PHYS,2125,107,2,13,4,5,2,,1,,,,,,1,,,,,,"Draycott, Zephyrine K","Trevelyan, Thaddeus","Ellsworth, Gwendolyn R",,,,zxd116784,zephyrine draycott,Physics Laboratory I 
+PHYS,2125,108,8,17,3,,,1,,,1,,,,,,,,,,"Draycott, Zephyrine K","Trevelyan, Thaddeus","Sundqvist, Jocasta L",,,,zxd155905,zephyrine draycott,Physics Laboratory I 
+PHYS,2125,109,,23,,1,,1,1,,1,,,,,,,,,,"Draycott, Zephyrine K","Trevelyan, Thaddeus","Sundqvist, Jarvis A",,,,zxd199630,zephyrine draycott,Physics Laboratory I 
+PHYS,2125,110,6,18,1,2,,,,,,,,,,,,,,,"Draycott, Zephyrine K","Trevelyan, Thaddeus","Ironside, Wilhelmina K",,,,zxd148921,zephyrine draycott,Physics Laboratory I 
+PHYS,2125,111,15,9,3,2,,,,,,,,,1,,,,,,"Draycott, Zephyrine K","Trevelyan, Thaddeus","Fairweather, Ignatius L",,,,zxd110340,zephyrine draycott,Physics Laboratory I 
+PHYS,2125,112,4,19,4,1,,2,,,,,,,,,,,,,"Draycott, Zephyrine K","Trevelyan, Thaddeus","Lockhart, Anselm L","Greenhalgh, Florentina A",,,zxd119498,zephyrine draycott,Physics Laboratory I 
+PHYS,2125,113,6,16,2,2,,1,1,,,,,,1,,,,,,"Draycott, Zephyrine K","Trevelyan, Thaddeus","Zielinski, Evander L",,,,zxd172722,zephyrine draycott,Physics Laboratory I 
+PHYS,2125,114,6,17,1,3,1,,,,1,,,,,,,,,,"Draycott, Zephyrine K","Trevelyan, Thaddeus","Sundqvist, Kalinda K",,,,zxd127665,zephyrine draycott,Physics Laboratory I 
+PHYS,2125,115,11,11,5,,1,1,,,,,,,1,,,,,,"Draycott, Zephyrine K","Trevelyan, Thaddeus","Nakashima, Delphine",,,,zxd102946,zephyrine draycott,Physics Laboratory I 
+PHYS,2125,116,15,8,2,2,,,,,,,,,1,,,,,,"Draycott, Zephyrine K","Trevelyan, Thaddeus","Lockhart, Anselm L",,,,zxd250122,zephyrine draycott,Physics Laboratory I 
+PHYS,2125,117,2,19,3,2,1,1,,,,,,,1,,,,1,,"Draycott, Zephyrine K","Trevelyan, Thaddeus","Okonkwo, Anselm M",,,,zxd141953,zephyrine draycott,Physics Laboratory I 
+PSY,2301,001,,30,29,15,17,7,5,4,4,2,,3,9,,,,3,,"Villanueva, Lucinda K","Draycott, Brigitta",,,,,lxv253147,lucinda villanueva,Introduction to Psychology 
+PSY,2301,002,26,25,17,12,21,7,6,9,2,3,4,2,7,,,,2,,"Sundqvist, Hakeem A","Radcliffe, Isolde R",,,,,hxs193700,hakeem sundqvist,Introduction to Psychology 
+PSY,2301,003,32,58,31,31,37,21,19,21,13,8,4,6,10,,,,3,,"Brannigan, Xiomara","Oyelaran, Yevgeni L","Yamazaki, Lucinda M",,,,xxb142002,xiomara brannigan,Introduction to Psychology 
+PSY,2301,005,7,20,15,10,12,13,4,5,8,6,4,3,15,,,,1,,"Sundqvist, Hakeem A","Kingsley, Seraphina A",,,,,hxs222281,hakeem sundqvist,Introduction to Psychology 
+PSY,2301,0W1,,28,28,23,22,20,6,9,3,3,5,5,11,,,,8,,"Villanueva, Lucinda K","Castellanos, Fenwick",,,,,lxv143711,lucinda villanueva,Introduction to Psychology 
+PSY,2301,HN1,9,8,5,4,,1,,,1,,,,,,,,,,"Coventry, Wilhelmina A",,,,,,wxc186330,wilhelmina coventry,Introduction to Psychology 
+PSY,2301,HN2,14,9,4,,1,,,,,,,,,,,,,,"Coventry, Wilhelmina A",,,,,,wxc179611,wilhelmina coventry,Introduction to Psychology 
+PSY,2314,001,12,19,16,11,11,6,5,6,2,4,1,,7,,1,,1,,"Szymanski, Henrietta","Pettigrew, Rafferty A",,,,,hxs212189,henrietta szymanski,Lifespan Development 
+PSY,2317,001,8,12,5,6,2,1,1,3,1,1,1,,4,,1,,1,,"Szymanski, Henrietta","Greenhalgh, Wilhelmina L",,,,,hxs156231,henrietta szymanski,Statistics for Psychology 
+PSY,2317,002,20,11,11,7,4,5,3,,,,,1,1,,,,1,,"Villanueva, Henrietta L","Fairweather, Esperanza K",,,,,hxv216131,,Statistics for Psychology 
+PSY,2317,0W1,,57,6,2,2,2,,,,1,,,,,,,,,"Villanueva, Jarvis","Villanueva, Marisol J",,,,,jxv147594,jarvis villanueva,Statistics for Psychology 
+PSY,3310,001,,155,2,5,18,,,4,1,2,1,,4,,,,1,,"Ironside, Henrietta M","Radcliffe, Bartholomew","Abernathy, Valentin R","Ashdown, Jarvis A",,,hxi236797,henrietta ironside,Child Development 
+PSY,3331,001,13,15,6,3,13,6,5,3,1,2,,2,4,,1,,3,,"Ferreira-Lund, Nikolai J","Pemberton, Fenwick",,,,,nxf178167,nikolai ferreira-lund,Social Psychology 
+PSY,3331,0H1,,48,16,7,18,13,3,11,1,3,,,5,,,,2,,"Kingsley, Valentin","Pemberton, Evander A",,,,,vxk254015,valentin kingsley,Social Psychology 
+PSY,3332,001,1,30,10,7,14,9,,9,,4,2,,4,,,,,,"Ashdown, Jarvis A",,,,,,jxa121381,jarvis ashdown,Social and Personality Development 
+PSY,3336,001,2,9,3,4,3,1,,1,,,,,,,,,1,,"Szymanski, Henrietta","Quillfeather, Anselm R",,,,,hxs100455,henrietta szymanski,Infancy 
+PSY,3339,0H1,,10,2,3,9,4,5,6,2,4,1,,13,,,,3,,"Kingsley, Valentin","Pemberton, Evander A",,,,,vxk115052,valentin kingsley,Educational Psychology 
+PSY,3342,001,,42,,,5,,,,,,,,1,,,,,,"Ironside, Henrietta M","Pettigrew, Valentin L","Abernathy, Valentin R","Ashdown, Jarvis A",,,hxi251760,henrietta ironside,Exceptional Children 
+PSY,3352,001,4,6,11,10,9,9,2,8,7,3,3,6,8,,,,4,,"Jessop, Hakeem","Ironside, Ignatius A","Wexford, Jocasta",,,,hxj202224,hakeem jessop,Biological Psychology 
+PSY,3360,001,7,29,23,14,16,7,6,8,4,1,2,,2,,,,,,"Ostrowski, Montgomery A","Greenhalgh, Kalinda L",,,,,mxo190296,montgomery ostrowski,History of Psychology 
+PSY,3361,001,31,30,8,7,10,1,5,7,2,3,1,3,,,,,2,,"Northcote, Xiomara M","Jessop, Isolde L",,,,,xxn212485,xiomara northcote,Cognitive Psychology 
+PSY,3361,0W1,,33,11,13,9,5,6,4,1,1,,1,1,,,,1,,"Greenhalgh, Evander","Rasmussen, Nerissa R",,,,,exg215169,evander greenhalgh,Cognitive Psychology 
+PSY,3362,001,,20,,2,12,,1,6,,,1,,1,,,,,,"Wexford, Yevgeni K","Oyelaran, Delphine K",,,,,yxw145423,yevgeni wexford,Cognitive Development 
+PSY,3380,002,,4,5,5,2,,,,,,,,1,,,,1,,"Ashdown, Adaeze L","Umbridge, Ulyana A",,,,,axa247779,adaeze ashdown,Writing in Psychology 
+PSY,3392,0H1,83,11,9,5,6,1,,2,,,,,1,,,,,,"Abernathy, Valentin R","Villanueva, Zephyrine",,,,,vxa119947,valentin abernathy,Research Design and Analysis 
+PSY,3392,0H2,73,13,9,3,7,1,1,2,1,,,1,4,,,,1,,"Abernathy, Valentin R","Sundqvist, Ophelia M","Villanueva, Zephyrine",,,,vxa112350,valentin abernathy,Research Design and Analysis 
+PSY,3393,001,,10,,,8,,,1,,,1,,,,,,1,,"Ormerod, Quintessa","Greenhalgh, Quintessa K",,,,,qxo193340,,Experimental Projects in Psychology 
+PSY,3393,002,3,4,4,2,3,2,1,,,1,,,1,,,,1,,"Wexford, Isolde","Yamazaki, Gwendolyn K",,,,,ixw199098,isolde wexford,Experimental Projects in Psychology 
+PSY,3393,003,5,2,2,1,2,6,,2,,,1,,2,,,,,,"Ostrowski, Fenwick M","Pemberton, Lucinda L",,,,,fxo226405,fenwick ostrowski,Experimental Projects in Psychology 
+PSY,3393,004,5,10,3,,1,,,,1,,,,,,1,,1,,"Sundqvist, Cassius","Jessop, Kasimir A",,,,,cxs190169,cassius sundqvist,Experimental Projects in Psychology 
+PSY,3393,005,,12,1,2,6,,,1,,,,,,,,,,,"Villanueva, Jarvis","Fairweather, Jocasta",,,,,jxv190967,jarvis villanueva,Experimental Projects in Psychology 
+PSY,3393,006,11,6,2,,,,,,,,1,,1,,,,1,,"Ostrowski, Esperanza K","Trevelyan, Lucinda M",,,,,exo221984,esperanza ostrowski,Experimental Projects in Psychology 
+PSY,3393,501,,11,,2,,1,2,,2,1,,,1,,,,,,"Umbridge, Quintessa",,,,,,qxu180122,quintessa umbridge,Experimental Projects in Psychology 
+PSY,4320,001,8,4,3,5,4,2,,1,,,2,,2,,,,2,,"Whitcombe, Bartholomew K",,,,,,bxw253639,bartholomew whitcombe,Psychology of Reasoning 
+PSY,4328,001,9,5,7,7,6,2,5,7,5,3,3,2,1,,,,5,,"Northcote, Hakeem J","Kingsley, Wilhelmina J",,,,,hxn123366,hakeem northcote,Health Psychology 
+PSY,4343,001,11,33,15,20,22,4,3,6,3,1,3,2,4,,,,1,,"Sundqvist, Hakeem A","Zielinski, Bartholomew R",,,,,hxs137879,hakeem sundqvist,Adult Psychopathology 
+PSY,4343,0W2,,54,57,35,24,10,2,7,5,1,1,,,,,,,,"Ashdown, Hakeem J","Ironside, Ignatius L",,,,,hxa208421,hakeem ashdown,Adult Psychopathology 
+PSY,4344,001,,17,6,10,15,6,2,5,2,2,,,,,,,,,"Moncrieff, Florentina","Yamazaki, Cassius J",,,,,fxm124792,,Child Psychopathology 
+PSY,4348,001,2,7,9,3,2,3,,2,,,,,1,,,,,,"Jessop, Hakeem",,,,,,hxj131417,hakeem jessop,Sleep and Mental Health 
+PSY,4359,501,,14,,,12,,,,,,,,,,,,1,,"Delacroix, Dmitri R","Wexford, Esperanza M",,,,,dxd114180,dmitri delacroix,Cognitive Neuroscience 

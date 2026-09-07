@@ -5,17 +5,15 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
+import { buildSchoolChrome, fallbackChrome, type SchoolChrome } from "@/components/layout/schoolChrome";
 import { Toaster } from "@/components/ui/Toast";
 import { ShortlistProvider } from "@/components/shortlist/ShortlistProvider";
 import { ShortlistDrawer } from "@/components/shortlist/ShortlistDrawer";
 import { getRepository } from "@/lib/repo";
-import type { DataMode, Meta, School, SchoolId } from "@/lib/domain/types";
+import { DEFAULT_SCHOOL_ID, SCHOOL_IDS, findSchoolConfig } from "@/lib/config/schools";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
-
-/** Only school shipped in this build; the header/footer describe its dataset. */
-const DEFAULT_SCHOOL: SchoolId = "uiuc";
 
 const SITE_URL = siteUrl;
 
@@ -26,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s",
   },
   description:
-    "Official grade curves + student reviews, filtered to sections you can still get into this term.",
+    "Official grade curves — and student reviews where available — filtered to sections you can still get into this term.",
   applicationName: "ProfPeek",
   openGraph: { siteName: "ProfPeek", type: "website", locale: "en_US" },
   twitter: { card: "summary_large_image" },
@@ -41,53 +39,36 @@ export const viewport: Viewport = {
   ],
 };
 
-interface ChromeData {
-  mode: DataMode;
-  shortName: string;
-  timezone: string;
-  builtAt: string | null;
-  counts: Meta["counts"] | null;
-  seed: number | null;
-  reviewsLabel?: string;
-}
-
-/** Demo defaults used when the repository is missing or throws — the layout never crashes. */
-const FALLBACK_CHROME: ChromeData = {
-  mode: "demo",
-  shortName: "UIUC",
-  timezone: "America/Chicago",
-  builtAt: null,
-  counts: null,
-  seed: null,
-};
-
-async function loadChrome(): Promise<ChromeData> {
-  try {
-    const repo = getRepository();
-    const [meta, school]: [Meta, School | null] = await Promise.all([
-      repo.getMeta(DEFAULT_SCHOOL),
-      repo.getSchool(DEFAULT_SCHOOL),
-    ]);
-    const reviewsSource = meta.sources.find((s) => /review/i.test(s.id) || /review/i.test(s.label));
-    return {
-      mode: meta.mode,
-      shortName: school?.shortName ?? FALLBACK_CHROME.shortName,
-      timezone: school?.timezone ?? FALLBACK_CHROME.timezone,
-      builtAt: meta.builtAt,
-      counts: meta.counts,
-      seed: meta.seed,
-      reviewsLabel: meta.mode === "live" ? reviewsSource?.label : undefined,
-    };
-  } catch (err) {
-    if (process.env.NODE_ENV !== "test") {
-      console.warn("[profpeek] layout: repository unavailable, using demo defaults —", (err as Error).message);
-    }
-    return FALLBACK_CHROME;
-  }
+/**
+ * Header badge + footer provenance for every registered school (design §8). A school whose dataset is
+ * missing or unreadable gets registry-only fallback chrome — the layout never crashes.
+ */
+async function loadChrome(): Promise<Record<string, SchoolChrome>> {
+  const out: Record<string, SchoolChrome> = {};
+  const repo = getRepository();
+  await Promise.all(
+    SCHOOL_IDS.map(async (id) => {
+      const base = findSchoolConfig(id);
+      const fallback = { shortName: base?.shortName, timezone: base?.timezone };
+      try {
+        const [school, meta] = await Promise.all([
+          repo.getSchool(id).catch(() => null),
+          repo.getMeta(id).catch(() => null),
+        ]);
+        out[id] = buildSchoolChrome(id, school, meta, fallback);
+      } catch (err) {
+        if (process.env.NODE_ENV !== "test") {
+          console.warn(`[profpeek] layout: repository unavailable for ${id}, using defaults —`, (err as Error).message);
+        }
+        out[id] = fallbackChrome(id, fallback.shortName, fallback.timezone);
+      }
+    }),
+  );
+  return out;
 }
 
 export default async function RootLayout({ children }: { children: ReactNode }) {
-  const chrome = await loadChrome();
+  const chromeBySchool = await loadChrome();
 
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
@@ -99,18 +80,11 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
           Skip to content
         </a>
         <ShortlistProvider>
-          <SiteHeader mode={chrome.mode} shortName={chrome.shortName} />
+          <SiteHeader chromeBySchool={chromeBySchool} defaultSchoolId={DEFAULT_SCHOOL_ID} />
           <main id="main" className="flex w-full flex-1 flex-col">
             {children}
           </main>
-          <SiteFooter
-            mode={chrome.mode}
-            builtAt={chrome.builtAt}
-            timezone={chrome.timezone}
-            counts={chrome.counts}
-            seed={chrome.seed}
-            reviewsLabel={chrome.reviewsLabel}
-          />
+          <SiteFooter chromeBySchool={chromeBySchool} defaultSchoolId={DEFAULT_SCHOOL_ID} />
           <Toaster />
           <ShortlistDrawer />
         </ShortlistProvider>

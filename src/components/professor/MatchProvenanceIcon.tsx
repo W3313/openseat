@@ -10,7 +10,7 @@ export interface MatchProvenanceIconProps {
 }
 
 const METHOD_ORDER: readonly MatchMethod[] = [
-  "alias", "exact", "first-token", "initial", "nickname", "compound-last", "fuzzy", "ambiguous", "unmatched", "blocked",
+  "alias", "exact", "first-token", "initial", "nickname", "compound-last", "fuzzy", "ambiguous", "unmatched", "blocked", "grades-only",
 ];
 
 /** "Grade rows matched: 5 exact, 2 initial" — grade-source rows only, methods in tier order (pure). */
@@ -18,7 +18,7 @@ export function matchProvenanceSummary(provenance: readonly MatchProvenance[]): 
   const counts = new Map<MatchMethod, number>();
   for (const p of provenance) {
     if (p.source !== "grades") continue;
-    if (p.method === "unmatched" || p.method === "ambiguous" || p.method === "blocked") continue;
+    if (p.method === "unmatched" || p.method === "ambiguous" || p.method === "blocked" || p.method === "grades-only") continue;
     counts.set(p.method, (counts.get(p.method) ?? 0) + p.rows);
   }
   const parts = METHOD_ORDER.filter((m) => counts.has(m)).map((m) => `${counts.get(m)} ${m}`);

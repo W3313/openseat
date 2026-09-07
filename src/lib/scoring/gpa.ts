@@ -1,6 +1,8 @@
 // SPEC 8.1 row-level grade formulas. Pure functions over GradeBuckets; every aggregate in this module
-// (aggregate.ts) is built by summing buckets and re-applying these formulas to the sum.
-import type { GradeBuckets } from '@/lib/domain/types';
+// (aggregate.ts) is built by summing (weighted) buckets and re-applying these formulas to the sum.
+// MULTI_SCHOOL_DESIGN §4.1: percent-only rows carry buckets summing to 100 with weight 1, so summing
+// their buckets weights every section equally.
+import type { GradeBuckets, GradeRow } from '@/lib/domain/types';
 import { TA_SCHED_TYPES } from '@/lib/domain/types';
 import { BUCKET_KEYS, GPA_POINTS, LETTER_BUCKET_KEYS, MIN_GRADED_N } from '@/lib/domain/constants';
 
@@ -25,6 +27,29 @@ export function addBuckets(...buckets: readonly GradeBuckets[]): GradeBuckets {
     for (const key of BUCKET_KEYS) out[key] += b[key] ?? 0;
   }
   return out;
+}
+
+/** Element-wise scale (weighted aggregation, §4.1); weight 1 returns a plain copy. */
+export function scaleBuckets(buckets: GradeBuckets, weight: number): GradeBuckets {
+  const out: GradeBuckets = { ...EMPTY_BUCKETS };
+  for (const key of BUCKET_KEYS) out[key] = (buckets[key] ?? 0) * weight;
+  return out;
+}
+
+/** GradeRow.weight with the §4.1 default of 1 (non-finite or negative weights count as 1). */
+export function rowWeight(row: Pick<GradeRow, 'weight'>): number {
+  const w = row.weight;
+  return typeof w === 'number' && Number.isFinite(w) && w >= 0 ? w : 1;
+}
+
+/** Σ weight × buckets over rows — the one summation every aggregate uses. */
+export function sumWeightedBuckets(rows: readonly Pick<GradeRow, 'buckets' | 'weight'>[]): GradeBuckets {
+  return addBuckets(...rows.map((r) => (rowWeight(r) === 1 ? r.buckets : scaleBuckets(r.buckets, rowWeight(r)))));
+}
+
+/** True when there is at least one row and every row is percent-only (§4.1: counts are sections, not students). */
+export function isPercentOnly(rows: readonly Pick<GradeRow, 'percentOnly'>[]): boolean {
+  return rows.length > 0 && rows.every((r) => r.percentOnly === true);
 }
 
 /** Σ letter counts (13 buckets, excludes w). */

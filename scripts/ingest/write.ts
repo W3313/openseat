@@ -1,17 +1,53 @@
-// Output stage (SPEC 6.3 steps 5-6): Subject records, processed files, datasetHash and meta.json.
-import { mkdir, readFile, writeFile } from 'node:fs/promises';
+// Output stage (SPEC 6.3 steps 5-6; MULTI_SCHOOL_DESIGN §3): Subject records, processed files (grades split
+// per subject), datasetHash and meta.json. Every file is compact stable JSON with a trailing newline.
+import { mkdir, readdir, readFile, rm, writeFile } from 'node:fs/promises';
 import path from 'node:path';
-import type { Course, Meta, MetaCounts, Professor, ProfessorSummary, Section, Subject, SchoolId } from '@/lib/domain/types';
+import type { Course, GradeRow, Meta, MetaCounts, Professor, ProfessorSummary, Section, Subject, SchoolId } from '@/lib/domain/types';
 import { courseIdSubject } from '@/lib/utils/ids';
 import { stableStringify } from '@/lib/utils/stableStringify';
 import { datasetHash } from '@/lib/utils/hash';
 import { sectionCourseIds } from './sections';
 
-/** Order matters: datasetHash is sha256 over the concatenated stable JSON of exactly these eight files. */
+/** Fixed (whole-school) files. datasetHash covers these plus every grades/<SUBJECT>.json — see hashedFileOrder(). */
 export const HASHED_FILES = [
-  'school.json', 'subjects.json', 'courses.json', 'professors.json', 'grades.json', 'sections.json', 'reviews.json', 'match-report.json',
+  'school.json', 'subjects.json', 'courses.json', 'professors.json', 'sections.json', 'reviews.json', 'match-report.json',
 ] as const;
 export type HashedFile = (typeof HASHED_FILES)[number];
+
+export const GRADES_DIR = 'grades';
+
+/**
+ * Relative paths in hash order: school, subjects, courses, professors, grades/<S>.json (S sorted), sections,
+ * reviews, match-report. The order is part of the datasetHash contract.
+ */
+export function hashedFileOrder(subjects: readonly string[]): string[] {
+  const grades = [...subjects].sort().map((s) => `${GRADES_DIR}/${s}.json`);
+  return ['school.json', 'subjects.json', 'courses.json', 'professors.json', ...grades, 'sections.json', 'reviews.json', 'match-report.json'];
+}
+
+/** Persisted form of a GradeRow: `nameKey` is dropped (≈ 250 B/row, derivable via parseName(instructorRaw)). */
+export function persistedGradeRow(row: GradeRow): GradeRow {
+  const { nameKey: _nameKey, ...rest } = row;
+  void _nameKey;
+  return rest;
+}
+
+/** GradeRow[] → subject → persisted rows (row order preserved). */
+export function splitGradesBySubject(rows: readonly GradeRow[], subjects: readonly string[] = []): Record<string, GradeRow[]> {
+  const out: Record<string, GradeRow[]> = {};
+  for (const s of subjects) out[s] = [];
+  for (const row of rows) {
+    const subject = courseIdSubject(row.courseId) ?? '';
+    if (subject === '') continue;
+    (out[subject] ??= []).push(persistedGradeRow(row));
+  }
+  return out;
+}
+
+export interface BuildSubjectsOptions {
+  /** Emit only the requested codes (subject allowlist in force); default: requested ∪ course ∪ professor subjects. */
+  restrictToRequested?: boolean;
+}
 
 /** Subject records for every subject that has a course, professor or section (SPEC 5 Subject). */
 export function buildSubjects(
@@ -21,10 +57,13 @@ export function buildSubjects(
   professors: readonly Professor[],
   sections: readonly Section[],
   requested: readonly string[],
+  opts: BuildSubjectsOptions = {},
 ): Subject[] {
   const codes = new Set<string>(requested);
-  for (const c of courses) codes.add(c.subject);
-  for (const p of professors) for (const s of p.subjects) codes.add(s);
+  if (!opts.restrictToRequested) {
+    for (const c of courses) codes.add(c.subject);
+    for (const p of professors) for (const s of p.subjects) codes.add(s);
+  }
   const out: Subject[] = [];
   for (const code of [...codes].sort()) {
     const openSectionCount = sections.filter((s) => s.isOpen && sectionCourseIds(s).some((id) => courseIdSubject(id) === code)).length;
@@ -40,13 +79,13 @@ export function buildSubjects(
   return out;
 }
 
-/** Serialize with stableStringify and a trailing newline (every committed file ends with "\n"). */
+/** Serialize with stableStringify (compact) and a trailing newline (every committed file ends with "\n"). */
 export function serialize(value: unknown): string {
   return `${stableStringify(value)}\n`;
 }
 
 export async function writeJson(dir: string, file: string, content: string): Promise<void> {
-  await mkdir(dir, { recursive: true });
+  await mkdir(path.dirname(path.join(dir, file)), { recursive: true });
   await writeFile(path.join(dir, file), content, 'utf8');
 }
 
@@ -57,6 +96,28 @@ export async function readJsonIfExists<T>(filePath: string): Promise<T | undefin
   } catch {
     return undefined;
   }
+}
+
+/** Delete `<dir>/<sub>/*.json` whose basename is not in `keep`, plus any legacy single-file sibling. */
+export async function pruneSubjectFiles(dir: string, sub: string, keep: readonly string[], legacyFile?: string): Promise<string[]> {
+  const removed: string[] = [];
+  const target = path.join(dir, sub);
+  await mkdir(target, { recursive: true });
+  for (const file of await readdir(target)) {
+    if (file.endsWith('.json') && !keep.includes(file.slice(0, -5))) {
+      await rm(path.join(target, file));
+      removed.push(`${sub}/${file}`);
+    }
+  }
+  if (legacyFile) {
+    try {
+      await rm(path.join(dir, legacyFile));
+      removed.push(legacyFile);
+    } catch {
+      /* absent */
+    }
+  }
+  return removed;
 }
 
 /** Counts of cached summaries by source (meta.counts.summariesClaude/Extractive). */
@@ -73,20 +134,29 @@ export function summaryCounts(summaries: Readonly<Record<string, ProfessorSummar
 }
 
 export interface WrittenFiles {
-  /** file name → bytes written */
+  /** relative file name → bytes written */
   sizes: Record<string, number>;
   datasetHash: string;
 }
 
 /**
- * Write the eight hashed files in order, then meta.json with the computed datasetHash filled in.
- * `meta.datasetHash` on the input is ignored/overwritten.
+ * Write the fixed files and grades/<SUBJECT>.json in hash order, then meta.json with the computed
+ * datasetHash filled in. `meta.datasetHash` on the input is ignored/overwritten. Stale grades files of
+ * subjects no longer present (and a legacy grades.json) are removed so the directory mirrors subjects.json.
  */
-export async function writeProcessed(dir: string, files: Record<HashedFile, unknown>, meta: Omit<Meta, 'datasetHash'>): Promise<WrittenFiles> {
+export async function writeProcessed(
+  dir: string,
+  files: Record<HashedFile, unknown>,
+  gradesBySubject: Readonly<Record<string, readonly GradeRow[]>>,
+  meta: Omit<Meta, 'datasetHash'>,
+): Promise<WrittenFiles> {
+  const subjects = Object.keys(gradesBySubject).sort();
+  await pruneSubjectFiles(dir, GRADES_DIR, subjects, 'grades.json');
   const contents: string[] = [];
   const sizes: Record<string, number> = {};
-  for (const name of HASHED_FILES) {
-    const content = serialize(files[name]);
+  for (const name of hashedFileOrder(subjects)) {
+    const value = name.startsWith(`${GRADES_DIR}/`) ? gradesBySubject[name.slice(GRADES_DIR.length + 1, -5)] : files[name as HashedFile];
+    const content = serialize(value);
     contents.push(content);
     sizes[name] = Buffer.byteLength(content, 'utf8');
     await writeJson(dir, name, content);

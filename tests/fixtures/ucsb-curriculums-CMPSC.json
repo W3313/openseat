@@ -1,0 +1,214 @@
+{
+  "pageNumber": 1,
+  "pageSize": 500,
+  "total": 4,
+  "classes": [
+    {
+      "quarter": "20264",
+      "courseId": "CMPSC    16  ",
+      "title": "PROBLEM SOLVING I",
+      "contactHours": 3.0,
+      "description": "Fundamental building blocks for solving problems using computers.",
+      "college": "ENGR",
+      "objLevelCode": "L",
+      "subjectArea": "CMPSC   ",
+      "unitsFixed": 4.0,
+      "unitsVariableHigh": null,
+      "unitsVariableLow": null,
+      "delayedSectioning": null,
+      "inProgressCourse": null,
+      "gradingOption": "L",
+      "instructionType": "LEC",
+      "instructionTypeSecondary": "DIS",
+      "onLineCourse": false,
+      "deptCode": "CMPSC",
+      "generalEducation": [],
+      "classSections": [
+        {
+          "enrollCode": "07807",
+          "section": "0100",
+          "session": null,
+          "classClosed": null,
+          "courseCancelled": null,
+          "gradingOptionCode": null,
+          "enrolledTotal": 190,
+          "maxEnroll": 200,
+          "secondaryStatus": null,
+          "departmentApprovalRequired": false,
+          "instructorApprovalRequired": false,
+          "restrictionLevel": null,
+          "restrictionMajor": null,
+          "restrictionMajorPass": null,
+          "restrictionMinor": null,
+          "restrictionMinorPass": null,
+          "concurrentCourses": [],
+          "timeLocations": [
+            { "room": "1701", "building": "BUCHN", "roomCapacity": 200, "days": "M W F  ", "beginTime": "09:00", "endTime": "09:50" }
+          ],
+          "instructors": [
+            { "instructor": "JAROSZ T", "functionCode": "Teaching and in charge" }
+          ]
+        },
+        {
+          "enrollCode": "07815",
+          "section": "0101",
+          "session": null,
+          "classClosed": "Y",
+          "courseCancelled": null,
+          "gradingOptionCode": null,
+          "enrolledTotal": 40,
+          "maxEnroll": 40,
+          "secondaryStatus": null,
+          "departmentApprovalRequired": false,
+          "instructorApprovalRequired": false,
+          "restrictionLevel": null,
+          "restrictionMajor": null,
+          "restrictionMajorPass": null,
+          "restrictionMinor": null,
+          "restrictionMinorPass": null,
+          "concurrentCourses": [],
+          "timeLocations": [
+            { "room": "1101", "building": "PHELP", "roomCapacity": 40, "days": " T     ", "beginTime": "14:00", "endTime": "14:50" }
+          ],
+          "instructors": [
+            { "instructor": "JAROSZ T", "functionCode": "Teaching and in charge" },
+            { "instructor": " OKONKWO D M", "functionCode": "Teaching but not in charge" }
+          ]
+        },
+        {
+          "enrollCode": "07823",
+          "section": "0102",
+          "session": null,
+          "classClosed": null,
+          "courseCancelled": null,
+          "gradingOptionCode": null,
+          "enrolledTotal": 12,
+          "maxEnroll": 40,
+          "secondaryStatus": null,
+          "departmentApprovalRequired": false,
+          "instructorApprovalRequired": false,
+          "restrictionLevel": null,
+          "restrictionMajor": null,
+          "restrictionMajorPass": null,
+          "restrictionMinor": null,
+          "restrictionMinorPass": null,
+          "concurrentCourses": [],
+          "timeLocations": [
+            { "room": "1101", "building": "PHELP", "roomCapacity": 40, "days": "   R   ", "beginTime": "9:00", "endTime": "9:50" }
+          ],
+          "instructors": []
+        }
+      ]
+    },
+    {
+      "quarter": "20264",
+      "courseId": "CMPSC   130A ",
+      "title": "DATA STRUCTURES AND ALGORITHMS I",
+      "college": "ENGR",
+      "objLevelCode": "S",
+      "subjectArea": "CMPSC   ",
+      "unitsFixed": 4.0,
+      "gradingOption": "L",
+      "instructionType": "LEC",
+      "instructionTypeSecondary": "DIS",
+      "onLineCourse": false,
+      "deptCode": "CMPSC",
+      "generalEducation": [],
+      "classSections": [
+        {
+          "enrollCode": "08003",
+          "section": "0100",
+          "classClosed": null,
+          "courseCancelled": "Y",
+          "enrolledTotal": 0,
+          "maxEnroll": 120,
+          "concurrentCourses": [],
+          "timeLocations": [],
+          "instructors": [
+            { "instructor": "ISHIKAWA Q X", "functionCode": "Teaching and in charge" }
+          ]
+        },
+        {
+          "enrollCode": "08011",
+          "section": "0200",
+          "classClosed": null,
+          "courseCancelled": null,
+          "enrolledTotal": null,
+          "maxEnroll": null,
+          "concurrentCourses": [],
+          "timeLocations": [
+            { "room": null, "building": null, "roomCapacity": null, "days": null, "beginTime": null, "endTime": null }
+          ],
+          "instructors": [
+            { "instructor": "ISHIKAWA Q X", "functionCode": "Teaching and in charge" },
+            { "instructor": "LIU F-K", "functionCode": "Teaching and in charge" }
+          ]
+        }
+      ]
+    },
+    {
+      "quarter": "20264",
+      "courseId": "CMPSCCS 130H ",
+      "title": "DATA STRUCTURES (CCS)",
+      "college": "CRST",
+      "objLevelCode": "S",
+      "subjectArea": "CMPSCCS ",
+      "unitsFixed": 4.0,
+      "gradingOption": "L",
+      "instructionType": "LEC",
+      "instructionTypeSecondary": null,
+      "onLineCourse": false,
+      "deptCode": "CMPSCCS",
+      "generalEducation": [],
+      "classSections": [
+        {
+          "enrollCode": "08029",
+          "section": "0100",
+          "classClosed": null,
+          "courseCancelled": null,
+          "enrolledTotal": 8,
+          "maxEnroll": 20,
+          "concurrentCourses": [],
+          "timeLocations": [
+            { "room": "2118", "building": "GIRV", "roomCapacity": 20, "days": " T R   ", "beginTime": "11:00", "endTime": "12:15" }
+          ],
+          "instructors": [
+            { "instructor": "0", "functionCode": "Teaching and in charge" }
+          ]
+        }
+      ]
+    },
+    {
+      "quarter": "20264",
+      "courseId": "PSTAT   120A ",
+      "title": "PROBABILITY AND STATISTICS",
+      "college": "L&S",
+      "objLevelCode": "S",
+      "subjectArea": "PSTAT   ",
+      "unitsFixed": 4.0,
+      "gradingOption": "L",
+      "instructionType": "LEC",
+      "instructionTypeSecondary": "DIS",
+      "onLineCourse": false,
+      "deptCode": "PSTAT",
+      "generalEducation": [],
+      "classSections": [
+        {
+          "enrollCode": "55004",
+          "section": "0100",
+          "classClosed": null,
+          "courseCancelled": null,
+          "enrolledTotal": 100,
+          "maxEnroll": 150,
+          "concurrentCourses": [],
+          "timeLocations": [
+            { "room": "1004", "building": "NH", "roomCapacity": 150, "days": "M W    ", "beginTime": "12:30", "endTime": "13:45" }
+          ],
+          "instructors": [
+            { "instructor": "LOCKWOOD L S", "functionCode": "Teaching and in charge" }
+          ]
+        }
+      ]
+    }
+  ]
+}

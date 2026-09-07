@@ -1,8 +1,9 @@
-// professors-detail.json: slug → ProfessorDetail, school-wide scope (SPEC 6.6, 5 ProfessorDetail).
+// professors-detail/<SUBJECT>.json: slug → ProfessorDetail, school-wide scope (SPEC 6.6, 5 ProfessorDetail;
+// MULTI_SCHOOL_DESIGN §3: split per subject — a professor appears in every subject file they are ranked in).
 import type { ProfessorDetail, RankingsPayload, RankingsResponse } from '@/lib/domain/types';
 import { eligibleRows, subjectWRate, type AggregateContext } from '@/lib/scoring/aggregate';
 import { priorMean } from '@/lib/scoring/rating';
-import { applyRankingsQuery } from '@/lib/scoring/rank';
+import { applyRankingsQuery, defaultSortFor } from '@/lib/scoring/rank';
 import type { DataIndex, ProcessedData } from './load';
 import { buildRankedProfessor } from './scores';
 
@@ -10,7 +11,7 @@ import { buildRankedProfessor } from './scores';
 export function rankIndex(payloads: readonly RankingsPayload[]): Map<string, { subject: string; rank: number | null }[]> {
   const out = new Map<string, { subject: string; rank: number | null }[]>();
   for (const payload of payloads) {
-    const response: RankingsResponse = applyRankingsQuery(payload, { sort: 'rating', openOnly: false });
+    const response: RankingsResponse = applyRankingsQuery(payload, { sort: defaultSortFor(payload.school), openOnly: false });
     const push = (pid: string, rank: number | null) => {
       const list = out.get(pid) ?? [];
       list.push({ subject: payload.subject.code, rank });
@@ -23,7 +24,7 @@ export function rankIndex(payloads: readonly RankingsPayload[]): Map<string, { s
   return out;
 }
 
-/** Every professor, school-wide scope. Keys are slugs (JsonRepository.getProfessorBySlug reads this). */
+/** Every professor, school-wide scope, keyed by slug. */
 export function buildProfessorDetails(data: ProcessedData, index: DataIndex, payloads: readonly RankingsPayload[]): Record<string, ProfessorDetail> {
   const ctx: AggregateContext = { allRows: data.grades, courses: data.courses, scope: { kind: 'school' } };
   const prior = priorMean(data.reviews);
@@ -61,6 +62,27 @@ export function buildProfessorDetails(data: ProcessedData, index: DataIndex, pay
       matchProvenance: rp.matchProvenance,
       rankBySubject: ranks.get(professor.id) ?? [],
     };
+  }
+  return out;
+}
+
+/**
+ * Per-subject slices of the detail map: every professor on a subject's rankings payload gets an entry in
+ * that subject's file (identical school-wide detail), so JsonRepository.getProfessorBySlug can read any one.
+ */
+export function splitDetailsBySubject(
+  details: Readonly<Record<string, ProfessorDetail>>,
+  payloads: readonly RankingsPayload[],
+): Record<string, Record<string, ProfessorDetail>> {
+  const out: Record<string, Record<string, ProfessorDetail>> = {};
+  for (const payload of payloads) {
+    const slice: Record<string, ProfessorDetail> = {};
+    const slugs = payload.professors.map((rp) => rp.professor.slug).sort();
+    for (const slug of slugs) {
+      const detail = details[slug];
+      if (detail) slice[slug] = detail;
+    }
+    out[payload.subject.code] = slice;
   }
   return out;
 }

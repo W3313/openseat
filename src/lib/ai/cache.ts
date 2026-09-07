@@ -5,7 +5,6 @@ import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import type { ProfessorSummary, SchoolId } from '@/lib/domain/types';
 import { PROMPT_VERSION } from '@/lib/domain/constants';
-import { env } from '@/lib/config/env';
 import { processedDirName, toSchoolId } from '@/lib/config/schools';
 import { assertServerOnly } from '@/lib/config/serverOnly';
 import { sha256Hex } from '@/lib/utils/hash';
@@ -56,9 +55,9 @@ export function isSummaryValid(summary: ProfessorSummary, expectedInputHash: str
 const store = new Map<string, ProfessorSummary>();
 const loaded = new Map<SchoolId, Promise<void>>();
 
-/** Absolute path of a school's summaries.json for the given mode (default env.DATA_MODE). */
-export function summariesFilePath(schoolId: SchoolId, mode = env.DATA_MODE, dataDir = path.join(process.cwd(), 'data', 'processed')): string {
-  return path.join(dataDir, processedDirName(schoolId, mode), 'summaries.json');
+/** Absolute path of a school's summaries.json (data/processed/<school>/summaries.json). */
+export function summariesFilePath(schoolId: SchoolId, dataDir = path.join(process.cwd(), 'data', 'processed')): string {
+  return path.join(dataDir, processedDirName(schoolId), 'summaries.json');
 }
 
 /** Read summaries.json from disk; {} when the file is absent. Never throws on ENOENT. */

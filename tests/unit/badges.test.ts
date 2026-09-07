@@ -9,7 +9,7 @@ function scores(partial: Partial<ProfessorScores> = {}): ProfessorScores {
     gradeRows: 4, studentsGraded: 200, withdrawn: 10,
     gpaMean: 3.3, aRate: 0.4, wRate: 0.05, dfwRate: 0.1,
     gpaDelta: 0, deltaComparableN: 200, soleInstructor: false,
-    composite: 70, yearsActive: 3,
+    composite: 70, yearsActive: 3, countsAreEstimates: false,
     ...partial,
   };
 }
@@ -84,5 +84,21 @@ describe('badges.ts', () => {
     expect(evaluateBadges(input({
       reviewCount: 0, ratingRaw: null, ratingShrunk: null, gpaDelta: null, deltaComparableN: 0, wRate: null, studentsGraded: 0, withdrawn: 0,
     }))).toEqual([]);
+  });
+
+  it('grades-only schools never award the review-dependent badges (MULTI_SCHOOL_DESIGN §5)', () => {
+    const loved = { gpaDelta: -0.3, ratingShrunk: 4.6, ratingRaw: 4.8, reviewCount: 5, deltaComparableN: 120 };
+    expect(evaluateBadges(input(loved))).toEqual(['tough-but-loved', 'hidden-gem']);
+    expect(evaluateBadges(input(loved, { reviewsAvailable: false }))).toEqual([]);
+    const easy = { gpaDelta: 0.4, deltaComparableN: 120, wRate: 0.01, studentsGraded: 100, withdrawn: 1 };
+    expect(evaluateBadges(input(easy, { reviewsAvailable: false, openSectionCount: 1, subjectWRate: 0.05 }))).toEqual(['open-now', 'easy-a', 'low-withdrawal']);
+  });
+
+  it('percent-only professors (countsAreEstimates) gate on sections instead of students (§4.1)', () => {
+    // 100 "students" per section: a single section would pass MIN_BADGE_N on counts, so the gate is MIN_SECTIONS_N sections.
+    const one = { countsAreEstimates: true, gradeRows: 1, gpaDelta: 0.4, deltaComparableN: 100, wRate: 0.01, studentsGraded: 100, withdrawn: 1 };
+    expect(evaluateBadges(input(one, { subjectWRate: 0.05 }))).toEqual([]);
+    const two = { ...one, gradeRows: 2, deltaComparableN: 200, studentsGraded: 200 };
+    expect(evaluateBadges(input(two, { subjectWRate: 0.05 }))).toEqual(['easy-a', 'low-withdrawal']);
   });
 });

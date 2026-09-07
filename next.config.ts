@@ -45,12 +45,15 @@ export const SECURITY_HEADERS: { key: string; value: string }[] = [
 const nextConfig: NextConfig = {
   // Do not advertise the framework (`X-Powered-By: Next.js`).
   poweredByHeader: false,
-  // The JsonRepository reads data/processed/<school>/*.json with fs at request time. Vercel's output file
-  // tracing only bundles files that are statically imported, so include the processed dataset for every route.
-  // Scoped to the committed demo directory so an accidental local live build (data/processed/uiuc-live, which
-  // may hold real instructor data) is never shipped.
+  // The JsonRepository reads data/processed/<school>/*.json with fs at request time (API routes and the
+  // ISR-rendered professor pages). Vercel's output file tracing only bundles files that are statically
+  // imported, so include every committed school dataset for every route (MULTI_SCHOOL_DESIGN §3).
   outputFileTracingIncludes: {
-    "/**": ["./data/processed/uiuc/**"],
+    "/**": ["./data/processed/**"],
+  },
+  // Grade-row files are only used by the ingest pipeline; keep them out of every serverless bundle.
+  outputFileTracingExcludes: {
+    "/**": ["./data/processed/*/grades/**"],
   },
   async headers() {
     return [

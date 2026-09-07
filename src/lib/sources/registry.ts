@@ -1,17 +1,21 @@
-// Adapter selection by environment (SPEC 6.2 "src/lib/sources/registry.ts").
-//   demo → DemoGradeSource + DemoScheduleSource + DemoReviewSource
-//   live → UiucGpaCsvSource + CourseExplorerSource + (RmpReviewSource if RMP_ENABLED else NullReviewSource)
-// Guard: DATA_MODE=live with REVIEW_SOURCE=demo is refused — real instructors are never joined with
-// fictional reviews.
+// Adapter registry (MULTI_SCHOOL_DESIGN §2, §7). Adapters are resolved PER SCHOOL from
+// SchoolConfig.sources.{grades,schedule,reviews}.kind — there is no global DATA_MODE any more.
+//
+// Adapter kinds live in a map that adapter modules extend from their own `src/lib/sources/<school>/register.ts`:
+//
+//   import { registerGradeSource } from '@/lib/sources/registry';
+//   registerGradeSource('uh-cougargrades', (ctx) => new UhGradeSource({ ...ctx.options, log: ctx.log }));
+//
+// `src/lib/sources/adapters.ts` is the generated list of every register.ts (side-effect imports); this
+// module imports it so any consumer of getSources() sees every kind. The import graph is intentionally
+// cyclic (registry → adapters → <school>/register → registry): the register* functions are hoisted
+// function declarations backed by a globalThis map, so a register.ts evaluated mid-cycle never hits a TDZ.
 import type { SchoolId } from '@/lib/domain/types';
 import type { Env } from '@/lib/config/env';
-import type { GradeSource, RawProfessor, RawReview, ReviewSource, ScheduleSource, SourceInfo } from './types';
-import { DemoGradeSource } from './demo/DemoGradeSource';
-import { DemoScheduleSource } from './demo/DemoScheduleSource';
-import { DemoReviewSource } from './demo/DemoReviewSource';
-import { UiucGpaCsvSource } from './uiuc/UiucGpaCsvSource';
-import { CourseExplorerSource } from './uiuc/CourseExplorerSource';
-import { RmpReviewSource } from './rmp/RmpReviewSource';
+import { getSchoolConfig, type SchoolConfig, type SourceSpec } from '@/lib/config/schools';
+import type { GradeSource, RawProfessor, RawReview, RawSection, ReviewSource, ScheduleSource, SourceInfo } from './types';
+import type { TermCode } from '@/lib/domain/types';
+import './adapters';
 
 export interface Sources {
   grades: GradeSource;
@@ -19,12 +23,74 @@ export interface Sources {
   reviews: ReviewSource;
 }
 
-/** Thrown by getSources()/getReviewSource() when DATA_MODE=live is combined with REVIEW_SOURCE=demo. */
-export const REFUSE_MIXED_SOURCES_MESSAGE = 'Refusing to join real instructors with fictional reviews';
+export interface RegistryLogger {
+  info: (msg: string) => void;
+  warn: (msg: string) => void;
+}
 
+export interface RegistryOptions {
+  /** Schedule adapters with a raw cache: bypass it (scripts pass --refresh). */
+  refresh?: boolean;
+  log?: RegistryLogger;
+}
+
+/** What every adapter factory receives. `options` is the SourceSpec minus `kind`. */
+export interface AdapterContext {
+  schoolId: SchoolId;
+  config: SchoolConfig;
+  env: Env;
+  options: Record<string, unknown>;
+  refresh: boolean;
+  log?: RegistryLogger;
+}
+
+export type GradeSourceFactory = (ctx: AdapterContext) => GradeSource;
+export type ScheduleSourceFactory = (ctx: AdapterContext) => ScheduleSource;
+export type ReviewSourceFactory = (ctx: AdapterContext) => ReviewSource;
+
+interface AdapterKinds {
+  grades: Map<string, GradeSourceFactory>;
+  schedule: Map<string, ScheduleSourceFactory>;
+  reviews: Map<string, ReviewSourceFactory>;
+}
+
+/**
+ * The one map of registered kinds, kept on globalThis so it exists before any module body runs. No
+ * module-level `const` may be touched here: a register.ts evaluated mid-cycle runs before this module's
+ * body, and only hoisted function declarations are safe to call then.
+ */
+function kinds(): AdapterKinds {
+  const key = Symbol.for('profpeek.adapterKinds');
+  const g = globalThis as unknown as Record<symbol, AdapterKinds | undefined>;
+  if (!g[key]) g[key] = { grades: new Map(), schedule: new Map(), reviews: new Map() };
+  return g[key];
+}
+
+export function registerGradeSource(kind: string, factory: GradeSourceFactory): void {
+  kinds().grades.set(kind, factory);
+}
+export function registerScheduleSource(kind: string, factory: ScheduleSourceFactory): void {
+  kinds().schedule.set(kind, factory);
+}
+export function registerReviewSource(kind: string, factory: ReviewSourceFactory): void {
+  kinds().reviews.set(kind, factory);
+}
+
+/** Registered kinds (sorted) — for error messages, /about and tests. */
+export function registeredAdapterKinds(): { grades: string[]; schedule: string[]; reviews: string[] } {
+  const k = kinds();
+  return {
+    grades: [...k.grades.keys()].sort(),
+    schedule: [...k.schedule.keys()].sort(),
+    reviews: [...k.reviews.keys()].sort(),
+  };
+}
+
+// ── null adapters (schools without a schedule or review source) ──────────────────────────────────────
 export const NULL_REVIEW_SOURCE_INFO: SourceInfo = { id: 'none', label: 'No review source', url: null, license: null };
+export const NULL_SCHEDULE_SOURCE_INFO: SourceInfo = { id: 'none', label: 'No schedule source', url: null, license: null };
 
-/** Live mode without RMP: no professors, no reviews — rankings degrade to grades-only entities. */
+/** No professors, no reviews — rankings are grades-only (MULTI_SCHOOL_DESIGN §5). */
 export class NullReviewSource implements ReviewSource {
   readonly info = NULL_REVIEW_SOURCE_INFO;
   async fetchProfessors(): Promise<RawProfessor[]> {
@@ -35,83 +101,68 @@ export class NullReviewSource implements ReviewSource {
   }
 }
 
-export interface RegistryOptions {
-  /** CourseExplorerSource: bypass the raw XML cache (scripts pass --refresh). */
-  refresh?: boolean;
-  log?: { info: (msg: string) => void; warn: (msg: string) => void };
+/** No sections at all (grades-only schools such as utd); the requested term is echoed back. */
+export class NullScheduleSource implements ScheduleSource {
+  readonly info = NULL_SCHEDULE_SOURCE_INFO;
+  async fetchSections(opts: { schoolId: SchoolId; term: TermCode; subject: string }): Promise<{ term: TermCode; fetchedAt: string; sections: RawSection[] }> {
+    return { term: opts.term, fetchedAt: '', sections: [] }; // '' = no fetch happened (ingest falls back to builtAt)
+  }
 }
 
-function assertSchool(schoolId: SchoolId): void {
-  if (schoolId !== 'uiuc') throw new Error(`No adapters registered for school "${schoolId}"`);
+// ── resolution ───────────────────────────────────────────────────────────────────────────────────────
+function context(schoolId: SchoolId, env: Env, spec: SourceSpec, opts: RegistryOptions): AdapterContext {
+  const config = getSchoolConfig(schoolId);
+  const { kind: _kind, ...options } = spec;
+  void _kind;
+  return { schoolId: config.id, config, env, options, refresh: opts.refresh ?? false, log: opts.log };
 }
 
-function assertNotMixed(env: Env): void {
-  if (env.DATA_MODE === 'live' && env.REVIEW_SOURCE === 'demo') throw new Error(REFUSE_MIXED_SOURCES_MESSAGE);
+function unknownKind(role: keyof AdapterKinds, kind: string, schoolId: string): Error {
+  const known = registeredAdapterKinds()[role];
+  return new Error(`No ${role} adapter registered for kind "${kind}" (school "${schoolId}"). Registered: ${known.join(', ') || 'none'}`);
+}
+
+/** Grade adapter for a school (every school has one). */
+export function getGradeSource(schoolId: SchoolId, env: Env, opts: RegistryOptions = {}): GradeSource {
+  const config = getSchoolConfig(schoolId);
+  const spec = config.sources.grades;
+  const factory = kinds().grades.get(spec.kind);
+  if (!factory) throw unknownKind('grades', spec.kind, config.id);
+  return factory(context(config.id, env, spec, opts));
+}
+
+/** Schedule adapter, or NullScheduleSource when the registry entry has `schedule: null`. */
+export function getScheduleSource(schoolId: SchoolId, env: Env, opts: RegistryOptions = {}): ScheduleSource {
+  const config = getSchoolConfig(schoolId);
+  const spec = config.sources.schedule;
+  if (!spec) return new NullScheduleSource();
+  const factory = kinds().schedule.get(spec.kind);
+  if (!factory) throw unknownKind('schedule', spec.kind, config.id);
+  return factory(context(config.id, env, spec, opts));
 }
 
 /**
- * Adapters selected by env.DATA_MODE: demo → the three demo adapters; live → UiucGpaCsvSource,
- * CourseExplorerSource, and RmpReviewSource when RMP_ENABLED=1 (else a NullReviewSource returning []).
+ * Review adapter, or NullReviewSource when `reviews: null` (every real school — docs/LEGAL.md).
+ * Guard: a live-mode school may never be wired to the fictional review adapter.
  */
-export function getSources(schoolId: SchoolId, env: Env, opts: RegistryOptions = {}): Sources {
-  assertSchool(schoolId);
-  assertNotMixed(env);
-  if (env.DATA_MODE === 'demo') {
-    return {
-      grades: getGradeSource(schoolId, env, opts),
-      schedule: getScheduleSource(schoolId, env, opts),
-      reviews: getReviewSource(schoolId, env, opts),
-    };
-  }
-  const reviews: ReviewSource =
-    env.RMP_ENABLED && env.REVIEW_SOURCE === 'rmp' ? buildRmp(env, opts) : new NullReviewSource();
-  if (env.REVIEW_SOURCE === 'rmp' && !env.RMP_ENABLED) {
-    opts.log?.warn('REVIEW_SOURCE=rmp but RMP_ENABLED is not 1 — using no review source');
-  }
-  return { grades: getGradeSource(schoolId, env, opts), schedule: getScheduleSource(schoolId, env, opts), reviews };
-}
-
-/** Review adapter alone (RMP requires RMP_ENABLED=1 AND DATA_MODE=live; otherwise throws a clear error). */
 export function getReviewSource(schoolId: SchoolId, env: Env, opts: RegistryOptions = {}): ReviewSource {
-  assertSchool(schoolId);
-  assertNotMixed(env);
-  if (env.DATA_MODE === 'demo') {
-    if (env.REVIEW_SOURCE === 'none') return new NullReviewSource();
-    if (env.REVIEW_SOURCE === 'rmp') {
-      throw new Error('RmpReviewSource requires DATA_MODE=live (RMP reviews are never mixed into demo data)');
-    }
-    return new DemoReviewSource({ seed: env.DEMO_SEED, log: opts.log });
-  }
-  if (env.REVIEW_SOURCE === 'none') return new NullReviewSource();
-  if (!env.RMP_ENABLED) {
-    throw new Error('RmpReviewSource requires RMP_ENABLED=1 (and DATA_MODE=live); set REVIEW_SOURCE=none to run without reviews');
-  }
-  return buildRmp(env, opts);
+  const config = getSchoolConfig(schoolId);
+  const spec = config.sources.reviews;
+  if (!spec) return new NullReviewSource();
+  if (config.mode === 'live' && spec.kind.startsWith('demo-')) throw new Error(REFUSE_MIXED_SOURCES_MESSAGE);
+  const factory = kinds().reviews.get(spec.kind);
+  if (!factory) throw unknownKind('reviews', spec.kind, config.id);
+  return factory(context(config.id, env, spec, opts));
 }
 
-export function getGradeSource(schoolId: SchoolId, env: Env, opts: RegistryOptions = {}): GradeSource {
-  assertSchool(schoolId);
-  if (env.DATA_MODE === 'demo') {
-    return new DemoGradeSource({
-      seed: env.DEMO_SEED, currentTerm: env.CURRENT_TERM, yearsBack: env.GRADE_YEARS_BACK, log: opts.log,
-    });
-  }
-  return new UiucGpaCsvSource({ currentTerm: env.CURRENT_TERM, yearsBack: env.GRADE_YEARS_BACK, log: opts.log });
-}
+/** Thrown when a live-mode school is configured with a fictional (demo-*) review adapter. */
+export const REFUSE_MIXED_SOURCES_MESSAGE = 'Refusing to join real instructors with fictional reviews';
 
-export function getScheduleSource(schoolId: SchoolId, env: Env, opts: RegistryOptions = {}): ScheduleSource {
-  assertSchool(schoolId);
-  if (env.DATA_MODE === 'demo') return new DemoScheduleSource({ seed: env.DEMO_SEED });
-  return new CourseExplorerSource({
-    baseUrl: env.UIUC_COURSE_EXPLORER_BASE,
-    concurrency: env.SCHEDULE_FETCH_CONCURRENCY,
-    delayMs: env.SCHEDULE_FETCH_DELAY_MS,
-    refresh: opts.refresh,
-    log: opts.log,
-  });
-}
-
-function buildRmp(env: Env, opts: RegistryOptions): RmpReviewSource {
-  if (!env.RMP_AUTH_HEADER) throw new Error('RMP_AUTH_HEADER is required when RMP_ENABLED=1');
-  return new RmpReviewSource({ schoolId: env.RMP_SCHOOL_ID, authHeader: env.RMP_AUTH_HEADER, log: opts.log });
+/** All three adapters for a school, resolved from its SchoolConfig. */
+export function getSources(schoolId: SchoolId, env: Env, opts: RegistryOptions = {}): Sources {
+  return {
+    grades: getGradeSource(schoolId, env, opts),
+    schedule: getScheduleSource(schoolId, env, opts),
+    reviews: getReviewSource(schoolId, env, opts),
+  };
 }

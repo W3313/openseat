@@ -424,8 +424,9 @@ export interface MatchReportEntry {
 }
 export interface MatchReport {
   generatedAt: string;
-  coverage: { distinctStrings: number; matched: number; ambiguous: number; unmatched: number; blocked: number;
-              byMethod: Record<MatchMethod, number>; sectionsLinked: number; sectionsTotal: number; matchRate: number };
+  coverage: { distinctStrings: number; matched: number; gradesOnly: number; ambiguous: number; unmatched: number; blocked: number;
+              byMethod: Record<MatchMethod, number>; sectionsLinked: number; sectionsTotal: number;
+              matchRate: number | null };   // matched/distinctStrings with reviews; sectionsLinked/sectionsTotal for grades-only schools (null without a schedule)
   entries: MatchReportEntry[];                       // every distinct (source, instructorRaw)
 }
 
@@ -537,6 +538,13 @@ export const PROMPT_VERSION = 1;
 ---
 
 ## 6. Data pipeline
+
+> **Superseded in part by `docs/MULTI_SCHOOL_DESIGN.md`** (2026-09-06): there is no global `DATA_MODE`; every
+> school in `src/lib/config/schools/` has its own `mode`, `subjects` allowlist and adapter kinds resolved by
+> `src/lib/sources/registry.ts`. Scripts take `--school <id>` for any registered id (`demo` is the fictional
+> school, `uiuc` is real). Output is `data/processed/<school>/` with `grades/<SUBJECT>.json` and
+> `professors-detail/<SUBJECT>.json` split per subject, compact JSON, and `summaries.json = {}` for real schools.
+> The seed writes `data/raw/demo/demo/`. Where this section conflicts with the design doc, the design doc wins.
 
 ### 6.1 Commands (`package.json` scripts; all scripts run with `tsx`)
 | Script | Command | What it does |
@@ -960,6 +968,11 @@ Rules: `src/app` imports from `src/components` and `src/lib`; `src/components` i
 ---
 
 ## 11. Environment variables
+
+> **Superseded in part by `docs/MULTI_SCHOOL_DESIGN.md` §2** (2026-09-06): `DATA_MODE`, `REVIEW_SOURCE` and
+> `RMP_ENABLED` are removed. `SCHOOLS` (comma list of registered ids; default all, incl. `demo`) selects the
+> schools that are ingested, statically generated and listed. `UCSB_API_KEY` is optional (UCSB schedule).
+> `RMP_AUTH_HEADER` stays optional and is only read if a local SchoolConfig wires `sources.reviews: { kind: 'rmp-graphql' }`.
 
 All read through `src/lib/config/env.ts` (zod, parsed once; scripts and server code import `env` from there; client components never read `process.env` except `NEXT_PUBLIC_*`). `.env.example` lists exactly these.
 

@@ -1,9 +1,9 @@
 import Link from "next/link";
-import type { SchoolId, Subject } from "@/lib/domain/types";
+import type { Subject } from "@/lib/domain/types";
 import { pluralize } from "@/lib/utils/format";
 
 export interface PopularSubjectChipsProps {
-  schoolId: SchoolId;
+  schoolId: string;
   subjects: readonly Pick<Subject, "code" | "name" | "professorCount">[];
   /** How many to show (default 6). */
   limit?: number;
@@ -20,7 +20,7 @@ export function pickPopularSubjects<T extends Pick<Subject, "code" | "professorC
     .slice(0, limit);
 }
 
-/** Quick links to the most-covered subjects (SPEC 3.1 §2). Server component. */
+/** Quick links to the most-covered subjects of one school (SPEC 3.1 §2). No state; follows the hero's school. */
 export function PopularSubjectChips({ schoolId, subjects, limit = 6, className }: PopularSubjectChipsProps) {
   const popular = pickPopularSubjects(subjects, limit);
   if (popular.length === 0) return null;
@@ -31,7 +31,7 @@ export function PopularSubjectChips({ schoolId, subjects, limit = 6, className }
         {popular.map((s) => (
           <Link
             key={s.code}
-            href={`/s/${schoolId}/${encodeURIComponent(s.code)}`}
+            href={`/s/${encodeURIComponent(schoolId)}/${encodeURIComponent(s.code)}`}
             title={`${s.name} · ${pluralize(s.professorCount, "professor")}`}
             className="inline-flex h-8 items-center rounded-chip border border-border bg-surface-raised px-3 text-sm font-medium text-ink transition-colors hover:border-border-strong hover:bg-brand-soft"
           >

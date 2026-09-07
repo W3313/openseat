@@ -1,7 +1,15 @@
 import type { DataMode, MetaCounts } from "@/lib/domain/types";
+import type { SchoolAttribution } from "./schoolFlags";
+import type { SchoolSourceUrls } from "./schoolChrome";
 
 export interface DataProvenanceProps {
   mode: DataMode;
+  /** `School.attribution` (design §2/§8) — the text of the grades and schedule clauses. */
+  attribution: SchoolAttribution;
+  /** Links for those clauses, from `meta.sources`; omitted or null → plain text. */
+  sourceUrls?: Partial<SchoolSourceUrls>;
+  /** false → the reviews clause reads "none (official grade data only)" and the counts omit reviews. Default true. */
+  reviewsAvailable?: boolean;
   /** ISO UTC (`Meta.builtAt`); null when the repository was unavailable. */
   builtAt: string | null;
   /** `School.timezone`, e.g. "America/Chicago". */
@@ -11,6 +19,10 @@ export interface DataProvenanceProps {
   seed?: number | null;
   /** Override for the reviews clause in live mode, e.g. "RateMyProfessors (unofficial)". */
   reviewsLabel?: string;
+  /** `School.seatStatusAvailable`: false → the counts say "offered sections" (the API exposes no seats). Default true. */
+  seatStatusAvailable?: boolean;
+  /** Named in the sr text, e.g. "UIUC". */
+  shortName?: string;
   className?: string;
 }
 
@@ -42,72 +54,77 @@ export function formatStamp(iso: string, timezone: string): string {
 
 const nf = new Intl.NumberFormat("en-US");
 
-export function formatCounts(counts: MetaCounts): string {
-  return [
+/**
+ * "1,812 grade rows · 92 professors · 118 open sections · 1,304 reviews" (reviews omitted for grades-only
+ * schools; "offered sections" when the schedule source exposes no seat status).
+ */
+export function formatCounts(counts: MetaCounts, reviewsAvailable = true, seatStatusAvailable = true): string {
+  const parts = [
     `${nf.format(counts.gradeRows)} grade rows`,
     `${nf.format(counts.professors)} professors`,
-    `${nf.format(counts.openSections)} open sections`,
-    `${nf.format(counts.reviews)} reviews`,
-  ].join(" · ");
+    `${nf.format(counts.openSections)} ${seatStatusAvailable ? "open" : "offered"} sections`,
+  ];
+  if (reviewsAvailable) parts.push(`${nf.format(counts.reviews)} reviews`);
+  return parts.join(" · ");
+}
+
+/** The reviews clause: "fictional demo data (seed N)" | "<adapter label>" | "none (official grade data only)". */
+export function reviewsClause(mode: DataMode, reviewsAvailable: boolean, seed?: number | null, reviewsLabel?: string): string {
+  if (mode === "demo") return `fictional demo data${seed != null ? ` (seed ${seed})` : ""}`;
+  if (!reviewsAvailable) return "none (official grade data only)";
+  return reviewsLabel ?? "none configured";
+}
+
+function SourceLink({ href, children }: { href: string | null | undefined; children: React.ReactNode }) {
+  if (!href) return <>{children}</>;
+  return (
+    <a href={href} rel="noreferrer noopener" target="_blank" className="underline hover:text-ink">
+      {children}
+    </a>
+  );
 }
 
 /**
- * SPEC 3.0 footer line:
- * "Grades: UIUC GPA dataset (MIT) · Schedule: UIUC Course Explorer · Reviews:
- *  fictional demo data (seed 20260903) · Built {builtAt} · {counts}"
+ * Footer line (SPEC 3.0, per school per design §8):
+ * "Grades: UIUC GPA dataset · Schedule: UIUC Course Explorer · Reviews: none (official grade data only) ·
+ *  Built {builtAt} · {counts}"
  */
 export function DataProvenance({
   mode,
+  attribution,
+  sourceUrls,
+  reviewsAvailable = true,
   builtAt,
   timezone,
   counts,
   seed,
   reviewsLabel,
+  seatStatusAvailable = true,
+  shortName,
   className,
 }: DataProvenanceProps) {
-  const reviews =
-    mode === "demo"
-      ? `fictional demo data${seed != null ? ` (seed ${seed})` : ""}`
-      : (reviewsLabel ?? "none configured");
-
   const segments: React.ReactNode[] = [
     <span key="grades">
-      Grades:{" "}
-      <a
-        href="https://github.com/wadefagen/datasets"
-        rel="noreferrer noopener"
-        target="_blank"
-        className="underline hover:text-ink"
-      >
-        UIUC GPA dataset
-      </a>{" "}
-      (MIT)
-    </span>,
-    <span key="schedule">
-      Schedule:{" "}
-      <a
-        href="https://courses.illinois.edu/"
-        rel="noreferrer noopener"
-        target="_blank"
-        className="underline hover:text-ink"
-      >
-        UIUC Course Explorer
-      </a>
-    </span>,
-    <span key="reviews">Reviews: {reviews}</span>,
-    <span key="built">
-      Built{" "}
-      {builtAt ? (
-        <time dateTime={builtAt}>{formatStamp(builtAt, timezone)}</time>
-      ) : (
-        <span>—</span>
-      )}
+      Grades: <SourceLink href={sourceUrls?.grades}>{attribution.grades}</SourceLink>
     </span>,
   ];
-  if (counts) segments.push(<span key="counts">{formatCounts(counts)}</span>);
+  if (attribution.schedule) {
+    segments.push(
+      <span key="schedule">
+        Schedule: <SourceLink href={sourceUrls?.schedule}>{attribution.schedule}</SourceLink>
+      </span>,
+    );
+  }
+  segments.push(
+    <span key="reviews">Reviews: {reviewsClause(mode, reviewsAvailable, seed, reviewsLabel)}</span>,
+    <span key="built">
+      Built {builtAt ? <time dateTime={builtAt}>{formatStamp(builtAt, timezone)}</time> : <span>—</span>}
+    </span>,
+  );
+  if (counts) segments.push(<span key="counts">{formatCounts(counts, reviewsAvailable, seatStatusAvailable)}</span>);
 
   return (
-    <p className={className} data-testid="data-provenance">
+    <p className={className} data-testid="data-provenance" data-school={shortName}>
       {segments.map((s, i) => (
         <span key={i}>
           {i > 0 ? <span aria-hidden="true"> · </span> : null}

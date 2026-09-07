@@ -1,15 +1,21 @@
 import clsx from "clsx";
-import type { RankingsPayload, School, Subject, TermCode } from "@/lib/domain/types";
+import type { DataMode, RankingsPayload, School, Subject, TermCode } from "@/lib/domain/types";
 import { termDisplay } from "@/lib/utils/term";
+import { TOOLTIPS } from "@/lib/copy/tooltips";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
+import { resolveSchoolFlags, type SchoolLike } from "@/components/layout/schoolFlags";
+import { Chip } from "@/components/ui/Chip";
+import { StatTooltip } from "@/components/ui/StatTooltip";
 import { TermPill } from "./TermPill";
 import { GradesThroughPill } from "./GradesThroughPill";
 import { ShareButton } from "./ShareButton";
 
 export interface RankingsHeaderProps {
-  school: Pick<School, "id" | "shortName" | "timezone" | "seatStatusAvailable" | "currentTerm">;
+  school: Pick<School, "id" | "shortName" | "timezone" | "seatStatusAvailable" | "currentTerm"> & SchoolLike;
   subject: Pick<Subject, "code" | "name">;
   term: TermCode;
+  /** `RankingsPayload.mode`; resolves the school flags when school.json predates them. */
+  mode?: DataMode;
   seatsFetchedAt: string;
   gradesThroughTerm: TermCode;
   termFallback: boolean;
@@ -20,11 +26,27 @@ export interface RankingsHeaderProps {
   className?: string;
 }
 
-/** Page title: "{SUBJECT} professors with open sections — Fall 2026 · ProfPeek" (+ " · DEMO"). */
+/**
+ * Page title (SPEC 3.2 / design §5):
+ *   reviews: "{SUBJECT} professors with open sections — Fall 2026 · ProfPeek" (+ " · DEMO")
+ *   grades-only: "{SUBJECT} professors ranked by grade curve — Fall 2026 · ProfPeek"
+ */
 export function rankingsTitle(payload: Pick<RankingsPayload, "subject" | "term" | "mode" | "school">): string {
-  const what = payload.school.seatStatusAvailable ? "open sections" : "offered sections";
-  const base = `${payload.subject.code} professors with ${what} — ${termDisplay(payload.term)} · ProfPeek`;
+  const flags = resolveSchoolFlags(payload.school, { mode: payload.mode });
+  const what = flags.reviewsAvailable
+    ? `with ${payload.school.seatStatusAvailable ? "open sections" : "offered sections"}`
+    : "ranked by grade curve";
+  const base = `${payload.subject.code} professors ${what} — ${termDisplay(payload.term)} · ProfPeek`;
   return payload.mode === "demo" ? `${base} · DEMO` : base;
+}
+
+/** Meta description for the rankings page, by mode. */
+export function rankingsDescription(payload: Pick<RankingsPayload, "subject" | "mode" | "school">): string {
+  const flags = resolveSchoolFlags(payload.school, { mode: payload.mode });
+  const text = flags.reviewsAvailable
+    ? `${payload.subject.name} professors at ${payload.school.shortName} ranked by student rating, with official grade curves and sections you can still get into this term.`
+    : `${payload.subject.name} professors at ${payload.school.shortName} ranked by grade curve — official per-instructor grade distributions compared with the same courses taught by others, plus this term's sections.`;
+  return text.slice(0, 155);
 }
 
 /** "Computer Science (CS)" */
@@ -37,6 +59,7 @@ export function RankingsHeader({
   school,
   subject,
   term,
+  mode,
   seatsFetchedAt,
   gradesThroughTerm,
   termFallback,
@@ -45,6 +68,7 @@ export function RankingsHeader({
   heading,
   className,
 }: RankingsHeaderProps) {
+  const flags = resolveSchoolFlags(school, mode ? { mode } : {});
   return (
     <header className={clsx("flex flex-col gap-3", className)}>
       <Breadcrumb items={[{ label: school.shortName, href: "/" }, { label: subject.code }]} />
@@ -53,6 +77,13 @@ export function RankingsHeader({
         <ShareButton className="shrink-0" />
       </div>
       <div className="flex flex-wrap items-center gap-2">
+        {!flags.reviewsAvailable ? (
+          <StatTooltip label="How are these professors ranked?" content={TOOLTIPS.stats.gradesOnly.text}>
+            <Chip tone="brand" size="md">
+              {TOOLTIPS.stats.gradesOnly.label}
+            </Chip>
+          </StatTooltip>
+        ) : null}
         <TermPill
           term={term}
           seatsFetchedAt={seatsFetchedAt}

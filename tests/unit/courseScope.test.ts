@@ -5,7 +5,7 @@ import type { RankingsPayload } from '@/lib/domain/types';
 import { computeBadges } from '@/lib/scoring/badges';
 import { scopePayloadToCourse, scopeProfessor } from '@/app/s/[school]/[subject]/[number]/courseScope';
 
-const payload = JSON.parse(readFileSync('data/processed/uiuc/rankings/CS.json', 'utf8')) as RankingsPayload;
+const payload = JSON.parse(readFileSync('data/processed/demo/rankings/CS.json', 'utf8')) as RankingsPayload;
 
 describe('scopePayloadToCourse', () => {
   it('recomputes badges from the course-scoped scores and open sections for every course', () => {

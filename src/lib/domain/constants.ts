@@ -4,6 +4,7 @@ import type { GradeBuckets } from './types';
 
 export const MIN_REVIEWS_RANKED = 3;      // below → lowData group, no summary
 export const MIN_GRADED_N = 10;           // row suppression and null thresholds
+export const MIN_SECTIONS_N = 2;          // MULTI_SCHOOL_DESIGN §4.1: replaces MIN_GRADED_N for percent-only professors (sections, not students)
 export const MIN_BASELINE_N = 10;         // leave-one-out baseline must have this many graded students
 export const MIN_BADGE_N = 50;            // deltaComparableN / students needed for grade badges
 export const SHRINK_K = 5;                // Bayesian shrinkage pseudo-count

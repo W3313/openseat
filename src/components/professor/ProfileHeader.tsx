@@ -3,16 +3,20 @@ import clsx from "clsx";
 import { ArrowLeft } from "lucide-react";
 import type { ProfessorDetail, School } from "@/lib/domain/types";
 import { buildRankingsHref } from "@/lib/utils/urlState";
+import { TOOLTIPS } from "@/lib/copy/tooltips";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
+import { resolveSchoolFlags, type SchoolLike } from "@/components/layout/schoolFlags";
 import { ShareButton } from "@/components/rankings/ShareButton";
 import { ShortlistButton } from "@/components/shortlist/ShortlistButton";
+import { Chip } from "@/components/ui/Chip";
+import { StatTooltip } from "@/components/ui/StatTooltip";
 import { BadgeRow } from "./BadgeRow";
 import { RatingBlock } from "./RatingBlock";
 import { VibeTags } from "./VibeTags";
 
 export interface ProfileHeaderProps {
   detail: Pick<ProfessorDetail, "professor" | "scores" | "badges" | "vibeTags" | "rankBySubject">;
-  school: Pick<School, "id" | "shortName" | "seatStatusAvailable">;
+  school: Pick<School, "id" | "shortName" | "seatStatusAvailable"> & SchoolLike;
   /** Subject code for "← Back to {CODE} rankings"; defaults to the professor's first subject. */
   backSubject?: string;
   className?: string;
@@ -30,14 +34,15 @@ export function profileTitle(detail: Pick<ProfessorDetail, "professor">, demo: b
   return demo ? `${base} · DEMO` : base;
 }
 
-/** Detail-page header (SPEC 3.4 item 1). */
+/** Detail-page header (SPEC 3.4 item 1). Grades-only schools (design §5) drop the rating block and vibe tags. */
 export function ProfileHeader({ detail, school, backSubject, className }: ProfileHeaderProps) {
   const { professor, scores } = detail;
   const code = backSubject ?? professor.subjects[0];
   const ranks = rankLine(detail.rankBySubject);
+  const { reviewsAvailable } = resolveSchoolFlags(school);
 
   return (
-    <header className={clsx("flex flex-col gap-3", className)}>
+    <header className={clsx("flex flex-col gap-3", className)} data-variant={reviewsAvailable ? "reviews" : "grades-only"}>
       <Breadcrumb
         items={[
           { label: school.shortName, href: "/" },
@@ -51,7 +56,7 @@ export function ProfileHeader({ detail, school, backSubject, className }: Profil
           <h1 className="m-0 text-2xl font-semibold tracking-tight text-ink sm:text-3xl">{professor.displayName}</h1>
           <p className="m-0 flex flex-wrap items-center gap-x-2 text-sm text-ink-muted">
             {professor.department ? <span>{professor.department}</span> : null}
-            {professor.kind === "grades-only" ? <span>Grade records only — no reviews linked</span> : null}
+            {reviewsAvailable && professor.kind === "grades-only" ? <span>Grade records only — no reviews linked</span> : null}
             {ranks ? <span className="tabular-nums">{ranks}</span> : null}
             {professor.isFictional ? (
               <span className="text-[0.7rem] font-medium uppercase tracking-wide text-demo">fictional demo instructor</span>
@@ -65,10 +70,18 @@ export function ProfileHeader({ detail, school, backSubject, className }: Profil
       </div>
 
       <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
-        <RatingBlock scores={scores} size="large" />
+        {reviewsAvailable ? (
+          <RatingBlock scores={scores} size="large" />
+        ) : (
+          <StatTooltip label="How is this professor ranked?" content={TOOLTIPS.stats.gradesOnly.text}>
+            <Chip tone="brand" size="md">
+              {TOOLTIPS.stats.gradesOnly.label}
+            </Chip>
+          </StatTooltip>
+        )}
         <div className="flex flex-col gap-2">
-          <BadgeRow badges={detail.badges} seatStatusAvailable={school.seatStatusAvailable} size="md" />
-          <VibeTags tags={detail.vibeTags} max={Infinity} size="md" />
+          <BadgeRow badges={detail.badges} seatStatusAvailable={school.seatStatusAvailable} reviewsAvailable={reviewsAvailable} gradeValueKind={school.gradeValueKind ?? "counts"} size="md" />
+          {reviewsAvailable ? <VibeTags tags={detail.vibeTags} max={Infinity} size="md" /> : null}
         </div>
       </div>
 

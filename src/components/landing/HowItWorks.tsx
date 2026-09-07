@@ -16,7 +16,7 @@ export const HOW_IT_WORKS_TILES: readonly HowItWorksTile[] = [
     id: "join",
     title: "Join",
     body:
-      "Official grade rows are matched to reviews and this term's sections by a fuzzy name matcher — every match keeps its provenance (exact, initial, fuzzy…).",
+      "Official grade rows are matched to this term's sections — and to reviews where a school has them — by a fuzzy name matcher; every match keeps its provenance (exact, initial, fuzzy…).",
     href: "/about#matching",
     icon: (
       <svg viewBox="0 0 24 24" className={ICON} fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -29,7 +29,7 @@ export const HOW_IT_WORKS_TILES: readonly HowItWorksTile[] = [
     id: "score",
     title: "Score",
     body:
-      "Ratings are shrunk toward the subject average so one 5-star review can't win, and GPA is compared to the same course taught by others (leave-one-out).",
+      "GPA is compared to the same course taught by others (leave-one-out), so a 100-level instructor never looks easier than a 400-level one. Where reviews exist, ratings are shrunk toward the subject average so one 5-star review can't win.",
     href: "/about#scoring",
     icon: (
       <svg viewBox="0 0 24 24" className={ICON} fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -41,7 +41,7 @@ export const HOW_IT_WORKS_TILES: readonly HowItWorksTile[] = [
     id: "summarize",
     title: "Summarize",
     body:
-      "Claude turns each professor's reviews into a structured verdict (strengths, watch-outs, workload). With no API key, a deterministic extractive summary stands in — always labelled.",
+      "On schools with reviews (the demo today), Claude turns them into a structured verdict (strengths, watch-outs, workload). With no API key, a deterministic extractive summary stands in — always labelled.",
     href: "/about#ai",
     icon: (
       <svg viewBox="0 0 24 24" className={ICON} fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">

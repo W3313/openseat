@@ -143,9 +143,9 @@ export function buildRealInstructorKeys(rows: readonly RawGradeRow[]): string[] 
 const FLOAT_KEYS = ['aPlus', 'a', 'aMinus', 'bPlus', 'b', 'bMinus', 'cPlus', 'c', 'cMinus', 'dPlus', 'd', 'dMinus', 'f', 'w', 'gpaMean', 'wRate', 'gpa'];
 const FLOAT_LINE_RE = new RegExp(`^(\\s*"(?:${FLOAT_KEYS.join('|')})": -?\\d+)(,?)$`, 'gm');
 
-/** stableStringify (sorted keys, 2-space indent, 3 dp) with whole-number floats written as `N.0`. */
+/** stableStringify (sorted keys, 2-space indent, 3 dp) with whole-number floats written as `N.0`. Human-facing config stays indented. */
 export function serializePriors(priors: readonly CoursePrior[]): string {
-  return stableStringify(priors).replace(FLOAT_LINE_RE, '$1.0$2') + '\n';
+  return stableStringify(priors, { indent: 2 }).replace(FLOAT_LINE_RE, '$1.0$2') + '\n';
 }
 
 async function exists(file: string): Promise<boolean> {
@@ -210,7 +210,7 @@ async function main(): Promise<void> {
   const keys = buildRealInstructorKeys(parsed.rows);
   await mkdir(outDir, { recursive: true });
   await writeFile(path.join(outDir, 'course-priors.json'), serializePriors(priors), 'utf8');
-  await writeFile(path.join(outDir, 'real-instructor-keys.json'), stableStringify(keys) + '\n', 'utf8');
+  await writeFile(path.join(outDir, 'real-instructor-keys.json'), stableStringify(keys, { indent: 2 }) + '\n', 'utf8');
 
   const subjectsWithPriors = new Set(priors.map((p) => p.subject)).size;
   log.summary(

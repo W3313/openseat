@@ -1,15 +1,17 @@
-// scripts/ingest.ts — SPEC 6.3. `npx tsx scripts/ingest.ts --school uiuc [--subjects CS,ECE] [--out dir]`
-// Sources via registry → course catalog → schedule + cross-list dedupe → reviews/professors → matching →
-// sentiment/vibe tags → stats → data/processed/<school>/*.json + match-report.json + meta.json.
+// scripts/ingest.ts — SPEC 6.3 + MULTI_SCHOOL_DESIGN §2/§3. `npx tsx scripts/ingest.ts --school <id> [--subjects CS,ECE] [--out dir] [--refresh]`
+// Sources resolved per school from the registry → course catalog → schedule + cross-list dedupe →
+// reviews/professors (NullReviewSource for real schools) → matching → sentiment/vibe tags → stats →
+// data/processed/<school>/{school,subjects,courses,professors,sections,reviews,match-report,meta}.json
+// + grades/<SUBJECT>.json (+ summaries.json = {} when absent).
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import type { Meta, MetaCounts, ProfessorSummary, SchoolId, TermCode } from '@/lib/domain/types';
 import { type Env, env as processEnv } from '@/lib/config/env';
-import { buildSchool, processedDirName, toSchoolId } from '@/lib/config/schools';
+import { buildSchool, getSchoolConfig, schoolConfigDir, toRegisteredSchoolId } from '@/lib/config/schools';
 import { getSources, type Sources } from '@/lib/sources/registry';
 import type { RawReview } from '@/lib/sources/types';
 import { clearMatchMemo } from '@/lib/matching';
-import { readArgs, flagList, flagString } from './lib/args';
+import { readArgs, flagBool, flagList, flagString } from './lib/args';
 import { buildClock } from './lib/clock';
 import { fail, log } from './lib/log';
 import { buildCourseCatalog, computeCourseStats, ensureCoursesExist } from './ingest/catalog';
@@ -18,78 +20,95 @@ import { dedupeCrossListed, type RawSectionWithTerm } from './ingest/sections';
 import { buildDepartmentIndex, buildReviewedProfessors } from './ingest/professors';
 import { annotateReviews, buildReviews } from './ingest/reviews';
 import { buildMatchReport, runMatching } from './ingest/match';
-import { buildSubjects, n, readJsonIfExists, summaryCounts, writeProcessed } from './ingest/write';
+import { coverageLine } from '@/components/about/CoverageStats';
+import { buildSubjects, n, readJsonIfExists, serialize, splitGradesBySubject, summaryCounts, writeJson, writeProcessed } from './ingest/write';
 
 export interface IngestOptions {
   schoolId: SchoolId;
   env?: Env;
-  /** Overrides env.SUBJECTS (live mode --subjects). */
+  /** Overrides SchoolConfig.subjects (any registry id; 'all' is spelled as an empty list here). */
   subjects?: string[];
-  /** Overrides data/processed/<dir>. */
+  /** Overrides data/processed/<school>. */
   outDir?: string;
   /** Bypass the registry (tests / integration harness). */
   sources?: Sources;
+  /** Schedule adapters: bypass their raw cache. */
+  refresh?: boolean;
   now?: () => Date;
 }
 
 export interface IngestResult {
   outDir: string;
   counts: MetaCounts;
+  subjects: string[];
   scheduleTerm: TermCode;
   termFallback: boolean;
   gradesThroughTerm: TermCode;
   datasetHash: string;
   distinctStrings: number;
   matched: number;
-  matchRate: number;
+  /** matched / distinct strings with reviews; schedule linkage without (null when the school has no schedule). */
+  matchRate: number | null;
   summary: string;
   sizes: Record<string, number>;
 }
 
-/** Demo mode regression guard: matchRate below this fails the script (SPEC 6.3 step 6). */
+/** Demo regression guard: matchRate below this fails the script (SPEC 6.3 step 6). */
 export const MIN_DEMO_MATCH_RATE = 0.6;
+
+/** Optional per-adapter extras on the GradeSource.fetch result (MULTI_SCHOOL_DESIGN §4; typed here until sources/types.ts carries them). */
+interface GradeFetchExtras {
+  excludedGradeCodes?: Record<string, number>;
+  droppedRows?: number;
+}
 
 const ROOT = process.cwd();
 
 export async function runIngest(opts: IngestOptions): Promise<IngestResult> {
   const env = opts.env ?? processEnv;
-  const { schoolId } = opts;
-  const builtAt = buildClock(env, opts.now);
-  const subjects = (opts.subjects && opts.subjects.length > 0 ? opts.subjects : env.SUBJECTS).map((s) => s.toUpperCase());
-  const outDir = opts.outDir ?? path.join(ROOT, 'data', 'processed', processedDirName(schoolId, env.DATA_MODE));
-  const isFictional = env.DATA_MODE === 'demo';
+  const config = getSchoolConfig(opts.schoolId);
+  const schoolId = config.id;
+  const isFictional = config.mode === 'demo';
+  const builtAt = buildClock(config.mode, opts.now);
+  const outDir = opts.outDir ?? path.join(ROOT, 'data', 'processed', schoolId);
+  const requested: string[] | 'all' =
+    opts.subjects && opts.subjects.length > 0 ? opts.subjects.map((s) => s.trim().toUpperCase()) : config.subjects;
+  const allowlist = requested === 'all' ? null : new Set(requested);
   clearMatchMemo();
 
-  // 1. Sources, grades, catalog.
-  const sources = opts.sources ?? getSources(schoolId, env);
-  log.info(`mode=${env.DATA_MODE} sources: ${sources.grades.info.id}, ${sources.schedule.info.id}, ${sources.reviews.info.id}`);
+  // 1. Sources, grades (filtered to the subject allowlist), catalog.
+  const sources = opts.sources ?? getSources(schoolId, env, { refresh: opts.refresh, log });
+  log.info(`school=${schoolId} mode=${config.mode} sources: ${sources.grades.info.id}, ${sources.schedule.info.id}, ${sources.reviews.info.id}`);
   const grades = await sources.grades.fetch({ schoolId });
-  log.info(`grades: ${n(grades.rows.length)} raw rows`);
-  let courses = buildCourseCatalog(grades.rows, schoolId);
-  const built = buildGradeRows(grades.rows, { schoolId, currentTerm: env.CURRENT_TERM, yearsBack: env.GRADE_YEARS_BACK });
+  const extras = grades as typeof grades & GradeFetchExtras;
+  const rawRows = allowlist ? grades.rows.filter((r) => allowlist.has(r.subject.trim().toUpperCase())) : grades.rows;
+  const subjects = allowlist ? [...allowlist].sort() : [...new Set(rawRows.map((r) => r.subject.trim().toUpperCase()).filter(Boolean))].sort();
+  log.info(`grades: ${n(grades.rows.length)} raw rows · ${n(rawRows.length)} in ${subjects.length} subject(s)${allowlist ? ' (allowlist)' : ''}`);
+  let courses = buildCourseCatalog(rawRows, schoolId);
+  const built = buildGradeRows(rawRows, { schoolId, currentTerm: config.currentTerm, yearsBack: env.GRADE_YEARS_BACK });
   if (built.outOfWindow > 0 || built.badTerm > 0) log.info(`grades: dropped ${n(built.outOfWindow)} out-of-window, ${n(built.badTerm)} unparsable-term rows`);
   log.info(`grades: ${n(built.rows.length)} rows in window · ${n(built.emptyInstructor)} empty-instructor · ${n(built.blocked)} blocked strings`);
   const rows = built.rows;
 
-  // 2. Schedule for CURRENT_TERM, then cross-list dedupe.
+  // 2. Schedule for the school's current term, then cross-list dedupe.
   const rawSections: RawSectionWithTerm[] = [];
-  let scheduleTerm: TermCode = env.CURRENT_TERM;
+  let scheduleTerm: TermCode = config.currentTerm;
   let seatsFetchedAt = '';
   for (const subject of subjects) {
-    const res = await sources.schedule.fetchSections({ schoolId, term: env.CURRENT_TERM, subject });
+    const res = await sources.schedule.fetchSections({ schoolId, term: config.currentTerm, subject });
     scheduleTerm = res.term;
     if (res.fetchedAt > seatsFetchedAt) seatsFetchedAt = res.fetchedAt;
     for (const raw of res.sections) rawSections.push({ raw, term: res.term, fetchedAt: res.fetchedAt });
   }
   if (seatsFetchedAt === '') seatsFetchedAt = builtAt;
-  const termFallback = scheduleTerm !== env.CURRENT_TERM;
-  if (termFallback) log.warn(`schedule: requested ${env.CURRENT_TERM} but source served ${scheduleTerm} (termFallback)`);
+  const termFallback = scheduleTerm !== config.currentTerm;
+  if (termFallback) log.warn(`schedule: requested ${config.currentTerm} but source served ${scheduleTerm} (termFallback)`);
   const sections = dedupeCrossListed(rawSections, schoolId);
   log.info(`schedule: ${n(rawSections.length)} raw → ${n(sections.length)} sections after cross-list dedupe`);
   courses = ensureCoursesExist(courses, schoolId, sections.flatMap((s) => [s.courseId, ...s.crossListedCourseIds].map((courseId) => ({ courseId }))));
 
-  // 3. Review professors and reviews.
-  const departmentsFile = await readJsonIfExists<Record<string, string[]>>(path.join(ROOT, 'data', 'config', schoolId, 'departments.json'));
+  // 3. Review professors and reviews (empty for real schools).
+  const departmentsFile = await readJsonIfExists<Record<string, string[]>>(path.join(ROOT, schoolConfigDir(config), 'departments.json'));
   const departments = buildDepartmentIndex(departmentsFile ?? {});
   const rawProfessors = await sources.reviews.fetchProfessors({ schoolId, subjects });
   const taken = new Set<string>();
@@ -106,18 +125,19 @@ export async function runIngest(opts: IngestOptions): Promise<IngestResult> {
   const matched = runMatching({
     schoolId, rows, sections, reviewed: reviewed.professors, reviews: builtReviews.reviews, aliases, takenSlugs: taken, isFictional,
   });
-  const matchReport = buildMatchReport(matched.entries, matched.blockedStrings, sections, builtAt);
+  const matchReport = buildMatchReport(matched.entries, matched.blockedStrings, sections, builtAt, config.sources.reviews !== null);
   const professors = matched.professors;
 
   // 5. Sentiment/vibe tags, course stats, subjects, gradesThrough.
   const reviews = annotateReviews(builtReviews.reviews);
   courses = computeCourseStats(courses, rows);
   const subjectNames = Object.fromEntries(Object.entries(departmentsFile ?? {}).map(([code, names]) => [code, names[0] ?? code]));
-  const subjectRecords = buildSubjects(schoolId, subjectNames, courses, professors, sections, subjects);
-  const throughTerm = gradesThroughTerm(rows) ?? env.CURRENT_TERM;
+  const subjectRecords = buildSubjects(schoolId, subjectNames, courses, professors, sections, subjects, { restrictToRequested: allowlist !== null });
+  const subjectCodes = subjectRecords.map((s) => s.code);
+  const throughTerm = gradesThroughTerm(rows) ?? config.currentTerm;
 
   // 6. Write.
-  const school = buildSchool(schoolId, { mode: env.DATA_MODE, currentTerm: env.CURRENT_TERM, reviewSource: env.RMP_ENABLED ? 'rmp' : env.REVIEW_SOURCE });
+  const school = buildSchool(config);
   const summaries = await readJsonIfExists<Record<string, ProfessorSummary>>(path.join(outDir, 'summaries.json'));
   const edgeCases = isFictional ? await readEdgeCases(schoolId) : [];
   const gradesOnlyCount = professors.filter((p) => p.kind === 'grades-only').length;
@@ -133,54 +153,61 @@ export async function runIngest(opts: IngestOptions): Promise<IngestResult> {
     reviews: reviews.length,
     ...summaryCounts(summaries),
   };
+  const sourceMeta = [
+    { ...sources.grades.info, fetchedAt: grades.fetchedAt, recordCount: grades.rows.length },
+    { ...sources.schedule.info, fetchedAt: seatsFetchedAt, recordCount: sections.length },
+    { ...sources.reviews.info, fetchedAt: builtAt, recordCount: reviews.length },
+  ].filter((s) => s.id !== 'none');
   const meta: Omit<Meta, 'datasetHash'> = {
     builtAt,
-    mode: env.DATA_MODE,
+    mode: config.mode,
     seed: isFictional ? env.DEMO_SEED : null,
-    currentTerm: env.CURRENT_TERM,
+    currentTerm: config.currentTerm,
     scheduleTerm,
     termFallback,
     gradesThroughTerm: throughTerm,
     seatsFetchedAt,
     counts,
-    sources: [
-      { ...sources.grades.info, fetchedAt: grades.fetchedAt, recordCount: grades.rows.length },
-      { ...sources.schedule.info, fetchedAt: seatsFetchedAt, recordCount: sections.length },
-      { ...sources.reviews.info, fetchedAt: builtAt, recordCount: reviews.length },
-    ],
+    sources: sourceMeta,
     edgeCases,
+    subjects: subjectCodes,
+    excludedGradeCodes: extras.excludedGradeCodes ?? {},
+    droppedRows: extras.droppedRows ?? 0,
   };
   const written = await writeProcessed(outDir, {
     'school.json': school,
     'subjects.json': subjectRecords,
     'courses.json': courses,
     'professors.json': professors,
-    'grades.json': rows,
     'sections.json': sections,
     'reviews.json': reviews,
     'match-report.json': matchReport,
-  }, meta);
+  }, splitGradesBySubject(rows, subjectCodes), meta);
+  if (summaries === undefined) await writeJson(outDir, 'summaries.json', serialize({})); // real schools: empty map (§3)
 
   const cov = matchReport.coverage;
   const summary =
-    `ingested ${n(rows.length)} grade rows · ${n(professors.length)} professors (${n(counts.reviewedProfessors)} reviewed, ${n(gradesOnlyCount)} grades-only)` +
+    `ingested ${n(rows.length)} grade rows in ${subjectCodes.length} subjects · ${n(professors.length)} professors (${n(counts.reviewedProfessors)} reviewed, ${n(gradesOnlyCount)} grades-only)` +
     ` · ${n(reviews.length)} reviews · ${n(sections.length)} sections (${n(openSections)} open)` +
-    ` · matched ${n(cov.matched)}/${n(cov.distinctStrings)} instructor strings (${(cov.matchRate * 100).toFixed(1)}%)`;
+    ` · ${coverageLine(cov, config.sources.reviews !== null)}`;
   return {
-    outDir, counts, scheduleTerm, termFallback, gradesThroughTerm: throughTerm, datasetHash: written.datasetHash,
+    outDir, counts, subjects: subjectCodes, scheduleTerm, termFallback, gradesThroughTerm: throughTerm, datasetHash: written.datasetHash,
     distinctStrings: cov.distinctStrings, matched: cov.matched, matchRate: cov.matchRate, summary, sizes: written.sizes,
   };
 }
 
 async function main(): Promise<void> {
   const args = readArgs();
-  const schoolId = toSchoolId(flagString(args, 'school', 'uiuc'));
-  if (!schoolId) fail(`unknown --school ${flagString(args, 'school')}`);
+  const requested = flagString(args, 'school');
+  if (!requested) fail('usage: tsx scripts/ingest.ts --school <id> [--subjects CS,ECE] [--out dir] [--refresh]');
+  const schoolId = toRegisteredSchoolId(requested);
+  if (!schoolId) fail(`unknown --school ${requested}`);
   const subjects = flagList(args, 'subjects');
-  const result = await runIngest({ schoolId, subjects: subjects.length > 0 ? subjects : undefined, outDir: flagString(args, 'out') });
-  log.info(`wrote ${Object.keys(result.sizes).length} files to ${path.relative(ROOT, result.outDir) || '.'} (datasetHash ${result.datasetHash.slice(0, 12)}…)`);
+  const result = await runIngest({ schoolId, subjects: subjects.length > 0 ? subjects : undefined, outDir: flagString(args, 'out'), refresh: flagBool(args, 'refresh') });
+  const bytes = Object.values(result.sizes).reduce((a, b) => a + b, 0);
+  log.info(`wrote ${Object.keys(result.sizes).length} files (${(bytes / 1024 / 1024).toFixed(2)} MB) to ${path.relative(ROOT, result.outDir) || '.'} (datasetHash ${result.datasetHash.slice(0, 12)}…)`);
   log.summary(result.summary);
-  if (processEnv.DATA_MODE === 'demo' && result.matchRate < MIN_DEMO_MATCH_RATE) {
+  if (getSchoolConfig(schoolId).mode === 'demo' && result.matchRate !== null && result.matchRate < MIN_DEMO_MATCH_RATE) {
     fail(`match rate ${(result.matchRate * 100).toFixed(1)}% is below the demo guard of ${MIN_DEMO_MATCH_RATE * 100}%`);
   }
 }

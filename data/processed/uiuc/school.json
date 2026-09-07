@@ -1,13 +1,1 @@
-{
-  "currentTerm": "2026-fa",
-  "id": "uiuc",
-  "name": "University of Illinois Urbana-Champaign",
-  "seatStatusAvailable": true,
-  "shortName": "UIUC",
-  "sources": {
-    "grades": "demo-grades",
-    "reviews": "demo-reviews",
-    "schedule": "demo-schedule"
-  },
-  "timezone": "America/Chicago"
-}
+{"attribution":{"grades":"Official grade distributions from the University of Illinois GPA dataset (wadefagen/datasets), compiled from Illinois public records.","schedule":"Course schedule from the UIUC Course Explorer public API (courses.illinois.edu); seat availability is not exposed."},"currentTerm":"2026-fa","gradeBuckets":"plus-minus","gradeValueKind":"counts","id":"uiuc","mode":"live","name":"University of Illinois Urbana-Champaign","reviewsAvailable":false,"seatStatusAvailable":false,"shortName":"UIUC","sources":{"grades":"uiuc-gpa-csv","reviews":"none","schedule":"uiuc-course-explorer"},"timezone":"America/Chicago"}

@@ -4,7 +4,7 @@
 //
 // Public surface used by scripts/seed-demo.ts, the demo adapters and tests/unit/seedDeterminism.test.ts:
 //   generateDemoSeed(opts)      → SeedResult (in-memory rows/sections/professors/reviews/meta)
-//   serializeSeed(result)       → SeedFiles (file name → contents, exactly what lands in data/raw/demo/uiuc)
+//   serializeSeed(result)       → SeedFiles (file name → contents, exactly what lands in data/raw/demo/demo)
 //   seedHash(files)             → sha256 hex over the files in SEED_FILE_ORDER (contents of seed-hash.txt)
 //   buildDemoSeed(runtime)      → loads data/config/uiuc/* and runs the three above
 import type { TermCode } from '@/lib/domain/types';
@@ -74,7 +74,7 @@ export function generateDemoSeed(opts: SeedOptions): SeedResult {
   return { gradeRows: grades.rows, sections: sections.sections, professors, reviews, meta };
 }
 
-/** File contents exactly as written to data/raw/demo/uiuc (JSON via stableStringify + trailing newline). */
+/** File contents exactly as written to data/raw/demo/demo (compact JSON via stableStringify + trailing newline). */
 export function serializeSeed(result: SeedResult): SeedFiles {
   const json = (value: unknown): string => `${stableStringify(value)}\n`;
   return {

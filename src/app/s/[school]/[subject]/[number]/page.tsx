@@ -11,6 +11,7 @@ import { RankingsHeader } from "@/components/rankings/RankingsHeader";
 import { RankedList } from "@/components/rankings/RankedList";
 import { CardSkeletonList } from "@/components/rankings/CardSkeleton";
 import { GradeBar } from "@/components/charts/GradeBar";
+import { resolveSchoolFlags } from "@/components/layout/schoolFlags";
 import { courseSummaryLine, scopePayloadToCourse } from "./courseScope";
 
 type Params = { school: string; subject: string; number: string };
@@ -69,7 +70,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!loaded?.course || !loaded.payload) return { title: "Course not found · ProfPeek", robots: { index: false } };
   const { course, payload, schoolId, code, number, meta } = loaded;
   const title = courseTitle(course, meta?.mode === "demo");
-  const description = `Every instructor of ${code} ${number} (${course.title}) at ${payload.school.shortName}, ranked by student rating, with grades compared against this course only.`.slice(
+  const rankedBy = resolveSchoolFlags(payload.school, { mode: payload.mode }).reviewsAvailable ? "student rating" : "grade curve";
+  const description = `Every instructor of ${code} ${number} (${course.title}) at ${payload.school.shortName}, ranked by ${rankedBy}, with grades compared against this course only.`.slice(
     0,
     155,
   );
@@ -104,6 +106,7 @@ export default async function CoursePage({ params }: PageProps) {
         school={payload.school}
         subject={payload.subject}
         term={payload.term}
+        mode={payload.mode}
         seatsFetchedAt={payload.seatsFetchedAt}
         gradesThroughTerm={payload.gradesThroughTerm}
         termFallback={payload.termFallback}
@@ -119,7 +122,7 @@ export default async function CoursePage({ params }: PageProps) {
           </h2>
           <span className="text-xs text-ink-muted">{courseSummaryLine(course)}</span>
         </div>
-        <GradeBar buckets={course.buckets} height={20} legend focusable subject={`${code} ${number}, all instructors`} />
+        <GradeBar buckets={course.buckets} height={20} legend focusable bucketKind={payload.school.gradeBuckets} valueKind={payload.school.gradeValueKind} subject={`${code} ${number}, all instructors`} />
         <p className="m-0 text-xs text-ink-faint">Each professor&apos;s Δ below is measured against this course only (others who taught it in the window).</p>
       </section>
 

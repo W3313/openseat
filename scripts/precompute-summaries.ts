@@ -1,8 +1,8 @@
-// SPEC 9.8 — the ONLY place Claude is called. Reads data/processed/<school>/professors-detail.json through
+// SPEC 9.8 — the ONLY place Claude is called. Reads data/processed/<school>/professors-detail/*.json through
 // the Repository, generates a ProfessorSummary for every professor with ≥ MIN_REVIEWS_RANKED reviews,
 // writes data/processed/<school>/summaries.json, then rebuilds the rankings payloads (which embed summaries).
 //
-//   npx tsx scripts/precompute-summaries.ts [--school uiuc] [--only-missing] [--force] [--yes] [--extractive] [--concurrency 4]
+//   npx tsx scripts/precompute-summaries.ts [--school demo] [--only-missing] [--force] [--yes] [--extractive] [--concurrency 4]
 //
 //   --only-missing  keep every cached entry whose inputHash still matches (CI: --only-missing --extractive → no diff)
 //   --force         regenerate everything
@@ -15,7 +15,7 @@ import path from 'node:path';
 import type { ProfessorDetail, ProfessorSummary, SchoolId } from '@/lib/domain/types';
 import { MIN_REVIEWS_RANKED } from '@/lib/domain/constants';
 import { env } from '@/lib/config/env';
-import { toSchoolId } from '@/lib/config/schools';
+import { getSchoolConfig, toRegisteredSchoolId } from '@/lib/config/schools';
 import { getRepository } from '@/lib/repo';
 import {
   buildUserMessage, estimateInputTokens, getCachedSummary, getClaudeUsageTotals, getLlmUsageTotals, getOrCreateSummary, resolveSummaryProvider,
@@ -73,8 +73,9 @@ async function mapWithConcurrency<T, R>(items: readonly T[], limit: number, fn: 
 
 async function main(): Promise<void> {
   const args = readArgs();
-  const schoolId = toSchoolId(flagString(args, 'school', 'uiuc'));
+  const schoolId = toRegisteredSchoolId(flagString(args, 'school', 'demo'));
   if (!schoolId) fail(`Unknown school: ${flagString(args, 'school')}`);
+  const config = getSchoolConfig(schoolId);
   const onlyMissing = flagBool(args, 'only-missing');
   const force = flagBool(args, 'force');
   const yes = flagBool(args, 'yes');
@@ -87,7 +88,7 @@ async function main(): Promise<void> {
   const modelName = provider === 'claude' ? env.ANTHROPIC_MODEL : provider === 'openai-compatible' ? `${env.GROQ_PROVIDER_NAME} ${env.GROQ_MODEL} @ ${env.GROQ_BASE_URL}` : 'extractive';
   const claude = provider === 'claude';
 
-  log.info(`precompute-summaries: school=${schoolId} mode=${env.DATA_MODE} provider=${provider} (${modelName})${force ? ' --force' : ''}${onlyMissing ? ' --only-missing' : ''}${limit ? ` --limit ${limit}` : ''}`);
+  log.info(`precompute-summaries: school=${schoolId} mode=${config.mode} provider=${provider} (${modelName})${force ? ' --force' : ''}${onlyMissing ? ' --only-missing' : ''}${limit ? ` --limit ${limit}` : ''}`);
   if (!usesModel && !extractiveOnly) log.info('No ANTHROPIC_API_KEY or GROQ_API_KEY set → extractive summaries for every professor.');
 
   await loadSummaryCache(schoolId);
@@ -107,7 +108,7 @@ async function main(): Promise<void> {
   }
 
   // Extractive summaries in demo mode are stamped with the fixed snapshot clock so data:all is reproducible.
-  const clockNow = usesModel ? undefined : () => buildClock(env);
+  const clockNow = usesModel ? undefined : () => buildClock(config.mode);
   const events = new Map<string, number>();
   const scriptLog: SummaryLogger = (event, detail) => {
     events.set(event, (events.get(event) ?? 0) + 1);
@@ -153,7 +154,7 @@ async function main(): Promise<void> {
   log.summary(`summaries: ${all.length} written to ${path.relative(process.cwd(), filePath)} (claude=${nClaude}, openai-compatible=${nLlm}, extractive=${nExtractive}, regenerated=${generated.filter(Boolean).length})`);
 
   log.info('rebuilding rankings payloads…');
-  await buildRankings();
+  await buildRankings({ schoolId });
 }
 
 main().catch((err: unknown) => {
