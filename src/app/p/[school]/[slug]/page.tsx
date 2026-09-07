@@ -58,23 +58,31 @@ async function load(params: Params): Promise<Loaded | null> {
   return { schoolId, slug, detail, school, meta };
 }
 
-/** ≤ 155 chars: "Adaeze Okonkwo (CS): 4.6★ from 23 reviews, GPA 3.41, −0.09 vs course. Grade curves, sections and an AI summary." */
-export function profileDescription(detail: ProfessorDetail): string {
+/** Prefix for search snippets / unfurls of fictional demo professors, so a fabricated rating is never read as a real one. */
+export const FICTIONAL_DESCRIPTION_PREFIX = "Fictional demo instructor — ";
+
+/**
+ * ≤ 155 chars: "Adaeze Okonkwo (CS): 4.6★ from 23 reviews, GPA 3.41, −0.09 vs course. Grade curves, sections and an AI summary."
+ * Demo-mode / fictional professors are prefixed with FICTIONAL_DESCRIPTION_PREFIX.
+ */
+export function profileDescription(detail: ProfessorDetail, demo = detail.professor.isFictional): string {
   const { professor, scores } = detail;
   const bits: string[] = [];
   if (scores.ratingShrunk != null) bits.push(`${scores.ratingShrunk.toFixed(1)}★ from ${scores.reviewCount} reviews`);
   if (scores.gpaMean != null) bits.push(`GPA ${scores.gpaMean.toFixed(2)}`);
   if (scores.gpaDelta != null) bits.push(`${scores.gpaDelta >= 0 ? "+" : "−"}${Math.abs(scores.gpaDelta).toFixed(2)} vs course`);
   const lead = `${professor.displayName} (${professor.subjects.join("/")})${bits.length ? `: ${bits.join(", ")}` : ""}.`;
-  return `${lead} Grade curves, sections this term and an AI summary.`.slice(0, 155);
+  const prefix = demo ? FICTIONAL_DESCRIPTION_PREFIX : "";
+  return `${prefix}${lead} Grade curves, sections this term and an AI summary.`.slice(0, 155);
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const loaded = await load(await params);
   if (!loaded?.detail) return { title: "Professor not found · ProfPeek", robots: { index: false } };
   const { detail, schoolId, meta } = loaded;
-  const title = profileTitle(detail, meta?.mode === "demo");
-  const description = profileDescription(detail);
+  const demo = meta?.mode === "demo" || detail.professor.isFictional;
+  const title = profileTitle(detail, demo);
+  const description = profileDescription(detail, demo);
   const canonical = new URL(buildProfessorHref(schoolId, detail.professor.slug), SITE_URL).toString();
   return {
     title,
@@ -82,6 +90,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     alternates: { canonical },
     openGraph: { title, description, url: canonical, type: "profile" },
     twitter: { card: "summary", title, description },
+    // Fictional profiles carry real-sounding names; keep them out of search indexes (the in-page captions,
+    // the title suffix and the OG watermark still label them as demo for anyone who follows a link).
+    ...(demo ? { robots: { index: false, follow: true } } : {}),
   };
 }
 

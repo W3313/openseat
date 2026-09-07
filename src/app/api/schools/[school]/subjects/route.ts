@@ -3,8 +3,8 @@ import type { SubjectsResponse } from '@/lib/api/types';
 import { jsonResponse } from '@/lib/api/respond';
 import { resolveSchool, withApiErrors, type RouteContext, type SchoolParams } from '@/lib/api/handlers';
 
-export async function GET(_req: Request, ctx: RouteContext<SchoolParams>): Promise<Response> {
-  return withApiErrors(async () => {
+export async function GET(req: Request, ctx: RouteContext<SchoolParams>): Promise<Response> {
+  return withApiErrors(req, async () => {
     const { school } = await ctx.params;
     const resolved = await resolveSchool(school);
     if (!resolved.ok) return resolved.response;

@@ -35,8 +35,9 @@ export function SubjectNotFound({ subjectsBySchool, defaultSchoolId }: SubjectNo
   const pathname = usePathname();
   const router = useRouter();
   const { school: schoolFromPath, subject } = parseRankingsPath(pathname);
-  const schoolId = schoolFromPath && subjectsBySchool[schoolFromPath] ? schoolFromPath : defaultSchoolId;
-  const subjects = useMemo(() => subjectsBySchool[schoolId] ?? [], [subjectsBySchool, schoolId]);
+  // Own-property checks: a pathname segment like `constructor` must not reach Object.prototype.
+  const schoolId = schoolFromPath && Object.hasOwn(subjectsBySchool, schoolFromPath) ? schoolFromPath : defaultSchoolId;
+  const subjects = useMemo(() => (Object.hasOwn(subjectsBySchool, schoolId) ? subjectsBySchool[schoolId] : []), [subjectsBySchool, schoolId]);
   const suggestions = useMemo(() => didYouMeanSubjects(subject ?? "", subjects), [subject, subjects]);
   const [picked, setPicked] = useState<SubjectOption | null>(null);
 
@@ -51,7 +52,7 @@ export function SubjectNotFound({ subjectsBySchool, defaultSchoolId }: SubjectNo
         No data for <code className="rounded bg-surface-sunken px-1.5 py-0.5 font-mono text-[0.9em]">{subject ?? "this subject"}</code>
       </h1>
       <p className="m-0 text-sm text-ink-muted">
-        {schoolFromPath && !subjectsBySchool[schoolFromPath]
+        {schoolFromPath && !Object.hasOwn(subjectsBySchool, schoolFromPath)
           ? `We do not have a school called "${schoolFromPath}" yet.`
           : "That subject code is not in the ingested dataset. Only subjects with grade rows and sections are listed."}
       </p>

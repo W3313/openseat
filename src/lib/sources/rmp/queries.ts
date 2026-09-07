@@ -3,8 +3,7 @@
 import { z } from 'zod';
 
 export const RMP_GRAPHQL_ENDPOINT = 'https://www.ratemyprofessors.com/graphql';
-/** Publicly documented token the site's own frontend sends; overridable via env RMP_AUTH_HEADER. */
-export const RMP_DEFAULT_AUTH_HEADER = 'Basic dGVzdDp0ZXN0';
+// No default Authorization value is shipped: the operator supplies RMP_AUTH_HEADER consciously (RMP_ENABLED=1).
 
 export const SCHOOL_SEARCH_QUERY = `
 query SchoolSearch($text: String!) {

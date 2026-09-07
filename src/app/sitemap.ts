@@ -21,9 +21,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   for (const schoolId of SCHOOL_IDS) {
     let lastModified: Date | undefined;
+    let demo = true;
     try {
       const meta = await repo.getMeta(schoolId);
       lastModified = new Date(meta.builtAt);
+      demo = meta.mode === 'demo';
     } catch {
       lastModified = undefined;
     }
@@ -40,7 +42,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     for (const c of courses) {
       entries.push({ url: abs(buildCourseHref(schoolId, c.subject, c.number)), lastModified, changeFrequency: 'weekly', priority: 0.7 });
     }
+    // Fictional demo professors are noindex (see /p/[school]/[slug]/page.tsx) and are left out of the sitemap.
     for (const p of professors) {
+      if (demo || p.isFictional) continue;
       entries.push({ url: abs(buildProfessorHref(schoolId, p.slug)), lastModified, changeFrequency: 'monthly', priority: 0.5 });
     }
   }

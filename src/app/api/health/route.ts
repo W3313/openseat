@@ -6,8 +6,8 @@ import { withApiErrors } from '@/lib/api/handlers';
 import { DEFAULT_SCHOOL_ID } from '@/lib/config/schools';
 import { getRepository } from '@/lib/repo';
 
-export async function GET(): Promise<Response> {
-  return withApiErrors(async () => {
+export async function GET(req: Request): Promise<Response> {
+  return withApiErrors(req, async () => {
     const meta = await getRepository().getMeta(DEFAULT_SCHOOL_ID);
     const body: HealthResponse = {
       ok: true,

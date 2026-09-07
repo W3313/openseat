@@ -112,5 +112,6 @@ export function getScheduleSource(schoolId: SchoolId, env: Env, opts: RegistryOp
 }
 
 function buildRmp(env: Env, opts: RegistryOptions): RmpReviewSource {
+  if (!env.RMP_AUTH_HEADER) throw new Error('RMP_AUTH_HEADER is required when RMP_ENABLED=1');
   return new RmpReviewSource({ schoolId: env.RMP_SCHOOL_ID, authHeader: env.RMP_AUTH_HEADER, log: opts.log });
 }

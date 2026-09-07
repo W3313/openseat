@@ -8,7 +8,7 @@ import { resolveSchool, withApiErrors, type CourseParams, type RouteContext } fr
 import { applyRankingsQuery } from '@/lib/scoring/rank';
 
 export async function GET(req: Request, ctx: RouteContext<CourseParams>): Promise<Response> {
-  return withApiErrors(async () => {
+  return withApiErrors(req, async () => {
     const query = parseQuery(CourseRankingsQuerySchema, req);
     if (!query.ok) return badRequest(query.message);
     const params = await ctx.params;
@@ -17,7 +17,7 @@ export async function GET(req: Request, ctx: RouteContext<CourseParams>): Promis
 
     const subject = SubjectCodeSchema.safeParse(params.subject);
     const number = CourseNumberSchema.safeParse(params.number);
-    if (!subject.success || !number.success) return notFound(`Unknown course "${params.subject} ${params.number}"`);
+    if (!subject.success || !number.success) return notFound('Unknown course'); // raw segments are never echoed
 
     const payload = await resolved.repo.getRankingsPayload(resolved.schoolId, subject.data);
     if (!payload) return notFound(`Unknown subject "${subject.data}" for ${resolved.schoolId}`);

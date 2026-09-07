@@ -6,7 +6,6 @@ import type { SchoolId } from '@/lib/domain/types';
 import type { RawProfessor, RawReview, ReviewSource, SourceInfo } from '@/lib/sources/types';
 import { type DepartmentMap, departmentsFor, loadDepartments } from '@/lib/sources/uiuc/departments';
 import {
-  RMP_DEFAULT_AUTH_HEADER,
   RMP_GRAPHQL_ENDPOINT,
   SCHOOL_SEARCH_QUERY,
   SchoolSearchResponseSchema,
@@ -36,7 +35,7 @@ export const SCHOOL_SEARCH_TEXT: Record<SchoolId, string> = {
 
 export interface RmpReviewSourceOptions {
   schoolId?: string;                 // env RMP_SCHOOL_ID (skips the lookup)
-  authHeader?: string;               // env RMP_AUTH_HEADER
+  authHeader: string;                // env RMP_AUTH_HEADER (required; no default token is shipped)
   endpoint?: string;
   departments?: DepartmentMap;       // default: data/config/{school}/departments.json
   ratingsPerTeacher?: number;        // default 100
@@ -61,9 +60,10 @@ export class RmpReviewSource implements ReviewSource {
   private readonly log: NonNullable<RmpReviewSourceOptions['log']>;
   private resolvedSchoolId: string | null = null;
 
-  constructor(opts: RmpReviewSourceOptions = {}) {
+  constructor(opts: RmpReviewSourceOptions) {
+    if (!opts.authHeader) throw new Error('RmpReviewSource requires authHeader (env RMP_AUTH_HEADER)');
     this.endpoint = opts.endpoint ?? RMP_GRAPHQL_ENDPOINT;
-    this.authHeader = opts.authHeader ?? RMP_DEFAULT_AUTH_HEADER;
+    this.authHeader = opts.authHeader;
     this.configuredSchoolId = opts.schoolId ?? null;
     this.departments = opts.departments ?? null;
     this.ratingsPerTeacher = opts.ratingsPerTeacher ?? 100;

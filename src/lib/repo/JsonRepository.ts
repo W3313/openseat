@@ -39,6 +39,17 @@ export class RepositoryNotFoundError extends Error {
 
 const SUBJECT_RE = /^[A-Z]{2,5}$/;
 const SLUG_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+/** Longest identifier accepted before any lookup; anything longer is treated as unknown without touching the data. */
+const MAX_KEY_LENGTH = 128;
+
+/**
+ * Own-property lookup on a JSON.parse'd record. User-supplied keys such as `constructor` or `__proto__`
+ * pass the slug regex but would otherwise reach Object.prototype and return a function instead of null.
+ */
+function ownEntry<T>(map: Record<string, T> | null, key: string): T | null {
+  if (!map || !Object.hasOwn(map, key)) return null;
+  return map[key] ?? null;
+}
 
 // ── module-level cache ───────────────────────────────────────────────────────────────────────────────
 const cache = new Map<string, Promise<unknown>>();
@@ -135,15 +146,15 @@ export class JsonRepository implements Repository {
 
   async getRankingsPayload(schoolId: SchoolId, subject: string): Promise<RankingsPayload | null> {
     const code = subject.trim().toUpperCase();
-    if (!SUBJECT_RE.test(code)) return null;
+    if (!SUBJECT_RE.test(code)) return null; // the only user-derived path segment; anything else is a fixed file name
     return this.read<RankingsPayload>(schoolId, 'rankings', `${code}.json`);
   }
 
   async getProfessorBySlug(schoolId: SchoolId, slug: string): Promise<ProfessorDetail | null> {
     const key = slug.trim().toLowerCase();
-    if (!SLUG_RE.test(key)) return null;
+    if (key.length > MAX_KEY_LENGTH || !SLUG_RE.test(key)) return null;
     const map = await this.read<Record<string, ProfessorDetail>>(schoolId, 'professors-detail.json');
-    return map?.[key] ?? null;
+    return ownEntry(map, key);
   }
 
   async getProfessors(schoolId: SchoolId): Promise<Professor[]> {
@@ -159,10 +170,11 @@ export class JsonRepository implements Repository {
   }
 
   async getSummary(professorId: string): Promise<ProfessorSummary | null> {
+    if (professorId.length > MAX_KEY_LENGTH) return null;
     const schoolId = toSchoolId(professorId.split(':')[0]);
     if (!schoolId) return null;
     const map = await this.read<Record<string, ProfessorSummary>>(schoolId, 'summaries.json');
-    return map?.[professorId] ?? null;
+    return ownEntry(map, professorId);
   }
 
   async getMatchReport(schoolId: SchoolId): Promise<MatchReport> {

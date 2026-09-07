@@ -122,7 +122,7 @@ describe('UiucGpaCsvSource', () => {
       log: { info: (m) => logs.push(m), warn: (m) => logs.push(m) },
     });
     expect(src.info.id).toBe('uiuc-gpa-csv');
-    expect(src.info.license).toBe('MIT');
+    expect(src.info.license).toBeNull(); // repo declares no licence; grades are Illinois public records
     const out = await src.fetch({ schoolId: 'uiuc' });
     expect(out.rows.length).toBeGreaterThan(0);
     expect(out.rows.length).toBeLessThan(200);
@@ -198,7 +198,8 @@ describe('demo schedule/review adapters and registry', () => {
     expect(() => getSources('uiuc', envOf({ DATA_MODE: 'live' }))).toThrowError(REFUSE_MIXED_SOURCES_MESSAGE);
     const live = getSources('uiuc', envOf({ DATA_MODE: 'live', REVIEW_SOURCE: 'none' }));
     expect([live.grades.info.id, live.schedule.info.id, live.reviews.info.id]).toEqual(['uiuc-gpa-csv', 'uiuc-course-explorer', 'none']);
-    const rmp = getSources('uiuc', envOf({ DATA_MODE: 'live', REVIEW_SOURCE: 'rmp', RMP_ENABLED: '1' }));
+    const rmp = getSources('uiuc', envOf({ DATA_MODE: 'live', REVIEW_SOURCE: 'rmp', RMP_ENABLED: '1', RMP_AUTH_HEADER: 'Basic test' }));
+    expect(() => envOf({ DATA_MODE: 'live', REVIEW_SOURCE: 'rmp', RMP_ENABLED: '1' })).toThrowError(/RMP_AUTH_HEADER/); // no default credential ships
     expect(rmp.reviews.info.id).toBe('rmp-graphql');
     expect(() => getReviewSource('uiuc', envOf({ DATA_MODE: 'live', REVIEW_SOURCE: 'rmp' }))).toThrowError(/RMP_ENABLED/);
     expect(() => getReviewSource('uiuc', envOf({ DATA_MODE: 'demo', REVIEW_SOURCE: 'rmp' }))).toThrowError(/DATA_MODE=live/);

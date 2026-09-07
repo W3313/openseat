@@ -3,14 +3,14 @@ import { SlugSchema } from '@/lib/api/query';
 import { jsonResponse, notFound } from '@/lib/api/respond';
 import { resolveSchool, withApiErrors, type RouteContext, type SlugParams } from '@/lib/api/handlers';
 
-export async function GET(_req: Request, ctx: RouteContext<SlugParams>): Promise<Response> {
-  return withApiErrors(async () => {
+export async function GET(req: Request, ctx: RouteContext<SlugParams>): Promise<Response> {
+  return withApiErrors(req, async () => {
     const params = await ctx.params;
     const resolved = await resolveSchool(params.school);
     if (!resolved.ok) return resolved.response;
 
     const slug = SlugSchema.safeParse(params.slug);
-    if (!slug.success) return notFound(`Unknown professor "${params.slug}"`);
+    if (!slug.success) return notFound('Unknown professor'); // the raw segment is never echoed
     const detail = await resolved.repo.getProfessorBySlug(resolved.schoolId, slug.data);
     if (!detail) return notFound(`Unknown professor "${slug.data}" for ${resolved.schoolId}`);
     return jsonResponse(detail);

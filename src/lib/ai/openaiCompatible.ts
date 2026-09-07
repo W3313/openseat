@@ -38,6 +38,8 @@ export interface OpenAICompatibleOptions {
   sleep?: (ms: number) => Promise<void>;
   log?: SummaryLogger;
   timeoutMs?: number;
+  /** Max 429 retries (default LLM_MAX_RATE_LIMIT_RETRIES); 0 = one attempt, never sleep (request context). */
+  maxRateLimitRetries?: number;
 }
 
 export interface LlmSummaryResult {
@@ -140,7 +142,8 @@ const defaultLog: SummaryLogger = (event, detail) => {
 const defaultSleep = (ms: number): Promise<void> => new Promise((resolve) => setTimeout(resolve, ms));
 
 /**
- * One chat completion in JSON mode; on HTTP 429 waits retry-after (default 10 s) up to 6 times, then null. Any other HTTP or
+ * One chat completion in JSON mode; on HTTP 429 waits retry-after (default 10 s, growing, capped at 90 s) up to
+ * LLM_MAX_RATE_LIMIT_RETRIES times (or `maxRateLimitRetries`), then null. Any other HTTP or
  * network failure → null (the caller falls back to the extractive summary). Never throws for API problems.
  */
 export async function summarizeWithOpenAICompatible(
@@ -156,6 +159,7 @@ export async function summarizeWithOpenAICompatible(
   const log = opts.log ?? defaultLog;
   const sleep = opts.sleep ?? defaultSleep;
   const timeoutMs = opts.timeoutMs ?? LLM_TIMEOUT_MS;
+  const maxRetries = Math.max(0, opts.maxRateLimitRetries ?? LLM_MAX_RATE_LIMIT_RETRIES);
   const professorId = detail.professor.id;
   if (!apiKey) {
     log('llm-no-key', { professorId });
@@ -210,7 +214,7 @@ export async function summarizeWithOpenAICompatible(
 
   try {
     let result = await attempt();
-    for (let retry = 0; result === 'rate-limited' && retry < LLM_MAX_RATE_LIMIT_RETRIES; retry++) {
+    for (let retry = 0; result === 'rate-limited' && retry < maxRetries; retry++) {
       // Grow the wait geometrically: the retry-after header tracks the request bucket, while the token
       // bucket (the one a 2k-token call actually exhausts) refills more slowly.
       const waitMs = Math.min(LLM_MAX_RETRY_WAIT_MS, Math.max(retryAfterMs, Math.round(LLM_RATE_LIMIT_RETRY_MS * 1.5 ** retry)));

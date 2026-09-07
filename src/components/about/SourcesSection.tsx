@@ -31,7 +31,7 @@ export function SourcesSection({ meta, timezone }: SourcesSectionProps) {
             <strong>MIT license</strong>. One row is one (term, course, section type, primary instructor) aggregate of
             letter grades from 2010 through the most recent released term, as the university releases it under FOIA. It is
             the source of every course title, every course-level grade curve and — in live mode — every per-instructor
-            grade row. Attribution: “GPA data from the UIUC GPA dataset by Wade Fagen-Ulmschneider (MIT).”
+            grade row. Attribution: “GPA data from the UIUC GPA dataset curated by Wade Fagen-Ulmschneider; underlying records released by the University of Illinois under the Illinois Freedom of Information Act.” The repository itself declares no licence, so we attribute rather than claim one.
           </dd>
         </div>
         <div>

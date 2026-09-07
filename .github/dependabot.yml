@@ -1,0 +1,10 @@
+# Weekly update PRs for npm pins and the SHA-pinned GitHub Actions used by .github/workflows/ci.yml.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule: { interval: weekly }
+    open-pull-requests-limit: 5
+  - package-ecosystem: github-actions
+    directory: /
+    schedule: { interval: weekly }

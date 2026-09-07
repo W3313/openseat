@@ -28,6 +28,10 @@ export interface SummaryOptions {
   client?: Anthropic;
   /** Injected sleep for the rate-limit retry (tests). */
   sleep?: (ms: number) => Promise<void>;
+  /** Max 429 retries; the script keeps the provider defaults, the API route passes 0 so it never sleeps inside a request. */
+  maxRateLimitRetries?: number;
+  /** Per-call timeout; the API route passes a short one so a stuck provider cannot pin a serverless function. */
+  timeoutMs?: number;
   /** Event sink (tests / script); defaults to console.warn inside summarize.ts. */
   log?: SummaryLogger;
   /** Clock for generatedAt (tests). */
@@ -166,10 +170,14 @@ export async function getOrCreateSummary(detail: ProfessorDetail, opts: SummaryO
   if (opts.allowClaude) {
     const provider = opts.provider ?? (opts.client !== undefined ? 'claude' : resolveSummaryProvider());
     if (provider === 'claude' && (opts.client !== undefined || hasAnthropicKey())) {
-      const result = await summarizeWithClaude(detail, selected, { client: opts.client, sleep: opts.sleep, log: opts.log });
+      const result = await summarizeWithClaude(detail, selected, {
+        client: opts.client, sleep: opts.sleep, log: opts.log, maxRateLimitRetries: opts.maxRateLimitRetries, timeoutMs: opts.timeoutMs,
+      });
       if (result) return finalizeClaudeSummary(detail, selected, result.output, result.model, now);
     } else if (provider === 'openai-compatible' && (opts.fetchImpl !== undefined || hasLlmKey())) {
-      const result = await summarizeWithOpenAICompatible(detail, selected, { fetchImpl: opts.fetchImpl, sleep: opts.sleep, log: opts.log });
+      const result = await summarizeWithOpenAICompatible(detail, selected, {
+        fetchImpl: opts.fetchImpl, sleep: opts.sleep, log: opts.log, maxRateLimitRetries: opts.maxRateLimitRetries, timeoutMs: opts.timeoutMs,
+      });
       if (result) return finalizeLlmSummary(detail, selected, result.output, result.model, result.provider, now);
     }
   }

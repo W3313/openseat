@@ -11,7 +11,7 @@ export const UIUC_GPA_CSV_SOURCE_INFO: SourceInfo = {
   id: 'uiuc-gpa-csv',
   label: 'UIUC GPA dataset (wadefagen/datasets)',
   url: 'https://github.com/wadefagen/datasets',
-  license: 'MIT',
+  license: null, // the wadefagen/datasets repo declares no licence; the underlying grades are Illinois public records (FOIA)
 };
 
 export const DEFAULT_UIUC_GPA_CSV_PATH = path.join('data', 'raw', 'uiuc', 'uiuc-gpa-dataset.csv');

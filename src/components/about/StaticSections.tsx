@@ -116,9 +116,22 @@ export function PrivacySection() {
         and loads no third-party analytics.
       </p>
       <p>
-        The repository stores no real person’s name in demo data. The only trace of real instructors is a list of
-        truncated name hashes used to make sure generated names never collide with a real one (
-        <code>data/config/uiuc/real-instructor-keys.json</code>).
+        <strong>Hosting and logs.</strong> The site is served by Vercel, whose request logs record the client IP, user
+        agent, URL and time for a short retention window and are used only to operate the site. The API routes apply a
+        per-IP rate limit; no request data is stored by the application itself.
+      </p>
+      <p>
+        <strong>AI summaries.</strong> Summaries are generated offline by a script and committed; the deployed site
+        serves them from a file and calls no model for public visitors. When the operator enables on-demand generation
+        (<code>SUMMARY_ON_DEMAND=1</code>, gated by a shared secret), the professor’s name, department, aggregate
+        statistics and the selected review texts are sent to the configured provider (Anthropic or Groq) at request
+        time; nothing about the viewer is included.
+      </p>
+      <p>
+        The demo dataset contains no real instructor. To guarantee that, the seed checks generated names against
+        truncated hashes of the instructor names in the public UIUC GPA dataset (
+        <code>data/config/uiuc/real-instructor-keys.json</code>). Those hashes are derived from public data and are
+        not secret.
       </p>
     </>
   );
@@ -133,7 +146,7 @@ export function LicensingSection() {
       </li>
       <li>
         <strong>UIUC GPA dataset</strong> — <a href={GPA_DATASET_URL} rel="noopener noreferrer" target="_blank">wadefagen/datasets</a>,
-        MIT License. Copyright the dataset author; the underlying grade records are public university data.
+        No licence is declared on the dataset repository; the underlying grade records are Illinois public records released under FOIA, and we attribute the curator rather than claim a licence.
       </li>
       <li>
         <strong>UIUC Course Explorer</strong> — public API, no license asserted; used with attribution (“Data from the

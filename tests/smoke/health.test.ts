@@ -21,4 +21,26 @@ describe.skipIf(!baseUrl)('smoke: /api/health', () => {
       expect(await res.text()).toContain('ProfPeek');
     }
   });
+
+  it('sends the security headers on pages and API routes and hides X-Powered-By', async () => {
+    for (const path of ['/', '/about', '/api/health', '/api/schools/uiuc/professors/nobody-here']) {
+      const res = await fetch(`${baseUrl}${path}`);
+      const csp = res.headers.get('content-security-policy') ?? '';
+      expect(csp, path).toContain("default-src 'self'");
+      expect(csp, path).toContain("frame-ancestors 'none'");
+      expect(csp, path).toContain("object-src 'none'");
+      expect(res.headers.get('x-content-type-options'), path).toBe('nosniff');
+      expect(res.headers.get('x-frame-options'), path).toBe('DENY');
+      expect(res.headers.get('referrer-policy'), path).toBe('strict-origin-when-cross-origin');
+      expect(res.headers.get('permissions-policy'), path).toContain('camera=()');
+      expect(res.headers.get('strict-transport-security'), path).toContain('max-age=63072000');
+      expect(res.headers.get('x-powered-by'), path).toBeNull();
+    }
+  });
+
+  it('robots.txt keeps crawlers off the API and the per-request compare page', async () => {
+    const text = await (await fetch(`${baseUrl}/robots.txt`)).text();
+    expect(text).toMatch(/Disallow: \/api\//);
+    expect(text).toMatch(/Disallow: \/compare\//);
+  });
 });

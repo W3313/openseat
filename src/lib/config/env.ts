@@ -49,12 +49,18 @@ export const EnvSchema = z.object({
   GROQ_BASE_URL: z.url().default('https://api.groq.com/openai/v1'),
   GROQ_MODEL: z.string().min(1).default('openai/gpt-oss-20b'),
   GROQ_PROVIDER_NAME: z.string().min(1).default('Groq'),
-  /** 1 = the summary API route may call the configured model when nothing valid is cached (never persisted). */
+  /**
+   * 1 = the summary API route may call the configured model when nothing valid is cached (never persisted).
+   * Requires SUMMARY_ON_DEMAND_TOKEN; only requests carrying it in `x-profpeek-key` may trigger a model call.
+   */
   SUMMARY_ON_DEMAND: flag('0'),
+  /** Shared secret (>= 16 chars) a trusted warmer sends as `x-profpeek-key`; anonymous visitors never reach a model. */
+  SUMMARY_ON_DEMAND_TOKEN: z.string().min(16).optional(),
   REVIEW_SOURCE: z.enum(['demo', 'rmp', 'none']).default('demo'),
   RMP_ENABLED: flag('0'),
   RMP_SCHOOL_ID: z.string().min(1).optional(),
-  RMP_AUTH_HEADER: z.string().min(1).default('Basic dGVzdDp0ZXN0'),
+  /** Authorization header value for the RMP adapter. No default is shipped; required when RMP_ENABLED=1. */
+  RMP_AUTH_HEADER: z.string().min(1).optional(),
   UIUC_GPA_CSV_URL: z
     .url()
     .default('https://raw.githubusercontent.com/wadefagen/datasets/main/gpa/uiuc-gpa-dataset.csv'),
@@ -64,6 +70,13 @@ export const EnvSchema = z.object({
   NEXT_PUBLIC_SITE_URL: z.url().default('http://localhost:3000'),
   NEXT_PUBLIC_REPO_URL: z.string().default('https://github.com/W3313/profpeek'),
   SMOKE_BASE_URL: z.url().optional(),
+}).superRefine((e, ctx) => {
+  if (e.SUMMARY_ON_DEMAND && !e.SUMMARY_ON_DEMAND_TOKEN) {
+    ctx.addIssue({ code: 'custom', path: ['SUMMARY_ON_DEMAND_TOKEN'], message: 'required when SUMMARY_ON_DEMAND=1 (a shared secret of at least 16 characters)' });
+  }
+  if (e.RMP_ENABLED && !e.RMP_AUTH_HEADER) {
+    ctx.addIssue({ code: 'custom', path: ['RMP_AUTH_HEADER'], message: 'required when RMP_ENABLED=1 (no default token is shipped)' });
+  }
 });
 
 /** Parsed, defaulted environment. `SUBJECTS` is already split into an upper-cased array. */

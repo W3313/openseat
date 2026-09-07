@@ -19,6 +19,7 @@ export const SlugSchema = z
   .string()
   .trim()
   .toLowerCase()
+  .max(128, 'slug too long')
   .regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, 'slug must be lower-case letters, digits and dashes');
 
 export const SortKeySchema = z.enum(['rating', 'overall', 'gpa', 'reviews'] satisfies readonly SortKey[]);

@@ -124,6 +124,15 @@ describe('JsonRepository', () => {
     expect(await repo.getRankingsPayload('uiuc', 'not a subject')).toBeNull();
     expect(await repo.getProfessorBySlug('uiuc', 'nobody-here')).toBeNull();
     expect(await repo.getProfessorBySlug('uiuc', 'Bad Slug!')).toBeNull();
+    // keys that pass the slug regex but live on Object.prototype must not resolve to a function
+    for (const key of ['constructor', 'toString', 'hasownproperty', 'valueof']) expect(await repo.getProfessorBySlug('uiuc', key)).toBeNull();
+    expect(await repo.getSummary('uiuc:p:constructor')).toBeNull();
+    expect(await repo.getSummary('constructor')).toBeNull();
+    // traversal and oversized identifiers never reach the filesystem
+    expect(await repo.getProfessorBySlug('uiuc', '../../etc/passwd')).toBeNull();
+    expect(await repo.getProfessorBySlug('uiuc', 'a'.repeat(10_000))).toBeNull();
+    expect(await repo.getRankingsPayload('uiuc', '../meta')).toBeNull();
+    expect(await repo.getRankingsPayload('uiuc', '..')).toBeNull();
     expect(await repo.getSummary('uiuc:p:nobody-here')).toBeNull();
     expect(await repo.getSummary('mit:p:nobody')).toBeNull();
     expect(await repo.getCourses('uiuc', 'CS')).toEqual([]); // courses.json absent → []

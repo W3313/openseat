@@ -7,7 +7,7 @@ import { resolveSchool, withApiErrors, type RouteContext, type SchoolParams } fr
 import { applyRankingsQuery } from '@/lib/scoring/rank';
 
 export async function GET(req: Request, ctx: RouteContext<SchoolParams>): Promise<Response> {
-  return withApiErrors(async () => {
+  return withApiErrors(req, async () => {
     const query = parseQuery(RankingsQuerySchema, req);
     if (!query.ok) return badRequest(query.message);
     const { school } = await ctx.params;

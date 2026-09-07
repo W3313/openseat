@@ -35,8 +35,10 @@ export function NotFoundSwitch({ subjectsBySchool, defaultSchoolId, topSubjects 
   const pathname = usePathname();
   const { school, subject } = parseRankingsPath(pathname);
   const number = parseCourseNumber(pathname);
-  const schoolId = school && subjectsBySchool[school] ? school : defaultSchoolId;
-  const subjectKnown = subject != null && (subjectsBySchool[schoolId] ?? []).some((s) => s.code === subject);
+  // Own-property checks: a pathname segment like `constructor` must not reach Object.prototype.
+  const schoolId = school && Object.hasOwn(subjectsBySchool, school) ? school : defaultSchoolId;
+  const knownSubjects = Object.hasOwn(subjectsBySchool, schoolId) ? subjectsBySchool[schoolId] : [];
+  const subjectKnown = subject != null && knownSubjects.some((s) => s.code === subject);
 
   if (subject && number && subjectKnown) {
     return (

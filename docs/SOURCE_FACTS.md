@@ -2,7 +2,7 @@
 
 These are OBSERVED facts about the real upstream sources. Adapters must match these shapes exactly.
 
-## 1. UIUC GPA dataset (public CSV, MIT-licensed repo)
+## 1. UIUC GPA dataset (public CSV, GitHub repo (no licence declared; the grades are Illinois public records))
 URL: https://raw.githubusercontent.com/wadefagen/datasets/main/gpa/uiuc-gpa-dataset.csv
 Size: ~8.8 MB, ~79,900 rows, 177 subjects, ~10,500 distinct instructor strings. Terms 2010 -> 2026-wi.
 
@@ -52,7 +52,7 @@ Base: https://courses.illinois.edu/cisapp/explorer/schedule
 - Be polite: ~150 course requests per subject per term with cascade mode; add concurrency limit (4) and a 100ms delay; cache raw XML in data/raw/uiuc/{year}-{term}/{SUBJECT}/*.xml (gitignored).
 
 ## 3. RateMyProfessors (unofficial, behind env flag, user's responsibility)
-- Endpoint: POST https://www.ratemyprofessors.com/graphql with header `Authorization: Basic dGVzdDp0ZXN0` (this is the publicly-known basic token used by the site's own frontend; widely documented in open-source clients). May break at any time; adapter must fail soft (return [] and log) never crash ingestion.
+- Endpoint: POST https://www.ratemyprofessors.com/graphql with an `Authorization: Basic …` header (the site's own frontend token; widely documented in open-source clients — deliberately not reproduced here or shipped in this repo: the operator supplies it via `RMP_AUTH_HEADER`, which is required when `RMP_ENABLED=1`). May break at any time; adapter must fail soft (return [] and log) never crash ingestion.
 - School lookup: query `newSearch { schools(query: {text: $text}) { edges { node { id name city state } } } }` — UIUC's id is commonly "U2Nob29sLTExMTI=" (base64 of "School-1112"); do NOT hardcode as truth, look it up and allow override via env RMP_SCHOOL_ID.
 - Teacher search: query `newSearch { teachers(query: {text: $text, schoolID: $schoolID}) { edges { node { id legacyId firstName lastName department avgRating avgDifficulty numRatings wouldTakeAgainPercent } } } }`
 - Ratings for a teacher: `node(id: $id) { ... on Teacher { ratings(first: $count) { edges { node { id legacyId class comment date helpfulRating clarityRating difficultyRating grade wouldTakeAgain thumbsUpTotal thumbsDownTotal ratingTags } } } } }`

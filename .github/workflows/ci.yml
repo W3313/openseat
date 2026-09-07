@@ -1,14 +1,19 @@
 name: ci
 on: { push: { branches: [main] }, pull_request: {} }
+# Least privilege: the job only reads the checkout. upload-artifact needs no extra scope.
+permissions:
+  contents: read
 jobs:
   ci:
     runs-on: ubuntu-latest
     env:
       NEXT_TELEMETRY_DISABLED: 1
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with: { node-version: 26, cache: npm }
+      # Actions are pinned to full commit SHAs (a floating tag can be moved to arbitrary code); Dependabot
+      # (.github/dependabot.yml) keeps the pins current. The comment names the tag each SHA was taken from.
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with: { node-version-file: .nvmrc, cache: npm }
       - run: npm ci
       - run: npm run lint
       - run: npm run typecheck
@@ -17,6 +22,7 @@ jobs:
       - run: git diff --exit-code -- data          # committed demo data must equal the generator's output
       - run: npm run build
       - run: (npm run start & sleep 5; SMOKE_BASE_URL=http://localhost:3000 npx vitest run tests/smoke)
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with: { name: match-report, path: data/processed/uiuc/match-report.json }
-# No secrets are configured in CI; ANTHROPIC_API_KEY is never set here (SPEC 12.5).
+# No secrets are configured in CI; ANTHROPIC_API_KEY / GROQ_API_KEY are never set here (SPEC 12.5). If a
+# summaries cron is ever added, run it in a separate workflow on `schedule` / `workflow_dispatch` only.

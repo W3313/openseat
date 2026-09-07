@@ -36,6 +36,10 @@ export interface ClaudeSummarizeOptions {
   sleep?: (ms: number) => Promise<void>;
   /** Event sink; defaults to console.warn. */
   log?: SummaryLogger;
+  /** 0 = no manual 429 retry and an SDK client with maxRetries 0 (request context). Default: one manual retry, SDK retries 2. */
+  maxRateLimitRetries?: number;
+  /** Per-call timeout for the SDK client created when none is injected (default 60 s). */
+  timeoutMs?: number;
 }
 
 export interface ClaudeSummaryResult {
@@ -142,7 +146,12 @@ export async function summarizeWithClaude(
   const serverFallbacks = opts.serverFallbacks ?? env.SUMMARY_SERVER_FALLBACKS;
   const log = opts.log ?? defaultLog;
   const sleep = opts.sleep ?? defaultSleep;
-  const client = opts.client ?? getAnthropicClient();
+  const requestContext = opts.maxRateLimitRetries === 0 || opts.timeoutMs !== undefined;
+  const client =
+    opts.client ??
+    (requestContext
+      ? new Anthropic({ timeout: opts.timeoutMs ?? 60_000, maxRetries: opts.maxRateLimitRetries === 0 ? 0 : 2 })
+      : getAnthropicClient());
   const professorId = detail.professor.id;
   const userMessage = buildUserMessage(detail, selected);
 
@@ -167,6 +176,10 @@ export async function summarizeWithClaude(
     // Most specific first: RateLimitError → APIError with a status (the TS SDK's "APIStatusError" tier)
     // → APIConnectionError (status undefined) → any other SDK error. Non-SDK errors propagate.
     if (err instanceof RateLimitError) {
+      if (opts.maxRateLimitRetries === 0) {
+        log('rate-limited-giving-up', { professorId, message: err.message });
+        return null;
+      }
       log('rate-limited', { professorId, retryInMs: RATE_LIMIT_RETRY_MS });
       await sleep(RATE_LIMIT_RETRY_MS);
       try {

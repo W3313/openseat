@@ -37,7 +37,7 @@ regenerates them deterministically. Committed processed data must stay under 5 M
 
 | Path | Contents |
 |---|---|
-| `raw/uiuc/uiuc-gpa-dataset.csv` | The public UIUC GPA dataset (MIT-licensed `wadefagen/datasets`, ~8.5 MB, exact 23-column header). Downloaded by `npm run data:fetch`; gitignored. |
+| `raw/uiuc/uiuc-gpa-dataset.csv` | The public UIUC GPA dataset (attributed public-records `wadefagen/datasets`, ~8.5 MB, exact 23-column header). Downloaded by `npm run data:fetch`; gitignored. |
 | `raw/uiuc/<year>-<season>/<SUBJECT>/*.xml` | Course Explorer XML cached by `npm run data:schedule` in live mode (`<SUBJECT>.xml` course list plus one `<number>.xml?mode=cascade` per course). Gitignored. |
 | `raw/demo/uiuc/gpa.csv` | Fictional grade rows in the exact real CSV shape, written by `npm run data:seed`. Committed. |
 | `raw/demo/uiuc/sections.json` | Fictional `RawSection[]` for `CURRENT_TERM` (seat status known). Committed. |

@@ -4,8 +4,8 @@ import { jsonResponse } from '@/lib/api/respond';
 import { withApiErrors } from '@/lib/api/handlers';
 import { getRepository } from '@/lib/repo';
 
-export async function GET(): Promise<Response> {
-  return withApiErrors(async () => {
+export async function GET(req: Request): Promise<Response> {
+  return withApiErrors(req, async () => {
     const schools = await getRepository().getSchools();
     const body: SchoolsResponse = { schools };
     return jsonResponse(body);

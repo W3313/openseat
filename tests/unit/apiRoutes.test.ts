@@ -6,8 +6,9 @@ import { afterAll, afterEach, beforeAll, describe, expect, it, vi } from 'vitest
 import type { MatchReport, ProfessorDetail, RankingsPayload, RankingsQuery, RankingsResponse } from '@/lib/domain/types';
 import type { HealthResponse, SchoolsResponse, SectionsResponse, SubjectsResponse, SummaryResponse } from '@/lib/api/types';
 import type { ApiErrorBody } from '@/lib/api/respond';
-import { API_CACHE_CONTROL } from '@/lib/api/respond';
+import { API_CACHE_CONTROL, API_ERROR_CACHE_CONTROL } from '@/lib/api/respond';
 import { setApiErrorLogger } from '@/lib/api/handlers';
+import { resetRateLimits, setRateLimitEnabled } from '@/lib/api/rateLimit';
 import { buildSummaryResponse } from '@/lib/api/summary';
 import { getRepository, setRepository, type Repository } from '@/lib/repo';
 import { GET as health } from '@/app/api/health/route';
@@ -57,31 +58,39 @@ beforeAll(async () => {
   LOW_DATA_SLUG = low.professor.slug;
 });
 
-beforeAll(() => setApiErrorLogger(() => {}));
-afterAll(() => setApiErrorLogger(null));
+beforeAll(() => {
+  setApiErrorLogger(() => {});
+  setRateLimitEnabled(false); // the limiter has its own test file; every route test runs from one 'unknown' IP
+});
+afterAll(() => {
+  setApiErrorLogger(null);
+  setRateLimitEnabled(true);
+  resetRateLimits();
+});
 afterEach(() => setRepository(null));
 
 describe('headers and error shape', () => {
   it('every success sets the shared Cache-Control and JSON content type', async () => {
-    const res = await health();
+    const res = await health(req('/api/health'));
     expect(res.status).toBe(200);
     expect(res.headers.get('cache-control')).toBe(API_CACHE_CONTROL);
     expect(res.headers.get('content-type')).toMatch(/application\/json/);
+    expect(res.headers.get('x-content-type-options')).toBe('nosniff');
   });
 
-  it('404 for an unknown school uses { error: { code, message } } and stays cacheable', async () => {
+  it('404 for an unknown school uses { error: { code, message } }, is briefly cacheable and never echoes the raw segment', async () => {
     const res = await subjects(req('/api/schools/mit/subjects'), ctx({ school: 'mit' }));
     expect(res.status).toBe(404);
-    expect(res.headers.get('cache-control')).toBe(API_CACHE_CONTROL);
+    expect(res.headers.get('cache-control')).toBe(API_ERROR_CACHE_CONTROL);
     const error = await errorOf(res);
     expect(error.code).toBe('not_found');
-    expect(error.message).toContain('mit');
+    expect(error.message).toBe('Unknown school');
   });
 
   it('500 when the repository throws: generic message, no-store, no stack', async () => {
     const boom: Partial<Repository> = { getMeta: async () => { throw new Error('disk on fire /secret/path'); } };
     setRepository(boom as Repository);
-    const res = await health();
+    const res = await health(req('/api/health'));
     expect(res.status).toBe(500);
     expect(res.headers.get('cache-control')).toBe('no-store');
     const error = await errorOf(res);
@@ -92,7 +101,7 @@ describe('headers and error shape', () => {
 
 describe('GET /api/health and /api/schools', () => {
   it('health mirrors meta.json', async () => {
-    const body = await json<HealthResponse>(await health());
+    const body = await json<HealthResponse>(await health(req('/api/health')));
     expect(body.ok).toBe(true);
     expect(body.mode).toBe('demo');
     expect(body.currentTerm).toMatch(/^\d{4}-(wi|sp|su|fa)$/);
@@ -101,7 +110,7 @@ describe('GET /api/health and /api/schools', () => {
   });
 
   it('schools lists uiuc', async () => {
-    const body = await json<SchoolsResponse>(await schools());
+    const body = await json<SchoolsResponse>(await schools(req('/api/schools')));
     expect(body.schools.map((s) => s.id)).toContain('uiuc');
   });
 });
@@ -250,5 +259,51 @@ describe('GET /api/schools/[school]/match-report', () => {
     const res = await matchReport(req('/x?method=guess'), ctx({ school: 'uiuc' }));
     expect(res.status).toBe(400);
     expect((await errorOf(res)).message).toMatch(/^method:/);
+  });
+});
+
+// Path safety: every user-controlled segment is validated against a strict pattern before any lookup, so
+// traversal attempts, prototype keys and oversized inputs are cheap 404s that never echo the input back.
+describe('path safety', () => {
+  const hostile = ['../', '..%2F..%2Fetc%2Fpasswd', '%2e%2e', '..\\..\\', 'constructor', '__proto__', 'prototype', 'a'.repeat(5_000), '<img src=x onerror=alert(1)>'];
+
+  it('professor + summary routes: 404 for traversal / prototype / oversized slugs, body never contains the input', async () => {
+    for (const slug of hostile) {
+      for (const route of [professor, summary]) {
+        const res = await route(req('/x'), ctx({ school: 'uiuc', slug }));
+        expect(res.status, slug).toBe(404);
+        const text = await res.text();
+        expect(text).not.toContain('onerror');
+        expect(text).not.toContain('..');
+        expect(text.length).toBeLessThan(200);
+      }
+    }
+  });
+
+  it('school segment: traversal and oversized values are 404 and not echoed', async () => {
+    for (const school of ['../uiuc', '%2e%2e', 'constructor', 'x'.repeat(5_000)]) {
+      const res = await subjects(req('/x'), ctx({ school }));
+      expect(res.status).toBe(404);
+      expect((await errorOf(res)).message).toBe('Unknown school');
+    }
+  });
+
+  it('course segments: traversal, prototype keys and oversized values are 404', async () => {
+    for (const [subject, number] of [['../CS', '225'], ['CS', '../225'], ['constructor', '225'], ['CS', 'x'.repeat(500)], ['%2e%2e', '225']]) {
+      const res = await course(req('/x'), ctx({ school: 'uiuc', subject, number }));
+      expect(res.status).toBe(404);
+      expect((await errorOf(res)).message).toBe('Unknown course');
+    }
+  });
+
+  it('rankings / sections query: traversal in ?subject= is a 400 whose message describes the rule, not the input', async () => {
+    for (const q of ['../CS', '%2e%2e%2fCS', 'constructor', 'C'.repeat(1_000)]) {
+      const res = await rankings(req(`/x?subject=${encodeURIComponent(q)}`), ctx({ school: 'uiuc' }));
+      expect(res.status).toBe(400);
+      const message = (await errorOf(res)).message;
+      expect(message).toMatch(/^subject:/);
+      expect(message).not.toContain('..');
+      expect((await sections(req(`/x?subject=${encodeURIComponent(q)}`), ctx({ school: 'uiuc' }))).status).toBe(400);
+    }
   });
 });

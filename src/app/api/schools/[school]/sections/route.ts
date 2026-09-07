@@ -6,7 +6,7 @@ import { badRequest, jsonResponse, notFound } from '@/lib/api/respond';
 import { resolveSchool, withApiErrors, type RouteContext, type SchoolParams } from '@/lib/api/handlers';
 
 export async function GET(req: Request, ctx: RouteContext<SchoolParams>): Promise<Response> {
-  return withApiErrors(async () => {
+  return withApiErrors(req, async () => {
     const query = parseQuery(SectionsQuerySchema, req);
     if (!query.ok) return badRequest(query.message);
     const { school } = await ctx.params;
