@@ -36,7 +36,7 @@ const SubjectsSchema = z
 
 /**
  * Comma list of registered school ids to ingest, statically generate and list on the landing page
- * (MULTI_SCHOOL_DESIGN §2). Unknown ids are rejected; empty = every registered school (incl. `demo`).
+ * (MULTI_SCHOOL_DESIGN §2). Unknown ids are rejected; empty = every registered school.
  */
 const SchoolsSchema = z
   .string()
@@ -55,12 +55,11 @@ const SchoolsSchema = z
 export const EnvSchema = z.object({
   /** Enabled schools (see SchoolsSchema). Per-school data mode lives in the registry, not here. */
   SCHOOLS: SchoolsSchema,
-  /** Fallback term for scripts that predate the registry (seed, fetch); ingest uses SchoolConfig.currentTerm. */
+  /** Fallback term for the fetch scripts; ingest uses SchoolConfig.currentTerm. */
   CURRENT_TERM: TermCodeSchema.default('2026-fa'),
-  /** Seed/fetch subject list; ingest uses SchoolConfig.subjects (override with --subjects). */
+  /** Fetch subject list; ingest uses SchoolConfig.subjects (override with --subjects). */
   SUBJECTS: SubjectsSchema,
   GRADE_YEARS_BACK: z.coerce.number().int().min(1).max(30).default(6),
-  DEMO_SEED: z.coerce.number().int().default(20260903),
   ANTHROPIC_API_KEY: z.string().min(1).optional(),
   ANTHROPIC_MODEL: z.string().min(1).default('claude-opus-5'),
   SUMMARY_SERVER_FALLBACKS: flag('0'),
@@ -82,8 +81,6 @@ export const EnvSchema = z.object({
   RMP_SCHOOL_ID: z.string().min(1).optional(),
   /** Authorization header value for the RMP adapter. No default is shipped; required only if someone wires the adapter locally. */
   RMP_AUTH_HEADER: z.string().min(1).optional(),
-  /** Free UCSB developer key (api.ucsb.edu) for the UCSB schedule adapter; grades-only when absent (MULTI_SCHOOL_DESIGN §4.2). */
-  UCSB_API_KEY: z.string().min(1).optional(),
   UIUC_GPA_CSV_URL: z
     .url()
     .default('https://raw.githubusercontent.com/wadefagen/datasets/main/gpa/uiuc-gpa-dataset.csv'),

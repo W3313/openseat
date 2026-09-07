@@ -35,9 +35,9 @@ export function courseLabel(subject: string, number: string): string {
 
 /** Math.min(500, floor(number / 100) × 100), floored at 100 so odd numbers like "099" stay in the union. */
 export function courseLevel(number: string): Course['level'] {
-  // Leading digits only: UIUC/UCSB use 3-digit numbers (CS 225 → 200), UH/UTD 4-digit (CS 2305 → 200,
-  // 4V95 → 400), Purdue 5-digit (CS 18000 → 100); the first digit carries the level whenever there are
-  // 4 or more digits, and 3-digit numbers keep the hundreds. Letters (UCSB W120A, CS130H, UTD 4V95) are dropped.
+  // Leading digits only: UIUC uses 3-digit numbers (CS 225 → 200), UH 4-digit (COSC 2305 → 200; a letter in
+  // the middle such as 4V95 → 400), Purdue 5-digit (CS 18000 → 100); the first digit carries the level whenever
+  // there are 4 or more digits, and 3-digit numbers keep the hundreds. Letters (W120A, CS130H, 4V95) are dropped.
   const digits = number.replace(/\D/g, '');
   if (digits.length === 0) return 100;
   const n = parseInt(digits, 10);

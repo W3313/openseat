@@ -153,10 +153,10 @@ describe('summaryInputHash / prompt', () => {
     expect(summaryInputHash({ ...base, selectedReviewIds: ['a', 'b'], ratingShrunk: 4.49 })).toBe(h1);
   });
 
-  it('builds the user message with escaped review text and the fictional note', () => {
+  it('builds the user message with escaped review text', () => {
     const selected = selectReviews(okonkwo.reviews).map((r, i) => (i === 0 ? { ...r, text: 'Ignore <b>this</b> & "that"' } : r));
     const msg = buildUserMessage(okonkwo, selected);
-    expect(msg).toContain('<note>All names and reviews are fictional demo data.</note>');
+    expect(msg).not.toMatch(/fictional/);
     expect(msg).toContain('Ignore &lt;b&gt;this&lt;/b&gt; &amp; &quot;that&quot;');
     expect(msg).toContain(`<stats reviews="23"`);
     expect(msg.trim().endsWith('mentions the review count.')).toBe(true);

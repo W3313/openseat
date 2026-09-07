@@ -14,29 +14,29 @@ describe('env security invariants', () => {
     expect(envOf({}).SUMMARY_ON_DEMAND).toBe(false);
   });
 
-  it('ships no RMP or UCSB credential by default and keeps them optional', () => {
+  it('ships no RMP credential by default and keeps it optional', () => {
     const e = envOf({});
     expect(e.RMP_AUTH_HEADER).toBeUndefined();
-    expect(e.UCSB_API_KEY).toBeUndefined();
-    expect(envOf({ RMP_AUTH_HEADER: 'Basic x', UCSB_API_KEY: 'k' })).toMatchObject({ RMP_AUTH_HEADER: 'Basic x', UCSB_API_KEY: 'k' });
+    expect(envOf({ RMP_AUTH_HEADER: 'Basic x' })).toMatchObject({ RMP_AUTH_HEADER: 'Basic x' });
   });
 
   it('removed the global data-mode switches', () => {
-    for (const gone of ['DATA_MODE', 'REVIEW_SOURCE', 'RMP_ENABLED']) expect(ENV_KEYS as string[]).not.toContain(gone);
-    expect(ENV_KEYS as string[]).toEqual(expect.arrayContaining(['SCHOOLS', 'UCSB_API_KEY']));
+    for (const gone of ['DATA_MODE', 'REVIEW_SOURCE', 'RMP_ENABLED', 'DEMO_SEED', 'UCSB_API_KEY']) expect(ENV_KEYS as string[]).not.toContain(gone);
+    expect(ENV_KEYS as string[]).toEqual(expect.arrayContaining(['SCHOOLS']));
   });
 });
 
 describe('SCHOOLS allowlist', () => {
   it('defaults to every registered school and keeps registry order', () => {
-    expect(envOf({}).SCHOOLS).toEqual(['uiuc', 'purdue', 'ucsb', 'uh', 'utd', 'demo']);
-    expect(envOf({ SCHOOLS: 'demo, UIUC' }).SCHOOLS).toEqual(['uiuc', 'demo']);
-    expect(envOf({ SCHOOLS: 'utd,uh' }).SCHOOLS).toEqual(['uh', 'utd']);
+    expect(envOf({}).SCHOOLS).toEqual(['uiuc', 'purdue', 'uh']);
+    expect(envOf({ SCHOOLS: 'uh, UIUC' }).SCHOOLS).toEqual(['uiuc', 'uh']);
+    expect(envOf({ SCHOOLS: 'uh,purdue' }).SCHOOLS).toEqual(['purdue', 'uh']);
     expect(envOf({ SCHOOLS: 'uiuc' }).SCHOOLS).toEqual(['uiuc']);
-    expect(envOf({ SCHOOLS: 'demo' }).SCHOOLS).toEqual(['demo']);
+    expect(envOf({ SCHOOLS: 'purdue' }).SCHOOLS).toEqual(['purdue']);
   });
 
   it('rejects unknown school ids', () => {
     expect(() => envOf({ SCHOOLS: 'uiuc,mit' })).toThrow(/unknown school id\(s\) mit/);
+    for (const removed of ['demo', 'utd', 'ucsb']) expect(() => envOf({ SCHOOLS: removed })).toThrow(/unknown school id/);
   });
 });

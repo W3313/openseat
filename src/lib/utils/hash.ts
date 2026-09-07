@@ -42,7 +42,7 @@ export function lettersOnlyKey(value: string): string {
  * Real-instructor collision key: sha256(lastCompact + '|' + firstToken).slice(0, 12), where
  * lastCompact = lettersOnlyKey(lastName) and firstToken = lettersOnlyKey(first whitespace token of the
  * first-name part). This is exactly how data/config/uiuc/real-instructor-keys.json was generated, so
- * the seed can re-roll any fictional name whose key appears there. No real name is stored anywhere.
+ * synthetic test names can be checked for collisions against it. No real name is stored anywhere.
  */
 export function instructorKey(lastName: string, firstNamePart: string): string {
   const lastCompact = lettersOnlyKey(lastName);

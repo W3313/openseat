@@ -17,9 +17,7 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm run typecheck
-      - run: npm run test -- --coverage
-      - run: npm run data:all                      # no key → extractive only for missing; committed Claude entries stay
-      - run: git diff --exit-code -- data          # committed demo data must equal the generator's output
+      - run: npm run test -- --coverage           # unit + component tests read the committed real datasets (data/processed/<school>)
       - run: npm run build
       - run: (npm run start & sleep 5; SMOKE_BASE_URL=http://localhost:3000 npx vitest run tests/smoke)
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2

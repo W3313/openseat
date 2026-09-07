@@ -52,7 +52,6 @@ export function LowDataGroup({ items, schoolId, seatStatusAvailable = true, revi
               <Link href={buildProfessorHref(schoolId, professor.slug)} className="font-medium text-ink hover:underline">
                 {professor.displayName}
               </Link>
-              {professor.isFictional ? <span className="text-[0.65rem] uppercase tracking-wide text-demo">fictional</span> : null}
               {reviewsAvailable && professor.kind === "grades-only" ? (
                 <span className="text-[0.65rem] uppercase tracking-wide text-ink-faint">grades only</span>
               ) : null}

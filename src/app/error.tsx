@@ -29,8 +29,8 @@ export default function RootError({ error, reset }: ErrorPageProps) {
       </h1>
       <p className="text-sm text-ink-muted">
         The data behind this page could not be rendered. Retrying usually fixes it; if it keeps
-        failing, the demo dataset may not have been generated yet
-        (<code className="rounded bg-surface-sunken px-1 py-0.5 font-mono text-[0.8em]">npm run data:all</code>).
+        failing, the dataset may not have been built yet
+        (<code className="rounded bg-surface-sunken px-1 py-0.5 font-mono text-[0.8em]">npm run data:real</code>).
       </p>
       {error.digest ? (
         <p className="text-xs text-ink-faint">

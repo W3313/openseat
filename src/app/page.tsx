@@ -51,22 +51,17 @@ export function toSchoolOptions(loaded: readonly LandingSchool[]): SchoolOption[
       professorCount: meta?.counts.professors,
       subjectCount: subjects.length,
       reviewsAvailable: flags.reviewsAvailable,
-      isDemo: flags.mode === "demo",
     });
   }
   return out;
 }
 
-export async function generateMetadata(): Promise<Metadata> {
-  const loaded = await loadLanding();
-  const modes = loaded.map((l) => l.meta?.mode).filter((m): m is Meta["mode"] => m != null);
-  const demo = modes.length > 0 && modes.every((m) => m === "demo");
-  const title = demo ? `${TITLE} · DEMO` : TITLE;
+export function generateMetadata(): Metadata {
   return {
-    title,
+    title: TITLE,
     description: DESCRIPTION,
     alternates: { canonical: new URL("/", SITE_URL).toString() },
-    openGraph: { title, description: DESCRIPTION, url: "/" },
+    openGraph: { title: TITLE, description: DESCRIPTION, url: "/" },
   };
 }
 

@@ -1,6 +1,6 @@
 # Screenshots (placeholders)
 
-The README embeds these files; record them from the running demo in dark mode (MUST + finished SHOULD paths only) and drop them here with exactly these names:
+The README embeds these files; record them from the running app in dark mode (MUST + finished SHOULD paths only) and drop them here with exactly these names:
 
 | File | What to capture |
 |---|---|

@@ -45,10 +45,6 @@
 
   /* Focus ring */
   --pp-focus: #2f4fd1;
-
-  /* Demo-mode badge */
-  --pp-demo: #92400e;
-  --pp-demo-soft: #fef3c7;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -83,9 +79,6 @@
     --pp-info-soft: #172554;
 
     --pp-focus: #a9b8ff;
-
-    --pp-demo: #fcd34d;
-    --pp-demo-soft: #3f2a06;
   }
 }
 
@@ -125,8 +118,6 @@
   --color-info: var(--pp-info);
   --color-info-soft: var(--pp-info-soft);
   --color-focus: var(--pp-focus);
-  --color-demo: var(--pp-demo);
-  --color-demo-soft: var(--pp-demo-soft);
 
   /* Radii & shadows */
   --radius-card: 0.875rem;

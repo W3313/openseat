@@ -64,12 +64,12 @@ const G = prof({ last: 'Golf', reviews: 1, delta: null, students: 300 });
 
 const payload: RankingsPayload = {
   school: {
-    id: 'uiuc', name: 'University of Illinois Urbana-Champaign', shortName: 'UIUC', mode: 'demo', currentTerm: '2026-fa', timezone: 'America/Chicago',
+    id: 'uiuc', name: 'University of Illinois Urbana-Champaign', shortName: 'UIUC', mode: 'live', currentTerm: '2026-fa', timezone: 'America/Chicago',
     seatStatusAvailable: true, reviewsAvailable: true, gradeBuckets: 'plus-minus', gradeValueKind: 'counts',
-    attribution: { grades: 'fixture' }, sources: { grades: 'demo-grades', schedule: 'demo-schedule', reviews: 'demo-reviews' },
+    attribution: { grades: 'fixture' }, sources: { grades: 'fixture-grades', schedule: 'fixture-schedule', reviews: 'fixture-reviews' },
   },
   subject: { schoolId: 'uiuc', code: 'CS', name: 'Computer Science', courseCount: 4, professorCount: 7, openSectionCount: 3 },
-  term: '2026-fa', scope: { kind: 'subject' }, mode: 'demo', generatedAt: '2026-08-20T00:00:00Z', seatsFetchedAt: '2026-08-20T00:00:00Z',
+  term: '2026-fa', scope: { kind: 'subject' }, mode: 'live', generatedAt: '2026-08-20T00:00:00Z', seatsFetchedAt: '2026-08-20T00:00:00Z',
   gradesThroughTerm: '2026-wi', termFallback: false, subjectGpaMean: 3.3, subjectWRate: 0.03, priorMean: 3.7, sparklineRange: [2.5, 4],
   courses: [], professors: [A, B, C, D, E, F, G],
 };

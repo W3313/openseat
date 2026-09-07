@@ -1,5 +1,3 @@
-# Raw upstream data is not committed, except the deterministic fictional demo dataset.
+# Raw upstream data is not committed (fetched by scripts/fetch-*.ts).
 *
 !.gitignore
-!demo/
-!demo/**

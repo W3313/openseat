@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const [meta, schoolRecord] = schoolId
     ? await Promise.all([repo.getMeta(schoolId).catch(() => null), repo.getSchool(schoolId).catch(() => null)])
     : [null, null];
-  const title = meta?.mode === "demo" ? "Compare professors · ProfPeek · DEMO" : "Compare professors · ProfPeek";
+  const title = "Compare professors · ProfPeek";
   const reviewsAvailable = schoolRecord ? resolveSchoolFlags(schoolRecord, meta ? { mode: meta.mode } : {}).reviewsAvailable : true;
   const canonical = new URL(buildCompareHref(schoolId ?? school, []), SITE_URL).toString();
   return {

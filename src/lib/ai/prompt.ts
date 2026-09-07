@@ -54,9 +54,8 @@ export function buildUserMessage(detail: ProfessorDetail, selected: readonly Rev
   const lines: string[] = [];
   lines.push(
     `<professor name="${attr(professor.displayName)}" department="${attr(professor.department, 'unknown')}" ` +
-      `subjects="${attr(professor.subjects.join(','))}" fictional="${professor.isFictional}"/>`,
+      `subjects="${attr(professor.subjects.join(','))}"/>`,
   );
-  if (professor.isFictional) lines.push('<note>All names and reviews are fictional demo data.</note>');
   lines.push(
     `<stats reviews="${scores.reviewCount}" ratingRaw="${attr(scores.ratingRaw)}" ratingShrunk="${attr(scores.ratingShrunk)}" ` +
       `wouldTakeAgainPct="${attr(scores.wouldTakeAgainPct)}" difficultyMean="${attr(scores.difficultyMean)}" ` +

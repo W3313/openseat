@@ -41,10 +41,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# data pipeline (raw/ has its own .gitignore that keeps demo/**; data/processed/<school> is committed)
+# data pipeline (raw/ has its own .gitignore; data/processed/<school> is committed)
 data/cache/
 
 # Per-subject grade-row files are pipeline artifacts (rebuilt from data/raw by ingest); nothing reads them at
-# request time, so real schools do not commit them. The demo school keeps its rows for the determinism check.
+# request time, so they are not committed.
 data/processed/*/grades/
-!data/processed/demo/grades/

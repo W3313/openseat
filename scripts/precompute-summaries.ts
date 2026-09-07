@@ -2,7 +2,7 @@
 // the Repository, generates a ProfessorSummary for every professor with ≥ MIN_REVIEWS_RANKED reviews,
 // writes data/processed/<school>/summaries.json, then rebuilds the rankings payloads (which embed summaries).
 //
-//   npx tsx scripts/precompute-summaries.ts [--school demo] [--only-missing] [--force] [--yes] [--extractive] [--concurrency 4]
+//   npx tsx scripts/precompute-summaries.ts --school <id> [--only-missing] [--force] [--yes] [--extractive] [--concurrency 4]
 //
 //   --only-missing  keep every cached entry whose inputHash still matches (CI: --only-missing --extractive → no diff)
 //   --force         regenerate everything
@@ -24,7 +24,6 @@ import {
 } from '@/lib/ai';
 import { buildRankings } from './build-rankings';
 import { flagBool, flagString, readArgs } from './lib/args';
-import { buildClock } from './lib/clock';
 import { fail, log } from './lib/log';
 
 interface Plan {
@@ -73,8 +72,10 @@ async function mapWithConcurrency<T, R>(items: readonly T[], limit: number, fn: 
 
 async function main(): Promise<void> {
   const args = readArgs();
-  const schoolId = toRegisteredSchoolId(flagString(args, 'school', 'demo'));
-  if (!schoolId) fail(`Unknown school: ${flagString(args, 'school')}`);
+  const requested = flagString(args, 'school');
+  if (!requested) fail('usage: tsx scripts/precompute-summaries.ts --school <id> [--only-missing] [--force] [--yes] [--extractive]');
+  const schoolId = toRegisteredSchoolId(requested);
+  if (!schoolId) fail(`Unknown school: ${requested}`);
   const config = getSchoolConfig(schoolId);
   const onlyMissing = flagBool(args, 'only-missing');
   const force = flagBool(args, 'force');
@@ -107,8 +108,6 @@ async function main(): Promise<void> {
     }
   }
 
-  // Extractive summaries in demo mode are stamped with the fixed snapshot clock so data:all is reproducible.
-  const clockNow = usesModel ? undefined : () => buildClock(config.mode);
   const events = new Map<string, number>();
   const scriptLog: SummaryLogger = (event, detail) => {
     events.set(event, (events.get(event) ?? 0) + 1);
@@ -117,7 +116,7 @@ async function main(): Promise<void> {
 
   let done = 0;
   const generated = await mapWithConcurrency(todo, concurrency, async (detail) => {
-    const summary = await getOrCreateSummary(detail, { allowClaude: usesModel, provider, force: true, log: scriptLog, now: clockNow });
+    const summary = await getOrCreateSummary(detail, { allowClaude: usesModel, provider, force: true, log: scriptLog });
     done++;
     if (done % 10 === 0 || done === todo.length) log.info(`  ${done}/${todo.length} ${detail.professor.displayName} → ${summary?.source ?? 'null'}`);
     return summary;

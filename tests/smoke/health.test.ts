@@ -5,12 +5,12 @@ import { describe, expect, it } from 'vitest';
 const baseUrl = process.env.SMOKE_BASE_URL?.replace(/\/+$/, '');
 
 describe.skipIf(!baseUrl)('smoke: /api/health', () => {
-  it('responds ok in demo mode', async () => {
+  it('responds ok for the default (real, live) school', async () => {
     const res = await fetch(`${baseUrl}/api/health`);
     expect(res.status).toBe(200);
     const body = (await res.json()) as { ok: boolean; mode: string; counts?: { professors: number } };
     expect(body.ok).toBe(true);
-    expect(body.mode).toBe('demo');
+    expect(body.mode).toBe('live');
     expect(body.counts?.professors ?? 0).toBeGreaterThan(0);
   });
 

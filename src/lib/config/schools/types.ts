@@ -12,24 +12,24 @@ export interface SourceSpec {
 export interface SchoolSources {
   grades: SourceSpec;
   schedule: SourceSpec | null;
-  /** Always null for real schools (docs/LEGAL.md); the demo school wires the fictional review adapter. */
+  /** Always null today (docs/LEGAL.md: no scraped reviews); reserved for a first-party review source. */
   reviews: SourceSpec | null;
 }
 
 export interface SchoolConfig {
-  /** 'uiuc' | 'tamu' | 'utexas' | ... | 'demo' — lowercase, /^[a-z0-9-]{2,12}$/. */
+  /** 'uiuc' | 'purdue' | 'uh' | ... — lowercase, /^[a-z0-9-]{2,12}$/. */
   id: string;
   name: string;
   shortName: string;
   /** IANA zone every meeting time and stamp is displayed in. */
   timezone: string;
-  /** Per school; replaces the global DATA_MODE. 'demo' only for the fictional dataset. */
+  /** Per school; replaces the global DATA_MODE. Always 'live' (the fictional demo school was removed). */
   mode: DataMode;
   currentTerm: TermCode;
   /** Subject allowlist for ingest + static generation (size budget, §6); 'all' = every subject the source has. */
   subjects: string[] | 'all';
   sources: SchoolSources;
-  /** True only when the schedule source exposes seat availability (demo, uh). */
+  /** True only when the schedule source exposes seat availability (uh). */
   seatStatusAvailable: boolean;
   /** What the grade source publishes (§4). */
   gradeBuckets: GradeBucketKind;
@@ -39,7 +39,6 @@ export interface SchoolConfig {
   attribution: { grades: string; schedule?: string };
   /**
    * Directory holding departments.json / course-priors.json etc. for this school (default data/config/<id>).
-   * The demo school reuses UIUC's catalog config ("fictional professors on the UIUC catalog").
    */
   configDir?: string;
 }

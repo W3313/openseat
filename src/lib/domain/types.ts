@@ -2,7 +2,8 @@
 export type SchoolId = string;
 export type Season = 'wi' | 'sp' | 'su' | 'fa';
 export type TermCode = `${number}-${Season}`;        // "2026-fa" — same as the CSV YearTerm column
-export type DataMode = 'demo' | 'live';
+/** Every registered school is a real ('live') school; the fictional demo school was removed 2026-09-06. */
+export type DataMode = 'live';
 export type SortKey = 'rating' | 'overall' | 'gpa' | 'reviews';
 export type Day = 'M' | 'T' | 'W' | 'R' | 'F' | 'S' | 'U';
 
@@ -15,15 +16,15 @@ export interface School {
   id: SchoolId;
   name: string;                                      // "University of Illinois Urbana-Champaign"
   shortName: string;                                 // "UIUC"
-  mode: DataMode;                                    // per school (MULTI_SCHOOL_DESIGN §2); 'demo' only for the fictional school
+  mode: DataMode;                                    // per school (MULTI_SCHOOL_DESIGN §2); always 'live'
   currentTerm: TermCode;                             // the term rankings are built for
   timezone: string;                                  // "America/Chicago" — all meeting times & stamps display in this zone
-  seatStatusAvailable: boolean;                      // demo: true; real Course Explorer: false (no seat data in the API)
+  seatStatusAvailable: boolean;                      // true only when the schedule source exposes seats (UH); Course Explorer: false
   reviewsAvailable: boolean;                         // false for every real school → grades-only mode (MULTI_SCHOOL_DESIGN §5)
   gradeBuckets: GradeBucketKind;                     // legend shape (§4)
   gradeValueKind: GradeValueKind;                    // wording: students vs sections (§4.1)
   attribution: { grades: string; schedule?: string };   // footer / about text (§2)
-  sources: { grades: string; schedule: string; reviews: string };   // adapter ids, e.g. "uiuc-gpa-csv" | "demo-grades"; 'none' when absent
+  sources: { grades: string; schedule: string; reviews: string };   // adapter ids, e.g. "uiuc-gpa-csv"; 'none' when absent
 }
 
 export interface Subject {
@@ -89,7 +90,7 @@ export interface GradeRow {                          // one CSV row = one (term,
 }
 
 export type SectionStatus =
-  | 'open' | 'waitlist' | 'closed'                   // demo source (seat status known)
+  | 'open' | 'waitlist' | 'closed'                   // seat-aware schedule sources (UH class browser)
   | 'offered' | 'inactive'                           // real Course Explorer (statusCode 'A' → offered; else inactive); seats unknown
   | 'unknown';
 
@@ -133,8 +134,8 @@ export interface Professor {
   subjects: string[];                                // subjects with ≥1 grade row, section or review course
   courseIds: string[];                               // courses with ≥1 grade row or section
   nameVariants: string[];                            // every raw instructor string linked to this person
-  reviewSourceId: string | null;                     // RMP node id or demo id; null for grades-only
-  isFictional: boolean;                              // true for every demo professor
+  reviewSourceId: string | null;                     // review-source id; null for grades-only
+  isFictional: boolean;                              // always false for real schools (asserted at ingest); kept for test fixtures
 }
 
 export interface Review {
@@ -144,7 +145,7 @@ export interface Review {
   quality: number; difficulty: number | null;        // 1..5
   wouldTakeAgain: boolean | null; gradeReceived: string | null;
   text: string;
-  sourceTags: string[];                              // as given by the source (RMP ratingTags / demo)
+  sourceTags: string[];                              // as given by the source (RMP ratingTags)
   vibeTags: VibeTag[];                               // derived at ingest by lexicon
   helpfulVotes: number;                              // thumbsUp − thumbsDown, floored at 0
   sentiment: number;                                 // −1..1, computed at ingest (Section 8.8)
@@ -177,7 +178,7 @@ export interface CourseBreakdown {
   delta: number | null;                              // gpa − baselineGpa; null when baselineN < MIN_BASELINE_N or gpa null
   buckets: GradeBuckets;
   isHeadline: boolean;                               // false → TA sched types only (detail toggle)
-  sourceGpa?: number | null;                         // §4.1: graded-weighted mean of the rows' published avgGPA (UH, UCSB); absent when no row carries one
+  sourceGpa?: number | null;                         // §4.1: graded-weighted mean of the rows' published avgGPA (UH); absent when no row carries one
 }
 
 export interface MatchProvenance {
@@ -283,7 +284,7 @@ export interface Meta {
   gradesThroughTerm: TermCode; seatsFetchedAt: string;
   counts: MetaCounts;
   sources: { id: string; label: string; url: string | null; license: string | null; fetchedAt: string; recordCount: number }[];
-  edgeCases: string[];                               // demo only: labels of the deliberate edge cases planted by the seed (Section 6.5); [] in live mode
+  edgeCases: string[];                               // always [] (formerly the demo seed's planted edge cases)
   subjects?: string[];                               // MULTI_SCHOOL_DESIGN §6: the subject allowlist this dataset was ingested with
   excludedGradeCodes?: Record<string, number>;       // §4: source grade codes excluded from `graded` (I, S/U, P/NP, AU …) with row counts
   droppedRows?: number;                              // §4: source rows dropped (e.g. percentages without enrollment)

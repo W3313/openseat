@@ -9,8 +9,6 @@ export interface SchoolOption extends Pick<School, "id" | "name" | "shortName"> 
   subjectCount?: number;
   /** false → the hint under the select says the school is grades-only. */
   reviewsAvailable?: boolean;
-  /** true → the fictional dataset; the hint says so. */
-  isDemo?: boolean;
 }
 
 /** "UIUC — University of Illinois Urbana-Champaign · 108 professors · 6 subjects" (counts omitted when unknown). */
@@ -24,7 +22,6 @@ export function schoolOptionLabel(school: SchoolOption): string {
 /** One-line hint for the chosen school: what kind of data sits behind it. */
 export function schoolHint(school: SchoolOption | undefined): string | null {
   if (!school) return null;
-  if (school.isDemo) return "Fictional demo dataset — every professor and review is invented.";
   if (school.reviewsAvailable === false) return "Official grade data only — no student reviews yet, so professors are ranked by grade curve.";
   return null;
 }

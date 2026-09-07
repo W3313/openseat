@@ -30,7 +30,7 @@ vi.mock("next/navigation", () => ({
 }));
 
 const payload = gradesOnly as unknown as RankingsPayload;
-const demoPayload = reviews as unknown as RankingsPayload;
+const reviewsPayload = reviews as unknown as RankingsPayload;
 const okonkwo = payload.professors.find((p) => p.professor.slug === "adaeze-okonkwo")!;
 const noRows = payload.professors.find((p) => p.professor.slug === "vantongeren-p")!;
 const detail = (details as unknown as Record<string, ProfessorDetail>)["adaeze-okonkwo"];
@@ -40,8 +40,8 @@ afterEach(cleanup);
 describe("school flags", () => {
   it("reads the design-doc fields and derives them for older payloads", () => {
     expect(resolveSchoolFlags(payload.school)).toMatchObject({ mode: "live", reviewsAvailable: false, gradeValueKind: "counts", gradeBuckets: "plus-minus" });
-    // The demo fixture predates the fields: demo adapters → demo mode with reviews.
-    expect(resolveSchoolFlags(demoPayload.school, { mode: demoPayload.mode })).toMatchObject({ mode: "demo", reviewsAvailable: true });
+    // The reviews fixture predates the flags: a review adapter id → reviews available.
+    expect(resolveSchoolFlags(reviewsPayload.school, { mode: reviewsPayload.mode })).toMatchObject({ mode: "live", reviewsAvailable: true });
     expect(resolveSchoolFlags({ id: "x", sources: { grades: "x-csv", schedule: "none", reviews: "none" } })).toMatchObject({ mode: "live", reviewsAvailable: false });
     // No flags and no adapter ids at all (older callers): keep the full review UI.
     expect(resolveSchoolFlags({ id: "x" }).reviewsAvailable).toBe(true);
@@ -51,10 +51,10 @@ describe("school flags", () => {
 describe("rankings header and title", () => {
   it("says 'ranked by grade curve' for a grades-only school", () => {
     expect(rankingsTitle(payload)).toBe("CS professors ranked by grade curve — Fall 2026 · ProfPeek");
-    expect(rankingsTitle(demoPayload)).toBe("CS professors with open sections — Fall 2026 · ProfPeek · DEMO");
+    expect(rankingsTitle(reviewsPayload)).toBe("CS professors with open sections — Fall 2026 · ProfPeek");
     expect(rankingsDescription(payload)).toMatch(/ranked by grade curve/);
     expect(rankingsDescription(payload).length).toBeLessThanOrEqual(155);
-    expect(rankingsDescription(demoPayload)).toMatch(/student rating/);
+    expect(rankingsDescription(reviewsPayload)).toMatch(/student rating/);
   });
 
   it("renders the 'Ranked by grade curve' pill only in grades-only mode", () => {
@@ -62,7 +62,7 @@ describe("rankings header and title", () => {
     render(<RankingsHeader school={payload.school} mode={payload.mode} {...common} />);
     expect(screen.getByText("Ranked by grade curve")).toBeInTheDocument();
     cleanup();
-    render(<RankingsHeader school={demoPayload.school} mode={demoPayload.mode} {...common} />);
+    render(<RankingsHeader school={reviewsPayload.school} mode={reviewsPayload.mode} {...common} />);
     expect(screen.queryByText("Ranked by grade curve")).toBeNull();
   });
 });
@@ -194,10 +194,10 @@ describe("about: per-school sources table", () => {
   };
   it("prints attribution, adapters, buckets and dataset size per school", () => {
     expect(reviewsCell(row)).toBe("none — official grade data only");
-    expect(reviewsCell({ mode: "demo", reviewsAvailable: true })).toBe("fictional demo reviews");
+    expect(reviewsCell({ reviewsAvailable: true })).toBe("first-party reviews");
     expect(datasetCell(row)).toBe("25 subjects · 1,204 professors · 6,900 grade rows · 2,100 sections");
     expect(datasetCell({ subjectCount: null, counts: null })).toBe("all subjects · not built yet");
-    render(<SchoolsTable rows={[row, { ...row, id: "demo", name: "Demo University", shortName: "DEMO", mode: "demo", reviewsAvailable: true, seatStatusAvailable: true }]} />);
+    render(<SchoolsTable rows={[row, { ...row, id: "fp", name: "First-Party University", shortName: "FPU", reviewsAvailable: true, seatStatusAvailable: true }]} />);
     const table = screen.getByTestId("schools-table");
     const bodyRows = within(table).getAllByRole("row").slice(1);
     expect(bodyRows).toHaveLength(2);
@@ -205,7 +205,8 @@ describe("about: per-school sources table", () => {
     expect(bodyRows[0].textContent).toContain("uiuc-gpa-csv");
     expect(bodyRows[0].textContent).toContain("no licence declared");
     expect(bodyRows[0].textContent).toContain("no seat availability");
-    expect(bodyRows[1].textContent).toContain("fictional demo reviews");
+    expect(bodyRows[1].textContent).toContain("first-party reviews");
+    expect(bodyRows[1].textContent).toContain("seat availability exposed");
   });
 });
 

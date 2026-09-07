@@ -22,9 +22,10 @@ const SUBJECTS = [
 ];
 const TWO_SCHOOLS: SchoolOption[] = [
   { id: "uiuc", name: "University of Illinois Urbana-Champaign", shortName: "UIUC", professorCount: 1204, subjectCount: 25, reviewsAvailable: false },
-  { id: "demo", name: "Demo University", shortName: "DEMO", professorCount: 108, subjectCount: 6, reviewsAvailable: true, isDemo: true },
+  // A hypothetical school with a (first-party) review source: the review-aware copy paths stay covered.
+  { id: "uh", name: "University of Houston", shortName: "UH", professorCount: 108, subjectCount: 6, reviewsAvailable: true },
 ];
-const DEMO_SUBJECTS = [
+const UH_SUBJECTS = [
   { code: "CS", name: "Computer Science", professorCount: 4 },
   { code: "PHYS", name: "Physics", professorCount: 3 },
 ];
@@ -113,7 +114,7 @@ describe("HeroForm", () => {
 
 describe("HeroForm with several schools (design §8)", () => {
   function setupTwo() {
-    render(<HeroForm schools={TWO_SCHOOLS} subjectsBySchool={{ uiuc: SUBJECTS, demo: DEMO_SUBJECTS }} defaultSchoolId="uiuc" />);
+    render(<HeroForm schools={TWO_SCHOOLS} subjectsBySchool={{ uiuc: SUBJECTS, uh: UH_SUBJECTS }} defaultSchoolId="uiuc" />);
     return screen.getByRole("combobox", { name: "School" }) as HTMLSelectElement;
   }
 
@@ -122,7 +123,7 @@ describe("HeroForm with several schools (design §8)", () => {
     const labels = within(select).getAllByRole("option").map((o) => o.textContent);
     expect(labels).toEqual([
       "UIUC — University of Illinois Urbana-Champaign · 1,204 professors · 25 subjects",
-      "DEMO — Demo University · 108 professors · 6 subjects",
+      "UH — University of Houston · 108 professors · 6 subjects",
     ]);
     expect(select.value).toBe("uiuc");
     expect(screen.getByTestId("school-hint").textContent).toContain("no student reviews yet");
@@ -134,27 +135,27 @@ describe("HeroForm with several schools (design §8)", () => {
   it("switching school swaps the subject list, popular chips and the route", () => {
     const select = setupTwo();
     expect(screen.getByRole("link", { name: /^ECE/ })).toBeInTheDocument();
-    fireEvent.change(select, { target: { value: "demo" } });
-    expect(select.value).toBe("demo");
-    expect(screen.getByTestId("school-hint").textContent).toContain("Fictional demo dataset");
+    fireEvent.change(select, { target: { value: "uh" } });
+    expect(select.value).toBe("uh");
+    expect(screen.queryByTestId("school-hint")).toBeNull(); // reviews available → no grades-only hint
     expect(screen.queryByRole("link", { name: /^ECE/ })).toBeNull();
-    expect(screen.getByRole("link", { name: /^PHYS/ }).getAttribute("href")).toBe("/s/demo/PHYS");
-    expect(window.localStorage.getItem(LAST_SCHOOL_KEY)).toBe("demo");
+    expect(screen.getByRole("link", { name: /^PHYS/ }).getAttribute("href")).toBe("/s/uh/PHYS");
+    expect(window.localStorage.getItem(LAST_SCHOOL_KEY)).toBe("uh");
 
     const input = screen.getByRole("combobox", { name: "Subject" }) as HTMLInputElement;
-    fireEvent.change(input, { target: { value: "ece" } }); // ECE is not a demo subject
+    fireEvent.change(input, { target: { value: "ece" } }); // ECE is not a UH subject here
     fireEvent.keyDown(input, { key: "Enter" });
     expect(push).not.toHaveBeenCalled();
     fireEvent.change(input, { target: { value: "phys" } });
     fireEvent.keyDown(input, { key: "Enter" });
     fireEvent.keyDown(input, { key: "Enter" });
-    expect(push).toHaveBeenCalledWith("/s/demo/PHYS");
+    expect(push).toHaveBeenCalledWith("/s/uh/PHYS");
   });
 
   it("remembers the last chosen school per browser", () => {
-    window.localStorage.setItem(LAST_SCHOOL_KEY, "demo");
+    window.localStorage.setItem(LAST_SCHOOL_KEY, "uh");
     const select = setupTwo();
-    expect(select.value).toBe("demo");
+    expect(select.value).toBe("uh");
     cleanup();
     window.localStorage.setItem(LAST_SCHOOL_KEY, "nope"); // unknown → default
     expect(setupTwo().value).toBe("uiuc");

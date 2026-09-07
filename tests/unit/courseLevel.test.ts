@@ -3,7 +3,7 @@ import { describe, expect, it } from 'vitest';
 import { courseLevel } from '@/lib/utils/ids';
 
 describe('courseLevel', () => {
-  it('keeps the hundreds for 3-digit numbers (UIUC, UCSB) and clamps to 100–500', () => {
+  it('keeps the hundreds for 3-digit numbers (UIUC) and clamps to 100–500', () => {
     expect(courseLevel('101')).toBe(100);
     expect(courseLevel('225')).toBe(200);
     expect(courseLevel('598')).toBe(500);
@@ -11,7 +11,7 @@ describe('courseLevel', () => {
     expect(courseLevel('1')).toBe(100);
     expect(courseLevel('99')).toBe(100);
   });
-  it('uses the first digit of 4-digit (UH, UTD) and 5-digit (Purdue) numbers', () => {
+  it('uses the first digit of 4-digit (UH; letters inside like 4V95 dropped) and 5-digit (Purdue) numbers', () => {
     expect(courseLevel('1301')).toBe(100);
     expect(courseLevel('2305')).toBe(200);
     expect(courseLevel('4V95')).toBe(400);

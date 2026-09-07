@@ -28,7 +28,7 @@ export interface RankingsHeaderProps {
 
 /**
  * Page title (SPEC 3.2 / design §5):
- *   reviews: "{SUBJECT} professors with open sections — Fall 2026 · ProfPeek" (+ " · DEMO")
+ *   reviews: "{SUBJECT} professors with open sections — Fall 2026 · ProfPeek"
  *   grades-only: "{SUBJECT} professors ranked by grade curve — Fall 2026 · ProfPeek"
  */
 export function rankingsTitle(payload: Pick<RankingsPayload, "subject" | "term" | "mode" | "school">): string {
@@ -36,8 +36,7 @@ export function rankingsTitle(payload: Pick<RankingsPayload, "subject" | "term" 
   const what = flags.reviewsAvailable
     ? `with ${payload.school.seatStatusAvailable ? "open sections" : "offered sections"}`
     : "ranked by grade curve";
-  const base = `${payload.subject.code} professors ${what} — ${termDisplay(payload.term)} · ProfPeek`;
-  return payload.mode === "demo" ? `${base} · DEMO` : base;
+  return `${payload.subject.code} professors ${what} — ${termDisplay(payload.term)} · ProfPeek`;
 }
 
 /** Meta description for the rankings page, by mode. */

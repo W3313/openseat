@@ -23,7 +23,6 @@ export interface SchoolChrome {
   sourceUrls: SchoolSourceUrls;
   builtAt: string | null;
   counts: MetaCounts | null;
-  seed: number | null;
   /** Live review adapter label, when one was wired (never for registered schools). */
   reviewsLabel?: string;
 }
@@ -34,21 +33,20 @@ function sourceUrl(meta: Pick<Meta, "sources"> | null, pattern: RegExp): string 
   return hit?.url ?? null;
 }
 
-/** Fallback when neither school.json nor meta.json exists yet (fresh checkout): demo defaults, no counts. */
+/** Fallback when neither school.json nor meta.json exists yet (fresh checkout): grades-only defaults, no counts. */
 export function fallbackChrome(id: string, shortName = id.toUpperCase(), timezone = "America/Chicago"): SchoolChrome {
   return {
     id,
     shortName,
-    mode: "demo",
+    mode: "live",
     timezone,
-    reviewsAvailable: true,
-    seatStatusAvailable: true,
+    reviewsAvailable: false,
+    seatStatusAvailable: false,
     gradeValueKind: "counts",
-    attribution: resolveSchoolFlags({ id, shortName, sources: null, mode: "demo" }).attribution,
+    attribution: resolveSchoolFlags({ id, shortName, sources: null }).attribution,
     sourceUrls: { grades: null, schedule: null },
     builtAt: null,
     counts: null,
-    seed: null,
   };
 }
 
@@ -68,7 +66,7 @@ export function buildSchoolChrome(
     mode: flags.mode,
     timezone: school?.timezone ?? fallback.timezone ?? "America/Chicago",
     reviewsAvailable: flags.reviewsAvailable,
-    seatStatusAvailable: school?.seatStatusAvailable ?? flags.mode === "demo",
+    seatStatusAvailable: school?.seatStatusAvailable ?? false,
     gradeValueKind: flags.gradeValueKind,
     attribution: flags.attribution,
     sourceUrls: {
@@ -77,7 +75,6 @@ export function buildSchoolChrome(
     },
     builtAt: meta?.builtAt ?? null,
     counts: meta?.counts ?? null,
-    seed: meta?.seed ?? null,
-    reviewsLabel: flags.mode === "live" && flags.reviewsAvailable ? reviewsSource?.label : undefined,
+    reviewsLabel: flags.reviewsAvailable ? reviewsSource?.label : undefined,
   };
 }

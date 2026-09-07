@@ -84,7 +84,7 @@ describe('dedupeCrossListed', () => {
     expect(closed.isOpen).toBe(false);
   });
 
-  it('maps statuses for both the demo and the real adapter', () => {
+  it('maps seat-aware status codes and Course Explorer codes', () => {
     expect(mapSectionStatus('open')).toBe('open');
     expect(mapSectionStatus('Waitlist')).toBe('waitlist');
     expect(mapSectionStatus('A')).toBe('offered');

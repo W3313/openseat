@@ -8,8 +8,7 @@ export type ChipTone =
   | "success"
   | "warning"
   | "danger"
-  | "info"
-  | "demo";
+  | "info";
 
 export type ChipSize = "sm" | "md";
 
@@ -20,7 +19,6 @@ const TONE_CLASSES: Record<ChipTone, string> = {
   warning: "bg-warning-soft text-warning border-transparent",
   danger: "bg-danger-soft text-danger border-transparent",
   info: "bg-info-soft text-info border-transparent",
-  demo: "bg-demo-soft text-demo border-transparent",
 };
 
 const SIZE_CLASSES: Record<ChipSize, string> = {

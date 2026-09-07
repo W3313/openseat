@@ -1,12 +1,7 @@
-// Build clock for the data scripts. In demo mode every timestamp the pipeline stamps (meta.builtAt,
-// match-report.generatedAt, rankings generatedAt, extractive summary generatedAt) is the seed's fixed
-// snapshot instant, so `npm run data:all` is byte-reproducible and CI's `git diff --exit-code -- data`
-// passes (SPEC 6.5 determinism, 12.5). Live mode uses the wall clock.
-import type { DataMode } from '@/lib/domain/types';
-import { DEMO_FETCHED_AT } from '@/lib/sources/demo/DemoScheduleSource';
+// Build clock for the data scripts: the wall clock unless a caller (tests) injects `now`. Real datasets carry
+// wall-clock stamps, so they are refreshed deliberately and committed rather than regenerated in CI.
 
-/** ISO UTC instant to stamp on generated files for a school's data mode. `now` (tests) wins over both defaults. */
-export function buildClock(mode: DataMode, now?: () => Date): string {
-  if (now) return now().toISOString();
-  return mode === 'demo' ? DEMO_FETCHED_AT : new Date().toISOString();
+/** ISO UTC instant to stamp on generated files. `now` (tests) wins over the wall clock. */
+export function buildClock(now?: () => Date): string {
+  return (now ? now() : new Date()).toISOString();
 }

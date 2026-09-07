@@ -47,7 +47,7 @@ Base: https://courses.illinois.edu/cisapp/explorer/schedule
 - **There is NO enrollmentStatus / seat-count element in any current response** (checked default, detail and cascade modes for Fall 2026, Spring 2026, Fall 2025). Only `statusCode`/`sectionStatusCode`. Therefore for the real UIUC adapter:
     status 'A' -> SectionStatus 'offered' (active this term), seats: unknown
     anything else -> 'inactive'
-  The UI must label real-source sections as "Offered this term" and state that live seat availability is not exposed by the public API; the fictional demo source DOES carry open/closed/waitlist seat status so the "open sections" filter is fully demonstrable.
+  The UI must label real-source sections as "Offered this term" and state that live seat availability is not exposed by the public API; the UH Class Browser source carries open/closed/waitlist seat status, so the "open sections" filter is live there.
 - Sections whose meeting type is LBD/DIS/LAB with `<instructors/>` empty are TA-led; attribute the course to the LEC/LCD/ONL primary instructor.
 - Be polite: ~150 course requests per subject per term with cascade mode; add concurrency limit (4) and a 100ms delay; cache raw XML in data/raw/uiuc/{year}-{term}/{SUBJECT}/*.xml (gitignored).
 

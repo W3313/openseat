@@ -110,7 +110,6 @@ export function ProfessorCard({
             <span id={headingId} className="text-base font-semibold text-ink">
               {professor.displayName}
             </span>
-            {professor.isFictional ? <span className="text-[0.65rem] uppercase tracking-wide text-demo">fictional</span> : null}
             {reviewsAvailable ? <VibeTags tags={item.vibeTags} /> : null}
             <BadgeRow badges={item.badges} seatStatusAvailable={seatStatusAvailable} reviewsAvailable={reviewsAvailable} gradeValueKind={gradeValueKind} />
             <span className="ml-auto inline-flex items-center gap-1">

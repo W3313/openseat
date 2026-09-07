@@ -9,9 +9,11 @@ do not re-litigate them in code review.
 - Production ships **real data**: official per-instructor grade distributions plus this-term schedules where a
   public source exists. **No scraped reviews** for any school (see `docs/LEGAL.md`). Review-dependent UI
   degrades gracefully (section 5).
-- The fictional dataset remains available as a **separate school id `demo`** ("Demo University — fictional
-  professors on the UIUC catalog") for development, tests and an optional showcase. It is never mixed with a
-  real school's data. Whether `demo` appears in production is controlled by the `SCHOOLS` env allowlist.
+- **Removed 2026-09-06:** the fictional `demo` school (seeded generator, `demo-*` adapters, `ModeBadge`, the
+  determinism CI step) and the `ucsb` / `utd` schools were deleted from the registry, adapters, data, docs and
+  tests. The registry holds `uiuc`, `purdue` and `uh` only; every remaining school is real and grades-only, and
+  review-dependent UI stays dormant until first-party reviews ship. Component tests keep the review UI covered
+  through the synthetic fixtures in `tests/fixtures/`.
 - `uiuc` becomes a real school (grades from the UIUC GPA dataset, schedule from Course Explorer, reviews none).
 
 ## 2. School registry (decision)
@@ -21,9 +23,9 @@ do not re-litigate them in code review.
 
 ```ts
 export interface SchoolConfig {
-  id: string;                       // 'uiuc' | 'tamu' | 'utexas' | ... | 'demo'  (lowercase, [a-z0-9-]{2,12})
+  id: string;                       // 'uiuc' | 'purdue' | 'uh' | ...  (lowercase, [a-z0-9-]{2,12})
   name: string; shortName: string; timezone: string;
-  mode: 'live' | 'demo';            // per school, replaces the global DATA_MODE
+  mode: 'live';                     // per school, replaces the global DATA_MODE ('demo' removed 2026-09-06)
   currentTerm: TermCode;
   subjects: string[] | 'all';       // subject allowlist for ingest + static generation (size budget, section 6)
   sources: {
@@ -101,11 +103,11 @@ Purdue (and Georgia Tech, UCSD) publish per-section grade **percentages with no 
 | School id | Grades | Schedule | Notes |
 |---|---|---|---|
 | `uh` (University of Houston) | GitHub release bundle `cougargrades/publicdata` → `edu.uh.grade_distribution/records.csv` (Fall 2013–Spring 2026; per section; full `Last, First` names; A–F counts, no +/-; SATISFACTORY/NOT REPORTED/TOTAL DROPPED codes; TPIA public records; npm package MIT) | `POST https://classbrowser.uh.edu/api/courses` (no auth; terms `/api/terms`, subjects `/api/subjects`; `Last,First` names; meeting times; open/closed) | seatStatusAvailable true |
-| `ucsb` (UC Santa Barbara) | `https://raw.githubusercontent.com/dailynexusdata/grades-data/main/courseGrades.csv` (Fall 2009–Spring 2026; course × instructor × quarter aggregate; counts with +/- as Ap/Am…; nLetterStudents; avgGPA; no W; README "free to reuse"; CPRA records) | `https://api.ucsb.edu/academics/curriculums/v3/classes/search` needs free `ucsb-api-key` → env `UCSB_API_KEY`; grades-only when absent | instructor `LAST F M` initials |
+| `ucsb` (UC Santa Barbara) — **removed 2026-09-06** | `https://raw.githubusercontent.com/dailynexusdata/grades-data/main/courseGrades.csv` (Fall 2009–Spring 2026; course × instructor × quarter aggregate; counts with +/- as Ap/Am…; nLetterStudents; avgGPA; no W; README "free to reuse"; CPRA records) | `https://api.ucsb.edu/academics/curriculums/v3/classes/search` needs free `ucsb-api-key` → env `UCSB_API_KEY`; grades-only when absent | instructor `LAST F M` initials |
 | `purdue` (Purdue West Lafayette) | `https://raw.githubusercontent.com/eduxstad/boiler-grades/main/<term>.csv` (per term through spring2026; per section with CRN; `Last, First M.`; PERCENTAGES only, sections >10 students; codes E/AU/I/N/P/PI/S/SI/U/W; schema drift per term, semicolon in some files, cascading blanks → fill-forward; GPL-3.0 repo, Indiana public records) | `https://api.purdue.io/odata/Sections?$filter=…&$expand=Class($expand=Course($expand=Subject)),Meetings($expand=Instructors)` (no auth; CRN join; no seats) | percentOnly |
-| `utd` (UT Dallas) | `https://raw.githubusercontent.com/acmutd/utd-grades/master/raw_data/enhanced_grades_enhanced_grades_<term>.csv` (one per term, latest 25f; per section; counts with +/-; CR/I/NC/W/P; up to 6 instructors + normalized instructor id; term only in filename; empty = 0; MIT repo; provenance to confirm) | none verified (coursebook is session-gated) | grades-only |
+| `utd` (UT Dallas) — **removed 2026-09-06** | `https://raw.githubusercontent.com/acmutd/utd-grades/master/raw_data/enhanced_grades_enhanced_grades_<term>.csv` (one per term, latest 25f; per section; counts with +/-; CR/I/NC/W/P; up to 6 instructors + normalized instructor id; term only in filename; empty = 0; MIT repo; provenance to confirm) | none verified (coursebook is session-gated) | grades-only |
 | `uiuc` | existing `UiucGpaCsvSource` | existing `CourseExplorerSource` | now a real school; 25-subject allowlist |
-| `demo` | existing fictional generator (moved from school id `uiuc`) | demo schedule | full review UI |
+| `demo` — **removed 2026-09-06** | (was) fictional generator | (was) demo schedule | (was) full review UI |
 
 ## 5. Grades-only mode (decision)
 
@@ -118,7 +120,7 @@ When a school has `sources.reviews === null` (all real schools):
   card shows GradeBar, DeltaChip, W-rate, sparkline, open sections and a "students graded" count instead.
 - Badges limited to `open-now`, `easy-a`, `low-withdrawal`; `tough-but-loved` and `hidden-gem` need reviews.
 - Titles/OG images say "ranked by grade curve"; the methodology page explains why reviews are absent and how
-  to add first-party reviews later. The demo school keeps the full review UI.
+  to add first-party reviews later.
 - `RankingsPayload.school.reviewsAvailable: boolean` is the switch the client reads.
 
 ## 6. Size and static-generation budget (decision)
@@ -135,7 +137,7 @@ When a school has `sources.reviews === null` (all real schools):
   pages at ~3,000 per build; beyond that, professor pages switch to `dynamicParams = true` with ISR
   (`revalidate = 86400`) — note it in the README if triggered.
 
-**Commit policy (decision, 2026-09-06):** `grades/<SUBJECT>.json` files are pipeline artifacts that no page or API reads at request time; they are gitignored for real schools (kept for `demo`, which the determinism test needs) and excluded from serverless bundles via `outputFileTracingExcludes`. Committed size per real school is therefore rankings + professors-detail + small metadata files (≈ 10–17 MB each with the current subject allowlists; the original 12 MB target was not met and the caps in `tests/unit/dataSize.test.ts` were raised — a database-backed repository is the planned fix, see GO_LIVE.md).
+**Commit policy (decision, 2026-09-06):** `grades/<SUBJECT>.json` files are pipeline artifacts that no page or API reads at request time; they are gitignored for every school (the `demo` exception went with the demo school, 2026-09-06) and excluded from serverless bundles via `outputFileTracingExcludes`. Committed size per real school is therefore rankings + professors-detail + small metadata files (≈ 10–17 MB each with the current subject allowlists; the original 12 MB target was not met and the caps in `tests/unit/dataSize.test.ts` were raised — a database-backed repository is the planned fix, see GO_LIVE.md).
 
 ## 7. Adapter contract
 
@@ -150,7 +152,7 @@ records `SourceInfo { id, label, url, license }` truthfully — `license: null` 
 
 - Landing `SchoolSelect` lists registry schools (name + "N professors · M subjects"); the last choice is
   remembered per browser. URL structure is unchanged (`/s/<school>/<SUBJECT>`, `/p/<school>/<slug>`).
-- `ModeBadge` shows only on `demo`. Real schools show a `DataBadge` "Official grade data · <attribution>".
+- Every school shows a `DataBadge` "Official grade data · <attribution>" (`ModeBadge` was removed with the demo school, 2026-09-06).
 - Footer provenance is per school.
 
 ## 9. Out of scope for this build

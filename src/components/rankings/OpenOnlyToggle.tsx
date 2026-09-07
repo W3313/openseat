@@ -12,7 +12,7 @@ export interface OpenOnlyToggleProps {
   className?: string;
 }
 
-/** "Open seats only" (demo) / "Offered this term" (live) — SPEC F3. */
+/** "Open seats only" (seat-aware schedule) / "Offered this term" (no seat data) — SPEC F3. */
 export function OpenOnlyToggle({ checked, onChange, seatStatusAvailable, className }: OpenOnlyToggleProps) {
   const entry = seatStatusAvailable ? TOOLTIPS.stats.openSections : TOOLTIPS.stats.offeredSections;
   return (

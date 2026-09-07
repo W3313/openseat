@@ -1,7 +1,7 @@
 // Per-school UI switches from docs/MULTI_SCHOOL_DESIGN.md (§2, §4.1, §5, §8), read off the `School`
 // record every payload carries. The field names are the design-doc contract (`reviewsAvailable`,
 // `gradeValueKind`, `gradeBuckets`, `attribution`, `mode`); `resolveSchoolFlags` also derives sane
-// values for payloads written before those fields existed (the demo fixtures, an older school.json),
+// values for payloads written before those fields existed (older fixtures, an older school.json),
 // so every component reads one resolved object instead of probing optional fields.
 import type { DataMode, GradeBucketKind, GradeValueKind, School } from "@/lib/domain/types";
 
@@ -28,30 +28,20 @@ export interface SchoolFlags {
 /** A `School` record (any vintage) — the resolver needs only the id and the adapter ids to fill gaps. */
 export type SchoolLike = Pick<School, "id"> & { shortName?: string; sources?: Partial<School["sources"]> | null } & Partial<SchoolFlags>;
 
-export const DEMO_ATTRIBUTION: SchoolAttribution = { grades: "fictional demo data" };
-
-const DEMO_ADAPTER_RE = /^demo(-|$)/;
-
-/** True when the grades adapter id names the fictional generator. */
-export function isDemoAdapter(adapterId: string | null | undefined): boolean {
-  return typeof adapterId === "string" && DEMO_ADAPTER_RE.test(adapterId);
-}
-
 /** Resolve every UI switch for a school; explicit fields win, derived values fill the gaps. */
 export function resolveSchoolFlags(school: SchoolLike, overrides: { mode?: DataMode } = {}): SchoolFlags {
-  const grades = school.sources?.grades ?? null;
   const reviews = school.sources?.reviews ?? null;
-  const mode: DataMode = overrides.mode ?? school.mode ?? (isDemoAdapter(grades) ? "demo" : "live");
+  const mode: DataMode = overrides.mode ?? school.mode ?? "live";
   // Unknown provenance (no flag, no adapter ids) keeps the legacy behaviour: the full review UI.
   const reviewsAvailable =
-    school.reviewsAvailable ?? (mode === "demo" || reviews === null ? true : typeof reviews === "string" && reviews !== "" && reviews !== "none");
+    school.reviewsAvailable ?? (reviews === null ? true : typeof reviews === "string" && reviews !== "" && reviews !== "none");
   const label = school.shortName ?? school.id.toUpperCase();
   return {
     mode,
     reviewsAvailable,
     gradeValueKind: school.gradeValueKind ?? "counts",
     gradeBuckets: school.gradeBuckets ?? "plus-minus",
-    attribution: school.attribution ?? (mode === "demo" ? DEMO_ATTRIBUTION : { grades: `${label} official grade records` }),
+    attribution: school.attribution ?? { grades: `${label} official grade records` },
   };
 }
 

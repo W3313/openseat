@@ -59,17 +59,16 @@ async function load(params: Params): Promise<Loaded | null> {
   return { schoolId, code, number, course: courses.find((c) => c.id === courseId) ?? null, payload, meta };
 }
 
-/** "CS 225 Data Structures — who to take it with · ProfPeek" (+ " · DEMO"). */
-export function courseTitle(course: Pick<Course, "subject" | "number" | "title">, demo: boolean): string {
-  const base = `${course.subject} ${course.number} ${course.title} — who to take it with · ProfPeek`;
-  return demo ? `${base} · DEMO` : base;
+/** "CS 225 Data Structures — who to take it with · ProfPeek" */
+export function courseTitle(course: Pick<Course, "subject" | "number" | "title">): string {
+  return `${course.subject} ${course.number} ${course.title} — who to take it with · ProfPeek`;
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const loaded = await load(await params);
   if (!loaded?.course || !loaded.payload) return { title: "Course not found · ProfPeek", robots: { index: false } };
-  const { course, payload, schoolId, code, number, meta } = loaded;
-  const title = courseTitle(course, meta?.mode === "demo");
+  const { course, payload, schoolId, code, number } = loaded;
+  const title = courseTitle(course);
   const rankedBy = resolveSchoolFlags(payload.school, { mode: payload.mode }).reviewsAvailable ? "student rating" : "grade curve";
   const description = `Every instructor of ${code} ${number} (${course.title}) at ${payload.school.shortName}, ranked by ${rankedBy}, with grades compared against this course only.`.slice(
     0,

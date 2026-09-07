@@ -19,7 +19,7 @@ ProfPeek is a statically generated Next.js 16 site plus nine read-only JSON API 
 | **Ship real data by accident** | A local `DATA_MODE=live` build traced `data/processed/**` into the serverless bundle | Real instructor data (and possibly RMP output) in a public deployment | **Closed** — only reviewed, committed `data/processed/<school>` directories exist (the `uiuc-live` split is gone); raw downloads live under `data/raw/` (gitignored, never traced) and the RMP adapter is wired to no school |
 | **Credential leakage** | RMP frontend token hard-coded in source, `.env.example` and docs; CI secrets; git author metadata | Shipping a third party's credential; supply-chain exposure | **Closed** for the token (removed; `RMP_AUTH_HEADER` required when enabled); CI has no secrets; author-email rewrite deferred |
 | **Supply chain** | Floating action tags, default `GITHUB_TOKEN` permissions, caret ranges, postinstall scripts | Compromised action or dependency runs in CI | **Mitigated** — SHA-pinned actions, `permissions: contents: read`, Dependabot, `save-exact`; `ignore-scripts` deferred |
-| **Reputational: fictional demo indexed as fact** | Demo professor pages had real-sounding names, indexable, with no "fictional" marker in meta description or sitemap | Search snippets attributing fabricated ratings to a name that matches a real person elsewhere | **Closed** — "Fictional demo instructor —" description prefix, `noindex, follow` in demo mode, professor pages omitted from sitemap |
+| **Reputational: fictional demo indexed as fact** | Demo professor pages had real-sounding names, indexable, with no "fictional" marker in meta description or sitemap | Search snippets attributing fabricated ratings to a name that matches a real person elsewhere | **Closed** — the fictional demo school was removed on 2026-09-06 (no fictional professor exists; ingest asserts `isFictional === false`) |
 
 Out of scope for this model: DDoS beyond what Vercel's edge absorbs; compromise of the Vercel or GitHub account itself (use 2FA and hardware keys); insider risk (one operator).
 
@@ -56,9 +56,9 @@ All items below were implemented and verified in the 2026-09-06 fix pass; tests 
 
 ### 2.5 Data-boundary controls
 - `next.config.ts` `outputFileTracingIncludes` narrowed to `./data/processed/uiuc/**` — a local live build cannot ship real data.
-- `src/lib/sources/registry.ts` refuses a `live` (real) school configured with any `demo-*` adapter; `data/raw/<school>/` is gitignored (verified with `git check-ignore`) and no real school has a review source.
+- No fictional adapter exists to mix with real people (the demo generator was removed 2026-09-06; ingest fails if any source hands it a fictional professor); `data/raw/<school>/` is gitignored (verified with `git check-ignore`) and no real school has a review source.
 - `src/lib/sources/rmp/queries.ts` / `RmpReviewSource.ts`: no default credential; `RMP_AUTH_HEADER` is required when `RMP_ENABLED=1` (zod `superRefine`). The base64 literal is gone from the repo (grep returns 0).
-- `src/app/robots.ts` disallows `/api/` and `/compare/`; `src/app/sitemap.ts` omits professor pages in demo mode; `src/app/p/[school]/[slug]/page.tsx` sets `robots: { index: false, follow: true }` and a "Fictional demo instructor — " description prefix for fictional professors.
+- `src/app/robots.ts` disallows `/api/` and `/compare/`; `src/app/sitemap.ts` lists every professor page of the real schools (there are no fictional professors since 2026-09-06).
 
 ### 2.6 Supply chain and CI
 - `.github/workflows/ci.yml`: `permissions: contents: read`; actions pinned to full commit SHAs (`actions/checkout@11d5960a… # v4.4.0`, `actions/setup-node@49933ea5… # v4.4.0`, `actions/upload-artifact@ea165f8d… # v4.6.2`); Node version from `.nvmrc` via `node-version-file`; triggers on `pull_request` (not `pull_request_target`); **no secrets configured** — `data:all` stays extractive without a key and `git diff --exit-code -- data` guards drift.

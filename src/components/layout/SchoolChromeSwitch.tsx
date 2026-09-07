@@ -4,7 +4,6 @@ import { usePathname } from "next/navigation";
 import { pickBySchool, schoolFromPathname } from "./schoolFromPath";
 import { useLandingSchool } from "./landingSchool";
 import type { SchoolChrome } from "./schoolChrome";
-import { ModeBadge } from "./ModeBadge";
 import { DataBadge } from "./DataBadge";
 import { DataProvenance } from "./DataProvenance";
 
@@ -27,15 +26,11 @@ export function useSchoolChrome({ chromeBySchool, defaultSchoolId }: SchoolChrom
   return pickBySchool(chromeBySchool, pathname, defaultSchoolId);
 }
 
-/** Header badge: `ModeBadge` only on demo, `DataBadge` "Official grade data · <attribution>" for real schools (design §8). */
+/** Header badge: `DataBadge` "Official grade data · <attribution>" for the current school (design §8). */
 export function SchoolChromeBadge(props: SchoolChromeSwitchProps) {
   const chrome = useSchoolChrome(props);
   if (!chrome) return null;
-  return chrome.mode === "demo" ? (
-    <ModeBadge mode="demo" shortName={chrome.shortName} />
-  ) : (
-    <DataBadge attribution={chrome.attribution} shortName={chrome.shortName} />
-  );
+  return <DataBadge attribution={chrome.attribution} shortName={chrome.shortName} />;
 }
 
 /** Footer provenance line for the current school (design §8). */
@@ -44,14 +39,12 @@ export function SchoolProvenance(props: SchoolChromeSwitchProps & { className?: 
   if (!chrome) return null;
   return (
     <DataProvenance
-      mode={chrome.mode}
       reviewsAvailable={chrome.reviewsAvailable}
       attribution={chrome.attribution}
       sourceUrls={chrome.sourceUrls}
       builtAt={chrome.builtAt}
       timezone={chrome.timezone}
       counts={chrome.counts}
-      seed={chrome.seed}
       reviewsLabel={chrome.reviewsLabel}
       seatStatusAvailable={chrome.seatStatusAvailable}
       shortName={chrome.shortName}

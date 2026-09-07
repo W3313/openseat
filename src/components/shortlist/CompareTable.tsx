@@ -85,7 +85,6 @@ export function CompareTable({ details, school, className }: CompareTableProps) 
                 </Link>
                 <span className="block text-xs font-normal text-ink-muted">
                   {d.professor.department ?? d.professor.subjects.join(" / ")}
-                  {d.professor.isFictional ? <span className="ml-1 uppercase tracking-wide text-demo">fictional</span> : null}
                 </span>
               </th>
             ))}

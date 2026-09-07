@@ -1,6 +1,6 @@
 // Parser for the UIUC GPA dataset CSV (SPEC 6.2 "UiucGpaCsvSource", SOURCE_FACTS 1). Pure: takes the
-// file text, returns RawGradeRow[]. Shared by UiucGpaCsvSource (live) and DemoGradeSource (demo) so the
-// same 23-column contract is exercised in both modes.
+// file text, returns RawGradeRow[]. Used by UiucGpaCsvSource; the 23-column contract is exercised on the
+// committed fixture (tests/fixtures/uiuc-gpa-sample.csv).
 import { parse } from 'csv-parse/sync';
 import { z } from 'zod';
 import type { GradeBuckets, TermCode } from '@/lib/domain/types';

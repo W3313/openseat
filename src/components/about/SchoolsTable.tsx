@@ -38,9 +38,8 @@ export const VALUE_KIND_LABELS: Record<GradeValueKind, string> = {
   percent: 'percentages per section (counted as sections)',
 };
 
-/** "none — official grade data only" | "fictional demo reviews" */
-export function reviewsCell(row: Pick<SchoolsTableRow, 'mode' | 'reviewsAvailable'>): string {
-  if (row.mode === 'demo') return 'fictional demo reviews';
+/** "none — official grade data only" | "first-party reviews" */
+export function reviewsCell(row: Pick<SchoolsTableRow, 'reviewsAvailable'>): string {
   return row.reviewsAvailable ? 'first-party reviews' : 'none — official grade data only';
 }
 

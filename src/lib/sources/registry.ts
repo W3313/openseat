@@ -101,7 +101,7 @@ export class NullReviewSource implements ReviewSource {
   }
 }
 
-/** No sections at all (grades-only schools such as utd); the requested term is echoed back. */
+/** No sections at all (schools without a schedule source); the requested term is echoed back. */
 export class NullScheduleSource implements ScheduleSource {
   readonly info = NULL_SCHEDULE_SOURCE_INFO;
   async fetchSections(opts: { schoolId: SchoolId; term: TermCode; subject: string }): Promise<{ term: TermCode; fetchedAt: string; sections: RawSection[] }> {
@@ -141,22 +141,15 @@ export function getScheduleSource(schoolId: SchoolId, env: Env, opts: RegistryOp
   return factory(context(config.id, env, spec, opts));
 }
 
-/**
- * Review adapter, or NullReviewSource when `reviews: null` (every real school — docs/LEGAL.md).
- * Guard: a live-mode school may never be wired to the fictional review adapter.
- */
+/** Review adapter, or NullReviewSource when `reviews: null` (every registered school — docs/LEGAL.md). */
 export function getReviewSource(schoolId: SchoolId, env: Env, opts: RegistryOptions = {}): ReviewSource {
   const config = getSchoolConfig(schoolId);
   const spec = config.sources.reviews;
   if (!spec) return new NullReviewSource();
-  if (config.mode === 'live' && spec.kind.startsWith('demo-')) throw new Error(REFUSE_MIXED_SOURCES_MESSAGE);
   const factory = kinds().reviews.get(spec.kind);
   if (!factory) throw unknownKind('reviews', spec.kind, config.id);
   return factory(context(config.id, env, spec, opts));
 }
-
-/** Thrown when a live-mode school is configured with a fictional (demo-*) review adapter. */
-export const REFUSE_MIXED_SOURCES_MESSAGE = 'Refusing to join real instructors with fictional reviews';
 
 /** All three adapters for a school, resolved from its SchoolConfig. */
 export function getSources(schoolId: SchoolId, env: Env, opts: RegistryOptions = {}): Sources {

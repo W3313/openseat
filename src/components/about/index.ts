@@ -21,5 +21,5 @@ export { SchoolsTable, reviewsCell, datasetCell, BUCKET_LABELS, VALUE_KIND_LABEL
 export type { SchoolsTableProps, SchoolsTableRow } from './SchoolsTable';
 export type { SourcesSectionProps } from './SourcesSection';
 export {
-  WhatSection, DemoSection, GradesOnlySection, LimitationsSection, PrivacySection, LicensingSection, FICTIONAL_DATA_STATEMENT,
+  WhatSection, GradesOnlySection, LimitationsSection, PrivacySection, LicensingSection,
 } from './StaticSections';

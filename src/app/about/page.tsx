@@ -6,7 +6,7 @@ import { siteUrl } from "@/lib/config/env";
 import { Breadcrumb } from '@/components/layout/Breadcrumb';
 import { resolveSchoolFlags } from '@/components/layout/schoolFlags';
 import {
-  AboutSection, AboutToc, AiSection, BadgeLegend, CoverageStats, DemoSection, Glossary, GradesOnlySection, LicensingSection,
+  AboutSection, AboutToc, AiSection, BadgeLegend, CoverageStats, Glossary, GradesOnlySection, LicensingSection,
   LimitationsSection, MatchTiersTable, PrivacySection, SchoolsTable, ScoringSection, SourcesSection, WhatSection,
   type SchoolsTableRow,
 } from '@/components/about';
@@ -18,7 +18,7 @@ import { getRepository } from '@/lib/repo';
 const SITE_URL = siteUrl.replace(/\/+$/, '');
 const TITLE = 'How ProfPeek works · ProfPeek';
 const DESCRIPTION =
-  'Where each school’s data comes from, why real schools have no reviews, why the demo professors are fictional, and the exact formulas behind every grade delta, badge, name match and AI summary.';
+  'Where each school’s data comes from, why there are no reviews yet, and the exact formulas behind every grade delta, badge, name match and AI summary.';
 
 interface SchoolData {
   id: string;
@@ -43,15 +43,12 @@ async function loadAboutData(): Promise<SchoolData[]> {
   return Promise.all(SCHOOL_IDS.map(loadSchool));
 }
 
-export async function generateMetadata(): Promise<Metadata> {
-  const all = await loadAboutData();
-  const modes = all.map((s) => s.meta?.mode).filter((m): m is Meta['mode'] => m != null);
-  const title = modes.length > 0 && modes.every((m) => m === 'demo') ? `${TITLE} · DEMO` : TITLE;
+export function generateMetadata(): Metadata {
   return {
-    title,
+    title: TITLE,
     description: DESCRIPTION,
     alternates: { canonical: `${SITE_URL}/about` },
-    openGraph: { title, description: DESCRIPTION, url: `${SITE_URL}/about` },
+    openGraph: { title: TITLE, description: DESCRIPTION, url: `${SITE_URL}/about` },
   };
 }
 
@@ -102,10 +99,7 @@ export default async function AboutPage() {
   const timezone = primary?.school?.timezone ?? primaryConfig?.timezone ?? 'America/Chicago';
   const seatStatusAvailable = primary?.school?.seatStatusAvailable ?? primaryConfig?.seatStatusAvailable ?? true;
   const rows = all.map(schoolsTableRow);
-  const realSchools = rows.filter((r) => r.mode !== 'demo');
-  const demo = all.find((s) => (findSchoolConfig(s.id)?.mode ?? s.meta?.mode) === 'demo');
-  const demoEnabled = demo != null;
-  const uiucLike = all.find((s) => s.meta && /uiuc/i.test(s.id)) ?? demo ?? null;
+  const uiucLike = all.find((s) => s.meta && /uiuc/i.test(s.id)) ?? null;
   const summaryCounts = all.reduce(
     (acc, s) => ({
       claude: acc.claude + (s.meta?.counts.summariesClaude ?? 0),
@@ -135,7 +129,7 @@ export default async function AboutPage() {
 
         <div className="min-w-0 space-y-12">
           <AboutSection id="what">
-            <WhatSection schoolShortName={realSchools[0]?.shortName ?? rows[0]?.shortName ?? 'UIUC'} />
+            <WhatSection schoolShortName={rows[0]?.shortName ?? 'UIUC'} />
           </AboutSection>
 
           <AboutSection id="sources">
@@ -150,16 +144,12 @@ export default async function AboutPage() {
                 <SourcesSection meta={uiucLike.meta} timezone={uiucLike.school?.timezone ?? timezone} />
               </>
             ) : (
-              <p>Source details are unavailable until a dataset is built (<code>npm run data:all</code>).</p>
+              <p>Source details are unavailable until a dataset is built (<code>npm run data:real</code>).</p>
             )}
           </AboutSection>
 
           <AboutSection id="reviews">
-            <GradesOnlySection realSchools={realSchools.map((r) => r.shortName)} demoEnabled={demoEnabled} />
-          </AboutSection>
-
-          <AboutSection id="demo">
-            <DemoSection mode={demoEnabled ? 'demo' : 'live'} edgeCases={demo?.meta?.edgeCases ?? []} />
+            <GradesOnlySection realSchools={rows.map((r) => r.shortName)} />
           </AboutSection>
 
           <AboutSection id="scoring">
@@ -180,7 +170,7 @@ export default async function AboutPage() {
             </p>
             <MatchTiersTable />
             {reportsBySchool.length === 0 ? (
-              <p>No match report yet — run <code>npm run data:ingest</code>.</p>
+              <p>No match report yet — run <code>npm run data:real</code>.</p>
             ) : (
               reportsBySchool.map((s) => {
                 const label = s.school?.shortName ?? s.id.toUpperCase();
@@ -219,7 +209,7 @@ export default async function AboutPage() {
           </AboutSection>
 
           <AboutSection id="limitations">
-            <LimitationsSection seatStatusAvailable={seatStatusAvailable} schoolNames={realSchools.map((r) => r.shortName)} />
+            <LimitationsSection seatStatusAvailable={seatStatusAvailable} schoolNames={rows.map((r) => r.shortName)} />
           </AboutSection>
 
           <AboutSection id="privacy">

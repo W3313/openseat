@@ -1,9 +1,8 @@
-import type { DataMode, MetaCounts } from "@/lib/domain/types";
+import type { MetaCounts } from "@/lib/domain/types";
 import type { SchoolAttribution } from "./schoolFlags";
 import type { SchoolSourceUrls } from "./schoolChrome";
 
 export interface DataProvenanceProps {
-  mode: DataMode;
   /** `School.attribution` (design §2/§8) — the text of the grades and schedule clauses. */
   attribution: SchoolAttribution;
   /** Links for those clauses, from `meta.sources`; omitted or null → plain text. */
@@ -15,9 +14,7 @@ export interface DataProvenanceProps {
   /** `School.timezone`, e.g. "America/Chicago". */
   timezone: string;
   counts: MetaCounts | null;
-  /** `Meta.seed` (demo only). */
-  seed?: number | null;
-  /** Override for the reviews clause in live mode, e.g. "RateMyProfessors (unofficial)". */
+  /** Override for the reviews clause when a review source is wired, e.g. "First-party reviews". */
   reviewsLabel?: string;
   /** `School.seatStatusAvailable`: false → the counts say "offered sections" (the API exposes no seats). Default true. */
   seatStatusAvailable?: boolean;
@@ -68,9 +65,8 @@ export function formatCounts(counts: MetaCounts, reviewsAvailable = true, seatSt
   return parts.join(" · ");
 }
 
-/** The reviews clause: "fictional demo data (seed N)" | "<adapter label>" | "none (official grade data only)". */
-export function reviewsClause(mode: DataMode, reviewsAvailable: boolean, seed?: number | null, reviewsLabel?: string): string {
-  if (mode === "demo") return `fictional demo data${seed != null ? ` (seed ${seed})` : ""}`;
+/** The reviews clause: "<adapter label>" | "none (official grade data only)". */
+export function reviewsClause(reviewsAvailable: boolean, reviewsLabel?: string): string {
   if (!reviewsAvailable) return "none (official grade data only)";
   return reviewsLabel ?? "none configured";
 }
@@ -90,14 +86,12 @@ function SourceLink({ href, children }: { href: string | null | undefined; child
  *  Built {builtAt} · {counts}"
  */
 export function DataProvenance({
-  mode,
   attribution,
   sourceUrls,
   reviewsAvailable = true,
   builtAt,
   timezone,
   counts,
-  seed,
   reviewsLabel,
   seatStatusAvailable = true,
   shortName,
@@ -116,7 +110,7 @@ export function DataProvenance({
     );
   }
   segments.push(
-    <span key="reviews">Reviews: {reviewsClause(mode, reviewsAvailable, seed, reviewsLabel)}</span>,
+    <span key="reviews">Reviews: {reviewsClause(reviewsAvailable, reviewsLabel)}</span>,
     <span key="built">
       Built {builtAt ? <time dateTime={builtAt}>{formatStamp(builtAt, timezone)}</time> : <span>—</span>}
     </span>,

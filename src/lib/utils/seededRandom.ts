@@ -1,6 +1,5 @@
-// Deterministic PRNG for scripts/seed-demo.ts (SPEC 6.5). Every draw of the seed goes through ONE
-// instance created with mulberry32(DEMO_SEED); iteration order elsewhere must be sorted so the output
-// bytes are reproducible (tests/unit/seedDeterminism.test.ts).
+// Deterministic PRNG (mulberry32) and numeric helpers (`clamp`, used by the scoring module). The fictional
+// dataset generator that drew from it was removed 2026-09-06; the generator stays for synthetic test data.
 
 export interface SeededRandom {
   /** The seed this generator was created with. */

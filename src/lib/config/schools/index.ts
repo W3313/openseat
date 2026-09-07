@@ -14,22 +14,16 @@ import type { SchoolConfig } from './types';
 import { SCHOOL_ID_RE } from './types';
 import { UIUC } from './uiuc';
 import { PURDUE } from './purdue';
-import { UCSB } from './ucsb';
 import { UH } from './uh';
-import { UTD } from './utd';
-import { DEMO } from './demo';
 
 export type { SchoolConfig, SchoolSources, SourceSpec } from './types';
 export { SCHOOL_ID_RE } from './types';
 export { UIUC, UIUC_SUBJECTS } from './uiuc';
 export { PURDUE, PURDUE_SUBJECTS, PURDUE_OVERSIZED_SUBJECTS } from './purdue';
-export { UCSB, UCSB_SUBJECTS, UCSB_SUBJECT_NAMES } from './ucsb';
 export { UH, UH_SUBJECTS } from './uh';
-export { UTD, UTD_SUBJECTS } from './utd';
-export { DEMO, DEMO_SUBJECTS } from './demo';
 
-/** Registry order = landing-page order: real schools first, the demo last. */
-const REGISTRY: readonly SchoolConfig[] = [UIUC, PURDUE, UCSB, UH, UTD, DEMO];
+/** Registry order = landing-page order. Every entry is a real, grades-only school (UC Santa Barbara, UT Dallas and the fictional demo school were removed 2026-09-06). */
+const REGISTRY: readonly SchoolConfig[] = [UIUC, PURDUE, UH];
 
 const ids = REGISTRY.map((c) => c.id);
 if (new Set(ids).size !== ids.length) throw new Error(`Duplicate school id in registry: ${ids.join(', ')}`);
@@ -54,7 +48,7 @@ export function toRegisteredSchoolId(value: string | null | undefined): SchoolId
 }
 
 /**
- * SCHOOLS env allowlist ("uiuc,demo") → enabled ids in registry order. Unknown ids are ignored; an
+ * SCHOOLS env allowlist ("uiuc,purdue") → enabled ids in registry order. Unknown ids are ignored; an
  * empty/undefined value enables every registered school.
  */
 export function parseSchoolsAllowlist(raw: string | null | undefined): SchoolId[] {
@@ -152,7 +146,7 @@ export function openToggleLabel(school: Pick<School, 'seatStatusAvailable'>): st
   return school.seatStatusAvailable ? 'Open seats only' : 'Offered this term';
 }
 
-/** True when the school ranks by reviews as well as grades (only the demo school today). */
+/** True when the school ranks by reviews as well as grades (no registered school today; first-party reviews later). */
 export function reviewsAvailableFor(school: Pick<School, 'reviewsAvailable'> | SchoolConfig): boolean {
   return 'reviewsAvailable' in school ? school.reviewsAvailable : school.sources.reviews !== null;
 }

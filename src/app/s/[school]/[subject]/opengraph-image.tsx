@@ -126,7 +126,7 @@ function Row({ item, index, reviewsAvailable, gradeValueKind }: { item: RankedPr
   );
 }
 
-/** 1200×630 Open Graph card for a subject rankings page (SPEC 3.7): top 3 by default sort + DEMO watermark. */
+/** 1200×630 Open Graph card for a subject rankings page (SPEC 3.7): top 3 by default sort. */
 export default async function Image({ params }: { params: Promise<Params> }) {
   const p = await params;
   const schoolId = toSchoolId(p.school);
@@ -139,7 +139,6 @@ export default async function Image({ params }: { params: Promise<Params> }) {
   const reviewsAvailable = flags?.reviewsAvailable ?? true;
   const gradeValueKind: GradeValueKind = flags?.gradeValueKind ?? "counts";
   const top = payload ? applyRankingsQuery(payload, effectiveQuery(DEFAULT_RANKINGS_QUERY, reviewsAvailable)).ranked.slice(0, 3) : [];
-  const demo = payload?.mode === "demo";
   const what = payload?.school.seatStatusAvailable === false ? "offered sections" : "open sections";
   const subtitle = reviewsAvailable ? `Top professors with ${what}` : "Professors ranked by grade curve";
   const gradesSource = meta?.sources.find((s) => /grade|gpa/i.test(s.id) || /grade|gpa/i.test(s.label))?.label ?? null;
@@ -191,28 +190,6 @@ export default async function Image({ params }: { params: Promise<Params> }) {
         <div style={{ display: "flex", position: "absolute", bottom: 32, left: 56, fontSize: 18, color: "#6b7280" }}>
           {footer}
         </div>
-
-        {demo ? (
-          <div
-            style={{
-              display: "flex",
-              position: "absolute",
-              top: 300,
-              left: -60,
-              width: 1320,
-              justifyContent: "center",
-              transform: "rotate(-18deg)",
-              fontSize: 64,
-              fontWeight: 800,
-              letterSpacing: 8,
-              color: "rgba(146, 64, 14, 0.18)",
-              border: "6px solid rgba(146, 64, 14, 0.18)",
-              padding: "8px 24px",
-            }}
-          >
-            DEMO DATA — FICTIONAL
-          </div>
-        ) : null}
       </div>
     ),
     { ...size },

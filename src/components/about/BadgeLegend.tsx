@@ -13,7 +13,7 @@ export const BADGE_RULES: Record<BadgeId, string> = {
 };
 
 export interface BadgeLegendProps {
-  /** Demo: true (seat states known). Live Course Explorer: false → open-now reads "offered". */
+  /** true when the schedule source exposes seats (UH); Course Explorer / purdue.io: false → open-now reads "offered". */
   seatStatusAvailable?: boolean;
   className?: string;
 }

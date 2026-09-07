@@ -33,7 +33,7 @@
   ],
   "generatedAt": "2026-09-04T00:00:00Z",
   "gradesThroughTerm": "2026-sp",
-  "mode": "demo",
+  "mode": "live",
   "priorMean": 4.484,
   "professors": [
     {
@@ -492,7 +492,7 @@
           "Okonkwo, A",
           "Okonkwo, Adaeze"
         ],
-        "reviewSourceId": "demo-adaeze-okonkwo",
+        "reviewSourceId": "fixture-adaeze-okonkwo",
         "schoolId": "uiuc",
         "slug": "adaeze-okonkwo",
         "subjects": [
@@ -747,7 +747,7 @@
           "Sorensen, H",
           "Sorensen, Halvard"
         ],
-        "reviewSourceId": "demo-halvard-sorensen",
+        "reviewSourceId": "fixture-halvard-sorensen",
         "schoolId": "uiuc",
         "slug": "halvard-sorensen",
         "subjects": [
@@ -1051,7 +1051,7 @@
           "Ibarra-Quintero, R",
           "Ibarra-Quintero, Rafael"
         ],
-        "reviewSourceId": "demo-rafael-ibarra-quintero",
+        "reviewSourceId": "fixture-rafael-ibarra-quintero",
         "schoolId": "uiuc",
         "slug": "rafael-ibarra-quintero",
         "subjects": [
@@ -1129,9 +1129,9 @@
     "seatStatusAvailable": true,
     "shortName": "UIUC",
     "sources": {
-      "grades": "demo-grades",
-      "reviews": "demo-reviews",
-      "schedule": "demo-schedule"
+      "grades": "fixture-grades",
+      "reviews": "fixture-reviews",
+      "schedule": "fixture-schedule"
     },
     "timezone": "America/Chicago"
   },

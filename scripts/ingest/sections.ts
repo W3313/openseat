@@ -11,7 +11,7 @@ export interface RawSectionWithTerm {
 }
 
 /**
- * Status mapping. Demo source: open | waitlist | closed. Real Course Explorer: 'A' → offered, anything
+ * Status mapping. Seat-aware sources (UH class browser): open | waitlist | closed. Course Explorer: 'A' → offered, anything
  * else → inactive (no seat data in the public API). Empty → unknown.
  */
 export function mapSectionStatus(statusCode: string): SectionStatus {

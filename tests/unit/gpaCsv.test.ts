@@ -136,70 +136,17 @@ describe('UiucGpaCsvSource', () => {
   });
 });
 
-describe('DemoGradeSource (same parser, fictional CSV)', () => {
-  it('parses data/raw/demo/demo/gpa.csv through parseGpaCsv and labels the seed', async () => {
-    const { DemoGradeSource } = await import('@/lib/sources/demo/DemoGradeSource');
-    const src = new DemoGradeSource({ seed: 20260903, log: { info: () => {}, warn: () => {} } });
-    expect(src.info).toEqual({ id: 'demo-grades', label: 'Fictional demo data (seed 20260903)', url: null, license: 'MIT' });
-    const out = await src.fetch({ schoolId: 'demo' });
-    expect(out.rows.length).toBeGreaterThan(100);
-    for (const row of out.rows.slice(0, 50)) {
-      expect(row.students).toBe(Object.values(row.buckets).reduce((a, b) => a + b, 0));
-      expect(row.yearTerm).toMatch(/^\d{4}-(fa|sp|su|wi)$/);
-    }
-  });
-
-  it('works against an arbitrary directory (fixture copy)', async () => {
-    const { mkdtemp, mkdir, copyFile } = await import('node:fs/promises');
-    const os = await import('node:os');
-    const { DemoGradeSource } = await import('@/lib/sources/demo/DemoGradeSource');
-    const dir = await mkdtemp(path.join(os.tmpdir(), 'profpeek-demo-'));
-    await mkdir(path.join(dir, 'demo'), { recursive: true });
-    await copyFile(FIXTURE, path.join(dir, 'demo', 'gpa.csv'));
-    const src = new DemoGradeSource({ seed: 1, dir, currentTerm: '2026-fa', yearsBack: 2, log: { info: () => {}, warn: () => {} } });
-    const out = await src.fetch({ schoolId: 'demo' });
-    expect(out.rows.length).toBeGreaterThan(0);
-    expect(out.rows.length).toBeLessThan(200);
-  });
-});
-
-describe('demo schedule/review adapters and registry', () => {
-  it('DemoScheduleSource returns seat-known sections for a subject', async () => {
-    const { DemoScheduleSource, DEMO_FETCHED_AT } = await import('@/lib/sources/demo/DemoScheduleSource');
-    const src = new DemoScheduleSource({ seed: 20260903 });
-    const out = await src.fetchSections({ schoolId: 'demo', term: '2026-fa', subject: 'CS' });
-    expect(out.term).toBe('2026-fa');
-    expect(out.fetchedAt).toBe(DEMO_FETCHED_AT);
-    expect(out.sections.length).toBeGreaterThan(0);
-    for (const s of out.sections) {
-      expect(s.subject).toBe('CS');
-      expect(s.seatsKnown).toBe(true);
-      expect(['open', 'waitlist', 'closed']).toContain(s.statusCode);
-    }
-  });
-
-  it('DemoReviewSource marks every professor fictional and serves their reviews', async () => {
-    const { DemoReviewSource } = await import('@/lib/sources/demo/DemoReviewSource');
-    const src = new DemoReviewSource({ seed: 20260903, log: { info: () => {}, warn: () => {} } });
-    const profs = await src.fetchProfessors({ schoolId: 'demo', subjects: ['CS'] });
-    expect(profs.length).toBeGreaterThan(0);
-    expect(profs.every((p) => p.isFictional)).toBe(true);
-    const reviews = await src.fetchReviews(profs[0].sourceId);
-    expect(Array.isArray(reviews)).toBe(true);
-    expect(await src.fetchReviews('no-such-professor')).toEqual([]);
-  });
-
+describe('adapter registry', () => {
   it('registry resolves adapters per school from its SchoolConfig (MULTI_SCHOOL_DESIGN §2)', async () => {
     const { loadEnv } = await import('@/lib/config/env');
     const { getSources, NullReviewSource, registeredAdapterKinds } = await import('@/lib/sources/registry');
     const env = loadEnv({} as NodeJS.ProcessEnv);
-    const demo = getSources('demo', env);
-    expect([demo.grades.info.id, demo.schedule.info.id, demo.reviews.info.id]).toEqual(['demo-grades', 'demo-schedule', 'demo-reviews']);
     const uiuc = getSources('uiuc', env);
     expect([uiuc.grades.info.id, uiuc.schedule.info.id, uiuc.reviews.info.id]).toEqual(['uiuc-gpa-csv', 'uiuc-course-explorer', 'none']);
     expect(uiuc.reviews).toBeInstanceOf(NullReviewSource);
-    expect(registeredAdapterKinds().grades).toEqual(expect.arrayContaining(['demo-grades', 'uiuc-gpa-csv']));
+    expect(registeredAdapterKinds().grades).toEqual(expect.arrayContaining(['uiuc-gpa-csv']));
     expect(registeredAdapterKinds().reviews).toContain('rmp-graphql'); // registered, wired by no school
     expect(() => getSources('nope', env)).toThrowError(/Unknown school/);
+    expect(() => getSources('demo', env)).toThrowError(/Unknown school/);
   });
 });

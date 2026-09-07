@@ -28,10 +28,9 @@ export function rankLine(rankBySubject: ProfessorDetail["rankBySubject"]): strin
   return parts.length ? parts.join(" · ") : null;
 }
 
-/** Page title: "{displayName} — {subjects.join('/')} · ProfPeek" (+ " · DEMO"). */
-export function profileTitle(detail: Pick<ProfessorDetail, "professor">, demo: boolean): string {
-  const base = `${detail.professor.displayName} — ${detail.professor.subjects.join("/")} · ProfPeek`;
-  return demo ? `${base} · DEMO` : base;
+/** Page title: "{displayName} — {subjects.join('/')} · ProfPeek" */
+export function profileTitle(detail: Pick<ProfessorDetail, "professor">): string {
+  return `${detail.professor.displayName} — ${detail.professor.subjects.join("/")} · ProfPeek`;
 }
 
 /** Detail-page header (SPEC 3.4 item 1). Grades-only schools (design §5) drop the rating block and vibe tags. */
@@ -58,9 +57,6 @@ export function ProfileHeader({ detail, school, backSubject, className }: Profil
             {professor.department ? <span>{professor.department}</span> : null}
             {reviewsAvailable && professor.kind === "grades-only" ? <span>Grade records only — no reviews linked</span> : null}
             {ranks ? <span className="tabular-nums">{ranks}</span> : null}
-            {professor.isFictional ? (
-              <span className="text-[0.7rem] font-medium uppercase tracking-wide text-demo">fictional demo instructor</span>
-            ) : null}
           </p>
         </div>
         <div className="flex shrink-0 flex-wrap items-center gap-2">

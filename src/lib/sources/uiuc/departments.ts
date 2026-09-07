@@ -1,6 +1,6 @@
 // Subject → review-source department names (data/config/{school}/departments.json), e.g.
 // { "CS": ["Computer Science"], "ECE": ["Electrical and Computer Engineering", ...] }. Used by the RMP
-// adapter (teacher search text) and the demo review adapter (subject filter).
+// adapter (teacher search text) and by ingest for subject names.
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import { z } from 'zod';

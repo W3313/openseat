@@ -7,7 +7,7 @@ export interface RawGradeRow {
 }
 export interface RawSection {
   crn: string; subject: string; number: string; sectionCode: string;
-  statusCode: string;                                // real: 'A' | 'P' | 'X'; demo: 'open' | 'waitlist' | 'closed'
+  statusCode: string;                                // Course Explorer: 'A' | 'P' | 'X'; seat-aware sources (UH): 'open' | 'waitlist' | 'closed'
   seatsKnown: boolean;
   instructorsRaw: string[];                          // trimmed, deduped
   meetings: Meeting[];

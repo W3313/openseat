@@ -18,8 +18,7 @@ export function dataBadgeText(attribution: Pick<SchoolAttribution, "grades">): s
 }
 
 /**
- * Header badge for a real school (design §8) — the counterpart of `ModeBadge`, which is reserved for
- * `demo`. The visible text stays short (label + school); the full attribution is the tooltip and the
+ * Header badge for a school (design §8). The visible text stays short (label + school); the full attribution is the tooltip and the
  * accessible name, and the footer prints it in full. Links to the per-school sources table.
  */
 export function DataBadge({ attribution, shortName, className, compact = true }: DataBadgeProps) {

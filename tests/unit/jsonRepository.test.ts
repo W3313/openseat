@@ -26,8 +26,8 @@ const KNOWN_PROFESSOR_ID = 'uiuc:p:adaeze-okonkwo';
 
 const meta: Meta = {
   builtAt: '2026-09-04T00:00:00Z',
-  mode: 'demo',
-  seed: 20260903,
+  mode: 'live',
+  seed: null,
   datasetHash: 'fixture',
   currentTerm: '2026-fa',
   scheduleTerm: '2026-fa',
@@ -89,7 +89,7 @@ beforeEach(() => clearRepositoryCache());
 describe('JsonRepository', () => {
   it('resolves one directory per school id', () => {
     expect(repo.schoolDir('uiuc')).toBe(path.join(dataDir, 'uiuc'));
-    expect(repo.schoolDir('demo')).toBe(path.join(dataDir, 'demo'));
+    expect(repo.schoolDir('purdue')).toBe(path.join(dataDir, 'purdue'));
     expect(repo.schoolIds).toContain('uiuc');
   });
 
@@ -97,8 +97,8 @@ describe('JsonRepository', () => {
     const school = await repo.getSchool('uiuc');
     expect(school?.id).toBe('uiuc');
     expect(school?.name).toBe(rankings.school.name);
-    expect((await repo.getSchools()).map((s) => s.id)).toEqual(['uiuc']); // demo has no school.json in this data dir
-    expect(await new JsonRepository({ dataDir, schoolIds: ['demo'] }).getSchools()).toEqual([]);
+    expect((await repo.getSchools()).map((s) => s.id)).toEqual(['uiuc']); // purdue has no school.json in this data dir
+    expect(await new JsonRepository({ dataDir, schoolIds: ['purdue'] }).getSchools()).toEqual([]);
     expect((await repo.getSubjects('uiuc')).map((s) => s.code)).toEqual([rankings.subject.code]);
     expect((await repo.getMeta('uiuc')).currentTerm).toBe('2026-fa');
   });

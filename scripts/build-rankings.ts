@@ -82,7 +82,7 @@ export async function buildRankings(opts: BuildRankingsOptions = {}): Promise<Bu
   const dir = opts.dir ?? path.join(ROOT, 'data', 'processed', config.id);
 
   const data = await loadProcessed(dir);
-  const generatedAt = buildClock(data.meta.mode ?? config.mode, opts.now);
+  const generatedAt = buildClock(opts.now);
   const index = indexData(data);
   const codes = [...new Set(data.subjects.map((s) => s.code))].sort();
   const withReviews = reviewsAvailable(data.school);

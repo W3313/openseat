@@ -53,9 +53,6 @@ export interface IngestResult {
   sizes: Record<string, number>;
 }
 
-/** Demo regression guard: matchRate below this fails the script (SPEC 6.3 step 6). */
-export const MIN_DEMO_MATCH_RATE = 0.6;
-
 /** Optional per-adapter extras on the GradeSource.fetch result (MULTI_SCHOOL_DESIGN §4; typed here until sources/types.ts carries them). */
 interface GradeFetchExtras {
   excludedGradeCodes?: Record<string, number>;
@@ -68,8 +65,7 @@ export async function runIngest(opts: IngestOptions): Promise<IngestResult> {
   const env = opts.env ?? processEnv;
   const config = getSchoolConfig(opts.schoolId);
   const schoolId = config.id;
-  const isFictional = config.mode === 'demo';
-  const builtAt = buildClock(config.mode, opts.now);
+  const builtAt = buildClock(opts.now);
   const outDir = opts.outDir ?? path.join(ROOT, 'data', 'processed', schoolId);
   const requested: string[] | 'all' =
     opts.subjects && opts.subjects.length > 0 ? opts.subjects.map((s) => s.trim().toUpperCase()) : config.subjects;
@@ -111,6 +107,8 @@ export async function runIngest(opts: IngestOptions): Promise<IngestResult> {
   const departmentsFile = await readJsonIfExists<Record<string, string[]>>(path.join(ROOT, schoolConfigDir(config), 'departments.json'));
   const departments = buildDepartmentIndex(departmentsFile ?? {});
   const rawProfessors = await sources.reviews.fetchProfessors({ schoolId, subjects });
+  // Every registered school is real: no source may hand ingest a fictional person (the demo generator is gone).
+  if (rawProfessors.some((p) => p.isFictional)) fail(`${sources.reviews.info.id} returned fictional professors for real school ${schoolId}`);
   const taken = new Set<string>();
   const reviewed = buildReviewedProfessors(rawProfessors, schoolId, departments, taken);
   const rawReviews: RawReview[] = [];
@@ -123,10 +121,11 @@ export async function runIngest(opts: IngestOptions): Promise<IngestResult> {
   // 4. Matching.
   const aliases = (await readJsonIfExists<Record<string, string>>(path.join(ROOT, 'data', 'overrides', `${schoolId}-instructor-aliases.json`))) ?? {};
   const matched = runMatching({
-    schoolId, rows, sections, reviewed: reviewed.professors, reviews: builtReviews.reviews, aliases, takenSlugs: taken, isFictional,
+    schoolId, rows, sections, reviewed: reviewed.professors, reviews: builtReviews.reviews, aliases, takenSlugs: taken, isFictional: false,
   });
   const matchReport = buildMatchReport(matched.entries, matched.blockedStrings, sections, builtAt, config.sources.reviews !== null);
   const professors = matched.professors;
+  if (professors.some((p) => p.isFictional)) fail(`ingest produced a fictional professor for real school ${schoolId}`);
 
   // 5. Sentiment/vibe tags, course stats, subjects, gradesThrough.
   const reviews = annotateReviews(builtReviews.reviews);
@@ -139,7 +138,6 @@ export async function runIngest(opts: IngestOptions): Promise<IngestResult> {
   // 6. Write.
   const school = buildSchool(config);
   const summaries = await readJsonIfExists<Record<string, ProfessorSummary>>(path.join(outDir, 'summaries.json'));
-  const edgeCases = isFictional ? await readEdgeCases(schoolId) : [];
   const gradesOnlyCount = professors.filter((p) => p.kind === 'grades-only').length;
   const openSections = sections.filter((s) => s.isOpen).length;
   const counts: MetaCounts = {
@@ -161,7 +159,7 @@ export async function runIngest(opts: IngestOptions): Promise<IngestResult> {
   const meta: Omit<Meta, 'datasetHash'> = {
     builtAt,
     mode: config.mode,
-    seed: isFictional ? env.DEMO_SEED : null,
+    seed: null,
     currentTerm: config.currentTerm,
     scheduleTerm,
     termFallback,
@@ -169,7 +167,7 @@ export async function runIngest(opts: IngestOptions): Promise<IngestResult> {
     seatsFetchedAt,
     counts,
     sources: sourceMeta,
-    edgeCases,
+    edgeCases: [],
     subjects: subjectCodes,
     excludedGradeCodes: extras.excludedGradeCodes ?? {},
     droppedRows: extras.droppedRows ?? 0,
@@ -207,21 +205,9 @@ async function main(): Promise<void> {
   const bytes = Object.values(result.sizes).reduce((a, b) => a + b, 0);
   log.info(`wrote ${Object.keys(result.sizes).length} files (${(bytes / 1024 / 1024).toFixed(2)} MB) to ${path.relative(ROOT, result.outDir) || '.'} (datasetHash ${result.datasetHash.slice(0, 12)}…)`);
   log.summary(result.summary);
-  if (getSchoolConfig(schoolId).mode === 'demo' && result.matchRate !== null && result.matchRate < MIN_DEMO_MATCH_RATE) {
-    fail(`match rate ${(result.matchRate * 100).toFixed(1)}% is below the demo guard of ${MIN_DEMO_MATCH_RATE * 100}%`);
-  }
 }
 
 const isMain = process.argv[1] !== undefined && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
 if (isMain) {
   main().catch((err: unknown) => fail(err instanceof Error ? err.stack ?? err.message : String(err)));
-}
-
-/** Labels of the edge cases the seed planted (SPEC 6.5): data/raw/demo/<school>/meta.json `edgeCases` records. */
-async function readEdgeCases(schoolId: SchoolId): Promise<string[]> {
-  const seedMeta = await readJsonIfExists<{ edgeCases?: { id: string; title: string }[] }>(
-    path.join(ROOT, 'data', 'raw', 'demo', schoolId, 'meta.json'),
-  );
-  if (seedMeta?.edgeCases) return seedMeta.edgeCases.map((e) => `(${e.id}) ${e.title}`);
-  return (await readJsonIfExists<string[]>(path.join(ROOT, 'data', 'raw', 'demo', schoolId, 'edge-cases.json'))) ?? [];
 }

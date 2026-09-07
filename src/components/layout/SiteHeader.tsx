@@ -16,7 +16,7 @@ export interface SiteHeaderProps {
 
 /**
  * Sticky top bar shown on every page (SPEC 3.0): wordmark, About, GitHub, and
- * the per-school badge (`ModeBadge` on demo, `DataBadge` for real schools).
+ * the per-school `DataBadge`.
  */
 export function SiteHeader({ chromeBySchool, defaultSchoolId, badge }: SiteHeaderProps) {
   return (

@@ -7,7 +7,6 @@ import { Combobox } from "@/components/ui/Combobox";
 import { Segmented } from "@/components/ui/Segmented";
 import { Toggle } from "@/components/ui/Toggle";
 import { Toaster, clearToasts, toast } from "@/components/ui/Toast";
-import { ModeBadge, modeBadgeText } from "@/components/layout/ModeBadge";
 import { DataBadge, dataBadgeText } from "@/components/layout/DataBadge";
 import { DataProvenance, formatCounts, formatStamp, reviewsClause } from "@/components/layout/DataProvenance";
 import { pickBySchool, schoolFromPathname } from "@/components/layout/schoolFromPath";
@@ -214,16 +213,6 @@ describe("Toast", () => {
 });
 
 describe("layout pieces", () => {
-  it("ModeBadge uses the SPEC text and links to /about#demo", () => {
-    expect(modeBadgeText("demo", "UIUC")).toBe("DEMO DATA — fictional professors & reviews");
-    expect(modeBadgeText("live", "UIUC")).toBe("LIVE DATA — UIUC");
-    render(<ModeBadge mode="demo" shortName="UIUC" />);
-    const link = screen.getByRole("link");
-    expect(link.getAttribute("href")).toBe("/about#demo");
-    expect(link.textContent).toContain("DEMO DATA");
-    expect(link.textContent).toContain("fictional professors & reviews");
-  });
-
   it("formatStamp renders in the school zone with CT", () => {
     expect(formatStamp("2026-09-03T14:12:00Z", "America/Chicago")).toBe("Sep 3, 2026, 9:12 AM CT");
   });
@@ -240,13 +229,13 @@ describe("layout pieces", () => {
 
   it("schoolFromPathname reads the school segment of rankings, professor and compare routes", () => {
     expect(schoolFromPathname("/s/uiuc/CS?sort=gpa")).toBe("uiuc");
-    expect(schoolFromPathname("/p/Demo/adaeze-okonkwo")).toBe("demo");
+    expect(schoolFromPathname("/p/Purdue/abad-jason")).toBe("purdue");
     expect(schoolFromPathname("/compare/uiuc?p=a,b")).toBe("uiuc");
     expect(schoolFromPathname("/about")).toBeNull();
     expect(schoolFromPathname("/")).toBeNull();
     expect(schoolFromPathname(null)).toBeNull();
-    const byId = { uiuc: "U", demo: "D" };
-    expect(pickBySchool(byId, "/s/demo/CS", "uiuc")).toBe("D");
+    const byId = { uiuc: "U", purdue: "P" };
+    expect(pickBySchool(byId, "/s/purdue/CS", "uiuc")).toBe("P");
     expect(pickBySchool(byId, "/about", "uiuc")).toBe("U");
     expect(pickBySchool(byId, "/s/constructor/CS", "uiuc")).toBe("U");
     expect(pickBySchool(byId, "/s/nope/CS", "missing")).toBeNull();
@@ -265,22 +254,21 @@ describe("layout pieces", () => {
     summariesExtractive: 86,
   };
 
-  it("DataProvenance prints the demo footer line", () => {
+  it("DataProvenance prints the footer line for a school with a review source", () => {
     render(
       <DataProvenance
-        mode="demo"
+        reviewsLabel="First-party reviews"
         attribution={{ grades: "UIUC GPA dataset (MIT)", schedule: "UIUC Course Explorer" }}
         sourceUrls={{ grades: "https://github.com/wadefagen/datasets", schedule: null }}
         builtAt="2026-09-03T14:12:00Z"
         timezone="America/Chicago"
-        seed={20260903}
         counts={COUNTS}
       />,
     );
     const text = screen.getByTestId("data-provenance").textContent ?? "";
     expect(text).toContain("Grades: UIUC GPA dataset (MIT)");
     expect(text).toContain("Schedule: UIUC Course Explorer");
-    expect(text).toContain("Reviews: fictional demo data (seed 20260903)");
+    expect(text).toContain("Reviews: First-party reviews");
     expect(text).toContain("Built Sep 3, 2026, 9:12 AM CT");
     expect(text).toContain("1,812 grade rows · 92 professors · 118 open sections · 1,304 reviews");
     expect(screen.getByRole("link", { name: "UIUC GPA dataset (MIT)" }).getAttribute("href")).toBe("https://github.com/wadefagen/datasets");
@@ -289,7 +277,6 @@ describe("layout pieces", () => {
   it("DataProvenance on a grades-only school says so and drops the review count", () => {
     render(
       <DataProvenance
-        mode="live"
         reviewsAvailable={false}
         attribution={{ grades: "Official grade distributions from the UIUC GPA dataset" }}
         builtAt="2026-09-03T14:12:00Z"
@@ -303,7 +290,7 @@ describe("layout pieces", () => {
     expect(text).toContain("Reviews: none (official grade data only)");
     expect(text).toContain("1,812 grade rows · 92 professors · 118 open sections");
     expect(text).not.toContain("1,304 reviews");
-    expect(reviewsClause("live", true, null, "RateMyProfessors (unofficial)")).toBe("RateMyProfessors (unofficial)");
+    expect(reviewsClause(true, "RateMyProfessors (unofficial)")).toBe("RateMyProfessors (unofficial)");
     expect(formatCounts(COUNTS, false)).not.toContain("reviews");
   });
 

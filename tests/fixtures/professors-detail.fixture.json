@@ -391,7 +391,7 @@
         "Okonkwo, A",
         "Okonkwo, Adaeze"
       ],
-      "reviewSourceId": "demo-adaeze-okonkwo",
+      "reviewSourceId": "fixture-adaeze-okonkwo",
       "schoolId": "uiuc",
       "slug": "adaeze-okonkwo",
       "subjects": [
@@ -1190,7 +1190,7 @@
         "Sorensen, H",
         "Sorensen, Halvard"
       ],
-      "reviewSourceId": "demo-halvard-sorensen",
+      "reviewSourceId": "fixture-halvard-sorensen",
       "schoolId": "uiuc",
       "slug": "halvard-sorensen",
       "subjects": [
@@ -1475,7 +1475,7 @@
         "Ibarra-Quintero, R",
         "Ibarra-Quintero, Rafael"
       ],
-      "reviewSourceId": "demo-rafael-ibarra-quintero",
+      "reviewSourceId": "fixture-rafael-ibarra-quintero",
       "schoolId": "uiuc",
       "slug": "rafael-ibarra-quintero",
       "subjects": [

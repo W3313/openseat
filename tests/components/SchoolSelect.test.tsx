@@ -6,7 +6,7 @@ import { SchoolSelect, schoolHint, schoolOptionLabel, type SchoolOption } from "
 const SCHOOLS: SchoolOption[] = [
   { id: "uiuc", name: "University of Illinois Urbana-Champaign", shortName: "UIUC", professorCount: 1204, subjectCount: 25, reviewsAvailable: false },
   { id: "purdue", name: "Purdue University", shortName: "Purdue", professorCount: 1, subjectCount: 1, reviewsAvailable: false },
-  { id: "demo", name: "Demo University", shortName: "DEMO", professorCount: 108, subjectCount: 6, reviewsAvailable: true, isDemo: true },
+  { id: "uh", name: "University of Houston", shortName: "UH", professorCount: 108, subjectCount: 6, reviewsAvailable: false },
 ];
 
 afterEach(cleanup);
@@ -18,9 +18,9 @@ describe("SchoolSelect (design §8)", () => {
     expect(schoolOptionLabel({ id: "x", name: "X University", shortName: "X" })).toBe("X — X University");
   });
 
-  it("explains grades-only and demo schools under the select", () => {
+  it("explains grades-only schools under the select", () => {
     expect(schoolHint(SCHOOLS[0])).toMatch(/Official grade data only/);
-    expect(schoolHint(SCHOOLS[2])).toMatch(/Fictional demo/);
+    expect(schoolHint(SCHOOLS[2])).toMatch(/Official grade data only/);
     expect(schoolHint({ id: "x", name: "X", shortName: "X", reviewsAvailable: true })).toBeNull();
     expect(schoolHint(undefined)).toBeNull();
   });
@@ -32,8 +32,8 @@ describe("SchoolSelect (design §8)", () => {
     expect(within(select).getAllByRole("option")).toHaveLength(3);
     expect(select.value).toBe("uiuc");
     expect(select.getAttribute("aria-describedby")).toBe(screen.getByTestId("school-hint").id);
-    fireEvent.change(select, { target: { value: "demo" } });
-    expect(onChange).toHaveBeenCalledWith("demo");
+    fireEvent.change(select, { target: { value: "uh" } });
+    expect(onChange).toHaveBeenCalledWith("uh");
     fireEvent.change(select, { target: { value: "nope" } });
     expect(onChange).toHaveBeenCalledTimes(1);
   });

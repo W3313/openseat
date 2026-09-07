@@ -25,8 +25,8 @@ function dirBytes(dir: string): number {
 const jsonNames = (dir: string): string[] => (existsSync(dir) ? readdirSync(dir).filter((f) => f.endsWith('.json')).map((f) => f.slice(0, -5)).sort() : []);
 
 describe('data/processed layout', () => {
-  it('has the demo school and only registered school ids', () => {
-    expect(schools).toContain('demo');
+  it('has exactly the three real schools and only registered school ids', () => {
+    expect(schools).toEqual(['purdue', 'uh', 'uiuc']);
     for (const s of schools) expect(REGISTERED_SCHOOL_IDS, `unregistered directory ${s}`).toContain(s);
   });
 });

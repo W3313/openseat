@@ -41,7 +41,7 @@ export const HOW_IT_WORKS_TILES: readonly HowItWorksTile[] = [
     id: "summarize",
     title: "Summarize",
     body:
-      "On schools with reviews (the demo today), Claude turns them into a structured verdict (strengths, watch-outs, workload). With no API key, a deterministic extractive summary stands in — always labelled.",
+      "Where a school has reviews (none yet — first-party reviews are planned), Claude turns them into a structured verdict (strengths, watch-outs, workload). With no API key, a deterministic extractive summary stands in — always labelled.",
     href: "/about#ai",
     icon: (
       <svg viewBox="0 0 24 24" className={ICON} fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
